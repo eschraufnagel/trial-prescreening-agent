@@ -1,0 +1,70 @@
+{
+  "id": "NCT04316364-dev",
+  "nctId": "NCT04316364",
+  "labelSetSha": "da2c69671dcb089fd692a4fa41a0ee693507e272bcb95a81403d409bd9001adb",
+  "behavior": "volunteers",
+  "persona": "60-year-old woman, retired librarian, friendly, tends to mention things before she is asked.",
+  "facts": [
+    {
+      "label": "L7",
+      "says": "Yes, I would agree to use contraception or practice abstinence for 180 days after the last dose.",
+      "expected": "holds"
+    },
+    {
+      "label": "L8",
+      "says": "No, I have not had any anti-cancer therapy for my lung cancer.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L17",
+      "says": "Yes, I am allergic to monoclonal antibodies. I had a reaction to one for my arthritis.",
+      "expected": "holds"
+    },
+    {
+      "label": "L18",
+      "says": "I do not know what the intervention drugs are, so I cannot say.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L19",
+      "says": "No, I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L20",
+      "says": "No, I am not lactating.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L22",
+      "says": null,
+      "declines": true,
+      "expected": "unresolved"
+    },
+    {
+      "label": "L24",
+      "says": "No close contact with anyone with COVID.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L2",
+      "says": "It is stage IIIA and previously untreated. The biopsy pathologically confirmed it, and the surgeon says it is resectable.",
+      "reported": "holds"
+    },
+    {
+      "label": "L15",
+      "says": "I do not have HIV.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L9",
+      "says": "I have rheumatoid arthritis."
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": true,
+    "note": "The dev vignette. Never scored. Written after the agent prompts existed, deliberately: prompts are iterated against this and nothing else."
+  }
+}

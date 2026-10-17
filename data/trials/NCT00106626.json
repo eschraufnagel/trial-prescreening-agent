@@ -1,0 +1,25 @@
+{
+  "nctId": "NCT00106626",
+  "briefTitle": "Suberoylanilide Hydroxamic Acid in Advanced Solid Tumors",
+  "officialTitle": "Phase I Clinical Trial of Suberoylanilide Hydroxamic Acid (SAHA) in Combination With Pemetrexed and Cisplatin in Patients With Advanced Cancer",
+  "overallStatus": "COMPLETED",
+  "phases": [
+    "PHASE1"
+  ],
+  "conditions": [
+    "Advanced Cancer"
+  ],
+  "leadSponsor": "Merck Sharp & Dohme LLC",
+  "lastUpdatePostDate": "2009-04-22",
+  "eligibility": {
+    "criteriaText": "Inclusion Criteria:\n\n* Patient must be 18 years or older with confirmed diagnosis of a solid tumor for which pemetrexed and cisplatin is acceptable treatment and have received no more than 2 prior systemic therapies\n* Has at least 1 measurable lesion\n* Has adequate blood, liver, and kidney functions\n* Has not received any chemotherapy for at least 4 weeks prior to entry in this study\n* Agrees to take adequate measures to prevent pregnancy as outlined in the protocol\n\nExclusion Criteria:\n\n* Patient has been treated with other investigational agents with a similar anti-tumor mechanism\n* Patient from Cohorts A and B has received pemetrexed or cisplatin within the past 6 months and from Cohorts C and D have received pemetrexed within the past 6 months\n* Patient from Cohorts A and B has preexisting Grade 2 or higher neuropathy and from Cohorts C and D have Grade 3 or higher neuropathy\n* Patient has active infection or had received IV (intravenous) antibiotic, antiviral, or antifungal medications within 2 weeks of the start of study drugs\n* Patient has HIV, hepatitis B or hepatitis C infection\n* Patient is pregnant or breast feeding\n* Patient has allergy to any component of the study drugs\n* Patient has history of GI (gastrointestinal) surgery or conditions",
+    "sex": "ALL",
+    "minimumAge": "18 Years",
+    "maximumAge": null,
+    "healthyVolunteers": false,
+    "stdAges": [
+      "ADULT",
+      "OLDER_ADULT"
+    ]
+  }
+}

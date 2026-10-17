@@ -1,0 +1,837 @@
+{
+  "nctId": "NCT03433469",
+  "source": "labels",
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "thinking": "off",
+    "promptVersion": "e5a58e26c2ac",
+    "timestamp": "2026-09"
+  },
+  "renderings": [
+    {
+      "criterionId": "L1",
+      "textSha": "65cc3fe33c8c5c83be84dc10920c25198a911a700d5e3fb81cfe2bed9e20032f",
+      "attempts": [
+        {
+          "plain": "Is 18 years of age or more.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L2",
+      "textSha": "903a9b4359713168620170ddb5c28957afaf3af011852dfa20cc3ddeb22d66c2",
+      "attempts": [
+        {
+          "plain": "Has non-small cell lung cancer (NSCLC) confirmed by examining a tissue sample (histologically) or cells (cytologically), based on a biopsy done within the last 90 days.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L3",
+      "textSha": "2bc79a161dccb8e5e95206af588f6fa8c389d4c6b91df5ba8771ad852ab9c2a4",
+      "attempts": [
+        {
+          "plain": "Has a documented activating EGFR mutation (Exon 19 deletion, T790M, or L858R) on tumor samples, confirmed by a test approved under the Clinical Laboratory Improvement Amendments (CLIA).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L4",
+      "textSha": "47455a9ec1054116cfddd7cde309a9214f7b69c9239d641b8aa80b333c0ab3e1",
+      "attempts": [
+        {
+          "plain": "Has received no more than 28 days of treatment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L5",
+      "textSha": "32643a5b04f2b220585ad0e399369204a210fadb5cc6dcdf05c039a11eb338c6",
+      "attempts": [
+        {
+          "plain": "Has no evidence of grade 2 or greater treatment adverse events (side effects) possibly related to treatment with the EGFR TKI.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L6",
+      "textSha": "640e97e300360b1ce46fa468ff4638a14f047e4e6dfff8ea2832e303ee8f6cf9",
+      "attempts": [
+        {
+          "plain": "A positron emission tomography (PET)-computed tomography (CT) scan within the last 60 days shows radiographic stage I to IIIa lung cancer (a biopsy of the lymph nodes in the middle of the chest is allowed but not required).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L7",
+      "textSha": "9488cf344313971e847c09e0ef92e3b8c9601960a1828285fb1eece6b97b70c1",
+      "attempts": [
+        {
+          "plain": "A brain magnetic resonance imaging (MRI) scan (or a CT scan if an MRI is not possible) within the last 60 days shows no evidence of metastatic disease (cancer that has spread from another part of the body).",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        },
+        {
+          "plain": "A brain magnetic resonance imaging (MRI) scan (or a CT scan if an MRI is contraindicated) within the last 60 days shows no evidence of metastatic disease (cancer that has spread from another part of the body).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L8",
+      "textSha": "cae26ead01f1cfaf825ae26852fb7b33c6061fdd29ebc08fb87979db2a055a09",
+      "attempts": [
+        {
+          "plain": "Has documentation that an American Board of Thoracic Surgery certified surgeon (a doctor certified by this board) says the patient is a candidate for surgical resection (surgery to remove part or all of the lung) of their lung cancer.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L9",
+      "textSha": "43595e0eafcc4cf38aeaa22b68b08f6c49642c9914c257b948cbd5a27b4b65c0",
+      "attempts": [
+        {
+          "plain": "Has a tumor size of at least 1 cm in its longest diameter.",
+          "reportAtGeneration": [
+            "number missing: 1",
+            "number added: 1 cm"
+          ]
+        },
+        {
+          "plain": "Has a tumor size of at least 1 centimeter (cm) in its longest diameter.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L10",
+      "textSha": "770e5889bffeaf49c4b2614c6c58cec5a3f405c79455db82de8b347ea6f22e9c",
+      "attempts": [
+        {
+          "plain": "Has an Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) score of 0 to 1.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L11",
+      "textSha": "a50011f5e301a377eae0f32f15826d5e8aedc192428fdd0a9131df647ee29ea2",
+      "attempts": [
+        {
+          "plain": "Has any unresolved toxicities (side effects) from prior therapy that are greater than Common Terminology Criteria for Adverse Events (CTCAE) grade 1 at the time of starting study treatment, with the exception of alopecia (hair loss) and grade 2 prior platinum therapy-related neuropathy (nerve damage) which is allowed.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L12",
+      "textSha": "7a0426834b2756b2b10bf94d113a095b4e75cdc84c0288ee0da6db34fd2982f9",
+      "attempts": [
+        {
+          "plain": "Has an aspartate aminotransferase (AST) and alanine aminotransferase (ALT) level of no more than 2.5 times the upper limit of normal (ULN).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L13",
+      "textSha": "6a61ef74580fdd35ab1eff24edd3b979d0a9bd7ea4b746fdac2bcb0bbd69ca17",
+      "attempts": [
+        {
+          "plain": "Bilirubin is no more than 1.5 times the upper limit of normal (ULN). Patients with documented Gilbert's syndrome and conjugated bilirubin within the normal range may be allowed into the study; in this event, it will be documented that the patient was eligible based on conjugated bilirubin levels.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L14",
+      "textSha": "38a12af5c16426227192340119592f13af4aa2bbb94656ecd7d07738ef0cf1b5",
+      "attempts": [
+        {
+          "plain": "Potassium and magnesium levels are within the normal range; patients may receive supplements to meet this requirement.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L15",
+      "textSha": "e8c5460f9633caa91a25a9c8429a0f594b939540143969c6b974dd66ec2a214f",
+      "attempts": [
+        {
+          "plain": "Has a leukocyte (white blood cell) count of more than 3,000/microliter (mcL).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L16",
+      "textSha": "b831bbfe16aa841062b94d4e9e6b8534254ee9e1929c96b4c03d3818efafd95d",
+      "attempts": [
+        {
+          "plain": "Has a hemoglobin (a protein in red blood cells that carries oxygen) level of at least 9 g/dL, with no blood transfusions in the 28 days before study entry.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L17",
+      "textSha": "5d30a9721e751b61f0973a35b4b498712cc69d0c2218198008f1712c26034064",
+      "attempts": [
+        {
+          "plain": "Has an absolute neutrophil count (a type of white blood cell) of more than 1,500/mcL.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L18",
+      "textSha": "7a3c1d8c89835bbc032196a4d16f4931a7eb78cd9ed9b87691d7b66b31097b60",
+      "attempts": [
+        {
+          "plain": "Has a platelet count (a type of blood cell that helps with clotting) of more than 100,000/mcL.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L19",
+      "textSha": "e1fbd98565f2e8544ce1c55d643155ed65dce69e9b08d33402c100f60105ddd8",
+      "attempts": [
+        {
+          "plain": "Creatinine Clearance (CrCl) (a measure of kidney function) is more than 50 mL/min for patients with serum creatinine (SCr) (a waste product in the blood) that is more than 1.5 times the upper limit of normal (ULN).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L20",
+      "textSha": "89b5350ba02b67f8f08f6068cabaaf4309e8dbe1613182710114bd245960d8c9",
+      "attempts": [
+        {
+          "plain": "Has the ability to swallow oral medications.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L21",
+      "textSha": "ef2ae5c2193c49c9e45690a6f466c619e871c6274e0b5baab9d813a1ad0ec81f",
+      "attempts": [
+        {
+          "plain": "Has a negative serum pregnancy test (a blood test for pregnancy) within 3 days before the first dose of study treatment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L22",
+      "textSha": "eb503c316d57f0ec9df972007a3a45f266b36189cd3d3ec71e12af0a3fe14bbc",
+      "attempts": [
+        {
+          "plain": "Agrees to use highly effective contraception (birth control that prevents pregnancy) during the study and for 90 days after the last dose of osimertinib.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L23",
+      "textSha": "99b046f94d28817f82b3058fb0d635bd47c19f7028a5a3e5fa62caef087f66bb",
+      "attempts": [
+        {
+          "plain": "Women between their first menstrual period (menarche) and menopause who have not had permanent or surgical sterilization and can become pregnant.",
+          "reportAtGeneration": [
+            "term missing: wocbp"
+          ]
+        },
+        {
+          "plain": "Women of childbearing potential (WoCBP): women between their first menstrual period (menarche) and menopause who have not had permanent or surgical sterilization and can become pregnant.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L24",
+      "textSha": "a7ac0b9870793e4fedad637ad8fa6ff8b86b606b8821f16457a799c86bbd1958",
+      "attempts": [
+        {
+          "plain": "Women who are not of childbearing potential: women who are permanently or surgically sterilized or postmenopausal.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L25",
+      "textSha": "c1030561f0112243483a89d0159aa0eed0c721d01bb353fc03763067bb54ef4b",
+      "attempts": [
+        {
+          "plain": "Permanent sterilization includes hysterectomy (removal of the uterus) and/or bilateral oophorectomy (removal of both ovaries) and/or bilateral salpingectomy (removal of both fallopian tubes), but excludes bilateral tubal occlusion (blocking or tying the fallopian tubes without removing them). Tubal occlusion is considered a highly effective method of birth control but does not absolutely exclude the possibility of pregnancy.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L26",
+      "textSha": "ef6407c81fb5101c9f519ea6bf18c218c9945b1a8efe10cf42c4dc8578a32314",
+      "attempts": [
+        {
+          "plain": "Women who have had tubal occlusion (a procedure to block the fallopian tubes) are managed on trials as if they are of WoCBP (women of childbearing potential), for example by undergoing pregnancy testing as required by the study protocol.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L27",
+      "textSha": "f36975c98e6251cb183c02b7626c6e481c2b5062a822502e88234030da6337da",
+      "attempts": [
+        {
+          "plain": "Women are considered postmenopausal if they have had no menstrual periods for 12 months without another medical reason; the following age-specific requirements apply:",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        },
+        {
+          "plain": "Women are considered postmenopausal if they are amenorrhoeic (have no menstrual periods) for 12 months without an alternative medical cause; the following age-specific requirements apply:",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L28",
+      "textSha": "aaf9803dd7c91f20338d371b0233de9eb6db12d1e1362a63037a1a34ce38b636",
+      "attempts": [
+        {
+          "plain": "Women under 50 years old are considered postmenopausal if they have had no periods (amenorrhoeic) for 12 months or more after stopping external hormone treatments, and their luteinizing hormone and follicle-stimulating hormone levels are in the postmenopausal range.",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "Women under 50 years old are considered postmenopausal if they have been amenorrhoeic (no periods) for 12 months or more after stopping external hormone treatments, and their luteinizing hormone and follicle-stimulating hormone levels are in the postmenopausal range.",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L29",
+      "textSha": "be1aaf395e7be16b1eca2f8be5c56c3d52f6c38a7e3b6b6386b406bb1e4a8640",
+      "attempts": [
+        {
+          "plain": "Women over 50 years of age are considered postmenopausal (no longer having menstrual periods) if they have been amenorrhoeic (not having menstrual periods) for 12 months or more after stopping all exogenous hormonal treatments (hormone medicines taken from outside the body).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 2 in the plain"
+          ]
+        },
+        {
+          "plain": "Women over 50 years of age are considered postmenopausal if they have been amenorrhoeic (not having menstrual periods) for 12 months or more after stopping all exogenous hormonal treatments (hormone medicines taken from outside the body).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L30",
+      "textSha": "735b920f890b8181d43a1771b43e1248a162c4501ff1fa6db0e86eedf5ef77ce",
+      "attempts": [
+        {
+          "plain": "Acceptable contraception methods are:",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L31",
+      "textSha": "b2701ce604842714642373f8a0ce1749ba76876fecc09c5c25d52feb05788ab1",
+      "attempts": [
+        {
+          "plain": "Total sexual abstinence (abstinence must be for the total duration of the trial and the follow-up period).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L32",
+      "textSha": "c7027466f00e9037193d66b5da1d1805142d5ee7e8b57e174ac69ae1659c2c76",
+      "attempts": [
+        {
+          "plain": "Sexual partner has had a vasectomy and uses a male condom, with the participant confirming that the partner received proof of azoospermia (no sperm in the semen) after the vasectomy.",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "Sexual partner has had a vasectomy and uses a male condom, with the participant confirming that the partner received proof of azoospermia (no sperm in the semen) after the vasectomy.",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L33",
+      "textSha": "3abfab7614f1986d8d8de6cfa5ebcfd55321f00df9cf0a1f975301a0eacff679",
+      "attempts": [
+        {
+          "plain": "Has a blocked fallopian tube (tubal occlusion) and uses a male condom.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L34",
+      "textSha": "72b3ee05ec7e4571977262ca5c467d2e3e57171eff60d58925ef03c14623b57f",
+      "attempts": [
+        {
+          "plain": "Uses an intra-uterine device (a small device placed in the uterus) that has copper bands, and also uses a male condom.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L35",
+      "textSha": "582ee6bdd2e467b29943729838dbe240603f75b1f130ee3b344c17793bdd330a",
+      "attempts": [
+        {
+          "plain": "Uses an intra-uterine system (IUS) with levonorgestrel (e.g., Mirena), plus a male condom.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L36",
+      "textSha": "b4dd2ee3f61283095112361557f82d507a97e0df19bb57ccfa0dab623075ba7b",
+      "attempts": [
+        {
+          "plain": "Uses Medroxyprogesterone injections (Depo-Provera) plus a male condom.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L37",
+      "textSha": "d744e10da4a38e82eafbe5b3d2d053525d31ea427206c6acffe58d21070701dd",
+      "attempts": [
+        {
+          "plain": "Uses an etonogestrel implant (e.g., Implanon, Norplan) and a male condom.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L38",
+      "textSha": "5bda2405fcf77b0ef5d1b4a7e6fb742dd1c5665ca531894734db2e2d0e189ce4",
+      "attempts": [
+        {
+          "plain": "Uses normal and low dose combined oral contraceptive pills, plus a male condom.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L39",
+      "textSha": "94e543f30bc75552b6c02c04cea995733d291c5aa434854c7fda68544c67f355",
+      "attempts": [
+        {
+          "plain": "Uses a norelgestromin / ethinylestradiol transdermal system (a skin patch that releases hormones) along with a male condom.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L40",
+      "textSha": "695bb6afd4641fece11de8c0eb819236eb1ab96b0cedc51903583403c1aeb552",
+      "attempts": [
+        {
+          "plain": "Uses an intravaginal device (e.g., ethinylestradiol and etonogestrel) plus a male condom.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L41",
+      "textSha": "0b4192091d71bf4f6456e40810fea6758e985ee6ed9edb4a3db1c062d787f1f2",
+      "attempts": [
+        {
+          "plain": "Using Cerazette (desogestrel) along with a male condom. Cerazette is currently the only highly effective progesterone-based pill.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L42",
+      "textSha": "b7382cbbb934bc8e0e74619b4b92b148199877d0536649e889ba34d006c65a43",
+      "attempts": [
+        {
+          "plain": "The following methods are not considered highly effective and are therefore not acceptable contraceptive methods.",
+          "reportAtGeneration": [
+            "negations: 3 in the protocol, 2 in the plain"
+          ]
+        },
+        {
+          "plain": "The following methods are not considered highly effective and are therefore not acceptable contraceptive methods.",
+          "reportAtGeneration": [
+            "negations: 3 in the protocol, 2 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L43",
+      "textSha": "f390b3a72d666453f3ef56c44f9077ecb61157353ad60ace7509d676f169a0f1",
+      "attempts": [
+        {
+          "plain": "Uses a triphasic combined oral contraceptive (a birth control pill that contains two hormones and changes the dose of those hormones in three different phases during the cycle).",
+          "reportAtGeneration": [
+            "number added: two",
+            "number added: three"
+          ]
+        },
+        {
+          "plain": "Uses a triphasic combined oral contraceptive (a birth control pill that contains hormones and changes the dose in three phases during the cycle).",
+          "reportAtGeneration": [
+            "number added: three"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L44",
+      "textSha": "ec99ba50cf231b1f56648df395a1196be91aa0ed18636752588d1bd87e4d0d0a",
+      "attempts": [
+        {
+          "plain": "Uses all progesterone only pills except, Cerazette.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L45",
+      "textSha": "3e372738af2af2db2e909fbe328ad3f8eaabf6525613a332dd06cad4bd827440",
+      "attempts": [
+        {
+          "plain": "Uses all barrier methods, if they are intended to be used alone.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L46",
+      "textSha": "15c16a137a89cf760e494bbd35993275ada85ce093ee5007ba6250dea27e0b97",
+      "attempts": [
+        {
+          "plain": "Intra-uterine devices that do not contain copper.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L47",
+      "textSha": "b13c471f6e5101533a9c32657c0e0f1c7ece9871083dc40f8cdc81bdb8ed5a47",
+      "attempts": [
+        {
+          "plain": "Uses fertility awareness methods (natural family planning techniques to avoid pregnancy).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L48",
+      "textSha": "c6259e6a65206bf1cb5225aaca5d771b7c51c31573c7d68ad7e11f09d8e19aaa",
+      "attempts": [
+        {
+          "plain": "Uses coitus interruptus (withdrawal).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L49",
+      "textSha": "82ae3b59a72e1e858407fd8ba7d5bd8f9c1b84980475211e29b67d752880dfdd",
+      "attempts": [
+        {
+          "plain": "Has had a prior vasectomy or agrees to use effective contraception (methods that prevent pregnancy) as described in the full protocol for at least 14 days before the first dose of study treatment, during the study, and for 90 days after the last dose of osimertinib.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L50",
+      "textSha": "3d78fb852345a4dd604eca71994f5c195942f81db759f67ee6412b83347a9d0c",
+      "attempts": [
+        {
+          "plain": "Has leptomeningeal carcinomatosis (cancer spread to the membranes covering the brain and spinal cord) or other central nervous system (CNS) metastases (cancer spread to the brain or spinal cord).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L51",
+      "textSha": "9a8301959abc3461464a9edc2cd4a8610f1fc774b54bc90450198e41887f44a7",
+      "attempts": [
+        {
+          "plain": "Has Stage IIIB cancer, or distant metastases (cancer that has spread to other parts of the body, including malignant pleural effusion, which is fluid around the lungs that contains cancer cells), identified on a PET-CT scan or biopsy. PET abnormalities that are negative for malignancy on biopsy will be considered on a case by case basis.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L52",
+      "textSha": "2910ebb3a25be2ebb8e4be5f54abf018480bb935b2e689569936bf8bef80a686",
+      "attempts": [
+        {
+          "plain": "Has a past medical history of interstitial lung disease (scarring or swelling of the lung tissue), drug-induced interstitial lung disease, or radiation pneumonitis (lung inflammation from radiation) that required steroid treatment, or has any evidence of clinically active interstitial lung disease.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L53",
+      "textSha": "cbcd7ec5e1e240d18b6552cbf090c605deddd78a5596a89414f0a64960f74bfd",
+      "attempts": [
+        {
+          "plain": "Is known to be serologically positive (has antibodies detected in a blood test) for human immunodeficiency virus (HIV).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L54",
+      "textSha": "0a1e0aab4e2446928aba19f3385f2b321fffac278190883c23afe86d292b48c1",
+      "attempts": [
+        {
+          "plain": "Has an active second malignancy, meaning a potentially fatal cancer that is present and for which the patient may be currently receiving treatment. Patients with a history of malignancy that has been completely treated, with no evidence of that cancer currently, are permitted to enroll in the trial provided all chemotherapy for prior malignancy was completed more than 12 months prior and/or bone marrow transplant more than 2 years prior.",
+          "reportAtGeneration": [
+            "negations: 2 in the protocol, 1 in the plain",
+            "scope word missing: known"
+          ]
+        },
+        {
+          "plain": "Has an active second malignancy, i.e. patient known to have potentially fatal cancer present for which he/she may be (but not necessarily) currently receiving treatment; patients with a history of malignancy that has been completely treated, with no evidence of that cancer currently, are permitted to enroll in the trial provided all chemotherapy for prior malignancy was completed > 12 months prior and/or bone marrow transplant > 2 years prior.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L55",
+      "textSha": "52c58fe38a3dd2267665ddebf3bde3a906cf3351207adce923bdb341714f1196",
+      "attempts": [
+        {
+          "plain": "Is currently receiving treatment with contraindicated corrected QT interval (QTc) prolonging medications or potent CYP3A4 inducers, if that treatment cannot be either discontinued or switched to a different medication prior to first day of study treatment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L56",
+      "textSha": "c9887cf1867deb0b472af6dc2a97b78509237fd034efe0b8203a3d4e6adeb8a9",
+      "attempts": [
+        {
+          "plain": "The mean resting corrected QT interval (QTc) (a measure of the heart's electrical cycle) is more than 470 msec, based on the QTc value from the screening clinic ECG machine, obtained from 3 electrocardiograms (ECGs).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L57",
+      "textSha": "4dcc918744095e35cf301d4d54ae7312757f7daae49e2b2f7ca7f24a07e36a7f",
+      "attempts": [
+        {
+          "plain": "Has any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (an electrocardiogram, a test that records the electrical activity of the heart), for example complete left bundle branch block, third degree heart block and second degree heart block.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L58",
+      "textSha": "d6b5d93b500a1452f435d534246e659957cf3d7c0772d59d6f275958c9232fa1",
+      "attempts": [
+        {
+          "plain": "Has any factors that increase the risk of QTc prolongation (a change in the heart's electrical cycle) or risk of arrhythmic events (irregular heartbeats) such as heart failure, hypokalaemia (low potassium in the blood), congenital long QT syndrome (a heart condition present from birth), family history of long QT syndrome, or unexplained sudden death under 40 years of age in first degree relatives (parents, siblings, or children) or any concomitant medication (medicine taken at the same time) known to prolong the QT interval.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L59",
+      "textSha": "6f81068ee3689ec8b792e57d5a01cde9973da791d82e0fb491754624261611a7",
+      "attempts": [
+        {
+          "plain": "Has not received prohibited medications (concurrent anticancer therapy including chemotherapy, radiation, hormonal treatment [except corticosteroids and megesterolacetate], or immunotherapy) within 14 days before treatment with osimertinib.",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        },
+        {
+          "plain": "Has not received prohibited medications (concurrent anticancer therapy including chemotherapy, radiation, hormonal treatment [except corticosteroids and megesterolacetate], or immunotherapy) within 14 days before treatment with osimertinib.",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L60",
+      "textSha": "a451043e8701469f69270ba2a3c5b504f55587df828922e297c722c689022899",
+      "attempts": [
+        {
+          "plain": "Has any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension (high blood pressure) and active bleeding diatheses (conditions that cause excessive bleeding), which in the investigator's opinion makes it undesirable for the patient to participate in the trial or which would jeopardize compliance with the protocol, or known active infection including chronic active hepatitis B, hepatitis C and human immunodeficiency virus (HIV); screening for chronic conditions is not required; patients with chronic hepatitis B virus (HBV) with negative HBV viral load on appropriate antiviral therapy will be permitted, if able to continue appropriate antiviral therapy throughout treatment period.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L61",
+      "textSha": "341776600e596557551a786f836174fae33db1e90d6012111bafcef306bbc825",
+      "attempts": [
+        {
+          "plain": "Has active tuberculosis (a disease that is currently present and spreading).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L62",
+      "textSha": "1e6cedcb93e314bf40113e2011318872fd464d5bf0da042e3104ea8784993409",
+      "attempts": [
+        {
+          "plain": "Has signs or symptoms of infection within 2 weeks before the first day of the study.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L63",
+      "textSha": "8e553a144f50759ac1c94b5198c8603de834bdc7b65ff34823b6547466f81ac7",
+      "attempts": [
+        {
+          "plain": "Has received therapeutic oral or intravenous (IV) antibiotics within 2 weeks before the first day of study treatment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L64",
+      "textSha": "ec1a926c7a16a715cf0a5e528ef279d3d4803fd776d2c08402d967f8fb016e53",
+      "attempts": [
+        {
+          "plain": "Has Class II to IV heart failure (a classification of heart failure severity by the New York Heart Association functional classification system).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L65",
+      "textSha": "7edfe66cce6df6be97622cdda5b7c01f2bcdcc24a1eb7196c1b05b40c7da11dc",
+      "attempts": [
+        {
+          "plain": "Has known coronary artery disease, congestive heart failure that does not meet the above criteria, or left ventricular ejection fraction (LVEF) of less than 50%, and is on a stable medical regimen that is optimized in the opinion of the treating physician, in consultation with a cardiologist if appropriate.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L66",
+      "textSha": "b5fc6b3ac564f00bbe331efe674cb2aa25971788cb5cd970a937f49a44c7bac5",
+      "attempts": [
+        {
+          "plain": "Has experienced untreated and/or uncontrolled cardiovascular conditions and/or has symptomatic cardiac dysfunction, which includes unstable angina, congestive heart failure, myocardial infarction (heart attack) within the previous 3 months; coronary angioplasty, or stenting or bypass grafting within the past 6 months; cardiac ventricular arrhythmias requiring medication; any history of second (2nd) or third (3rd) degree atrioventricular conduction defects (problems with the electrical signals in the heart).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L67",
+      "textSha": "376be72e38bba9182802afedc01055b389d210a3cb9081bf85927b89273b8767",
+      "attempts": [
+        {
+          "plain": "Is pregnant",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L68",
+      "textSha": "6d0d69a4b6576ea98d133a9be42f2f1cdd834fdfd5cf0e4ddf8166da202c5cca",
+      "attempts": [
+        {
+          "plain": "Is breastfeeding.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L69",
+      "textSha": "d2af767b93081bd8ca894e58de7c37434a28cfd40e0f35f3486aa9a26813ea7f",
+      "attempts": [
+        {
+          "plain": "Has active gastrointestinal (GI) disease (including GI bleeding or ulceration) or another condition that could affect GI absorption (e.g. malabsorption syndrome, history of biliary tract disease), including refractory nausea or vomiting, or chronic GI disease which may affect absorption or tolerance to oral medications.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L70",
+      "textSha": "5004c888f692e0e4114448d1862b1668532d430cff2b5669053e64c05f71bdda",
+      "attempts": [
+        {
+          "plain": "Has a history of hypersensitivity (allergic reaction) to active or inactive excipients (ingredients) of osimertinib or to drugs with a similar chemical structure or class to osimertinib.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L71",
+      "textSha": "6a1aa3ba16d38df1142d39f639bd9119a8e1fd885e64940b32df090309d6ca2a",
+      "attempts": [
+        {
+          "plain": "Has been involved in the planning and/or conduct of the study (applies to both investigator staff and/or staff at the study site).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L72",
+      "textSha": "239d9c5ee59a0dbb7ec92bdc0a3618ca0523b08298ac097b7ade6490b6b8048a",
+      "attempts": [
+        {
+          "plain": "Has taken part in another clinical study with an investigational product during the last 2 months or within five half-lives of the compound, whichever is longer.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L73",
+      "textSha": "532262c17871f61d05efdc8be65643849aff402a1d22f1128d9fd5e2f2188988",
+      "attempts": [
+        {
+          "plain": "Has medical, psychological, familial, sociological, or geographical conditions that are uncontrolled (not managed or stable) and interfere with the patient's safety, ability to provide informed consent, or ability to comply with the protocol.",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        },
+        {
+          "plain": "Has uncontrolled (not managed or stable) medical, psychological, familial, sociological, or geographical conditions that interfere with the patient's safety, ability to provide informed consent, or ability to comply with the protocol.",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        }
+      ]
+    }
+  ]
+}

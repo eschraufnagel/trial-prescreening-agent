@@ -1,0 +1,217 @@
+{
+  "nctId": "NCT04316364",
+  "labelledAt": "2026-09",
+  "criteriaTextSha": "b9b2d8e63374b11b279959ce8030afe4e81e82dc263b182f8cc14943e14f810f",
+  "provenance": {
+    "drafter": "claude-opus-5",
+    "guide": "evals/cases/ANNOTATION.md",
+    "sawParse": true,
+    "note": "Drafter had read this study's parser output during slice 0002's Gate 2, including its type call on the tissue-adequacy criterion. These labels are anchored to that answer more than the others are."
+  },
+  "criteria": [
+    {
+      "id": "L1",
+      "quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+      "start": 23,
+      "end": 90,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L2",
+      "quote": "Have previously untreated, pathologically confirmed resectable Stage II, IIIA, or Selected IIIB NSCLC.",
+      "start": 93,
+      "end": 195,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L3",
+      "quote": "Evaluation by an attending thoracic surgeon to confirm eligibility for an R0 resection with curative intent",
+      "start": 273,
+      "end": 380,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L4",
+      "quote": "Adequate tumor tissue sample blocks for central programmed death-ligand 1 (PD-L1) testing",
+      "start": 383,
+      "end": 472,
+      "polarity": "inclusion",
+      "type": "protocol",
+      "note": "Rule 3: tissue must be available for central testing, with no particular result required. Logistics wearing biomarker vocabulary."
+    },
+    {
+      "id": "L5",
+      "quote": "Measurable disease as defined by RECIST v1.1",
+      "start": 475,
+      "end": 519,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L6",
+      "quote": "Adequate organ function",
+      "start": 522,
+      "end": 545,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L7",
+      "quote": "Women of childbearing age without sterilizing or male, must agree to use contraception or practice abstinence at least 180 days after the last dose of study treatment",
+      "start": 548,
+      "end": 714,
+      "polarity": "inclusion",
+      "type": "patient",
+      "note": "Rule 1: one requirement applying to two groups, not two requirements."
+    },
+    {
+      "id": "L8",
+      "quote": "Any previous systematic anti-cancer therapy for lung cancer",
+      "start": 739,
+      "end": 798,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L9",
+      "quote": "With active, known or suspected autoimmune disease of autoimmune disease",
+      "start": 801,
+      "end": 873,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L10",
+      "quote": "Malignancies other than NSCLC within 5 years prior to randomization",
+      "start": 876,
+      "end": 943,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L11",
+      "quote": "Has or suspected has a history of pneumonitis /interstitial lung disease or any serve lung diseases which will influence the examination of lung function",
+      "start": 946,
+      "end": 1099,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L12",
+      "quote": "Significant history of cardiovascular and cerebrovascular disease",
+      "start": 1102,
+      "end": 1167,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L13",
+      "quote": "Significant haemorrhagic disease",
+      "start": 1170,
+      "end": 1202,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L14",
+      "quote": "Has an arteriovenous thrombotic events",
+      "start": 1205,
+      "end": 1243,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L15",
+      "quote": "Has a known history of human immunodeficiency virus (HIV) infection",
+      "start": 1246,
+      "end": 1313,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L16",
+      "quote": "Has a known active Hepatitis B or Hepatitis C",
+      "start": 1316,
+      "end": 1361,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L17",
+      "quote": "Allergic to monoclonal antibodies or other protein drugs",
+      "start": 1364,
+      "end": 1420,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L18",
+      "quote": "Allergic to the intervention regimens",
+      "start": 1423,
+      "end": 1460,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L19",
+      "quote": "Pregnant",
+      "start": 1463,
+      "end": 1471,
+      "polarity": "exclusion",
+      "type": "patient",
+      "note": "Rule 1: pregnancy and lactation are different states, each independently checkable, so two criteria rather than one."
+    },
+    {
+      "id": "L20",
+      "quote": "lactating women",
+      "start": 1475,
+      "end": 1490,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L21",
+      "quote": "psychiatric",
+      "start": 1503,
+      "end": 1514,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L22",
+      "quote": "substance abuse disorders",
+      "start": 1518,
+      "end": 1543,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L23",
+      "quote": "Confirmed COVID-19 infection or suspected COVID-19 infection",
+      "start": 1546,
+      "end": 1606,
+      "polarity": "exclusion",
+      "type": "clinical",
+      "note": "Rule 1: confirmed and suspected are alternative ways of meeting one requirement, so one criterion."
+    },
+    {
+      "id": "L24",
+      "quote": "close contact with a person with known or suspected COVID-19 infection",
+      "start": 1610,
+      "end": 1680,
+      "polarity": "exclusion",
+      "type": "patient"
+    }
+  ],
+  "notCriteria": [
+    {
+      "quote": "Staging should be based on the 8th edition of the AJCC/UICC staging system",
+      "start": 196,
+      "end": 270,
+      "why": "Rule 1: specifies how the staging in the criterion above is determined. A clarification of how a requirement is met stays with it rather than becoming its own. A close call — it could be read as a protocol instruction to the site."
+    }
+  ]
+}

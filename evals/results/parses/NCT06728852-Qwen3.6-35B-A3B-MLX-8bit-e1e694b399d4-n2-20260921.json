@@ -1,0 +1,365 @@
+{
+  "nctId": "NCT06728852",
+  "criteria": [
+    {
+      "id": "NCT06728852:24-49",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The participant signs the informed consent",
+      "source": {
+        "start": 24,
+        "end": 49,
+        "text": "Sign the informed consent"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "NCT06728852:53-185",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has a pathological or cytological diagnosis of metastatic/relapsed advanced NSCLC with measurable lesions according to RECIST 1.1",
+      "source": {
+        "start": 53,
+        "end": 185,
+        "text": "Pathologically or cytologically diagnosed with metastatic/relapsed advanced NSCLC, with measurable lesions (according to RECIST 1.1)"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "NCT06728852:189-323",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The participant previously received at least two systemic therapies, allowing for third-line or higher chemotherapy or is unable to tolerate chemotherapy",
+      "source": {
+        "start": 189,
+        "end": 323,
+        "text": "Previously received at least two systemic therapies, allowing for third-line or higher chemotherapy or unable to tolerate chemotherapy"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:327-551",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has negative results for driver gene testing or has positive results who have already received relevant targeted drugs or systemic anti-tumor treatments and are either resistant or unable to tolerate them",
+      "source": {
+        "start": 327,
+        "end": 551,
+        "text": "Patients with negative results for driver gene testing or patients with positive results who have already received relevant targeted drugs or systemic anti-tumor treatments and are either resistant or unable to tolerate them"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:555-663",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has an Eastern Cooperative Oncology Group (ECOG) performance status score of 0-2 and an expected survival time ≥ 3 months",
+      "source": {
+        "start": 555,
+        "end": 663,
+        "text": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0-2. Expected survival time ≥ 3 months"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:667-916",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has normal major organ function: renal function with creatinine clearance rate ≥ 60 mL/min; liver function with bilirubin ≤ 1.5× upper limit of normal (ULN), ALT/AST ≤ 2.5× ULN (for patients with documented liver metastasis, AST and ALT levels ≤ 5× ULN)",
+      "source": {
+        "start": 667,
+        "end": 916,
+        "text": "Normal major organ function: renal function with creatinine clearance rate ≥ 60 mL/min; liver function with bilirubin ≤ 1.5× upper limit of normal (ULN), ALT/AST ≤ 2.5× ULN (for patients with documented liver metastasis, AST and ALT levels ≤ 5× ULN)"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:920-1146",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has good hematological function, defined as an absolute neutrophil count (ANC) ≥ 1.5×10^9/L, platelet count ≥ 100×10^9/L, hemoglobin ≥ 90g/L (without blood transfusion or erythropoietin [EPO] dependency within the last 7 days)",
+      "source": {
+        "start": 920,
+        "end": 1146,
+        "text": "Good hematological function, defined as an absolute neutrophil count (ANC) ≥ 1.5×10\\^9/L, platelet count ≥ 100×10\\^9/L, hemoglobin ≥ 90g/L (without blood transfusion or erythropoietin \\[EPO\\] dependency within the last 7 days)"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:1150-1382",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has good coagulation function, defined as an international normalized ratio (INR) or prothrombin time (PT) ≤ 1.5× ULN; if the subject is on anticoagulation therapy, PT should be within the intended therapeutic range of the anticoagulant",
+      "source": {
+        "start": 1150,
+        "end": 1382,
+        "text": "Good coagulation function, defined as an international normalized ratio (INR) or prothrombin time (PT) ≤ 1.5× ULN; if the subject is on anticoagulation therapy, PT should be within the intended therapeutic range of the anticoagulant"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:1386-1786",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Female patients of childbearing potential must agree to use contraception (e.g., intrauterine device, contraceptives, or condoms) during the study and for 6 months after the study ends; must not be breastfeeding and must have a negative serum or urine pregnancy test within 7 days before enrollment. Male patients must agree to use contraception during the study and for 6 months after the study ends",
+      "source": {
+        "start": 1386,
+        "end": 1786,
+        "text": "Female patients of childbearing potential must agree to use contraception (e.g., intrauterine device, contraceptives, or condoms) during the study and for 6 months after the study ends; must not be breastfeeding and must have a negative serum or urine pregnancy test within 7 days before enrollment. Male patients must agree to use contraception during the study and for 6 months after the study ends"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:1791-1943",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has well-controlled pleural or peritoneal effusions that do not cause grade 2 or higher respiratory syndrome (≥ CTCAE grade 2)",
+      "source": {
+        "start": 1791,
+        "end": 1943,
+        "text": "Patients with well-controlled pleural or peritoneal effusions that do not cause grade 2 or higher respiratory syndrome (≥ CTCAE grade 2) can be included"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:1948-2235",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant does not have clinical symptoms of intracranial hypertension caused by brain metastases or has brain metastasis symptoms that are stable after prior treatment (radiation therapy or surgery) of brain or meningeal metastasis (usually requiring more than 4 weeks post-radiation therapy)",
+      "source": {
+        "start": 1948,
+        "end": 2235,
+        "text": "Patients without clinical symptoms of intracranial hypertension caused by brain metastases or with brain metastasis symptoms that are stable after prior treatment (radiation therapy or surgery) of brain or meningeal metastasis (usually requiring more than 4 weeks post-radiation therapy)"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:2261-2496",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant previously failed treatment with multi-target anti-angiogenic drugs, such as anlotinib, cabozantinib, apatinib, lenvatinib, etc. The use of bevacizumab is allowed, but the last administration must be more than 3 weeks before enrollment",
+      "source": {
+        "start": 2261,
+        "end": 2496,
+        "text": "Previously failed treatment with multi-target anti-angiogenic drugs, such as anlotinib, cabozantinib, apatinib, lenvatinib, etc. The use of bevacizumab is allowed, but the last administration must be more than 3 weeks before enrollment"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:2500-2616",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has small cell lung cancer (including small cell carcinoma, non-small cell lung cancer mixed with other types of tumors)",
+      "source": {
+        "start": 2500,
+        "end": 2616,
+        "text": "Small cell lung cancer (including small cell carcinoma, non-small cell lung cancer mixed with other types of tumors)"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "NCT06728852:2620-2679",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant tests positive for driver genes but has not been treated with TKIs",
+      "source": {
+        "start": 2620,
+        "end": 2679,
+        "text": "Testing positive for driver genes but not treated with TKIs"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:2683-2964",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has tumor invasion of large blood vessels, central squamous cell carcinoma of the lung with cavitation, or non-small cell lung cancer with hemoptysis (>5ml/day), or where the tumor is likely to invade important blood vessels and cause fatal bleeding during the subsequent study period",
+      "source": {
+        "start": 2683,
+        "end": 2964,
+        "text": "Tumor invasion of large blood vessels, central squamous cell carcinoma of the lung with cavitation, or non-small cell lung cancer with hemoptysis (\\>5ml/day), or where the tumor is likely to invade important blood vessels and cause fatal bleeding during the subsequent study period"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:2968-3051",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant is accompanied by other types of malignant tumors within the past 5 years or currently",
+      "source": {
+        "start": 2968,
+        "end": 3051,
+        "text": "Accompanied by other types of malignant tumors within the past 5 years or currently"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:3055-3508",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant is planning to receive systemic anti-tumor therapy within 4 weeks before enrollment or during the study period, including cytotoxic therapy, signal transduction inhibitors, and immunotherapy (or mitomycin C within 6 weeks before receiving experimental drug therapy); received extended-field radiation therapy (EF-RT) within 4 weeks before enrollment or limited-field radiation therapy within 2 weeks before enrollment with evaluation of lesions recommended",
+      "source": {
+        "start": 3055,
+        "end": 3508,
+        "text": "Planning to receive systemic anti-tumor therapy within 4 weeks before enrollment or during the study period, including cytotoxic therapy, signal transduction inhibitors, and immunotherapy (or mitomycin C within 6 weeks before receiving experimental drug therapy); received extended-field radiation therapy (EF-RT) within 4 weeks before enrollment or limited-field radiation therapy within 2 weeks before enrollment with evaluation of lesions recommended"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:3512-3606",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has unremitting toxic reactions caused by previous treatment, CTCAE grade >1, excluding hair loss",
+      "source": {
+        "start": 3512,
+        "end": 3606,
+        "text": "Unremitting toxic reactions caused by previous treatment, CTCAE grade \\>1, excluding hair loss"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:3610-3747",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has various factors affecting oral medication (such as inability to swallow, gastrointestinal resection, chronic diarrhea, bowel obstruction)",
+      "source": {
+        "start": 3610,
+        "end": 3747,
+        "text": "Various factors affecting oral medication (such as inability to swallow, gastrointestinal resection, chronic diarrhea, bowel obstruction)"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:3751-3827",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has pleural effusion or ascites leading to respiratory syndrome (≥CTCAE grade 2)",
+      "source": {
+        "start": 3751,
+        "end": 3827,
+        "text": "Pleural effusion or ascites leading to respiratory syndrome (≥CTCAE grade 2)"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:3832-3903",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has symptoms of brain metastasis not controlled and treated within 2 months",
+      "source": {
+        "start": 3832,
+        "end": 3903,
+        "text": "Symptoms of brain metastasis not controlled and treated within 2 months"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:3908-3954",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has the presence of any severe or uncontrolled disease",
+      "source": {
+        "start": 3908,
+        "end": 3954,
+        "text": "Presence of any severe or uncontrolled disease"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:3959-4051",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant has had major surgery, open biopsy, or significant traumatic injury within 28 days before enrollment",
+      "source": {
+        "start": 3959,
+        "end": 4051,
+        "text": "Major surgery, open biopsy, or significant traumatic injury within 28 days before enrollment"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:4056-4240",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has a bleeding diathesis or history of significant bleeding, regardless of severity; any wound, ulcer, or fracture that has not healed following a bleeding or bleeding event (≥CTCAE grade 3)",
+      "source": {
+        "start": 4056,
+        "end": 4240,
+        "text": "Bleeding diathesis or history of significant bleeding, regardless of severity; any wound, ulcer, or fracture that has not healed following a bleeding or bleeding event (≥CTCAE grade 3)"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:4245-4398",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has had arterial/venous thrombosis within 6 months, such as cerebrovascular accident (including transient ischemic attack), venous thrombosis, pulmonary embolism",
+      "source": {
+        "start": 4245,
+        "end": 4398,
+        "text": "Arterial/venous thrombosis within 6 months, such as cerebrovascular accident (including transient ischemic attack), venous thrombosis, pulmonary embolism"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:4403-4489",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant has a history of substance abuse that cannot be quit or is diagnosed with psychiatric disorders",
+      "source": {
+        "start": 4403,
+        "end": 4489,
+        "text": "History of substance abuse that cannot be quit or diagnosed with psychiatric disorders"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:4494-4566",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant has participated in other clinical trials of anti-tumor drugs within 4 weeks",
+      "source": {
+        "start": 4494,
+        "end": 4566,
+        "text": "Participated in other clinical trials of anti-tumor drugs within 4 weeks"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:4571-4673",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant is diagnosed with diseases that severely jeopardize patient safety or affect the completion of this study",
+      "source": {
+        "start": 4571,
+        "end": 4673,
+        "text": "Diagnosed with diseases that severely jeopardize patient safety or affect the completion of this study"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT06728852:4678-4890",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has a known history of human immunodeficiency virus (HIV) infection (i.e., HIV 1/2 antibody positive); untreated active hepatitis B; active HCV infection (HCV antibody positive and HCV-RNA levels above detection limit)",
+      "source": {
+        "start": 4678,
+        "end": 4890,
+        "text": "Known history of human immunodeficiency virus (HIV) infection (i.e., HIV 1/2 antibody positive); untreated active hepatitis B; active HCV infection (HCV antibody positive and HCV-RNA levels above detection limit)"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "e1e694b399d4",
+    "normalizeVersion": "2",
+    "timestamp": "2026-09"
+  }
+}

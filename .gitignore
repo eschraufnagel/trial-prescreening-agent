@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Test and coverage output
+coverage/
+.vitest/
+
+# Environment and local config
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Caches
+.cache/
+.npm/
+.eslintcache
+
+# Screening conversation cache — reproducible from the model, one file per conversation
+evals/results/screening/conversations/
+
+# Anthropic batch ledger — which batches were submitted, so an interrupted one is collected, not repaid
+evals/results/batches/
+
+# The browser test's output: results, report, traces and its own chats (npm run test:e2e)
+e2e/.out/
+
+# Self-screening chats from npm run screening:chat — typed by a person, never committed
+chats/
+
+# Trials added by link on the app's Trials screen (slice 0013): registry data and local parses, kept on this machine
+added-trials/
+
+# The app's Settings (slice 0017): the chosen model, its keys and the app's own spend ledger, kept on this machine
+local/

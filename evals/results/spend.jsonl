@@ -1,0 +1,1 @@
+{"date":"2026-10","script":"models:smoke","role":"smoke","spec":"anthropic:claude-haiku-4-5","servedModels":["claude-haiku-4-5-20251001"],"calls":2,"inputTokens":1511,"outputTokens":112,"cacheWriteTokens":0,"cacheReadTokens":0,"usd":0.002071,"batch":false,"pricesAsOf":"2026-09"}

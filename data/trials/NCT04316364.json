@@ -1,0 +1,25 @@
+{
+  "nctId": "NCT04316364",
+  "briefTitle": "A Trial of SHR-1316/Placebo in Combination With Chemotherapy in Patients With Resectable NSCLC",
+  "officialTitle": "A Randomized, Double-Blind, Multicenter, Phase Ib/III Clinical Study on PD-L1 Monoclonal Antibody SHR-1316 or Placebo in Combination With Chemotherapy as Perioperative Treatment of Resectable Stage II or III Non-Small Cell Lung Cancer",
+  "overallStatus": "RECRUITING",
+  "phases": [
+    "PHASE3"
+  ],
+  "conditions": [
+    "Non-Small-Cell Lung Cancer"
+  ],
+  "leadSponsor": "Jiangsu HengRui Medicine Co., Ltd.",
+  "lastUpdatePostDate": "2021-11-04",
+  "eligibility": {
+    "criteriaText": "Inclusion Criteria:\n\n* Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1\n* Have previously untreated, pathologically confirmed resectable Stage II, IIIA, or Selected IIIB NSCLC. Staging should be based on the 8th edition of the AJCC/UICC staging system\n* Evaluation by an attending thoracic surgeon to confirm eligibility for an R0 resection with curative intent\n* Adequate tumor tissue sample blocks for central programmed death-ligand 1 (PD-L1) testing\n* Measurable disease as defined by RECIST v1.1\n* Adequate organ function\n* Women of childbearing age without sterilizing or male, must agree to use contraception or practice abstinence at least 180 days after the last dose of study treatment\n\nExclusion Criteria:\n\n* Any previous systematic anti-cancer therapy for lung cancer\n* With active, known or suspected autoimmune disease of autoimmune disease\n* Malignancies other than NSCLC within 5 years prior to randomization\n* Has or suspected has a history of pneumonitis /interstitial lung disease or any serve lung diseases which will influence the examination of lung function\n* Significant history of cardiovascular and cerebrovascular disease\n* Significant haemorrhagic disease\n* Has an arteriovenous thrombotic events\n* Has a known history of human immunodeficiency virus (HIV) infection\n* Has a known active Hepatitis B or Hepatitis C\n* Allergic to monoclonal antibodies or other protein drugs\n* Allergic to the intervention regimens\n* Pregnant or lactating women\n* Has known psychiatric or substance abuse disorders\n* Confirmed COVID-19 infection or suspected COVID-19 infection or close contact with a person with known or suspected COVID-19 infection.",
+    "sex": "ALL",
+    "minimumAge": "18 Years",
+    "maximumAge": "70 Years",
+    "healthyVolunteers": false,
+    "stdAges": [
+      "ADULT",
+      "OLDER_ADULT"
+    ]
+  }
+}

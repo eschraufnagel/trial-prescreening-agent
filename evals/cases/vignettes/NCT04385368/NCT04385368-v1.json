@@ -1,0 +1,130 @@
+{
+  "id": "NCT04385368-v1",
+  "nctId": "NCT04385368",
+  "labelSetSha": "509e6dce56e6af79ca8922ffe39076400655c5af56355748bf3ccba1b665de45",
+  "behavior": "declines",
+  "persona": "61-year-old man, retired police officer, reserved, will not discuss some personal matters.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "Yes, I am capable of giving signed informed consent, including the genetic consent, and I will follow the requirements.",
+      "expected": "holds"
+    },
+    {
+      "label": "L6",
+      "says": "I am 61 years old.",
+      "expected": "holds"
+    },
+    {
+      "label": "L49",
+      "says": "I have never had an organ or bone marrow transplantation.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L57",
+      "says": null,
+      "declines": true,
+      "expected": "unresolved"
+    },
+    {
+      "label": "L59",
+      "says": "I have had no adjuvant therapy since the surgery, and never any durvalumab.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L60",
+      "says": "I am not having any chemotherapy, biologic, hormonal or other therapy for cancer right now.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L61",
+      "says": "No neoadjuvant radiotherapy. I had no radiation before my surgery.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L62",
+      "says": "I have never had radiotherapy.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L63",
+      "says": "I have not had any vaccine in the last three months.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L64",
+      "says": "My lung surgery was six weeks ago, and no surgical procedure since.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L65",
+      "says": "I am not on any immunosuppressive medication.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L66",
+      "says": "I have not had any participation in another clinical study since my surgery.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L67",
+      "says": "No, I have never been in this study before.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L68",
+      "says": "I am not enrolled in any other clinical study.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L69",
+      "says": "I have never been in a durvalumab clinical study.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L70",
+      "says": null,
+      "declines": true,
+      "expected": "unresolved"
+    },
+    {
+      "label": "L71",
+      "says": "I am a man, so I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L72",
+      "says": "I am a man, so I am not breastfeeding.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L73",
+      "says": "I am willing to use effective birth control until 90 days after the last dose.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L34",
+      "says": "I am back to walking a few miles a day since the surgery."
+    },
+    {
+      "label": "L51",
+      "says": null,
+      "declines": true
+    },
+    {
+      "label": "L55",
+      "says": "I have never had tuberculosis or hepatitis B."
+    },
+    {
+      "label": "L7",
+      "says": "The biopsy histologically confirmed non-small cell lung cancer, stage II, resectable. They removed it six weeks ago.",
+      "reported": "holds"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

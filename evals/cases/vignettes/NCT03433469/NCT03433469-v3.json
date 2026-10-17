@@ -1,0 +1,89 @@
+{
+  "id": "NCT03433469-v3",
+  "nctId": "NCT03433469",
+  "labelSetSha": "3858521c6adf07e6d939b0be1b7ccd1979a26130da9b06da8bf96e2ae9da6c45",
+  "behavior": "vague",
+  "persona": "74-year-old woman, retired seamstress, hazy on details and dates.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "I am 74 years of age.",
+      "expected": "holds"
+    },
+    {
+      "label": "L20",
+      "says": "Swallowing is a bit hard these days, but I manage most medications, mostly.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L22",
+      "says": "Contraception? I suppose so, if they need me to.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L49",
+      "says": "I am a woman, so that one about men is not for me.",
+      "expected": "defer"
+    },
+    {
+      "label": "L55",
+      "says": "I take a few medications from the doctor. I could not tell you what they are.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L59",
+      "says": "I have not had any cancer treatment, chemotherapy, radiation, hormonal or immunotherapy, in the last month.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L63",
+      "says": "No antibiotics in the last two months.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L67",
+      "says": "No, I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L68",
+      "says": "No, not breastfeeding.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L70",
+      "says": "I have never had a hypersensitivity reaction to a drug.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L71",
+      "says": "No, I have no part in the planning or conduct of the study.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L72",
+      "says": "I was in some study at the hospital a while ago. I do not know if there was a drug in it.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L10",
+      "says": "I sit down a lot these days."
+    },
+    {
+      "label": "L61",
+      "says": "No, I have never had tuberculosis.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L53",
+      "says": "No, I am not HIV positive.",
+      "reported": "does-not-hold"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

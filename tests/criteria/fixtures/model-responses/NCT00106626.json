@@ -1,0 +1,162 @@
+{
+  "nctId": "NCT00106626",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "promptVersion": "73c3b301c4a9",
+  "recordedAt": "2026-09",
+  "finishReason": "stop",
+  "usage": {
+    "inputTokens": 1066,
+    "outputTokens": 1728
+  },
+  "response": {
+    "criteria": [
+      {
+        "quote": "Patient must be 18 years or older with confirmed diagnosis of a solid tumor for which pemetrexed and cisplatin is acceptable treatment and have received no more than 2 prior systemic therapies",
+        "text": "Patient must be 18 years or older",
+        "polarity": "inclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Patient must be 18 years or older with confirmed diagnosis of a solid tumor for which pemetrexed and cisplatin is acceptable treatment and have received no more than 2 prior systemic therapies",
+        "text": "Patient has a confirmed diagnosis of a solid tumor for which pemetrexed and cisplatin is acceptable treatment",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Patient must be 18 years or older with confirmed diagnosis of a solid tumor for which pemetrexed and cisplatin is acceptable treatment and have received no more than 2 prior systemic therapies",
+        "text": "Patient has received no more than 2 prior systemic therapies",
+        "polarity": "inclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Has at least 1 measurable lesion",
+        "text": "Patient has at least 1 measurable lesion",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Has adequate blood, liver, and kidney functions",
+        "text": "Patient has adequate blood, liver, and kidney functions",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Has not received any chemotherapy for at least 4 weeks prior to entry in this study",
+        "text": "Patient has not received any chemotherapy for at least 4 weeks prior to entry in this study",
+        "polarity": "inclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Agrees to take adequate measures to prevent pregnancy as outlined in the protocol",
+        "text": "Patient agrees to take adequate measures to prevent pregnancy as outlined in the protocol",
+        "polarity": "inclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Patient has been treated with other investigational agents with a similar anti-tumor mechanism",
+        "text": "Patient has been treated with other investigational agents with a similar anti-tumor mechanism",
+        "polarity": "exclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Patient from Cohorts A and B has received pemetrexed or cisplatin within the past 6 months and from Cohorts C and D have received pemetrexed within the past 6 months",
+        "text": "Patient from Cohorts A and B has received pemetrexed or cisplatin within the past 6 months",
+        "polarity": "exclusion",
+        "type": "patient",
+        "appliesTo": "Cohorts A and B",
+        "confidence": 1
+      },
+      {
+        "quote": "Patient from Cohorts A and B has received pemetrexed or cisplatin within the past 6 months and from Cohorts C and D have received pemetrexed within the past 6 months",
+        "text": "Patient from Cohorts C and D has received pemetrexed within the past 6 months",
+        "polarity": "exclusion",
+        "type": "patient",
+        "appliesTo": "Cohorts C and D",
+        "confidence": 1
+      },
+      {
+        "quote": "Patient from Cohorts A and B has preexisting Grade 2 or higher neuropathy and from Cohorts C and D have Grade 3 or higher neuropathy",
+        "text": "Patient from Cohorts A and B has preexisting Grade 2 or higher neuropathy",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": "Cohorts A and B",
+        "confidence": 1
+      },
+      {
+        "quote": "Patient from Cohorts A and B has preexisting Grade 2 or higher neuropathy and from Cohorts C and D have Grade 3 or higher neuropathy",
+        "text": "Patient from Cohorts C and D has Grade 3 or higher neuropathy",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": "Cohorts C and D",
+        "confidence": 1
+      },
+      {
+        "quote": "Patient has active infection or had received IV (intravenous) antibiotic, antiviral, or antifungal medications within 2 weeks of the start of study drugs",
+        "text": "Patient has active infection",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Patient has active infection or had received IV (intravenous) antibiotic, antiviral, or antifungal medications within 2 weeks of the start of study drugs",
+        "text": "Patient has received IV (intravenous) antibiotic, antiviral, or antifungal medications within 2 weeks of the start of study drugs",
+        "polarity": "exclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Patient has HIV, hepatitis B or hepatitis C infection",
+        "text": "Patient has HIV, hepatitis B or hepatitis C infection",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Patient is pregnant or breast feeding",
+        "text": "Patient is pregnant or breast feeding",
+        "polarity": "exclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Patient has allergy to any component of the study drugs",
+        "text": "Patient has allergy to any component of the study drugs",
+        "polarity": "exclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 1
+      },
+      {
+        "quote": "Patient has history of GI (gastrointestinal) surgery or conditions",
+        "text": "Patient has history of GI (gastrointestinal) surgery or conditions",
+        "polarity": "exclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 1
+      }
+    ]
+  }
+}

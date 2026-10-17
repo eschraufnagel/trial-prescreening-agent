@@ -1,0 +1,91 @@
+{
+  "id": "NCT06728852-v3",
+  "nctId": "NCT06728852",
+  "labelSetSha": "f860d478efcfd4c6ae539bcde7594ecc8cbe3d2979b7322528842783150c7bca",
+  "behavior": "declines",
+  "persona": "71-year-old man, retired civil servant, guarded, prefers not to discuss some things.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "Yes, I will sign the informed consent.",
+      "expected": "holds"
+    },
+    {
+      "label": "L4",
+      "says": "I have had two systemic therapies before this: chemotherapy, then immunotherapy.",
+      "expected": "holds"
+    },
+    {
+      "label": "L15",
+      "says": "That is for female patients. I am a man.",
+      "expected": "defer"
+    },
+    {
+      "label": "L16",
+      "says": "Yes, I would agree to use contraception during the study and for six months after.",
+      "expected": "holds"
+    },
+    {
+      "label": "L19",
+      "says": null,
+      "declines": true,
+      "expected": "unresolved"
+    },
+    {
+      "label": "L20",
+      "says": "My last bevacizumab was ten days ago.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L25",
+      "says": "Yes, I have hemoptysis, about 10 ml of blood a day. The nurse measured it.",
+      "expected": "holds"
+    },
+    {
+      "label": "L28",
+      "says": "No, I am not planning any other anti-tumor therapy.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L29",
+      "says": "I have not had any radiation therapy.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L35",
+      "says": "No major surgery, open biopsy or injury in the last six weeks.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L38",
+      "says": null,
+      "declines": true,
+      "expected": "unresolved"
+    },
+    {
+      "label": "L40",
+      "says": "I have not taken part in any other clinical trial.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L39",
+      "says": null,
+      "declines": true
+    },
+    {
+      "label": "L37",
+      "says": "I had a blood clot in my leg last year."
+    },
+    {
+      "label": "L43",
+      "says": "I have never had hepatitis B, treated or untreated.",
+      "reported": "does-not-hold"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

@@ -1,0 +1,608 @@
+{
+  "nctId": "NCT03433469",
+  "criteria": [
+    {
+      "id": "NCT03433469:23-59",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The participant is male or female and is 18 years of age or older.",
+      "source": {
+        "start": 23,
+        "end": 59,
+        "text": "Males and females \\>=18 years of age"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:62-423",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has histologically or cytologically confirmed non-small cell lung cancer (NSCLC) based on a biopsy performed within the last 90 days, or has a prior biopsy showing NSCLC if the current biopsy is deferred due to unacceptable safety risk.",
+      "source": {
+        "start": 62,
+        "end": 423,
+        "text": "Histologically or cytologically confirmed non-small cell lung cancer (NSCLC), performed on a biopsy that occurred within the last 90 days. This biopsy can be deferred if the procedure is deemed to represent an unacceptable safety risk to the patient by the Principal Investigator and as long as the patient has a prior biopsy showing non-small cell lung cancer."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:426-601",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has a documented activating EGFR mutation (Exon 19 deletion, T790M, or L858R) on tumor samples tested by a CLIA-approved test.",
+      "source": {
+        "start": 426,
+        "end": 601,
+        "text": "Documented activating EGFR mutation (Exon 19 deletion, T790M, or L858R) on tumor samples by Clinical Laboratory Clinical Laboratory Improvement Amendments (CLIA)-approved test"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:604-934",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "If the participant was previously treated with osimertinib or another EGFR TKI, they received no more than 28 days of treatment and have no evidence of grade 2 or greater treatment-related adverse events.",
+      "source": {
+        "start": 604,
+        "end": 934,
+        "text": "Patients treated with osimertinib or another EGFR tyrosine kinase inhibitors (TKI) (including erlotinib, afatinib, gefitinib, \\& rocelitinib) are eligible if they received no more than 28 days of treatment, and if there is no evidence of grade 2 or greater treatment adverse events possibly related to treatment with the EGFR TKI."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:937-1126",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has a PET-CT scan within the last 60 days showing radiographic stage I to IIIa lung cancer.",
+      "source": {
+        "start": 937,
+        "end": 1126,
+        "text": "Positron emission tomography (PET)-computed tomography (CT) within the last 60 days showing radiographic stage I to IIIa lung cancer (mediastinal staging biopsy is allowed but not required)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:1129-1268",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has a brain MRI (or CT if MRI is contraindicated) within the last 60 days showing no evidence of metastatic disease.",
+      "source": {
+        "start": 1129,
+        "end": 1268,
+        "text": "Brain magnetic resonance imaging (MRI) (or CT if contraindication to MRI) within the last 60 days showing no evidence of metastatic disease"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:1271-1419",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant is documented as a candidate for surgical resection of their lung cancer by an American Board of Thoracic Surgery certified surgeon.",
+      "source": {
+        "start": 1271,
+        "end": 1419,
+        "text": "Documentation that the patient is a candidate for surgical resection of their lung cancer by an American Board of Thoracic Surgery certified surgeon"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:1422-1502",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has a tumor size of 1 centimeter or greater in its longest diameter.",
+      "source": {
+        "start": 1422,
+        "end": 1502,
+        "text": "The patient must have a tumor size \\>=1 centimeter (cm) in its longest diameter."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:1505-1577",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+      "source": {
+        "start": 1505,
+        "end": 1577,
+        "text": "Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) of 0-1"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:1580-1836",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has no unresolved toxicities from prior therapy greater than CTCAE grade 1 at the time of starting study treatment, with the exception of alopecia and grade 2 prior platinum therapy-related neuropathy.",
+      "source": {
+        "start": 1580,
+        "end": 1836,
+        "text": "Any unresolved toxicities from prior therapy greater than Common Terminology Criteria for Adverse Events (CTCAE) grade 1 at the time of starting study treatment, with the exception of alopecia and grade 2 prior platinumtherapy-related neuropathy is allowed"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:1839-1944",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant's aspartate aminotransferase (AST) and alanine aminotransferase (ALT) levels are less than or equal to 2.5 times the upper limit of normal (ULN).",
+      "source": {
+        "start": 1839,
+        "end": 1944,
+        "text": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =\\< 2.5 x upper limit of normal (ULN)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:1947-2201",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant's bilirubin level is less than or equal to 1.5 times the upper limit of normal (ULN), or if they have documented Gilbert's syndrome, their conjugated bilirubin is within the normal range.",
+      "source": {
+        "start": 1947,
+        "end": 2201,
+        "text": "Bilirubin =\\< 1.5 x ULN, (Patients with documented Gilbert's syndrome and conjugated bilirubin within the normal range may be allowed into the study; in this event, it will be documented that the patient was eligible based on conjugated bilirubin levels)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:2204-2306",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant's potassium and magnesium levels are within the normal range.",
+      "source": {
+        "start": 2204,
+        "end": 2306,
+        "text": "Potassium and magnesium within normal range, patients may receive supplements to meet this requirement"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:2309-2345",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant's leukocyte count is greater than 3,000/microliter (mcL).",
+      "source": {
+        "start": 2309,
+        "end": 2345,
+        "text": "Leukocytes \\> 3,000/microliter (mcL)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:2348-2433",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant's hemoglobin level is greater than or equal to 9 g/dL, and they have not received blood transfusions in the 28 days prior to study entry.",
+      "source": {
+        "start": 2348,
+        "end": 2433,
+        "text": "Hemoglobin \\>= 9 g/dL, with no blood transfusions in the 28 days prior to study entry"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:2436-2474",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant's absolute neutrophil count is greater than 1,500/mcL.",
+      "source": {
+        "start": 2436,
+        "end": 2474,
+        "text": "Absolute neutrophil count \\> 1,500/mcL"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:2477-2501",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant's platelet count is greater than 100,000/mcL.",
+      "source": {
+        "start": 2477,
+        "end": 2501,
+        "text": "Platelets \\> 100,000/mcL"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:2504-2622",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "For patients with serum creatinine (SCr) > 1.5 x upper limit of normal (ULN), the creatinine clearance (CrCl) is > 50 mL/min.",
+      "source": {
+        "start": 2504,
+        "end": 2622,
+        "text": "Creatinine Clearance (CrCl) \\> 50 mL/min for patients with serum creatinine (SCr) \\> 1.5 x upper limit of normal (ULN)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:2625-2660",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The participant has the ability to swallow oral medications.",
+      "source": {
+        "start": 2625,
+        "end": 2660,
+        "text": "Ability to swallow oral medications"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:2663-2922",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Women of childbearing potential (WoCBP) must have a negative serum pregnancy test within 3 days prior to the first dose of study treatment and agree to use highly effective contraception during the study and for 90 days following the last dose of osimertinib.",
+      "source": {
+        "start": 2663,
+        "end": 2922,
+        "text": "Women of childbearing potential (WoCBP) must have a negative serum pregnancy test within 3 days prior to the first dose of study treatment and agree to use highly effective contraception, during the study and for 90 days following the last dose of osimertinib"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:2928-3091",
+      "polarity": "inclusion",
+      "type": "definitional",
+      "text": "Definition: Women of childbearing potential (WoCBP) are women between menarche and menopause who have not been permanently or surgically sterilized and are capable of procreation.",
+      "source": {
+        "start": 2928,
+        "end": 3091,
+        "text": "Women of childbearing potential (WoCBP): women between menarche and menopause who have not been permanently or surgically sterilized and are capable of procreation"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:3096-3201",
+      "polarity": "inclusion",
+      "type": "definitional",
+      "text": "Definition: Women NOT of childbearing potential are women who are permanently or surgically sterilized or postmenopausal.",
+      "source": {
+        "start": 3096,
+        "end": 3201,
+        "text": "Women NOT of childbearing potential: women who are permanently or surgically sterilized or postmenopausal"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:3209-3599",
+      "polarity": "inclusion",
+      "type": "definitional",
+      "text": "Definition: Permanent sterilization includes hysterectomy and/or bilateral oophorectomy and/or bilateral salpingectomy but excludes bilateral tubal occlusion.",
+      "source": {
+        "start": 3209,
+        "end": 3599,
+        "text": "Permanent sterilization includes hysterectomy and/or bilateral oophorectomy and/or bilateral salpingectomy but excludes bilateral tubal occlusion; tubal occlusion is considered a highly effective method of birth control but does not absolutely exclude possibility of pregnancy; (the term occlusion refers to both occluding and ligating techniques that do not physically remove the oviducts)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:3604-3769",
+      "polarity": "inclusion",
+      "type": "protocol",
+      "text": "Management rule: Women who have undergone tubal occlusion should be managed on trials as if they are of WoCBP.",
+      "source": {
+        "start": 3604,
+        "end": 3769,
+        "text": "Women who have undergone tubal occlusion should be managed on trials as if they are of WoCBP (e.g. undergo pregnancy testing etc., as required by the study protocol)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:3774-4383",
+      "polarity": "inclusion",
+      "type": "definitional",
+      "text": "Definition: Women will be considered postmenopausal if they are amenorrhoeic for 12 months without an alternative medical cause. Women under 50 years old will be considered postmenopausal if they have been amenorrhoeic for 12 months or more following cessation of exogenous hormonal treatments and with luteinizing hormone and follicle-stimulating hormone levels in the postmenopausal range. Women over 50 years of age will be considered postmenopausal if they have been amenorrhoeic for 12 months or more following cessation of all exogenous hormonal treatments.",
+      "source": {
+        "start": 3774,
+        "end": 4383,
+        "text": "Women will be considered postmenopausal if they are amenorrhoeic for 12 months without an alternative medical cause; the following age-specific requirements apply:\n\n    * Women under 50 years old will be considered postmenopausal if they have been amenorrhoeic for 12 months or more following cessation of exogenous hormonal treatments and with luteinizing hormone and follicle-stimulating hormone levels in the postmenopausal range\n    * Women over 50 years of age will be considered postmenopausal if they have been amenorrhoeic for 12 months or more following cessation of all exogenous hormonal treatments"
+      },
+      "confidence": 1,
+      "loose": true
+    },
+    {
+      "id": "NCT03433469:4388-5390",
+      "polarity": "inclusion",
+      "type": "definitional",
+      "text": "Definition: Acceptable contraception methods include total sexual abstinence, vasectomized sexual partner plus male condom, tubal occlusion plus male condom, intra-uterine device (copper-banded) plus male condom, intra-uterine system (IUS) levonorgestrel IUS plus male condom, Medroxyprogesterone injections plus male condom, Etonogestrel implants plus male condom, normal and low dose combined oral contraceptive pills plus male condom, Norelgestromin / ethinylestradiol transdermal system plus male condom, Intravaginal device plus male condom, and Cerazette plus male condom.",
+      "source": {
+        "start": 4388,
+        "end": 5390,
+        "text": "Acceptable contraception methods are:\n\n    * Total sexual abstinence (abstinence must be for the total duration of the trial and the follow-up period)\n    * Vasectomized sexual partner plus male condom (with participant assurance that partner received post-vasectomy confirmation of azoospermia)\n    * Tubal occlusion plus male condom\n    * Intra-uterine device - provided coils are copper-banded, plus male condom\n    * Intra-uterine system (IUS) levonorgestrel IUS (e.g., Mirena), plus male condom\n    * Medroxyprogesterone injections (Depo-Provera) plus male condom\n    * Etonogestrel implants (e.g., Implanon, Norplan) plus male condom\n    * Normal and low dose combined oral contraceptive pills, plus male condom\n    * Norelgestromin / ethinylestradiol transdermal system plus male condom\n    * Intravaginal device (e.g., ethinylestradiol and etonogestrel) plus male condom\n    * Cerazette (desogestrel) plus male condom (Cerazette is currently the only highly efficacious progesterone based pill)"
+      },
+      "confidence": 1,
+      "loose": true
+    },
+    {
+      "id": "NCT03433469:5395-5812",
+      "polarity": "inclusion",
+      "type": "definitional",
+      "text": "Definition: Unacceptable contraception methods include triphasic combined oral contraceptives, all progesterone only pills except Cerazette, all barrier methods if intended to be used alone, non-copper containing intra-uterine devices, fertility awareness methods, and coitus interruptus.",
+      "source": {
+        "start": 5395,
+        "end": 5812,
+        "text": "Unacceptable Contraception Methods The following methods are considered not to be highly effective and are therefore not acceptable contraceptive methods:\n\n    * Triphasic combined oral contraceptives\n    * All progesterone only pills except, Cerazette\n    * All barrier methods, if intended to be used alone\n    * Non-copper containing intra-uterine devices\n    * Fertility awareness methods\n    * Coitus interruptus"
+      },
+      "confidence": 1,
+      "loose": true
+    },
+    {
+      "id": "NCT03433469:5815-6132",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Men with a female partner of childbearing potential must have either had a prior vasectomy or agree to use effective contraception as described in the full protocol for at least 14 days prior to administration of the first dose of study treatment, during the study, and for 90 days following the last dose of osimertinib.",
+      "source": {
+        "start": 5815,
+        "end": 6132,
+        "text": "Men with a female partner of childbearing potential must have either had a prior vasectomy agree to use effective contraception as described in the full protocol for at least 14 days prior to administration of the first dose of study treatment, during the study, and for 90 days following the last dose of osimertinib"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:6157-6235",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have leptomeningeal carcinomatosis or other central nervous system (CNS) metastases.",
+      "source": {
+        "start": 6157,
+        "end": 6235,
+        "text": "Leptomeningeal carcinomatosis or other central nervous system (CNS) metastases"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:6238-6451",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have Stage IIIB or distant metastases (including malignant pleural effusion) identified on PET-CT scan or biopsy.",
+      "source": {
+        "start": 6238,
+        "end": 6451,
+        "text": "Stage IIIB, or distant metastases (including malignant pleural effusion) identified on PET-CT scan or biopsy (PET abnormalities that are negative for malignancy on biopsy will be considered on a case by case basis"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:6454-6663",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have a past medical history of interstitial lung disease, drug-induced interstitial lung disease, radiation pneumonitis which required steroid treatment, or any evidence of clinically active interstitial lung disease.",
+      "source": {
+        "start": 6454,
+        "end": 6663,
+        "text": "Past medical history of interstitial lung disease, drug-induced interstitial lung disease, radiation pneumonitis which required steroid treatment, or any evidence of clinically active interstitial lung disease"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:6666-6756",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant is not known to be serologically positive for human immunodeficiency virus (HIV).",
+      "source": {
+        "start": 6666,
+        "end": 6756,
+        "text": "Patients who are known to be serologically positive for human immunodeficiency virus (HIV)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:6759-7200",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have an active second malignancy. Patients with a history of malignancy that has been completely treated, with no evidence of that cancer currently, are permitted to enroll provided all chemotherapy for prior malignancy was completed > 12 months prior and/or bone marrow transplant > 2 years prior.",
+      "source": {
+        "start": 6759,
+        "end": 7200,
+        "text": "Active second malignancy, i.e. patient known to have potentially fatal cancer present for which he/she may be (but not necessarily) currently receiving treatment; patients with a history of malignancy that has been completely treated, with no evidence of that cancer currently, are permitted to enroll in the trial provided all chemotherapy for prior malignancy was completed \\> 12 months prior and/or bone marrow transplant \\> 2 years prior"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:7203-7612",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant is not currently receiving treatment with contraindicated corrected QT interval (QTc) prolonging medications or potent CYP3A4 inducers that cannot be discontinued or switched prior to the first day of study treatment.",
+      "source": {
+        "start": 7203,
+        "end": 7612,
+        "text": "Patients who are currently receiving treatment with contraindicated corrected QT interval (QTc) prolonging medications or potent CYP3A4 inducers, if that treatment cannot be either discontinued or switched to a different medication prior to first day of study treatment. All patients must try to avoid concomitant use of any medications, herbal supplements and/or ingestion of foods with known inducer effects"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:7615-8345",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have any of the following cardiac abnormalities or history: mean resting corrected QT interval (QTc) > 470 msec, clinically important abnormalities in rhythm, conduction or morphology of resting ECG, or factors that increase the risk of QTc prolongation or risk of arrhythmic events.",
+      "source": {
+        "start": 7615,
+        "end": 8345,
+        "text": "Any of the following cardiac abnormalities or history:\n\n  * Mean resting corrected QT interval (QTc) \\> 470 msec, obtained from 3 electrocardiograms (ECGs), using the screening clinic ECG machine derived QTc value\n  * Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG e.g. complete left bundle branch block, third degree heart block and second degree heart block\n  * Any factors that increase the risk of QTc prolongation or risk of arrhythmic events such as heart failure, hypokalaemia, congenital long QT syndrome, family history of long QT syndrome or unexplained sudden death under 40 years of age in first degree relatives or any concomitant medication known to prolong the QT interval"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:8348-8586",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has not received treatment with prohibited medications (concurrent anticancer therapy including chemotherapy, radiation, hormonal treatment [except corticosteroids and megesterolacetate], or immunotherapy) within 14 days prior to treatment with osimertinib.",
+      "source": {
+        "start": 8348,
+        "end": 8586,
+        "text": "Treatment with prohibited medications (concurrent anticancer therapy including chemotherapy, radiation, hormonal treatment \\[except corticosteroids and megesterolacetate\\], or immunotherapy) =\\< 14 days prior to treatment with osimertinib"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:8589-9241",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension and active bleeding diatheses, which in the investigator's opinion makes it undesirable for the patient to participate in the trial or which would jeopardize compliance with the protocol, or known active infection including chronic active hepatitis B, hepatitis C and human immunodeficiency virus (HIV). Patients with chronic hepatitis B virus (HBV) with negative HBV viral load on appropriate antiviral therapy will be permitted, if able to continue appropriate antiviral therapy throughout treatment period.",
+      "source": {
+        "start": 8589,
+        "end": 9241,
+        "text": "Any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension and active bleeding diatheses, which in the investigator?s opinion makes it undesirable for the patient to participate in the trial or which would jeopardize compliance with the protocol, or known active infection including chronic active hepatitis B, hepatitis C and human immunodeficiency virus (HIV); screening for chronic conditions is not required; patients with chronic hepatitis B virus (HBV) with negative HBV viral load on appropriate antiviral therapy will be permitted, if able to continue appropriate antiviral therapy throughout treatment period"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:9244-9263",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have active tuberculosis.",
+      "source": {
+        "start": 9244,
+        "end": 9263,
+        "text": "Active tuberculosis"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:9266-9339",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have signs or symptoms of infection within 2 weeks prior to the first day of study.",
+      "source": {
+        "start": 9266,
+        "end": 9339,
+        "text": "Signs or symptoms of infection within 2 weeks prior to first day of study"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:9342-9603",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has not received therapeutic oral or intravenous (IV) antibiotics within 2 weeks prior to the first day of study treatment.",
+      "source": {
+        "start": 9342,
+        "end": 9603,
+        "text": "Therapeutic oral or intravenous (IV) antibiotics within 2 weeks prior to first day of study treatment:\n\n  * Patients receiving prophylactic antibiotics (eg, to prevent a urinary tract infection or chronic obstructive pulmonary disease exacerbation) are eligible"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:9606-9712",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have Class II to IV heart failure as defined by the New York Heart Association functional classification system.",
+      "source": {
+        "start": 9606,
+        "end": 9712,
+        "text": "Class II to IV heart failure as defined by the New York Heart Association functional classification system"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:9715-10031",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "If the participant has known coronary artery disease, congestive heart failure not meeting the above criteria, or left ventricular ejection fraction (LVEF) < 50%, they must be on a stable medical regimen that is optimized in the opinion of the treating physician, in consultation with a cardiologist if appropriate, to be eligible.",
+      "source": {
+        "start": 9715,
+        "end": 10031,
+        "text": "Patients with known coronary artery disease, congestive heart failure not meeting the above criteria, or left ventricular ejection fraction (LVEF) \\< 50% must be on a stable medical regimen that is optimized in the opinion of the treating physician, in consultation with a cardiologist if appropriate, to be eligible"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:10034-10479",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has not experienced untreated and/or uncontrolled cardiovascular conditions and/or has not had symptomatic cardiac dysfunction (unstable angina, congestive heart failure, myocardial infarction within the previous 3 months; coronary angioplasty, or stenting or bypass grafting within the past 6 months; cardiac ventricular arrhythmias requiring medication; any history of second (2nd) or third (3rd) degree atrioventricular conduction defects).",
+      "source": {
+        "start": 10034,
+        "end": 10479,
+        "text": "Patients who have experienced untreated and/or uncontrolled cardiovascular conditions and/or have symptomatic cardiac dysfunction (unstable angina, congestive heart failure, myocardial infarction within the previous 3 months; coronary angioplasty, or stenting or bypass grafting within the past 6 months; cardiac ventricular arrhythmias requiring medication; any history of second (2nd) or third (3rd) degree atrioventricular conduction defects)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:10482-10523",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Females who are pregnant or breastfeeding are excluded.",
+      "source": {
+        "start": 10482,
+        "end": 10523,
+        "text": "Females who are pregnant or breastfeeding"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:10526-10852",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have active gastrointestinal (GI) disease (including GI bleeding or ulceration) or other condition that could affect GI absorption (e.g. malabsorption syndrome, history of biliary tract disease), including refractory nausea or vomiting, or chronic GI disease which may affect absorption or tolerance to oral medications.",
+      "source": {
+        "start": 10526,
+        "end": 10852,
+        "text": "Presence of active gastrointestinal (GI) disease (including GI bleeding or ulceration) or other condition that could affect GI absorption (e.g. malabsorption syndrome, history of biliary tract disease), including refractory nausea or vomiting, or chronic GI disease which may affect absorption or tolerance to oral medications"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:10855-10997",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have a history of hypersensitivity to active or inactive excipients of osimertinib or drugs with a similar chemical structure or class to osimertinib.",
+      "source": {
+        "start": 10855,
+        "end": 10997,
+        "text": "History of hypersensitivity to active or inactive excipients of osimertinib or drugs with a similar chemical structure or class to osimertinib"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:11000-11123",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant is not involved in the planning and/or conduct of the study.",
+      "source": {
+        "start": 11000,
+        "end": 11123,
+        "text": "Involvement in the planning and/or conduct of the study (applies to both investigator staff and/or staff at the study site)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:11126-11285",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has not participated in another clinical study with an investigational product during the last 2 months or within five half-lives of the compound, whichever is longer.",
+      "source": {
+        "start": 11126,
+        "end": 11285,
+        "text": "Participation in another clinical study with an investigational product during the last 2 months or within five half-lives of the compound, whichever is longer"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03433469:11288-11493",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant does not have uncontrolled medical, psychological, familial, sociological, or geographical conditions that interfere with the patient's safety, ability to provide informed consent, or ability to comply with the protocol.",
+      "source": {
+        "start": 11288,
+        "end": 11493,
+        "text": "Uncontrolled medical, psychological, familial, sociological, or geographical conditions that interfere with the patient?s safety, ability to provide informed consent, or ability to comply with the protocol"
+      },
+      "confidence": 1
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "normalizeVersion": "2",
+    "timestamp": "2026-09"
+  }
+}

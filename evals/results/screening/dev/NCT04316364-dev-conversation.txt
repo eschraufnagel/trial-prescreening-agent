@@ -1,0 +1,113 @@
+━━ NCT04316364-dev (labels)
+
+  0 AGENT : Hello, and thank you for your interest in the study "A Trial of SHR-1316/Placebo in Combination With Chemotherapy in Patients With Resectable NSCLC". I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you.
+  1 AGENT  [L1]: Thanks. On a scale of 0 to 1, where 0 means fully active and 1 means restricted in physically strenuous activity but ambulatory, how would you describe your current health status?
+  2 PERSON: I would rate my health as 0, fully active. Just to mention, I am not pregnant, not lactating, and have had no close contact with anyone who has or is suspected of having COVID-19.
+      ⚑ simulator flag: The message claims the person is 'fully active' and rates their health as '0', which contradicts the facts stating they have stage IIIA lung cancer and rheumatoid arthritis, conditions that typically impair full activity.
+  3 AGENT  [L2]: Have you been diagnosed with resectable Stage II, IIIA, or Selected IIIB non-small cell lung cancer (NSCLC) that has not yet been treated?
+  4 PERSON: Yes, I have been diagnosed with previously untreated, pathologically confirmed Stage IIIA NSCLC, and the surgeon says it is resectable.
+  5 AGENT  [L3]: Has an attending thoracic surgeon evaluated you to confirm that you are eligible for an R0 resection (complete removal of the tumor) with curative intent?
+  6 PERSON: Yes, the surgeon has evaluated me and confirmed that an R0 resection is possible with curative intent.
+      ⚑ simulator flag: The message asserts that the surgeon confirmed an R0 resection is possible with curative intent, whereas the facts only state the surgeon says the cancer is resectable, without specifying R0 status or curative intent.
+  7 AGENT  [L5]: Have you had imaging scans (like CT or MRI) recently that show the tumor can be measured using RECIST v1.1 criteria?
+  8 PERSON: I'm not sure about the specific RECIST v1.1 criteria, but I have had recent imaging scans for my diagnosis.
+      ⚑ simulator flag: says something (107 chars) citing no fact
+      ⚑ simulator flag: The message asserts knowledge about RECIST v1.1 criteria, which contradicts the fact that the person does not know what the intervention drugs are and implies a level of medical technical knowledge not supported by the provided facts.
+  9 AGENT  [L5]: Thanks. Since you're not sure about RECIST v1.1 (a standard way to measure tumor size on scans), can your doctor confirm that your recent scans show the tumor can be measured this way?
+ 10 PERSON: I'm not sure if my doctor has specifically confirmed the RECIST v1.1 criteria, but I can ask them to check my records. I do know that my biopsy was pathologically confirmed and the surgeon says it is resectable.
+      ⚑ simulator flag: The message introduces specific information about RECIST v1.1 criteria which is not stated in the facts, implying knowledge or uncertainty about a detail not present in the provided persona.
+ 11 AGENT  [L6]: Thanks. To check for adequate organ function, have you had recent blood tests (like a complete blood count and chemistry panel) that your doctor says are within normal limits?
+ 12 PERSON: I'm not sure about the specific results of my recent blood tests. I haven't been told they are within normal limits, so I can't confirm that.
+      ⚑ simulator flag: says something (141 chars) citing no fact
+ 13 AGENT  [L7]: Are you currently pregnant or breastfeeding? Also, if you are a woman of childbearing age, would you be willing to use effective contraception or practice abstinence for at least 180 days after your last study treatment dose?
+ 14 PERSON: No, I am not pregnant or breastfeeding. Yes, I would agree to use contraception or practice abstinence for 180 days after the last dose.
+ 15 AGENT  [L8]: Have you ever received any previous systemic anti-cancer treatment (such as chemotherapy, immunotherapy, or targeted therapy) specifically for lung cancer?
+ 16 PERSON: No, I have not had any anti-cancer therapy for my lung cancer.
+ 17 AGENT  [L9]: Do you have any active autoimmune diseases, such as rheumatoid arthritis, lupus, or Crohn's disease?
+ 18 PERSON: Yes, I do have an active autoimmune disease. I have rheumatoid arthritis, which I mentioned earlier caused a reaction to monoclonal antibodies.
+ 19 AGENT  [L10]: Have you been diagnosed with any other types of cancer (besides lung cancer) in the last 5 years?
+ 20 PERSON: I don't know if I have had other types of cancer in the last 5 years. I only know about my lung cancer diagnosis.
+      ⚑ simulator flag: says something (113 chars) citing no fact
+      ⚑ simulator flag: The message asserts uncertainty about having other types of cancer in the last 5 years, which introduces new information not present in the facts and potentially contradicts the implication of a single, specific lung cancer diagnosis without mention of other malignancies.
+ 21 AGENT  [L11]: Thanks. Have you ever been diagnosed with pneumonitis, interstitial lung disease, or any other severe lung conditions that affect lung function?
+ 22 PERSON: I don't know if I have been diagnosed with pneumonitis or interstitial lung disease. I only know about my lung cancer and my rheumatoid arthritis.
+      ⚑ simulator flag: says something (146 chars) citing no fact
+ 23 AGENT  [L12]: Have you ever been diagnosed with significant heart or blood vessel conditions, such as a heart attack, stroke, or heart failure?
+ 24 PERSON: I don't know if I have had a heart attack, stroke, or heart failure. I only know about my lung cancer and my rheumatoid arthritis.
+      ⚑ simulator flag: says something (130 chars) citing no fact
+      ⚑ simulator flag: The message asserts that the person does not know if they have had a heart attack, stroke, or heart failure, which introduces specific health uncertainties not stated in the facts.
+ 25 AGENT  [L13]: Thanks. Have you ever been diagnosed with a significant bleeding disorder or condition that causes excessive bleeding?
+ 26 PERSON: I don't know if I have a bleeding disorder. I only know about my lung cancer and my rheumatoid arthritis.
+      ⚑ simulator flag: says something (105 chars) citing no fact
+ 27 AGENT  [L14]: Have you ever been diagnosed with a blood clot in a vein (DVT) or a blood clot in the lung (PE)?
+ 28 PERSON: I don't know if I have had a blood clot in a vein or lung. I only know about my lung cancer and my rheumatoid arthritis.
+      ⚑ simulator flag: says something (120 chars) citing no fact
+ 29 AGENT  [L15]: Thanks. Have you ever been diagnosed with HIV (human immunodeficiency virus)?
+ 30 PERSON: No, I do not have HIV.
+ 31 AGENT  [L16]: Thanks. Have you ever been diagnosed with Hepatitis B or Hepatitis C?
+ 32 PERSON: I don't know if I have Hepatitis B or C. I only know about my lung cancer and my rheumatoid arthritis.
+      ⚑ simulator flag: says something (102 chars) citing no fact
+      ⚑ simulator flag: The message claims the person does not know if they have Hepatitis B or C, but the provided facts do not contain any information regarding the person's Hepatitis status, making this an unsupported assertion.
+ 33 AGENT  [L18]: Thanks. Are you allergic to SHR-1316 or any of the chemotherapy medicines used in this study?
+ 34 PERSON: I am allergic to monoclonal antibodies, which caused a reaction for my arthritis, but I don't know what the specific intervention drugs are, so I can't say if I'm allergic to them.
+ 35 AGENT  [L18]: Thanks. Since you mentioned an allergy to monoclonal antibodies, could you confirm if you have any known allergies to the specific chemotherapy drugs or SHR-1316 used in this study? It's okay if you aren't sure.
+ 36 PERSON: I'm not sure if I'm allergic to the specific chemotherapy drugs or SHR-1316 because I don't know what they are. I only know I had a reaction to monoclonal antibodies for my arthritis.
+ 37 AGENT  [L21]: Thanks. Do you currently have a diagnosed psychiatric condition, such as depression, anxiety, or bipolar disorder?
+ 38 PERSON: I don't know if I have a diagnosed psychiatric condition like depression or anxiety. I only know about my lung cancer and my rheumatoid arthritis.
+      ⚑ simulator flag: says something (146 chars) citing no fact
+ 39 AGENT  [L22]: Thanks. Do you currently have a substance abuse disorder, such as a problem with alcohol or drugs?
+ 40 PERSON: I prefer not to discuss that topic.
+ 41 AGENT  [L23]: Thanks. Have you ever been diagnosed with or suspected to have a COVID-19 infection?
+ 42 PERSON: No, I have not been diagnosed with or suspected to have a COVID-19 infection.
+ 43 AGENT : Thank you, that's all my questions. A study coordinator will review your answers and contact you about next steps.
+
+FINDINGS
+  L1   needs chart review (answered, reported holds)  Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1
+         turn 2: "I would rate my health as 0, fully active."
+  L2   needs chart review (answered, reported holds)  Have previously untreated, pathologically confirmed resectable Stage II, IIIA, or Selected IIIB NSCLC.
+         turn 4: "previously untreated, pathologically confirmed Stage IIIA NSCLC, and the surgeon says it is resectable"
+  L3   needs chart review (answered, reported holds)  Evaluation by an attending thoracic surgeon to confirm eligibility for an R0 resection with curative intent
+         turn 6: "surgeon has evaluated me and confirmed that an R0 resection is possible with curative intent"
+  L4   not raised (protocol)  Adequate tumor tissue sample blocks for central programmed death-ligand 1 (PD-L1) testing
+  L5   needs chart review (partial, reported partial)  Measurable disease as defined by RECIST v1.1
+         turn 8: "I'm not sure about the specific RECIST v1.1 criteria" — missing: Confirmation that the tumor can be measured using RECIST v1.1 criteria
+         turn 10: "I'm not sure if my doctor has specifically confirmed the RECIST v1.1 criteria" — missing: Confirmation from doctor that scans show tumor measurable by RECIST v1.1
+  L6   needs chart review (unknown, reported unknown)  Adequate organ function
+         turn 12: "I'm not sure about the specific results of my recent blood tests."
+  L7   holds (answered)  Women of childbearing age without sterilizing or male, must agree to use contraception or practice abstinence at least 180 days after the last dose of study treatment
+         turn 14: "Yes, I would agree to use contraception or practice abstinence for 180 days"
+  L8   does not hold (answered)  Any previous systematic anti-cancer therapy for lung cancer
+         turn 16: "No, I have not had any anti-cancer therapy"
+  L9   needs chart review (answered, reported holds)  With active, known or suspected autoimmune disease of autoimmune disease
+         turn 18: "Yes, I do have an active autoimmune disease."
+  L10  needs chart review (unknown, reported unknown)  Malignancies other than NSCLC within 5 years prior to randomization
+         turn 20: "I don't know if I have had other types of cancer"
+  L11  needs chart review (unknown, reported unknown)  Has or suspected has a history of pneumonitis /interstitial lung disease or any serve lung diseases which will influence the examination of lung function
+         turn 22: "I don't know if I have been diagnosed with pneumonitis or interstitial lung disease."
+  L12  needs chart review (unknown, reported unknown)  Significant history of cardiovascular and cerebrovascular disease
+         turn 24: "I don't know if I have had a heart attack, stroke, or heart failure."
+  L13  needs chart review (unknown, reported unknown)  Significant haemorrhagic disease
+         turn 26: "I don't know if I have a bleeding disorder."
+  L14  needs chart review (unknown, reported unknown)  Has an arteriovenous thrombotic events
+         turn 28: "I don't know if I have had a blood clot"
+  L15  needs chart review (answered, reported does-not-hold)  Has a known history of human immunodeficiency virus (HIV) infection
+         turn 30: "No, I do not have HIV."
+  L16  needs chart review (unknown, reported unknown)  Has a known active Hepatitis B or Hepatitis C
+         turn 32: "I don't know if I have Hepatitis B or C."
+  L17  holds (answered)  Allergic to monoclonal antibodies or other protein drugs
+         turn 18: "caused a reaction to monoclonal antibodies."
+  L18  unresolved (unknown)  Allergic to the intervention regimens
+         turn 34: "I don't know what the specific intervention drugs are"
+         turn 36: "I'm not sure if I'm allergic to the specific chemotherapy drugs or SHR-1316"
+  L19  does not hold (answered)  Pregnant
+         turn 2: "I am not pregnant"
+  L20  does not hold (answered)  lactating women
+         turn 2: "not lactating"
+  L21  needs chart review (unknown, reported unknown)  psychiatric
+         turn 38: "I don't know if I have a diagnosed psychiatric condition"
+  L22  unresolved (declined)  substance abuse disorders
+         turn 40: "I prefer not to discuss that topic."
+  L23  needs chart review (answered, reported does-not-hold)  Confirmed COVID-19 infection or suspected COVID-19 infection
+         turn 42: "No, I have not been diagnosed with or suspected to have a COVID-19 infection."
+  L24  does not hold (answered)  close contact with a person with known or suspected COVID-19 infection
+         turn 2: "had no close contact with anyone who has or is suspected of having COVID-19"

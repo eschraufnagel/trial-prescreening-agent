@@ -1,0 +1,61 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "promptVersion": "a2454f50f0f5",
+  "simulatorVersion": "d301a551b3dd",
+  "graderVersion": "2",
+  "vignetteSetHash": "ce067cdede97",
+  "dev": true,
+  "conversations": [
+    {
+      "vignetteId": "NCT04316364-dev",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "failed",
+      "error": "Cannot phrase a question about L1:\n  - no message in [{\"role\": \"user\", \"content\": \"STUDY: A Trial of SHR-1316/Placebo in Combination With Chemotherapy in Patients With Resectable NSCLC\\n\\nRECENT CONVERSATION:\\nASSISTANT: Hello, and thank you for your in…\n  - gave up after 2 attempts",
+      "timing": {
+        "agentMs": 38291,
+        "participantMs": 0,
+        "fidelityMs": 0,
+        "agentCalls": 2,
+        "participantCalls": 0,
+        "fidelityCalls": 0
+      }
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 0,
+      "confidentlyWrong": 0,
+      "answerable": 0,
+      "abstained": 0,
+      "abstainable": 0,
+      "correctAbstentions": 0,
+      "simulatorAffected": 0,
+      "confidentlyWrongRate": null,
+      "abstentionRate": null,
+      "correctAbstentionRate": null
+    },
+    "parse": {
+      "scored": {
+        "determinations": 0,
+        "confidentlyWrong": 0,
+        "answerable": 0,
+        "abstained": 0,
+        "abstainable": 0,
+        "correctAbstentions": 0,
+        "simulatorAffected": 0,
+        "confidentlyWrongRate": null,
+        "abstentionRate": null,
+        "correctAbstentionRate": null
+      },
+      "categories": {}
+    }
+  },
+  "failed": ["NCT04316364-dev (labels): failed"]
+}

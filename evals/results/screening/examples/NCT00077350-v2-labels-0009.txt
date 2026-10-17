@@ -1,0 +1,187 @@
+━━ NCT00077350-v2 (labels)
+
+  0 AGENT : Hello, and thank you for your interest in the study "A Phase II Trial of Triapine (NSC #663249) in Combination With Gemcitabine as Second Line Treatment of Non-Small Cell Lung Cancer". I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you.
+  1 AGENT  [L1]: Thanks. Have you had a biopsy or tissue sample that confirmed your lung cancer is non-small cell (NSCLC)? A diagnosis based only on cells from fluid or sputum isn't enough for this study. If you aren't sure, that's okay to say.
+  2 PERSON: Yes, I had a biopsy that confirmed it's non-small cell lung cancer. It came back and has been progressive since.
+      ⚑ simulator flag: The message asserts that a biopsy confirmed the diagnosis, which is not stated in the provided facts.
+  3 AGENT  [L3]: Thanks. Have you received exactly one prior chemotherapy treatment for your advanced lung cancer?
+  4 PERSON: Yes, just the one chemotherapy regimen for the advanced cancer, and it failed.
+      ⚑ simulator flag: The message asserts the patient had only one chemotherapy regimen, which contradicts the fact that he later corrected himself to state he had two different regimens.
+  5 AGENT  [L4]: Thanks. Have you ever received a chemotherapy drug called gemcitabine before?
+  6 PERSON: Actually, I had two different chemotherapy regimens for the advanced cancer. But to answer your question, no, I have never received gemcitabine.
+  7 AGENT  [L5]: Thanks. Have you had any imaging scans (like a CT or PET scan) within the last 4 weeks that showed your cancer is still measurable?
+  8 PERSON: I'm not sure about the exact timing of my last scans. I know I finished my chemotherapy four weeks ago, but I don't recall if I had a scan right after that.
+      ⚑ simulator flag: The message asserts that the user finished chemotherapy four weeks ago, which directly contradicts the fact that the user later corrected this statement to say the last chemotherapy was only last week.
+  9 AGENT  [L6]: Thanks. On a scale of 0 to 1, how would you rate your ability to carry out daily activities? 0 means fully active, and 1 means restricted in physically strenuous activity but ambulatory and able to carry out light work.
+ 10 PERSON: No, wait, my last chemotherapy was only last week. I'd say my score is 0, I'm fully active.
+ 11 AGENT  [L14]: Thanks for the update. Have you received any radiation therapy for your cancer? If so, was it at least 3 weeks ago?
+ 12 PERSON: Yes, I had radiation therapy, but it finished only one week ago, so it wasn't at least 3 weeks ago.
+ 13 AGENT  [L16]: Thanks. Have you recovered from any side effects of your chemotherapy to Grade 1 or your normal baseline? Grade 1 means mild symptoms that don't interfere with daily life. If you're not sure, that's okay.
+ 14 PERSON: I think so, mostly. I'm feeling back to normal, but I'm not sure if that counts as Grade 1 or just baseline.
+      ⚑ simulator flag: The message claims the person is 'feeling back to normal,' which contradicts the fact that they have recurrent, progressive non-small cell lung cancer and recently failed chemotherapy, implying they are not in a normal health state.
+ 15 AGENT  [L16]: Thanks. To help us clarify, are you currently experiencing any side effects from your chemotherapy that are mild (Grade 1) or none at all (baseline)?
+ 16 PERSON: I think I'm back to my normal baseline now. I don't have any mild side effects bothering me.
+      ⚑ simulator flag: says something (92 chars) citing no fact
+      ⚑ simulator flag: The message claims the patient has no side effects, which contradicts the fact that he recently completed chemotherapy and radiation therapy, implying potential side effects, and does not align with the persona's tendency to correct himself or provide specific medical details rather than vague generalizations about baseline status.
+ 17 AGENT  [L17]: Thanks. Have you ever been diagnosed with brain metastases (cancer that has spread to the brain)? If so, was it treated, and are you currently stable with no new neurological symptoms?
+ 18 PERSON: No, I have never been diagnosed with brain metastases.
+      ⚑ simulator flag: The message asserts that the person has never been diagnosed with brain metastases, which is information not present in the provided facts.
+ 19 AGENT  [L19]: Thanks. Based on your current health, do you expect to live for more than 3 months?
+ 20 PERSON: Yes, I expect to live for more than 3 months. My heart is fine as far as I know, and I'm feeling back to normal.
+      ⚑ simulator flag: The message claims the person is 'feeling back to normal,' which contradicts the facts stating they have recurrent, progressive advanced cancer and recently completed chemotherapy and radiation.
+ 21 AGENT  [L20]: Thanks. Are you currently pregnant or do you think you might be pregnant?
+ 22 PERSON: No, I am a man, so I am not pregnant.
+ 23 AGENT  [L21]: Thanks. Are you currently breastfeeding?
+ 24 PERSON: No, I am not breastfeeding. I am a man.
+ 25 AGENT  [L22]: Thanks. Have you had a blood pregnancy test in the last 14 days?
+ 26 PERSON: No, I am a man, so I don't need a pregnancy test.
+ 27 AGENT  [L23]: Thanks. If you are sexually active, are you willing to use birth control (like condoms or hormonal methods) or practice abstinence during the study and for a period after it ends?
+ 28 PERSON: Yes, I would agree to use contraception during the study.
+ 29 AGENT  [L24]: Thanks. Are you currently taking combination antiretroviral therapy for HIV?
+ 30 PERSON: No, I am HIV negative.
+ 31 AGENT  [L25]: Thanks. Do you currently have any other active cancers besides the lung cancer?
+ 32 PERSON: No, I don't have any other active cancers besides the lung cancer.
+ 33 AGENT  [L26]: Thanks. Do you currently have any ongoing infections or uncontrolled medical or mental health conditions that might make it hard to follow the study rules?
+ 34 PERSON: No, I don't have any ongoing infections or uncontrolled conditions. My heart is fine and I'm feeling back to normal.
+      ⚑ simulator flag: The message claims the person has no 'uncontrolled conditions' and is 'feeling back to normal,' which contradicts the facts stating they have recurrent, progressive advanced cancer and recently completed chemotherapy and radiation.
+ 35 AGENT  [L27]: Thanks. Have you had a heart attack in the last 6 months?
+ 36 PERSON: No, I haven't had a heart attack. My heart is fine as far as I know.
+ 37 AGENT  [L29]: Thanks. Have you been diagnosed with unstable angina (chest pain that is new, worsening, or happening at rest)?
+ 38 PERSON: No, I haven't been diagnosed with unstable angina. My heart is fine as far as I know.
+ 39 AGENT  [L30]: Thanks. Have you ever been diagnosed with an irregular heartbeat (arrhythmia) that required medical treatment, such as medication or a procedure? Please note that stable, asymptomatic atrial fibrillation is okay.
+ 40 PERSON: No, I haven't been diagnosed with an irregular heartbeat that needed treatment. My heart is fine as far as I know.
+ 41 AGENT  [L31]: Thanks. Do you currently use oxygen therapy for a lung condition?
+ 42 PERSON: No, I don't use oxygen therapy. I'm a delivery driver, so I need to be able to breathe fine for that.
+      ⚑ simulator flag: says something (101 chars) citing no fact
+      ⚑ simulator flag: The message asserts that the person does not use oxygen therapy, which is a health detail not stated in the facts.
+ 43 AGENT  [L32]: Thanks. Have you ever been diagnosed with dementia or active psychosis?
+ 44 PERSON: No, I haven't been diagnosed with dementia or active psychosis. I'm pretty sharp, just a delivery driver.
+      ⚑ simulator flag: says something (105 chars) citing no fact
+      ⚑ simulator flag: The message asserts that the person has not been diagnosed with dementia or active psychosis, which is information not present in the provided facts.
+ 45 AGENT  [L33]: Thanks. Have you taken part in any other clinical trials or received any investigational medications in the last month?
+ 46 PERSON: Yes, I was in another trial and took an investigational drug three weeks ago.
+ 47 AGENT  [L34]: Thanks. Have you ever had an allergic reaction to Triapine or any other drugs with a similar chemical makeup?
+ 48 PERSON: No, I have never had an allergic reaction to Triapine or anything similar to it.
+ 49 AGENT  [L35]: Thanks. Have you ever been diagnosed with G6PD deficiency? This is a genetic condition that affects red blood cells.
+ 50 PERSON: No, I have never been told I have G6PD deficiency.
+ 51 AGENT  [L37]: Thanks. Have you ever been diagnosed with G6PD deficiency? This is a genetic condition that affects red blood cells.
+ 52 PERSON: No, I have never been told I have G6PD deficiency.
+ 53 AGENT : Thank you, that's all my questions. A study coordinator will review your answers and contact you about next steps.
+
+FINDINGS
+  L1   needs chart review (answered, reported holds)  Patients must have histologically confirmed non-small cell lung cancer (NSCLC); cytology alone is not acceptable
+         turn 2: "Yes, I had a biopsy that confirmed it's non-small cell lung cancer."
+           judged: The person has histologically confirmed non-small cell lung cancer (NSCLC).
+  L2   needs chart review (answered, reported holds)  Patients must have progressive or recurrent NSCLC
+         turn 2: "It came back and has been progressive since."
+           judged: The person has progressive or recurrent NSCLC.
+  L3   holds (answered)  must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease
+         turn 4: "just the one chemotherapy regimen for the advanced cancer, and it failed."
+           judged: The person has failed one and only one prior cytotoxic chemotherapy regimen for advanced disease.
+  L4   does not hold (answered)  patients must not have received prior gemcitabine chemotherapy
+         turn 4: "just the one chemotherapy regimen"
+           judged: The person has received prior gemcitabine chemotherapy.
+         turn 6: "no, I have never received gemcitabine"
+           judged: The person has received prior gemcitabine chemotherapy.
+  L5   needs chart review (unknown, reported unknown)  Patients must have measurable disease, as defined by RECIST, within 4 weeks prior to registration
+         turn 8: "I don't recall if I had a scan right after that."
+           judged: The person has measurable disease, as defined by RECIST, within 4 weeks prior to registration.
+  L6   needs chart review (answered, reported holds)  Patients must have an ECOG performance status of 0 or 1
+         turn 10: "I'd say my score is 0, I'm fully active."
+           judged: The person has an ECOG performance status of 0 or 1.
+  L7   not raised (lab-value)  Bilirubin < 1.5 x upper limit of normal
+  L8   not raised (lab-value)  AST (SGOT) < 3 x upper limit of normal
+  L9   not raised (lab-value)  Serum creatinine =< 1.5 mg/dL, or calculated creatinine clearance >= 60 mL/min
+  L10  not raised (lab-value)  Absolute granulocyte count >= 1500/mm3
+  L11  not raised (lab-value)  WBC >= 3000/mm\^3
+  L12  not raised (lab-value)  Hemoglobin >= 9 g/L
+  L13  not raised (lab-value)  Platelet count >= 100,000/mm\^3
+  L14  does not hold (answered)  Patients must have completed any radiation therapy >= 3 weeks prior to registration
+         turn 12: "it finished only one week ago, so it wasn't at least 3 weeks ago"
+           judged: The person completed radiation therapy at least 3 weeks prior to registration.
+  L15  does not hold (answered)  Patients must have completed prior cytotoxic chemotherapy >= 3 weeks prior to registration
+         turn 10: "my last chemotherapy was only last week."
+           judged: The person has completed prior cytotoxic chemotherapy >= 3 weeks prior to registration.
+  L16  needs chart review (partial, reported partial)  have recovered from adverse effects from the chemotherapy to =< Grade 1, or baseline
+         turn 14: "I'm feeling back to normal, but I'm not sure if that counts as Grade 1 or just baseline."
+           judged: The person has recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.
+         turn 16: "I think I'm back to my normal baseline now. I don't have any mild side effects bothering me."
+           judged: The person has recovered from adverse effects from the chemotherapy to Grade 1 or baseline.
+         turn 20: "I'm feeling back to normal." — missing: Grade 1 or baseline recovery status
+           judged: The person has recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.
+         turn 34: "I'm feeling back to normal." — missing: Grade 1 or baseline recovery status
+           judged: The person has recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.
+         turn 36: "My heart is fine as far as I know." — missing: recovery of chemotherapy adverse effects to <= Grade 1 or baseline
+           judged: The person has recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.
+         turn 38: "My heart is fine as far as I know." — missing: adverse effects from the chemotherapy other than cardiac issues
+           judged: The person has recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.
+         turn 40: "My heart is fine as far as I know." — missing: recovery of other chemotherapy adverse effects to <= Grade 1 or baseline
+           judged: The person has not recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.
+  L17  needs chart review (answered, reported does-not-hold)  Patients with brain metastases which have been treated are eligible if the patient is > 3 weeks post completion of treatment for their brain metastases, and patient is neurologically stable
+         turn 18: "No, I have never been diagnosed with brain metastases."
+           judged: The person has brain metastases which have been treated and is > 3 weeks post completion of treatment for their brain metastases and is neurologically stable.
+  L18  needs chart review (does-not-apply, reported does-not-apply)  patients with previous brain metastases who have not yet received therapy specifically intended for their brain metastases are not eligible to enroll in this protocol
+         turn 18: "No, I have never been diagnosed with brain metastases."
+           judged: The person is a patient with previous brain metastases who has not yet received therapy specifically intended for their brain metastases.
+  L19  needs chart review (answered, reported holds)  Life expectancy greater than 3 months
+         turn 20: "Yes, I expect to live for more than 3 months."
+           judged: The person expects to live for more than 3 months.
+  L20  unresolved (does-not-apply)  Pregnant women are excluded from this study
+         turn 22: "I am a man, so I am not pregnant"
+           judged: The person is a pregnant woman.
+  L21  does not hold (answered)  breastfeeding should be discontinued if the mother is treated with Triapine®
+         turn 24: "No, I am not breastfeeding."
+           judged: The person is breastfeeding.
+  L22  needs chart review (answered, reported does-not-hold)  a negative serum pregnancy test is required within 14 days of study entry
+         turn 26: "No, I am a man, so I don't need a pregnancy test."
+           judged: The person has had a negative serum pregnancy test within 14 days of study entry.
+  L23  holds (answered)  women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation
+         turn 28: "Yes, I would agree to use contraception during the study."
+           judged: The person agrees to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation.
+  L24  needs chart review (answered, reported does-not-hold)  HIV-positive patients receiving combination antiretroviral therapy are excluded from the study
+         turn 30: "No, I am HIV negative."
+           judged: The person is an HIV-positive patient receiving combination antiretroviral therapy.
+  L25  needs chart review (answered, reported does-not-hold)  Patients must not have an active second malignancy
+         turn 32: "No, I don't have any other active cancers"
+           judged: The person has an active second malignancy.
+  L26  needs chart review (answered, reported does-not-hold)  Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements
+         turn 34: "No, I don't have any ongoing infections or uncontrolled conditions."
+           judged: The person has uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements.
+  L27  needs chart review (answered, reported does-not-hold)  a history of myocardial infarction within the prior 6 months
+         turn 36: "No, I haven't had a heart attack."
+           judged: The person has had a myocardial infarction within the prior 6 months.
+  L28  needs chart review (answered, reported does-not-hold)  symptomatic congestive heart failure
+         turn 34: "My heart is fine"
+           judged: The person has symptomatic congestive heart failure.
+  L29  needs chart review (answered, reported does-not-hold)  unstable angina pectoris
+         turn 36: "My heart is fine as far as I know."
+           judged: The person has unstable angina pectoris.
+         turn 38: "No, I haven't been diagnosed with unstable angina."
+           judged: The person has unstable angina pectoris.
+  L30  needs chart review (answered, reported does-not-hold)  cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation)
+         turn 36: "My heart is fine as far as I know."
+           judged: The person has cardiac arrhythmia requiring medical intervention.
+         turn 40: "No, I haven't been diagnosed with an irregular heartbeat that needed treatment."
+           judged: The person has a cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation).
+  L31  needs chart review (answered, reported does-not-hold)  pulmonary disease requiring oxygen
+         turn 42: "No, I don't use oxygen therapy."
+           judged: The person has a pulmonary disease requiring oxygen.
+  L32  needs chart review (answered, reported does-not-hold)  Patients must not have dementia or active psychosis
+         turn 44: "No, I haven't been diagnosed with dementia or active psychosis."
+           judged: The person has been diagnosed with dementia or active psychosis.
+  L33  does not hold (answered)  Patients must not have used any investigational agent in the month before study enrollment
+         turn 46: "took an investigational drug three weeks ago"
+           judged: The person has used an investigational agent in the month before study enrollment.
+  L34  does not hold (answered)  Patients must not have a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine® or other agents used in this study
+         turn 48: "No, I have never had an allergic reaction to Triapine or anything similar to it."
+           judged: The person has a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine or other agents used in this study.
+  L35  does not hold (answered)  Patients must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency
+         turn 50: "No, I have never been told I have G6PD deficiency."
+           judged: The person has a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency.
+  L36  not raised (protocol)  persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry for this condition
+  L37  needs chart review (answered, reported does-not-hold)  patients testing positive for G6PD deficiency are excluded from protocol entry
+         turn 50: "No, I have never been told I have G6PD deficiency."
+           judged: The person is testing positive for G6PD deficiency.
+         turn 52: "No, I have never been told I have G6PD deficiency."
+           judged: The person has been diagnosed with G6PD deficiency.
+

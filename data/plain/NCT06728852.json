@@ -1,0 +1,483 @@
+{
+  "nctId": "NCT06728852",
+  "source": "labels",
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "thinking": "off",
+    "promptVersion": "e5a58e26c2ac",
+    "timestamp": "2026-09"
+  },
+  "renderings": [
+    {
+      "criterionId": "L1",
+      "textSha": "e6643d89599d146e59089a7d9574bacbe19d4088527e8caa5b5a6733d6351a72",
+      "attempts": [
+        {
+          "plain": "Has signed the informed consent (a document that explains the study and gives permission to join).",
+          "reportAtGeneration": [
+            "verdict word: join"
+          ]
+        },
+        {
+          "plain": "Has signed the informed consent (a document that explains the study and gives permission to participate).",
+          "reportAtGeneration": [
+            "verdict word: participate"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L2",
+      "textSha": "e23f8ce812d2d359a192169a8df3a41cd93a78947360a63937e8c2ecc85edce6",
+      "attempts": [
+        {
+          "plain": "Has been diagnosed with metastatic or relapsed advanced NSCLC (non-small cell lung cancer) by examining a tissue sample (pathologically) or cells (cytologically).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L3",
+      "textSha": "7f4d401a85fa37a3b7091201c1488deffa3e64d8ffcae7fb588a8efea08dbeca",
+      "attempts": [
+        {
+          "plain": "Has measurable lesions (tumors or other abnormalities that can be measured accurately using the RECIST 1.1 criteria).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L4",
+      "textSha": "ab48e0bae7cf5c4e166645e64fac49b48a7ce3f712de4db38d003a8d2b802c57",
+      "attempts": [
+        {
+          "plain": "Has received at least two systemic therapies (treatments that travel through the bloodstream), allowing for third-line or higher chemotherapy or unable to tolerate chemotherapy.",
+          "reportAtGeneration": [
+            "scope word missing: prior"
+          ]
+        },
+        {
+          "plain": "Has prior received at least two systemic therapies (treatments that travel through the bloodstream), allowing for third-line or higher chemotherapy or unable to tolerate chemotherapy.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L5",
+      "textSha": "504680e0caa163dbc2b40ec8d1b91d50fa53634a7d4d01216b3241495e1ae5a2",
+      "attempts": [
+        {
+          "plain": "Has negative results for driver gene testing, or has positive results but has already received relevant targeted drugs or systemic anti-tumor treatments and is either resistant to them or unable to tolerate them.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L6",
+      "textSha": "3b8dd9d8cf7fefb9702d5d9d3aaecee7088eff4dbd044be7b98badeb8638bc2d",
+      "attempts": [
+        {
+          "plain": "Has an Eastern Cooperative Oncology Group (ECOG) performance status score (a measure of how well a person can perform ordinary daily tasks) of 0-2.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L7",
+      "textSha": "a00dc6026d7f934ba9e645e8d66f03c251b9355d567a232a9cb838e7e86ad7d9",
+      "attempts": [
+        {
+          "plain": "Expected survival time (how long a person is expected to live) of at least 3 months.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L8",
+      "textSha": "f37ed47d375282c1c8acda291fc852c450ff24bfd3d8cf892915ec181f53b2c0",
+      "attempts": [
+        {
+          "plain": "Has kidney function with a creatinine clearance rate (a measure of how well the kidneys filter waste) of at least 60 mL/min.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L9",
+      "textSha": "25d99c6fccec217f72fad8e22c95383835c348f938a450326dd58a50d19634f2",
+      "attempts": [
+        {
+          "plain": "Has liver function with bilirubin (a waste product from the breakdown of red blood cells) of no more than 1.5 times the upper limit of normal (ULN).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L10",
+      "textSha": "5af2ad70f96655e47e39422a6d48187e213b35c2227ae0cf48f0fd35da126937",
+      "attempts": [
+        {
+          "plain": "Has ALT/AST (liver enzymes) levels of no more than 2.5× ULN (upper limit of normal).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L11",
+      "textSha": "d82b35bf82a120e59e921652e3af112d8f40bff5dfd9b13e41cfc5824bccbafb",
+      "attempts": [
+        {
+          "plain": "Has an absolute neutrophil count (ANC) (a type of white blood cell) of at least 1.5×10^9/L.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L12",
+      "textSha": "0355fb5f2b7d923e38631efeaa8bc176c0ce3c4fc5491ab919526e0c02dd5a55",
+      "attempts": [
+        {
+          "plain": "Has a platelet count (a type of blood cell that helps with clotting) of at least 100×10^9/L.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L13",
+      "textSha": "029d49e43b59e7ba6ccc0b811d3d7252c56e4ed4ca4969d2a44d9afbff28dfff",
+      "attempts": [
+        {
+          "plain": "Has a hemoglobin (a protein in red blood cells that carries oxygen) level of at least 90g/L.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L14",
+      "textSha": "176ec4b6096bebf4ef7132c44b522e84d0e4b67a39891696f6e5dbf4c678a92d",
+      "attempts": [
+        {
+          "plain": "Has good coagulation function, defined as an international normalized ratio (INR) or prothrombin time (PT) of no more than 1.5× ULN; if the subject is on anticoagulation therapy, PT should be within the intended therapeutic range of the anticoagulant.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L15",
+      "textSha": "01104f1c1b277898a46a692e0415f083d483bd4b1cfa330791bf86cfd8aeca26",
+      "attempts": [
+        {
+          "plain": "Female patients of childbearing potential must agree to use contraception (e.g., intrauterine device, contraceptives, or condoms) during the study and for 6 months after the study ends; must not be breastfeeding and must have a negative serum or urine pregnancy test within 7 days before enrollment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L16",
+      "textSha": "6244e2cfd18f6fd2e0bd564f4a7d1e7639424180660eb9481ca5df0900c723b6",
+      "attempts": [
+        {
+          "plain": "Agrees to use contraception during the study and for 6 months after the study ends.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L17",
+      "textSha": "dbf64e9bf4fd629f6036b9ce1d82e62067a5e26bfc212357ad21c01415133314",
+      "attempts": [
+        {
+          "plain": "Has well-controlled pleural or peritoneal effusions (fluid buildup around the lungs or in the abdomen) that do not cause grade 2 or higher respiratory syndrome (≥ CTCAE grade 2).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L18",
+      "textSha": "94b0ebfe59d5e4ed87e18d2c3e880edb5330b2b0cfd42b8c0c9f29ab2e0b064a",
+      "attempts": [
+        {
+          "plain": "Has no clinical symptoms of intracranial hypertension (increased pressure inside the skull) caused by brain metastases, or has brain metastasis symptoms that are stable after prior treatment (radiation therapy or surgery) of brain or meningeal metastasis (usually requiring more than 4 weeks after radiation therapy).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L19",
+      "textSha": "0009682fe0bc7eb6314fcdba65762c647ef21cae10d42f740ca390a46a1142e1",
+      "attempts": [
+        {
+          "plain": "Has previously failed treatment with multi-target anti-angiogenic drugs (medicines that stop blood vessel growth), such as anlotinib, cabozantinib, apatinib, lenvatinib, etc.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L20",
+      "textSha": "93de7da4ddeef3645f9a2f786ba79730d62e3ca38da29b0928bb3a4b61514221",
+      "attempts": [
+        {
+          "plain": "Bevacizumab is allowed, but the last dose was more than 3 weeks before enrollment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L21",
+      "textSha": "fe8c1a089eb34e3b60f1595773892fa18b60427b4074a43f87c141906e616387",
+      "attempts": [
+        {
+          "plain": "Has small cell lung cancer (including small cell carcinoma, or non-small cell lung cancer mixed with other types of tumors).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L22",
+      "textSha": "6aae93b3fb0dbe73bdc0fca3e60eff74e5a28880fbbb3504a55db2524b0eded2",
+      "attempts": [
+        {
+          "plain": "Has tested positive for driver genes but has not been treated with TKIs (tyrosine kinase inhibitors).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L23",
+      "textSha": "0856d1473c9e51654c239867f394f1ca6e701aa95b3ca58461684c4d63fe8788",
+      "attempts": [
+        {
+          "plain": "The tumor has grown into large blood vessels.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L24",
+      "textSha": "df1358684bd85ff7149accc12a2da6e534e041ddc2a5754f476bb8e55dbf28de",
+      "attempts": [
+        {
+          "plain": "Has central squamous cell carcinoma (a type of lung cancer) with cavitation (a hollow space or hole in the tumor).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L25",
+      "textSha": "79d90994616d85a3bef518f11c6203a0c6c96a31e36f3af1a1599313b0f52086",
+      "attempts": [
+        {
+          "plain": "Has non-small cell lung cancer with hemoptysis (coughing up blood) of more than 5ml per day.",
+          "reportAtGeneration": [
+            "number missing: 5ml/day",
+            "number added: 5ml"
+          ]
+        },
+        {
+          "plain": "Has non-small cell lung cancer with hemoptysis (coughing up blood) of more than 5ml/day.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L26",
+      "textSha": "47b3798013753fd84e94105bc3191a39498406486d5395a20ba1a51ce484d10d",
+      "attempts": [
+        {
+          "plain": "The tumor is likely to invade important blood vessels and cause fatal bleeding during the subsequent study period.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L27",
+      "textSha": "ba9e04f30562a6fb094174ee5618bc5cf8377c411c3f43bd2c7108fe04093605",
+      "attempts": [
+        {
+          "plain": "Has other types of malignant tumors (cancer) within the past 5 years or currently.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L28",
+      "textSha": "0ea234c437ea671944499f01bcff1d8ba328dab884df8b46bd614fa6649738b8",
+      "attempts": [
+        {
+          "plain": "Plans to receive systemic anti-tumor therapy (treatment that targets tumors throughout the body) within 4 weeks before enrollment or during the study period.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L29",
+      "textSha": "c8d832a5960dbfd0f9f850d1825c5bc3523f18b0c0ec66ec9b18fd2ba4f298d0",
+      "attempts": [
+        {
+          "plain": "Has received extended-field radiation therapy (EF-RT) within 4 weeks before enrollment or limited-field radiation therapy within 2 weeks before enrollment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L30",
+      "textSha": "51cb4a807467604aadbed78234e16c3ee160fee819b273f69cc9f7fcbdd2b488",
+      "attempts": [
+        {
+          "plain": "Has toxic reactions (side effects) from previous treatment that have not stopped, are CTCAE grade (a scale for measuring side effect severity) more than 1, and are not hair loss.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L31",
+      "textSha": "4b0bf7687356a3508dd32314eec541ecb1fd6b915264e78849d490d3bf57d9f4",
+      "attempts": [
+        {
+          "plain": "Has various factors affecting oral medication (such as inability to swallow, gastrointestinal resection, chronic diarrhea, bowel obstruction).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L32",
+      "textSha": "dacb04464de981e4e57c4f1a716ffff05c50d23c228111e2e796a02f8ecaf80a",
+      "attempts": [
+        {
+          "plain": "Has pleural effusion (fluid around the lungs) or ascites (fluid in the abdomen) that leads to respiratory syndrome (≥CTCAE grade 2).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L33",
+      "textSha": "c694b86c01427123c03f70f62ef2d0cf45055c556696add7bf6cebfbd4977e45",
+      "attempts": [
+        {
+          "plain": "Symptoms of brain metastasis (cancer that has spread to the brain) are not controlled and treated within 2 months.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L34",
+      "textSha": "62e023bcc91c79f7f6bc1e91e501b322494b1e9cafc613ad391b68ecf5cbb5ec",
+      "attempts": [
+        {
+          "plain": "Has any severe or uncontrolled disease.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L35",
+      "textSha": "b17a7b782a83079ad69e6550fd4706d38a9cf027d46a7d2fa5dac2909ece6065",
+      "attempts": [
+        {
+          "plain": "Has had major surgery, open biopsy (removing a tissue sample by cutting through the skin), or significant traumatic injury within 28 days before enrollment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L36",
+      "textSha": "8daa191ae78ea6bc93a74fd5ac2b01bd1a5ee2b194d9a3464706d17e654fa9a5",
+      "attempts": [
+        {
+          "plain": "Has a tendency to bleed or a history of significant bleeding, regardless of severity; has any wound, ulcer, or fracture that has not healed following a bleeding or bleeding event (≥CTCAE grade 3).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L37",
+      "textSha": "f8c247db8c9168d14768f38b4e80745f6710bd2c58d57db976f538d841734546",
+      "attempts": [
+        {
+          "plain": "Has had an arterial or venous blood clot within 6 months, such as a stroke (cerebrovascular accident, including transient ischemic attack), a blood clot in a vein (venous thrombosis), or a blood clot in the lungs (pulmonary embolism).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L38",
+      "textSha": "86fdecdb87ffd46ecff6377f70b0321837208362ccbe2731235def88b2218f41",
+      "attempts": [
+        {
+          "plain": "Has a history of substance abuse that cannot be quit.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L39",
+      "textSha": "77274dadbfb4807e64b467b1d368a73714005f331a5147f50cdb1c1b752f31d0",
+      "attempts": [
+        {
+          "plain": "Has been diagnosed with psychiatric disorders (mental health conditions).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L40",
+      "textSha": "b264113b4376b25fc0fbee313435f94d7a4499f821ef6cc864065155e242f1ca",
+      "attempts": [
+        {
+          "plain": "Has taken part in other clinical trials of anti-tumor drugs within 4 weeks.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L41",
+      "textSha": "b33925e760dd712574f9e3d2ce6ee8bad6c6fb67b861bb56a3bf8f117f6a1930",
+      "attempts": [
+        {
+          "plain": "Has been diagnosed with diseases that severely jeopardize patient safety or affect the completion of this study.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L42",
+      "textSha": "7f078215f5104c89f7279d0a82624abab327f565e9a77a13c0871e27cd8376e4",
+      "attempts": [
+        {
+          "plain": "Has a known history of human immunodeficiency virus (HIV) infection, meaning the person has tested positive for HIV 1/2 antibodies.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L43",
+      "textSha": "0eb93791d994512b6996767c11c0dd089f10e56897fb89ea16bfff962a3029c1",
+      "attempts": [
+        {
+          "plain": "Has active hepatitis B (a liver infection caused by the hepatitis B virus) that has not been treated.",
+          "reportAtGeneration": [
+            "scope word missing: untreated"
+          ]
+        },
+        {
+          "plain": "Has active hepatitis B (a liver infection caused by the hepatitis B virus) that is untreated.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L44",
+      "textSha": "be232376c1b64ddf3c7ed24a44602915fc0c914ef0d452fa059a745a7d61d7ae",
+      "attempts": [
+        {
+          "plain": "Has an active HCV (hepatitis C virus) infection.",
+          "reportAtGeneration": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "nctId": "NCT04316364",
+  "source": "labels",
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "thinking": "off",
+    "promptVersion": "e5a58e26c2ac",
+    "timestamp": "2026-09"
+  },
+  "renderings": [
+    {
+      "criterionId": "L1",
+      "textSha": "7a732e1c76bbf5defbaddf3b6ca485e36eab26201f23402bda0cb8a5174f62c0",
+      "attempts": [
+        {
+          "plain": "Has an Eastern Cooperative Oncology Group (ECOG) performance status (a measure of how well a person can perform ordinary daily tasks) of 0 or 1.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L2",
+      "textSha": "dc06ba4150d37138065ddc692534fff01f9dfdfdfaf2ff1ee06eb1f88dcc2a16",
+      "attempts": [
+        {
+          "plain": "Has previously untreated, pathologically confirmed (diagnosed by examining a tissue sample) resectable (can be removed by surgery) Stage II, IIIA, or Selected IIIB NSCLC (non-small cell lung cancer).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L3",
+      "textSha": "d5a8d67640a01f6cd2bd2db9f6a515f1a299d96d96ae54ab409aad10a5cb4f03",
+      "attempts": [
+        {
+          "plain": "An attending thoracic surgeon (a doctor who specializes in chest surgery) evaluates the patient to confirm eligibility for an R0 resection (surgery to remove all visible tumor) with curative intent (aiming to cure the disease).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L4",
+      "textSha": "500dd916829aef9186845720d9d3282dbc9b452247b970cf6bbd10d13c37170b",
+      "attempts": [
+        {
+          "plain": "Has adequate tumor tissue sample blocks for central programmed death-ligand 1 (PD-L1) testing.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L5",
+      "textSha": "357925d8cc8bb4947d8ae8bcadc072854cf77fcbe67479d20402ee75ca28e105",
+      "attempts": [
+        {
+          "plain": "Has measurable disease (tumor size that can be measured) as defined by RECIST v1.1 (a standard system for measuring tumor response).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L6",
+      "textSha": "c2f3df338bac8c0a47d64b635c18b4b3d7c30ac2ff3b7a33d8414d5914b3bf0d",
+      "attempts": [
+        {
+          "plain": "Has adequate organ function (the organs are working well).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L7",
+      "textSha": "7a1bd0d4681595b50e5e0b432924ca962daf742ecfd04b1209ef2de3dc0e9f19",
+      "attempts": [
+        {
+          "plain": "Women of childbearing age who are not sterilized or male must agree to use contraception or practice abstinence for at least 180 days after the last dose of study treatment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L8",
+      "textSha": "b2c39c56ce54efaa8b6c3fa2fc3273cd7b0465ce3550b1ef019e66023f83fc86",
+      "attempts": [
+        {
+          "plain": "Has had any previous systematic anti-cancer therapy (treatment that travels through the bloodstream) for lung cancer.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L9",
+      "textSha": "385a40745d3aa6f4fd5777fc24af7641e63bb4f013cafc43c2a08dd9a4807e1f",
+      "attempts": [
+        {
+          "plain": "Has active, known or suspected autoimmune disease (a condition where the immune system attacks the body's own tissues).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L10",
+      "textSha": "9abb3af8d461ec1f42c75b118da9e21aeacd195077a29db2384a80ca1b3f73ce",
+      "attempts": [
+        {
+          "plain": "Has had a cancer other than NSCLC (non-small cell lung cancer) within 5 years before randomization.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L11",
+      "textSha": "2898aadbf1f07d2f6b2822b3e2df5624e33d0ebde59a5884c8e94eeaa84f7720",
+      "attempts": [
+        {
+          "plain": "Has or is suspected to have a history of pneumonitis (inflammation of the lung tissue) or interstitial lung disease (scarring or swelling of the lung tissue), or any severe lung diseases that will affect the examination of lung function.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L12",
+      "textSha": "e9a8a0a46b9f03f14879343a1644d4e59f83a093de7bee93368e955a0cc6afed",
+      "attempts": [
+        {
+          "plain": "Has a significant history of cardiovascular (heart) and cerebrovascular (brain blood vessel) disease.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L13",
+      "textSha": "231b39ba8ed4b0c7ca0105cc9a8aed862409054e8bd352f5b89f557e7f10fd5f",
+      "attempts": [
+        {
+          "plain": "Has a significant bleeding disorder (a condition that causes excessive or uncontrolled bleeding).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "Has a significant bleeding disorder (a condition that causes excessive or uncontrolled bleeding).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L14",
+      "textSha": "a210562dc1a4a4435f3b297e3a9448d1ef9cb6bb0b1a6bca9346ae2f21c5c130",
+      "attempts": [
+        {
+          "plain": "Has an arteriovenous thrombotic events (blood clots in arteries or veins).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L15",
+      "textSha": "87c63a09353c24c55a8dee7b5e3ff63925d33d5804e54d679d162f0ccadc11d7",
+      "attempts": [
+        {
+          "plain": "Has a known history of human immunodeficiency virus (HIV) infection.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L16",
+      "textSha": "7e9f127061934aa47344bd4bae5e6d23ce6502c007db024dafdb4b1dfe02119b",
+      "attempts": [
+        {
+          "plain": "Has a known active Hepatitis B or Hepatitis C (current infection with the virus).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L17",
+      "textSha": "66b710737327071386aafeebe875e879ae84baf02188ec1cb42128260942d4bd",
+      "attempts": [
+        {
+          "plain": "Is allergic to monoclonal antibodies or other protein drugs.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L18",
+      "textSha": "3fc2848caaf2956d7b6efba0fb81c2a53666b3876b4cc3cd4206dea21405ad04",
+      "attempts": [
+        {
+          "plain": "Is allergic to the intervention regimens.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L19",
+      "textSha": "d4818f908a6cd8592ca99c7f55af285349a90c2f7c3314df92472700f9073eb7",
+      "attempts": [
+        {
+          "plain": "Is pregnant.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L20",
+      "textSha": "602c63d2824c56fd9566423d46adb72fa4d0fa3541362fcdaf73c5dc7aa03a10",
+      "attempts": [
+        {
+          "plain": "Is lactating (producing breast milk).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L21",
+      "textSha": "9cdc41b0f3dff091ca33eb492b2a732aa1baa167562c2dcd5d4b56f6921df4e8",
+      "attempts": [
+        {
+          "plain": "Relating to mental health or the mind.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L22",
+      "textSha": "2ef9fdc1f2300b0180df59629fc1cdf9434373e3065a5b0306a50835c1b1f6ca",
+      "attempts": [
+        {
+          "plain": "Has a substance abuse disorder (a condition involving the harmful or hazardous use of psychoactive substances).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L23",
+      "textSha": "8a4e8ee04286aa4a539eea3a34ce50e7aff547816ace73d7f14420be12e9bda7",
+      "attempts": [
+        {
+          "plain": "Has a confirmed COVID-19 infection or a suspected COVID-19 infection.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L24",
+      "textSha": "8a8182e7926d5dd97602a3b9cb4f5015527b1a6826c4608c262f2a29578af1b1",
+      "attempts": [
+        {
+          "plain": "Has close contact with a person with known or suspected COVID-19 infection.",
+          "reportAtGeneration": []
+        }
+      ]
+    }
+  ]
+}

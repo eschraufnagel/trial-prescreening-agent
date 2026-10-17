@@ -1,0 +1,406 @@
+{
+  "nctId": "NCT04841811",
+  "criteria": [
+    {
+      "id": "NCT04841811:114-205",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The subject must be over 18 years old (including 18 years old) and under 70 years old (including 70 years old).",
+      "source": {
+        "start": 114,
+        "end": 205,
+        "text": "Over 18 years old (including 18 years old) and under 70 years old (including 70 years old)."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:209-425",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The subject must have an ECOG physical status score of 0 or 1, no deterioration within 2 weeks before study drug treatment, and an expected survival period of not less than 12 weeks.",
+      "source": {
+        "start": 209,
+        "end": 425,
+        "text": "The Eastern Cooperative Oncology Group (ECOG) physical status score is 0 or 1, and there is no deterioration within 2 weeks before the study drug treatment, and the expected survival period is not less than 12 weeks."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:429-670",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The subject must have Stage III non-squamous cell non-small cell lung cancer confirmed by histopathology or cytology and determined by the investigator to be unresectable according to the International Association for the Study of Lung Cancer Eighth Edition Lung Cancer Staging.",
+      "source": {
+        "start": 429,
+        "end": 670,
+        "text": "Stage III non-squamous cell non-small cell lung cancer confirmed by histopathology or cytology and determined by the investigator to be unresectable (International Association for the Study of Lung Cancer Eighth Edition Lung Cancer Staging)."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:674-1037",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Tumor tissue samples, blood samples, pleural effusions, ascites effusions, or pericardial effusions must be confirmed to harbor EGFR sensitive mutations (exon 19 deletion or L858R, alone or coexisting, or with other EGFR mutations, excluding EGFR exon 20 insertion mutations) by laboratory tests approved by the investigator.",
+      "source": {
+        "start": 674,
+        "end": 1037,
+        "text": "Tumor tissue samples or blood samples, pleural effusions, ascites effusions, and pericardial effusions are confirmed to be EGFR sensitive mutations (ie, exon 19 deletion or L858R, alone or coexisting, Or with other EGFR mutations, but patients with EGFR20 exon insertion mutations cannot be included in the group) by laboratory tests approved by the investigator."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:1041-1235",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The subject must have at least one imaging measurable lesion according to the RECIST1.1 standard, with baseline tumor imaging evaluation performed within 28 days before the first medication.",
+      "source": {
+        "start": 1041,
+        "end": 1235,
+        "text": "According to the RECIST1.1 standard, the subject must have at least one imaging measurable lesion. The baseline tumor imaging evaluation was performed within 28 days before the first medication."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:1239-2205",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Women of childbearing age must take appropriate contraceptive measures from screening to 3 months after stopping the study treatment, should not breastfeed, and must have a negative pregnancy test before starting administration, or meet criteria proving no risk of pregnancy (postmenopausal defined as age >50 years with amenorrhea for ≥12 months after stopping exogenous hormone replacement therapy; for women <50 years, amenorrhea for ≥12 months after stopping exogenous hormone treatments with LH and FSH levels within laboratory postmenopausal reference range; or have received irreversible sterilization including hysterectomy, bilateral ovariectomy, or bilateral fallopian tube resection, excluding bilateral fallopian tube ligation).",
+      "source": {
+        "start": 1239,
+        "end": 2205,
+        "text": "Women of childbearing age should take appropriate contraceptive measures from screening to 3 months after stopping the study treatment and should not breastfeed. Before starting the administration, the pregnancy test is negative, or meeting one of the following criteria proves that there is no risk of pregnancy:\n\n   1. Postmenopausal is defined as age greater than 50 years，and amenorrhea for at least 12 months after stopping all exogenous hormone replacement therapy.\n   2. For women younger than 50 years old, if the amenorrhea is 12 months or more after stopping all exogenous hormone treatments, and the luteinizing hormone (LH) and follicle stimulating hormone (FSH) levels are within the laboratory postmenopausal reference value range, also It can be considered postmenopausal.\n   3. Have received irreversible sterilization, including hysterectomy, bilateral ovariectomy or bilateral fallopian tube resection, except for bilateral fallopian tube ligation."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT04841811:2209-2334",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Male subjects must use barrier contraception (condoms) from screening to 3 months after the study treatment is stopped.",
+      "source": {
+        "start": 2209,
+        "end": 2334,
+        "text": "Male subjects should use barrier contraception (ie, condoms) from screening to 3 months after the study treatment is stopped."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:2338-2430",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The subject must participate voluntarily and sign a written informed consent form.",
+      "source": {
+        "start": 2338,
+        "end": 2430,
+        "text": "The subjects themselves participated voluntarily and signed a written informed consent form."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:2539-2838",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not have received any of the following treatments: lung surgery in the past, any EGFR tyrosine kinase inhibitor in the past, any systemic chemotherapy or immunotherapy for lung cancer in the past, or any lung cancer radiotherapy in the past.",
+      "source": {
+        "start": 2539,
+        "end": 2838,
+        "text": "Have received any of the following treatments:\n\n   1. Have received lung surgery in the past;\n   2. Have used any EGFR tyrosine kinase inhibitor in the past;\n   3. Previously received any systemic chemotherapy or immunotherapy for lung cancer;\n   4. Receive any lung cancer radiotherapy in the past;"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:2842-2969",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not have undergone open surgery on parts other than the lungs within 14 days before using the study drug.",
+      "source": {
+        "start": 2842,
+        "end": 2969,
+        "text": "The patient has undergone open surgery on other parts except the lungs within 14 days before using the study drug for ≤14 days."
+      },
+      "confidence": 0.8
+    },
+    {
+      "id": "NCT04841811:2973-3172",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not have another malignant disease diagnosed in the past 5 years, excluding completely resected basal cell carcinoma, bladder carcinoma in situ, and cervical carcinoma in situ.",
+      "source": {
+        "start": 2973,
+        "end": 3172,
+        "text": "In addition to NSCLC, another malignant disease has been diagnosed in the past 5 years (excluding completely resected basal cell carcinoma, bladder carcinoma in situ, and cervical carcinoma in situ)."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:3176-3481",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not have used proprietary Chinese medicines with anti-tumor effects in the past, unless they were used for no more than 7 days and stopped for 2 weeks or more before the drug treatment in this study.",
+      "source": {
+        "start": 3176,
+        "end": 3481,
+        "text": "Have used proprietary Chinese medicines with anti-tumor effects in the past. Those who have used proprietary Chinese medicines with anti-tumor effects but have been used for no more than 7 days and have been stopped for 2 weeks or more before the drug treatment in this study can be included in the group."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT04841811:3485-4102",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have serious or uncontrollable systemic diseases (such as severe mental, neurological, epilepsy or dementia, unstable or uncompensated respiratory, cardiovascular, liver or kidney disease, LVEF < 50%, uncontrolled hypertension [≥ CTCAE level 3 after drug treatment]), swallowing dysfunction, active gastrointestinal disease, or other significant effects on the absorption of oral drugs, disorders of distribution, metabolism, and excretion. The subject must not have had most gastrectomy operations in the past.",
+      "source": {
+        "start": 3485,
+        "end": 4102,
+        "text": "There are serious or uncontrollable systemic diseases (such as severe mental, neurological, epilepsy or dementia, unstable or uncompensated respiratory, cardiovascular, liver or kidney disease, left ventricular ejection fraction (LVEF) \\< 50%, uncontrolled hypertension \\[that is, it is still greater than or equal to CTCAE level 3 hypertension after drug treatment\\]); suffering from swallowing dysfunction, active gastrointestinal disease, or other significant effects on the absorption of oral drugs, Disorders of distribution, metabolism, and excretion. Those who have had most gastrectomy operations in the past."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT04841811:4106-4308",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have fever and body temperature above 38℃ in the past week, active infection with clinical significance, active tuberculosis, or active fungal, bacterial and/or viral infections requiring systemic treatment.",
+      "source": {
+        "start": 4106,
+        "end": 4308,
+        "text": "Fever and body temperature above 38℃ in the past week, or active infection with clinical significance. Active tuberculosis. Active fungal, bacterial and/or viral infections requiring systemic treatment."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:4312-4427",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have active bleeding, new thrombotic diseases, be taking anticoagulant drugs, or have a bleeding tendency.",
+      "source": {
+        "start": 4312,
+        "end": 4427,
+        "text": "Those who have active bleeding, new thrombotic diseases, are taking anticoagulant drugs, or have bleeding tendency;"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:4431-4812",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have a resting electrocardiogram with major clinically significant abnormalities in rhythm, conduction, or morphology, such as complete left bundle branch block, heart block above II degree, clinically significant ventricular arrhythmia or atrial fibrillation, unstable angina pectoris, congestive heart failure, or chronic heart failure grade ≥ 2 by the New York Heart Association (NYHA).",
+      "source": {
+        "start": 4431,
+        "end": 4812,
+        "text": "The resting electrocardiogram has major clinically significant abnormalities in rhythm, conduction, or morphology, such as complete left bundle branch block, heart block above Ⅱ degree, clinically significant ventricular arrhythmia or atrial fibrillation, Unstable angina pectoris, congestive heart failure, chronic heart failure grade ≥ 2 by the New York Heart Association (NYHA)."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:4816-4933",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have had a myocardial infarction, coronary artery/peripheral artery bypass, or cerebrovascular accident within 3 months.",
+      "source": {
+        "start": 4816,
+        "end": 4933,
+        "text": "Myocardial infarction, coronary artery/peripheral artery bypass or cerebrovascular accident occurred within 3 months."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:4938-5020",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have a QT interval (QTc) of 12-lead ECG ≥450 ms for males and ≥470 ms for females.",
+      "source": {
+        "start": 4938,
+        "end": 5020,
+        "text": "The QT interval (QTc) of 12-lead ECG is ≥450 ms for males and ≥470 ms for females."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:5025-5409",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have risk factors that lead to prolonged QT interval or risk factors that increase arrhythmia, such as heart failure, ≥CTCAE (version 4.03) 2nd degree hypokalemia (serum potassium <3.0mmol/L with symptoms and needing treatment), congenital long QT syndrome, or family history of long QT syndrome.",
+      "source": {
+        "start": 5025,
+        "end": 5409,
+        "text": "There are risk factors that lead to prolonged QT interval or risk factors that increase arrhythmia, such as heart failure, ≥CTCAE (version 4.03) 2nd degree hypokalemia (2nd degree hypokalemia is defined as: serum potassium \\<the lower limit of the normal value is 3.0mmol/L, and there are symptoms and needs treatment), congenital long QT syndrome, family history of long QT syndrome."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT04841811:5414-5507",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not be using any drug known to prolong the QT interval within 2 weeks before the first dose.",
+      "source": {
+        "start": 5414,
+        "end": 5507,
+        "text": "Any drug known to prolong the QT interval is being used within 2 weeks before the first dose."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:5512-6112",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have insufficient bone marrow reserve or organ function, reaching any of the following laboratory limits (with no corrective treatment within 1 week before laboratory examination of blood): Absolute neutrophil count <1.5×10^9 / L; Platelet count <90×10^9 / L; Hemoglobin <90 g/L (<9 g/dL); Alanine aminotransferase > 3 times the upper limit of normal (ULN); Aspartate aminotransferase > 3×ULN; Total bilirubin > 1.5×ULN; Creatinine > 1.5×ULN or creatinine clearance rate <45 mL/min (calculated by Cockcroft-Gault formula); Serum albumin (ALB) <28 g/L.",
+      "source": {
+        "start": 5512,
+        "end": 6112,
+        "text": "Insufficient bone marrow reserve or organ function, reaching any of the following laboratory limits (no corrective treatment within 1 week before laboratory examination of blood):\n\n    1. Absolute neutrophil count \\<1.5×109 / L;\n    2. Platelet count \\<90×109 / L;\n    3. Hemoglobin \\<90 g/L (\\<9 g/dL);\n    4. Alanine aminotransferase\\> 3 times the upper limit of normal (ULN);\n    5. Aspartate aminotransferase\\>3×ULN\n    6. Total bilirubin\\> 1.5×ULN;\n    7. Creatinine\\> 1.5×ULN or creatinine clearance rate \\<45 mL/min (calculated by Cockcroft-Gault formula);\n    8. Serum albumin (ALB) \\<28 g/L;"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:6117-6217",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Female subjects must not be pregnant, lactating, or planning to become pregnant during the study period.",
+      "source": {
+        "start": 6117,
+        "end": 6217,
+        "text": "Female subjects who are pregnant, lactating, or planning to become pregnant during the study period."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:6222-6441",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have a history of interstitial lung disease, a history of drug-induced interstitial lung disease, a history of interstitial pneumonia requiring steroid therapy, or any evidence of clinically active interstitial lung disease.",
+      "source": {
+        "start": 6222,
+        "end": 6441,
+        "text": "A history of interstitial lung disease, a history of drug-induced interstitial lung disease, a history of interstitial pneumonia requiring steroid therapy, or any evidence of clinically active interstitial lung disease."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:6446-6636",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not have a history of hypersensitivity to any active or inactive ingredients of Almonertinib, or to drugs with similar chemical structure to Almonertinib or in the same category as Almonertinib.",
+      "source": {
+        "start": 6446,
+        "end": 6636,
+        "text": "Have a history of hypersensitivity to any active or inactive ingredients of Almonertinib, or to drugs with similar chemical structure to Almonertinib or in the same category as Almonertinib."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:6641-7035",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The subject must not have any serious or uncontrolled eye disease (especially severe dry eye syndrome, dry keratoconjunctivitis, severe exposure keratitis or other diseases that may increase epithelial damage) that may increase the safety risk of the subject, or have eye abnormalities who require surgery or are expected to require surgical treatment during the study period.",
+      "source": {
+        "start": 6641,
+        "end": 7035,
+        "text": "Any serious or uncontrolled eye disease (especially severe dry eye syndrome, dry keratoconjunctivitis, severe exposure keratitis or other diseases that may increase epithelial damage), according to the doctor's judgment, it may increase the safety risk of the subject; or patients with eye abnormalities who require surgery or are expected to require surgical treatment during the study period."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT04841811:7040-7375",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not use/consume drugs or foods that are known to have potent CYP3A4 inhibitory effects within 2 weeks, including but not limited to atazanavir, clarithromycin, indinavir, itraconazole, ketoconazole, nefazodone, nelfinavir, ritonavir, saquinavir, telithromycin, azithromycin, voriconazole, and grapefruit or grapefruit juice.",
+      "source": {
+        "start": 7040,
+        "end": 7375,
+        "text": "Use/consumption of drugs or foods that are known to have potent CYP3A4 inhibitory effects within 2 weeks, including but not limited to atazanavir, clarithromycin, indinavir, itraconazole, ketoconazole, nefa Oxazolone, nelfinavir, ritonavir, saquinavir, telithromycin, aceto-eandomycin, voriconazole, and grapefruit or grapefruit juice."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT04841811:7380-7566",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not use drugs known to have potent CYP3A4 inducing effects within 2 weeks, including but not limited to carbamazepine, phenobarbital, phenytoin, rifabutin, rifampin and Hypericum perforatum.",
+      "source": {
+        "start": 7380,
+        "end": 7566,
+        "text": "Use drugs known to have potent CYP3A4 inducing effects within 2 weeks, including but not limited to carbamazepine, phenobarbital, phenytoin, rifabutin, rifampin and Hypericum perforatum."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:7571-7767",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not use drugs that are CYP3A4 substrates (with a narrow therapeutic index) within 2 weeks, including but not limited to dihydroergotamine, ergotamine, pimozide, astemizole, cisapride, and terfenadine.",
+      "source": {
+        "start": 7571,
+        "end": 7767,
+        "text": "Use drugs that are CYP3A4 substrates (with a narrow therapeutic index) within 2 weeks, including but not limited to dihydroergotamine, ergotamine, pimozide, astemizole, cisapride, and terfenadine."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:7772-7890",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The subject must not have used strong P-gp inhibitors (including but not limited to verapamil, cyclosporin A, dexverapamil) within 2 weeks.",
+      "source": {
+        "start": 7772,
+        "end": 7890,
+        "text": "Have used strong P-gp inhibitors (including but not limited to verapamil, cyclosporin A, dexverapamil) within 2 weeks."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04841811:8173-8311",
+      "polarity": "exclusion",
+      "type": "protocol",
+      "text": "The subject must not be judged by the investigator as endangering the safety of the subject or interfering with the evaluation of the study.",
+      "source": {
+        "start": 8173,
+        "end": 8311,
+        "text": "The investigator judges that there are any subjects that endanger the safety of the subject or interfere with the evaluation of the study."
+      },
+      "confidence": 0.8
+    }
+  ],
+  "rejected": [
+    {
+      "reason": "quote does not appear in the source text",
+      "quote": "Subjects judged by the investigator who may not be in compliance with the research procedures and requirements, such as subjects who have a clear history of neurological or mental disorders (including epilepsy or dementia), currently suffering from mental disorders, etc . .",
+      "raw": {
+        "quote": "Subjects judged by the investigator who may not be in compliance with the research procedures and requirements, such as subjects who have a clear history of neurological or mental disorders (including epilepsy or dementia), currently suffering from mental disorders, etc . .",
+        "text": "The subject must not be judged by the investigator as not being in compliance with the research procedures and requirements, such as subjects who have a clear history of neurological or mental disorders (including epilepsy or dementia), currently suffering from mental disorders, etc.",
+        "polarity": "exclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 0.8
+      }
+    }
+  ],
+  "unclaimed": [
+    {
+      "start": 0,
+      "end": 114,
+      "text": "Inclusion Criteria:\n\nSubjects must meet all of the following inclusion criteria to be included in this study:\n\n1. "
+    },
+    {
+      "start": 2430,
+      "end": 2539,
+      "text": "\n\nExclusion Criteria:\n\nSubjects who meet any of the following criteria cannot be included in this study:\n\n1. "
+    },
+    {
+      "start": 7890,
+      "end": 8173,
+      "text": "\n22. Subjects judged by the investigator who may not be in compliance with the research procedures and requirements, such as subjects who have a clear history of neurological or mental disorders (including epilepsy or dementia), currently suffering from mental disorders, etc. .\n23. "
+    }
+  ],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "normalizeVersion": "1",
+    "timestamp": "2026-09"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "provenance": "written from the claude-api skill (Message Batches reference, cached 2026-06) in 2026-09, not yet seen from the API",
+  "status": 200,
+  "body": {
+    "id": "msgbatch_recorded",
+    "type": "message_batch",
+    "created_at": "2000-01-23T00:00:00Z",
+    "expires_at": "2000-01-24T00:00:00Z",
+    "cancel_initiated_at": null,
+    "archived_at": null,
+    "processing_status": "in_progress",
+    "request_counts": {
+      "processing": 1,
+      "succeeded": 1,
+      "errored": 0,
+      "canceled": 0,
+      "expired": 0
+    },
+    "ended_at": null,
+    "results_url": null
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "nctId": "NCT06728852",
+  "labelledAt": "2026-09",
+  "criteriaTextSha": "72e3e7cf05bc8bffb343d97c8f79fbeecd478a319a6d892388ffd1c683d871c6",
+  "provenance": {
+    "drafter": "claude-opus-5",
+    "guide": "evals/cases/ANNOTATION.md",
+    "sawParse": true,
+    "note": "Drafter had read this study's full parser output, including every criterion and its type, during slice 0002's Gate 2. Anchored more than NCT00077350 or NCT03433469."
+  },
+  "criteria": [
+    {
+      "id": "L1",
+      "quote": "Sign the informed consent",
+      "start": 24,
+      "end": 49,
+      "polarity": "inclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L2",
+      "quote": "Pathologically or cytologically diagnosed with metastatic/relapsed advanced NSCLC",
+      "start": 53,
+      "end": 134,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L3",
+      "quote": "with measurable lesions (according to RECIST 1.1)",
+      "start": 136,
+      "end": 185,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L4",
+      "quote": "Previously received at least two systemic therapies, allowing for third-line or higher chemotherapy or unable to tolerate chemotherapy",
+      "start": 189,
+      "end": 323,
+      "polarity": "inclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L5",
+      "quote": "Patients with negative results for driver gene testing or patients with positive results who have already received relevant targeted drugs or systemic anti-tumor treatments and are either resistant or unable to tolerate them",
+      "start": 327,
+      "end": 551,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L6",
+      "quote": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0-2.",
+      "start": 555,
+      "end": 629,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L7",
+      "quote": "Expected survival time ≥ 3 months",
+      "start": 630,
+      "end": 663,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L8",
+      "quote": "renal function with creatinine clearance rate ≥ 60 mL/min",
+      "start": 696,
+      "end": 753,
+      "polarity": "inclusion",
+      "type": "clinical",
+      "note": "Rule 1: separate lab checks, split."
+    },
+    {
+      "id": "L9",
+      "quote": "liver function with bilirubin ≤ 1.5× upper limit of normal (ULN)",
+      "start": 755,
+      "end": 819,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L10",
+      "quote": "ALT/AST ≤ 2.5× ULN",
+      "start": 821,
+      "end": 839,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L11",
+      "quote": "absolute neutrophil count (ANC) ≥ 1.5×10\\^9/L",
+      "start": 963,
+      "end": 1008,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L12",
+      "quote": "platelet count ≥ 100×10\\^9/L",
+      "start": 1010,
+      "end": 1038,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L13",
+      "quote": "hemoglobin ≥ 90g/L",
+      "start": 1040,
+      "end": 1058,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L14",
+      "quote": "Good coagulation function, defined as an international normalized ratio (INR) or prothrombin time (PT) ≤ 1.5× ULN; if the subject is on anticoagulation therapy, PT should be within the intended therapeutic range of the anticoagulant",
+      "start": 1150,
+      "end": 1382,
+      "polarity": "inclusion",
+      "type": "clinical",
+      "note": "Rule 1: the anticoagulation proviso clarifies how the threshold applies, so it stays with it."
+    },
+    {
+      "id": "L15",
+      "quote": "Female patients of childbearing potential must agree to use contraception (e.g., intrauterine device, contraceptives, or condoms) during the study and for 6 months after the study ends; must not be breastfeeding and must have a negative serum or urine pregnancy test within 7 days before enrollment.",
+      "start": 1386,
+      "end": 1685,
+      "polarity": "inclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L16",
+      "quote": "Male patients must agree to use contraception during the study and for 6 months after the study ends",
+      "start": 1686,
+      "end": 1786,
+      "polarity": "inclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L17",
+      "quote": "Patients with well-controlled pleural or peritoneal effusions that do not cause grade 2 or higher respiratory syndrome (≥ CTCAE grade 2) can be included",
+      "start": 1791,
+      "end": 1943,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L18",
+      "quote": "Patients without clinical symptoms of intracranial hypertension caused by brain metastases or with brain metastasis symptoms that are stable after prior treatment (radiation therapy or surgery) of brain or meningeal metastasis (usually requiring more than 4 weeks post-radiation therapy)",
+      "start": 1948,
+      "end": 2235,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L19",
+      "quote": "Previously failed treatment with multi-target anti-angiogenic drugs, such as anlotinib, cabozantinib, apatinib, lenvatinib, etc.",
+      "start": 2261,
+      "end": 2389,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L20",
+      "quote": "The use of bevacizumab is allowed, but the last administration must be more than 3 weeks before enrollment",
+      "start": 2390,
+      "end": 2496,
+      "polarity": "inclusion",
+      "type": "patient",
+      "note": "Reads as a requirement carving an exception to the exclusion above: bevacizumab is permitted if the washout is met."
+    },
+    {
+      "id": "L21",
+      "quote": "Small cell lung cancer (including small cell carcinoma, non-small cell lung cancer mixed with other types of tumors)",
+      "start": 2500,
+      "end": 2616,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L22",
+      "quote": "Testing positive for driver genes but not treated with TKIs",
+      "start": 2620,
+      "end": 2679,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L23",
+      "quote": "Tumor invasion of large blood vessels",
+      "start": 2683,
+      "end": 2720,
+      "polarity": "exclusion",
+      "type": "clinical",
+      "note": "Rule 1: four different checks — imaging of vessels, histology plus cavitation, a symptom, and an investigator judgment."
+    },
+    {
+      "id": "L24",
+      "quote": "central squamous cell carcinoma of the lung with cavitation",
+      "start": 2722,
+      "end": 2781,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L25",
+      "quote": "non-small cell lung cancer with hemoptysis (\\>5ml/day)",
+      "start": 2786,
+      "end": 2840,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L26",
+      "quote": "where the tumor is likely to invade important blood vessels and cause fatal bleeding during the subsequent study period",
+      "start": 2845,
+      "end": 2964,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L27",
+      "quote": "Accompanied by other types of malignant tumors within the past 5 years or currently",
+      "start": 2968,
+      "end": 3051,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L28",
+      "quote": "Planning to receive systemic anti-tumor therapy within 4 weeks before enrollment or during the study period",
+      "start": 3055,
+      "end": 3162,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L29",
+      "quote": "received extended-field radiation therapy (EF-RT) within 4 weeks before enrollment or limited-field radiation therapy within 2 weeks before enrollment",
+      "start": 3319,
+      "end": 3469,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L30",
+      "quote": "Unremitting toxic reactions caused by previous treatment, CTCAE grade \\>1, excluding hair loss",
+      "start": 3512,
+      "end": 3606,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L31",
+      "quote": "Various factors affecting oral medication (such as inability to swallow, gastrointestinal resection, chronic diarrhea, bowel obstruction)",
+      "start": 3610,
+      "end": 3747,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L32",
+      "quote": "Pleural effusion or ascites leading to respiratory syndrome (≥CTCAE grade 2)",
+      "start": 3751,
+      "end": 3827,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L33",
+      "quote": "Symptoms of brain metastasis not controlled and treated within 2 months",
+      "start": 3832,
+      "end": 3903,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L34",
+      "quote": "Presence of any severe or uncontrolled disease",
+      "start": 3908,
+      "end": 3954,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L35",
+      "quote": "Major surgery, open biopsy, or significant traumatic injury within 28 days before enrollment",
+      "start": 3959,
+      "end": 4051,
+      "polarity": "exclusion",
+      "type": "patient",
+      "note": "Rule 1 refinement: one question about recent procedures or injury settles all three, so one criterion."
+    },
+    {
+      "id": "L36",
+      "quote": "Bleeding diathesis or history of significant bleeding, regardless of severity; any wound, ulcer, or fracture that has not healed following a bleeding or bleeding event (≥CTCAE grade 3)",
+      "start": 4056,
+      "end": 4240,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L37",
+      "quote": "Arterial/venous thrombosis within 6 months, such as cerebrovascular accident (including transient ischemic attack), venous thrombosis, pulmonary embolism",
+      "start": 4245,
+      "end": 4398,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L38",
+      "quote": "History of substance abuse that cannot be quit",
+      "start": 4403,
+      "end": 4449,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L39",
+      "quote": "diagnosed with psychiatric disorders",
+      "start": 4453,
+      "end": 4489,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L40",
+      "quote": "Participated in other clinical trials of anti-tumor drugs within 4 weeks",
+      "start": 4494,
+      "end": 4566,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L41",
+      "quote": "Diagnosed with diseases that severely jeopardize patient safety or affect the completion of this study",
+      "start": 4571,
+      "end": 4673,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L42",
+      "quote": "Known history of human immunodeficiency virus (HIV) infection (i.e., HIV 1/2 antibody positive)",
+      "start": 4678,
+      "end": 4773,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L43",
+      "quote": "untreated active hepatitis B",
+      "start": 4775,
+      "end": 4803,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L44",
+      "quote": "active HCV infection",
+      "start": 4805,
+      "end": 4825,
+      "polarity": "exclusion",
+      "type": "clinical"
+    }
+  ],
+  "notCriteria": []
+}

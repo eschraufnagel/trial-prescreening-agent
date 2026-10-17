@@ -1,0 +1,61 @@
+{
+  "name": "trial-prescreening-agent",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local proof of concept: an agent that conducts a clinical trial prescreening conversation and hands a reviewable result to a human coordinator.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "screenshots": "CAPTURE=1 playwright test -c playwright.capture.config.ts",
+    "demo": "node --import tsx scripts/make-demo.ts",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.web.json",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "check": "npm run typecheck && npm run lint && npm test",
+    "fetch:trials": "tsx scripts/fetch-trials.ts",
+    "parse:criteria": "node --env-file-if-exists=.env --import tsx scripts/parse-criteria.ts",
+    "label:criteria": "node --import tsx scripts/label-criteria.ts",
+    "eval:inspect": "node --import tsx scripts/inspect-match.ts",
+    "eval:compare": "node --import tsx scripts/eval-compare.ts",
+    "eval": "node --env-file-if-exists=.env --import tsx scripts/run-eval.ts",
+    "vignettes:check": "node --import tsx scripts/check-vignettes.ts",
+    "eval:screening": "node --env-file-if-exists=.env --import tsx scripts/run-screening-eval.ts",
+    "screening:show": "node --import tsx scripts/show-conversation.ts",
+    "screening:compare": "node --import tsx scripts/screening-compare.ts",
+    "screening:chat": "node --env-file-if-exists=.env --import tsx scripts/chat.ts",
+    "plain:render": "node --env-file-if-exists=.env --import tsx scripts/render-plain.ts",
+    "plain:check": "node --import tsx scripts/plain-check.ts",
+    "review:sheet": "node --import tsx scripts/review-sheet.ts",
+    "review:score": "node --import tsx scripts/review-score.ts",
+    "review:export": "node --import tsx scripts/review-export.ts",
+    "models:smoke": "node --env-file-if-exists=.env --import tsx scripts/models-smoke.ts",
+    "app": "vite build && node --env-file-if-exists=.env --import tsx scripts/app.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.11",
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.10.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vitest": "5.0.1"
+  },
+  "dependencies": {
+    "fastify": "5.12.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "allowScripts": {
+    "esbuild": false,
+    "fsevents": false
+  }
+}

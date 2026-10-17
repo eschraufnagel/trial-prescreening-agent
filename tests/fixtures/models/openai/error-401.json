@@ -1,0 +1,12 @@
+{
+  "provenance": "written from https://developers.openai.com/api/docs (Chat Completions reference) in 2026-09, not yet seen from the API",
+  "status": 401,
+  "body": {
+    "error": {
+      "message": "Incorrect API key provided",
+      "type": "invalid_request_error",
+      "param": null,
+      "code": "invalid_api_key"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT00000000",
+      "briefTitle": "Invented study for the page's fake mode",
+      "officialTitle": "An invented study, not a real trial, used by npm run app -- --fake and the browser test"
+    },
+    "statusModule": {
+      "overallStatus": "RECRUITING",
+      "lastUpdatePostDateStruct": { "date": "2000-02-03" }
+    },
+    "designModule": { "phases": ["PHASE2"] },
+    "conditionsModule": { "conditions": ["Non-small cell lung cancer"] },
+    "sponsorCollaboratorsModule": { "leadSponsor": { "name": "Nobody: invented for testing" } },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Aged 18 or older\n* Diagnosed with lung cancer\n* Able to swallow tablets\n\nExclusion Criteria:\n\n* Pregnant or breastfeeding\n* Taking part in another drug study",
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "healthyVolunteers": false,
+      "stdAges": ["ADULT", "OLDER_ADULT"]
+    }
+  }
+}

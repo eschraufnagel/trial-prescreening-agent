@@ -1,0 +1,297 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "thinking": "off",
+  "promptVersion": "c5778afe9cbd",
+  "simulatorVersion": "e3414083139e",
+  "graderVersion": "2",
+  "vignetteSetHash": "ce067cdede97",
+  "dev": true,
+  "conversations": [
+    {
+      "vignetteId": "NCT04316364-dev",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 387832,
+        "participantMs": 137192,
+        "fidelityMs": 64802,
+        "agentCalls": 42,
+        "participantCalls": 21,
+        "fidelityCalls": 21
+      },
+      "questions": 21,
+      "flaggedTurns": [
+        {
+          "turn": 2,
+          "text": "I would rate my health as 0, fully active. Just to mention, I am not pregnant, not lactating, and have had no close contact with anyone who has or is suspected of having COVID-19.",
+          "flags": [
+            {
+              "kind": "model",
+              "reason": "The message claims the person is 'fully active' and rates their health as '0', which contradicts the facts stating they have stage IIIA lung cancer and rheumatoid arthritis, conditions that typically impair full activity."
+            }
+          ]
+        },
+        {
+          "turn": 6,
+          "text": "Yes, the surgeon has evaluated me and confirmed that an R0 resection is possible with curative intent.",
+          "flags": [
+            {
+              "kind": "model",
+              "reason": "The message asserts that the surgeon confirmed an R0 resection is possible with curative intent, whereas the facts only state the surgeon says the cancer is resectable, without specifying R0 status or curative intent."
+            }
+          ]
+        },
+        {
+          "turn": 8,
+          "text": "I'm not sure about the specific RECIST v1.1 criteria, but I have had recent imaging scans for my diagnosis.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 107
+            },
+            {
+              "kind": "model",
+              "reason": "The message asserts knowledge about RECIST v1.1 criteria, which contradicts the fact that the person does not know what the intervention drugs are and implies a level of medical technical knowledge not supported by the provided facts."
+            }
+          ]
+        },
+        {
+          "turn": 10,
+          "text": "I'm not sure if my doctor has specifically confirmed the RECIST v1.1 criteria, but I can ask them to check my records. I do know that my biopsy was pathologically confirmed and the surgeon says it is resectable.",
+          "flags": [
+            {
+              "kind": "model",
+              "reason": "The message introduces specific information about RECIST v1.1 criteria which is not stated in the facts, implying knowledge or uncertainty about a detail not present in the provided persona."
+            }
+          ]
+        },
+        {
+          "turn": 12,
+          "text": "I'm not sure about the specific results of my recent blood tests. I haven't been told they are within normal limits, so I can't confirm that.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 141
+            }
+          ]
+        },
+        {
+          "turn": 20,
+          "text": "I don't know if I have had other types of cancer in the last 5 years. I only know about my lung cancer diagnosis.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 113
+            },
+            {
+              "kind": "model",
+              "reason": "The message asserts uncertainty about having other types of cancer in the last 5 years, which introduces new information not present in the facts and potentially contradicts the implication of a single, specific lung cancer diagnosis without mention of other malignancies."
+            }
+          ]
+        },
+        {
+          "turn": 22,
+          "text": "I don't know if I have been diagnosed with pneumonitis or interstitial lung disease. I only know about my lung cancer and my rheumatoid arthritis.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 146
+            }
+          ]
+        },
+        {
+          "turn": 24,
+          "text": "I don't know if I have had a heart attack, stroke, or heart failure. I only know about my lung cancer and my rheumatoid arthritis.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 130
+            },
+            {
+              "kind": "model",
+              "reason": "The message asserts that the person does not know if they have had a heart attack, stroke, or heart failure, which introduces specific health uncertainties not stated in the facts."
+            }
+          ]
+        },
+        {
+          "turn": 26,
+          "text": "I don't know if I have a bleeding disorder. I only know about my lung cancer and my rheumatoid arthritis.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 105
+            }
+          ]
+        },
+        {
+          "turn": 28,
+          "text": "I don't know if I have had a blood clot in a vein or lung. I only know about my lung cancer and my rheumatoid arthritis.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 120
+            }
+          ]
+        },
+        {
+          "turn": 32,
+          "text": "I don't know if I have Hepatitis B or C. I only know about my lung cancer and my rheumatoid arthritis.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 102
+            },
+            {
+              "kind": "model",
+              "reason": "The message claims the person does not know if they have Hepatitis B or C, but the provided facts do not contain any information regarding the person's Hepatitis status, making this an unsupported assertion."
+            }
+          ]
+        },
+        {
+          "turn": 38,
+          "text": "I don't know if I have a diagnosed psychiatric condition like depression or anxiety. I only know about my lung cancer and my rheumatoid arthritis.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 146
+            }
+          ]
+        }
+      ],
+      "labels": {
+        "score": {
+          "determinations": 3,
+          "confidentlyWrong": 0,
+          "answerable": 3,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 3,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "outcomes": [
+          {
+            "label": "L7",
+            "expected": "holds",
+            "status": "holds",
+            "outcome": "correct",
+            "evidence": [
+              "Yes, I would agree to use contraception or practice abstinence for 180 days"
+            ]
+          },
+          {
+            "label": "L8",
+            "expected": "does-not-hold",
+            "status": "does-not-hold",
+            "outcome": "correct",
+            "evidence": ["No, I have not had any anti-cancer therapy"]
+          },
+          {
+            "label": "L17",
+            "expected": "holds",
+            "status": "holds",
+            "outcome": "correct",
+            "evidence": ["caused a reaction to monoclonal antibodies."]
+          },
+          {
+            "label": "L18",
+            "expected": "unresolved",
+            "status": "unresolved",
+            "outcome": "correct-abstention",
+            "evidence": [
+              "I don't know what the specific intervention drugs are",
+              "I'm not sure if I'm allergic to the specific chemotherapy drugs or SHR-1316"
+            ]
+          },
+          {
+            "label": "L19",
+            "expected": "does-not-hold",
+            "status": "does-not-hold",
+            "outcome": "simulator-affected",
+            "evidence": ["I am not pregnant"]
+          },
+          {
+            "label": "L20",
+            "expected": "does-not-hold",
+            "status": "does-not-hold",
+            "outcome": "simulator-affected",
+            "evidence": ["not lactating"]
+          },
+          {
+            "label": "L22",
+            "expected": "unresolved",
+            "status": "unresolved",
+            "outcome": "correct-abstention",
+            "evidence": ["I prefer not to discuss that topic."]
+          },
+          {
+            "label": "L24",
+            "expected": "does-not-hold",
+            "status": "does-not-hold",
+            "outcome": "simulator-affected",
+            "evidence": [
+              "had no close contact with anyone who has or is suspected of having COVID-19"
+            ]
+          }
+        ],
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 21,
+          "participantReplies": 21,
+          "multiQuestion": 1,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 5,
+              "text": "Has an attending thoracic surgeon evaluated you to confirm that you are eligible for an R0 resection (complete removal of the tumor) with curative intent?"
+            }
+          ],
+          "followUps": 2
+        }
+      }
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 3,
+      "confidentlyWrong": 0,
+      "answerable": 3,
+      "abstained": 0,
+      "abstainable": 2,
+      "correctAbstentions": 2,
+      "simulatorAffected": 3,
+      "confidentlyWrongRate": 0,
+      "abstentionRate": 0,
+      "correctAbstentionRate": 1
+    },
+    "parse": {
+      "scored": {
+        "determinations": 0,
+        "confidentlyWrong": 0,
+        "answerable": 0,
+        "abstained": 0,
+        "abstainable": 0,
+        "correctAbstentions": 0,
+        "simulatorAffected": 0,
+        "confidentlyWrongRate": null,
+        "abstentionRate": null,
+        "correctAbstentionRate": null
+      },
+      "categories": {}
+    }
+  },
+  "failed": []
+}

@@ -1,0 +1,24 @@
+{
+  "provenance": "written from the claude-api skill (Messages API reference, cached 2026-06) in 2026-09, not yet seen from the API",
+  "status": 200,
+  "body": {
+    "id": "msg_recorded",
+    "type": "message",
+    "role": "assistant",
+    "model": "claude-haiku-4-5",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"message\":\"How old are you?\"}"
+      }
+    ],
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "usage": {
+      "input_tokens": 120,
+      "output_tokens": 18,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4200
+    }
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "nctId": "NCT00077350",
+  "labelledAt": "2026-09",
+  "criteriaTextSha": "e6b43ec2e6480b64a711fa94d406257b048d3a85ca366759b1803be58f8e6b61",
+  "provenance": {
+    "drafter": "claude-opus-5",
+    "guide": "evals/cases/ANNOTATION.md",
+    "sawParse": false,
+    "note": "Drafter had seen only summary counts for this study (criteria total and type histogram), never individual criteria or their text. Drafted before the annotation guide was written; re-read against it afterwards."
+  },
+  "criteria": [
+    {
+      "id": "L1",
+      "quote": "Patients must have histologically confirmed non-small cell lung cancer (NSCLC); cytology alone is not acceptable",
+      "start": 23,
+      "end": 135,
+      "polarity": "inclusion",
+      "type": "clinical",
+      "note": "Rule 1: the second clause restricts the evidence for the first rather than adding a separate check, so it stays in one criterion."
+    },
+    {
+      "id": "L2",
+      "quote": "Patients must have progressive or recurrent NSCLC",
+      "start": 138,
+      "end": 187,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L3",
+      "quote": "must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease",
+      "start": 193,
+      "end": 284,
+      "polarity": "inclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L4",
+      "quote": "patients must not have received prior gemcitabine chemotherapy",
+      "start": 286,
+      "end": 348,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L5",
+      "quote": "Patients must have measurable disease, as defined by RECIST, within 4 weeks prior to registration",
+      "start": 351,
+      "end": 448,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L6",
+      "quote": "Patients must have an ECOG performance status of 0 or 1",
+      "start": 451,
+      "end": 506,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L7",
+      "quote": "Bilirubin \\< 1.5 x upper limit of normal",
+      "start": 509,
+      "end": 549,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L8",
+      "quote": "AST (SGOT) \\< 3 x upper limit of normal",
+      "start": 552,
+      "end": 591,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L9",
+      "quote": "Serum creatinine =\\< 1.5 mg/dL, or calculated creatinine clearance \\>= 60 mL/min",
+      "start": 594,
+      "end": 674,
+      "polarity": "inclusion",
+      "type": "clinical",
+      "note": "Rule 1: one requirement (adequate renal function) with two acceptable forms of evidence."
+    },
+    {
+      "id": "L10",
+      "quote": "Absolute granulocyte count \\>= 1500/mm3",
+      "start": 677,
+      "end": 716,
+      "polarity": "inclusion",
+      "type": "clinical",
+      "note": "Rule 1: split from the WBC threshold it was stated with. Two measurements, each independently true or false."
+    },
+    {
+      "id": "L11",
+      "quote": "WBC \\>= 3000/mm\\^3",
+      "start": 721,
+      "end": 739,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L12",
+      "quote": "Hemoglobin \\>= 9 g/L",
+      "start": 742,
+      "end": 762,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L13",
+      "quote": "Platelet count \\>= 100,000/mm\\^3",
+      "start": 765,
+      "end": 797,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L14",
+      "quote": "Patients must have completed any radiation therapy \\>= 3 weeks prior to registration",
+      "start": 800,
+      "end": 884,
+      "polarity": "inclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L15",
+      "quote": "Patients must have completed prior cytotoxic chemotherapy \\>= 3 weeks prior to registration",
+      "start": 887,
+      "end": 978,
+      "polarity": "inclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L16",
+      "quote": "have recovered from adverse effects from the chemotherapy to =\\< Grade 1, or baseline",
+      "start": 983,
+      "end": 1068,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L17",
+      "quote": "Patients with brain metastases which have been treated are eligible if the patient is \\> 3 weeks post completion of treatment for their brain metastases, and patient is neurologically stable",
+      "start": 1071,
+      "end": 1261,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L18",
+      "quote": "patients with previous brain metastases who have not yet received therapy specifically intended for their brain metastases are not eligible to enroll in this protocol",
+      "start": 1263,
+      "end": 1429,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L19",
+      "quote": "Life expectancy greater than 3 months",
+      "start": 1432,
+      "end": 1469,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L20",
+      "quote": "Pregnant women are excluded from this study",
+      "start": 1472,
+      "end": 1515,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L21",
+      "quote": "breastfeeding should be discontinued if the mother is treated with Triapine®",
+      "start": 1784,
+      "end": 1860,
+      "polarity": "exclusion",
+      "type": "patient",
+      "note": "Rule 4: answerable at screening, since a mother unwilling to discontinue is not eligible. Distinct from the in-trial reporting obligation later in the same bullet."
+    },
+    {
+      "id": "L22",
+      "quote": "a negative serum pregnancy test is required within 14 days of study entry",
+      "start": 1996,
+      "end": 2069,
+      "polarity": "inclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L23",
+      "quote": "women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation",
+      "start": 2334,
+      "end": 2538,
+      "polarity": "inclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L24",
+      "quote": "HIV-positive patients receiving combination antiretroviral therapy are excluded from the study",
+      "start": 2817,
+      "end": 2911,
+      "polarity": "exclusion",
+      "type": "clinical",
+      "note": "The criterion is narrower than 'HIV-positive': it is HIV-positive AND receiving combination antiretroviral therapy. The rest of the sentence is rationale (Rule 5)."
+    },
+    {
+      "id": "L25",
+      "quote": "Patients must not have an active second malignancy",
+      "start": 2978,
+      "end": 3028,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L26",
+      "quote": "Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements",
+      "start": 3031,
+      "end": 3270,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L27",
+      "quote": "a history of myocardial infarction within the prior 6 months",
+      "start": 3434,
+      "end": 3494,
+      "polarity": "exclusion",
+      "type": "clinical",
+      "note": "Rule 1: split from the cardiopulmonary list it was stated in. Five conditions sharing one exclusion verb are five independently checkable criteria."
+    },
+    {
+      "id": "L28",
+      "quote": "symptomatic congestive heart failure",
+      "start": 3504,
+      "end": 3540,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L29",
+      "quote": "unstable angina pectoris",
+      "start": 3542,
+      "end": 3566,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L30",
+      "quote": "cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation)",
+      "start": 3568,
+      "end": 3691,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L31",
+      "quote": "pulmonary disease requiring oxygen",
+      "start": 3696,
+      "end": 3730,
+      "polarity": "exclusion",
+      "type": "clinical"
+    },
+    {
+      "id": "L32",
+      "quote": "Patients must not have dementia or active psychosis",
+      "start": 3746,
+      "end": 3797,
+      "polarity": "exclusion",
+      "type": "clinical",
+      "note": "Rule 1 would split this into two. Left as one because 'dementia or active psychosis' reads as a single neuropsychiatric exclusion rather than two independently assessed conditions — the closest call in this study."
+    },
+    {
+      "id": "L33",
+      "quote": "Patients must not have used any investigational agent in the month before study enrollment",
+      "start": 3800,
+      "end": 3890,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L34",
+      "quote": "Patients must not have a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine® or other agents used in this study",
+      "start": 3893,
+      "end": 4063,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L35",
+      "quote": "Patients must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency",
+      "start": 4066,
+      "end": 4162,
+      "polarity": "exclusion",
+      "type": "patient"
+    },
+    {
+      "id": "L36",
+      "quote": "persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry for this condition",
+      "start": 4164,
+      "end": 4342,
+      "polarity": "inclusion",
+      "type": "protocol",
+      "note": "Rule 3: an action the site performs, not a fact about the patient. Same shape as tissue adequacy for central PD-L1 testing."
+    },
+    {
+      "id": "L37",
+      "quote": "patients testing positive for G6PD deficiency are excluded from protocol entry",
+      "start": 4344,
+      "end": 4422,
+      "polarity": "exclusion",
+      "type": "clinical"
+    }
+  ],
+  "notCriteria": [
+    {
+      "quote": "because Triapine® is a heterocyclic carboxaldehyde thiosemicarbazone with the potential for teratogenic or abortifacient effects",
+      "start": 1516,
+      "end": 1644,
+      "why": "Rule 5: rationale for the pregnancy exclusion."
+    },
+    {
+      "quote": "because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with Triapine®",
+      "start": 1646,
+      "end": 1782,
+      "why": "Rule 5: rationale for the breastfeeding requirement."
+    },
+    {
+      "quote": "women must not be pregnant or breastfeeding due to the absence of information regarding the use of these agents in these populations",
+      "start": 1862,
+      "end": 1994,
+      "why": "Rule 6: restates the pregnancy and breastfeeding requirements already labelled. Labelling it again would count one requirement twice."
+    },
+    {
+      "quote": "the effects of Triapine® on the developing human fetus at the recommended therapeutic dose are unknown",
+      "start": 2071,
+      "end": 2173,
+      "why": "Rule 5: a statement about the drug, not about eligibility."
+    },
+    {
+      "quote": "should a woman become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately",
+      "start": 2540,
+      "end": 2685,
+      "why": "Rule 4: an obligation during the trial, not answerable at screening."
+    },
+    {
+      "quote": "Because patients with immune deficiency are at increased risk of lethal infections when treated with marrow-suppressive therapy",
+      "start": 2688,
+      "end": 2815,
+      "why": "Rule 5: rationale for the HIV exclusion."
+    },
+    {
+      "quote": "because of possible pharmacokinetic interactions with Triapine®",
+      "start": 2912,
+      "end": 2975,
+      "why": "Rule 5: rationale for the HIV exclusion."
+    },
+    {
+      "quote": "furthermore, since hypoxemia may cause serious adverse events in persons with serious cardiac and/or pulmonary disease",
+      "start": 3272,
+      "end": 3390,
+      "why": "Rule 5: rationale for the cardiopulmonary exclusions."
+    }
+  ]
+}

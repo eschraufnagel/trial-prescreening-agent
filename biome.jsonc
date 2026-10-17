@@ -1,0 +1,44 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
+  "files": {
+    "includes": [
+      "**",
+      "!data/trials",
+      "!data/plain",
+      "!tests/**/fixtures",
+      "!evals/results/screening/conversations",
+      "!evals/results/screening/review",
+      "!chats",
+      "!added-trials",
+      "!work/0013-trials-by-link/gate",
+      "!e2e/.out",
+      "!dist"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        // Off deliberately. This project navigates untyped registry JSON by
+        // string key, which is what bracket access is for; the rule's advice
+        // suits typed objects. Left on it produced 39 standing infos, and a
+        // lint output nobody reads is worse than a rule nobody applies.
+        "useLiteralKeys": "off"
+      }
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  }
+}

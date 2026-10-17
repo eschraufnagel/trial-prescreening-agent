@@ -1,0 +1,237 @@
+{
+  "nctId": "NCT00106626",
+  "criteria": [
+    {
+      "id": "NCT00106626:23-215",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Patient must be 18 years or older",
+      "source": {
+        "start": 23,
+        "end": 215,
+        "text": "Patient must be 18 years or older with confirmed diagnosis of a solid tumor for which pemetrexed and cisplatin is acceptable treatment and have received no more than 2 prior systemic therapies"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:23-215#2",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Patient has a confirmed diagnosis of a solid tumor for which pemetrexed and cisplatin is acceptable treatment",
+      "source": {
+        "start": 23,
+        "end": 215,
+        "text": "Patient must be 18 years or older with confirmed diagnosis of a solid tumor for which pemetrexed and cisplatin is acceptable treatment and have received no more than 2 prior systemic therapies"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:23-215#3",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Patient has received no more than 2 prior systemic therapies",
+      "source": {
+        "start": 23,
+        "end": 215,
+        "text": "Patient must be 18 years or older with confirmed diagnosis of a solid tumor for which pemetrexed and cisplatin is acceptable treatment and have received no more than 2 prior systemic therapies"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:218-250",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Patient has at least 1 measurable lesion",
+      "source": {
+        "start": 218,
+        "end": 250,
+        "text": "Has at least 1 measurable lesion"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:253-300",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Patient has adequate blood, liver, and kidney functions",
+      "source": {
+        "start": 253,
+        "end": 300,
+        "text": "Has adequate blood, liver, and kidney functions"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:303-386",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Patient has not received any chemotherapy for at least 4 weeks prior to entry in this study",
+      "source": {
+        "start": 303,
+        "end": 386,
+        "text": "Has not received any chemotherapy for at least 4 weeks prior to entry in this study"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:389-470",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Patient agrees to take adequate measures to prevent pregnancy as outlined in the protocol",
+      "source": {
+        "start": 389,
+        "end": 470,
+        "text": "Agrees to take adequate measures to prevent pregnancy as outlined in the protocol"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:495-589",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Patient has been treated with other investigational agents with a similar anti-tumor mechanism",
+      "source": {
+        "start": 495,
+        "end": 589,
+        "text": "Patient has been treated with other investigational agents with a similar anti-tumor mechanism"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:592-757",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Patient from Cohorts A and B has received pemetrexed or cisplatin within the past 6 months",
+      "source": {
+        "start": 592,
+        "end": 757,
+        "text": "Patient from Cohorts A and B has received pemetrexed or cisplatin within the past 6 months and from Cohorts C and D have received pemetrexed within the past 6 months"
+      },
+      "confidence": 1,
+      "appliesTo": "Cohorts A and B"
+    },
+    {
+      "id": "NCT00106626:592-757#2",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Patient from Cohorts C and D has received pemetrexed within the past 6 months",
+      "source": {
+        "start": 592,
+        "end": 757,
+        "text": "Patient from Cohorts A and B has received pemetrexed or cisplatin within the past 6 months and from Cohorts C and D have received pemetrexed within the past 6 months"
+      },
+      "confidence": 1,
+      "appliesTo": "Cohorts C and D"
+    },
+    {
+      "id": "NCT00106626:760-892",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Patient from Cohorts A and B has preexisting Grade 2 or higher neuropathy",
+      "source": {
+        "start": 760,
+        "end": 892,
+        "text": "Patient from Cohorts A and B has preexisting Grade 2 or higher neuropathy and from Cohorts C and D have Grade 3 or higher neuropathy"
+      },
+      "confidence": 1,
+      "appliesTo": "Cohorts A and B"
+    },
+    {
+      "id": "NCT00106626:760-892#2",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Patient from Cohorts C and D has Grade 3 or higher neuropathy",
+      "source": {
+        "start": 760,
+        "end": 892,
+        "text": "Patient from Cohorts A and B has preexisting Grade 2 or higher neuropathy and from Cohorts C and D have Grade 3 or higher neuropathy"
+      },
+      "confidence": 1,
+      "appliesTo": "Cohorts C and D"
+    },
+    {
+      "id": "NCT00106626:895-1048",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Patient has active infection",
+      "source": {
+        "start": 895,
+        "end": 1048,
+        "text": "Patient has active infection or had received IV (intravenous) antibiotic, antiviral, or antifungal medications within 2 weeks of the start of study drugs"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:895-1048#2",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Patient has received IV (intravenous) antibiotic, antiviral, or antifungal medications within 2 weeks of the start of study drugs",
+      "source": {
+        "start": 895,
+        "end": 1048,
+        "text": "Patient has active infection or had received IV (intravenous) antibiotic, antiviral, or antifungal medications within 2 weeks of the start of study drugs"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:1051-1104",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Patient has HIV, hepatitis B or hepatitis C infection",
+      "source": {
+        "start": 1051,
+        "end": 1104,
+        "text": "Patient has HIV, hepatitis B or hepatitis C infection"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:1107-1144",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Patient is pregnant or breast feeding",
+      "source": {
+        "start": 1107,
+        "end": 1144,
+        "text": "Patient is pregnant or breast feeding"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:1147-1202",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Patient has allergy to any component of the study drugs",
+      "source": {
+        "start": 1147,
+        "end": 1202,
+        "text": "Patient has allergy to any component of the study drugs"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00106626:1205-1271",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Patient has history of GI (gastrointestinal) surgery or conditions",
+      "source": {
+        "start": 1205,
+        "end": 1271,
+        "text": "Patient has history of GI (gastrointestinal) surgery or conditions"
+      },
+      "confidence": 1
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "normalizeVersion": "1",
+    "timestamp": "2026-09"
+  }
+}

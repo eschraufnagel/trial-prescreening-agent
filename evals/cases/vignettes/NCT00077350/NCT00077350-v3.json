@@ -1,0 +1,79 @@
+{
+  "id": "NCT00077350-v3",
+  "nctId": "NCT00077350",
+  "labelSetSha": "a563b92102d9222befd27ecbd8d3dc76ff1b9fc09b87b5347a81b0982e113dcf",
+  "behavior": "cooperative",
+  "persona": "52-year-old woman, accountant, precise and brief.",
+  "facts": [
+    {
+      "label": "L3",
+      "says": "I have had two different chemotherapy regimens for the advanced cancer, and both failed.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L4",
+      "says": "Yes, the second regimen was gemcitabine chemotherapy.",
+      "expected": "holds"
+    },
+    {
+      "label": "L14",
+      "says": "I completed radiation therapy five weeks ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L15",
+      "says": "I completed my last chemotherapy two months ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L20",
+      "says": "No, I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L21",
+      "says": "No, I am not breastfeeding.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L23",
+      "says": "Yes, I would agree to use contraception before and during the study.",
+      "expected": "holds"
+    },
+    {
+      "label": "L33",
+      "says": "I have not used any investigational agent in the past month.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L34",
+      "says": "No, I have never had an allergic reaction to Triapine or to anything similar.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L35",
+      "says": "My brother has G6PD deficiency. I have never been tested for it myself.",
+      "expected": "defer"
+    },
+    {
+      "label": "L19",
+      "says": "I do not know what my life expectancy is. No one has told me.",
+      "reported": "unknown"
+    },
+    {
+      "label": "L30",
+      "says": "I have atrial fibrillation. It has been stable for years and I do not notice it."
+    },
+    {
+      "label": "L1",
+      "says": "The diagnosis was histologically confirmed from a tissue biopsy: non-small cell lung cancer, not just cytology.",
+      "reported": "holds"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

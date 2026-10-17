@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Screening conversation</title>
+<style>
+:root{--bg:#fbfbfa;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--agent:#eef2f7;--person:#f4f1ea;--holds:#2f6f4f;--dnh:#3d5a80;--unres:#9a6b16;--chart:#6b4f8f;--nr:#8a8a85;--flag:#a3342b}
+@media (prefers-color-scheme:dark){:root{--bg:#171716;--fg:#e8e6e1;--muted:#9c9a94;--line:#33322f;--agent:#1f2530;--person:#27241e;--holds:#6fbf95;--dnh:#8fb0dd;--unres:#e0b25c;--chart:#b89be0;--nr:#8a8a85;--flag:#ef8a80}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,sans-serif}
+header{padding:20px 16px;border-bottom:1px solid var(--line)}h1{font-size:18px;margin:0}
+.note{color:var(--muted);font-size:13px;margin-top:4px}
+main{display:grid;grid-template-columns:1fr 1fr;gap:0}
+section{padding:16px;min-width:0}section+section{border-left:1px solid var(--line)}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 12px}
+.turn{margin-bottom:10px}.meta{font-size:12px;color:var(--muted)}
+.bubble{padding:8px 12px;border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere}
+.agent .bubble{background:var(--agent)}.participant .bubble{background:var(--person);margin-left:24px}
+.tag{font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.flag{color:var(--flag);font-size:13px;margin:4px 0 0 24px}
+.finding{border-left:3px solid var(--nr);padding:6px 10px;margin-bottom:10px}
+.s-holds{border-color:var(--holds)}.s-does-not-hold{border-color:var(--dnh)}.s-unresolved{border-color:var(--unres)}.s-chart-review{border-color:var(--chart)}
+.fhead{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}.fid{font:600 13px ui-monospace,monospace}
+.status{font-weight:600}.muted{color:var(--muted);font-size:13px}.ftext{font-size:14px}
+ul{margin:4px 0 0;padding-left:18px;font-size:13px}a{color:inherit}
+@media (max-width:760px){main{grid-template-columns:1fr}section+section{border-left:0;border-top:1px solid var(--line)}}
+</style></head><body>
+<header><h1>NCT04316364-v2 (labels)</h1><div class="note">Synthetic conversation. Findings are per criterion and are not an eligibility decision; a coordinator makes that.</div></header>
+<main><section><h2>Conversation</h2>
+<div class="turn agent" id="t0"><div class="meta">0 · agent </div><div class="bubble">Hello, and thank you for your interest in the study &quot;A Trial of SHR-1316/Placebo in Combination With Chemotherapy in Patients With Resectable NSCLC&quot;. I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you.</div></div>
+<div class="turn agent" id="t1"><div class="meta">1 · agent <span class="tag">L1</span></div><div class="bubble">Thanks. On a scale of 0 to 1, where 0 means fully active and 1 means restricted in physically strenuous activity but ambulatory, how would you describe your current health status?</div></div>
+<div class="turn participant" id="t2"><div class="meta">2 · person </div><div class="bubble">I would say my health status is a 0, as I am fully active.</div><div class="flag">⚑ simulator flag: The message claims the person is 'fully active' and assigns a health status of 0, which contradicts the fact that she has stage IIIA lung cancer and rheumatoid arthritis, conditions that typically impair full activity.</div></div>
+<div class="turn agent" id="t3"><div class="meta">3 · agent <span class="tag">L2</span></div><div class="bubble">Have you been diagnosed with resectable Stage II, IIIA, or Selected IIIB non-small cell lung cancer (NSCLC) that has not yet been treated?</div></div>
+<div class="turn participant" id="t4"><div class="meta">4 · person </div><div class="bubble">Yes, I have been diagnosed with stage IIIA lung cancer. The biopsy confirmed it, and the surgeon says it is resectable, but I haven't started any treatment yet.</div></div>
+<div class="turn agent" id="t5"><div class="meta">5 · agent <span class="tag">L2</span></div><div class="bubble">Thanks. To confirm, has your lung cancer been confirmed by a biopsy (pathologically confirmed)?</div></div>
+<div class="turn participant" id="t6"><div class="meta">6 · person </div><div class="bubble">Yes, the biopsy pathologically confirmed the stage IIIA lung cancer.</div></div>
+<div class="turn agent" id="t7"><div class="meta">7 · agent <span class="tag">L3</span></div><div class="bubble">Has an attending thoracic surgeon evaluated you and confirmed that you are eligible for an R0 resection (complete removal of the tumor) with curative intent?</div></div>
+<div class="turn participant" id="t8"><div class="meta">8 · person </div><div class="bubble">Yes, the surgeon has confirmed that I am eligible for an R0 resection with curative intent.</div><div class="flag">⚑ simulator flag: The message asserts that the surgeon confirmed eligibility for an R0 resection with curative intent, whereas the facts only state the surgeon said the cancer is resectable and untreated, without specifying R0 eligibility or curative intent.</div></div>
+<div class="turn agent" id="t9"><div class="meta">9 · agent <span class="tag">L5</span></div><div class="bubble">Have you had a recent scan (like a CT or PET scan) that showed the tumor can be measured using RECIST v1.1 criteria?</div></div>
+<div class="turn participant" id="t10"><div class="meta">10 · person </div><div class="bubble">I'm not sure about the specific measurement criteria. I haven't seen those scan results in detail.</div></div>
+<div class="turn agent" id="t11"><div class="meta">11 · agent <span class="tag">L6</span></div><div class="bubble">Thanks. Have you had recent blood tests (like a complete blood count and chemistry panel) to check that your organs are functioning well?</div></div>
+<div class="turn participant" id="t12"><div class="meta">12 · person </div><div class="bubble">I'm not sure about the specific recent blood test results. I haven't seen those details in detail.</div></div>
+<div class="turn agent" id="t13"><div class="meta">13 · agent <span class="tag">L7</span></div><div class="bubble">Are you currently able to use effective contraception or practice abstinence for at least 180 days after your last study treatment dose?</div></div>
+<div class="turn participant" id="t14"><div class="meta">14 · person </div><div class="bubble">Yes, I would agree to use contraception for the 180 days after treatment.</div></div>
+<div class="turn agent" id="t15"><div class="meta">15 · agent <span class="tag">L9</span></div><div class="bubble">Do you have any active autoimmune diseases, such as rheumatoid arthritis, lupus, or Crohn's disease?</div></div>
+<div class="turn participant" id="t16"><div class="meta">16 · person </div><div class="bubble">Yes, I have rheumatoid arthritis.</div></div>
+<div class="turn agent" id="t17"><div class="meta">17 · agent <span class="tag">L10</span></div><div class="bubble">Have you been diagnosed with any other types of cancer (malignancies) besides NSCLC in the last 5 years?</div></div>
+<div class="turn participant" id="t18"><div class="meta">18 · person </div><div class="bubble">Yes, I had a skin cancer removed from my back three years ago.</div></div>
+<div class="turn agent" id="t19"><div class="meta">19 · agent <span class="tag">L11</span></div><div class="bubble">Have you ever been diagnosed with pneumonitis, interstitial lung disease, or any other severe lung conditions that affect lung function?</div></div>
+<div class="turn participant" id="t20"><div class="meta">20 · person </div><div class="bubble">I don't know if I have been diagnosed with pneumonitis or interstitial lung disease. I haven't discussed those specific conditions with my doctor.</div><div class="flag">⚑ simulator flag: The message asserts uncertainty about a diagnosis of pneumonitis or interstitial lung disease, which introduces specific medical conditions and diagnostic history not present in the provided facts.</div></div>
+<div class="turn agent" id="t21"><div class="meta">21 · agent <span class="tag">L12</span></div><div class="bubble">Thanks. Have you ever been diagnosed with significant heart or blood vessel conditions, such as a heart attack, stroke, or heart failure?</div></div>
+<div class="turn participant" id="t22"><div class="meta">22 · person </div><div class="bubble">I don't know if I have been diagnosed with those specific heart conditions. I haven't discussed a history of heart attacks or strokes with my doctor.</div><div class="flag">⚑ simulator flag: The message asserts a lack of discussion regarding heart attacks or strokes, which introduces medical history details not present in the provided facts.</div></div>
+<div class="turn agent" id="t23"><div class="meta">23 · agent <span class="tag">L13</span></div><div class="bubble">Have you ever been diagnosed with a significant bleeding disorder or condition that causes excessive bleeding?</div></div>
+<div class="turn participant" id="t24"><div class="meta">24 · person </div><div class="bubble">I don't know if I have a bleeding disorder. I haven't been diagnosed with one that causes excessive bleeding.</div></div>
+<div class="turn agent" id="t25"><div class="meta">25 · agent <span class="tag">L14</span></div><div class="bubble">Have you ever had a blood clot in an artery or vein, such as a deep vein thrombosis (DVT) or a pulmonary embolism (PE)?</div></div>
+<div class="turn participant" id="t26"><div class="meta">26 · person </div><div class="bubble">I don't know if I have had a blood clot like DVT or PE. I haven't been diagnosed with those specific conditions.</div></div>
+<div class="turn agent" id="t27"><div class="meta">27 · agent <span class="tag">L14</span></div><div class="bubble">Thanks. Even without a formal diagnosis, have you ever experienced symptoms or been told you might have had a blood clot in an artery or vein, such as a deep vein thrombosis (DVT) or pulmonary embolism (PE)?</div></div>
+<div class="turn participant" id="t28"><div class="meta">28 · person </div><div class="bubble">I don't know if I have had symptoms of a blood clot like DVT or PE. I haven't been diagnosed with those specific conditions.</div></div>
+<div class="turn agent" id="t29"><div class="meta">29 · agent <span class="tag">L15</span></div><div class="bubble">Have you ever been diagnosed with HIV (human immunodeficiency virus)?</div></div>
+<div class="turn participant" id="t30"><div class="meta">30 · person </div><div class="bubble">No, I have not been diagnosed with HIV.</div><div class="flag">⚑ simulator flag: The message asserts that the person has not been diagnosed with HIV, but the provided facts do not contain any information regarding HIV status, making this an unsupported assertion.</div></div>
+<div class="turn agent" id="t31"><div class="meta">31 · agent <span class="tag">L16</span></div><div class="bubble">Have you ever been diagnosed with Hepatitis B or Hepatitis C?</div></div>
+<div class="turn participant" id="t32"><div class="meta">32 · person </div><div class="bubble">No, I have not been diagnosed with Hepatitis B or Hepatitis C.</div><div class="flag">⚑ simulator flag: The message asserts that the person has not been diagnosed with Hepatitis B or Hepatitis C, which is information not present in the provided facts.</div></div>
+<div class="turn agent" id="t33"><div class="meta">33 · agent <span class="tag">L17</span></div><div class="bubble">Are you allergic to monoclonal antibodies or other protein drugs? These are medicines made from proteins, such as certain cancer or autoimmune treatments.</div></div>
+<div class="turn participant" id="t34"><div class="meta">34 · person </div><div class="bubble">I prefer not to discuss that topic.</div></div>
+<div class="turn agent" id="t35"><div class="meta">35 · agent <span class="tag">L18</span></div><div class="bubble">Thanks. Since you prefer not to discuss allergies, would you like to skip this question for now?</div></div>
+<div class="turn participant" id="t36"><div class="meta">36 · person </div><div class="bubble">Yes, please skip that question.</div></div>
+<div class="turn agent" id="t37"><div class="meta">37 · agent <span class="tag">L18</span></div><div class="bubble">Thanks for letting me know. To confirm, are you allergic to SHR-1316 or the chemotherapy medicines used in this study?</div></div>
+<div class="turn participant" id="t38"><div class="meta">38 · person </div><div class="bubble">No, I do not have any medicine allergies.</div></div>
+<div class="turn agent" id="t39"><div class="meta">39 · agent <span class="tag">L19</span></div><div class="bubble">Are you currently pregnant?</div></div>
+<div class="turn participant" id="t40"><div class="meta">40 · person </div><div class="bubble">No, I am not pregnant.</div></div>
+<div class="turn agent" id="t41"><div class="meta">41 · agent <span class="tag">L20</span></div><div class="bubble">Are you currently breastfeeding or lactating?</div></div>
+<div class="turn participant" id="t42"><div class="meta">42 · person </div><div class="bubble">No, I am not lactating or breastfeeding.</div></div>
+<div class="turn agent" id="t43"><div class="meta">43 · agent <span class="tag">L21</span></div><div class="bubble">Do you currently have a psychiatric condition, such as depression or anxiety, that requires treatment?</div></div>
+<div class="turn participant" id="t44"><div class="meta">44 · person </div><div class="bubble">I prefer not to discuss that topic.</div></div>
+<div class="turn agent" id="t45"><div class="meta">45 · agent <span class="tag">L22</span></div><div class="bubble">Thanks. Do you currently have a substance use disorder, such as an addiction to alcohol or drugs?</div></div>
+<div class="turn participant" id="t46"><div class="meta">46 · person </div><div class="bubble">I prefer not to discuss that topic.</div></div>
+<div class="turn agent" id="t47"><div class="meta">47 · agent <span class="tag">L23</span></div><div class="bubble">Have you ever been diagnosed with or suspected to have COVID-19?</div></div>
+<div class="turn participant" id="t48"><div class="meta">48 · person </div><div class="bubble">No, I have not been diagnosed with COVID-19 myself, although my son had it last week.</div></div>
+<div class="turn agent" id="t49"><div class="meta">49 · agent <span class="tag">L24</span></div><div class="bubble">Thanks for letting me know. Since your son had COVID-19, are you currently in close contact with him?</div></div>
+<div class="turn participant" id="t50"><div class="meta">50 · person </div><div class="bubble">Yes, my son had COVID last week and I was looking after him at home.</div></div>
+<div class="turn agent" id="t51"><div class="meta">51 · agent </div><div class="bubble">Thank you, that's all my questions. A study coordinator will review your answers and contact you about next steps.</div></div>
+</section><section><h2>Findings</h2>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L1</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported holds</span></div>
+  <div class="ftext">Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1</div>
+  <ul><li><a href="#t2">turn 2</a> “health status is a 0, as I am fully active”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L2</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported holds</span></div>
+  <div class="ftext">Have previously untreated, pathologically confirmed resectable Stage II, IIIA, or Selected IIIB NSCLC.</div>
+  <ul><li><a href="#t6">turn 6</a> “Yes, the biopsy pathologically confirmed the stage IIIA lung cancer.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L3</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported holds</span></div>
+  <div class="ftext">Evaluation by an attending thoracic surgeon to confirm eligibility for an R0 resection with curative intent</div>
+  <ul><li><a href="#t8">turn 8</a> “surgeon has confirmed that I am eligible for an R0 resection”</li></ul>
+</div>
+<div class="finding s-not-raised">
+  <div class="fhead"><span class="fid">L4</span>
+  <span class="status">not raised</span>
+  <span class="muted">protocol · inclusion · protocol</span></div>
+  <div class="ftext">Adequate tumor tissue sample blocks for central programmed death-ligand 1 (PD-L1) testing</div>
+  
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L5</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · unknown · reported unknown</span></div>
+  <div class="ftext">Measurable disease as defined by RECIST v1.1</div>
+  <ul><li><a href="#t10">turn 10</a> “I'm not sure about the specific measurement criteria.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L6</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · unknown · reported unknown</span></div>
+  <div class="ftext">Adequate organ function</div>
+  <ul><li><a href="#t12">turn 12</a> “I'm not sure about the specific recent blood test results.”</li></ul>
+</div>
+<div class="finding s-holds">
+  <div class="fhead"><span class="fid">L7</span>
+  <span class="status">holds</span>
+  <span class="muted">patient · inclusion · answered</span></div>
+  <div class="ftext">Women of childbearing age without sterilizing or male, must agree to use contraception or practice abstinence at least 180 days after the last dose of study treatment</div>
+  <ul><li><a href="#t14">turn 14</a> “Yes, I would agree to use contraception for the 180 days after treatment.”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L8</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">Any previous systematic anti-cancer therapy for lung cancer</div>
+  <ul><li><a href="#t4">turn 4</a> “haven't started any treatment yet”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L9</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported holds</span></div>
+  <div class="ftext">With active, known or suspected autoimmune disease of autoimmune disease</div>
+  <ul><li><a href="#t16">turn 16</a> “Yes, I have rheumatoid arthritis.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L10</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported holds</span></div>
+  <div class="ftext">Malignancies other than NSCLC within 5 years prior to randomization</div>
+  <ul><li><a href="#t18">turn 18</a> “Yes, I had a skin cancer removed from my back three years ago.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L11</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · unknown · reported unknown</span></div>
+  <div class="ftext">Has or suspected has a history of pneumonitis /interstitial lung disease or any serve lung diseases which will influence the examination of lung function</div>
+  <ul><li><a href="#t20">turn 20</a> “I don't know if I have been diagnosed”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L12</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · unknown · reported unknown</span></div>
+  <div class="ftext">Significant history of cardiovascular and cerebrovascular disease</div>
+  <ul><li><a href="#t22">turn 22</a> “I don't know if I have been diagnosed with those specific heart conditions.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L13</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · unknown · reported unknown</span></div>
+  <div class="ftext">Significant haemorrhagic disease</div>
+  <ul><li><a href="#t24">turn 24</a> “I don't know if I have a bleeding disorder.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L14</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · unknown · reported unknown</span></div>
+  <div class="ftext">Has an arteriovenous thrombotic events</div>
+  <ul><li><a href="#t26">turn 26</a> “I don't know if I have had a blood clot” <span class="muted">missing: Whether the person has had a blood clot despite no diagnosis</span></li><li><a href="#t28">turn 28</a> “I don't know if I have had symptoms of a blood clot like DVT or PE.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L15</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">Has a known history of human immunodeficiency virus (HIV) infection</div>
+  <ul><li><a href="#t30">turn 30</a> “No, I have not been diagnosed with HIV.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L16</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">Has a known active Hepatitis B or Hepatitis C</div>
+  <ul><li><a href="#t32">turn 32</a> “No, I have not been diagnosed with Hepatitis B or Hepatitis C.”</li></ul>
+</div>
+<div class="finding s-unresolved">
+  <div class="fhead"><span class="fid">L17</span>
+  <span class="status">unresolved</span>
+  <span class="muted">patient · exclusion · declined</span></div>
+  <div class="ftext">Allergic to monoclonal antibodies or other protein drugs</div>
+  <ul><li><a href="#t34">turn 34</a> “I prefer not to discuss that topic.”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L18</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">Allergic to the intervention regimens</div>
+  <ul><li><a href="#t38">turn 38</a> “No, I do not have any medicine allergies.”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L19</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">Pregnant</div>
+  <ul><li><a href="#t40">turn 40</a> “No, I am not pregnant.”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L20</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">lactating women</div>
+  <ul><li><a href="#t42">turn 42</a> “No, I am not lactating or breastfeeding.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L21</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · declined</span></div>
+  <div class="ftext">psychiatric</div>
+  <ul><li><a href="#t44">turn 44</a> “I prefer not to discuss that topic.”</li></ul>
+</div>
+<div class="finding s-unresolved">
+  <div class="fhead"><span class="fid">L22</span>
+  <span class="status">unresolved</span>
+  <span class="muted">patient · exclusion · declined</span></div>
+  <div class="ftext">substance abuse disorders</div>
+  <ul><li><a href="#t46">turn 46</a> “I prefer not to discuss that topic.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L23</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">Confirmed COVID-19 infection or suspected COVID-19 infection</div>
+  <ul><li><a href="#t48">turn 48</a> “No, I have not been diagnosed with COVID-19 myself”</li></ul>
+</div>
+<div class="finding s-holds">
+  <div class="fhead"><span class="fid">L24</span>
+  <span class="status">holds</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">close contact with a person with known or suspected COVID-19 infection</div>
+  <ul><li><a href="#t50">turn 50</a> “my son had COVID last week and I was looking after him at home.”</li></ul>
+</div>
+</section></main></body></html>

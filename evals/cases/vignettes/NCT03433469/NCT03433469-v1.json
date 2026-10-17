@@ -1,0 +1,96 @@
+{
+  "id": "NCT03433469-v1",
+  "nctId": "NCT03433469",
+  "labelSetSha": "3858521c6adf07e6d939b0be1b7ccd1979a26130da9b06da8bf96e2ae9da6c45",
+  "behavior": "contradicts",
+  "persona": "67-year-old woman, retired shop owner, chatty, sometimes remembers things halfway through and corrects herself.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "I am 67 years of age.",
+      "expected": "holds"
+    },
+    {
+      "label": "L20",
+      "says": "Yes, I can swallow oral medications fine.",
+      "expected": "holds"
+    },
+    {
+      "label": "L22",
+      "says": "Yes, I would agree to use highly effective contraception during the study and for 90 days after.",
+      "expected": "holds"
+    },
+    {
+      "label": "L49",
+      "says": "That one is about men with a female partner. I am a woman.",
+      "expected": "defer"
+    },
+    {
+      "label": "L55",
+      "says": "I am not currently receiving treatment with any medications.",
+      "laterSays": "Oh, I forgot, I do take a heart rhythm tablet every day, my current treatment.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L59",
+      "says": "No chemotherapy, radiation, hormonal treatment or immunotherapy in the last month.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L63",
+      "says": "No antibiotics recently.",
+      "laterSays": "Actually, I finished oral antibiotics for a chest infection last week.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L67",
+      "says": "No, I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L68",
+      "says": "No, I am not breastfeeding.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L70",
+      "says": "I have never had a hypersensitivity reaction to any drug.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L71",
+      "says": "No, I have no involvement in the planning or conduct of the study.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L72",
+      "says": "I have never had any participation in a clinical study.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L10",
+      "says": "I am out in the garden every day."
+    },
+    {
+      "label": "L53",
+      "says": "No, I am not HIV positive.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L61",
+      "says": "I have never had tuberculosis.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L2",
+      "says": "A biopsy two months ago histologically confirmed non-small cell lung cancer.",
+      "reported": "holds"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

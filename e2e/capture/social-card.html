@@ -1,0 +1,130 @@
+<!doctype html>
+<!--
+  The repository's preview card (slice 0016), 1280×640, screenshotted by
+  e2e/capture.spec.ts into docs/images/social-card.png after review.png is
+  captured. Colours and type are the page's own light tokens (src/web/styles.css).
+  Upload the PNG in the repository's Settings → General → Social preview.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trial Prescreening</title>
+    <style>
+      :root {
+        --bg: #f7f7f5;
+        --panel: #ffffff;
+        --text: #1d1d1f;
+        --dim: #6b6b70;
+        --line: #e2e2e0;
+        --accent: #2f5bd3;
+        --accent-soft: #eef2fc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1280px;
+        height: 640px;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 540px 1fr;
+        gap: 48px;
+        height: 100%;
+        padding: 72px 0 0 72px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--accent);
+        font-size: 22px;
+        font-weight: 650;
+        letter-spacing: -0.01em;
+      }
+      h1 {
+        margin: 36px 0 20px;
+        font-size: 46px;
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.45;
+        color: var(--dim);
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 40px;
+      }
+      .tags span {
+        padding: 7px 14px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .shot {
+        align-self: start;
+        height: 600px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-right: 0;
+        border-radius: 14px 0 0 14px;
+        background: var(--panel);
+        box-shadow: 0 18px 50px rgba(29, 29, 31, 0.14);
+      }
+      .shot img {
+        display: block;
+        width: 1000px;
+        margin: -70px 0 0 -150px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <div class="brand">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M9 3h6" />
+            <path d="M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3" />
+            <path d="M7.5 14h9" />
+          </svg>
+          Trial Prescreening
+        </div>
+        <h1>An AI runs a trial's first eligibility conversation.</h1>
+        <p>
+          A coordinator reviews what the person said, rule by rule, and makes the decision.
+        </p>
+        <div class="tags">
+          <span>Local model</span>
+          <span>Made-up patients</span>
+          <span>Measured by evals</span>
+        </div>
+      </div>
+      <div class="shot">
+        <img src="../../docs/images/review.png" alt="The coordinator review" />
+      </div>
+    </main>
+  </body>
+</html>

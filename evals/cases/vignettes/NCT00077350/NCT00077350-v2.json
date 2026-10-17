@@ -1,0 +1,81 @@
+{
+  "id": "NCT00077350-v2",
+  "nctId": "NCT00077350",
+  "labelSetSha": "a563b92102d9222befd27ecbd8d3dc76ff1b9fc09b87b5347a81b0982e113dcf",
+  "behavior": "contradicts",
+  "persona": "59-year-old man, delivery driver, answers quickly and sometimes corrects himself.",
+  "facts": [
+    {
+      "label": "L3",
+      "says": "Just the one chemotherapy regimen for the advanced cancer, and it failed.",
+      "laterSays": "Actually, I had two different chemotherapy regimens for the advanced cancer.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L4",
+      "says": "No gemcitabine, I am sure of that.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L14",
+      "says": "My radiation therapy finished one week ago.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L15",
+      "says": "I finished my chemotherapy four weeks ago.",
+      "laterSays": "No, wait, my last chemotherapy was only last week.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L20",
+      "says": "No, I am a man, so I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L21",
+      "says": "No, I am not breastfeeding. I am a man.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L23",
+      "says": "Yes, I would agree to use contraception during the study.",
+      "expected": "holds"
+    },
+    {
+      "label": "L33",
+      "says": "Yes, I was in another trial and took an investigational drug three weeks ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L34",
+      "says": "I have never had an allergic reaction to Triapine or anything similar to it.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L35",
+      "says": "I have never been told I have G6PD deficiency.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L24",
+      "says": "I am HIV negative.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L28",
+      "says": "My heart is fine as far as I know."
+    },
+    {
+      "label": "L2",
+      "says": "My non-small cell lung cancer is recurrent. It came back and has been progressive since.",
+      "reported": "holds"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

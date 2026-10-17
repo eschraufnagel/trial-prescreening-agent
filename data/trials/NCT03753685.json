@@ -1,0 +1,26 @@
+{
+  "nctId": "NCT03753685",
+  "briefTitle": "X-396(Ensartinib) Capsules in ALK-Positive NSCLC Patients With Brain Metastases",
+  "officialTitle": "Efficacy and Safety of X-396(Ensartinib) in ALK-Positive NSCLC Patients With Brain Metastases: A Phase Ⅱ, Open-Label, Single Arm, Multicenter Study",
+  "overallStatus": "ACTIVE_NOT_RECRUITING",
+  "phases": [
+    "PHASE2"
+  ],
+  "conditions": [
+    "Nonsmall Cell Lung Cancer",
+    "Brain Metastases"
+  ],
+  "leadSponsor": "Fudan University",
+  "lastUpdatePostDate": "2025-07-23",
+  "eligibility": {
+    "criteriaText": "Inclusion Criteria:\n\n* 1\\. Histologically or cytologically confirmed locally advance or recurrent/metastatic NSCLC that was positive for ALK mutations.\n\n  2\\. Contrast-enhanced MRI or CT confirmed parenchymal brain metastases with at least one measurable lesion (according to RANO and RECIST 1.1), which was not previously treated with radiotherapy.\n\n  3\\. At most once treated with chemotherapy, which must have been completed at least 4 weeks before the initiation of study treatment. Any adverse events related to previous chemotherapy treatment have disappeared.\n\n  4\\. Female or male, 18 years of age or older 5. A Karnofsky Performance Status score of at least 60. 6. An expected survival time of at least 12 weeks. 7. Adequate organ functions, defined as absolute neutrophils count ≥1.5\\*10\\^9/L，platelets count ≥80\\*10\\^9/L, hemoglobin concentration≥ 9 g/dL, total bilirubin ≤1.5 \\*ULN (upper limits of normal), ALT≤2.5 \\*ULN, AST≤2.5 \\*ULN, creatinine≤1.5 \\*ULN.\n\n  8\\. Drug related toxicities has been relieved to grade 1 (based on NCI CTCAE v4.03), except for hair loss.\n\n  9\\. Being willing and able to comply with scheduled visits, treatment plans, laboratory tests and other study procedures.\n\n  10\\. Signed and dated informed consent.\n\nExclusion Criteria:\n\n* 1\\. Currently under treatment of other systemic anti-cancer therapies. 2. Evidence of active malignancy within last 5 years. 3. Patients who participated in other clinical trials within last 4 weeks before the initiation of study treatment.\n\n  4\\. Patients who received surgery or immunotherapy within last 4 weeks before the initiation of study treatment, or received radiotherapy within last 2 weeks before the initiation of study treatment.\n\n  5\\. Patients who previously received organ transplantation or stem cell transplantation.\n\n  6\\. Patients with clinically significant cardiovascular and cerebrovascular diseases.\n\n  7\\. Patients with dysphagia, active gastrointestinal diseases or other conditions that will interfere significantly with the absorption, distribution, metabolism or excretion of study medication.\n\n  8\\. Patients who are active carrier of hepatitis B (HBsAg positive and HBV-DNA ≥500IU/mL), hepatitis C virus antibody, treponema pallidum antibody or HIV antibody.\n\n  9\\. Patients with interstitial lung disease history or signs of active interstitial lung disease.\n\n  10\\. Pregnant and lactating women. 11. Patients with known allergy or delayed hypersensitivity reaction to study drug or its excipients.\n\n  12\\. Patients who need to receive drugs which could induce QT/QTc interval prolongation or torsade de pointes, or drugs which are potent CYP3A4 inhibitors or inducers within last 14 days before the initiation of study treatment and during the study.\n\n  13\\. Patients who are currently under treatment of warfarin or other coumarin anticoagulants.\n\n  14\\. Patients with other illness or medical conditions potentially interfering with the study treatment.",
+    "sex": "ALL",
+    "minimumAge": "18 Years",
+    "maximumAge": null,
+    "healthyVolunteers": false,
+    "stdAges": [
+      "ADULT",
+      "OLDER_ADULT"
+    ]
+  }
+}

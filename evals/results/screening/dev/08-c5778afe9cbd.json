@@ -1,0 +1,332 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "thinking": "off",
+  "promptVersion": "c5778afe9cbd",
+  "simulatorVersion": "5fd4476340c9",
+  "graderVersion": "4",
+  "vignetteSetHash": "aa8172ad05f2",
+  "dev": true,
+  "conversations": [
+    {
+      "vignetteId": "NCT00077350-dev",
+      "nctId": "NCT00077350",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 257786,
+        "participantMs": 153175,
+        "fidelityMs": 77335,
+        "agentCalls": 60,
+        "participantCalls": 30,
+        "fidelityCalls": 30
+      },
+      "questions": 30,
+      "labels": {
+        "score": {
+          "determinations": 9,
+          "confidentlyWrong": 2,
+          "answerable": 7,
+          "abstained": 0,
+          "abstainable": 3,
+          "correctAbstentions": 1,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.2222222222222222,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.3333333333333333
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 30,
+          "participantReplies": 30,
+          "multiQuestion": 2,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 2
+        },
+        "notCorrect": [
+          {
+            "label": "L14",
+            "expected": "unresolved",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["Yes, I had radiation done about two months ago"]
+          },
+          {
+            "label": "L34",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I got hives from a chemo drug years ago, but I have no idea whether it's anything like this one.",
+              "No, I haven't had an allergic reaction to Triapine or anything like it."
+            ]
+          }
+        ]
+      },
+      "flaggedTurns": 19
+    },
+    {
+      "vignetteId": "NCT03433469-dev",
+      "nctId": "NCT03433469",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 413071,
+        "participantMs": 282108,
+        "fidelityMs": 97053,
+        "agentCalls": 82,
+        "participantCalls": 41,
+        "fidelityCalls": 41
+      },
+      "questions": 41,
+      "labels": {
+        "score": {
+          "determinations": 12,
+          "confidentlyWrong": 2,
+          "answerable": 10,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 0,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.16666666666666666,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 41,
+          "participantReplies": 41,
+          "multiQuestion": 2,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L20",
+            "expected": "unresolved",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["Yes, I can swallow oral medicines without any trouble."]
+          },
+          {
+            "label": "L49",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["That question applies to men, and I am a woman"]
+          }
+        ]
+      },
+      "flaggedTurns": 19
+    },
+    {
+      "vignetteId": "NCT04316364-dev",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 165123,
+        "participantMs": 858968,
+        "fidelityMs": 47482,
+        "agentCalls": 42,
+        "participantCalls": 21,
+        "fidelityCalls": 21
+      },
+      "questions": 21,
+      "labels": {
+        "score": {
+          "determinations": 6,
+          "confidentlyWrong": 0,
+          "answerable": 6,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 21,
+          "participantReplies": 21,
+          "multiQuestion": 1,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 2
+        },
+        "notCorrect": []
+      },
+      "flaggedTurns": 7
+    },
+    {
+      "vignetteId": "NCT04385368-dev",
+      "nctId": "NCT04385368",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 504536,
+        "participantMs": 338329,
+        "fidelityMs": 154045,
+        "agentCalls": 106,
+        "participantCalls": 53,
+        "fidelityCalls": 53
+      },
+      "questions": 53,
+      "labels": {
+        "score": {
+          "determinations": 14,
+          "confidentlyWrong": 1,
+          "answerable": 13,
+          "abstained": 0,
+          "abstainable": 6,
+          "correctAbstentions": 5,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.07142857142857142,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.8333333333333334
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 53,
+          "participantReplies": 53,
+          "multiQuestion": 3,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 8
+        },
+        "notCorrect": [
+          {
+            "label": "L64",
+            "expected": "unresolved",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, my operation was about two months ago"]
+          }
+        ]
+      },
+      "flaggedTurns": 25
+    },
+    {
+      "vignetteId": "NCT06728852-dev",
+      "nctId": "NCT06728852",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 587893,
+        "participantMs": 267594,
+        "fidelityMs": 413879,
+        "agentCalls": 80,
+        "participantCalls": 40,
+        "fidelityCalls": 40
+      },
+      "questions": 40,
+      "labels": {
+        "score": {
+          "determinations": 9,
+          "confidentlyWrong": 2,
+          "answerable": 7,
+          "abstained": 0,
+          "abstainable": 5,
+          "correctAbstentions": 3,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.2222222222222222,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.6
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 40,
+          "participantReplies": 40,
+          "multiQuestion": 3,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 7,
+              "text": "Thanks. To help us check eligibility, do you know if your doctor has said your tumors are large enough to be measured on your latest scan? If you aren't sure, that's okay."
+            },
+            {
+              "turn": 63,
+              "text": "Thanks. To help us check eligibility, have you ever had a significant bleeding event, or do you have any wounds, ulcers, or fractures that haven't healed after bleeding? It's okay if you're not sure."
+            }
+          ],
+          "followUps": 5
+        },
+        "notCorrect": [
+          {
+            "label": "L15",
+            "expected": "defer",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, I am not breastfeeding."]
+          },
+          {
+            "label": "L16",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["That's for men, and I'm a woman."]
+          }
+        ]
+      },
+      "flaggedTurns": 17
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 50,
+      "confidentlyWrong": 7,
+      "answerable": 43,
+      "abstained": 0,
+      "abstainable": 18,
+      "correctAbstentions": 11,
+      "simulatorAffected": 0,
+      "confidentlyWrongRate": 0.14,
+      "abstentionRate": 0,
+      "correctAbstentionRate": 0.6111111111111112
+    },
+    "parse": {
+      "scored": {
+        "determinations": 0,
+        "confidentlyWrong": 0,
+        "answerable": 0,
+        "abstained": 0,
+        "abstainable": 0,
+        "correctAbstentions": 0,
+        "simulatorAffected": 0,
+        "confidentlyWrongRate": null,
+        "abstentionRate": null,
+        "correctAbstentionRate": null
+      },
+      "categories": {}
+    }
+  },
+  "failed": []
+}

@@ -1,0 +1,32 @@
+{
+  "provenance": "written from https://docs.x.ai/developers/rest-api-reference/inference/chat-completions in 2026-09, not yet seen from the API",
+  "status": 200,
+  "body": {
+    "id": "chatcmpl-recorded",
+    "object": "chat.completion",
+    "created": 0,
+    "model": "grok-4.3",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"readings\":[{\"criterionId\":\"L1\",\"rea",
+          "refusal": null
+        },
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 430,
+      "completion_tokens": 19,
+      "total_tokens": 449,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  }
+}

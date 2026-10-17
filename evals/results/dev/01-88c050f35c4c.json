@@ -1,0 +1,403 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "promptVersion": "88c050f35c4c",
+  "normalizeVersion": "2",
+  "parseIdentity": "88c050f35c4c-n2",
+  "thinking": "default",
+  "dev": true,
+  "matcher": {
+    "version": "2",
+    "spanWeight": 0.6,
+    "textWeight": 0.4,
+    "floor": 0.3,
+    "narrativeOverlap": 0.5
+  },
+  "studies": [
+    {
+      "nctId": "NCT04385368",
+      "status": "graded",
+      "parseSource": "model",
+      "metrics": {
+        "nctId": "NCT04385368",
+        "labels": 74,
+        "predictions": 47,
+        "matched": 41,
+        "merged": 33,
+        "coverageRecall": 1,
+        "strictRecall": 0.5540540540540541,
+        "mergeRate": 0.44594594594594594,
+        "precision": 0.8723404255319149,
+        "typeAccuracy": 0.8048780487804879,
+        "polarityAccuracy": 0.975609756097561,
+        "narrativeFalsePositives": 2,
+        "nearMisses": 13
+      },
+      "quotes": {
+        "rejected": 0,
+        "loose": 2
+      },
+      "diagnostics": {
+        "missed": [],
+        "extra": [
+          {
+            "polarity": "inclusion",
+            "type": "patient",
+            "text": "Patient must provide signed and dated written optional genetic informed consent prior to collection of a sample for optional genetic analysis at the time of sec…"
+          },
+          {
+            "polarity": "inclusion",
+            "type": "patient",
+            "text": "Patient must be male and/or female."
+          },
+          {
+            "polarity": "inclusion",
+            "type": "clinical",
+            "text": "A contrast-enhanced CT or MRI scan of the chest must have been done for surgical planning prior to surgery. It is recommended that patients undergo combined FDG…"
+          },
+          {
+            "polarity": "inclusion",
+            "type": "clinical",
+            "text": "Complete resection of the primary NSCLC is mandatory. The primary tumor must be deemed resectable by a multidisciplinary evaluation that must include a thoracic…"
+          },
+          {
+            "polarity": "exclusion",
+            "type": "clinical",
+            "text": "EGFR-mutant and/or ALK-translocation-positive, as assessed either from a pre-surgical biopsy sample (preferred) or the resected tumor tissue (if biopsy was not …"
+          },
+          {
+            "polarity": "exclusion",
+            "type": "clinical",
+            "text": "History of another primary malignancy, except for * Malignancy treated with curative intent and with no known active disease ≥5 years before the first dose of I…"
+          }
+        ],
+        "merged": [
+          {
+            "id": "L2",
+            "inside": "Patient must be capable of giving signed informed consent, including mandatory genetic informed consent and compliance with ICF and protocol requirements."
+          },
+          {
+            "id": "L5",
+            "inside": "If ICF1 is signed up to Week 3 (Day 21) postsurgery, or after Week 3 but prior to Week 5 (Day 35) post-surgery with study physician approval, a whole blood samp…"
+          },
+          {
+            "id": "L8",
+            "inside": "Patient must have a diagnosis of histologically confirmed NSCLC (WHO 2015 classification) with resectable (stage II-III) disease (according to IASLC Staging Man…"
+          },
+          {
+            "id": "L9",
+            "inside": "Patient must have a diagnosis of histologically confirmed NSCLC (WHO 2015 classification) with resectable (stage II-III) disease (according to IASLC Staging Man…"
+          },
+          {
+            "id": "L10",
+            "inside": "A contrast-enhanced CT or MRI scan of the chest must have been done for surgical planning prior to surgery. It is recommended that patients undergo combined FDG…"
+          },
+          {
+            "id": "L11",
+            "inside": "A contrast-enhanced CT or MRI scan of the chest must have been done for surgical planning prior to surgery. It is recommended that patients undergo combined FDG…"
+          },
+          {
+            "id": "L12",
+            "inside": "A contrast-enhanced CT or MRI scan of the chest must have been done for surgical planning prior to surgery. It is recommended that patients undergo combined FDG…"
+          },
+          {
+            "id": "L13",
+            "inside": "Complete resection of the primary NSCLC is mandatory. The primary tumor must be deemed resectable by a multidisciplinary evaluation that must include a thoracic…"
+          },
+          {
+            "id": "L14",
+            "inside": "Complete resection of the primary NSCLC is mandatory. The primary tumor must be deemed resectable by a multidisciplinary evaluation that must include a thoracic…"
+          },
+          {
+            "id": "L15",
+            "inside": "Complete resection of the primary NSCLC is mandatory. The primary tumor must be deemed resectable by a multidisciplinary evaluation that must include a thoracic…"
+          },
+          {
+            "id": "L16",
+            "inside": "Complete resection of the primary NSCLC is mandatory. The primary tumor must be deemed resectable by a multidisciplinary evaluation that must include a thoracic…"
+          },
+          {
+            "id": "L17",
+            "inside": "At a minimum, the following parameters should be met for a tumor to be declared completely resected: 1. The surgeon performing the resection should remove all g…"
+          },
+          {
+            "id": "L18",
+            "inside": "At a minimum, the following parameters should be met for a tumor to be declared completely resected: 1. The surgeon performing the resection should remove all g…"
+          },
+          {
+            "id": "L19",
+            "inside": "At a minimum, the following parameters should be met for a tumor to be declared completely resected: 1. The surgeon performing the resection should remove all g…"
+          },
+          {
+            "id": "L20",
+            "inside": "At a minimum, the following parameters should be met for a tumor to be declared completely resected: 1. The surgeon performing the resection should remove all g…"
+          },
+          {
+            "id": "L21",
+            "inside": "At a minimum, the following parameters should be met for a tumor to be declared completely resected: 1. The surgeon performing the resection should remove all g…"
+          },
+          {
+            "id": "L22",
+            "inside": "At a minimum, the following parameters should be met for a tumor to be declared completely resected: 1. The surgeon performing the resection should remove all g…"
+          },
+          {
+            "id": "L24",
+            "inside": "At a minimum, the following parameters should be met for a tumor to be declared completely resected: 1. The surgeon performing the resection should remove all g…"
+          },
+          {
+            "id": "L27",
+            "inside": "Confirmation of suitable samples of resected tumor tissue and whole blood for WES of tumor and germline DNA, respectively, and creation of Sponsor-approved pers…"
+          },
+          {
+            "id": "L28",
+            "inside": "Confirmation of suitable samples of resected tumor tissue and whole blood for WES of tumor and germline DNA, respectively, and creation of Sponsor-approved pers…"
+          },
+          {
+            "id": "L33",
+            "inside": "ICF2 must be signed and dated after MRD status is determined and prior to initiation of any study-specific procedures, sampling, and analyses outlined in SoAs i…"
+          },
+          {
+            "id": "L38",
+            "inside": "Adequate organ and marrow function as described in the protocol. Must have a life expectancy of at least 12 weeks. Body weight >30 kg"
+          },
+          {
+            "id": "L39",
+            "inside": "Post-operative imaging demonstrating unequivocal evidence of disease recurrence or tissue biopsy-proven disease recurrence. In the event of lymphadenopathy on i…"
+          },
+          {
+            "id": "L41",
+            "inside": "EGFR-mutant and/or ALK-translocation-positive, as assessed either from a pre-surgical biopsy sample (preferred) or the resected tumor tissue (if biopsy was not …"
+          },
+          {
+            "id": "L42",
+            "inside": "EGFR-mutant and/or ALK-translocation-positive, as assessed either from a pre-surgical biopsy sample (preferred) or the resected tumor tissue (if biopsy was not …"
+          },
+          {
+            "id": "L43",
+            "inside": "EGFR-mutant and/or ALK-translocation-positive, as assessed either from a pre-surgical biopsy sample (preferred) or the resected tumor tissue (if biopsy was not …"
+          },
+          {
+            "id": "L44",
+            "inside": "EGFR-mutant and/or ALK-translocation-positive, as assessed either from a pre-surgical biopsy sample (preferred) or the resected tumor tissue (if biopsy was not …"
+          },
+          {
+            "id": "L45",
+            "inside": "EGFR-mutant and/or ALK-translocation-positive, as assessed either from a pre-surgical biopsy sample (preferred) or the resected tumor tissue (if biopsy was not …"
+          },
+          {
+            "id": "L53",
+            "inside": "History of another primary malignancy, except for * Malignancy treated with curative intent and with no known active disease ≥5 years before the first dose of I…"
+          },
+          {
+            "id": "L56",
+            "inside": "Active infection, including tuberculosis (clinical evaluation that includes clinical history, physical examination, and radiographic findings, and tuberculosis …"
+          },
+          {
+            "id": "L61",
+            "inside": "Radiotherapy treatment for NSCLC in the neoadjuvant setting. Radiotherapy treatment to more than 30% of the bone marrow or with a wide field of radiation within…"
+          },
+          {
+            "id": "L71",
+            "inside": "Female patients who are pregnant or breastfeeding or male or female patients of reproductive potential who are not willing to employ effective birth control fro…"
+          },
+          {
+            "id": "L72",
+            "inside": "Female patients who are pregnant or breastfeeding or male or female patients of reproductive potential who are not willing to employ effective birth control fro…"
+          }
+        ],
+        "typeErrors": [
+          {
+            "id": "L23",
+            "labelled": "definitional",
+            "predicted": "clinical",
+            "quote": "Note: Lobe-specific lymph node stations are classified based on the location of the primary tumor as follows (based on IASLC 2009 lymph node map terminology \\[R…"
+          },
+          {
+            "id": "L26",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "Confirmation of suitable samples of resected tumor tissue and whole blood for WES of tumor and germline DNA, respectively, and creation of Sponsor-approved pers…"
+          },
+          {
+            "id": "L30",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "Known tumor PD-L1 status determined at a central reference laboratory testing service using a validated Ventana SP263 PD-L1 immunohistochemistry (IHC) assay pri…"
+          },
+          {
+            "id": "L31",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "Post-operative CT scan of the chest (including liver and adrenal glands) performed within 28 days + 7 days prior to randomization."
+          },
+          {
+            "id": "L40",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "In the event of lymphadenopathy on imaging that would lead to exclusion, histopathological confirmation of lymph node metastasis should be obtained prior to exc…"
+          },
+          {
+            "id": "L49",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "History of allogeneic organ or bone marrow transplantation."
+          },
+          {
+            "id": "L57",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Known allergy or hypersensitivity to any of the IPs or any of the IP excipients."
+          },
+          {
+            "id": "L74",
+            "labelled": "clinical",
+            "predicted": "patient",
+            "quote": "Judgment by the Investigator that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions, and …"
+          }
+        ],
+        "narrative": [
+          {
+            "text": "Patient must provide signed and dated written optional genetic informed consent prior to collection of a sample for optional genetic analysis at the time of sec…",
+            "ruledOutBecause": "Optional consent. Declining it does not affect eligibility."
+          },
+          {
+            "text": "Patient must be male and/or female.",
+            "ruledOutBecause": "States no restriction, so nobody can fail it."
+          }
+        ]
+      }
+    },
+    {
+      "nctId": "NCT00077350",
+      "status": "graded",
+      "parseSource": "model",
+      "metrics": {
+        "nctId": "NCT00077350",
+        "labels": 37,
+        "predictions": 27,
+        "matched": 26,
+        "merged": 11,
+        "coverageRecall": 1,
+        "strictRecall": 0.7027027027027027,
+        "mergeRate": 0.2972972972972973,
+        "precision": 0.9629629629629629,
+        "typeAccuracy": 0.8461538461538461,
+        "polarityAccuracy": 1,
+        "narrativeFalsePositives": 0,
+        "nearMisses": 2
+      },
+      "quotes": {
+        "rejected": 1,
+        "loose": 0
+      },
+      "diagnostics": {
+        "missed": [],
+        "extra": [
+          {
+            "polarity": "exclusion",
+            "type": "patient",
+            "text": "The patient must not be pregnant or breastfeeding."
+          }
+        ],
+        "merged": [
+          {
+            "id": "L2",
+            "inside": "The patient must have progressive or recurrent NSCLC and must have failed exactly one prior cytotoxic chemotherapy regimen for advanced disease."
+          },
+          {
+            "id": "L4",
+            "inside": "The patient must have progressive or recurrent NSCLC and must have failed exactly one prior cytotoxic chemotherapy regimen for advanced disease."
+          },
+          {
+            "id": "L11",
+            "inside": "The patient must have an absolute granulocyte count greater than or equal to 1500/mm3 and a WBC count greater than or equal to 3000/mm^3."
+          },
+          {
+            "id": "L15",
+            "inside": "The patient must have completed prior cytotoxic chemotherapy at least 3 weeks prior to registration and recovered from adverse effects to Grade 1 or baseline."
+          },
+          {
+            "id": "L20",
+            "inside": "The patient must not be pregnant or breastfeeding."
+          },
+          {
+            "id": "L21",
+            "inside": "The patient must not be pregnant or breastfeeding."
+          },
+          {
+            "id": "L27",
+            "inside": "The patient must not have a history of myocardial infarction within the prior 6 months, symptomatic congestive heart failure, unstable angina pectoris, cardiac …"
+          },
+          {
+            "id": "L28",
+            "inside": "The patient must not have a history of myocardial infarction within the prior 6 months, symptomatic congestive heart failure, unstable angina pectoris, cardiac …"
+          },
+          {
+            "id": "L29",
+            "inside": "The patient must not have a history of myocardial infarction within the prior 6 months, symptomatic congestive heart failure, unstable angina pectoris, cardiac …"
+          },
+          {
+            "id": "L31",
+            "inside": "The patient must not have a history of myocardial infarction within the prior 6 months, symptomatic congestive heart failure, unstable angina pectoris, cardiac …"
+          },
+          {
+            "id": "L37",
+            "inside": "Persons at high risk for G6PD deficiency (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry…"
+          }
+        ],
+        "typeErrors": [
+          {
+            "id": "L3",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease"
+          },
+          {
+            "id": "L16",
+            "labelled": "clinical",
+            "predicted": "patient",
+            "quote": "have recovered from adverse effects from the chemotherapy to =\\< Grade 1, or baseline"
+          },
+          {
+            "id": "L35",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Patients must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency"
+          },
+          {
+            "id": "L36",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry …"
+          }
+        ],
+        "narrative": []
+      }
+    }
+  ],
+  "pooled": {
+    "studies": 2,
+    "labels": 111,
+    "predictions": 74,
+    "matched": 67,
+    "merged": 44,
+    "coverageRecall": 1,
+    "strictRecall": 0.6036036036036037,
+    "mergeRate": 0.3963963963963964,
+    "precision": 0.9054054054054054,
+    "typeAccuracy": 0.8208955223880597,
+    "polarityAccuracy": 0.9850746268656716,
+    "narrativeFalsePositives": 2,
+    "nearMisses": 15
+  },
+  "quotes": {
+    "rejected": 1,
+    "loose": 2
+  },
+  "failed": []
+}

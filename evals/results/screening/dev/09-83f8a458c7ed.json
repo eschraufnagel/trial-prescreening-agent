@@ -1,0 +1,335 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "thinking": "off",
+  "promptVersion": "83f8a458c7ed",
+  "simulatorVersion": "5fd4476340c9",
+  "graderVersion": "4",
+  "vignetteSetHash": "aa8172ad05f2",
+  "dev": true,
+  "conversations": [
+    {
+      "vignetteId": "NCT00077350-dev",
+      "nctId": "NCT00077350",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1649833,
+        "participantMs": 928088,
+        "fidelityMs": 168478,
+        "agentCalls": 56,
+        "participantCalls": 28,
+        "fidelityCalls": 28
+      },
+      "questions": 28,
+      "labels": {
+        "score": {
+          "determinations": 6,
+          "confidentlyWrong": 0,
+          "answerable": 7,
+          "abstained": 1,
+          "abstainable": 3,
+          "correctAbstentions": 3,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0.14285714285714285,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 28,
+          "participantReplies": 28,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L21",
+            "expected": "does-not-hold",
+            "status": "unresolved",
+            "outcome": "abstained",
+            "evidence": ["I'm a man, so not pregnant"]
+          }
+        ]
+      },
+      "flaggedTurns": 18
+    },
+    {
+      "vignetteId": "NCT03433469-dev",
+      "nctId": "NCT03433469",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 975270,
+        "participantMs": 310438,
+        "fidelityMs": 565298,
+        "agentCalls": 80,
+        "participantCalls": 40,
+        "fidelityCalls": 40
+      },
+      "questions": 40,
+      "labels": {
+        "score": {
+          "determinations": 11,
+          "confidentlyWrong": 1,
+          "answerable": 10,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 1,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.09090909090909091,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.5
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 1,
+          "disagreements": [
+            {
+              "label": "L2",
+              "expected": "holds",
+              "heard": "(not captured)"
+            }
+          ]
+        },
+        "discipline": {
+          "agentQuestions": 40,
+          "participantReplies": 40,
+          "multiQuestion": 4,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L20",
+            "expected": "unresolved",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["Yes, I can swallow oral medicines without any trouble."]
+          }
+        ]
+      },
+      "flaggedTurns": 19
+    },
+    {
+      "vignetteId": "NCT04316364-dev",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 193327,
+        "participantMs": 101071,
+        "fidelityMs": 51419,
+        "agentCalls": 40,
+        "participantCalls": 20,
+        "fidelityCalls": 20
+      },
+      "questions": 20,
+      "labels": {
+        "score": {
+          "determinations": 6,
+          "confidentlyWrong": 0,
+          "answerable": 6,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 20,
+          "participantReplies": 20,
+          "multiQuestion": 1,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 15,
+              "text": "Thanks for letting me know about your allergy. To check one more eligibility item: have you ever received any chemotherapy, immunotherapy, or targeted therapy specifically for lung cancer before?"
+            }
+          ],
+          "followUps": 2
+        },
+        "notCorrect": []
+      },
+      "flaggedTurns": 9
+    },
+    {
+      "vignetteId": "NCT04385368-dev",
+      "nctId": "NCT04385368",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1710791,
+        "participantMs": 355659,
+        "fidelityMs": 147295,
+        "agentCalls": 114,
+        "participantCalls": 57,
+        "fidelityCalls": 57
+      },
+      "questions": 57,
+      "labels": {
+        "score": {
+          "determinations": 16,
+          "confidentlyWrong": 3,
+          "answerable": 13,
+          "abstained": 0,
+          "abstainable": 6,
+          "correctAbstentions": 3,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.1875,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.5
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 57,
+          "participantReplies": 57,
+          "multiQuestion": 1,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 12
+        },
+        "notCorrect": [
+          {
+            "label": "L63",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I had a pneumonia jab about three weeks ago. I'm not sure if that counts as a live attenuated vaccine",
+              "No, I haven't had any of those."
+            ]
+          },
+          {
+            "label": "L64",
+            "expected": "unresolved",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["my operation was about two months ago"]
+          },
+          {
+            "label": "L65",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I use an inhaled steroid for my breathing",
+              "No, I'm not taking any oral or injectable steroids like prednisone."
+            ]
+          }
+        ]
+      },
+      "flaggedTurns": 22
+    },
+    {
+      "vignetteId": "NCT06728852-dev",
+      "nctId": "NCT06728852",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 592387,
+        "participantMs": 314310,
+        "fidelityMs": 108648,
+        "agentCalls": 90,
+        "participantCalls": 45,
+        "fidelityCalls": 45
+      },
+      "questions": 45,
+      "labels": {
+        "score": {
+          "determinations": 8,
+          "confidentlyWrong": 1,
+          "answerable": 7,
+          "abstained": 0,
+          "abstainable": 5,
+          "correctAbstentions": 4,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.125,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.8
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 45,
+          "participantReplies": 45,
+          "multiQuestion": 3,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 7,
+              "text": "Thanks. To help us check eligibility, do you know if your doctor has said your tumors are large enough to be measured on your latest scan? If you aren't sure, that's okay."
+            }
+          ],
+          "followUps": 10
+        },
+        "notCorrect": [
+          {
+            "label": "L15",
+            "expected": "defer",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, I am not breastfeeding."]
+          }
+        ]
+      },
+      "flaggedTurns": 21
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 47,
+      "confidentlyWrong": 5,
+      "answerable": 43,
+      "abstained": 1,
+      "abstainable": 18,
+      "correctAbstentions": 13,
+      "simulatorAffected": 0,
+      "confidentlyWrongRate": 0.10638297872340426,
+      "abstentionRate": 0.023255813953488372,
+      "correctAbstentionRate": 0.7222222222222222
+    },
+    "parse": {
+      "scored": {
+        "determinations": 0,
+        "confidentlyWrong": 0,
+        "answerable": 0,
+        "abstained": 0,
+        "abstainable": 0,
+        "correctAbstentions": 0,
+        "simulatorAffected": 0,
+        "confidentlyWrongRate": null,
+        "abstentionRate": null,
+        "correctAbstentionRate": null
+      },
+      "categories": {}
+    }
+  },
+  "failed": []
+}

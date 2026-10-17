@@ -1,0 +1,32 @@
+{
+  "provenance": "written from https://developers.openai.com/api/docs (Chat Completions reference) in 2026-09, not yet seen from the API",
+  "status": 200,
+  "body": {
+    "id": "chatcmpl-recorded",
+    "object": "chat.completion",
+    "created": 0,
+    "model": "gpt-6-luna",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"message\":\"How old are you?\"}",
+          "refusal": null
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 430,
+      "completion_tokens": 19,
+      "total_tokens": 449,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  }
+}

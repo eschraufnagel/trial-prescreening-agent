@@ -1,0 +1,26 @@
+{
+  "nctId": "NCT00966472",
+  "briefTitle": "Phase I Study of a Statin + Erlotinib for Advanced Solid Malignancies With Focus on Squamous Cell Carcinomas and NSCLC",
+  "officialTitle": "A Phase I, Dose Finding Study of the Combination of High-dose Statin Agent (Rosuvastatin) With Erlotinib in Patients With Advanced Solid Malignancies, With a Focus on Squamous Cell Carcinomas and NSCLC.",
+  "overallStatus": "COMPLETED",
+  "phases": [
+    "PHASE1"
+  ],
+  "conditions": [
+    "Squamous Cell Carcinoma",
+    "Non-Small Cell Lung Cancer"
+  ],
+  "leadSponsor": "Ottawa Hospital Research Institute",
+  "lastUpdatePostDate": "2020-04-21",
+  "eligibility": {
+    "criteriaText": "Inclusion Criteria:\n\n* Histologically or cytologically documented advanced and/or metastatic incurable tumor (especially squamous cell carcinoma or NSCLC).\n* Clinically or radiologically documented (measurable or evaluable)disease.\n* 18 years or older and less than 70 years of age.\n* ECOG performance status: 0, 1 or 2\n* No previous therapy with EGFR inhibitor (monoclonal antibody or TKI).\n* Must have recovered from any treatment related toxicities prior to registration.\n* Curative radiotherapy must be completed at least 3 months prior to registration\n* Palliative radiotherapy is permitted providing a minimum of 14 days have elapsed between the end of radiotherapy and registration onto the study and patients have recovered from any acute toxic effects from radiation prior to registration.\n* Previous surgery is permitted provided wound healing has occurred and at least 14 days have elapsed prior to registration if surgery was major.\n* Adequate hematopoietic, hepatic and renal function defined as follows: hemoglobin \\>= 90g/L, platelets \\> 100 x 10\\^9/L, bilirubin \\<1.5 x ULN, ALT or AST \\<1.5 x ULN, proteinuria \\< grade 1, normal thyroid function (normal TSH or free T4 level after correction), serum creatinine institution normal limits or calculated creatinine clearance \\> 60 mls/min (except for patients with cervical cancer who require a creatinine clearance of 72 mls/min.)\n* Women must be post menopausal, surgically sterile or use two reliable forms of contraception. Women of childbearing potential must have a serum or urine pregnancy test taken and proven negative within 7 days prior to registration. Men must be surgically sterile or use a barrier method of contraception\n* Accessible for repeat dosing and follow-up\n\nExclusion Criteria:\n\n* Asian ethnicity (Filipino, Chinese, Japanese, Korean, Vietnamese, or South Asian origin)\n* History of other malignancies, except adequately treated non-melanoma skin cancer or other solid tumors curatively treated with no evidence of disease for \\> 5 years.\n* Untreated brain or meningeal metastases. Patients with treated and radiologic or clinical evidence of stable brain metastases are eligible providing that they are asymptomatic and do not require corticosteroids (must have discontinued steroids at least 4 weeks prior to registration).\n* Untreated and/or uncontrolled cardiovascular conditions and/or symptomatic cardiac dysfunction.\n* Active or uncontrolled infections or with serious illnesses or medical conditions which would not permit the patient to be managed according to the protocol.\n* Concurrent treatment with other experimental drugs or anti-cancer therapy.\n* Patients who require oral anticoagulants (coumadin, warfarin) are eligible provided there is strict vigilance with respect to monitoring INR. The investigator should consider switching these patients to LMW heparin or an oral anti-platelet agent such as aspirin\n* Patients who are taking concomitant medications, which are highly protein bound, nephrotoxic, or which are known strong inhibitors or inducers of the hepatic p450 (especially CYP3A4) system, which have not been discontinued prior to study registration. Caution should be exercised, and patients monitored closely, for patients taking concomitant drugs with the potential to inhibit or induce the hepatic p450 (especially CYP3A4) system.\n* Any use of hypocholesterolemia agent such as niacin, fibrates or any statin should be discontinued at least 7 days prior to study registration.\n* Personal or family history of hereditary muscular disorders\n* Previous history of muscular toxicity with another HMG-CoA reductase inhibitor\n* Alcohol abuse\n* Any condition that could affect absorption of study oral drugs (erlotinib and rosuvastatin)\n* Inflammatory bowel disease\n* Uncontrolled hypothyroidism\n* Chronic liver disease (ex: biliary sclerosis)\n* Suffering from infection with HIV, Tuberculosis, Hepatitis C or Hepatitis\n* Inability to give written, informed consent prior to study participation.",
+    "sex": "ALL",
+    "minimumAge": "18 Years",
+    "maximumAge": "70 Years",
+    "healthyVolunteers": false,
+    "stdAges": [
+      "ADULT",
+      "OLDER_ADULT"
+    ]
+  }
+}

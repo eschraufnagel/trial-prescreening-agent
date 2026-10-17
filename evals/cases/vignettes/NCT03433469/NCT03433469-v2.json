@@ -1,0 +1,84 @@
+{
+  "id": "NCT03433469-v2",
+  "nctId": "NCT03433469",
+  "labelSetSha": "3858521c6adf07e6d939b0be1b7ccd1979a26130da9b06da8bf96e2ae9da6c45",
+  "behavior": "cooperative",
+  "persona": "55-year-old man, plumber, direct and to the point.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "I am 55 years of age.",
+      "expected": "holds"
+    },
+    {
+      "label": "L20",
+      "says": "Yes, I can swallow oral medications without any trouble.",
+      "expected": "holds"
+    },
+    {
+      "label": "L22",
+      "says": "Yes, I would agree to use highly effective contraception during the study and for 90 days after the last dose.",
+      "expected": "holds"
+    },
+    {
+      "label": "L49",
+      "says": "My female partner could still get pregnant, and I had a prior vasectomy ten years ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L55",
+      "says": "I take a tablet for heartburn every day. I do not know if that is one of those medications.",
+      "expected": "defer"
+    },
+    {
+      "label": "L59",
+      "says": "No anticancer therapy of any kind, no chemotherapy, radiation or immunotherapy, in the last two months.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L63",
+      "says": "I finished a course of oral antibiotics five days ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L67",
+      "says": "I am a man, I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L68",
+      "says": "I am a man, I am not breastfeeding.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L70",
+      "says": "I have never had a hypersensitivity reaction to any drug.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L71",
+      "says": "No, I have nothing to do with the planning or conduct of the study.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L72",
+      "says": "Yes, I had participation in another clinical study with an investigational product. My last dose was six weeks ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L2",
+      "says": "My biopsy was about a month ago and it confirmed non-small cell lung cancer.",
+      "reported": "holds"
+    },
+    {
+      "label": "L3",
+      "says": "They told me the tumor has an EGFR mutation, an exon 19 deletion."
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

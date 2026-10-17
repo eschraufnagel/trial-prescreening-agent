@@ -1,0 +1,122 @@
+{
+  "nctId": "NCT07229729",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "promptVersion": "73c3b301c4a9",
+  "recordedAt": "2026-09",
+  "finishReason": "stop",
+  "usage": {
+    "inputTokens": 1093,
+    "outputTokens": 1252
+  },
+  "response": {
+    "criteria": [
+      {
+        "quote": "Voluntarily participate in this clinical study, understand the research procedures and be able to sign the informed consent form in writing;",
+        "text": "The prospective participant voluntarily participates in the study, understands the research procedures, and is able to sign the informed consent form in writing.",
+        "polarity": "inclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 0.9
+      },
+      {
+        "quote": "Participants must be aged between 18 and 70 years old (inclusive) when signing the informed consent form, and both men and women are eligible;",
+        "text": "The participant is aged between 18 and 70 years old (inclusive) at the time of signing the informed consent form.",
+        "polarity": "inclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 0.95
+      },
+      {
+        "quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1;",
+        "text": "The participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.95
+      },
+      {
+        "quote": "Adequate organ function;",
+        "text": "The participant has adequate organ function.",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.8
+      },
+      {
+        "quote": "Women of childbearing age must undergo serum pregnancy tests, and the results must be negative. Female subjects of childbearing age and male subjects who are partners of women of childbearing age must agree to use highly effective contraceptive methods.",
+        "text": "Women of childbearing age must have a negative serum pregnancy test result, and female subjects of childbearing age and male subjects who are partners of women of childbearing age must agree to use highly effective contraceptive methods.",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.85
+      },
+      {
+        "quote": "With active, known or suspected autoimmune disease of autoimmune disease;",
+        "text": "The participant does not have an active, known, or suspected autoimmune disease.",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.9
+      },
+      {
+        "quote": "Malignancies other than NSCLC within 5 years prior to randomization;",
+        "text": "The participant does not have a history of malignancies other than NSCLC within 5 years prior to randomization.",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.95
+      },
+      {
+        "quote": "Has or suspected has a history of pneumonitis / interstitial lung disease or any serve lung diseases which will influence the examination of lung function;",
+        "text": "The participant does not have a history of pneumonitis, interstitial lung disease, or any severe lung diseases that will influence the examination of lung function.",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.9
+      },
+      {
+        "quote": "Significant history of cardiovascular and cerebrovascular disease; Significant haemorrhagic disease;",
+        "text": "The participant does not have a significant history of cardiovascular and cerebrovascular disease, or a significant history of haemorrhagic disease.",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.9
+      },
+      {
+        "quote": "Has an arteriovenous thrombotic events;",
+        "text": "The participant does not have a history of arteriovenous thrombotic events.",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.95
+      },
+      {
+        "quote": "Has a known history of human immunodeficiency virus (HIV) infection;",
+        "text": "The participant does not have a known history of human immunodeficiency virus (HIV) infection.",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.95
+      },
+      {
+        "quote": "Has a known active Hepatitis B or Hepatitis C;",
+        "text": "The participant does not have a known active Hepatitis B or Hepatitis C.",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "appliesTo": null,
+        "confidence": 0.95
+      },
+      {
+        "quote": "Allergic to the intervention regimens.",
+        "text": "The participant is not allergic to the intervention regimens.",
+        "polarity": "exclusion",
+        "type": "patient",
+        "appliesTo": null,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

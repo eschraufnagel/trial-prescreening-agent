@@ -1,0 +1,2613 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "thinking": "off",
+  "promptVersion": "c5778afe9cbd",
+  "simulatorVersion": "5fd4476340c9",
+  "graderVersion": "3",
+  "vignetteSetHash": "8d5dd6f20c73",
+  "dev": false,
+  "conversations": [
+    {
+      "vignetteId": "NCT00077350-v1",
+      "nctId": "NCT00077350",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 237900,
+        "participantMs": 177575,
+        "fidelityMs": 71849,
+        "agentCalls": 58,
+        "participantCalls": 29,
+        "fidelityCalls": 29
+      },
+      "questions": 29,
+      "labels": {
+        "score": {
+          "determinations": 9,
+          "confidentlyWrong": 0,
+          "answerable": 9,
+          "abstained": 0,
+          "abstainable": 1,
+          "correctAbstentions": 1,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 3,
+          "agreed": 3,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 29,
+          "participantReplies": 29,
+          "multiQuestion": 4,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 4
+        },
+        "notCorrect": []
+      },
+      "flaggedTurns": 14
+    },
+    {
+      "vignetteId": "NCT00077350-v2",
+      "nctId": "NCT00077350",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 202521,
+        "participantMs": 135339,
+        "fidelityMs": 60725,
+        "agentCalls": 52,
+        "participantCalls": 26,
+        "fidelityCalls": 26
+      },
+      "questions": 26,
+      "labels": {
+        "score": {
+          "determinations": 10,
+          "confidentlyWrong": 2,
+          "answerable": 8,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 0,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.2,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 26,
+          "participantReplies": 26,
+          "multiQuestion": 2,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 2
+        },
+        "notCorrect": [
+          {
+            "label": "L3",
+            "expected": "unresolved",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["Yes, just the one chemotherapy regimen"]
+          },
+          {
+            "label": "L15",
+            "expected": "unresolved",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["my last chemotherapy was only last week."]
+          }
+        ]
+      },
+      "flaggedTurns": 11
+    },
+    {
+      "vignetteId": "NCT00077350-v3",
+      "nctId": "NCT00077350",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 224805,
+        "participantMs": 148039,
+        "fidelityMs": 62650,
+        "agentCalls": 54,
+        "participantCalls": 27,
+        "fidelityCalls": 27
+      },
+      "questions": 27,
+      "labels": {
+        "score": {
+          "determinations": 10,
+          "confidentlyWrong": 1,
+          "answerable": 9,
+          "abstained": 0,
+          "abstainable": 1,
+          "correctAbstentions": 0,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.1,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 27,
+          "participantReplies": 27,
+          "multiQuestion": 3,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 2
+        },
+        "notCorrect": [
+          {
+            "label": "L35",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I have never been tested for it myself",
+              "No, I have never been diagnosed with G6PD deficiency"
+            ]
+          }
+        ]
+      },
+      "flaggedTurns": 9
+    },
+    {
+      "vignetteId": "NCT03433469-v1",
+      "nctId": "NCT03433469",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 391867,
+        "participantMs": 282422,
+        "fidelityMs": 103754,
+        "agentCalls": 78,
+        "participantCalls": 39,
+        "fidelityCalls": 39
+      },
+      "questions": 39,
+      "labels": {
+        "score": {
+          "determinations": 12,
+          "confidentlyWrong": 4,
+          "answerable": 9,
+          "abstained": 0,
+          "abstainable": 3,
+          "correctAbstentions": 0,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.3333333333333333,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0
+        },
+        "reported": {
+          "graded": 3,
+          "agreed": 3,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 39,
+          "participantReplies": 39,
+          "multiQuestion": 4,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 15,
+              "text": "Thanks. Have you been evaluated by a thoracic surgeon and determined to be a candidate for lung cancer surgery?"
+            },
+            {
+              "turn": 17,
+              "text": "Thanks. Have you been evaluated by a thoracic surgeon and determined to be a candidate for lung cancer surgery? If you aren't sure, that's okay to say."
+            }
+          ],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L49",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, I am a woman"]
+          },
+          {
+            "label": "L55",
+            "expected": "unresolved",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, I am not currently taking any medications at all"]
+          },
+          {
+            "label": "L59",
+            "expected": "does-not-hold",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "No, I haven't had any chemotherapy, radiation, or immunotherapy in the last month."
+            ]
+          },
+          {
+            "label": "L63",
+            "expected": "unresolved",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["finished oral antibiotics for a chest infection last week"]
+          }
+        ]
+      },
+      "flaggedTurns": 20
+    },
+    {
+      "vignetteId": "NCT03433469-v2",
+      "nctId": "NCT03433469",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 391748,
+        "participantMs": 251507,
+        "fidelityMs": 97014,
+        "agentCalls": 78,
+        "participantCalls": 39,
+        "fidelityCalls": 39
+      },
+      "questions": 39,
+      "labels": {
+        "score": {
+          "determinations": 11,
+          "confidentlyWrong": 1,
+          "answerable": 11,
+          "abstained": 0,
+          "abstainable": 1,
+          "correctAbstentions": 1,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.09090909090909091,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 39,
+          "participantReplies": 39,
+          "multiQuestion": 3,
+          "overLength": 1,
+          "verdictLanguage": [
+            {
+              "turn": 17,
+              "text": "Has a thoracic surgeon certified by the American Board of Thoracic Surgery said you are a candidate for surgery to remove your lung cancer?"
+            }
+          ],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L59",
+            "expected": "does-not-hold",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, I haven't had any anticancer therapy in the last two months."]
+          }
+        ]
+      },
+      "flaggedTurns": 18
+    },
+    {
+      "vignetteId": "NCT03433469-v3",
+      "nctId": "NCT03433469",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 437846,
+        "participantMs": 377621,
+        "fidelityMs": 101859,
+        "agentCalls": 88,
+        "participantCalls": 44,
+        "fidelityCalls": 44
+      },
+      "questions": 44,
+      "labels": {
+        "score": {
+          "determinations": 8,
+          "confidentlyWrong": 2,
+          "answerable": 7,
+          "abstained": 1,
+          "abstainable": 5,
+          "correctAbstentions": 3,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.25,
+          "abstentionRate": 0.14285714285714285,
+          "correctAbstentionRate": 0.6
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 44,
+          "participantReplies": 44,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 17,
+              "text": "Has a surgeon certified by the American Board of Thoracic Surgery said you are a candidate for surgery to remove your lung cancer?"
+            }
+          ],
+          "followUps": 6
+        },
+        "notCorrect": [
+          {
+            "label": "L22",
+            "expected": "unresolved",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I suppose so, if they need me to.",
+              "Yes, I suppose that includes the 90 days after as well"
+            ]
+          },
+          {
+            "label": "L49",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I am a woman, so that one about men is not for me."]
+          },
+          {
+            "label": "L59",
+            "expected": "does-not-hold",
+            "status": "unresolved",
+            "outcome": "abstained",
+            "evidence": []
+          }
+        ]
+      },
+      "flaggedTurns": 10
+    },
+    {
+      "vignetteId": "NCT04316364-v1",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 162135,
+        "participantMs": 110289,
+        "fidelityMs": 52269,
+        "agentCalls": 46,
+        "participantCalls": 23,
+        "fidelityCalls": 23
+      },
+      "questions": 23,
+      "labels": {
+        "score": {
+          "determinations": 8,
+          "confidentlyWrong": 1,
+          "answerable": 7,
+          "abstained": 0,
+          "abstainable": 1,
+          "correctAbstentions": 0,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.125,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0
+        },
+        "reported": {
+          "graded": 4,
+          "agreed": 4,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 23,
+          "participantReplies": 23,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 5,
+              "text": "Has an attending thoracic surgeon evaluated you and confirmed that you are eligible for an R0 resection (complete removal of the tumor) with curative intent?"
+            }
+          ],
+          "followUps": 1
+        },
+        "notCorrect": [
+          {
+            "label": "L22",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I don't have a substance abuse disorder."]
+          }
+        ]
+      },
+      "flaggedTurns": 8
+    },
+    {
+      "vignetteId": "NCT04316364-v2",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 183260,
+        "participantMs": 1895243,
+        "fidelityMs": 87593,
+        "agentCalls": 50,
+        "participantCalls": 25,
+        "fidelityCalls": 25
+      },
+      "questions": 25,
+      "labels": {
+        "score": {
+          "determinations": 6,
+          "confidentlyWrong": 0,
+          "answerable": 6,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 25,
+          "participantReplies": 25,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 7,
+              "text": "Has an attending thoracic surgeon evaluated you and confirmed that you are eligible for an R0 resection (complete removal of the tumor) with curative intent?"
+            }
+          ],
+          "followUps": 3
+        },
+        "notCorrect": []
+      },
+      "flaggedTurns": 6
+    },
+    {
+      "vignetteId": "NCT04316364-v3",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 565398,
+        "participantMs": 459264,
+        "fidelityMs": 203448,
+        "agentCalls": 54,
+        "participantCalls": 27,
+        "fidelityCalls": 27
+      },
+      "questions": 27,
+      "labels": {
+        "score": {
+          "determinations": 4,
+          "confidentlyWrong": 0,
+          "answerable": 4,
+          "abstained": 0,
+          "abstainable": 3,
+          "correctAbstentions": 3,
+          "simulatorAffected": 1,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 27,
+          "participantReplies": 27,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 6
+        },
+        "notCorrect": [
+          {
+            "label": "L7",
+            "expected": "holds",
+            "status": "does-not-hold",
+            "outcome": "simulator-affected",
+            "evidence": ["I'm a 70-year-old man, so I don't use birth control."]
+          }
+        ]
+      },
+      "flaggedTurns": 10
+    },
+    {
+      "vignetteId": "NCT04385368-v1",
+      "nctId": "NCT04385368",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 646037,
+        "participantMs": 386537,
+        "fidelityMs": 145787,
+        "agentCalls": 92,
+        "participantCalls": 46,
+        "fidelityCalls": 46
+      },
+      "questions": 46,
+      "labels": {
+        "score": {
+          "determinations": 17,
+          "confidentlyWrong": 0,
+          "answerable": 17,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 46,
+          "participantReplies": 46,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 4
+        },
+        "notCorrect": []
+      },
+      "flaggedTurns": 10
+    },
+    {
+      "vignetteId": "NCT04385368-v2",
+      "nctId": "NCT04385368",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1245372,
+        "participantMs": 1479977,
+        "fidelityMs": 276606,
+        "agentCalls": 86,
+        "participantCalls": 43,
+        "fidelityCalls": 43
+      },
+      "questions": 43,
+      "labels": {
+        "score": {
+          "determinations": 19,
+          "confidentlyWrong": 4,
+          "answerable": 17,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 0,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.21052631578947367,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 43,
+          "participantReplies": 43,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 43,
+              "text": "Thanks. Since you aren't sure about the surgery type, did your doctor say you were only a candidate for a wedge resection, or were other options considered?"
+            }
+          ],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L63",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, I have not received any live attenuated vaccines."]
+          },
+          {
+            "label": "L65",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I do have asthma, which I manage with a daily steroid inhaler",
+              "I am not sure if that counts as immunosuppressive medication",
+              "No, I do not take any other pills or injections for my immune system."
+            ]
+          },
+          {
+            "label": "L68",
+            "expected": "holds",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["It is a trial of an exercise programme."]
+          },
+          {
+            "label": "L70",
+            "expected": "holds",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, I have never smoked, not a single cigarette in my lifetime."]
+          }
+        ]
+      },
+      "flaggedTurns": 17
+    },
+    {
+      "vignetteId": "NCT04385368-v3",
+      "nctId": "NCT04385368",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1245476,
+        "participantMs": 809821,
+        "fidelityMs": 354550,
+        "agentCalls": 100,
+        "participantCalls": 50,
+        "fidelityCalls": 50
+      },
+      "questions": 50,
+      "labels": {
+        "score": {
+          "determinations": 18,
+          "confidentlyWrong": 2,
+          "answerable": 16,
+          "abstained": 0,
+          "abstainable": 3,
+          "correctAbstentions": 1,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.1111111111111111,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.3333333333333333
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 50,
+          "participantReplies": 50,
+          "multiQuestion": 1,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 4
+        },
+        "notCorrect": [
+          {
+            "label": "L59",
+            "expected": "unresolved",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I have not had any adjuvant therapy since surgery. I haven't been treated with durvalumab either."
+            ]
+          },
+          {
+            "label": "L70",
+            "expected": "unresolved",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, I have never smoked. Not even a few cigarettes"]
+          }
+        ]
+      },
+      "flaggedTurns": 17
+    },
+    {
+      "vignetteId": "NCT06728852-v1",
+      "nctId": "NCT06728852",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 2518114,
+        "participantMs": 1345100,
+        "fidelityMs": 166929,
+        "agentCalls": 84,
+        "participantCalls": 42,
+        "fidelityCalls": 42
+      },
+      "questions": 42,
+      "labels": {
+        "score": {
+          "determinations": 10,
+          "confidentlyWrong": 4,
+          "answerable": 7,
+          "abstained": 0,
+          "abstainable": 5,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.4,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.4
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 42,
+          "participantReplies": 42,
+          "multiQuestion": 3,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 6
+        },
+        "notCorrect": [
+          {
+            "label": "L15",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I am a man."]
+          },
+          {
+            "label": "L16",
+            "expected": "unresolved",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I guess I would go along with the contraception thing, probably.",
+              "Yeah, I guess so. If that's what it takes to get into the study, I'll do it."
+            ]
+          },
+          {
+            "label": "L20",
+            "expected": "holds",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I had bevacizumab two months ago"]
+          },
+          {
+            "label": "L38",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I could quit if I had to."]
+          }
+        ]
+      },
+      "flaggedTurns": 14
+    },
+    {
+      "vignetteId": "NCT06728852-v2",
+      "nctId": "NCT06728852",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 653142,
+        "participantMs": 476542,
+        "fidelityMs": 190467,
+        "agentCalls": 70,
+        "participantCalls": 35,
+        "fidelityCalls": 35
+      },
+      "questions": 35,
+      "labels": {
+        "score": {
+          "determinations": 11,
+          "confidentlyWrong": 2,
+          "answerable": 9,
+          "abstained": 0,
+          "abstainable": 3,
+          "correctAbstentions": 1,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.18181818181818182,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.3333333333333333
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 35,
+          "participantReplies": 35,
+          "multiQuestion": 5,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 2
+        },
+        "notCorrect": [
+          {
+            "label": "L16",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I am a woman, so that does not apply to me."]
+          },
+          {
+            "label": "L20",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I have never received treatment with bevacizumab."]
+          }
+        ]
+      },
+      "flaggedTurns": 12
+    },
+    {
+      "vignetteId": "NCT06728852-v3",
+      "nctId": "NCT06728852",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 704275,
+        "participantMs": 500603,
+        "fidelityMs": 190848,
+        "agentCalls": 74,
+        "participantCalls": 37,
+        "fidelityCalls": 37
+      },
+      "questions": 37,
+      "labels": {
+        "score": {
+          "determinations": 10,
+          "confidentlyWrong": 1,
+          "answerable": 9,
+          "abstained": 0,
+          "abstainable": 3,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.1,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.6666666666666666
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 37,
+          "participantReplies": 37,
+          "multiQuestion": 2,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 2
+        },
+        "notCorrect": [
+          {
+            "label": "L15",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I am a man."]
+          }
+        ]
+      },
+      "flaggedTurns": 5
+    },
+    {
+      "vignetteId": "NCT00077350-v1",
+      "nctId": "NCT00077350",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 610215,
+        "participantMs": 400166,
+        "fidelityMs": 155162,
+        "agentCalls": 52,
+        "participantCalls": 26,
+        "fidelityCalls": 26
+      },
+      "questions": 26,
+      "parse": {
+        "categories": {
+          "scored": 5,
+          "mis-typed": 2,
+          "bundled": 3,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L3",
+            "category": "mis-typed",
+            "parsedId": "P2",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L15",
+            "category": "bundled",
+            "parsedId": "P13",
+            "parsedType": "patient",
+            "status": "holds"
+          },
+          {
+            "label": "L20",
+            "category": "bundled",
+            "parsedId": "P17",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L21",
+            "category": "bundled",
+            "parsedId": "P17",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L35",
+            "category": "mis-typed",
+            "parsedId": "P31",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 4,
+            "confidentlyWrong": 1,
+            "answerable": 4,
+            "abstained": 0,
+            "abstainable": 1,
+            "correctAbstentions": 1,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0.25,
+            "abstentionRate": 0,
+            "correctAbstentionRate": 1
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 26,
+            "participantReplies": 26,
+            "multiQuestion": 3,
+            "overLength": 0,
+            "verdictLanguage": [
+              {
+                "turn": 33,
+                "text": "Thanks. To help us check eligibility, do you currently have any ongoing infections (like a fever or active cold) or any significant mental health or social challenges that might make it hard to follow the study schedule?"
+              }
+            ],
+            "followUps": 4
+          },
+          "notCorrect": [
+            {
+              "label": "L33",
+              "expected": "does-not-hold",
+              "status": "holds",
+              "outcome": "confidently-wrong",
+              "evidence": ["I haven't used any investigational agents recently"]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 12
+    },
+    {
+      "vignetteId": "NCT00077350-v2",
+      "nctId": "NCT00077350",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 526560,
+        "participantMs": 350314,
+        "fidelityMs": 161134,
+        "agentCalls": 54,
+        "participantCalls": 27,
+        "fidelityCalls": 27
+      },
+      "questions": 27,
+      "parse": {
+        "categories": {
+          "scored": 5,
+          "mis-typed": 2,
+          "bundled": 3,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L3",
+            "category": "mis-typed",
+            "parsedId": "P2",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L15",
+            "category": "bundled",
+            "parsedId": "P13",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L20",
+            "category": "bundled",
+            "parsedId": "P17",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L21",
+            "category": "bundled",
+            "parsedId": "P17",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L35",
+            "category": "mis-typed",
+            "parsedId": "P31",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 5,
+            "confidentlyWrong": 0,
+            "answerable": 5,
+            "abstained": 0,
+            "abstainable": 0,
+            "correctAbstentions": 0,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0,
+            "abstentionRate": 0,
+            "correctAbstentionRate": null
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 27,
+            "participantReplies": 27,
+            "multiQuestion": 2,
+            "overLength": 0,
+            "verdictLanguage": [
+              {
+                "turn": 27,
+                "text": "Thanks. To help us check eligibility, do you currently have any active infections (like a fever or pneumonia) or any significant mental health or social challenges that might make it hard to follow the study schedule?"
+              }
+            ],
+            "followUps": 2
+          },
+          "notCorrect": []
+        }
+      },
+      "flaggedTurns": 10
+    },
+    {
+      "vignetteId": "NCT00077350-v3",
+      "nctId": "NCT00077350",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 551691,
+        "participantMs": 375066,
+        "fidelityMs": 158519,
+        "agentCalls": 58,
+        "participantCalls": 29,
+        "fidelityCalls": 29
+      },
+      "questions": 29,
+      "parse": {
+        "categories": {
+          "scored": 5,
+          "mis-typed": 2,
+          "bundled": 3,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L3",
+            "category": "mis-typed",
+            "parsedId": "P2",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L15",
+            "category": "bundled",
+            "parsedId": "P13",
+            "parsedType": "patient",
+            "status": "unresolved"
+          },
+          {
+            "label": "L20",
+            "category": "bundled",
+            "parsedId": "P17",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L21",
+            "category": "bundled",
+            "parsedId": "P17",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L35",
+            "category": "mis-typed",
+            "parsedId": "P31",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 5,
+            "confidentlyWrong": 0,
+            "answerable": 5,
+            "abstained": 0,
+            "abstainable": 0,
+            "correctAbstentions": 0,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0,
+            "abstentionRate": 0,
+            "correctAbstentionRate": null
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 29,
+            "participantReplies": 29,
+            "multiQuestion": 2,
+            "overLength": 0,
+            "verdictLanguage": [],
+            "followUps": 2
+          },
+          "notCorrect": []
+        }
+      },
+      "flaggedTurns": 9
+    },
+    {
+      "vignetteId": "NCT03433469-v1",
+      "nctId": "NCT03433469",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1072712,
+        "participantMs": 665258,
+        "fidelityMs": 264635,
+        "agentCalls": 82,
+        "participantCalls": 41,
+        "fidelityCalls": 41
+      },
+      "questions": 41,
+      "parse": {
+        "categories": {
+          "scored": 6,
+          "mis-typed": 5,
+          "bundled": 1,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L55",
+            "category": "mis-typed",
+            "parsedId": "P34",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L59",
+            "category": "mis-typed",
+            "parsedId": "P36",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L63",
+            "category": "mis-typed",
+            "parsedId": "P40",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L67",
+            "category": "bundled",
+            "parsedId": "P44",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L70",
+            "category": "mis-typed",
+            "parsedId": "P46",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L72",
+            "category": "mis-typed",
+            "parsedId": "P48",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 5,
+            "confidentlyWrong": 1,
+            "answerable": 5,
+            "abstained": 1,
+            "abstainable": 1,
+            "correctAbstentions": 0,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0.2,
+            "abstentionRate": 0.2,
+            "correctAbstentionRate": 0
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 41,
+            "participantReplies": 41,
+            "multiQuestion": 5,
+            "overLength": 0,
+            "verdictLanguage": [
+              {
+                "turn": 13,
+                "text": "Has a surgeon certified by the American Board of Thoracic Surgery said you are a candidate for surgery to remove your lung cancer?"
+              }
+            ],
+            "followUps": 6
+          },
+          "notCorrect": [
+            {
+              "label": "L22",
+              "expected": "holds",
+              "status": "unresolved",
+              "outcome": "abstained",
+              "evidence": [
+                "willing to have a blood pregnancy test done",
+                "I'm not planning on becoming pregnant"
+              ]
+            },
+            {
+              "label": "L49",
+              "expected": "defer",
+              "status": "does-not-hold",
+              "outcome": "confidently-wrong",
+              "evidence": [
+                "I am a woman, so that question about a male partner's vasectomy doesn't apply to me."
+              ]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 21
+    },
+    {
+      "vignetteId": "NCT03433469-v2",
+      "nctId": "NCT03433469",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 903709,
+        "participantMs": 573749,
+        "fidelityMs": 232969,
+        "agentCalls": 74,
+        "participantCalls": 37,
+        "fidelityCalls": 37
+      },
+      "questions": 37,
+      "parse": {
+        "categories": {
+          "scored": 6,
+          "mis-typed": 5,
+          "bundled": 1,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L55",
+            "category": "mis-typed",
+            "parsedId": "P34",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L59",
+            "category": "mis-typed",
+            "parsedId": "P36",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L63",
+            "category": "mis-typed",
+            "parsedId": "P40",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L67",
+            "category": "bundled",
+            "parsedId": "P44",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L70",
+            "category": "mis-typed",
+            "parsedId": "P46",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L72",
+            "category": "mis-typed",
+            "parsedId": "P48",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 6,
+            "confidentlyWrong": 1,
+            "answerable": 6,
+            "abstained": 0,
+            "abstainable": 0,
+            "correctAbstentions": 0,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0.16666666666666666,
+            "abstentionRate": 0,
+            "correctAbstentionRate": null
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 37,
+            "participantReplies": 37,
+            "multiQuestion": 5,
+            "overLength": 0,
+            "verdictLanguage": [
+              {
+                "turn": 13,
+                "text": "Has a surgeon certified by the American Board of Thoracic Surgery said you are a candidate for surgery to remove your lung cancer?"
+              }
+            ],
+            "followUps": 3
+          },
+          "notCorrect": [
+            {
+              "label": "L22",
+              "expected": "holds",
+              "status": "does-not-hold",
+              "outcome": "confidently-wrong",
+              "evidence": ["I am a man, so I am not pregnant."]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 21
+    },
+    {
+      "vignetteId": "NCT03433469-v3",
+      "nctId": "NCT03433469",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1130711,
+        "participantMs": 749431,
+        "fidelityMs": 255685,
+        "agentCalls": 92,
+        "participantCalls": 46,
+        "fidelityCalls": 46
+      },
+      "questions": 46,
+      "parse": {
+        "categories": {
+          "scored": 6,
+          "mis-typed": 5,
+          "bundled": 1,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L55",
+            "category": "mis-typed",
+            "parsedId": "P34",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L59",
+            "category": "mis-typed",
+            "parsedId": "P36",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L63",
+            "category": "mis-typed",
+            "parsedId": "P40",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L67",
+            "category": "bundled",
+            "parsedId": "P44",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L70",
+            "category": "mis-typed",
+            "parsedId": "P46",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L72",
+            "category": "mis-typed",
+            "parsedId": "P48",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 4,
+            "confidentlyWrong": 1,
+            "answerable": 3,
+            "abstained": 0,
+            "abstainable": 3,
+            "correctAbstentions": 2,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0.25,
+            "abstentionRate": 0,
+            "correctAbstentionRate": 0.6666666666666666
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 46,
+            "participantReplies": 46,
+            "multiQuestion": 3,
+            "overLength": 0,
+            "verdictLanguage": [
+              {
+                "turn": 13,
+                "text": "Has a surgeon certified by the American Board of Thoracic Surgery said you are a candidate for surgery to remove your lung cancer?"
+              }
+            ],
+            "followUps": 11
+          },
+          "notCorrect": [
+            {
+              "label": "L49",
+              "expected": "defer",
+              "status": "does-not-hold",
+              "outcome": "confidently-wrong",
+              "evidence": ["I am a woman, so that one about men is not for me."]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 15
+    },
+    {
+      "vignetteId": "NCT04316364-v1",
+      "nctId": "NCT04316364",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 365687,
+        "participantMs": 239159,
+        "fidelityMs": 110616,
+        "agentCalls": 42,
+        "participantCalls": 21,
+        "fidelityCalls": 21
+      },
+      "questions": 21,
+      "parse": {
+        "categories": {
+          "scored": 5,
+          "mis-typed": 2,
+          "bundled": 1,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L19",
+            "category": "bundled",
+            "parsedId": "P19",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L22",
+            "category": "mis-typed",
+            "parsedId": "P20",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L24",
+            "category": "mis-typed",
+            "parsedId": "P21",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 5,
+            "confidentlyWrong": 0,
+            "answerable": 5,
+            "abstained": 0,
+            "abstainable": 0,
+            "correctAbstentions": 0,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0,
+            "abstentionRate": 0,
+            "correctAbstentionRate": null
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 21,
+            "participantReplies": 21,
+            "multiQuestion": 1,
+            "overLength": 0,
+            "verdictLanguage": [
+              {
+                "turn": 5,
+                "text": "Has your thoracic surgeon confirmed that you are eligible for an R0 resection (complete removal of the tumor) with curative intent?"
+              }
+            ],
+            "followUps": 2
+          },
+          "notCorrect": []
+        }
+      },
+      "flaggedTurns": 6
+    },
+    {
+      "vignetteId": "NCT04316364-v2",
+      "nctId": "NCT04316364",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 362535,
+        "participantMs": 226212,
+        "fidelityMs": 113151,
+        "agentCalls": 42,
+        "participantCalls": 21,
+        "fidelityCalls": 21
+      },
+      "questions": 21,
+      "parse": {
+        "categories": {
+          "scored": 5,
+          "mis-typed": 2,
+          "bundled": 1,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L19",
+            "category": "bundled",
+            "parsedId": "P19",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L22",
+            "category": "mis-typed",
+            "parsedId": "P20",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L24",
+            "category": "mis-typed",
+            "parsedId": "P21",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 4,
+            "confidentlyWrong": 0,
+            "answerable": 4,
+            "abstained": 0,
+            "abstainable": 1,
+            "correctAbstentions": 1,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0,
+            "abstentionRate": 0,
+            "correctAbstentionRate": 1
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 21,
+            "participantReplies": 21,
+            "multiQuestion": 0,
+            "overLength": 0,
+            "verdictLanguage": [],
+            "followUps": 3
+          },
+          "notCorrect": []
+        }
+      },
+      "flaggedTurns": 7
+    },
+    {
+      "vignetteId": "NCT04316364-v3",
+      "nctId": "NCT04316364",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 480553,
+        "participantMs": 382846,
+        "fidelityMs": 131195,
+        "agentCalls": 48,
+        "participantCalls": 24,
+        "fidelityCalls": 24
+      },
+      "questions": 24,
+      "parse": {
+        "categories": {
+          "scored": 5,
+          "mis-typed": 2,
+          "bundled": 1,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L19",
+            "category": "bundled",
+            "parsedId": "P19",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L22",
+            "category": "mis-typed",
+            "parsedId": "P20",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L24",
+            "category": "mis-typed",
+            "parsedId": "P21",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 3,
+            "confidentlyWrong": 0,
+            "answerable": 3,
+            "abstained": 0,
+            "abstainable": 1,
+            "correctAbstentions": 1,
+            "simulatorAffected": 1,
+            "confidentlyWrongRate": 0,
+            "abstentionRate": 0,
+            "correctAbstentionRate": 1
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 24,
+            "participantReplies": 24,
+            "multiQuestion": 1,
+            "overLength": 0,
+            "verdictLanguage": [
+              {
+                "turn": 7,
+                "text": "Thanks. Has a thoracic surgeon evaluated you and confirmed that you are eligible for an R0 resection (surgery to remove all visible tumor) with the goal of curing the cancer?"
+              }
+            ],
+            "followUps": 4
+          },
+          "notCorrect": [
+            {
+              "label": "L7",
+              "expected": "holds",
+              "status": "does-not-hold",
+              "outcome": "simulator-affected",
+              "evidence": ["I'm not worried about birth control or abstinence"]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 10
+    },
+    {
+      "vignetteId": "NCT04385368-v1",
+      "nctId": "NCT04385368",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1511294,
+        "participantMs": 845727,
+        "fidelityMs": 413561,
+        "agentCalls": 116,
+        "participantCalls": 58,
+        "fidelityCalls": 58
+      },
+      "questions": 58,
+      "parse": {
+        "categories": {
+          "scored": 4,
+          "mis-typed": 13,
+          "bundled": 2,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L49",
+            "category": "mis-typed",
+            "parsedId": "P41",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L57",
+            "category": "mis-typed",
+            "parsedId": "P48",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L59",
+            "category": "mis-typed",
+            "parsedId": "P50",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L60",
+            "category": "mis-typed",
+            "parsedId": "P51",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L61",
+            "category": "mis-typed",
+            "parsedId": "P52",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L62",
+            "category": "mis-typed",
+            "parsedId": "P53",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L63",
+            "category": "mis-typed",
+            "parsedId": "P54",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L64",
+            "category": "mis-typed",
+            "parsedId": "P55",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L65",
+            "category": "mis-typed",
+            "parsedId": "P56",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L66",
+            "category": "mis-typed",
+            "parsedId": "P57",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L67",
+            "category": "mis-typed",
+            "parsedId": "P58",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L68",
+            "category": "mis-typed",
+            "parsedId": "P59",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L69",
+            "category": "mis-typed",
+            "parsedId": "P60",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L71",
+            "category": "bundled",
+            "parsedId": "P62",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L72",
+            "category": "bundled",
+            "parsedId": "P62",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 3,
+            "confidentlyWrong": 0,
+            "answerable": 3,
+            "abstained": 0,
+            "abstainable": 1,
+            "correctAbstentions": 1,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0,
+            "abstentionRate": 0,
+            "correctAbstentionRate": 1
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 58,
+            "participantReplies": 58,
+            "multiQuestion": 1,
+            "overLength": 0,
+            "verdictLanguage": [],
+            "followUps": 6
+          },
+          "notCorrect": []
+        }
+      },
+      "flaggedTurns": 18
+    },
+    {
+      "vignetteId": "NCT04385368-v2",
+      "nctId": "NCT04385368",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1334216,
+        "participantMs": 762343,
+        "fidelityMs": 310749,
+        "agentCalls": 100,
+        "participantCalls": 50,
+        "fidelityCalls": 50
+      },
+      "questions": 50,
+      "parse": {
+        "categories": {
+          "scored": 4,
+          "mis-typed": 13,
+          "bundled": 2,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L49",
+            "category": "mis-typed",
+            "parsedId": "P41",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L57",
+            "category": "mis-typed",
+            "parsedId": "P48",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L59",
+            "category": "mis-typed",
+            "parsedId": "P50",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L60",
+            "category": "mis-typed",
+            "parsedId": "P51",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L61",
+            "category": "mis-typed",
+            "parsedId": "P52",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L62",
+            "category": "mis-typed",
+            "parsedId": "P53",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L63",
+            "category": "mis-typed",
+            "parsedId": "P54",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L64",
+            "category": "mis-typed",
+            "parsedId": "P55",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L65",
+            "category": "mis-typed",
+            "parsedId": "P56",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L66",
+            "category": "mis-typed",
+            "parsedId": "P57",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L67",
+            "category": "mis-typed",
+            "parsedId": "P58",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L68",
+            "category": "mis-typed",
+            "parsedId": "P59",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L69",
+            "category": "mis-typed",
+            "parsedId": "P60",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L71",
+            "category": "bundled",
+            "parsedId": "P62",
+            "parsedType": "patient",
+            "status": "holds"
+          },
+          {
+            "label": "L72",
+            "category": "bundled",
+            "parsedId": "P62",
+            "parsedType": "patient",
+            "status": "holds"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 4,
+            "confidentlyWrong": 1,
+            "answerable": 4,
+            "abstained": 0,
+            "abstainable": 0,
+            "correctAbstentions": 0,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0.25,
+            "abstentionRate": 0,
+            "correctAbstentionRate": null
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 50,
+            "participantReplies": 50,
+            "multiQuestion": 0,
+            "overLength": 0,
+            "verdictLanguage": [],
+            "followUps": 2
+          },
+          "notCorrect": [
+            {
+              "label": "L73",
+              "expected": "does-not-hold",
+              "status": "holds",
+              "outcome": "confidently-wrong",
+              "evidence": [
+                "not pregnant, not breastfeeding, and I am willing to use effective birth control until 90 days after the last dose"
+              ]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 13
+    },
+    {
+      "vignetteId": "NCT04385368-v3",
+      "nctId": "NCT04385368",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 2337566,
+        "participantMs": 809140,
+        "fidelityMs": 313599,
+        "agentCalls": 120,
+        "participantCalls": 60,
+        "fidelityCalls": 60
+      },
+      "questions": 60,
+      "parse": {
+        "categories": {
+          "scored": 4,
+          "mis-typed": 13,
+          "bundled": 2,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L49",
+            "category": "mis-typed",
+            "parsedId": "P41",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L57",
+            "category": "mis-typed",
+            "parsedId": "P48",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L59",
+            "category": "mis-typed",
+            "parsedId": "P50",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L60",
+            "category": "mis-typed",
+            "parsedId": "P51",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L61",
+            "category": "mis-typed",
+            "parsedId": "P52",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L62",
+            "category": "mis-typed",
+            "parsedId": "P53",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L63",
+            "category": "mis-typed",
+            "parsedId": "P54",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L64",
+            "category": "mis-typed",
+            "parsedId": "P55",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L65",
+            "category": "mis-typed",
+            "parsedId": "P56",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L66",
+            "category": "mis-typed",
+            "parsedId": "P57",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L67",
+            "category": "mis-typed",
+            "parsedId": "P58",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L68",
+            "category": "mis-typed",
+            "parsedId": "P59",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L69",
+            "category": "mis-typed",
+            "parsedId": "P60",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L71",
+            "category": "bundled",
+            "parsedId": "P62",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L72",
+            "category": "bundled",
+            "parsedId": "P62",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 4,
+            "confidentlyWrong": 1,
+            "answerable": 3,
+            "abstained": 0,
+            "abstainable": 1,
+            "correctAbstentions": 0,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0.25,
+            "abstentionRate": 0,
+            "correctAbstentionRate": 0
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 60,
+            "participantReplies": 60,
+            "multiQuestion": 2,
+            "overLength": 0,
+            "verdictLanguage": [],
+            "followUps": 7
+          },
+          "notCorrect": [
+            {
+              "label": "L70",
+              "expected": "unresolved",
+              "status": "does-not-hold",
+              "outcome": "confidently-wrong",
+              "evidence": [
+                "No, I have never smoked. Not even a few cigarettes in my entire life.",
+                "I did smoke for about twenty years. I quit in 2010."
+              ]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 20
+    },
+    {
+      "vignetteId": "NCT06728852-v1",
+      "nctId": "NCT06728852",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 642489,
+        "participantMs": 419615,
+        "fidelityMs": 175974,
+        "agentCalls": 58,
+        "participantCalls": 29,
+        "fidelityCalls": 29
+      },
+      "questions": 29,
+      "parse": {
+        "categories": {
+          "scored": 8,
+          "mis-typed": 0,
+          "bundled": 4,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L16",
+            "category": "bundled",
+            "parsedId": "P9",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L20",
+            "category": "bundled",
+            "parsedId": "P12",
+            "parsedType": "patient",
+            "status": "unresolved"
+          },
+          {
+            "label": "L25",
+            "category": "bundled",
+            "parsedId": "P15",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L28",
+            "category": "bundled",
+            "parsedId": "P17",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 6,
+            "confidentlyWrong": 2,
+            "answerable": 4,
+            "abstained": 0,
+            "abstainable": 4,
+            "correctAbstentions": 2,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0.3333333333333333,
+            "abstentionRate": 0,
+            "correctAbstentionRate": 0.5
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 29,
+            "participantReplies": 29,
+            "multiQuestion": 4,
+            "overLength": 0,
+            "verdictLanguage": [],
+            "followUps": 6
+          },
+          "notCorrect": [
+            {
+              "label": "L15",
+              "expected": "defer",
+              "status": "does-not-hold",
+              "outcome": "confidently-wrong",
+              "evidence": ["I am a man."]
+            },
+            {
+              "label": "L38",
+              "expected": "defer",
+              "status": "does-not-hold",
+              "outcome": "confidently-wrong",
+              "evidence": ["I could quit if I had to."]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 6
+    },
+    {
+      "vignetteId": "NCT06728852-v2",
+      "nctId": "NCT06728852",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 691367,
+        "participantMs": 432833,
+        "fidelityMs": 183636,
+        "agentCalls": 50,
+        "participantCalls": 25,
+        "fidelityCalls": 25
+      },
+      "questions": 25,
+      "parse": {
+        "categories": {
+          "scored": 8,
+          "mis-typed": 0,
+          "bundled": 4,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L16",
+            "category": "bundled",
+            "parsedId": "P9",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L20",
+            "category": "bundled",
+            "parsedId": "P12",
+            "parsedType": "patient",
+            "status": "holds"
+          },
+          {
+            "label": "L25",
+            "category": "bundled",
+            "parsedId": "P15",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L28",
+            "category": "bundled",
+            "parsedId": "P17",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 8,
+            "confidentlyWrong": 3,
+            "answerable": 7,
+            "abstained": 0,
+            "abstainable": 1,
+            "correctAbstentions": 0,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0.375,
+            "abstentionRate": 0,
+            "correctAbstentionRate": 0
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 25,
+            "participantReplies": 25,
+            "multiQuestion": 2,
+            "overLength": 0,
+            "verdictLanguage": [],
+            "followUps": 5
+          },
+          "notCorrect": [
+            {
+              "label": "L15",
+              "expected": "defer",
+              "status": "does-not-hold",
+              "outcome": "confidently-wrong",
+              "evidence": ["No, I am not currently breastfeeding."]
+            },
+            {
+              "label": "L38",
+              "expected": "does-not-hold",
+              "status": "holds",
+              "outcome": "confidently-wrong",
+              "evidence": ["I have no history of substance abuse"]
+            },
+            {
+              "label": "L40",
+              "expected": "does-not-hold",
+              "status": "holds",
+              "outcome": "confidently-wrong",
+              "evidence": ["I have not taken part in any other clinical trial."]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 17
+    },
+    {
+      "vignetteId": "NCT06728852-v3",
+      "nctId": "NCT06728852",
+      "source": "parse",
+      "status": "graded",
+      "timing": {
+        "agentMs": 501307,
+        "participantMs": 281220,
+        "fidelityMs": 52439,
+        "agentCalls": 44,
+        "participantCalls": 22,
+        "fidelityCalls": 22
+      },
+      "questions": 22,
+      "parse": {
+        "categories": {
+          "scored": 8,
+          "mis-typed": 0,
+          "bundled": 4,
+          "missed-upstream": 0
+        },
+        "entries": [
+          {
+            "label": "L16",
+            "category": "bundled",
+            "parsedId": "P9",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          },
+          {
+            "label": "L20",
+            "category": "bundled",
+            "parsedId": "P12",
+            "parsedType": "patient",
+            "status": "unresolved"
+          },
+          {
+            "label": "L25",
+            "category": "bundled",
+            "parsedId": "P15",
+            "parsedType": "clinical",
+            "status": "chart-review"
+          },
+          {
+            "label": "L28",
+            "category": "bundled",
+            "parsedId": "P17",
+            "parsedType": "patient",
+            "status": "does-not-hold"
+          }
+        ],
+        "scored": {
+          "score": {
+            "determinations": 6,
+            "confidentlyWrong": 1,
+            "answerable": 5,
+            "abstained": 0,
+            "abstainable": 3,
+            "correctAbstentions": 2,
+            "simulatorAffected": 0,
+            "confidentlyWrongRate": 0.16666666666666666,
+            "abstentionRate": 0,
+            "correctAbstentionRate": 0.6666666666666666
+          },
+          "reported": {
+            "graded": 0,
+            "agreed": 0,
+            "disagreements": []
+          },
+          "discipline": {
+            "agentQuestions": 22,
+            "participantReplies": 22,
+            "multiQuestion": 4,
+            "overLength": 0,
+            "verdictLanguage": [],
+            "followUps": 1
+          },
+          "notCorrect": [
+            {
+              "label": "L15",
+              "expected": "defer",
+              "status": "does-not-hold",
+              "outcome": "confidently-wrong",
+              "evidence": ["I am a man."]
+            }
+          ]
+        }
+      },
+      "flaggedTurns": 9
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 163,
+      "confidentlyWrong": 24,
+      "answerable": 145,
+      "abstained": 1,
+      "abstainable": 37,
+      "correctAbstentions": 18,
+      "simulatorAffected": 1,
+      "confidentlyWrongRate": 0.147239263803681,
+      "abstentionRate": 0.006896551724137931,
+      "correctAbstentionRate": 0.4864864864864865
+    },
+    "parse": {
+      "scored": {
+        "determinations": 72,
+        "confidentlyWrong": 12,
+        "answerable": 66,
+        "abstained": 1,
+        "abstainable": 17,
+        "correctAbstentions": 10,
+        "simulatorAffected": 1,
+        "confidentlyWrongRate": 0.16666666666666666,
+        "abstentionRate": 0.015151515151515152,
+        "correctAbstentionRate": 0.5882352941176471
+      },
+      "categories": {
+        "scored": 84,
+        "mis-typed": 66,
+        "bundled": 33,
+        "missed-upstream": 0
+      }
+    }
+  },
+  "failed": []
+}

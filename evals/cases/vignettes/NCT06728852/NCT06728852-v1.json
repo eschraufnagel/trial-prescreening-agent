@@ -1,0 +1,89 @@
+{
+  "id": "NCT06728852-v1",
+  "nctId": "NCT06728852",
+  "labelSetSha": "f860d478efcfd4c6ae539bcde7594ecc8cbe3d2979b7322528842783150c7bca",
+  "behavior": "vague",
+  "persona": "63-year-old man, retired mechanic, easygoing, answers loosely and rarely gives exact numbers.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "Yes, I would sign the informed consent form.",
+      "expected": "holds"
+    },
+    {
+      "label": "L4",
+      "says": "I have had a few treatments over the years. I lose track of how many.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L15",
+      "says": "That one is for female patients. I am a man.",
+      "expected": "defer"
+    },
+    {
+      "label": "L16",
+      "says": "I guess I would go along with the contraception thing, probably.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L19",
+      "says": "I have taken so many pills, maybe one of those, I could not say.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L20",
+      "says": "I had bevacizumab two months ago, that was the last of it.",
+      "expected": "holds"
+    },
+    {
+      "label": "L25",
+      "says": "No hemoptysis. I do not cough up any blood.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L28",
+      "says": "No, I am not planning any other anti-tumor treatment.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L29",
+      "says": "I have not had any radiation therapy in the last two months.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L35",
+      "says": "No surgery, no biopsy and no injuries in the last two months.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L38",
+      "says": "I like a drink, but I could quit if I had to.",
+      "expected": "defer"
+    },
+    {
+      "label": "L40",
+      "says": "I have not been in any other clinical trial.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L6",
+      "says": "I get tired. I rest most afternoons."
+    },
+    {
+      "label": "L42",
+      "says": "No, I do not have HIV.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L2",
+      "says": "The biopsy pathologically diagnosed advanced non-small cell lung cancer, and it has relapsed. It is metastatic now.",
+      "reported": "holds"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

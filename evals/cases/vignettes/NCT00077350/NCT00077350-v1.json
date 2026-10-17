@@ -1,0 +1,84 @@
+{
+  "id": "NCT00077350-v1",
+  "nctId": "NCT00077350",
+  "labelSetSha": "a563b92102d9222befd27ecbd8d3dc76ff1b9fc09b87b5347a81b0982e113dcf",
+  "behavior": "volunteers",
+  "persona": "66-year-old woman, retired schoolteacher, talkative, tends to mention things before she is asked.",
+  "facts": [
+    {
+      "label": "L3",
+      "says": "I had one chemotherapy regimen for the advanced cancer, and it failed. The scans showed it growing again.",
+      "expected": "holds"
+    },
+    {
+      "label": "L4",
+      "says": "I have never had gemcitabine.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L14",
+      "says": "I finished radiation therapy to my chest two months ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L15",
+      "says": "My last chemotherapy was six weeks ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L20",
+      "says": "No, I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L21",
+      "says": "No, I am not breastfeeding.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L23",
+      "says": "Yes, I would agree to use contraception during the study.",
+      "expected": "holds"
+    },
+    {
+      "label": "L33",
+      "says": "I have not used any investigational agent or experimental drug.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L34",
+      "says": "I came out in a rash once with an antibiotic, but I do not remember which one.",
+      "expected": "defer"
+    },
+    {
+      "label": "L35",
+      "says": "I do not have G6PD deficiency. They tested me for it years ago and it was fine.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L6",
+      "says": "I walk the dog every morning and do all my own housework."
+    },
+    {
+      "label": "L31",
+      "says": "I do not need oxygen for my lungs.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L32",
+      "says": "I do not have dementia or psychosis.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L1",
+      "says": "A tissue biopsy histologically confirmed my non-small cell lung cancer. It was not cytology alone.",
+      "reported": "holds"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

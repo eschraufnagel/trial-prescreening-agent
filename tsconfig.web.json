@@ -1,0 +1,30 @@
+{
+  // The browser page. Separate from tsconfig.json so the page gets the DOM
+  // library and JSX, and nothing else in the codebase does (spec §13).
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    // Node types only so the page can import the server's response types, whose
+    // files reach Node-only modules by type. tests/boundary.test.ts asserts that
+    // nothing under src/web/ imports a node: module or touches process.
+    "types": ["node"],
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/web/**/*", "src/transport/web/client.ts"]
+}

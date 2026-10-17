@@ -1,0 +1,344 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "thinking": "off",
+  "promptVersion": "2c46ada9a1d5",
+  "simulatorVersion": "5fd4476340c9",
+  "graderVersion": "4",
+  "vignetteSetHash": "aa8172ad05f2",
+  "dev": true,
+  "conversations": [
+    {
+      "vignetteId": "NCT00077350-dev",
+      "nctId": "NCT00077350",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 300647,
+        "participantMs": 145198,
+        "fidelityMs": 128133,
+        "agentCalls": 58,
+        "participantCalls": 29,
+        "fidelityCalls": 29
+      },
+      "questions": 29,
+      "labels": {
+        "score": {
+          "determinations": 6,
+          "confidentlyWrong": 0,
+          "answerable": 7,
+          "abstained": 1,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 1,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0.14285714285714285,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 29,
+          "participantReplies": 29,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L21",
+            "expected": "does-not-hold",
+            "status": "unresolved",
+            "outcome": "abstained",
+            "evidence": ["I'm a man, so not pregnant"]
+          },
+          {
+            "label": "L34",
+            "expected": "defer",
+            "status": "unresolved",
+            "outcome": "simulator-affected",
+            "evidence": [
+              "I got hives from a chemo drug years ago, but I have no idea whether it's anything like this one.",
+              "I don't remember the name of that chemo drug. It was years ago."
+            ]
+          }
+        ]
+      },
+      "flaggedTurns": 21
+    },
+    {
+      "vignetteId": "NCT03433469-dev",
+      "nctId": "NCT03433469",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 888695,
+        "participantMs": 477164,
+        "fidelityMs": 602008,
+        "agentCalls": 78,
+        "participantCalls": 39,
+        "fidelityCalls": 39
+      },
+      "questions": 39,
+      "labels": {
+        "score": {
+          "determinations": 10,
+          "confidentlyWrong": 0,
+          "answerable": 10,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 39,
+          "participantReplies": 39,
+          "multiQuestion": 3,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 3
+        },
+        "notCorrect": []
+      },
+      "flaggedTurns": 15
+    },
+    {
+      "vignetteId": "NCT04316364-dev",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1255483,
+        "participantMs": 171937,
+        "fidelityMs": 144783,
+        "agentCalls": 42,
+        "participantCalls": 21,
+        "fidelityCalls": 21
+      },
+      "questions": 21,
+      "labels": {
+        "score": {
+          "determinations": 6,
+          "confidentlyWrong": 0,
+          "answerable": 6,
+          "abstained": 0,
+          "abstainable": 1,
+          "correctAbstentions": 1,
+          "simulatorAffected": 1,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 21,
+          "participantReplies": 21,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L18",
+            "expected": "unresolved",
+            "status": "holds",
+            "outcome": "simulator-affected",
+            "evidence": [
+              "I am allergic to monoclonal antibodies",
+              "Yes, I am allergic to monoclonal antibodies, so I would be allergic to SHR-1316."
+            ]
+          }
+        ]
+      },
+      "flaggedTurns": 11
+    },
+    {
+      "vignetteId": "NCT04385368-dev",
+      "nctId": "NCT04385368",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1755352,
+        "participantMs": 775698,
+        "fidelityMs": 431839,
+        "agentCalls": 102,
+        "participantCalls": 51,
+        "fidelityCalls": 51
+      },
+      "questions": 51,
+      "labels": {
+        "score": {
+          "determinations": 17,
+          "confidentlyWrong": 4,
+          "answerable": 13,
+          "abstained": 0,
+          "abstainable": 6,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.23529411764705882,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.3333333333333333
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 51,
+          "participantReplies": 51,
+          "multiQuestion": 2,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 9
+        },
+        "notCorrect": [
+          {
+            "label": "L57",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I wouldn't know, I've never had them"]
+          },
+          {
+            "label": "L63",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I'm not sure if that counts as a live attenuated vaccine",
+              "No, I didn't get any of those. Just the pneumonia shot."
+            ]
+          },
+          {
+            "label": "L64",
+            "expected": "unresolved",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["The operation was about two months ago"]
+          },
+          {
+            "label": "L65",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "For my breathing I have an inhaled steroid. Whether that counts, I can't say.",
+              "No, I don't take any daily steroid pills or injections."
+            ]
+          }
+        ]
+      },
+      "flaggedTurns": 24
+    },
+    {
+      "vignetteId": "NCT06728852-dev",
+      "nctId": "NCT06728852",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1299150,
+        "participantMs": 757164,
+        "fidelityMs": 271482,
+        "agentCalls": 88,
+        "participantCalls": 44,
+        "fidelityCalls": 44
+      },
+      "questions": 44,
+      "labels": {
+        "score": {
+          "determinations": 8,
+          "confidentlyWrong": 1,
+          "answerable": 7,
+          "abstained": 0,
+          "abstainable": 5,
+          "correctAbstentions": 4,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.125,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.8
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 44,
+          "participantReplies": 44,
+          "multiQuestion": 2,
+          "overLength": 1,
+          "verdictLanguage": [
+            {
+              "turn": 7,
+              "text": "Thanks. To help us check eligibility, do you know if your doctor has said your tumors are large enough to be measured on your latest scan? If you aren't sure, that's okay."
+            }
+          ],
+          "followUps": 9
+        },
+        "notCorrect": [
+          {
+            "label": "L15",
+            "expected": "defer",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["No, I am not breastfeeding."]
+          }
+        ]
+      },
+      "flaggedTurns": 17
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 47,
+      "confidentlyWrong": 5,
+      "answerable": 43,
+      "abstained": 1,
+      "abstainable": 16,
+      "correctAbstentions": 11,
+      "simulatorAffected": 2,
+      "confidentlyWrongRate": 0.10638297872340426,
+      "abstentionRate": 0.023255813953488372,
+      "correctAbstentionRate": 0.6875
+    },
+    "parse": {
+      "scored": {
+        "determinations": 0,
+        "confidentlyWrong": 0,
+        "answerable": 0,
+        "abstained": 0,
+        "abstainable": 0,
+        "correctAbstentions": 0,
+        "simulatorAffected": 0,
+        "confidentlyWrongRate": null,
+        "abstentionRate": null,
+        "correctAbstentionRate": null
+      },
+      "categories": {}
+    }
+  },
+  "failed": []
+}

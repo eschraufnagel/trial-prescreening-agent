@@ -1,0 +1,425 @@
+{
+  "nctId": "NCT00077350",
+  "source": "labels",
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "thinking": "off",
+    "promptVersion": "e5a58e26c2ac",
+    "timestamp": "2026-09"
+  },
+  "renderings": [
+    {
+      "criterionId": "L1",
+      "textSha": "64cf8e5991dfabf39cfc4255e5bb9c1c05f990fd9294ec4c555c15032ab98e87",
+      "attempts": [
+        {
+          "plain": "Has non-small cell lung cancer (NSCLC) confirmed by examining a tissue sample (histologically); cytology alone (examining cells) is not acceptable.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L2",
+      "textSha": "76c2b91d93671e6741691b072089ea5d732b9382ea0dcd82cbb7dcc7f622e2ca",
+      "attempts": [
+        {
+          "plain": "Has progressive or recurrent NSCLC (non-small cell lung cancer that has grown or come back).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L3",
+      "textSha": "01388e7c5c36a36eb139e87f3c843b0c05d9757bfc399c58975af0b94a42958a",
+      "attempts": [
+        {
+          "plain": "Has failed exactly one prior cytotoxic chemotherapy regimen (treatment using drugs to kill cells) for advanced disease.",
+          "reportAtGeneration": [
+            "number missing: one",
+            "scope word missing: only"
+          ]
+        },
+        {
+          "plain": "Has failed one and only one prior cytotoxic chemotherapy regimen (treatment using drugs to kill cells) for advanced disease.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L4",
+      "textSha": "96115b7ed156a4e89afbe6c4c4bc36fe398a7e66cffc80faa81825f9c01626cb",
+      "attempts": [
+        {
+          "plain": "Has not received prior gemcitabine chemotherapy.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L5",
+      "textSha": "bb4bac0925a4209bdf0ffc0cd8dd0224042bede0ac59e04847d06c552b946eaa",
+      "attempts": [
+        {
+          "plain": "Has measurable disease (tumor that can be measured) as defined by RECIST within 4 weeks before registration.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L6",
+      "textSha": "293987839607277827c45b2075015d9cb7e88b4b2a424f07bfdc1554342e8bb4",
+      "attempts": [
+        {
+          "plain": "Has an ECOG performance status (a measure of how well a person can perform ordinary daily tasks) of 0 or 1.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L7",
+      "textSha": "8bec9cc2fa2fea582a466ace6c523ff73a7b8ad1cde9f6257f58ceffb9dac0fa",
+      "attempts": [
+        {
+          "plain": "Bilirubin (a substance in the blood) is less than 1.5 times the upper limit of normal.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L8",
+      "textSha": "ea9407683ce5a9b71c49a3a7870db1a4aba07677756067abeda78b05de3fd1dc",
+      "attempts": [
+        {
+          "plain": "AST (SGOT) (a liver enzyme) is less than 3 times the upper limit of normal.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L9",
+      "textSha": "decc9b445a292861f19305044f159c147dcd5b657542b1e4220a5daf0767e288",
+      "attempts": [
+        {
+          "plain": "Serum creatinine (a waste product in the blood) is no more than 1.5 mg/dL, or calculated creatinine clearance (a measure of kidney function) is at least 60 mL/min.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L10",
+      "textSha": "b1d2166c78781f6393bcd33bee3b3a972a8fb6dd8ea5d8255939a683779b8e23",
+      "attempts": [
+        {
+          "plain": "Has an absolute granulocyte count (a type of white blood cell) of at least 1500/mm3.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L11",
+      "textSha": "59c73cff1d6f7017b2d5ca6a2b954e66ef63f0d9da73ef55bc023364c9c0f71b",
+      "attempts": [
+        {
+          "plain": "Has a white blood cell (WBC) count of at least 3000/mm^3.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L12",
+      "textSha": "1f3f69adbd20ae90918f33a321a3c8aa8bd2fa36f6f403d34245de4b966afd89",
+      "attempts": [
+        {
+          "plain": "Has a hemoglobin (a protein in red blood cells that carries oxygen) level of at least 9 g/L.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L13",
+      "textSha": "670890aa18cd49ca2de1a452ad661e3d26c119dd2217c4109c222d0b010b6901",
+      "attempts": [
+        {
+          "plain": "Has a platelet count (a type of blood cell that helps with clotting) of at least 100,000/mm^3.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L14",
+      "textSha": "2fff783a00cea4602711d45e34cb32b1abf9c5c67c4490033cab5e51fc61a6f1",
+      "attempts": [
+        {
+          "plain": "Has finished any radiation therapy at least 3 weeks before registration.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L15",
+      "textSha": "71bed14dd1362c84b87f551698a87fa7417d55aa47ad21697534ec8ce42f221d",
+      "attempts": [
+        {
+          "plain": "Has finished prior cytotoxic chemotherapy (treatment that kills cells) at least 3 weeks before registration.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L16",
+      "textSha": "3bdc11af540e0ae85b2dfeeacd87107213cfaafe3c397946b1803e8d4073c3e2",
+      "attempts": [
+        {
+          "plain": "Has recovered from adverse effects from the chemotherapy to Grade 1 (mild symptoms) or baseline (the level before the chemotherapy started).",
+          "reportAtGeneration": [
+            "direction dropped from ≤ 1"
+          ]
+        },
+        {
+          "plain": "Has recovered from adverse effects from the chemotherapy to no more than Grade 1 (mild symptoms) or baseline (the level before the chemotherapy started).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L17",
+      "textSha": "7bc755219eb17f835ca81e5a59106f21e177b75d278c6149d1ed24c08025ff05",
+      "attempts": [
+        {
+          "plain": "Has brain metastases (cancer that has spread to the brain) that have been treated, and is more than 3 weeks after the treatment for the brain metastases finished, and is neurologically stable (no new or worsening neurological symptoms).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "Has brain metastases (cancer that has spread to the brain) that have been treated, and is more than 3 weeks after the treatment for the brain metastases finished, and is neurologically stable.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L18",
+      "textSha": "5e483ccc661e9a7bb677f709e5f56e6c4bda9612040ad627c70f064852a981df",
+      "attempts": [
+        {
+          "plain": "Has previous brain metastases (cancer that has spread to the brain) and has not yet received therapy specifically intended for their brain metastases.",
+          "reportAtGeneration": [
+            "negations: 2 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "Has previous brain metastases (cancer that has spread to the brain) and has not yet received therapy specifically intended for their brain metastases, and is not eligible to enroll in this protocol.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L19",
+      "textSha": "afc5fe319420db4044540262d8fb43f45b8cc56a2040da0a097a13658a507c1d",
+      "attempts": [
+        {
+          "plain": "Has a life expectancy (estimated time left to live) of more than 3 months.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L20",
+      "textSha": "43a056255ee8473868a200b16f8c2e1b775606e6cfbfa21f2001d55dbbbf2253",
+      "attempts": [
+        {
+          "plain": "Is pregnant.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L21",
+      "textSha": "8aa3443c802af8acd0939e4cab5b30dcd4c66040be704abe3b9d88cd24c8c52f",
+      "attempts": [
+        {
+          "plain": "Breastfeeding should be stopped if the mother is treated with Triapine®.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L22",
+      "textSha": "3e789fbe4abbe1aca197f5ac0e8029f73f6d47ff8dcdd22063108df86e09280f",
+      "attempts": [
+        {
+          "plain": "Has a negative serum pregnancy test (a blood test for pregnancy) within 14 days of study entry.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L23",
+      "textSha": "a322cea0490cef383bc6767684031c1641adf18f43598f47a54d6867fa658506",
+      "attempts": [
+        {
+          "plain": "Women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) before study entry and for the duration of study participation.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L24",
+      "textSha": "30f36f12295228ee00a285cafd68e4264b490babae74d8691b81c559172472e0",
+      "attempts": [
+        {
+          "plain": "Is HIV-positive and receiving combination antiretroviral therapy.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L25",
+      "textSha": "f3a356b69afdcb56be0ef6e7cc3475d301ff387eded642c8d0d24d087a4c17e3",
+      "attempts": [
+        {
+          "plain": "Does not have an active second malignancy (a new, currently growing cancer).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L26",
+      "textSha": "92683ab5b9f7acb77a0a036c0b6ad6c781097a27bf80133e04edda5dc1edeb98",
+      "attempts": [
+        {
+          "plain": "Does not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L27",
+      "textSha": "c8b73eb33514dc602c56e4127da303387d92727f86c27fd348625a2c9aba9e43",
+      "attempts": [
+        {
+          "plain": "Has a history of myocardial infarction (heart attack) within the prior 6 months.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L28",
+      "textSha": "4c622a8252927f915a6f1df752b6dedda504ca727111a4764985459a62b1455b",
+      "attempts": [
+        {
+          "plain": "Has symptomatic congestive heart failure (a condition where the heart does not pump blood effectively, causing symptoms such as shortness of breath or swelling).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "Has symptomatic congestive heart failure (a condition where the heart pumps weakly, causing symptoms such as shortness of breath or swelling).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L29",
+      "textSha": "9f310218ea1dc2c890749072695688076bbf29e40cb9e83c10de70b4826c9a39",
+      "attempts": [
+        {
+          "plain": "Has unstable angina pectoris (chest pain that is new, worsening, or occurs at rest).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L30",
+      "textSha": "d09900f1989f91afaaf304d9ae1f656334d119047d5db03c1c41e3f0afc0f6f9",
+      "attempts": [
+        {
+          "plain": "Has a cardiac arrhythmia (an irregular heartbeat) that requires medical intervention, except for chronic, stable, asymptomatic atrial fibrillation (a type of irregular heartbeat that is long-standing, unchanging, and causes no symptoms).",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 3 in the plain"
+          ]
+        },
+        {
+          "plain": "Has a cardiac arrhythmia (an irregular heartbeat) that requires medical intervention, with the exception of chronic, stable, asymptomatic atrial fibrillation (a type of irregular heartbeat that is long-standing, unchanging, and causes no symptoms).",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 3 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L31",
+      "textSha": "ade762bbc45ce93f0ee08cc275d45aeb9e8eafaa293ab7558442a0e6d5c9d726",
+      "attempts": [
+        {
+          "plain": "Has a lung disease that requires oxygen.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L32",
+      "textSha": "777f5659cb6862cfdcc74645e8683f79bcb25425bced4024bc31f3bb94277e49",
+      "attempts": [
+        {
+          "plain": "Does not have dementia or active psychosis.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L33",
+      "textSha": "3dfc9fc9b17d8efcaea8ec7146cab60df738275a24578b1efca24d69b2637721",
+      "attempts": [
+        {
+          "plain": "Has not used any investigational agent (a drug being studied) in the month before study enrollment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L34",
+      "textSha": "36cf158304ea29708c396039f02823219ca12147b1cc395d9601ac70c1ecb185",
+      "attempts": [
+        {
+          "plain": "Has no history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine® or other agents used in this study.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L35",
+      "textSha": "b0a23cf82a5ca27e0c7337d8adbdb88729b3527bbe72395eba8a18c627c5b10c",
+      "attempts": [
+        {
+          "plain": "Has no clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L36",
+      "textSha": "52220f61f1f354a662ddb7e9166b87d7592836f7734a7ed76ecb5e9d49f87ec0",
+      "attempts": [
+        {
+          "plain": "Persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry for this condition.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L37",
+      "textSha": "df03e664667399ecf05409d21ad6a8c016c41e388410f531244538a6d3948bab",
+      "attempts": [
+        {
+          "plain": "Has tested positive for G6PD deficiency (a genetic condition that can cause red blood cells to break down).",
+          "reportAtGeneration": []
+        }
+      ]
+    }
+  ]
+}

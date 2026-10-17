@@ -1,0 +1,61 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "promptVersion": "20e3f8d0f493",
+  "simulatorVersion": "31340be238a4",
+  "graderVersion": "2",
+  "vignetteSetHash": "ce067cdede97",
+  "dev": true,
+  "conversations": [
+    {
+      "vignetteId": "NCT04316364-dev",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "failed",
+      "error": "Simulated participant NCT04316364-dev gave no usable reply:\n  - reply was truncated",
+      "timing": {
+        "agentMs": 3849,
+        "participantMs": 27117,
+        "fidelityMs": 0,
+        "agentCalls": 1,
+        "participantCalls": 2,
+        "fidelityCalls": 0
+      }
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 0,
+      "confidentlyWrong": 0,
+      "answerable": 0,
+      "abstained": 0,
+      "abstainable": 0,
+      "correctAbstentions": 0,
+      "simulatorAffected": 0,
+      "confidentlyWrongRate": null,
+      "abstentionRate": null,
+      "correctAbstentionRate": null
+    },
+    "parse": {
+      "scored": {
+        "determinations": 0,
+        "confidentlyWrong": 0,
+        "answerable": 0,
+        "abstained": 0,
+        "abstainable": 0,
+        "correctAbstentions": 0,
+        "simulatorAffected": 0,
+        "confidentlyWrongRate": null,
+        "abstentionRate": null,
+        "correctAbstentionRate": null
+      },
+      "categories": {}
+    }
+  },
+  "failed": ["NCT04316364-dev (labels): failed"]
+}

@@ -1,0 +1,458 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "promptVersion": "e5c030d1a7aa",
+  "normalizeVersion": "2",
+  "parseIdentity": "e5c030d1a7aa-n2",
+  "thinking": "default",
+  "dev": true,
+  "matcher": {
+    "version": "2",
+    "spanWeight": 0.6,
+    "textWeight": 0.4,
+    "floor": 0.3,
+    "narrativeOverlap": 0.5
+  },
+  "studies": [
+    {
+      "nctId": "NCT04385368",
+      "status": "graded",
+      "parseSource": "model",
+      "metrics": {
+        "nctId": "NCT04385368",
+        "labels": 74,
+        "predictions": 43,
+        "matched": 39,
+        "merged": 28,
+        "coverageRecall": 0.9054054054054054,
+        "strictRecall": 0.527027027027027,
+        "mergeRate": 0.3783783783783784,
+        "precision": 0.9069767441860465,
+        "typeAccuracy": 0.5384615384615384,
+        "polarityAccuracy": 1,
+        "narrativeFalsePositives": 2,
+        "nearMisses": 13
+      },
+      "quotes": {
+        "rejected": 0,
+        "loose": 2
+      },
+      "diagnostics": {
+        "missed": [
+          {
+            "id": "L3",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "ICF1 must be signed and dated prior to any study procedures and prior to the planned surgical resection of the primary NSCLC, with the exceptions noted below."
+          },
+          {
+            "id": "L4",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "In these cases, a whole blood sample and resected tumor tissue must be collected and sent to the diagnostic lab as soon as possible after ICF1 is signed for dev…"
+          },
+          {
+            "id": "L5",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "A plasma sample must still be collected at Week 3-5 (Day 21-35) post-surgery, even if creation of the personalized panel for MRD detection is delayed."
+          },
+          {
+            "id": "L14",
+            "polarity": "inclusion",
+            "type": "clinical",
+            "quote": "The primary tumor must be deemed resectable by a multidisciplinary evaluation that must include a thoracic surgeon certified or trained according to local stand…"
+          },
+          {
+            "id": "L32",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "ICF2 must be signed and dated after MRD status is determined and prior to initiation of any study-specific procedures, sampling, and analyses outlined in SoAs i…"
+          },
+          {
+            "id": "L33",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "Randomization must occur within the 12 weeks (+ 7 days) following surgery."
+          },
+          {
+            "id": "L40",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "In the event of lymphadenopathy on imaging that would lead to exclusion, histopathological confirmation of lymph node metastasis should be obtained prior to exc…"
+          }
+        ],
+        "extra": [
+          {
+            "polarity": "inclusion",
+            "type": "patient",
+            "text": "Patient provides signed and dated written optional genetic informed consent prior to collection of a sample for optional genetic analysis at the time of second …"
+          },
+          {
+            "polarity": "inclusion",
+            "type": "patient",
+            "text": "Patient is male or female."
+          },
+          {
+            "polarity": "inclusion",
+            "type": "clinical",
+            "text": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "polarity": "exclusion",
+            "type": "clinical",
+            "text": "Patient does not have a history of another primary malignancy, except for malignancy treated with curative intent with no known active disease ≥5 years before t…"
+          }
+        ],
+        "merged": [
+          {
+            "id": "L2",
+            "inside": "Patient is capable of giving signed informed consent, including mandatory genetic informed consent and compliance with ICF requirements."
+          },
+          {
+            "id": "L8",
+            "inside": "Patient has a diagnosis of histologically confirmed NSCLC (WHO 2015 classification) with resectable stage II-III disease, and is upstaged to T3N2 or T4N2 based …"
+          },
+          {
+            "id": "L9",
+            "inside": "Patient has a diagnosis of histologically confirmed NSCLC (WHO 2015 classification) with resectable stage II-III disease, and is upstaged to T3N2 or T4N2 based …"
+          },
+          {
+            "id": "L11",
+            "inside": "A contrast-enhanced CT or MRI scan of the chest has been done for surgical planning prior to surgery, and brain MRI or brain CT with IV contrast is required for…"
+          },
+          {
+            "id": "L12",
+            "inside": "A contrast-enhanced CT or MRI scan of the chest has been done for surgical planning prior to surgery, and brain MRI or brain CT with IV contrast is required for…"
+          },
+          {
+            "id": "L13",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L15",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L16",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L17",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L18",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L19",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L20",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L21",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L22",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L23",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L24",
+            "inside": "Patient has undergone complete resection of the primary NSCLC (excluding wedge resection, except for segmentectomy with tumors <2 cm or extended wedge resection…"
+          },
+          {
+            "id": "L27",
+            "inside": "Suitable samples of resected tumor tissue and whole blood are confirmed for WES of tumor and germline DNA, respectively, and a Sponsor-approved personalized pan…"
+          },
+          {
+            "id": "L28",
+            "inside": "Suitable samples of resected tumor tissue and whole blood are confirmed for WES of tumor and germline DNA, respectively, and a Sponsor-approved personalized pan…"
+          },
+          {
+            "id": "L38",
+            "inside": "Patient has adequate organ and marrow function, a life expectancy of at least 12 weeks, and a body weight >30 kg."
+          },
+          {
+            "id": "L42",
+            "inside": "Patient is EGFR wild-type and ALK wild-type, as assessed from a pre-surgical biopsy sample or resected tumor tissue."
+          },
+          {
+            "id": "L43",
+            "inside": "Patient is EGFR wild-type and ALK wild-type, as assessed from a pre-surgical biopsy sample or resected tumor tissue."
+          },
+          {
+            "id": "L44",
+            "inside": "Patient is EGFR wild-type and ALK wild-type, as assessed from a pre-surgical biopsy sample or resected tumor tissue."
+          },
+          {
+            "id": "L45",
+            "inside": "Patient is EGFR wild-type and ALK wild-type, as assessed from a pre-surgical biopsy sample or resected tumor tissue."
+          },
+          {
+            "id": "L53",
+            "inside": "Patient does not have a history of another primary malignancy, except for malignancy treated with curative intent with no known active disease ≥5 years before t…"
+          },
+          {
+            "id": "L56",
+            "inside": "Patient does not have an active infection, including tuberculosis, hepatitis B (known positive HBsAg), hepatitis C, or HIV infection, with exceptions for past/r…"
+          },
+          {
+            "id": "L61",
+            "inside": "Patient has not received radiotherapy treatment for NSCLC in the neoadjuvant setting, and has not received radiotherapy treatment to more than 30% of the bone m…"
+          },
+          {
+            "id": "L71",
+            "inside": "Female patients are not pregnant or breastfeeding, and male or female patients of reproductive potential are willing to employ effective birth control from scre…"
+          },
+          {
+            "id": "L72",
+            "inside": "Female patients are not pregnant or breastfeeding, and male or female patients of reproductive potential are willing to employ effective birth control from scre…"
+          }
+        ],
+        "typeErrors": [
+          {
+            "id": "L10",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "A contrast-enhanced CT or MRI scan of the chest must have been done for surgical planning prior to surgery."
+          },
+          {
+            "id": "L25",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "All patients who enrol in the study prior to surgery must have a pre-surgical plasma sample collected for MRD evaluation."
+          },
+          {
+            "id": "L26",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "Confirmation of suitable samples of resected tumor tissue and whole blood for WES of tumor and germline DNA, respectively, and creation of Sponsor-approved pers…"
+          },
+          {
+            "id": "L30",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "Known tumor PD-L1 status determined at a central reference laboratory testing service using a validated Ventana SP263 PD-L1 immunohistochemistry (IHC) assay pri…"
+          },
+          {
+            "id": "L31",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "Post-operative CT scan of the chest (including liver and adrenal glands) performed within 28 days + 7 days prior to randomization."
+          },
+          {
+            "id": "L49",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "History of allogeneic organ or bone marrow transplantation."
+          },
+          {
+            "id": "L57",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Known allergy or hypersensitivity to any of the IPs or any of the IP excipients."
+          },
+          {
+            "id": "L59",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Received any prior adjuvant therapy for NSCLC or any prior exposure to durvalumab."
+          },
+          {
+            "id": "L60",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Any concurrent chemotherapy, IP, biologic, or hormonal therapy for cancer treatment."
+          },
+          {
+            "id": "L62",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Radiotherapy treatment to more than 30% of the bone marrow or with a wide field of radiation within 4 weeks of the first dose of IP."
+          },
+          {
+            "id": "L63",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Receipt of live attenuated vaccine within 30 days prior to the first dose of IP."
+          },
+          {
+            "id": "L64",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Major surgical procedure (as defined by the Investigator) within 28 days prior to the first dose of IP."
+          },
+          {
+            "id": "L65",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Current or prior use of immunosuppressive medication within 14 days before the first dose of durvalumab/placebo."
+          },
+          {
+            "id": "L66",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Participation in another clinical study with an IP administered since completion of surgery."
+          },
+          {
+            "id": "L67",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Previous IP assignment in the present study."
+          },
+          {
+            "id": "L68",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Concurrent enrollment in another clinical study, unless it is an observational (noninterventional) clinical study, or during the follow-up period of an interven…"
+          },
+          {
+            "id": "L69",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Prior randomization or treatment in a previous durvalumab clinical study regardless of treatment group assignment."
+          },
+          {
+            "id": "L74",
+            "labelled": "clinical",
+            "predicted": "patient",
+            "quote": "Judgment by the Investigator that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions, and …"
+          }
+        ],
+        "narrative": [
+          {
+            "text": "Patient provides signed and dated written optional genetic informed consent prior to collection of a sample for optional genetic analysis at the time of second …",
+            "ruledOutBecause": "Optional consent. Declining it does not affect eligibility."
+          },
+          {
+            "text": "Patient is male or female.",
+            "ruledOutBecause": "States no restriction, so nobody can fail it."
+          }
+        ]
+      }
+    },
+    {
+      "nctId": "NCT00077350",
+      "status": "graded",
+      "parseSource": "model",
+      "metrics": {
+        "nctId": "NCT00077350",
+        "labels": 37,
+        "predictions": 33,
+        "matched": 32,
+        "merged": 5,
+        "coverageRecall": 1,
+        "strictRecall": 0.8648648648648649,
+        "mergeRate": 0.13513513513513514,
+        "precision": 0.9696969696969697,
+        "typeAccuracy": 0.84375,
+        "polarityAccuracy": 1,
+        "narrativeFalsePositives": 0,
+        "nearMisses": 2
+      },
+      "quotes": {
+        "rejected": 0,
+        "loose": 0
+      },
+      "diagnostics": {
+        "missed": [],
+        "extra": [
+          {
+            "polarity": "exclusion",
+            "type": "patient",
+            "text": "Women must not be pregnant or breastfeeding."
+          }
+        ],
+        "merged": [
+          {
+            "id": "L2",
+            "inside": "The patient must have progressive or recurrent NSCLC and must have failed exactly one prior cytotoxic chemotherapy regimen for advanced disease."
+          },
+          {
+            "id": "L11",
+            "inside": "The patient's absolute granulocyte count must be greater than or equal to 1500/mm3 and WBC must be greater than or equal to 3000/mm^3."
+          },
+          {
+            "id": "L15",
+            "inside": "The patient must have completed prior cytotoxic chemotherapy at least 3 weeks prior to registration and have recovered from adverse effects from the chemotherap…"
+          },
+          {
+            "id": "L20",
+            "inside": "Women must not be pregnant or breastfeeding."
+          },
+          {
+            "id": "L21",
+            "inside": "Women must not be pregnant or breastfeeding."
+          }
+        ],
+        "typeErrors": [
+          {
+            "id": "L3",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease"
+          },
+          {
+            "id": "L4",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "patients must not have received prior gemcitabine chemotherapy"
+          },
+          {
+            "id": "L16",
+            "labelled": "clinical",
+            "predicted": "patient",
+            "quote": "have recovered from adverse effects from the chemotherapy to =\\< Grade 1, or baseline"
+          },
+          {
+            "id": "L35",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "Patients must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency"
+          },
+          {
+            "id": "L36",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry …"
+          }
+        ],
+        "narrative": []
+      }
+    }
+  ],
+  "pooled": {
+    "studies": 2,
+    "labels": 111,
+    "predictions": 76,
+    "matched": 71,
+    "merged": 33,
+    "coverageRecall": 0.9369369369369369,
+    "strictRecall": 0.6396396396396397,
+    "mergeRate": 0.2972972972972973,
+    "precision": 0.9342105263157895,
+    "typeAccuracy": 0.676056338028169,
+    "polarityAccuracy": 1,
+    "narrativeFalsePositives": 2,
+    "nearMisses": 15
+  },
+  "quotes": {
+    "rejected": 0,
+    "loose": 2
+  },
+  "failed": []
+}

@@ -1,0 +1,121 @@
+{
+  "id": "NCT04385368-dev",
+  "nctId": "NCT04385368",
+  "labelSetSha": "509e6dce56e6af79ca8922ffe39076400655c5af56355748bf3ccba1b665de45",
+  "behavior": "vague",
+  "persona": "71-year-old man, retired carpenter, easy-going, gives loose answers.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "Yes, I'm able to sign all the consent forms, the genetic one too, and I'll follow the rules.",
+      "expected": "holds"
+    },
+    {
+      "label": "L6",
+      "says": "I'm 71.",
+      "expected": "holds"
+    },
+    {
+      "label": "L49",
+      "says": "I've never had a transplant of any kind.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L57",
+      "says": "Allergic to the study drugs? I wouldn't know, I've never had them.",
+      "expected": "defer"
+    },
+    {
+      "label": "L59",
+      "says": "Nothing else was given after the surgery, and durvalumab is new to me.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L60",
+      "says": "I'm not getting any treatment for the cancer at the moment.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L61",
+      "says": "There may have been radiation before the operation. I honestly can't remember.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L62",
+      "says": "Radiation lately? I'd have to check. I'm muddled on dates.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L63",
+      "says": "I had a pneumonia jab about three weeks ago.",
+      "expected": "defer"
+    },
+    {
+      "label": "L64",
+      "says": "My operation was about two months ago.",
+      "laterSays": "It was more recent than I said: three weeks ago, not two months.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L65",
+      "says": "For my breathing I have an inhaled steroid. Whether that counts, I can't say.",
+      "expected": "defer"
+    },
+    {
+      "label": "L66",
+      "says": "I haven't been in any other study since the operation.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L67",
+      "says": "This is the first time I've been part of this study.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L68",
+      "says": "Enrolled in another clinical study? No.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L69",
+      "says": "No durvalumab study, ever, before this one.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L70",
+      "says": "I smoked for about thirty years before I stopped.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L71",
+      "says": "No, I'm a man, I'm not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L72",
+      "says": "Breastfeeding? Not me, I'm a man.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L73",
+      "says": "I'll use birth control the whole time, and for the 90 days after.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L7",
+      "says": "They confirmed from the tissue that it's non-small cell, stage two, and that it could be removed.",
+      "reported": "holds"
+    },
+    {
+      "label": "L41",
+      "says": "I was told my tumour has no EGFR or ALK changes.",
+      "reported": "does-not-hold"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": true,
+    "note": "Dev vignette for slice 0009. Never scored. The drafter had read the 17 confidently wrong findings from labels in the twelve scored conversations outside the least-seen three, and writes the agent's fixes too. Classes: self-correction L64; hedged or interpretive L61 and L62 (vague, unresolved), L57 (defer: never exposed, so whether he has a known allergy is interpretation), L63 (defer: whether a pneumonia jab is a live attenuated vaccine) and L65 (defer: whether an inhaled steroid is immunosuppressive medication); polarity L60, L66, L68 and L69 (exclusions worded as prohibitions, all not holding). Controls: L71 and L72 (a man denying pregnancy and breastfeeding, does-not-hold by the scored vignettes' convention, not does-not-apply); L73 (names male and female patients, so it applies to him; a firm willingness, so the exclusion does not hold); L49 (a plain denial). L59 and L70 failed in the twelve; they are answered plainly and test no class."
+  }
+}

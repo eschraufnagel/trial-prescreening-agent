@@ -1,0 +1,75 @@
+{
+  "id": "NCT04316364-v2",
+  "nctId": "NCT04316364",
+  "labelSetSha": "da2c69671dcb089fd692a4fa41a0ee693507e272bcb95a81403d409bd9001adb",
+  "behavior": "declines",
+  "persona": "45-year-old woman, office manager, polite but private, keeps answers brief.",
+  "facts": [
+    {
+      "label": "L7",
+      "says": "Yes, I would agree to use contraception for the 180 days after treatment.",
+      "expected": "holds"
+    },
+    {
+      "label": "L8",
+      "says": "No, I have not had any anti-cancer therapy for the lung cancer.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L17",
+      "says": null,
+      "declines": true,
+      "expected": "unresolved"
+    },
+    {
+      "label": "L18",
+      "says": "I do not have any medicine allergies.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L19",
+      "says": "No, I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L20",
+      "says": "No, I am not lactating or breastfeeding.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L22",
+      "says": null,
+      "declines": true,
+      "expected": "unresolved"
+    },
+    {
+      "label": "L24",
+      "says": "Yes, my son had COVID last week and I was looking after him at home.",
+      "expected": "holds"
+    },
+    {
+      "label": "L2",
+      "says": "The biopsy pathologically confirmed stage IIIA lung cancer. The surgeon said it is resectable, and it is untreated so far.",
+      "reported": "holds"
+    },
+    {
+      "label": "L9",
+      "says": "I have rheumatoid arthritis."
+    },
+    {
+      "label": "L10",
+      "says": "I had a skin cancer removed from my back three years ago."
+    },
+    {
+      "label": "L21",
+      "says": null,
+      "declines": true
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

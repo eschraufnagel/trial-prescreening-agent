@@ -1,0 +1,25 @@
+{
+  "nctId": "NCT07229729",
+  "briefTitle": "A Study of SHR-A2102 in Combination With Other Anti-tumor Therapies for Resectable Non-small Cell Lung Cancer",
+  "officialTitle": "A Randomized, Open-label, Multicenter Phase II Clinical Study of SHR-A2102 in Combination With Other Anti-tumor Therapies for Perioperative Treatment of Resectable Non-small Cell Lung Cancer",
+  "overallStatus": "RECRUITING",
+  "phases": [
+    "PHASE2"
+  ],
+  "conditions": [
+    "Non-small Cell Lung Cancer"
+  ],
+  "leadSponsor": "Shanghai Hengrui Pharmaceutical Co., Ltd.",
+  "lastUpdatePostDate": "2025-12-01",
+  "eligibility": {
+    "criteriaText": "Inclusion Criteria:\n\n1. Voluntarily participate in this clinical study, understand the research procedures and be able to sign the informed consent form in writing;\n2. Participants must be aged between 18 and 70 years old (inclusive) when signing the informed consent form, and both men and women are eligible;\n3. Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1;\n4. Adequate organ function;\n5. Women of childbearing age must undergo serum pregnancy tests, and the results must be negative. Female subjects of childbearing age and male subjects who are partners of women of childbearing age must agree to use highly effective contraceptive methods.\n\nExclusion Criteria:\n\n1. With active, known or suspected autoimmune disease of autoimmune disease;\n2. Malignancies other than NSCLC within 5 years prior to randomization;\n3. Has or suspected has a history of pneumonitis / interstitial lung disease or any serve lung diseases which will influence the examination of lung function;\n4. Significant history of cardiovascular and cerebrovascular disease; Significant haemorrhagic disease;\n5. Has an arteriovenous thrombotic events;\n6. Has a known history of human immunodeficiency virus (HIV) infection;\n7. Has a known active Hepatitis B or Hepatitis C;\n8. Allergic to the intervention regimens.",
+    "sex": "ALL",
+    "minimumAge": "18 Years",
+    "maximumAge": "70 Years",
+    "healthyVolunteers": false,
+    "stdAges": [
+      "ADULT",
+      "OLDER_ADULT"
+    ]
+  }
+}

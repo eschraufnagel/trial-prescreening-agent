@@ -1,0 +1,692 @@
+{
+  "nctId": "NCT03377023",
+  "criteria": [
+    {
+      "id": "NCT03377023:23-246",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have histologic or cytological diagnosis of advanced/metastatic Non-Small Cell Lung Cancer (NSCLC) with no curative treatment options, and for mixed histology, there must be a predominant histology.",
+      "source": {
+        "start": 23,
+        "end": 246,
+        "text": "Participants must have histologic or cytological diagnosis of advanced/metastatic Non-Small Cell Lung Cancer (NSCLC) with no curative treatment options. For those with mixed histology, there must be a predominant histology."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:249-309",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Participants must be 18 years of age or older on the day of signing informed consent.",
+      "source": {
+        "start": 249,
+        "end": 309,
+        "text": "18 years of age or older on day of signing informed consent."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:312-351",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have a life expectancy of at least 3-6 months.",
+      "source": {
+        "start": 312,
+        "end": 351,
+        "text": "Life expectancy of at least 3-6 months."
+      },
+      "confidence": 0.8
+    },
+    {
+      "id": "NCT03377023:354-428",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1.",
+      "source": {
+        "start": 354,
+        "end": 428,
+        "text": "Eastern Cooperative Oncology Group (ECOG) performance status score 0 and 1"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:431-1180",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "For the phase I trial portion, patients must be treatment naïve or previously treated with chemotherapy, immunotherapy, or targeted therapy for NSCLC; patients who underwent curative intent chemotherapy and/or radiation in the neoadjuvant or adjuvant setting are allowed to enroll if tumor recurrence occurred greater than 6 months from completion of that therapy; patients with NSCLC tumor known to harbor a genomic aberration for which FDA approved treatment is available are allowed to enroll if they have received prior treatment with the FDA approved targeted therapy.",
+      "source": {
+        "start": 431,
+        "end": 1180,
+        "text": "For phase I trial portion, treatment naïve or patients previously treated with chemotherapy, immunotherapy or targeted therapy for NSCLC are allowed. Patient who underwent curative intent chemotherapy and/radiation in the neoadjuvant or adjuvant setting are allowed to enroll if tumor recurrence occurred greater than 6 months from completion of that therapy (and will be considered treatment naïve in the Stage IV setting). Patients with NSCLC tumor known to harbor a genomic aberration for which FDA approved treatment is available (i.e, non-resistant EGFR mutations, EGFR T790M mutation, ALK rearrangement, ROS rearrangement, BRAF V600E mutation) are allowed to enroll if they have received prior treatment with the FDA approved targeted therapy."
+      },
+      "confidence": 0.9,
+      "appliesTo": "Phase I"
+    },
+    {
+      "id": "NCT03377023:1183-1879",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "For the phase II trial portion, Arm A (treatment naïve): Patients must be newly diagnosed and treatment naïve; patients who underwent curative intent chemotherapy and/or radiation in the neoadjuvant or adjuvant setting are allowed to enroll if tumor recurrence occurred greater than 6 months from completion of therapy; patients with NSCLC tumor known to harbor a genomic aberration for which FDA approved treatment is available are allowed to enroll if they have received prior treatment with the FDA approved targeted therapy.",
+      "source": {
+        "start": 1183,
+        "end": 1879,
+        "text": "For phase II trial portion, Patients will be enrolled as two parallel cohorts:\n\n  * A.) Arm A (treatment naïve): Patients who are newly diagnosed and treatment naïve. Patient who underwent curative intent chemotherapy and/radiation in the neoadjuvant or adjuvant setting are allowed to enroll if tumor recurrence occurred greater than 6 months from completion of therapy. Patients with NSCLC tumor known to harbor a genomic aberration for which FDA approved treatment is available (i.e, non-resistant EGFR mutations, EGFR T790M mutation, ALK rearrangement, ROS rearrangement, BRAF V600E mutation) are allowed to enroll if they have received prior treatment with the FDA approved targeted therapy."
+      },
+      "confidence": 0.9,
+      "appliesTo": "Phase II Arm A"
+    },
+    {
+      "id": "NCT03377023:1884-2706",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "For the phase II trial portion, Arm B (Immunotherapy pre-treated group): Patients must have received prior immunotherapy, and must be primary refractory to immunotherapy or have relapsed disease; patients with NSCLC tumor known to harbor a genomic aberration for which FDA approved treatment is available are allowed to enroll if they have received prior treatment with the FDA approved targeted therapy.",
+      "source": {
+        "start": 1884,
+        "end": 2706,
+        "text": "B.) Arm B (Immunotherapy pre-treated group): Patients who have received prior immunotherapy. Patients who are primary refractory to immunotherapy (i.e., Patients who were previously treated with immunotherapy and did not at least achieve stable disease on first imaging assessment on immunotherapy) or have relapsed disease (i.e., Patients that were treated with immunotherapy, achieved at least stable disease on first imaging assessment and subsequently developed disease progression or relapse). Patients with NSCLC tumor known to harbor a genomic aberration for which FDA approved treatment is available (i.e, non-resistant EGFR mutations, EGFR T790M mutation, ALK rearrangement, ROS rearrangement, BRAF V600E mutation) are allowed to enroll if they have received prior treatment with the FDA approved targeted therapy"
+      },
+      "confidence": 0.9,
+      "appliesTo": "Phase II Arm B"
+    },
+    {
+      "id": "NCT03377023:2709-2821",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have at least one measurable lesion according to Response Evaluation Criteria in Solid Tumors (RECIST) v1.1 criteria.",
+      "source": {
+        "start": 2709,
+        "end": 2821,
+        "text": "At least one measurable lesion according to Response Evaluation Criteria in Solid Tumors (RECIST) v1.1 criteria."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:2824-2881",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have a QTcB interval of less than 470 ms for males and less than 480 ms for females.",
+      "source": {
+        "start": 2824,
+        "end": 2881,
+        "text": "QTcB must be \\<470 ms for males and \\<480 ms for females."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:2884-3016",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have an Absolute neutrophil count (ANC) greater than 1.5 x 10^9/L (> 1500 per mm^3).",
+      "source": {
+        "start": 2884,
+        "end": 3016,
+        "text": "Adequate normal organ and marrow function as defined below:\n\n  * Absolute neutrophil count (ANC) \\>1.5 x 10\\^9/L (\\> 1500 per mm\\^3)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:3021-3042",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have a Hemoglobin level greater than or equal to 9.0 g/dL.",
+      "source": {
+        "start": 3021,
+        "end": 3042,
+        "text": "Hemoglobin ≥ 9.0 g/dL"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:3047-3099",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have a Platelet count greater than or equal to 100 x 10^9/L (>100,000 per mm^3).",
+      "source": {
+        "start": 3047,
+        "end": 3099,
+        "text": "Platelet count ≥ 100 x 10\\^9/L (\\>100,000 per mm\\^3)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:3104-3238",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have a Total bilirubin level less than or equal to 1.5 X normal institutional limits; for patients with liver metastasis, total bilirubin must be within normal limits.",
+      "source": {
+        "start": 3104,
+        "end": 3238,
+        "text": "Total bilirubin ≤ 1.5 X normal institutional limits. For patients with liver metastasis: total bilirubin must be within normal limits."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:3243-3338",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have Proteinuria less than Common Terminology Criteria for Adverse Events (CTCAE) grade 2 or greater.",
+      "source": {
+        "start": 3243,
+        "end": 3338,
+        "text": "Proteinuria less than Common Terminology Criteria for Adverse Events (CTCAE) grade 2 or greater"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:3343-3424",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Patients with Gilbert Syndrome are allowed to have total bilirubin less than 3.0 mg/dL.",
+      "source": {
+        "start": 3343,
+        "end": 3424,
+        "text": "(Except patients with Gilbert Syndrome, who can have total bilirubin \\< 3.0 mg/dL"
+      },
+      "confidence": 0.8
+    },
+    {
+      "id": "NCT03377023:3429-3808",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have AST (SGOT)/ALT(SGPT) less than or equal to 1.5 X institutional upper limit of normal (ULN) or less than or equal to 2.5 X ULN for patients with liver metastases; this will not apply to patients with confirmed Gilbert's syndrome, who will be allowed only in consultation with their physician.",
+      "source": {
+        "start": 3429,
+        "end": 3808,
+        "text": "AST (SGOT)/ALT(SGPT) ≤1.5 X institutional upper limit of norma (ULN)l or ≤ 2.5 X ULN for patients with liver metastases. This will not apply to patients with confirmed Gilbert's syndrome (persistent or recurrent hyperbilirubinemia that is predominantly unconjugated in the absence of hemolysis or hepatic pathology), who will be allowed only in consultation with their physician."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:3813-4013",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Participants must have a Serum creatinine clearance less than or equal to 1.5 X ULN or creatinine clearance greater than 45 mL/min by the Cockcroft-Gault formula or by 24-hour urine collection for determination of creatinine clearance.",
+      "source": {
+        "start": 3813,
+        "end": 4013,
+        "text": "Serum creatinine CL ≤ 1.5 X ULN or creatinine clearance \\> 45 mL/min by the Cockcroft-Gault formula (Cockcroft and Gault 1976) or by 24-hour urine collection for determination of creatinine clearance."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:4016-4053",
+      "polarity": "inclusion",
+      "type": "protocol",
+      "text": "Participants must have archival tissue where available.",
+      "source": {
+        "start": 4016,
+        "end": 4053,
+        "text": "Have archival tissue where available."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:4056-4348",
+      "polarity": "inclusion",
+      "type": "protocol",
+      "text": "Patients enrolled on the clinical trial must be willing and able to provide tissue from a newly obtained core or excisional biopsy of a tumor lesion; patients for whom newly obtained samples cannot be provided may submit an archived specimen only upon agreement from the Sponsor.",
+      "source": {
+        "start": 4056,
+        "end": 4348,
+        "text": "In addition, patients enrolled on the clinical trial must be willing and able to provide tissue from a newly obtained core or excisional biopsy of a tumor lesion. Patients for whom newly obtained samples cannot be provided may submit an archived specimen only upon agreement from the Sponsor."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:4351-4620",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Female participants of childbearing potential must have a negative urine or serum pregnancy test within 72 hours before receiving the first dose of study medication; if the urine test is positive or cannot be confirmed as negative, a serum pregnancy test will be required.",
+      "source": {
+        "start": 4351,
+        "end": 4620,
+        "text": "Female participants of childbearing potential should have a negative urine or serum pregnancy within 72 hours before receiving the first dose of study medication. If the urine test is positive or cannot be confirmed as negative, a serum pregnancy test will be required."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:4623-4880",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Participants must have the ability to understand and willingness to provide written informed consent signed and dated prior to admission to the study in accordance with International Conference on Harmonisation-Good Clinical Practice (ICH-GCP) guidelines and to the local legislation.",
+      "source": {
+        "start": 4623,
+        "end": 4880,
+        "text": "Ability to understand and willingness to provide written informed consent signed and dated prior to admission to the study in accordance with International Conference on Harmonisation-Good Clinical Practice (ICH-GCP) guidelines and to the local legislation."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:4905-5059",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have concurrent use of other anticancer agents including chemotherapy, targeted therapy, radiotherapy or immunotherapy not otherwise specified in the protocol.",
+      "source": {
+        "start": 4905,
+        "end": 5059,
+        "text": "Concurrent use of other anticancer agents including chemotherapy, targeted therapy, radiotherapy or immunotherapy not otherwise specified in the protocol."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:5062-5231",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have concurrent use of other investigational drugs or treatment in another clinical trial with a non- FDA-approved medication within the past 4 weeks before start of therapy.",
+      "source": {
+        "start": 5062,
+        "end": 5231,
+        "text": "Concurrent use of other investigational drugs or treatment in another clinical trial with a non- FDA-approved medication within the past 4 weeks before start of therapy."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:5234-5396",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have received chemo-, or immunotherapy or therapy with monoclonal antibodies or small tyrosine kinase inhibitors within the past 2 weeks prior to treatment with the trial drug.",
+      "source": {
+        "start": 5234,
+        "end": 5396,
+        "text": "Chemo-, or immunotherapy or therapy with monoclonal antibodies or small tyrosine kinase inhibitors within the past 2 weeks prior to treatment with the trial drug."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:5399-5536",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have received radiotherapy (except for brain and extremities or stereotactic treatment) within the past 2 weeks prior to treatment with the trial drug.",
+      "source": {
+        "start": 5399,
+        "end": 5536,
+        "text": "Radiotherapy (except for brain and extremities or stereotactic treatment) within the past 2 weeks prior to treatment with the trial drug."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:5539-5836",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "In immunotherapy pretreated patients, participants must not have any history of dose-limiting toxicity with prior immunotherapy agents, including grade 3/4 immune-related adverse events (irAEs); irreversible irAEs; Grade ≥3 irAEs that did not respond to steroid rescue; or neurologic irAE with significant clinical sequelae.",
+      "source": {
+        "start": 5539,
+        "end": 5836,
+        "text": "In immunotherapy pretreated patients, any history of dose-limiting toxicity with prior immunotherapy agents, including grade 3/4 immune-related adverse events (irAEs); irreversible irAEs; Grade ≥3 irAEs that did not respond to steroid rescue; or neurologic irAE with significant clinical sequelae."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:5839-5882",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have prior treatment with nintedanib (BIBF1120).",
+      "source": {
+        "start": 5839,
+        "end": 5882,
+        "text": "Prior treatment with nintedanib (BIBF1120)."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:5885-6005",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have known hypersensitivity to nintedanib, nivolumab, ipilimumab, peanut or soy or any other trial drug, or their excipients.",
+      "source": {
+        "start": 5885,
+        "end": 6005,
+        "text": "Known hypersensitivity to nintedanib, nivolumab, ipilimumab, peanut or soy or any other trial drug, or their excipients."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:6008-6409",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have any toxicity (>CTCAE version 5 grade 3) from previous anti-cancer therapy that has not resolved to a Grade 1, or persistence of clinically relevant therapy related toxicity from previous chemo and/or radiotherapy; patients with irreversible toxicity that is not reasonably expected to be exacerbated by the investigational product may be included (e.g., hearing loss, peripherally neuropathy, alopecia).",
+      "source": {
+        "start": 6008,
+        "end": 6409,
+        "text": "Any toxicity (\\>CTCAE version 5 grade 3) from previous anti-cancer therapy that has not resolved to a Grade 1. Persistence of clinically relevant therapy related toxicity from previous chemo and/or radiotherapy. Patients with irreversible toxicity that is not reasonably expected to be exacerbated by the investigational product may be included (e.g., hearing loss, peripherally neuropathy, alopecia)."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:6412-6453",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have a history of leptomeningeal carcinomatosis.",
+      "source": {
+        "start": 6412,
+        "end": 6453,
+        "text": "History of leptomeningeal carcinomatosis."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:6456-6585",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have received radiotherapy to a target lesion within the past 3 months prior to baseline imaging unless that area has demonstrated progression.",
+      "source": {
+        "start": 6456,
+        "end": 6585,
+        "text": "Radiotherapy to a target lesion within the past 3 months prior to baseline imaging unless that area has demonstrated progression."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:6588-7011",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have active brain metastases (e.g., stable for <2 weeks, symptomatic, no adequate previous treatment, requiring treatment with anti-convulsants); dexamethasone therapy will be allowed if administered as stable or decreasing dose for at least 3 weeks before randomization otherwise no steroids to exceed prednisone 10 mg/day prior to starting trial treatment; participants must not have symptomatic or uncontrolled central nervous system (CNS) metastasis.",
+      "source": {
+        "start": 6588,
+        "end": 7011,
+        "text": "Active brain metastases (e.g., stable for \\<2 weeks, symptomatic, no adequate previous treatment, requiring treatment with anti-convulsants); dexamethasone therapy will be allowed if administered as stable or decreasing dose for at least 3 weeks before randomization otherwise no steroids to exceed prednisone 10 mg/day prior to starting trial treatment. Symptomatic or uncontrolled central nervous system (CNS) metastasis."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:7014-7582",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have current or prior use of immunosuppressive medication 7 days before the first dose of nivolumab or ipilimumab, with the exceptions of intranasal and inhaled corticosteroids or systemic corticosteroids at physiological doses, which are not to exceed 10 mg/day of prednisone, or an equivalent corticosteroid; a brief course (≤28 days) of corticosteroids for prophylaxis (e.g., contrast dye allergy) or for treatment of non-autoimmune conditions (e.g., delayed-type hypersensitivity reaction caused by contact allergen) is permitted; topical corticosteroids are permitted.",
+      "source": {
+        "start": 7014,
+        "end": 7582,
+        "text": "Current or prior use of immunosuppressive medication 7 days before the first dose of nivolumab or ipilimumab, with the exceptions of intranasal and inhaled corticosteroids or systemic corticosteroids at physiological doses, which are not to exceed 10 mg/day of prednisone, or an equivalent corticosteroid. A brief course (≤28 days) of corticosteroids for prophylaxis (e.g., contrast dye allergy) or for treatment of non-autoimmune conditions (e.g., delayed-type hypersensitivity reaction caused by contact allergen) is permitted. Topical corticosteroids are permitted."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:7585-7908",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have active or prior documented autoimmune disease within the past 2 years; patients with vitiligo, Grave's disease, type I diabetes mellitus or residual hypothyroidism due to autoimmune condition only requiring hormone replacement, or psoriasis not requiring systemic treatment (within the past 2 years) are not excluded.",
+      "source": {
+        "start": 7585,
+        "end": 7908,
+        "text": "Active or prior documented autoimmune disease within the past 2 years. NOTE: Patients with vitiligo, Grave's disease, type I diabetes mellitus or residual hypothyroidism due to autoimmune condition only requiring hormone replacement, or psoriasis not requiring systemic treatment (within the past 2 years) are not excluded."
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:7911-8016",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have centrally located tumors with radiographic evidence (CT or MRI) of local invasion of major blood vessels.",
+      "source": {
+        "start": 7911,
+        "end": 8016,
+        "text": "Centrally located tumors with radiographic evidence (CT or MRI) of local invasion of major blood vessels."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:8019-8095",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have a known history of, or any evidence of active, non-infectious pneumonitis.",
+      "source": {
+        "start": 8019,
+        "end": 8095,
+        "text": "Has known history of, or any evidence of active, non-infectious pneumonitis."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:8098-8369",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have therapeutic anticoagulation with drugs requiring INR monitoring (except low-dose heparin and/or heparin flush as needed for maintenance of an in-dwelling intravenous devise) or antiplatelet therapy (except for low-dose therapy with acetylsalicylic acid < 325 mg per day).",
+      "source": {
+        "start": 8098,
+        "end": 8369,
+        "text": "Therapeutic anticoagulation with drugs requiring INR monitoring (except low-dose heparin and/or heparin flush as needed for maintenance of an in-dwelling intravenous devise) or antiplatelet therapy (except for low-dose therapy with acetylsalicylic acid \\< 325 mg per day."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:8372-8550",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have major injuries and/or surgery within the past 4 weeks prior to start of study treatment with incomplete wound healing and/or planned surgery during the on-treatment study period.",
+      "source": {
+        "start": 8372,
+        "end": 8550,
+        "text": "Major injuries and/or surgery within the past 4 weeks prior to start of study treatment with incomplete wound healing and/or planned surgery during the on-treatment study period."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:8553-8644",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have a history of clinically significant hemorrhagic or thromboembolic event in the past 6 months.",
+      "source": {
+        "start": 8553,
+        "end": 8644,
+        "text": "History of clinically significant hemorrhagic or thromboembolic event in the past 6 months."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:8647-8704",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have a known inherited predisposition to bleeding or thrombosis.",
+      "source": {
+        "start": 8647,
+        "end": 8704,
+        "text": "Known inherited predisposition to bleeding or thrombosis."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:8707-8970",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have significant cardiovascular diseases (i.e., uncontrolled hypertension, unstable angina, history of infarction within the past 3 months prior to start of study treatment, congestive heart failure > New York Heart Association (NYHA) II, serious cardiac arrhythmia).",
+      "source": {
+        "start": 8707,
+        "end": 8970,
+        "text": "Significant cardiovascular diseases (i.e., uncontrolled hypertension, unstable angina, history of infarction within the past 3 months prior to start of study treatment, congestive heart failure \\> New York Heart Association (NYHA) II, serious cardiac arrhythmia)."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:8973-9141",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have coagulation parameters: International normalized ratio (INR) > 2, prothrombin time (PT) and partial thromboplastin time (PTT) > 50% of deviation of institutional ULN.",
+      "source": {
+        "start": 8973,
+        "end": 9141,
+        "text": "Coagulation parameters: International normalized ratio (INR) \\> 2, prothrombin time (PT) and partial thromboplastin time (PTT) \\> 50% of deviation of institutional ULN."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:9144-9441",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have a history of another primary malignancy within the past 2 years except for Basal cell skin cancer, Adequately treated non-melanoma skin cancer or lentigo maligna without evidence of disease, Adequately treated carcinoma in situ without evidence of disease (e.g., cervical cancer in situ).",
+      "source": {
+        "start": 9144,
+        "end": 9441,
+        "text": "History of another primary malignancy within the past 2 years except for:\n\n  * Basal cell skin cancer\n  * Adequately treated non-melanoma skin cancer or lentigo maligna without evidence of disease\n  * Adequately treated carcinoma in situ without evidence of disease (e.g., cervical cancer in situ)"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:9444-9541",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have active serious infections in particular if requiring systemic antibiotic or antimicrobial therapy.",
+      "source": {
+        "start": 9444,
+        "end": 9541,
+        "text": "Active serious infections in particular if requiring systemic antibiotic or antimicrobial therapy"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:9544-9654",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have known active Hepatitis B (e.g., HBsAg reactive) or Hepatitis C (e.g., HCV RNA [qualitative] is detected).",
+      "source": {
+        "start": 9544,
+        "end": 9654,
+        "text": "Has known active Hepatitis B (e.g., HBsAg reactive) or Hepatitis C (e.g., HCV RNA \\[qualitative\\] is detected)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:9657-9705",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have a history of known active primary immunodeficiency.",
+      "source": {
+        "start": 9657,
+        "end": 9705,
+        "text": "History of known active primary immunodeficiency"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:9708-9746",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have a history of allogeneic organ transplant.",
+      "source": {
+        "start": 9708,
+        "end": 9746,
+        "text": "History of allogeneic organ transplant"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:9749-9871",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have received live attenuated vaccination within 30 days prior to study entry or within 30 days of receiving study treatment.",
+      "source": {
+        "start": 9749,
+        "end": 9871,
+        "text": "Receipt of live attenuated vaccination within 30 days prior to study entry or within 30 days of receiving study treatment."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:9874-9972",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have gastrointestinal disorders or abnormalities that would interfere with absorption of the study drug.",
+      "source": {
+        "start": 9874,
+        "end": 9972,
+        "text": "Gastrointestinal disorders or abnormalities that would interfere with absorption of the study drug"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:9975-10349",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have serious illness or concomitant non-oncological disease such as neurologic, psychiatric, infectious disease or active ulcers (gastrointestinal tract, skin) or laboratory abnormality that may increase the risk associated with study participation or study drug administration and in the judgment of the investigator would make the patient inappropriate for entry into the study.",
+      "source": {
+        "start": 9975,
+        "end": 10349,
+        "text": "Serious illness or concomitant non-oncological disease such as neurologic, psychiatric, infectious disease or active ulcers (gastrointestinal tract, skin) or laboratory abnormality that may increase the risk associated with study participation or study drug administration and in the judgment of the investigator would make the patient inappropriate for entry into the study"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:10352-10706",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Patients who are sexually active must be willing to use a medically acceptable method of contraception (e.g., such as implants, injectables, combined oral contraceptives, some intrauterine devices or vasectomized partner for participating females, condoms for participating males) for the duration specified during the trial and after end of active therapy.",
+      "source": {
+        "start": 10352,
+        "end": 10706,
+        "text": "Patients who are sexually active and unwilling to use a medically acceptable method of contraception (e.g., such as implants, injectables, combined oral contraceptives, some intrauterine devices or vasectomized partner for participating females, condoms for participating males) for the duration specified during the trial and after end of active therapy"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:10709-10854",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Pregnancy or breastfeeding female patients must have a negative pregnancy test (β-HCG test in urine or serum) prior to commencing study treatment.",
+      "source": {
+        "start": 10709,
+        "end": 10854,
+        "text": "Pregnancy or breastfeeding female patients must have a negative pregnancy test (β-HCG test in urine or serum) prior to commencing study treatment"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:10857-10999",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Participants must not have psychological, familial, sociological, or geographical factors potentially hampering compliance with the study protocol and follow-up schedule.",
+      "source": {
+        "start": 10857,
+        "end": 10999,
+        "text": "Psychological, familial, sociological, or geographical factors potentially hampering compliance with the study protocol and follow-up schedule"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT03377023:11002-11030",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Participants must not have active alcohol or drug abuse.",
+      "source": {
+        "start": 11002,
+        "end": 11030,
+        "text": "Active alcohol or drug abuse"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:11033-11135",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have significant weight loss (> 20% of Body Weight) within past 6 months prior to inclusion into the trial.",
+      "source": {
+        "start": 11033,
+        "end": 11135,
+        "text": "Significant weight loss (\\> 20% of Body Weight) within past 6 months prior to inclusion into the trial"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03377023:11138-11168",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Participants must not have a history of active tuberculosis.",
+      "source": {
+        "start": 11138,
+        "end": 11168,
+        "text": "History of active tuberculosis"
+      },
+      "confidence": 1
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "normalizeVersion": "1",
+    "timestamp": "2026-09"
+  }
+}

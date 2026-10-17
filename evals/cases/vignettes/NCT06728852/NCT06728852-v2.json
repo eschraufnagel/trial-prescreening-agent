@@ -1,0 +1,89 @@
+{
+  "id": "NCT06728852-v2",
+  "nctId": "NCT06728852",
+  "labelSetSha": "f860d478efcfd4c6ae539bcde7594ecc8cbe3d2979b7322528842783150c7bca",
+  "behavior": "volunteers",
+  "persona": "48-year-old woman, graphic designer, organised, likes to lay out her history up front.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "Yes, I am happy to sign the informed consent.",
+      "expected": "holds"
+    },
+    {
+      "label": "L4",
+      "says": "I have had three systemic therapies before now: chemotherapy twice and immunotherapy once.",
+      "expected": "holds"
+    },
+    {
+      "label": "L15",
+      "says": "I am not breastfeeding and I would agree to use contraception for six months after the study. I have not had a pregnancy test.",
+      "expected": "defer"
+    },
+    {
+      "label": "L16",
+      "says": "That one is for male patients. I am a woman.",
+      "expected": "defer"
+    },
+    {
+      "label": "L19",
+      "says": "Yes, I was on anlotinib last year and the treatment failed.",
+      "expected": "holds"
+    },
+    {
+      "label": "L20",
+      "says": "I have never had bevacizumab.",
+      "expected": "defer"
+    },
+    {
+      "label": "L25",
+      "says": "I have not had any hemoptysis, no coughing up blood.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L28",
+      "says": "No, I am not planning any other anti-tumor therapy.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L29",
+      "says": "My last radiation therapy was a year ago.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L35",
+      "says": "I had an open biopsy three weeks ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L38",
+      "says": "I have no history of substance abuse.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L40",
+      "says": "I have not taken part in any other clinical trial.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L39",
+      "says": "I have been treated for depression in the past."
+    },
+    {
+      "label": "L43",
+      "says": "I have never had hepatitis B.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L2",
+      "says": "It was pathologically diagnosed as non-small cell lung cancer. It relapsed last year and is advanced and metastatic now.",
+      "reported": "holds"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "thinking": "off",
+  "promptVersion": "20e3f8d0f493",
+  "simulatorVersion": "31340be238a4",
+  "graderVersion": "2",
+  "vignetteSetHash": "ce067cdede97",
+  "dev": true,
+  "conversations": [
+    {
+      "vignetteId": "NCT04316364-dev",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 143617,
+        "participantMs": 85884,
+        "fidelityMs": 44643,
+        "agentCalls": 34,
+        "participantCalls": 17,
+        "fidelityCalls": 17
+      },
+      "questions": 17,
+      "flaggedTurns": [
+        {
+          "turn": 2,
+          "text": "I would rate my health as 0, fully active. Just to mention, I am not pregnant, not lactating, and have had no close contact with anyone who has or is suspected of having COVID-19.",
+          "flags": [
+            {
+              "kind": "model",
+              "reason": "The message claims the person is 'fully active' and rates their health as '0', which contradicts the facts stating they have stage IIIA lung cancer and rheumatoid arthritis, conditions that typically impair full activity."
+            }
+          ]
+        },
+        {
+          "turn": 6,
+          "text": "I don't know the specifics of my recent scans or if they meet those exact measurement criteria. I'm not sure how to answer that.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 128
+            },
+            {
+              "kind": "model",
+              "reason": "The message claims uncertainty about recent scans and measurement criteria, which contradicts the fact that the patient's lung cancer is pathologically confirmed and the surgeon has determined it is resectable, implying specific diagnostic knowledge exists."
+            }
+          ]
+        },
+        {
+          "turn": 8,
+          "text": "I don't know the specific results of my recent blood tests or if they are within normal limits. I haven't checked those details myself.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 135
+            },
+            {
+              "kind": "model",
+              "reason": "The message asserts that the person does not know the results of their recent blood tests, which is information not contained in the provided facts."
+            }
+          ]
+        },
+        {
+          "turn": 14,
+          "text": "No, I have not been diagnosed with any other types of cancer in the last 5 years. I do have rheumatoid arthritis, but that is an autoimmune condition, not cancer.",
+          "flags": [
+            {
+              "kind": "model",
+              "reason": "The message asserts that the person has not been diagnosed with other types of cancer in the last 5 years, which is information not present in the provided facts."
+            }
+          ]
+        },
+        {
+          "turn": 16,
+          "text": "I don't have a history of pneumonitis or interstitial lung disease. I do have rheumatoid arthritis, but that's an autoimmune condition, not a lung disease.",
+          "flags": [
+            {
+              "kind": "model",
+              "reason": "The message asserts that the person does not have a history of pneumonitis or interstitial lung disease, which is information not present in the provided facts."
+            }
+          ]
+        },
+        {
+          "turn": 18,
+          "text": "No, I have not been diagnosed with any significant heart or blood vessel conditions like a heart attack, stroke, or heart failure.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 130
+            },
+            {
+              "kind": "model",
+              "reason": "The message asserts that the person has not been diagnosed with heart or blood vessel conditions, which is information not present in the provided facts."
+            }
+          ]
+        },
+        {
+          "turn": 20,
+          "text": "No, I do not have a history of significant bleeding disorders or conditions that cause excessive bleeding.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 106
+            },
+            {
+              "kind": "model",
+              "reason": "The message asserts that the person does not have a history of significant bleeding disorders, which is information not present in the provided facts."
+            }
+          ]
+        },
+        {
+          "turn": 22,
+          "text": "No, I have never had a blood clot like a DVT or pulmonary embolism.",
+          "flags": [
+            {
+              "kind": "model",
+              "reason": "The message asserts that the person has never had a blood clot, but the provided facts do not contain any information regarding their history of blood clots, making this an unsupported assertion."
+            }
+          ]
+        },
+        {
+          "turn": 26,
+          "text": "I do not have Hepatitis B or Hepatitis C.",
+          "flags": [
+            {
+              "kind": "model",
+              "reason": "The message asserts that the person does not have Hepatitis B or C, but the provided facts do not contain any information regarding the person's Hepatitis status."
+            }
+          ]
+        },
+        {
+          "turn": 30,
+          "text": "I don't know the answer to that one. I haven't been diagnosed with any psychiatric conditions like depression or anxiety.",
+          "flags": [
+            {
+              "kind": "uncited-assertion",
+              "length": 121
+            },
+            {
+              "kind": "model",
+              "reason": "The message asserts that the person has not been diagnosed with psychiatric conditions like depression or anxiety, which is information not present in the provided facts."
+            }
+          ]
+        },
+        {
+          "turn": 34,
+          "text": "No, I have not been tested for COVID-19 recently, and I do not have any symptoms suggesting a current or suspected infection.",
+          "flags": [
+            {
+              "kind": "model",
+              "reason": "The message claims the person has not been tested for COVID-19, which is not stated in the facts, and asserts they have no symptoms, which is not mentioned in the facts."
+            }
+          ]
+        }
+      ],
+      "labels": {
+        "score": {
+          "determinations": 3,
+          "confidentlyWrong": 0,
+          "answerable": 3,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 3,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "outcomes": [
+          {
+            "label": "L7",
+            "expected": "holds",
+            "status": "holds",
+            "outcome": "correct",
+            "evidence": [
+              "Yes, I would agree to use contraception or practice abstinence for 180 days after the last dose."
+            ]
+          },
+          {
+            "label": "L8",
+            "expected": "does-not-hold",
+            "status": "does-not-hold",
+            "outcome": "correct",
+            "evidence": ["No, I have not had any anti-cancer therapy for my lung cancer."]
+          },
+          {
+            "label": "L17",
+            "expected": "holds",
+            "status": "holds",
+            "outcome": "correct",
+            "evidence": ["I am allergic to monoclonal antibodies"]
+          },
+          {
+            "label": "L18",
+            "expected": "unresolved",
+            "status": "unresolved",
+            "outcome": "correct-abstention",
+            "evidence": [
+              "I don't know what the specific intervention drugs are for this study, so I cannot say if I am allergic to them."
+            ]
+          },
+          {
+            "label": "L19",
+            "expected": "does-not-hold",
+            "status": "does-not-hold",
+            "outcome": "simulator-affected",
+            "evidence": ["I am not pregnant"]
+          },
+          {
+            "label": "L20",
+            "expected": "does-not-hold",
+            "status": "does-not-hold",
+            "outcome": "simulator-affected",
+            "evidence": ["not lactating"]
+          },
+          {
+            "label": "L22",
+            "expected": "unresolved",
+            "status": "unresolved",
+            "outcome": "correct-abstention",
+            "evidence": ["I prefer not to discuss that topic."]
+          },
+          {
+            "label": "L24",
+            "expected": "does-not-hold",
+            "status": "does-not-hold",
+            "outcome": "simulator-affected",
+            "evidence": [
+              "have had no close contact with anyone who has or is suspected of having COVID-19"
+            ]
+          }
+        ],
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 17,
+          "participantReplies": 17,
+          "multiQuestion": 1,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 0
+        }
+      }
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 3,
+      "confidentlyWrong": 0,
+      "answerable": 3,
+      "abstained": 0,
+      "abstainable": 2,
+      "correctAbstentions": 2,
+      "simulatorAffected": 3,
+      "confidentlyWrongRate": 0,
+      "abstentionRate": 0,
+      "correctAbstentionRate": 1
+    },
+    "parse": {
+      "scored": {
+        "determinations": 0,
+        "confidentlyWrong": 0,
+        "answerable": 0,
+        "abstained": 0,
+        "abstainable": 0,
+        "correctAbstentions": 0,
+        "simulatorAffected": 0,
+        "confidentlyWrongRate": null,
+        "abstentionRate": null,
+        "correctAbstentionRate": null
+      },
+      "categories": {}
+    }
+  },
+  "failed": []
+}

@@ -1,0 +1,86 @@
+{
+  "id": "NCT03433469-dev",
+  "nctId": "NCT03433469",
+  "labelSetSha": "3858521c6adf07e6d939b0be1b7ccd1979a26130da9b06da8bf96e2ae9da6c45",
+  "behavior": "cooperative",
+  "persona": "44-year-old woman, primary school teacher, clear and direct.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "I'm 44.",
+      "expected": "holds"
+    },
+    {
+      "label": "L20",
+      "says": "I can swallow oral medicines without any trouble.",
+      "laterSays": "Big tablets are a struggle for me, to be honest. I often can't get them down.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L22",
+      "says": "Yes, I'll use highly effective contraception throughout, and for the 90 days after the final dose.",
+      "expected": "holds"
+    },
+    {
+      "label": "L49",
+      "says": "It asks about men, and I'm a woman, so I can't answer it.",
+      "expected": "defer"
+    },
+    {
+      "label": "L55",
+      "says": "I don't take any regular medicines.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L59",
+      "says": "I haven't started any cancer treatment yet, of any kind.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L63",
+      "says": "No antibiotics for well over a year.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L67",
+      "says": "Not pregnant, no.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L68",
+      "says": "I'm not breastfeeding.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L70",
+      "says": "Hypersensitivity to a drug? Never, not to any.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L71",
+      "says": "I don't work at the hospital or on this study. I teach at a primary school.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L72",
+      "says": "Yes, a migraine drug trial. I stopped its trial medicine a month ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L2",
+      "says": "Six weeks ago a biopsy confirmed it: the non-small cell type of lung cancer.",
+      "reported": "holds"
+    },
+    {
+      "label": "L53",
+      "says": "I've been tested for HIV and it was negative.",
+      "reported": "does-not-hold"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": true,
+    "note": "Dev vignette for slice 0009. Never scored. The drafter had read the 17 confidently wrong findings from labels in the twelve scored conversations outside the least-seen three, and writes the agent's fixes too. Classes: self-correction L20 (its correction arrives in the reply to the clinical L21); does-not-apply L49 (the criterion names men; she is a woman; the only criterion for one sex in this study, and it failed in the twelve, so reuse is unavoidable); polarity L72 (an exclusion that holds) and L71 (one that does not). Controls: L22 (a firm agreement to contraception, on a label where a hedged one failed in the twelve); L55 (a plain denial); L67 and L68 (plain denials of pregnancy and breastfeeding); L70 (a general denial that plainly covers the criterion). L59 and L63 failed in the twelve; they are answered plainly and test no class."
+  }
+}

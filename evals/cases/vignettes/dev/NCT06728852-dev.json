@@ -1,0 +1,87 @@
+{
+  "id": "NCT06728852-dev",
+  "nctId": "NCT06728852",
+  "labelSetSha": "f860d478efcfd4c6ae539bcde7594ecc8cbe3d2979b7322528842783150c7bca",
+  "behavior": "declines",
+  "persona": "63-year-old woman, runs a small bakery, polite but private, prefers not to go into some details.",
+  "facts": [
+    {
+      "label": "L1",
+      "says": "Yes, I'm happy to sign the consent form.",
+      "expected": "holds"
+    },
+    {
+      "label": "L4",
+      "says": "I've had three systemic treatments so far, one after another.",
+      "expected": "holds"
+    },
+    {
+      "label": "L15",
+      "says": "That's for women who could still have children. I went through the change twelve years ago.",
+      "expected": "defer"
+    },
+    {
+      "label": "L16",
+      "says": "That's for men, and I'm a woman.",
+      "expected": "defer"
+    },
+    {
+      "label": "L19",
+      "says": "Anlotinib, yes, last year. It stopped working.",
+      "expected": "holds"
+    },
+    {
+      "label": "L20",
+      "says": "Eighteen days ago was my most recent bevacizumab.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L25",
+      "says": "I cough up a bit of blood now and then, maybe a teaspoon. I've never measured it.",
+      "expected": "defer"
+    },
+    {
+      "label": "L28",
+      "says": "No other cancer treatment is planned. My doctor is waiting to see about this study.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L29",
+      "says": null,
+      "declines": true,
+      "expected": "unresolved"
+    },
+    {
+      "label": "L35",
+      "says": null,
+      "declines": true,
+      "expected": "unresolved"
+    },
+    {
+      "label": "L38",
+      "says": "Substance abuse has never been part of my life. I don't drink, and I've never used drugs.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L40",
+      "says": "Yes, I was on a trial drug for the cancer, but that ended six weeks ago.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L2",
+      "says": "The pathology found non-small cell cancer of the lung. It has relapsed, and it's metastatic now.",
+      "reported": "holds"
+    },
+    {
+      "label": "L42",
+      "says": "HIV? No, never had it.",
+      "reported": "does-not-hold"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": true,
+    "note": "Dev vignette for slice 0009. Never scored. The drafter had read the 17 confidently wrong findings from labels in the twelve scored conversations outside the least-seen three, and writes the agent's fixes too. Classes: does-not-apply L16 (names male patients; she is a woman) and L15 (defer: whether a woman past menopause is of childbearing potential is interpretation; this label failed in the twelve for a man, and it is the only other criterion for one sex here); polarity L20 (the allowance with a condition, the only one among the corpus's patient criteria, so reuse of a label that failed in the twelve is unavoidable; answered in the other direction, the dose too recent), L19 (an exclusion that holds), L28 and L40 (ones that do not); hedged or interpretive L25 (defer: whether a teaspoon a day is more than 5 ml). Controls: L1 (a firm agreement); L4 (a clean inclusion). L29 and L35 are declined, as the behavior requires. L38 failed in the twelve; it is answered plainly and tests no class."
+  }
+}

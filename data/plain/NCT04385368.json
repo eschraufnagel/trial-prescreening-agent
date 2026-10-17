@@ -1,0 +1,867 @@
+{
+  "nctId": "NCT04385368",
+  "source": "labels",
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "thinking": "off",
+    "promptVersion": "e5a58e26c2ac",
+    "timestamp": "2026-09"
+  },
+  "renderings": [
+    {
+      "criterionId": "L1",
+      "textSha": "1672d5a3c8d69e17e9cd065d8203da81179058f84e63a65de33e8dddccdc4505",
+      "attempts": [
+        {
+          "plain": "Can give signed informed consent, which includes a mandatory genetic informed consent and compliance with the requirements and restrictions listed in the informed consent forms (ICFs) and in this protocol.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L2",
+      "textSha": "46f06c3675404c170d76e1174dc639e6c06ecce94864f5346b92ee658ad20725",
+      "attempts": [
+        {
+          "plain": "Signed and dated, written informed consent forms (ICFs) must be provided before any mandatory study-specific procedures, sampling, and analyses.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L3",
+      "textSha": "d20cb48d6b546bdb138950cf9f76c392e17fd77852b258dbb393cc787d82f830",
+      "attempts": [
+        {
+          "plain": "The ICF1 (informed consent form) is signed and dated before any study procedures and before the planned surgical removal of the primary NSCLC, with the exceptions noted below.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L4",
+      "textSha": "443bf13e3266cc6b6c6302a457a8ccb80a3ebbbf1080b464d82a45323002f4aa",
+      "attempts": [
+        {
+          "plain": "A whole blood sample and resected tumor tissue (tumor removed by surgery) must be collected and sent to the diagnostic lab as soon as possible after ICF1 is signed for development of the personalized panel.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L5",
+      "textSha": "24834f0c9f5e39170b4119aa67ac09cec3e40458bd95d3a882d4a7bf7e6030e2",
+      "attempts": [
+        {
+          "plain": "A plasma sample (a part of blood) must still be collected at Week 3-5 (Day 21-35) after surgery, even if the creation of the personalized panel for MRD detection is delayed.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L6",
+      "textSha": "1e840fa595b105b5568cb558326b9e32aaf4d7221632b9a27236de738f4d3e0f",
+      "attempts": [
+        {
+          "plain": "Is at least 18 years old at the time of screening.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L7",
+      "textSha": "2dbdd4e80df04f226699015e9e556c9208ce3f976488ecd59b354cfc6b8293ea",
+      "attempts": [
+        {
+          "plain": "Has a diagnosis of NSCLC (non-small cell lung cancer) confirmed by examining a tissue sample (histologically) using the WHO 2015 classification, with disease that can be removed by surgery (resectable) at stage II-III according to the IASLC Staging Manual in Thoracic Oncology v8.0.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L8",
+      "textSha": "7ae687ff553668f05e3aecbf45b018c54f4c6928079160c5e4fd90fd243dbaea",
+      "attempts": [
+        {
+          "plain": "Has stage IIIB cancer that is selected (T3N2 or T4N2), provided that the stage is upstaged to T3N2 or T4N2 based on confirmed pathology (examined tissue sample).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L9",
+      "textSha": "e84d765fa9225b61477d25ebd22910035b85df2a0cf78a120b3eccd73dced694",
+      "attempts": [
+        {
+          "plain": "Is staged as T3N2 or T4N2 before surgery.",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 0 in the plain",
+            "term missing: ast3n2",
+            "term added: t3n2"
+          ]
+        },
+        {
+          "plain": "Is staged as T3N2 or T4N2 before surgery and is not eligible.",
+          "reportAtGeneration": [
+            "term missing: ast3n2",
+            "term added: t3n2"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L10",
+      "textSha": "b822d6370dfc17731b50a473dadf7211c44507df6c579faedb59d7ebb32c5b73",
+      "attempts": [
+        {
+          "plain": "A contrast-enhanced CT or MRI scan of the chest has been done for surgical planning before surgery.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L11",
+      "textSha": "0292331130e5ea582238487fbdf1d6b9402ed38b9b7bbeab9bc8b5d4ce657ea0",
+      "attempts": [
+        {
+          "plain": "If pre-operative FDG-PET CT imaging is not done, pre-operative contrast-enhanced CT imaging or MRI scan must cover the liver and adrenal glands.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L12",
+      "textSha": "87233b2b33f52e6befea2154a1377f67c93e9815f555b46e6d2e72f8a88e3a9d",
+      "attempts": [
+        {
+          "plain": "A brain MRI (preferred) or a brain CT scan with IV contrast is needed to fully stage the tumor.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L13",
+      "textSha": "c0f9d007f4963550e07bf29e12f0f4f6b1818f5396501c3f78cb470d3f3b6a0e",
+      "attempts": [
+        {
+          "plain": "The primary NSCLC (non-small cell lung cancer) has been completely removed by surgery.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L14",
+      "textSha": "a88370f39663d004644105d9bd877ffeb677304da64f416109686ba145a79e1d",
+      "attempts": [
+        {
+          "plain": "The primary tumor is considered resectable (can be removed by surgery) based on an evaluation by a group of experts that includes a thoracic surgeon (a doctor who operates on the chest) who is certified or trained according to local standards and performs lung cancer surgery as a significant part of their practice.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L15",
+      "textSha": "ef197b9cc3d87fd4a1bf91f871232f9204c3bab2da5bc5d01a94e045c3151b3e",
+      "attempts": [
+        {
+          "plain": "Is undergoing wedge resection (a type of surgery to remove a wedge-shaped piece of tissue).",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 0 in the plain"
+          ]
+        },
+        {
+          "plain": "Is undergoing wedge resection (a type of surgery to remove a wedge-shaped piece of tissue) and is not eligible for this study.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L16",
+      "textSha": "de0723deca6445eba046051d5b13995a1196a4908b673c066d9b4b5987fa7df8",
+      "attempts": [
+        {
+          "plain": "For patients undergoing segmentectomy, the tumor has a maximum diameter of less than 2 cm.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L17",
+      "textSha": "7df0a8b2e6edad4db6aea6485bde6341b067e05e9c28a6197ab008030746b0b2",
+      "attempts": [
+        {
+          "plain": "The surgeon performing the resection should remove all visible disease by the end of surgery.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L18",
+      "textSha": "7c0f69ba5a3683f22b46c43915ed94489296e780042e7733e8c1c21b45672c4e",
+      "attempts": [
+        {
+          "plain": "All surgical margins of resection (the edges of the removed tissue) are macroscopically negative for tumor (no tumor is visible to the naked eye).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "All surgical margins of resection (the edges of the removed tissue) are macroscopically negative for tumor (no tumor is visible to the naked eye).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L19",
+      "textSha": "144f2e51b651046a45ebae3d43ec36634f808077931b01fcb97f5c18fb99e868",
+      "attempts": [
+        {
+          "plain": "Pathology and/or operative reports must include the examination of at least 2 different mediastinal lymph node (N2) levels, one of which is the subcarinal node-group (level 7) and the second of which is lobe-specific (defined below).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L20",
+      "textSha": "cfe4ed38d7a6cd34fbc5f6062e3d477979a57cb621e0e4ffa1d1f7f1fe805d24",
+      "attempts": [
+        {
+          "plain": "The surgeon must clearly document in the operative report or in a separate written statement that the lymph node level was explored and no lymph nodes were present.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L21",
+      "textSha": "2090ef8ae72ca7ca9b5295e608d062bdf113ac740b38ee632fcbbd5247d703ab",
+      "attempts": [
+        {
+          "plain": "If normal appearing lymph nodes (lymph nodes that look healthy on imaging) are present, they must be biopsied (a small sample is taken for testing) or removed.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L22",
+      "textSha": "3498ef83ec7a91b0e0c1cd9c06677a7a5ee93950ee55429cf9686d1447bdcbf1",
+      "attempts": [
+        {
+          "plain": "The exploration of nodes must be clearly recorded in the medical file if it is not already in the operative report.",
+          "reportAtGeneration": [
+            "scope word missing: documented"
+          ]
+        },
+        {
+          "plain": "The exploration of nodes must be clearly documented in the medical file if not recorded in the operative report.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L23",
+      "textSha": "009b93b381b33a78362c964d4a4216ff48dc510affd9b8ab9a4d1db76dac98bc",
+      "attempts": [
+        {
+          "plain": "Lobe-specific lymph node stations are classified based on the location of the primary tumor as follows (based on IASLC 2009 lymph node map terminology [Rusch et al 2009]): Stations 2R and 4R for right upper lobe or middle lobe tumors, stations 4L, 5, and 6 for left upper lobe tumors, stations 8 and 9 for lower lobe tumors of both sides (Adachi et al 2017, Rami-Porta et al 2005).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L24",
+      "textSha": "b2d40aab80abcc170dbf5f5854939eea40102bb38efdf0addb4b608afd9cd902",
+      "attempts": [
+        {
+          "plain": "No extracapsular nodal extension (spread of the tumor outside the lymph node capsule) is observed in resected mediastinal N2 lymph nodes.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L25",
+      "textSha": "ddfd135c7fca5739333520fbf8d1f5eac455ecb72364905f2858db72e599104e",
+      "attempts": [
+        {
+          "plain": "Has a pre-surgical plasma sample (blood sample) collected for MRD (minimal residual disease) evaluation if enrolled in the study before surgery.",
+          "reportAtGeneration": [
+            "scope word missing: all"
+          ]
+        },
+        {
+          "plain": "All patients who enrol in the study prior to surgery must have a pre-surgical plasma sample (blood sample) collected for MRD (minimal residual disease) evaluation.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L26",
+      "textSha": "975707320d0749c16433a4d2f79dfc2a7bcb7a64fe27992edf927e2daa1418c1",
+      "attempts": [
+        {
+          "plain": "Has confirmed suitable samples of resected tumor tissue and whole blood for WES (whole exome sequencing) of tumor and germline DNA, respectively, and creation of Sponsor-approved personalized panel for MRD (minimal residual disease) detection.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L27",
+      "textSha": "5e0757c134454fe4d5e8b062002b60dbf681561acfb733e8d12a6fd06076173b",
+      "attempts": [
+        {
+          "plain": "Tumor tissue and whole blood samples must be provided to the diagnostic laboratory for development of the personalized panel as soon as possible.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L28",
+      "textSha": "f821fa9c1582fce0b3a5c8f1db65b441a4ee20a6e620ce240133131d4f065a32",
+      "attempts": [
+        {
+          "plain": "Has germline sequencing (genetic testing of DNA from white blood cells) of whole blood.",
+          "reportAtGeneration": [
+            "term added: dna"
+          ]
+        },
+        {
+          "plain": "Has germline sequencing (genetic testing) of whole blood.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L29",
+      "textSha": "5115c6cf0968ac5f92465de7e8de40a7ab6b96ad66cde432b4a1f2b2a051f846",
+      "attempts": [
+        {
+          "plain": "Has an established MRD status (MRD+ or MRD-) based on a Sponsor-approved personalized assay of a plasma sample collected at Week 3-5 (Day 21-35) post-surgery.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L30",
+      "textSha": "7fc13125b50c5c9d4fa0b8a3b97a7a899bfd9fac0df9f2c918fd82553b00bb98",
+      "attempts": [
+        {
+          "plain": "The tumor's PD-L1 status (a protein on cancer cells) is known, having been determined by a central reference laboratory using a validated Ventana SP263 PD-L1 immunohistochemistry (IHC) assay (a test that uses antibodies to detect proteins in tissue samples) before randomization.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L31",
+      "textSha": "0ddb3d1e408d008d30c35fe90b5e8fffb3207cbff316537c2b3a0f44a8f2a640",
+      "attempts": [
+        {
+          "plain": "A CT scan (a type of X-ray imaging) of the chest, including the liver and adrenal glands, performed within 28 days plus 7 days before randomization.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L32",
+      "textSha": "9c3bbede399052741a20558a31cee5e82f4e09007744394db7edec2a6781db2f",
+      "attempts": [
+        {
+          "plain": "ICF2 is signed and dated after MRD status is determined and before starting any study-specific procedures, sampling, and analyses outlined in SoAs in Table 2 and Table 3.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L33",
+      "textSha": "87979a8f79606086a761cfef23836ce39f30d122a00e086a7b66d30a4fd18c26",
+      "attempts": [
+        {
+          "plain": "Randomization (being assigned to a study group) must happen within 12 weeks (+ 7 days) after surgery.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L34",
+      "textSha": "79621c30b02ff3fc2741e147df23c4fec37c27de4ee64011a4dd56afe47eda75",
+      "attempts": [
+        {
+          "plain": "Has a WHO/Eastern Cooperative Oncology Group (ECOG) performance status (a measure of how well a person can perform ordinary daily tasks) of 0 or 1.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L35",
+      "textSha": "91ce6fe8dfd3b3e8c1812dd10e60f1fa8c98fb59766a715c94e813ca16e8bdba",
+      "attempts": [
+        {
+          "plain": "The surgical wound has completely healed before randomization. Has recovered from all acute, reversible toxic effects (side effects) from prior treatments, except for hair loss (alopecia), that could potentially negatively affect the further administration of durvalumab/placebo or chemotherapy, according to the Investigator's judgment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L36",
+      "textSha": "d1328b285d3f3d7785b07e5afb47c72600cc823467af4c6d5293aad2027f59eb",
+      "attempts": [
+        {
+          "plain": "Is able to tolerate 4 cycles of platinum-based adjuvant chemotherapy (treatment given after surgery to lower the risk of cancer returning).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L37",
+      "textSha": "938a1218045a4b1bc878e1900483146e999feda5279d451565d20e18765dc140",
+      "attempts": [
+        {
+          "plain": "Has adequate organ and marrow function as described in the protocol.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L38",
+      "textSha": "946e98b9ac9ff3fa9b8fb5e9f74d8414b3e5b0c116e01da06c119951b6d71b77",
+      "attempts": [
+        {
+          "plain": "Has a life expectancy of at least",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L39",
+      "textSha": "5fb4ea5c6c4e827685b28587cccc5f4d0ed31fb29227668676358fc55a34259d",
+      "attempts": [
+        {
+          "plain": "Post-operative imaging shows clear (unequivocal) evidence of disease recurrence, or a tissue biopsy (examining a small piece of tissue) proves disease recurrence.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L40",
+      "textSha": "a8fda84ea9834897f205c0d23f6d543f5432048911efb6122994aff6ecfb72e7",
+      "attempts": [
+        {
+          "plain": "If imaging shows lymphadenopathy (swollen lymph nodes) that would lead to exclusion, histopathological confirmation (examining a tissue sample under a microscope) of lymph node metastasis (cancer that has spread to the lymph nodes) should be obtained before excluding a patient from the study.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L41",
+      "textSha": "550e32e9f4e02902ccb4ffae7c3bc2943f72a6712d3728c3f0157a12b858e844",
+      "attempts": [
+        {
+          "plain": "Has an EGFR mutation and/or an ALK translocation, as determined from a biopsy sample taken before surgery (preferred) or from the tumor tissue removed during surgery (if the biopsy sample was not suitable or available).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L42",
+      "textSha": "65133e8b5d589553ce3a7ea3db7cbe1fa6d5822f18a333f2680bbd7c911c8a46",
+      "attempts": [
+        {
+          "plain": "If EGFR/ALK results come from a tissue sample taken before surgery as part of standard local practice, the patient must be confirmed EGFR/ALK wild-type (has no mutations in these genes) before enrolling in the study.",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "If EGFR/ALK results come from a tissue sample taken before surgery as part of standard local practice, the patient must be confirmed EGFR/ALK wild-type (has no mutations in these genes) before enrolling in the study.",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L43",
+      "textSha": "2408e0b7fdcbb35197364d895b133be82d6b68b9bd0601e9f70e5dd1ee2ae54c",
+      "attempts": [
+        {
+          "plain": "Results from testing the patient's primary tumor tissue during screening for another AstraZeneca study may be used in this study.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L44",
+      "textSha": "73b8e31c5c7c74e4ba4b55f14942ef76522c870371ef5c52d038643c2b35143c",
+      "attempts": [
+        {
+          "plain": "Results from local testing of a tissue sample (biopsy) taken before surgery.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L45",
+      "textSha": "dfcb52c360a4c8af2983d99e2fa35ffc142ca54b722fbbf56377fb3aa5042c00",
+      "attempts": [
+        {
+          "plain": "All local EGFR/ALK testing performed locally must be done using a well-validated, local regulatory-approved test.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L46",
+      "textSha": "928d0db2388c2b1649275b79873a533054a356b6d73c67112b06afbd0f22b146",
+      "attempts": [
+        {
+          "plain": "Has mixed small cell and NSCLC histology (a type of lung cancer).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L47",
+      "textSha": "649cb32f742b2e360dc69916ff00ac39945e5f0cf6e9ef19b4d4f3f78f314c5d",
+      "attempts": [
+        {
+          "plain": "Need another surgery or are considered to have unresectable NSCLC (lung cancer that cannot be removed by surgery) based on an evaluation by a team that must include a thoracic surgeon (a surgeon who specializes in chest surgery) who performs lung cancer surgery as a significant part of their practice.",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        },
+        {
+          "plain": "Need another surgery or are considered to have unresectable NSCLC (lung cancer that cannot be removed by surgery) based on an evaluation by a team that must include a thoracic surgeon (a surgeon who specializes in chest surgery) who performs lung cancer surgery as a significant part of their practice.",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L48",
+      "textSha": "1582b1e67e908055d78c17d4fb87cf936535e19004de104afccc05ffd32bef5d",
+      "attempts": [
+        {
+          "plain": "Are candidates to undergo only wedge resections (a type of surgery where a small, wedge-shaped piece of tissue is removed).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L49",
+      "textSha": "02651edfd697da46c1388966d9a3c07d83fe9a961d1449a91709993aea3b9556",
+      "attempts": [
+        {
+          "plain": "Has a history of allogeneic organ or bone marrow transplantation (receiving an organ or bone marrow from a donor who is not a close relative).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "Has a history of allogeneic organ or bone marrow transplantation (receiving an organ or bone marrow from a donor who is not a close relative).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L50",
+      "textSha": "8ef3f3d55f7dc3dc2c85f413152ac200f3ccfd9a7dffad5cb552a641850476be",
+      "attempts": [
+        {
+          "plain": "Has received a whole blood transfusion (giving blood from a donor) within 120 days of genetic sample collection, where the transfusion was not leukocyte-depleted (the white blood cells were not removed).",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 2 in the plain"
+          ]
+        },
+        {
+          "plain": "Has received a whole blood transfusion (giving blood from a donor) within 120 days of genetic sample collection, where the transfusion was leukocyte-depleted (the white blood cells were removed).",
+          "reportAtGeneration": [
+            "negations: 1 in the protocol, 0 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L51",
+      "textSha": "33e21f2ab66760285cb112d0a5034362dd5fe4bca95f2320e71befaed0f426b8",
+      "attempts": [
+        {
+          "plain": "Has active or prior documented autoimmune or inflammatory disorders (conditions where the immune system attacks the body's own tissues or causes inflammation), including inflammatory bowel disease (eg, colitis or Crohn's disease), diverticulitis (inflammation of pouches in the colon, except for diverticulosis which is just the presence of the pouches), systemic lupus erythematosus, Sarcoidosis syndrome, or Wegener syndrome (granulomatosis with polyangiitis, Graves' disease, rheumatoid arthritis, hypophysitis, uveitis, etc).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L52",
+      "textSha": "8675a0ff9479a22ae5cc59d191c5b3688fb1fe4e594c75e925ce84d5648369c4",
+      "attempts": [
+        {
+          "plain": "Has an uncontrolled intercurrent illness (a medical condition that occurs during the study), including but not limited to: an ongoing or active infection (an infection that is currently present), symptomatic congestive heart failure (heart failure that causes symptoms), uncontrolled hypertension (high blood pressure that is not managed), unstable angina pectoris (chest pain that is unpredictable or worsening), uncontrolled cardiac arrhythmia (an irregular heartbeat that is not managed), active ILD (interstitial lung disease that is currently present), serious chronic gastrointestinal conditions associated with diarrhea (long-term gut problems causing diarrhea), or psychiatric illness/social situations that would limit compliance with study requirements, substantially increase risk of incurring AEs (adverse events), or compromise the ability of the patient to give written informed consent.",
+          "reportAtGeneration": [
+            "negations: 5 in the protocol, 8 in the plain"
+          ]
+        },
+        {
+          "plain": "Has an uncontrolled intercurrent illness (a medical condition that occurs during the study), including but not limited to: an ongoing or active infection (an infection that is currently present), symptomatic congestive heart failure (heart failure that causes symptoms), uncontrolled hypertension (high blood pressure that is not managed), unstable angina pectoris (chest pain that is unpredictable or worsening), uncontrolled cardiac arrhythmia (an irregular heartbeat that is not managed), active ILD (interstitial lung disease that is currently present), serious chronic gastrointestinal conditions associated with diarrhea (long-term gut problems causing diarrhea), or psychiatric illness/social situations that would limit compliance with study requirements, substantially increase risk of incurring AEs (adverse events), or compromise the ability of the patient to give written informed consent.",
+          "reportAtGeneration": [
+            "negations: 5 in the protocol, 8 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L53",
+      "textSha": "4eff0f1d49a0cbc22f401566a493fbe137b4a428a7916bf31f4bacb1c0b5663d",
+      "attempts": [
+        {
+          "plain": "Has a history of another primary malignancy (a new, separate cancer), except for",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L54",
+      "textSha": "bbdc2730225f591e66c4612c2c9a4c048306bd79f234f13081e6271472a1cd4c",
+      "attempts": [
+        {
+          "plain": "Has a history of active primary immunodeficiency (a condition present from birth where the immune system does not work properly).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "Has a history of active primary immunodeficiency (a condition present from birth where the immune system does not work properly).",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L55",
+      "textSha": "bcbca882fae3d7448e2eaf1328b84a80c386561d3bcec1d69d9e1dc86c5474d0",
+      "attempts": [
+        {
+          "plain": "Has an active infection, including tuberculosis (checked by reviewing medical history, physical exam, imaging, and TB testing as per local practice), hepatitis B (HBV; known positive HBV surface antigen [HBsAg] result), hepatitis C (HCV), or human immunodeficiency virus infection (positive HIV 1/2 antibodies).",
+          "reportAtGeneration": [
+            "term added: tb"
+          ]
+        },
+        {
+          "plain": "Has an active infection, including tuberculosis (clinical evaluation that includes clinical history, physical examination, and radiographic findings, and tuberculosis testing in line with local practice), hepatitis B (HBV; known positive HBV surface antigen [HBsAg] result), hepatitis C (HCV), or human immunodeficiency virus infection (positive HIV 1/2 antibodies).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L56",
+      "textSha": "7ef8d07bfa39fb9204dc0d6e37219da17e3139dd9ab4495fcc9254673f2bf815",
+      "attempts": [
+        {
+          "plain": "Is positive for HCV antibody (has antibodies to hepatitis C virus) only if polymerase chain reaction (a test that detects genetic material) is negative for HCV RNA (hepatitis C virus genetic material).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L57",
+      "textSha": "a82d42614ede9929d16c42365bed7c5d548802f03d4f6d727af6e027c47a6ea6",
+      "attempts": [
+        {
+          "plain": "Is known to be allergic or hypersensitive (an extreme or unusual reaction) to any of the IPs or any of the IP excipients.",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        },
+        {
+          "plain": "Has a known allergy or hypersensitivity (an extreme or unusual reaction) to any of the IPs or any of the IP excipients.",
+          "reportAtGeneration": [
+            "negations: 0 in the protocol, 1 in the plain"
+          ]
+        }
+      ]
+    },
+    {
+      "criterionId": "L58",
+      "textSha": "8b238134b6a13934c8c6fdf55c119c43923312e827864bdb56d5df53768eaae1",
+      "attempts": [
+        {
+          "plain": "Has any medical reason (contraindication) that prevents treatment with platinum-based doublet chemotherapy, as listed in the local labeling.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L59",
+      "textSha": "12e80b8441030c7c62ddea0b60f242a7c3cd460e718643db3dc7eecfa16e5e6c",
+      "attempts": [
+        {
+          "plain": "Has received any prior adjuvant therapy (treatment given after primary treatment to lower the risk of cancer coming back) for NSCLC or has had any prior exposure to durvalumab.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L60",
+      "textSha": "2bda4553fcab46c0dbb7f5905967f79038437583fe41a14c377d07e2f5ff2fda",
+      "attempts": [
+        {
+          "plain": "Is receiving any concurrent chemotherapy, intraperitoneal (IP) therapy, biologic, or hormonal therapy for cancer treatment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L61",
+      "textSha": "995a115275a933a5597995d189aaec28bd679f9d15493b8e0888992a0d9d4972",
+      "attempts": [
+        {
+          "plain": "Has received radiotherapy treatment for non-small cell lung cancer (NSCLC) in the neoadjuvant setting (treatment given before the main treatment).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L62",
+      "textSha": "316505dec6ea3329951b5bd2f88c3bba5893aa157795e689f592b37e759d0323",
+      "attempts": [
+        {
+          "plain": "Received radiotherapy treatment to more than 30% of the bone marrow or with a wide field of radiation within 4 weeks of the first dose of IP.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L63",
+      "textSha": "3842b3c27e3b34510a09892015bb71c0bf17302099ef9c8cfce3e0adb933a7bf",
+      "attempts": [
+        {
+          "plain": "Has received a live attenuated vaccine (a vaccine made from a weakened form of the germ) within 30 days before the first dose of the investigational product (IP).",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L64",
+      "textSha": "cceead7c1cce8ecd88beea7fbfcdae440599fead5d488ba5146c3e8d1164ea7a",
+      "attempts": [
+        {
+          "plain": "Had a major surgical procedure (as defined by the Investigator) within 28 days before the first dose of IP.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L65",
+      "textSha": "bc90bf339d10297efc8556be692e3fd5cd35ef7068e20f60ba5efcec08f9bae9",
+      "attempts": [
+        {
+          "plain": "Has used immunosuppressive medication (medicine that lowers the immune system's activity) currently or previously within 14 days before the first dose of durvalumab/placebo.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L66",
+      "textSha": "d851743808dcc6355268e8b5616432a5d018aac3c72bcf7e61703fb7f933af86",
+      "attempts": [
+        {
+          "plain": "Has taken part in another clinical study that gave an investigational product (IP) since the surgery was finished.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L67",
+      "textSha": "32e2249192417b500a4030cd2a7b6a3fb25288e4751e4595c0a630b3c89a1c36",
+      "attempts": [
+        {
+          "plain": "Has been assigned to an intervention group (IP) in the current study.",
+          "reportAtGeneration": [
+            "scope word missing: prior"
+          ]
+        },
+        {
+          "plain": "Has been assigned to an intervention group (IP) in the current study prior to this.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L68",
+      "textSha": "0aba186d66740be711380f4e7808cbe52032e6fdc5ef20ed58d6baced5d4d547",
+      "attempts": [
+        {
+          "plain": "Is enrolled in another clinical study, unless it is an observational (noninterventional) clinical study, or is during the follow-up period of an interventional study.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L69",
+      "textSha": "39eb0f29c2d1626bf747d01529db3d4f05371b5e9b0ddfcf579c4bf4be13c911",
+      "attempts": [
+        {
+          "plain": "Has been randomized or treated in a previous durvalumab clinical study, regardless of the treatment group assignment.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L70",
+      "textSha": "27d5f5119669005cd3a50502a769ae04ce80ee5e76628c445c0b1b07c64842c0",
+      "attempts": [
+        {
+          "plain": "Has never smoked, defined as having smoked no more than 100 cigarettes or its equivalent in a lifetime.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L71",
+      "textSha": "376be72e38bba9182802afedc01055b389d210a3cb9081bf85927b89273b8767",
+      "attempts": [
+        {
+          "plain": "Is pregnant",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L72",
+      "textSha": "6d0d69a4b6576ea98d133a9be42f2f1cdd834fdfd5cf0e4ddf8166da202c5cca",
+      "attempts": [
+        {
+          "plain": "Is breastfeeding.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L73",
+      "textSha": "4fe787bc773da2d31b8111897c0b1549a2aa50246e0b4f887531087b8906796e",
+      "attempts": [
+        {
+          "plain": "Male or female patients of reproductive potential who are not willing to use effective birth control from screening to 90 days after the last dose of durvalumab/placebo.",
+          "reportAtGeneration": []
+        }
+      ]
+    },
+    {
+      "criterionId": "L74",
+      "textSha": "d58643d885af199b1ea613207e1126482d677587d6275e653d10b7cb03a59b25",
+      "attempts": [
+        {
+          "plain": "The Investigator judges that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions, and requirements.",
+          "reportAtGeneration": []
+        }
+      ]
+    }
+  ]
+}

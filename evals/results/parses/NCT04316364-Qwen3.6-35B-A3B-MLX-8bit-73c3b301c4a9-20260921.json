@@ -1,0 +1,268 @@
+{
+  "nctId": "NCT04316364",
+  "criteria": [
+    {
+      "id": "NCT04316364:23-90",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "source": {
+        "start": 23,
+        "end": 90,
+        "text": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:93-270",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has previously untreated, pathologically confirmed resectable Stage II, IIIA, or Selected IIIB Non-Small-Cell Lung Cancer (NSCLC), with staging based on the 8th edition of the AJCC/UICC staging system.",
+      "source": {
+        "start": 93,
+        "end": 270,
+        "text": "Have previously untreated, pathologically confirmed resectable Stage II, IIIA, or Selected IIIB NSCLC. Staging should be based on the 8th edition of the AJCC/UICC staging system"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:273-380",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "An attending thoracic surgeon has evaluated the participant and confirmed eligibility for an R0 resection with curative intent.",
+      "source": {
+        "start": 273,
+        "end": 380,
+        "text": "Evaluation by an attending thoracic surgeon to confirm eligibility for an R0 resection with curative intent"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:383-472",
+      "polarity": "inclusion",
+      "type": "protocol",
+      "text": "Adequate tumor tissue sample blocks are available for central programmed death-ligand 1 (PD-L1) testing.",
+      "source": {
+        "start": 383,
+        "end": 472,
+        "text": "Adequate tumor tissue sample blocks for central programmed death-ligand 1 (PD-L1) testing"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:475-519",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has measurable disease as defined by RECIST v1.1.",
+      "source": {
+        "start": 475,
+        "end": 519,
+        "text": "Measurable disease as defined by RECIST v1.1"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:522-545",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has adequate organ function.",
+      "source": {
+        "start": 522,
+        "end": 545,
+        "text": "Adequate organ function"
+      },
+      "confidence": 0.8
+    },
+    {
+      "id": "NCT04316364:548-714",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Women of childbearing age without sterilizing or male must agree to use contraception or practice abstinence at least 180 days after the last dose of study treatment.",
+      "source": {
+        "start": 548,
+        "end": 714,
+        "text": "Women of childbearing age without sterilizing or male, must agree to use contraception or practice abstinence at least 180 days after the last dose of study treatment"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:739-798",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant has received any previous systematic anti-cancer therapy for lung cancer.",
+      "source": {
+        "start": 739,
+        "end": 798,
+        "text": "Any previous systematic anti-cancer therapy for lung cancer"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:801-873",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has active, known or suspected autoimmune disease.",
+      "source": {
+        "start": 801,
+        "end": 873,
+        "text": "With active, known or suspected autoimmune disease of autoimmune disease"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:876-943",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has had malignancies other than Non-Small-Cell Lung Cancer (NSCLC) within 5 years prior to randomization.",
+      "source": {
+        "start": 876,
+        "end": 943,
+        "text": "Malignancies other than NSCLC within 5 years prior to randomization"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:946-1099",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has or is suspected to have a history of pneumonitis/interstitial lung disease or any severe lung diseases which will influence the examination of lung function.",
+      "source": {
+        "start": 946,
+        "end": 1099,
+        "text": "Has or suspected has a history of pneumonitis /interstitial lung disease or any serve lung diseases which will influence the examination of lung function"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1102-1167",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has a significant history of cardiovascular and cerebrovascular disease.",
+      "source": {
+        "start": 1102,
+        "end": 1167,
+        "text": "Significant history of cardiovascular and cerebrovascular disease"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1170-1202",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has a significant haemorrhagic disease.",
+      "source": {
+        "start": 1170,
+        "end": 1202,
+        "text": "Significant haemorrhagic disease"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1205-1243",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has had arteriovenous thrombotic events.",
+      "source": {
+        "start": 1205,
+        "end": 1243,
+        "text": "Has an arteriovenous thrombotic events"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1246-1313",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has a known history of human immunodeficiency virus (HIV) infection.",
+      "source": {
+        "start": 1246,
+        "end": 1313,
+        "text": "Has a known history of human immunodeficiency virus (HIV) infection"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1316-1361",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has a known active Hepatitis B or Hepatitis C.",
+      "source": {
+        "start": 1316,
+        "end": 1361,
+        "text": "Has a known active Hepatitis B or Hepatitis C"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1364-1420",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant is allergic to monoclonal antibodies or other protein drugs.",
+      "source": {
+        "start": 1364,
+        "end": 1420,
+        "text": "Allergic to monoclonal antibodies or other protein drugs"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1423-1460",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant is allergic to the intervention regimens.",
+      "source": {
+        "start": 1423,
+        "end": 1460,
+        "text": "Allergic to the intervention regimens"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1463-1490",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant is pregnant or lactating.",
+      "source": {
+        "start": 1463,
+        "end": 1490,
+        "text": "Pregnant or lactating women"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1493-1543",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has known psychiatric or substance abuse disorders.",
+      "source": {
+        "start": 1493,
+        "end": 1543,
+        "text": "Has known psychiatric or substance abuse disorders"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT04316364:1546-1681",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant has a confirmed COVID-19 infection, suspected COVID-19 infection, or is a close contact with a person with known or suspected COVID-19 infection.",
+      "source": {
+        "start": 1546,
+        "end": 1681,
+        "text": "Confirmed COVID-19 infection or suspected COVID-19 infection or close contact with a person with known or suspected COVID-19 infection."
+      },
+      "confidence": 1
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "timestamp": "2026-09"
+  }
+}

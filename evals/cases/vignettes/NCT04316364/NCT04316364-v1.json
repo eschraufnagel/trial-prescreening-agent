@@ -1,0 +1,83 @@
+{
+  "id": "NCT04316364-v1",
+  "nctId": "NCT04316364",
+  "labelSetSha": "da2c69671dcb089fd692a4fa41a0ee693507e272bcb95a81403d409bd9001adb",
+  "behavior": "cooperative",
+  "persona": "58-year-old man, works as a site foreman, answers in short plain sentences.",
+  "facts": [
+    {
+      "label": "L7",
+      "says": "Yes, I would agree to use contraception for 180 days after the last dose.",
+      "expected": "holds"
+    },
+    {
+      "label": "L8",
+      "says": "No, I have not had any anti-cancer therapy for my lung cancer yet.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L17",
+      "says": "I am not allergic to any antibody drugs or protein drugs that I know of.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L18",
+      "says": "I am not allergic to any medicines at all.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L19",
+      "says": "No, I am a man, so I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L20",
+      "says": "No, I am not lactating. I am a man.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L22",
+      "says": "I have two or three beers most evenings, and more at the weekend.",
+      "expected": "defer"
+    },
+    {
+      "label": "L24",
+      "says": "No, nobody around me has had COVID.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L1",
+      "says": "I am still working full time and doing everything I used to."
+    },
+    {
+      "label": "L2",
+      "says": "The biopsy pathologically confirmed stage II non-small cell lung cancer, the surgeon says it is resectable, and it is previously untreated. I have had no treatment.",
+      "reported": "holds"
+    },
+    {
+      "label": "L12",
+      "says": "I had a small heart attack about ten years ago."
+    },
+    {
+      "label": "L15",
+      "says": "No, I do not have HIV.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L16",
+      "says": "I have never had hepatitis B or hepatitis C.",
+      "reported": "does-not-hold"
+    },
+    {
+      "label": "L23",
+      "says": "No, I have not had COVID.",
+      "reported": "does-not-hold"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

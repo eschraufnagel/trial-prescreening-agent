@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "nctId": "NCT06927180",
+  "state": "ready",
+  "trial": {
+    "nctId": "NCT06927180",
+    "briefTitle": "SHR-A1811 Plus Pertuzumab in the Neoadjuvant Treatment of HER2 Positive BC",
+    "officialTitle": "SHR-A1811 Plus Pertuzumab in Combination With or Without Albumin-paclitaxel as Neoadjuvant Treatment for Early or Locally Advanced HER2-positive Breast Cancer：A Prospective, Randomized, Open-label, Phase II Trial.",
+    "overallStatus": "RECRUITING",
+    "phases": [
+      "PHASE2"
+    ],
+    "conditions": [
+      "Breast Cancer Early Stage Breast Cancer (Stage 1-3)"
+    ],
+    "leadSponsor": "Henan Cancer Hospital",
+    "lastUpdatePostDate": "2025-06-23",
+    "eligibility": {
+      "criteriaText": "Inclusion Criteria:\n\n* Age: 18-70 years old, ECOG 0-1 point.\n* Clinical T2-T4, with any LN, M0.\n* HER2+, invasive breast cancer confirmed by histopathology;(HER2 positive expression means that there is at least one case of tumor cell immunohistochemical staining intensity of 3+or positive confirmed by fluorescence in situ hybridization \\[FISH\\] in the pathological test/review of the primary focus conducted by the Pathology Department of the Research Center Hospital).\n* Having clinically measurable lesions: measurable lesions displayed on ultrasound, mammography, or MR (optional) within the first month of randomization.\n* Organ and bone marrow function tests within one month before chemotherapy indicate no contraindications to chemotherapy：Absolute value of neutrophil count ≥ 1.5 × 10\\^9/L; Hemoglobin ≥ 90g/L; Platelet count ≥ 100 × 10\\^9/L; Total bilirubin≤1.5 ULN (upper limit of normal value); Creatinine≤1.5 × ULN; AST/ALT ≤ 2.5 × ULN.\n* Cardiac ultrasound: Left ventricular ejection fraction (LVEF ≥ 50%).\n* Women of childbearing age tested negative for serum pregnancy test 7 days before randomization.\n* Sign an informed consent form.\n\nExclusion Criteria:\n\n* Stage IV (metastatic) breast cancer.\n* Has received chemotherapy, endocrine therapy, targeted therapy, reflex therapy, etc. for this disease.\n* The patient has a second primary malignant tumor, except for fully treated skin cancer.\n* The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before enrollment, or the patient has not fully recovered from such surgical procedures.\n* The presence of uncontrolled cardiovascular and cerebrovascular disease, including (but not limited to) any of the following within the 6 months prior to the first dose: congestive heart failure (NYHA III or IV), myocardial infarction or cerebral infarction, pulmonary embolism, unstable angina, or arrhythmia requiring treatment at the time of screening; Primary cardiomyopathy (e.g., dilated cardiomyopathy, hypertrophic cardiomyopathy, arrhythmogenic right ventricular cardiomyopathy, restricted cardiomyopathy, undefined cardiomyopathy); A clinically significant history of prolonged QTc, grade II type II atrioventricular block or grade III atrioventricular block or QTc interphase (F method) \\> 470 msec (female); Atrial fibrillation (EHRA grade ≥2b); Unmanageable hypertension, which the investigators judged unsuitable for study participation.\n* Due to serious and uncontrollable other medical diseases, researchers believe that there are contraindications to chemotherapy.\n* Individuals with a known history of allergies to the drug components of this protocol;\n* Having a history of immunodeficiency, including HIV testing positive, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation.",
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "maximumAge": "70 Years",
+      "healthyVolunteers": false,
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ]
+    }
+  },
+  "parsed": {
+    "nctId": "NCT06927180",
+    "criteria": [
+      {
+        "id": "NCT06927180:23-60",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The participant is 18-70 years old and has an ECOG performance status of 0-1.",
+        "source": {
+          "start": 23,
+          "end": 60,
+          "text": "Age: 18-70 years old, ECOG 0-1 point."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:63-95",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The participant has clinical stage T2-T4, with any lymph node involvement, and M0 (no distant metastasis).",
+        "source": {
+          "start": 63,
+          "end": 95,
+          "text": "Clinical T2-T4, with any LN, M0."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:98-471",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The participant has HER2-positive invasive breast cancer confirmed by histopathology, where HER2 positive expression is defined as at least one case of tumor cell immunohistochemical staining intensity of 3+ or positive confirmed by fluorescence in situ hybridization [FISH] in the pathological test/review of the primary focus conducted by the Pathology Department of the Research Center Hospital.",
+        "source": {
+          "start": 98,
+          "end": 471,
+          "text": "HER2+, invasive breast cancer confirmed by histopathology;(HER2 positive expression means that there is at least one case of tumor cell immunohistochemical staining intensity of 3+or positive confirmed by fluorescence in situ hybridization \\[FISH\\] in the pathological test/review of the primary focus conducted by the Pathology Department of the Research Center Hospital)."
+        },
+        "confidence": 0.8
+      },
+      {
+        "id": "NCT06927180:474-626",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The participant has clinically measurable lesions displayed on ultrasound, mammography, or MR (optional) within the first month of randomization.",
+        "source": {
+          "start": 474,
+          "end": 626,
+          "text": "Having clinically measurable lesions: measurable lesions displayed on ultrasound, mammography, or MR (optional) within the first month of randomization."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:629-950",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Organ and bone marrow function tests within one month before chemotherapy indicate no contraindications to chemotherapy: Absolute value of neutrophil count ≥ 1.5 × 10^9/L; Hemoglobin ≥ 90g/L; Platelet count ≥ 100 × 10^9/L; Total bilirubin ≤ 1.5 ULN (upper limit of normal value); Creatinine ≤ 1.5 × ULN; AST/ALT ≤ 2.5 × ULN.",
+        "source": {
+          "start": 629,
+          "end": 950,
+          "text": "Organ and bone marrow function tests within one month before chemotherapy indicate no contraindications to chemotherapy：Absolute value of neutrophil count ≥ 1.5 × 10\\^9/L; Hemoglobin ≥ 90g/L; Platelet count ≥ 100 × 10\\^9/L; Total bilirubin≤1.5 ULN (upper limit of normal value); Creatinine≤1.5 × ULN; AST/ALT ≤ 2.5 × ULN."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:953-1021",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The participant has a Left ventricular ejection fraction (LVEF) ≥ 50%.",
+        "source": {
+          "start": 953,
+          "end": 1021,
+          "text": "Cardiac ultrasound: Left ventricular ejection fraction (LVEF ≥ 50%)."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:1024-1119",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "Women of childbearing age tested negative for serum pregnancy test 7 days before randomization.",
+        "source": {
+          "start": 1024,
+          "end": 1119,
+          "text": "Women of childbearing age tested negative for serum pregnancy test 7 days before randomization."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:1122-1152",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The participant signs an informed consent form.",
+        "source": {
+          "start": 1122,
+          "end": 1152,
+          "text": "Sign an informed consent form."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:1177-1213",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The participant has Stage IV (metastatic) breast cancer.",
+        "source": {
+          "start": 1177,
+          "end": 1213,
+          "text": "Stage IV (metastatic) breast cancer."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:1216-1318",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "The participant has received chemotherapy, endocrine therapy, targeted therapy, reflex therapy, etc. for this disease.",
+        "source": {
+          "start": 1216,
+          "end": 1318,
+          "text": "Has received chemotherapy, endocrine therapy, targeted therapy, reflex therapy, etc. for this disease."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:1321-1408",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The participant has a second primary malignant tumor, except for fully treated skin cancer.",
+        "source": {
+          "start": 1321,
+          "end": 1408,
+          "text": "The patient has a second primary malignant tumor, except for fully treated skin cancer."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:1411-1593",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "The participant had undergone major surgical procedures unrelated to breast cancer within 4 weeks before enrollment, or the participant has not fully recovered from such surgical procedures.",
+        "source": {
+          "start": 1411,
+          "end": 1593,
+          "text": "The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before enrollment, or the patient has not fully recovered from such surgical procedures."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:1596-2447",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The participant has uncontrolled cardiovascular and cerebrovascular disease, including (but not limited to) any of the following within the 6 months prior to the first dose: congestive heart failure (NYHA III or IV), myocardial infarction or cerebral infarction, pulmonary embolism, unstable angina, or arrhythmia requiring treatment at the time of screening; Primary cardiomyopathy (e.g., dilated cardiomyopathy, hypertrophic cardiomyopathy, arrhythmogenic right ventricular cardiomyopathy, restricted cardiomyopathy, undefined cardiomyopathy); A clinically significant history of prolonged QTc, grade II type II atrioventricular block or grade III atrioventricular block or QTc interphase (F method) > 470 msec (female); Atrial fibrillation (EHRA grade ≥2b); Unmanageable hypertension, which the investigators judged unsuitable for study participation.",
+        "source": {
+          "start": 1596,
+          "end": 2447,
+          "text": "The presence of uncontrolled cardiovascular and cerebrovascular disease, including (but not limited to) any of the following within the 6 months prior to the first dose: congestive heart failure (NYHA III or IV), myocardial infarction or cerebral infarction, pulmonary embolism, unstable angina, or arrhythmia requiring treatment at the time of screening; Primary cardiomyopathy (e.g., dilated cardiomyopathy, hypertrophic cardiomyopathy, arrhythmogenic right ventricular cardiomyopathy, restricted cardiomyopathy, undefined cardiomyopathy); A clinically significant history of prolonged QTc, grade II type II atrioventricular block or grade III atrioventricular block or QTc interphase (F method) \\> 470 msec (female); Atrial fibrillation (EHRA grade ≥2b); Unmanageable hypertension, which the investigators judged unsuitable for study participation."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:2450-2577",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Due to serious and uncontrollable other medical diseases, researchers believe that there are contraindications to chemotherapy.",
+        "source": {
+          "start": 2450,
+          "end": 2577,
+          "text": "Due to serious and uncontrollable other medical diseases, researchers believe that there are contraindications to chemotherapy."
+        },
+        "confidence": 0.8
+      },
+      {
+        "id": "NCT06927180:2580-2666",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "The participant has a known history of allergies to the drug components of this protocol.",
+        "source": {
+          "start": 2580,
+          "end": 2666,
+          "text": "Individuals with a known history of allergies to the drug components of this protocol;"
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06927180:2669-2858",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The participant has a history of immunodeficiency, including HIV testing positive, or suffering from other acquired or congenital immunodeficiency diseases, or has a history of organ transplantation.",
+        "source": {
+          "start": 2669,
+          "end": 2858,
+          "text": "Having a history of immunodeficiency, including HIV testing positive, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation."
+        },
+        "confidence": 0.9
+      }
+    ],
+    "rejected": [],
+    "unclaimed": [],
+    "run": {
+      "model": "Qwen3.6-35B-A3B-MLX-8bit",
+      "quantization": "8bit",
+      "temperature": 0,
+      "seed": 20260921,
+      "adapter": "omlx",
+      "promptVersion": "e1e694b399d4",
+      "normalizeVersion": "2",
+      "timestamp": "2026-10"
+    }
+  },
+  "problem": null,
+  "addedAt": "2026-10",
+  "updatedAt": "2026-10"
+}

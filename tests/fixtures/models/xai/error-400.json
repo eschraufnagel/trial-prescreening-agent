@@ -1,0 +1,12 @@
+{
+  "provenance": "written from https://docs.x.ai/developers/rest-api-reference/inference/chat-completions in 2026-09, not yet seen from the API",
+  "status": 400,
+  "body": {
+    "error": {
+      "message": "Unsupported parameter",
+      "type": "invalid_request_error",
+      "param": null,
+      "code": null
+    }
+  }
+}

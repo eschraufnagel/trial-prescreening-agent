@@ -1,0 +1,322 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "promptVersion": "e1e694b399d4",
+  "normalizeVersion": "2",
+  "parseIdentity": "e1e694b399d4-n2-s2",
+  "sample": 2,
+  "thinking": "default",
+  "dev": true,
+  "matcher": {
+    "version": "2",
+    "spanWeight": 0.6,
+    "textWeight": 0.4,
+    "floor": 0.3,
+    "narrativeOverlap": 0.5
+  },
+  "studies": [
+    {
+      "nctId": "NCT04385368",
+      "status": "graded",
+      "parseSource": "model",
+      "metrics": {
+        "nctId": "NCT04385368",
+        "labels": 74,
+        "predictions": 45,
+        "matched": 41,
+        "merged": 10,
+        "coverageRecall": 0.6891891891891891,
+        "strictRecall": 0.5540540540540541,
+        "mergeRate": 0.13513513513513514,
+        "precision": 0.9111111111111111,
+        "typeAccuracy": 0.8536585365853658,
+        "polarityAccuracy": 1,
+        "narrativeFalsePositives": 2,
+        "nearMisses": 1
+      },
+      "quotes": {
+        "rejected": 0,
+        "loose": 1
+      },
+      "diagnostics": {
+        "missed": [
+          {
+            "id": "L3",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "ICF1 must be signed and dated prior to any study procedures and prior to the planned surgical resection of the primary NSCLC, with the exceptions noted below."
+          },
+          {
+            "id": "L4",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "In these cases, a whole blood sample and resected tumor tissue must be collected and sent to the diagnostic lab as soon as possible after ICF1 is signed for dev…"
+          },
+          {
+            "id": "L5",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "A plasma sample must still be collected at Week 3-5 (Day 21-35) post-surgery, even if creation of the personalized panel for MRD detection is delayed."
+          },
+          {
+            "id": "L9",
+            "polarity": "exclusion",
+            "type": "clinical",
+            "quote": "Patients who are staged asT3N2 or T4N2 prior to surgery are not eligible."
+          },
+          {
+            "id": "L14",
+            "polarity": "inclusion",
+            "type": "clinical",
+            "quote": "The primary tumor must be deemed resectable by a multidisciplinary evaluation that must include a thoracic surgeon certified or trained according to local stand…"
+          },
+          {
+            "id": "L16",
+            "polarity": "inclusion",
+            "type": "clinical",
+            "quote": "Note: Patients undergoing segmentectomy must have tumors less than 2 cm in maximum diameter."
+          },
+          {
+            "id": "L17",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "The surgeon performing the resection should remove all gross disease by the end of surgery."
+          },
+          {
+            "id": "L18",
+            "polarity": "inclusion",
+            "type": "clinical",
+            "quote": "All surgical margins of resection must be macroscopically negative for tumor."
+          },
+          {
+            "id": "L19",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "Pathology and/or operative reports must include the examination of at least 2 different mediastinal lymph node (N2) levels, one of which is the subcarinal node-…"
+          },
+          {
+            "id": "L20",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "However, the surgeon must clearly document in the operative report or in a separate written statement that the lymph node level was explored and no lymph nodes …"
+          },
+          {
+            "id": "L21",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "Normal appearing lymph nodes, if present, must be biopsied or removed."
+          },
+          {
+            "id": "L22",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "Exploration of nodes must clearly be documented in medical file if not recorded in operative report."
+          },
+          {
+            "id": "L23",
+            "polarity": "inclusion",
+            "type": "definitional",
+            "quote": "Note: Lobe-specific lymph node stations are classified based on the location of the primary tumor as follows (based on IASLC 2009 lymph node map terminology \\[R…"
+          },
+          {
+            "id": "L24",
+            "polarity": "inclusion",
+            "type": "clinical",
+            "quote": "No extracapsular nodal extension of the tumor is observed in resected mediastinal N2 lymph nodes."
+          },
+          {
+            "id": "L28",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "Germline sequencing of whole blood is mandatory."
+          },
+          {
+            "id": "L32",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "ICF2 must be signed and dated after MRD status is determined and prior to initiation of any study-specific procedures, sampling, and analyses outlined in SoAs i…"
+          },
+          {
+            "id": "L33",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "Randomization must occur within the 12 weeks (+ 7 days) following surgery."
+          },
+          {
+            "id": "L40",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "In the event of lymphadenopathy on imaging that would lead to exclusion, histopathological confirmation of lymph node metastasis should be obtained prior to exc…"
+          },
+          {
+            "id": "L42",
+            "polarity": "inclusion",
+            "type": "definitional",
+            "quote": "Where EGFR/ALK results are obtained from a pre-surgical tissue biopsy as part of standard local practice, the patient must be confirmed EGFR/ALK wild-type prior…"
+          },
+          {
+            "id": "L43",
+            "polarity": "inclusion",
+            "type": "definitional",
+            "quote": "Results obtained from testing the patient's primary tumor tissue during screening for another AstraZeneca study may be used in this study."
+          },
+          {
+            "id": "L44",
+            "polarity": "inclusion",
+            "type": "definitional",
+            "quote": "Results from local testing of a pre-surgical biopsy."
+          },
+          {
+            "id": "L45",
+            "polarity": "inclusion",
+            "type": "protocol",
+            "quote": "All local EGFR/ALK testing performed locally must be performed using a well-validated, local regulatory-approved test."
+          },
+          {
+            "id": "L56",
+            "polarity": "inclusion",
+            "type": "clinical",
+            "quote": "Patients positive for HCV antibody are eligible only if polymerase chain reaction is negative for HCV RNA."
+          }
+        ],
+        "extra": [
+          {
+            "polarity": "inclusion",
+            "type": "patient",
+            "text": "The patient provides signed and dated written optional genetic informed consent prior to collection of a sample for optional genetic analysis at the time of sec…"
+          },
+          {
+            "polarity": "inclusion",
+            "type": "patient",
+            "text": "The patient is male or female."
+          },
+          {
+            "polarity": "inclusion",
+            "type": "clinical",
+            "text": "The patient's body weight is >30 kg."
+          },
+          {
+            "polarity": "exclusion",
+            "type": "clinical",
+            "text": "The patient has a history of another primary malignancy, except for malignancy treated with curative intent and with no known active disease ≥5 years before the…"
+          }
+        ],
+        "merged": [
+          {
+            "id": "L2",
+            "inside": "The patient is capable of giving signed informed consent, which includes a mandatory genetic informed consent and compliance with the requirements and restricti…"
+          },
+          {
+            "id": "L8",
+            "inside": "The patient has a diagnosis of histologically confirmed NSCLC (WHO 2015 classification) with resectable (stage II-III) disease (according to IASLC Staging Manua…"
+          },
+          {
+            "id": "L11",
+            "inside": "A contrast-enhanced CT or MRI scan of the chest has been done for surgical planning prior to surgery."
+          },
+          {
+            "id": "L12",
+            "inside": "A contrast-enhanced CT or MRI scan of the chest has been done for surgical planning prior to surgery."
+          },
+          {
+            "id": "L15",
+            "inside": "The patient has undergone complete resection of the primary NSCLC."
+          },
+          {
+            "id": "L27",
+            "inside": "Suitable samples of resected tumor tissue and whole blood are available for WES of tumor and germline DNA, respectively, and a Sponsor-approved personalized pan…"
+          },
+          {
+            "id": "L53",
+            "inside": "The patient has a history of another primary malignancy, except for malignancy treated with curative intent and with no known active disease ≥5 years before the…"
+          },
+          {
+            "id": "L61",
+            "inside": "The patient has received radiotherapy treatment for NSCLC in the neoadjuvant setting, or radiotherapy treatment to more than 30% of the bone marrow or with a wi…"
+          },
+          {
+            "id": "L71",
+            "inside": "The patient is a female who is pregnant or breastfeeding, or a male or female patient of reproductive potential who is not willing to employ effective birth con…"
+          },
+          {
+            "id": "L72",
+            "inside": "The patient is a female who is pregnant or breastfeeding, or a male or female patient of reproductive potential who is not willing to employ effective birth con…"
+          }
+        ],
+        "typeErrors": [
+          {
+            "id": "L10",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "A contrast-enhanced CT or MRI scan of the chest must have been done for surgical planning prior to surgery."
+          },
+          {
+            "id": "L30",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "Known tumor PD-L1 status determined at a central reference laboratory testing service using a validated Ventana SP263 PD-L1 immunohistochemistry (IHC) assay pri…"
+          },
+          {
+            "id": "L31",
+            "labelled": "protocol",
+            "predicted": "clinical",
+            "quote": "Post-operative CT scan of the chest (including liver and adrenal glands) performed within 28 days + 7 days prior to randomization."
+          },
+          {
+            "id": "L49",
+            "labelled": "patient",
+            "predicted": "clinical",
+            "quote": "History of allogeneic organ or bone marrow transplantation."
+          },
+          {
+            "id": "L50",
+            "labelled": "clinical",
+            "predicted": "patient",
+            "quote": "Non-leukocyte-depleted whole blood transfusion within 120 days of genetic sample collection."
+          },
+          {
+            "id": "L74",
+            "labelled": "clinical",
+            "predicted": "patient",
+            "quote": "Judgment by the Investigator that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions, and …"
+          }
+        ],
+        "narrative": [
+          {
+            "text": "The patient provides signed and dated written optional genetic informed consent prior to collection of a sample for optional genetic analysis at the time of sec…",
+            "ruledOutBecause": "Optional consent. Declining it does not affect eligibility."
+          },
+          {
+            "text": "The patient is male or female.",
+            "ruledOutBecause": "States no restriction, so nobody can fail it."
+          }
+        ]
+      }
+    }
+  ],
+  "pooled": {
+    "studies": 1,
+    "labels": 74,
+    "predictions": 45,
+    "matched": 41,
+    "merged": 10,
+    "coverageRecall": 0.6891891891891891,
+    "strictRecall": 0.5540540540540541,
+    "mergeRate": 0.13513513513513514,
+    "precision": 0.9111111111111111,
+    "typeAccuracy": 0.8536585365853658,
+    "polarityAccuracy": 1,
+    "narrativeFalsePositives": 2,
+    "nearMisses": 1
+  },
+  "quotes": {
+    "rejected": 0,
+    "loose": 1
+  },
+  "failed": []
+}

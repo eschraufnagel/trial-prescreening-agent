@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "nctId": "NCT05854498",
+  "state": "ready",
+  "trial": {
+    "nctId": "NCT05854498",
+    "briefTitle": "Liposomal Irinotecan With TAS102 and Bevacizumab for Patients With Metastatic Colorectal Cancer",
+    "officialTitle": "Phase II Study of Liposomal Irinotecan With TAS102 and Bevacizumab for Patients With Metastatic Colorectal Cancer",
+    "overallStatus": "RECRUITING",
+    "phases": [
+      "PHASE2"
+    ],
+    "conditions": [
+      "Metastatic Colorectal Cancer"
+    ],
+    "leadSponsor": "University of Wisconsin, Madison",
+    "lastUpdatePostDate": "2026-09-15",
+    "eligibility": {
+      "criteriaText": "Inclusion Criteria:\n\n* Patients must be ≥ 18 years of age\n* Eastern Cooperative Oncology Group (ECOG) performance must be 0 or 1.\n* Patients must have a histologically or cytologically confirmed diagnosis of colorectal adenocarcinoma and be metastatic or unresectable.\n* The cancer must be mismatch repair proficient.\n* Patients must have had prior treatment with 5-fluorouracil, oxaliplatin, irinotecan containing regimens. If RAS wild-type must have received prior anti-EGFR therapy with either cetuximab or panitumumab. If RAS wild-type and HER2 positive then must have had a prior HER2 targeted therapy.\n\nExclusion Criteria:\n\n* Uncontrolled concurrent medical illness that would not allow for the completion of the planned therapy.\n* Patients whose cancers possess BRAF V600 mutations are excluded.\n* Patients must stop the use of strong inducers/inhibitors of CYP3A4 at least 2 weeks before initiating therapy.\n* Patients must not have mismatch repair deficient or microsatellite instability high cancers.\n* Patients must not have received prior TAS102.",
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "maximumAge": null,
+      "healthyVolunteers": false,
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ]
+    }
+  },
+  "parsed": {
+    "nctId": "NCT05854498",
+    "criteria": [
+      {
+        "id": "NCT05854498:23-57",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The participant is ≥ 18 years of age",
+        "source": {
+          "start": 23,
+          "end": 57,
+          "text": "Patients must be ≥ 18 years of age"
+        },
+        "confidence": 1
+      },
+      {
+        "id": "NCT05854498:60-129",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Eastern Cooperative Oncology Group (ECOG) performance is 0 or 1.",
+        "source": {
+          "start": 60,
+          "end": 129,
+          "text": "Eastern Cooperative Oncology Group (ECOG) performance must be 0 or 1."
+        },
+        "confidence": 1
+      },
+      {
+        "id": "NCT05854498:132-268",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The participant has a histologically or cytologically confirmed diagnosis of colorectal adenocarcinoma and is metastatic or unresectable.",
+        "source": {
+          "start": 132,
+          "end": 268,
+          "text": "Patients must have a histologically or cytologically confirmed diagnosis of colorectal adenocarcinoma and be metastatic or unresectable."
+        },
+        "confidence": 1
+      },
+      {
+        "id": "NCT05854498:271-317",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The cancer is mismatch repair proficient.",
+        "source": {
+          "start": 271,
+          "end": 317,
+          "text": "The cancer must be mismatch repair proficient."
+        },
+        "confidence": 1
+      },
+      {
+        "id": "NCT05854498:320-424",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The participant has had prior treatment with 5-fluorouracil, oxaliplatin, irinotecan containing regimens.",
+        "source": {
+          "start": 320,
+          "end": 424,
+          "text": "Patients must have had prior treatment with 5-fluorouracil, oxaliplatin, irinotecan containing regimens."
+        },
+        "confidence": 1
+      },
+      {
+        "id": "NCT05854498:425-522",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "If RAS wild-type, the participant must have received prior anti-EGFR therapy with either cetuximab or panitumumab.",
+        "source": {
+          "start": 425,
+          "end": 522,
+          "text": "If RAS wild-type must have received prior anti-EGFR therapy with either cetuximab or panitumumab."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT05854498:523-607",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "If RAS wild-type and HER2 positive, the participant must have had a prior HER2 targeted therapy.",
+        "source": {
+          "start": 523,
+          "end": 607,
+          "text": "If RAS wild-type and HER2 positive then must have had a prior HER2 targeted therapy."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT05854498:632-735",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The participant has an uncontrolled concurrent medical illness that would not allow for the completion of the planned therapy.",
+        "source": {
+          "start": 632,
+          "end": 735,
+          "text": "Uncontrolled concurrent medical illness that would not allow for the completion of the planned therapy."
+        },
+        "confidence": 1
+      },
+      {
+        "id": "NCT05854498:738-802",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The participant's cancer possesses BRAF V600 mutations.",
+        "source": {
+          "start": 738,
+          "end": 802,
+          "text": "Patients whose cancers possess BRAF V600 mutations are excluded."
+        },
+        "confidence": 1
+      },
+      {
+        "id": "NCT05854498:805-915",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The participant stops the use of strong inducers/inhibitors of CYP3A4 at least 2 weeks before initiating therapy.",
+        "source": {
+          "start": 805,
+          "end": 915,
+          "text": "Patients must stop the use of strong inducers/inhibitors of CYP3A4 at least 2 weeks before initiating therapy."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT05854498:918-1010",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The participant does not have mismatch repair deficient or microsatellite instability high cancers.",
+        "source": {
+          "start": 918,
+          "end": 1010,
+          "text": "Patients must not have mismatch repair deficient or microsatellite instability high cancers."
+        },
+        "confidence": 1
+      },
+      {
+        "id": "NCT05854498:1013-1058",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "The participant has not received prior TAS102.",
+        "source": {
+          "start": 1013,
+          "end": 1058,
+          "text": "Patients must not have received prior TAS102."
+        },
+        "confidence": 1
+      }
+    ],
+    "rejected": [],
+    "unclaimed": [],
+    "run": {
+      "model": "Qwen3.6-35B-A3B-MLX-8bit",
+      "quantization": "8bit",
+      "temperature": 0,
+      "seed": 20260921,
+      "adapter": "omlx",
+      "promptVersion": "e1e694b399d4",
+      "normalizeVersion": "2",
+      "timestamp": "2026-10"
+    }
+  },
+  "problem": null,
+  "addedAt": "2026-10",
+  "updatedAt": "2026-10"
+}

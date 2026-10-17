@@ -1,0 +1,412 @@
+{
+  "nctId": "NCT00077350",
+  "criteria": [
+    {
+      "id": "NCT00077350:23-135",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have histologically confirmed non-small cell lung cancer (NSCLC).",
+      "source": {
+        "start": 23,
+        "end": 135,
+        "text": "Patients must have histologically confirmed non-small cell lung cancer (NSCLC); cytology alone is not acceptable"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:138-348",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have progressive or recurrent NSCLC, and must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease.",
+      "source": {
+        "start": 138,
+        "end": 348,
+        "text": "Patients must have progressive or recurrent NSCLC, and must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease; patients must not have received prior gemcitabine chemotherapy"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:138-348#2",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not have received prior gemcitabine chemotherapy.",
+      "source": {
+        "start": 138,
+        "end": 348,
+        "text": "Patients must have progressive or recurrent NSCLC, and must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease; patients must not have received prior gemcitabine chemotherapy"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:351-448",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have measurable disease, as defined by RECIST, within 4 weeks prior to registration.",
+      "source": {
+        "start": 351,
+        "end": 448,
+        "text": "Patients must have measurable disease, as defined by RECIST, within 4 weeks prior to registration"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:451-506",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have an ECOG performance status of 0 or 1.",
+      "source": {
+        "start": 451,
+        "end": 506,
+        "text": "Patients must have an ECOG performance status of 0 or 1"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:509-549",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have a bilirubin level < 1.5 x upper limit of normal.",
+      "source": {
+        "start": 509,
+        "end": 549,
+        "text": "Bilirubin \\< 1.5 x upper limit of normal"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:552-591",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have an AST (SGOT) level < 3 x upper limit of normal.",
+      "source": {
+        "start": 552,
+        "end": 591,
+        "text": "AST (SGOT) \\< 3 x upper limit of normal"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:594-674",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have a serum creatinine level <= 1.5 mg/dL, or a calculated creatinine clearance >= 60 mL/min.",
+      "source": {
+        "start": 594,
+        "end": 674,
+        "text": "Serum creatinine =\\< 1.5 mg/dL, or calculated creatinine clearance \\>= 60 mL/min"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:677-739",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have an absolute granulocyte count >= 1500/mm3 and a WBC >= 3000/mm^3.",
+      "source": {
+        "start": 677,
+        "end": 739,
+        "text": "Absolute granulocyte count \\>= 1500/mm3 and WBC \\>= 3000/mm\\^3"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:742-762",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have a hemoglobin level >= 9 g/L.",
+      "source": {
+        "start": 742,
+        "end": 762,
+        "text": "Hemoglobin \\>= 9 g/L"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:765-797",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have a platelet count >= 100,000/mm^3.",
+      "source": {
+        "start": 765,
+        "end": 797,
+        "text": "Platelet count \\>= 100,000/mm\\^3"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:800-884",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The patient must have completed any radiation therapy >= 3 weeks prior to registration.",
+      "source": {
+        "start": 800,
+        "end": 884,
+        "text": "Patients must have completed any radiation therapy \\>= 3 weeks prior to registration"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:887-1068",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The patient must have completed prior cytotoxic chemotherapy >= 3 weeks prior to registration and have recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.",
+      "source": {
+        "start": 887,
+        "end": 1068,
+        "text": "Patients must have completed prior cytotoxic chemotherapy \\>= 3 weeks prior to registration and have recovered from adverse effects from the chemotherapy to =\\< Grade 1, or baseline"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:1071-1429",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Patients with brain metastases which have been treated are eligible if the patient is > 3 weeks post completion of treatment for their brain metastases, and patient is neurologically stable.",
+      "source": {
+        "start": 1071,
+        "end": 1429,
+        "text": "Patients with brain metastases which have been treated are eligible if the patient is \\> 3 weeks post completion of treatment for their brain metastases, and patient is neurologically stable; patients with previous brain metastases who have not yet received therapy specifically intended for their brain metastases are not eligible to enroll in this protocol"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:1071-1429#2",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Patients with previous brain metastases who have not yet received therapy specifically intended for their brain metastases are not eligible to enroll in this protocol.",
+      "source": {
+        "start": 1071,
+        "end": 1429,
+        "text": "Patients with brain metastases which have been treated are eligible if the patient is \\> 3 weeks post completion of treatment for their brain metastases, and patient is neurologically stable; patients with previous brain metastases who have not yet received therapy specifically intended for their brain metastases are not eligible to enroll in this protocol"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:1432-1469",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have a life expectancy greater than 3 months.",
+      "source": {
+        "start": 1432,
+        "end": 1469,
+        "text": "Life expectancy greater than 3 months"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:1472-2685",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "Women must not be pregnant or breastfeeding.",
+      "source": {
+        "start": 1472,
+        "end": 2685,
+        "text": "Pregnant women are excluded from this study because Triapine® is a heterocyclic carboxaldehyde thiosemicarbazone with the potential for teratogenic or abortifacient effects; because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with Triapine®, breastfeeding should be discontinued if the mother is treated with Triapine®; women must not be pregnant or breastfeeding due to the absence of information regarding the use of these agents in these populations; a negative serum pregnancy test is required within 14 days of study entry; the effects of Triapine® on the developing human fetus at the recommended therapeutic dose are unknown; for this reason and because heterocyclic carboxaldehyde thiosemicarbazones as well as other therapeutic agents used in this trial are known to be teratogenic, women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation; should a woman become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:1472-2685#2",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "A negative serum pregnancy test is required within 14 days of study entry.",
+      "source": {
+        "start": 1472,
+        "end": 2685,
+        "text": "Pregnant women are excluded from this study because Triapine® is a heterocyclic carboxaldehyde thiosemicarbazone with the potential for teratogenic or abortifacient effects; because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with Triapine®, breastfeeding should be discontinued if the mother is treated with Triapine®; women must not be pregnant or breastfeeding due to the absence of information regarding the use of these agents in these populations; a negative serum pregnancy test is required within 14 days of study entry; the effects of Triapine® on the developing human fetus at the recommended therapeutic dose are unknown; for this reason and because heterocyclic carboxaldehyde thiosemicarbazones as well as other therapeutic agents used in this trial are known to be teratogenic, women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation; should a woman become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:1472-2685#3",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation.",
+      "source": {
+        "start": 1472,
+        "end": 2685,
+        "text": "Pregnant women are excluded from this study because Triapine® is a heterocyclic carboxaldehyde thiosemicarbazone with the potential for teratogenic or abortifacient effects; because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with Triapine®, breastfeeding should be discontinued if the mother is treated with Triapine®; women must not be pregnant or breastfeeding due to the absence of information regarding the use of these agents in these populations; a negative serum pregnancy test is required within 14 days of study entry; the effects of Triapine® on the developing human fetus at the recommended therapeutic dose are unknown; for this reason and because heterocyclic carboxaldehyde thiosemicarbazones as well as other therapeutic agents used in this trial are known to be teratogenic, women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation; should a woman become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:2688-2975",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "HIV-positive patients receiving combination antiretroviral therapy are excluded from the study.",
+      "source": {
+        "start": 2688,
+        "end": 2975,
+        "text": "Because patients with immune deficiency are at increased risk of lethal infections when treated with marrow-suppressive therapy, HIV-positive patients receiving combination antiretroviral therapy are excluded from the study because of possible pharmacokinetic interactions with Triapine®"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:2978-3028",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have an active second malignancy.",
+      "source": {
+        "start": 2978,
+        "end": 3028,
+        "text": "Patients must not have an active second malignancy"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:3031-3743",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements.",
+      "source": {
+        "start": 3031,
+        "end": 3743,
+        "text": "Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements; furthermore, since hypoxemia may cause serious adverse events in persons with serious cardiac and/or pulmonary disease, patients at the time of registration with a history of myocardial infarction within the prior 6 months, or with symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation), or pulmonary disease requiring oxygen are excluded"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:3031-3743#2",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have a history of myocardial infarction within the prior 6 months.",
+      "source": {
+        "start": 3031,
+        "end": 3743,
+        "text": "Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements; furthermore, since hypoxemia may cause serious adverse events in persons with serious cardiac and/or pulmonary disease, patients at the time of registration with a history of myocardial infarction within the prior 6 months, or with symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation), or pulmonary disease requiring oxygen are excluded"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:3031-3743#3",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have symptomatic congestive heart failure.",
+      "source": {
+        "start": 3031,
+        "end": 3743,
+        "text": "Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements; furthermore, since hypoxemia may cause serious adverse events in persons with serious cardiac and/or pulmonary disease, patients at the time of registration with a history of myocardial infarction within the prior 6 months, or with symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation), or pulmonary disease requiring oxygen are excluded"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:3031-3743#4",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have unstable angina pectoris.",
+      "source": {
+        "start": 3031,
+        "end": 3743,
+        "text": "Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements; furthermore, since hypoxemia may cause serious adverse events in persons with serious cardiac and/or pulmonary disease, patients at the time of registration with a history of myocardial infarction within the prior 6 months, or with symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation), or pulmonary disease requiring oxygen are excluded"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:3031-3743#5",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation).",
+      "source": {
+        "start": 3031,
+        "end": 3743,
+        "text": "Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements; furthermore, since hypoxemia may cause serious adverse events in persons with serious cardiac and/or pulmonary disease, patients at the time of registration with a history of myocardial infarction within the prior 6 months, or with symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation), or pulmonary disease requiring oxygen are excluded"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:3031-3743#6",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have pulmonary disease requiring oxygen.",
+      "source": {
+        "start": 3031,
+        "end": 3743,
+        "text": "Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements; furthermore, since hypoxemia may cause serious adverse events in persons with serious cardiac and/or pulmonary disease, patients at the time of registration with a history of myocardial infarction within the prior 6 months, or with symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation), or pulmonary disease requiring oxygen are excluded"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:3746-3797",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have dementia or active psychosis.",
+      "source": {
+        "start": 3746,
+        "end": 3797,
+        "text": "Patients must not have dementia or active psychosis"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:3800-3890",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not have used any investigational agent in the month before study enrollment.",
+      "source": {
+        "start": 3800,
+        "end": 3890,
+        "text": "Patients must not have used any investigational agent in the month before study enrollment"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:3893-4063",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not have a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine® or other agents used in this study.",
+      "source": {
+        "start": 3893,
+        "end": 4063,
+        "text": "Patients must not have a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine® or other agents used in this study"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:4066-4422",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency.",
+      "source": {
+        "start": 4066,
+        "end": 4422,
+        "text": "Patients must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency; persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry for this condition; patients testing positive for G6PD deficiency are excluded from protocol entry"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:4066-4422#2",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Persons at high risk for G6PD deficiency (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry for this condition.",
+      "source": {
+        "start": 4066,
+        "end": 4422,
+        "text": "Patients must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency; persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry for this condition; patients testing positive for G6PD deficiency are excluded from protocol entry"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00077350:4066-4422#3",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "Patients testing positive for G6PD deficiency are excluded from protocol entry.",
+      "source": {
+        "start": 4066,
+        "end": 4422,
+        "text": "Patients must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency; persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry for this condition; patients testing positive for G6PD deficiency are excluded from protocol entry"
+      },
+      "confidence": 1
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "timestamp": "2026-09"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "provenance": "written from the claude-api skill (Messages API reference, cached 2026-06) in 2026-09, not yet seen from the API",
+  "status": 400,
+  "body": {
+    "type": "error",
+    "error": {
+      "type": "invalid_request_error",
+      "message": "temperature: Extra inputs are not permitted"
+    }
+  }
+}

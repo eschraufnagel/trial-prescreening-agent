@@ -1,0 +1,173 @@
+{
+  "nctId": "NCT07229729",
+  "criteria": [
+    {
+      "id": "NCT07229729:24-164",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant voluntarily participates in the study, understands the research procedures, and is able to sign the informed consent form in writing.",
+      "source": {
+        "start": 24,
+        "end": 164,
+        "text": "Voluntarily participate in this clinical study, understand the research procedures and be able to sign the informed consent form in writing;"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT07229729:168-310",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The participant is aged between 18 and 70 years old (inclusive) at the time of signing the informed consent form.",
+      "source": {
+        "start": 168,
+        "end": 310,
+        "text": "Participants must be aged between 18 and 70 years old (inclusive) when signing the informed consent form, and both men and women are eligible;"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "NCT07229729:314-382",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "source": {
+        "start": 314,
+        "end": 382,
+        "text": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1;"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "NCT07229729:386-410",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The participant has adequate organ function.",
+      "source": {
+        "start": 386,
+        "end": 410,
+        "text": "Adequate organ function;"
+      },
+      "confidence": 0.8
+    },
+    {
+      "id": "NCT07229729:414-667",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Women of childbearing age must have a negative serum pregnancy test result, and female subjects of childbearing age and male subjects who are partners of women of childbearing age must agree to use highly effective contraceptive methods.",
+      "source": {
+        "start": 414,
+        "end": 667,
+        "text": "Women of childbearing age must undergo serum pregnancy tests, and the results must be negative. Female subjects of childbearing age and male subjects who are partners of women of childbearing age must agree to use highly effective contraceptive methods."
+      },
+      "confidence": 0.85
+    },
+    {
+      "id": "NCT07229729:693-766",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have an active, known, or suspected autoimmune disease.",
+      "source": {
+        "start": 693,
+        "end": 766,
+        "text": "With active, known or suspected autoimmune disease of autoimmune disease;"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT07229729:770-838",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have a history of malignancies other than NSCLC within 5 years prior to randomization.",
+      "source": {
+        "start": 770,
+        "end": 838,
+        "text": "Malignancies other than NSCLC within 5 years prior to randomization;"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "NCT07229729:842-997",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have a history of pneumonitis, interstitial lung disease, or any severe lung diseases that will influence the examination of lung function.",
+      "source": {
+        "start": 842,
+        "end": 997,
+        "text": "Has or suspected has a history of pneumonitis / interstitial lung disease or any serve lung diseases which will influence the examination of lung function;"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT07229729:1001-1101",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have a significant history of cardiovascular and cerebrovascular disease, or a significant history of haemorrhagic disease.",
+      "source": {
+        "start": 1001,
+        "end": 1101,
+        "text": "Significant history of cardiovascular and cerebrovascular disease; Significant haemorrhagic disease;"
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "NCT07229729:1105-1144",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have a history of arteriovenous thrombotic events.",
+      "source": {
+        "start": 1105,
+        "end": 1144,
+        "text": "Has an arteriovenous thrombotic events;"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "NCT07229729:1148-1216",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have a known history of human immunodeficiency virus (HIV) infection.",
+      "source": {
+        "start": 1148,
+        "end": 1216,
+        "text": "Has a known history of human immunodeficiency virus (HIV) infection;"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "NCT07229729:1220-1266",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The participant does not have a known active Hepatitis B or Hepatitis C.",
+      "source": {
+        "start": 1220,
+        "end": 1266,
+        "text": "Has a known active Hepatitis B or Hepatitis C;"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "NCT07229729:1270-1308",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The participant is not allergic to the intervention regimens.",
+      "source": {
+        "start": 1270,
+        "end": 1308,
+        "text": "Allergic to the intervention regimens."
+      },
+      "confidence": 0.9
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "normalizeVersion": "1",
+    "timestamp": "2026-09"
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "startedAt": "2026-09",
+  "finishedAt": "2026-09",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "thinking": "off",
+  "promptVersion": "ed2ce37c6d18",
+  "simulatorVersion": "5fd4476340c9",
+  "graderVersion": "4",
+  "vignetteSetHash": "aa8172ad05f2",
+  "dev": true,
+  "conversations": [
+    {
+      "vignetteId": "NCT00077350-dev",
+      "nctId": "NCT00077350",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 302840,
+        "participantMs": 160447,
+        "fidelityMs": 74142,
+        "agentCalls": 62,
+        "participantCalls": 31,
+        "fidelityCalls": 31
+      },
+      "questions": 31,
+      "labels": {
+        "score": {
+          "determinations": 6,
+          "confidentlyWrong": 0,
+          "answerable": 7,
+          "abstained": 1,
+          "abstainable": 3,
+          "correctAbstentions": 3,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0.14285714285714285,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 31,
+          "participantReplies": 31,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L20",
+            "expected": "does-not-hold",
+            "status": "unresolved",
+            "outcome": "abstained",
+            "evidence": ["I'm a man, so not pregnant"]
+          }
+        ]
+      },
+      "flaggedTurns": 20
+    },
+    {
+      "vignetteId": "NCT03433469-dev",
+      "nctId": "NCT03433469",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 3503009,
+        "participantMs": 1054976,
+        "fidelityMs": 292614,
+        "agentCalls": 76,
+        "participantCalls": 38,
+        "fidelityCalls": 38
+      },
+      "questions": 38,
+      "labels": {
+        "score": {
+          "determinations": 10,
+          "confidentlyWrong": 0,
+          "answerable": 10,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 1,
+          "disagreements": [
+            {
+              "label": "L2",
+              "expected": "holds",
+              "heard": "(not captured)"
+            }
+          ]
+        },
+        "discipline": {
+          "agentQuestions": 38,
+          "participantReplies": 38,
+          "multiQuestion": 2,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 2
+        },
+        "notCorrect": []
+      },
+      "flaggedTurns": 16
+    },
+    {
+      "vignetteId": "NCT04316364-dev",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 650284,
+        "participantMs": 339078,
+        "fidelityMs": 163187,
+        "agentCalls": 46,
+        "participantCalls": 23,
+        "fidelityCalls": 23
+      },
+      "questions": 23,
+      "labels": {
+        "score": {
+          "determinations": 6,
+          "confidentlyWrong": 0,
+          "answerable": 6,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 23,
+          "participantReplies": 23,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 5
+        },
+        "notCorrect": []
+      },
+      "flaggedTurns": 11
+    },
+    {
+      "vignetteId": "NCT04385368-dev",
+      "nctId": "NCT04385368",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 1798122,
+        "participantMs": 1932960,
+        "fidelityMs": 153940,
+        "agentCalls": 114,
+        "participantCalls": 57,
+        "fidelityCalls": 57
+      },
+      "questions": 57,
+      "labels": {
+        "score": {
+          "determinations": 15,
+          "confidentlyWrong": 3,
+          "answerable": 13,
+          "abstained": 0,
+          "abstainable": 6,
+          "correctAbstentions": 4,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.2,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.6666666666666666
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 57,
+          "participantReplies": 57,
+          "multiQuestion": 0,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 85,
+              "text": "Thanks. To help us check eligibility, do you know if your previous radiation covered a large area of your body (wide-field), or are you unsure?"
+            }
+          ],
+          "followUps": 14
+        },
+        "notCorrect": [
+          {
+            "label": "L64",
+            "expected": "unresolved",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["The operation was about two months ago"]
+          },
+          {
+            "label": "L65",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "For my breathing I have an inhaled steroid. Whether that counts, I can't say.",
+              "Just the inhaled one for my breathing. I don't take any daily pills or injections for steroids."
+            ]
+          },
+          {
+            "label": "L70",
+            "expected": "does-not-hold",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": ["I smoked for about thirty years"]
+          }
+        ]
+      },
+      "flaggedTurns": 26
+    },
+    {
+      "vignetteId": "NCT06728852-dev",
+      "nctId": "NCT06728852",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 605288,
+        "participantMs": 1689456,
+        "fidelityMs": 880264,
+        "agentCalls": 80,
+        "participantCalls": 40,
+        "fidelityCalls": 40
+      },
+      "questions": 40,
+      "labels": {
+        "score": {
+          "determinations": 7,
+          "confidentlyWrong": 0,
+          "answerable": 7,
+          "abstained": 0,
+          "abstainable": 4,
+          "correctAbstentions": 4,
+          "simulatorAffected": 1,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 40,
+          "participantReplies": 40,
+          "multiQuestion": 1,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 7,
+              "text": "Thanks. To help us check eligibility, do you know if your doctor has said your tumors are large enough to be measured on your latest scan? If you aren't sure, that's okay."
+            }
+          ],
+          "followUps": 7
+        },
+        "notCorrect": [
+          {
+            "label": "L25",
+            "expected": "defer",
+            "status": "unresolved",
+            "outcome": "simulator-affected",
+            "evidence": [
+              "maybe a teaspoon, but I've never measured it exactly",
+              "I'm not sure if it's more than a teaspoon in a single day."
+            ]
+          }
+        ]
+      },
+      "flaggedTurns": 17
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 44,
+      "confidentlyWrong": 3,
+      "answerable": 43,
+      "abstained": 1,
+      "abstainable": 17,
+      "correctAbstentions": 15,
+      "simulatorAffected": 1,
+      "confidentlyWrongRate": 0.06818181818181818,
+      "abstentionRate": 0.023255813953488372,
+      "correctAbstentionRate": 0.8823529411764706
+    },
+    "parse": {
+      "scored": {
+        "determinations": 0,
+        "confidentlyWrong": 0,
+        "answerable": 0,
+        "abstained": 0,
+        "abstainable": 0,
+        "correctAbstentions": 0,
+        "simulatorAffected": 0,
+        "confidentlyWrongRate": null,
+        "abstentionRate": null,
+        "correctAbstentionRate": null
+      },
+      "categories": {}
+    }
+  },
+  "failed": []
+}

@@ -1,0 +1,305 @@
+{
+  "nctId": "NCT03753685",
+  "criteria": [
+    {
+      "id": "NCT03753685:27-151",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient has histologically or cytologically confirmed locally advanced or recurrent/metastatic NSCLC that was positive for ALK mutations.",
+      "source": {
+        "start": 27,
+        "end": 151,
+        "text": "Histologically or cytologically confirmed locally advance or recurrent/metastatic NSCLC that was positive for ALK mutations."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:159-349",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient has contrast-enhanced MRI or CT confirmed parenchymal brain metastases with at least one measurable lesion (according to RANO and RECIST 1.1), which was not previously treated with radiotherapy.",
+      "source": {
+        "start": 159,
+        "end": 349,
+        "text": "Contrast-enhanced MRI or CT confirmed parenchymal brain metastases with at least one measurable lesion (according to RANO and RECIST 1.1), which was not previously treated with radiotherapy."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:357-566",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient has been treated with at most one prior chemotherapy regimen, completed at least 4 weeks before the initiation of study treatment, and any adverse events related to previous chemotherapy treatment have disappeared.",
+      "source": {
+        "start": 357,
+        "end": 566,
+        "text": "At most once treated with chemotherapy, which must have been completed at least 4 weeks before the initiation of study treatment. Any adverse events related to previous chemotherapy treatment have disappeared."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:574-614",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The patient is 18 years of age or older.",
+      "source": {
+        "start": 574,
+        "end": 614,
+        "text": "Female or male, 18 years of age or older"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:618-670",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient has a Karnofsky Performance Status score of at least 60.",
+      "source": {
+        "start": 618,
+        "end": 670,
+        "text": "A Karnofsky Performance Status score of at least 60."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:674-721",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient has an expected survival time of at least 12 weeks.",
+      "source": {
+        "start": 674,
+        "end": 721,
+        "text": "An expected survival time of at least 12 weeks."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:725-971",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient has adequate organ functions, defined as absolute neutrophils count ≥1.5*10^9/L, platelets count ≥80*10^9/L, hemoglobin concentration ≥ 9 g/dL, total bilirubin ≤1.5 *ULN, ALT≤2.5 *ULN, AST≤2.5 *ULN, creatinine≤1.5 *ULN.",
+      "source": {
+        "start": 725,
+        "end": 971,
+        "text": "Adequate organ functions, defined as absolute neutrophils count ≥1.5\\*10\\^9/L，platelets count ≥80\\*10\\^9/L, hemoglobin concentration≥ 9 g/dL, total bilirubin ≤1.5 \\*ULN (upper limits of normal), ALT≤2.5 \\*ULN, AST≤2.5 \\*ULN, creatinine≤1.5 \\*ULN."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:979-1081",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "Any drug-related toxicities have been relieved to grade 1 (based on NCI CTCAE v4.03), except for hair loss.",
+      "source": {
+        "start": 979,
+        "end": 1081,
+        "text": "Drug related toxicities has been relieved to grade 1 (based on NCI CTCAE v4.03), except for hair loss."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:1089-1206",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The patient is willing and able to comply with scheduled visits, treatment plans, laboratory tests and other study procedures.",
+      "source": {
+        "start": 1089,
+        "end": 1206,
+        "text": "Being willing and able to comply with scheduled visits, treatment plans, laboratory tests and other study procedures."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:1215-1249",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The patient has signed and dated informed consent.",
+      "source": {
+        "start": 1215,
+        "end": 1249,
+        "text": "Signed and dated informed consent."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:1278-1344",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient is currently under treatment of other systemic anti-cancer therapies.",
+      "source": {
+        "start": 1278,
+        "end": 1344,
+        "text": "Currently under treatment of other systemic anti-cancer therapies."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:1348-1398",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient has evidence of an active malignancy within the last 5 years.",
+      "source": {
+        "start": 1348,
+        "end": 1398,
+        "text": "Evidence of active malignancy within last 5 years."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:1402-1514",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient participated in other clinical trials within the last 4 weeks before the initiation of study treatment.",
+      "source": {
+        "start": 1402,
+        "end": 1514,
+        "text": "Patients who participated in other clinical trials within last 4 weeks before the initiation of study treatment."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:1522-1717",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient received surgery or immunotherapy within the last 4 weeks before the initiation of study treatment, or received radiotherapy within the last 2 weeks before the initiation of study treatment.",
+      "source": {
+        "start": 1522,
+        "end": 1717,
+        "text": "Patients who received surgery or immunotherapy within last 4 weeks before the initiation of study treatment, or received radiotherapy within last 2 weeks before the initiation of study treatment."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:1725-1809",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient previously received organ transplantation or stem cell transplantation.",
+      "source": {
+        "start": 1725,
+        "end": 1809,
+        "text": "Patients who previously received organ transplantation or stem cell transplantation."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:1817-1898",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient has clinically significant cardiovascular and cerebrovascular diseases.",
+      "source": {
+        "start": 1817,
+        "end": 1898,
+        "text": "Patients with clinically significant cardiovascular and cerebrovascular diseases."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:1906-2097",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient has dysphagia, active gastrointestinal diseases or other conditions that will interfere significantly with the absorption, distribution, metabolism or excretion of study medication.",
+      "source": {
+        "start": 1906,
+        "end": 2097,
+        "text": "Patients with dysphagia, active gastrointestinal diseases or other conditions that will interfere significantly with the absorption, distribution, metabolism or excretion of study medication."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:2105-2264",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient is an active carrier of hepatitis B (HBsAg positive and HBV-DNA ≥500IU/mL), hepatitis C virus antibody, treponema pallidum antibody or HIV antibody.",
+      "source": {
+        "start": 2105,
+        "end": 2264,
+        "text": "Patients who are active carrier of hepatitis B (HBsAg positive and HBV-DNA ≥500IU/mL), hepatitis C virus antibody, treponema pallidum antibody or HIV antibody."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:2272-2365",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient has a history of interstitial lung disease or signs of active interstitial lung disease.",
+      "source": {
+        "start": 2272,
+        "end": 2365,
+        "text": "Patients with interstitial lung disease history or signs of active interstitial lung disease."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:2374-2403",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient is pregnant or lactating.",
+      "source": {
+        "start": 2374,
+        "end": 2403,
+        "text": "Pregnant and lactating women."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:2408-2505",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient has a known allergy or delayed hypersensitivity reaction to study drug or its excipients.",
+      "source": {
+        "start": 2408,
+        "end": 2505,
+        "text": "Patients with known allergy or delayed hypersensitivity reaction to study drug or its excipients."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:2514-2758",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient needs to receive drugs which could induce QT/QTc interval prolongation or torsade de pointes, or drugs which are potent CYP3A4 inhibitors or inducers within the last 14 days before the initiation of study treatment and during the study.",
+      "source": {
+        "start": 2514,
+        "end": 2758,
+        "text": "Patients who need to receive drugs which could induce QT/QTc interval prolongation or torsade de pointes, or drugs which are potent CYP3A4 inhibitors or inducers within last 14 days before the initiation of study treatment and during the study."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:2767-2855",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient is currently under treatment of warfarin or other coumarin anticoagulants.",
+      "source": {
+        "start": 2767,
+        "end": 2855,
+        "text": "Patients who are currently under treatment of warfarin or other coumarin anticoagulants."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT03753685:2864-2963",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient has other illness or medical conditions potentially interfering with the study treatment.",
+      "source": {
+        "start": 2864,
+        "end": 2963,
+        "text": "Patients with other illness or medical conditions potentially interfering with the study treatment."
+      },
+      "confidence": 1
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "normalizeVersion": "1",
+    "timestamp": "2026-09"
+  }
+}

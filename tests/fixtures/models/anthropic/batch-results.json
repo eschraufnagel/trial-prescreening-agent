@@ -1,0 +1,5 @@
+{
+  "provenance": "written from the claude-api skill (Message Batches reference, cached 2026-06) in 2026-09, not yet seen from the API",
+  "status": 200,
+  "body": "{\"custom_id\": \"request-0\", \"result\": {\"type\": \"succeeded\", \"message\": {\"id\": \"msg_recorded\", \"type\": \"message\", \"role\": \"assistant\", \"model\": \"claude-haiku-4-5\", \"content\": [{\"type\": \"text\", \"text\": \"{\\\"message\\\":\\\"How old are you?\\\"}\"}], \"stop_reason\": \"end_turn\", \"stop_sequence\": null, \"usage\": {\"input_tokens\": 412, \"output_tokens\": 18, \"cache_creation_input_tokens\": 0, \"cache_read_input_tokens\": 0}}}}\n{\"custom_id\": \"request-1\", \"result\": {\"type\": \"errored\", \"error\": {\"type\": \"error\", \"error\": {\"type\": \"invalid_request_error\", \"message\": \"max_tokens: must be at least 1\"}}}}\n"
+}

@@ -1,0 +1,1138 @@
+/* Plain CSS. Two columns, conversation and tester panel, stacking on a narrow
+   window. The grid leaves the page free to take a third area, the coordinator
+   pane in slice 0007, beside or below these. */
+
+:root {
+  --bg: #f7f7f5;
+  --panel: #ffffff;
+  --text: #1d1d1f;
+  --dim: #6b6b70;
+  --line: #e2e2e0;
+  --agent: #eef0f4;
+  --me: #2f5bd3;
+  --me-text: #ffffff;
+  --accent: #2f5bd3;
+  --warn-bg: #fff4e0;
+  --warn: #8a5300;
+  --down-bg: #fde8e8;
+  --down: #9b1c1c;
+  --holds: #1f7a3a;
+  --not: #7a3a1f;
+  --open: #6b6b70;
+  --review: #5b3fa6;
+  --unresolved: #9a6700;
+  --new: #e8f1ff;
+  --accent-soft: #eef2fc;
+  --accent-ink: #1f44a8;
+  --ok-bg: #e6f2ea;
+  --ok: #1d5c34;
+  --chip: #f1f1ef;
+  --ink-2: #45454a;
+  --radius: 14px;
+  --button: #2f5bd3;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--text);
+  background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161618;
+    --panel: #1f1f22;
+    --text: #ececef;
+    --dim: #9a9aa2;
+    --line: #34343a;
+    --agent: #2a2b31;
+    --me: #3c68e0;
+    --accent: #7ea0ff;
+    --warn-bg: #3a2d14;
+    --warn: #f0c070;
+    --down-bg: #3d1a1a;
+    --down: #ffb0b0;
+    --holds: #6fd08f;
+    --not: #f0a080;
+    --open: #9a9aa2;
+    --review: #b9a2ff;
+    --unresolved: #f0c060;
+    --new: #1c2740;
+    --accent-soft: #1c2740;
+    --accent-ink: #a9c0ff;
+    --ok-bg: #16301f;
+    --ok: #8fd6a8;
+    --chip: #2a2b31;
+    --ink-2: #c4c4cb;
+    --button: #3c68e0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+}
+a {
+  color: var(--accent);
+}
+button,
+.button {
+  font: inherit;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--button);
+  background: var(--button);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.button.secondary,
+button.secondary {
+  background: var(--panel);
+  color: var(--accent-ink);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+}
+button.quiet {
+  background: none;
+  border-color: transparent;
+  color: var(--ink-2);
+  font-weight: 500;
+  padding: 10px 8px;
+}
+/* Delete… and Remove…: visible, but quieter than the action they sit beside (slice 0014). */
+button.destructive {
+  background: var(--panel);
+  border-color: color-mix(in srgb, var(--down) 45%, var(--line));
+  color: var(--down);
+}
+button.danger {
+  background: var(--down);
+  border-color: var(--down);
+  color: #fff;
+}
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+}
+
+/* The frame (slice 0014): a header across the window, pages in a centred column. */
+.header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  min-height: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 32px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 650;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.brand-mark {
+  color: var(--accent);
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex-grow: 1;
+}
+.nav a {
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.nav a[aria-current="page"] {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--ink-2);
+}
+.pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--holds);
+}
+.banner {
+  max-width: 1072px;
+  width: calc(100% - 48px);
+  box-sizing: border-box;
+  margin: 16px auto 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--warn-bg);
+  color: var(--warn);
+  font-weight: 500;
+}
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 36px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.page h1,
+.hero h1,
+.trial-hero h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.page-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sub {
+  margin: 0;
+  color: var(--dim);
+  max-width: 680px;
+}
+.page h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 650;
+}
+.meta,
+.dim {
+  color: var(--dim);
+  font-size: 0.9em;
+}
+.error {
+  color: var(--down);
+  margin: 0;
+}
+.footnote {
+  margin: 0;
+}
+.back {
+  text-decoration: none;
+  align-self: flex-start;
+  padding: 6px 0;
+}
+.id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85em;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip);
+  color: var(--ink-2);
+}
+.badge.accent {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+.badge.ok {
+  background: var(--ok-bg);
+  color: var(--ok);
+}
+.badge.down {
+  background: var(--down-bg);
+  color: var(--down);
+}
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chips li {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--chip);
+  font-size: 0.82rem;
+  color: var(--ink-2);
+}
+.warn-text {
+  margin: 0;
+  color: var(--warn);
+  font-size: 0.92em;
+}
+.note {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 0.95em;
+}
+.note.warn {
+  background: var(--warn-bg);
+  color: var(--warn);
+}
+
+/* Trials (slices 0013 and 0014). */
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.add-form label {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.add-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.add-row input {
+  flex: 1 1 320px;
+  min-width: 0;
+  font: inherit;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+}
+.help {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--dim);
+}
+.trial-card,
+.trial-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: flex-start;
+}
+.trial-main {
+  flex: 999 1 520px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.trial-main h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.trial-main p {
+  margin: 0;
+}
+.trial-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.trial-actions {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.quiet-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.confirm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.92em;
+}
+.trial-problem {
+  font-size: 0.92em;
+  white-space: pre-wrap;
+}
+.spinner {
+  width: 12px;
+  height: 12px;
+  flex: none;
+  border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-top-color: var(--accent);
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 3s;
+  }
+}
+.hero {
+  max-width: 760px;
+  width: 100%;
+  margin: 24px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-items: stretch;
+}
+.hero .sub {
+  margin: 0 auto;
+}
+.hero .add-form {
+  text-align: left;
+}
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  text-align: left;
+}
+.steps li {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.92em;
+  color: var(--ink-2);
+}
+.step-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* A trial's checklist (slice 0014). */
+.counts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.counts li {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--dim);
+  font-size: 0.9em;
+}
+.counts strong {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+.checklist {
+  padding: 0;
+  overflow: hidden;
+}
+.checklist h2 {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.checklist ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.checklist li:last-child {
+  border-bottom: none;
+}
+.checklist li .criterion {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+}
+.checklist li .badge {
+  flex: none;
+}
+.published summary {
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 28px;
+}
+.published pre {
+  margin: 12px 0 0;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 0.92em;
+  color: var(--ink-2);
+}
+
+/* Screenings and Reviews (slice 0014). */
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+.study-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+}
+.study-card .study-title {
+  font-weight: 600;
+  line-height: 1.35;
+}
+.study-card button {
+  margin-top: auto;
+}
+.rows-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.row-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 16px 18px;
+}
+.row-card > div {
+  flex: 999 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.row-title {
+  font-weight: 600;
+}
+/* Reviews' examples, under their trial (slice 0016). */
+.example-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.example-trial h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dim);
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.conversation {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(300px, 2fr);
+  gap: 16px;
+  max-width: 1120px;
+  margin: 20px auto 0;
+  padding: 0 24px 32px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .conversation {
+    grid-template-columns: 1fr;
+  }
+}
+.conversation-head {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 16px 20px;
+}
+.conversation-head > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.participant,
+.tester {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.participant {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 230px);
+  min-height: 420px;
+  position: sticky;
+  top: 12px;
+}
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bubble {
+  max-width: 85%;
+  padding: 8px 12px;
+  border-radius: 14px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.bubble.from-agent {
+  align-self: flex-start;
+  background: var(--agent);
+  border-bottom-left-radius: 4px;
+}
+.bubble.from-participant {
+  align-self: flex-end;
+  background: var(--me);
+  color: var(--me-text);
+  border-bottom-right-radius: 4px;
+}
+.bubble.from-participant.unprocessed {
+  opacity: 0.6;
+  outline: 2px dashed var(--down);
+}
+.bubble .state {
+  font-size: 0.75em;
+  opacity: 0.85;
+  text-align: right;
+  margin-top: 2px;
+}
+.bubble.waiting {
+  color: var(--dim);
+  font-style: italic;
+}
+
+.notice {
+  margin: 0 16px 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--warn-bg);
+  color: var(--warn);
+}
+.notice.down {
+  background: var(--down-bg);
+  color: var(--down);
+}
+.finished p {
+  margin: 0 0 4px;
+}
+.finished code {
+  font-size: 0.85em;
+  overflow-wrap: anywhere;
+}
+.finished {
+  margin: 0;
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--dim);
+}
+
+.composer {
+  border-top: 1px solid var(--line);
+  padding: 10px 12px;
+}
+.composer textarea {
+  width: 100%;
+  font: inherit;
+  resize: vertical;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+}
+.composer-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.hint {
+  flex: 1;
+  color: var(--dim);
+  font-size: 0.85em;
+}
+.count {
+  color: var(--dim);
+  font-size: 0.8em;
+  font-variant-numeric: tabular-nums;
+}
+.count.over {
+  color: var(--down);
+  font-weight: 600;
+}
+
+.tester {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tester h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 650;
+}
+.tester-toggle {
+  align-self: stretch;
+}
+.tester-note {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  background: var(--agent);
+  color: var(--dim);
+}
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.row {
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--line);
+  border-radius: 8px;
+}
+.row.awaiting {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.row.changed {
+  background: var(--new);
+}
+.row-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.tag {
+  font-size: 0.75em;
+  padding: 1px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--dim);
+}
+.tag.now {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.tag.new {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.status {
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-left: auto;
+}
+.s-open,
+.s-not-raised {
+  color: var(--open);
+}
+.s-holds {
+  color: var(--holds);
+}
+.s-does-not-hold {
+  color: var(--not);
+}
+.s-chart-review {
+  color: var(--review);
+}
+.s-unresolved {
+  color: var(--unresolved);
+}
+.criterion {
+  margin: 6px 0 4px;
+}
+/* Protocol words, then the plain rendering or why there is none (slice 0006). */
+.words {
+  margin: 4px 0;
+}
+.words p,
+.words ul {
+  margin: 2px 0 0;
+}
+.words ul {
+  padding-left: 18px;
+  font-size: 0.9em;
+}
+.words-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--dim);
+}
+p.words .words-label {
+  margin-bottom: 2px;
+}
+.words.plain {
+  padding: 4px 8px;
+  border-left: 3px solid var(--accent);
+}
+.words.plain.none {
+  border-left-color: var(--line);
+  color: var(--dim);
+}
+.row-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.85em;
+  color: var(--dim);
+}
+.evidence {
+  margin: 6px 0 0;
+  padding: 4px 10px;
+  border-left: 3px solid var(--line);
+  font-style: italic;
+}
+
+/* The coordinator review (slice 0007). One column, the transcript below.
+   Rows are styled by their group and never by how a finding went: no colour,
+   icon or order says which way anything came out. */
+.review-link {
+  margin: 12px 0 0;
+}
+.review {
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: 0 24px 48px;
+}
+.review-head h1 {
+  font-size: 1.2rem;
+  margin: 0 0 4px;
+}
+/* The header's notes, one block with a rule between them (slice 0016). */
+.review-notes {
+  margin: 10px 0 0;
+  border-radius: 8px;
+  background: var(--agent);
+}
+.review-note {
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 0.9em;
+}
+.review-note + .review-note {
+  border-top: 1px solid var(--line);
+}
+/* What's left for the coordinator (slice 0014): one count per group, fixed words. */
+.review-summary {
+  margin: 20px 0;
+  padding: 16px 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.review-summary h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+.review-summary ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+}
+.review-summary li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85em;
+}
+.review-count {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.review-count strong {
+  font-size: 1.6rem;
+}
+.review-group,
+.review-transcript {
+  margin: 20px 0;
+  padding: 12px 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.review-group > details > summary {
+  cursor: pointer;
+  margin-left: 4px;
+}
+.review-group > details > summary h2 {
+  display: inline;
+}
+.review-group h2,
+.review-transcript h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+.review-what {
+  margin: 2px 0 8px;
+  color: var(--dim);
+  font-size: 0.9em;
+}
+.review-rows,
+.review-transcript ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.review-row {
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+/* A row folded: one line, the protocol words clipped, nothing else (slice 0014). */
+.review-row > details > summary {
+  cursor: pointer;
+  list-style: none;
+}
+.review-row > details > summary::-webkit-details-marker {
+  display: none;
+}
+.review-row > details:not([open]) .words.plain,
+.review-row > details:not([open]) .words-label {
+  display: none;
+}
+.review-row > details:not([open]) .criterion,
+.review-row > details:not([open]) .criterion p {
+  margin: 2px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.review-row > details > summary .row-head::after {
+  content: "▸";
+  color: var(--dim);
+  margin-left: 4px;
+}
+.review-row > details[open] > summary .row-head::after {
+  content: "▾";
+}
+.review-detail {
+  padding-top: 4px;
+}
+.review-finding {
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-left: auto;
+}
+.review-exchange {
+  margin: 6px 0 0;
+  padding: 4px 10px;
+  border-left: 3px solid var(--line);
+  font-size: 0.95em;
+}
+.review-question,
+.review-reply {
+  margin: 2px 0;
+}
+.review-question {
+  color: var(--dim);
+}
+.review-reply mark {
+  background: var(--new);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+.review-reading {
+  margin: 6px 0 0;
+  font-size: 0.85em;
+  color: var(--warn);
+}
+.review-turn {
+  padding: 6px 0;
+  border-top: 1px solid var(--line);
+}
+.review-turn p {
+  margin: 2px 0;
+}
+.review-foot p {
+  margin: 2px 0;
+}
+
+/* Settings (slice 0017): the page's own cards and fields, no new colours. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.settings-note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+.provider-list {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+}
+.provider {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 2px 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+.provider input {
+  grid-row: span 2;
+  margin: 0;
+  accent-color: var(--accent);
+  /* Without it, an unchosen radio is drawn white on the dark page, like a chosen one. */
+  color-scheme: light dark;
+}
+.provider.picked {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.provider-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+.settings-detail {
+  gap: 16px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+}
+.field > span:first-child,
+.field > label {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.field select,
+.field > input {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  max-width: 100%;
+}
+.help.warn {
+  color: var(--warn);
+}
+.help.ok {
+  color: var(--ok);
+}
+.settings .actions {
+  align-items: center;
+}
+
+/* Four nav items (slice 0017) fit one line on a phone. */
+@media (max-width: 480px) {
+  .nav a {
+    padding: 8px 9px;
+  }
+}

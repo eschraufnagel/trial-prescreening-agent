@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Screening conversation</title>
+<style>
+:root{--bg:#fbfbfa;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--agent:#eef2f7;--person:#f4f1ea;--holds:#2f6f4f;--dnh:#3d5a80;--unres:#9a6b16;--chart:#6b4f8f;--nr:#8a8a85;--flag:#a3342b}
+@media (prefers-color-scheme:dark){:root{--bg:#171716;--fg:#e8e6e1;--muted:#9c9a94;--line:#33322f;--agent:#1f2530;--person:#27241e;--holds:#6fbf95;--dnh:#8fb0dd;--unres:#e0b25c;--chart:#b89be0;--nr:#8a8a85;--flag:#ef8a80}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,sans-serif}
+header{padding:20px 16px;border-bottom:1px solid var(--line)}h1{font-size:18px;margin:0}
+.note{color:var(--muted);font-size:13px;margin-top:4px}
+main{display:grid;grid-template-columns:1fr 1fr;gap:0}
+section{padding:16px;min-width:0}section+section{border-left:1px solid var(--line)}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 12px}
+.turn{margin-bottom:10px}.meta{font-size:12px;color:var(--muted)}
+.bubble{padding:8px 12px;border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere}
+.agent .bubble{background:var(--agent)}.participant .bubble{background:var(--person);margin-left:24px}
+.tag{font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.flag{color:var(--flag);font-size:13px;margin:4px 0 0 24px}
+.finding{border-left:3px solid var(--nr);padding:6px 10px;margin-bottom:10px}
+.s-holds{border-color:var(--holds)}.s-does-not-hold{border-color:var(--dnh)}.s-unresolved{border-color:var(--unres)}.s-chart-review{border-color:var(--chart)}
+.fhead{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}.fid{font:600 13px ui-monospace,monospace}
+.status{font-weight:600}.muted{color:var(--muted);font-size:13px}.ftext{font-size:14px}
+ul{margin:4px 0 0;padding-left:18px;font-size:13px}a{color:inherit}
+@media (max-width:760px){main{grid-template-columns:1fr}section+section{border-left:0;border-top:1px solid var(--line)}}
+</style></head><body>
+<header><h1>NCT00077350-v2 (labels)</h1><div class="note">Synthetic conversation. Findings are per criterion and are not an eligibility decision; a coordinator makes that.</div></header>
+<main><section><h2>Conversation</h2>
+<div class="turn agent" id="t0"><div class="meta">0 · agent </div><div class="bubble">Hello, and thank you for your interest in the study &quot;A Phase II Trial of Triapine (NSC #663249) in Combination With Gemcitabine as Second Line Treatment of Non-Small Cell Lung Cancer&quot;. I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you.</div></div>
+<div class="turn agent" id="t1"><div class="meta">1 · agent <span class="tag">L1</span></div><div class="bubble">Thanks. Have you had a biopsy or tissue sample that confirmed your lung cancer is non-small cell (NSCLC)? A diagnosis based only on cells from fluid or sputum isn't enough for this study. If you aren't sure, that's okay to say.</div></div>
+<div class="turn participant" id="t2"><div class="meta">2 · person </div><div class="bubble">Yes, I had a biopsy that confirmed it's non-small cell lung cancer. It came back and has been progressive since.</div><div class="flag">⚑ simulator flag: The message asserts that a biopsy confirmed the diagnosis, which is not stated in the provided facts.</div></div>
+<div class="turn agent" id="t3"><div class="meta">3 · agent <span class="tag">L3</span></div><div class="bubble">Thanks. Have you received exactly one prior chemotherapy treatment for your advanced lung cancer?</div></div>
+<div class="turn participant" id="t4"><div class="meta">4 · person </div><div class="bubble">Yes, just the one chemotherapy regimen for the advanced cancer, and it failed.</div><div class="flag">⚑ simulator flag: The message asserts the patient had only one chemotherapy regimen, which contradicts the fact that he later corrected himself to state he had two different regimens.</div></div>
+<div class="turn agent" id="t5"><div class="meta">5 · agent <span class="tag">L4</span></div><div class="bubble">Thanks. Have you ever received a chemotherapy drug called gemcitabine before?</div></div>
+<div class="turn participant" id="t6"><div class="meta">6 · person </div><div class="bubble">Actually, I had two different chemotherapy regimens for the advanced cancer. But to answer your question, no, I have never received gemcitabine.</div></div>
+<div class="turn agent" id="t7"><div class="meta">7 · agent <span class="tag">L5</span></div><div class="bubble">Thanks. Have you had any imaging scans (like a CT or PET scan) within the last 4 weeks that showed your cancer is still measurable?</div></div>
+<div class="turn participant" id="t8"><div class="meta">8 · person </div><div class="bubble">I'm not sure about the exact timing of my last scans. I know I finished my chemotherapy four weeks ago, but I don't recall if I had a scan right after that.</div><div class="flag">⚑ simulator flag: The message asserts that the user finished chemotherapy four weeks ago, which directly contradicts the fact that the user later corrected this statement to say the last chemotherapy was only last week.</div></div>
+<div class="turn agent" id="t9"><div class="meta">9 · agent <span class="tag">L6</span></div><div class="bubble">Thanks. On a scale of 0 to 1, how would you rate your ability to carry out daily activities? 0 means fully active, and 1 means restricted in physically strenuous activity but ambulatory and able to carry out light work.</div></div>
+<div class="turn participant" id="t10"><div class="meta">10 · person </div><div class="bubble">No, wait, my last chemotherapy was only last week. I'd say my score is 0, I'm fully active.</div></div>
+<div class="turn agent" id="t11"><div class="meta">11 · agent <span class="tag">L14</span></div><div class="bubble">Thanks for the update. Have you received any radiation therapy for your cancer? If so, was it at least 3 weeks ago?</div></div>
+<div class="turn participant" id="t12"><div class="meta">12 · person </div><div class="bubble">Yes, I had radiation therapy, but it finished only one week ago, so it wasn't at least 3 weeks ago.</div></div>
+<div class="turn agent" id="t13"><div class="meta">13 · agent <span class="tag">L16</span></div><div class="bubble">Thanks. Have you recovered from any side effects of your chemotherapy to Grade 1 or your normal baseline? Grade 1 means mild symptoms that don't interfere with daily life. If you're not sure, that's okay.</div></div>
+<div class="turn participant" id="t14"><div class="meta">14 · person </div><div class="bubble">I think so, mostly. I'm feeling back to normal, but I'm not sure if that counts as Grade 1 or just baseline.</div><div class="flag">⚑ simulator flag: The message claims the person is 'feeling back to normal,' which contradicts the fact that they have recurrent, progressive non-small cell lung cancer and recently failed chemotherapy, implying they are not in a normal health state.</div></div>
+<div class="turn agent" id="t15"><div class="meta">15 · agent <span class="tag">L16</span></div><div class="bubble">Thanks. To clarify, are you currently experiencing any side effects from your chemotherapy that interfere with your daily life, or are you back to your normal health status?</div></div>
+<div class="turn participant" id="t16"><div class="meta">16 · person </div><div class="bubble">I'm back to my normal health status. I don't have any side effects interfering with my daily life right now.</div><div class="flag">⚑ simulator flag: says something (108 chars) citing no fact</div><div class="flag">⚑ simulator flag: The message claims the patient has no side effects and is back to normal health, which contradicts the facts stating he has advanced, recurrent, and progressive non-small cell lung cancer and recently completed chemotherapy.</div></div>
+<div class="turn agent" id="t17"><div class="meta">17 · agent <span class="tag">L17</span></div><div class="bubble">Thanks. Have you ever been diagnosed with brain metastases (cancer that has spread to the brain)? If so, was it treated, and are you currently stable with no new neurological symptoms?</div></div>
+<div class="turn participant" id="t18"><div class="meta">18 · person </div><div class="bubble">No, I have never been diagnosed with brain metastases.</div><div class="flag">⚑ simulator flag: The message asserts that the person has never been diagnosed with brain metastases, which is information not present in the provided facts.</div></div>
+<div class="turn agent" id="t19"><div class="meta">19 · agent <span class="tag">L19</span></div><div class="bubble">Thanks. Based on your current health, do you expect to live for more than 3 months?</div></div>
+<div class="turn participant" id="t20"><div class="meta">20 · person </div><div class="bubble">Yes, I expect to live for more than 3 months. I'm feeling pretty good right now.</div><div class="flag">⚑ simulator flag: The message asserts that the person is 'feeling pretty good right now,' which is a subjective health status not stated in the facts.</div></div>
+<div class="turn agent" id="t21"><div class="meta">21 · agent <span class="tag">L20</span></div><div class="bubble">Thanks. Are you currently pregnant, or do you think there is any chance you could be pregnant?</div></div>
+<div class="turn participant" id="t22"><div class="meta">22 · person </div><div class="bubble">No, I am a man, so I am not pregnant.</div></div>
+<div class="turn agent" id="t23"><div class="meta">23 · agent <span class="tag">L21</span></div><div class="bubble">Thanks. Are you currently breastfeeding?</div></div>
+<div class="turn participant" id="t24"><div class="meta">24 · person </div><div class="bubble">No, I am not breastfeeding. I am a man.</div></div>
+<div class="turn agent" id="t25"><div class="meta">25 · agent <span class="tag">L22</span></div><div class="bubble">Thanks. Since you are male, this criterion doesn't apply to you. Would you like to move on to the next question?</div></div>
+<div class="turn participant" id="t26"><div class="meta">26 · person </div><div class="bubble">Yes, let's move on.</div></div>
+<div class="turn agent" id="t27"><div class="meta">27 · agent <span class="tag">L22</span></div><div class="bubble">Thanks. Have you had a blood pregnancy test within the last 14 days?</div></div>
+<div class="turn participant" id="t28"><div class="meta">28 · person </div><div class="bubble">No, I am a man, so I don't need a blood pregnancy test.</div></div>
+<div class="turn agent" id="t29"><div class="meta">29 · agent <span class="tag">L23</span></div><div class="bubble">Thanks. Are you currently using any form of birth control, such as condoms or hormonal methods, or are you abstinent?</div></div>
+<div class="turn participant" id="t30"><div class="meta">30 · person </div><div class="bubble">Yes, I would agree to use contraception during the study.</div></div>
+<div class="turn agent" id="t31"><div class="meta">31 · agent <span class="tag">L24</span></div><div class="bubble">Thanks. Are you currently taking combination antiretroviral therapy for HIV?</div></div>
+<div class="turn participant" id="t32"><div class="meta">32 · person </div><div class="bubble">No, I am HIV negative.</div></div>
+<div class="turn agent" id="t33"><div class="meta">33 · agent <span class="tag">L25</span></div><div class="bubble">Thanks. Have you ever been diagnosed with any other type of cancer besides lung cancer?</div></div>
+<div class="turn participant" id="t34"><div class="meta">34 · person </div><div class="bubble">No, I have never been diagnosed with any other type of cancer besides lung cancer.</div><div class="flag">⚑ simulator flag: says something (82 chars) citing no fact</div><div class="flag">⚑ simulator flag: The message asserts that the person has never been diagnosed with any other type of cancer, but the provided facts do not contain this information, making it an unsupported assertion.</div></div>
+<div class="turn agent" id="t35"><div class="meta">35 · agent <span class="tag">L26</span></div><div class="bubble">Thanks. Do you currently have any active infections or uncontrolled medical or mental health conditions that might make it hard to follow the study rules?</div></div>
+<div class="turn participant" id="t36"><div class="meta">36 · person </div><div class="bubble">No, I don't have any active infections or uncontrolled conditions. My heart is fine as far as I know.</div><div class="flag">⚑ simulator flag: The message asserts that the person does not have any active infections or uncontrolled conditions, which is information not present in the provided facts.</div></div>
+<div class="turn agent" id="t37"><div class="meta">37 · agent <span class="tag">L27</span></div><div class="bubble">Thanks. Have you had a heart attack in the last 6 months?</div></div>
+<div class="turn participant" id="t38"><div class="meta">38 · person </div><div class="bubble">No, I haven't had a heart attack in the last 6 months. My heart is fine as far as I know.</div></div>
+<div class="turn agent" id="t39"><div class="meta">39 · agent <span class="tag">L29</span></div><div class="bubble">Thanks. Have you ever been diagnosed with unstable angina pectoris (chest pain due to reduced blood flow to the heart)?</div></div>
+<div class="turn participant" id="t40"><div class="meta">40 · person </div><div class="bubble">No, I have never been diagnosed with unstable angina. My heart is fine as far as I know.</div></div>
+<div class="turn agent" id="t41"><div class="meta">41 · agent <span class="tag">L30</span></div><div class="bubble">Have you ever been diagnosed with a heart rhythm problem (arrhythmia) that required medical treatment? This excludes chronic, stable, and symptom-free atrial fibrillation. If you aren't sure, that's okay.</div></div>
+<div class="turn participant" id="t42"><div class="meta">42 · person </div><div class="bubble">No, I have never been diagnosed with a heart rhythm problem. My heart is fine as far as I know.</div></div>
+<div class="turn agent" id="t43"><div class="meta">43 · agent <span class="tag">L31</span></div><div class="bubble">Thanks. Do you currently use oxygen therapy for a lung condition?</div></div>
+<div class="turn participant" id="t44"><div class="meta">44 · person </div><div class="bubble">No, I don't use oxygen therapy. I'm a delivery driver, so I need to be able to breathe fine for that.</div><div class="flag">⚑ simulator flag: says something (101 chars) citing no fact</div><div class="flag">⚑ simulator flag: The message asserts that the person does not use oxygen therapy, which is a health detail not stated in the facts.</div></div>
+<div class="turn agent" id="t45"><div class="meta">45 · agent <span class="tag">L32</span></div><div class="bubble">Thanks. Have you ever been diagnosed with dementia or active psychosis?</div></div>
+<div class="turn participant" id="t46"><div class="meta">46 · person </div><div class="bubble">No, I have never been diagnosed with dementia or active psychosis.</div><div class="flag">⚑ simulator flag: The message asserts that the person has never been diagnosed with dementia or active psychosis, which is information not present in the provided facts.</div></div>
+<div class="turn agent" id="t47"><div class="meta">47 · agent <span class="tag">L33</span></div><div class="bubble">Have you taken any investigational drug or participated in another clinical trial in the last month?</div></div>
+<div class="turn participant" id="t48"><div class="meta">48 · person </div><div class="bubble">Yes, I was in another trial and took an investigational drug three weeks ago.</div></div>
+<div class="turn agent" id="t49"><div class="meta">49 · agent <span class="tag">L34</span></div><div class="bubble">Thanks. Have you ever had an allergic reaction to Triapine or other drugs with a similar chemical composition?</div></div>
+<div class="turn participant" id="t50"><div class="meta">50 · person </div><div class="bubble">No, I have never had an allergic reaction to Triapine or anything similar to it.</div></div>
+<div class="turn agent" id="t51"><div class="meta">51 · agent <span class="tag">L35</span></div><div class="bubble">Have you ever been diagnosed with G6PD deficiency? This is a genetic condition that affects red blood cells.</div></div>
+<div class="turn participant" id="t52"><div class="meta">52 · person </div><div class="bubble">No, I have never been told I have G6PD deficiency.</div></div>
+<div class="turn agent" id="t53"><div class="meta">53 · agent </div><div class="bubble">Thank you, that's all my questions. A study coordinator will review your answers and contact you about next steps.</div></div>
+</section><section><h2>Findings</h2>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L1</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported holds</span></div>
+  <div class="ftext">Patients must have histologically confirmed non-small cell lung cancer (NSCLC); cytology alone is not acceptable</div>
+  <ul><li><a href="#t2">turn 2</a> “Yes, I had a biopsy that confirmed it's non-small cell lung cancer.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L2</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported holds</span></div>
+  <div class="ftext">Patients must have progressive or recurrent NSCLC</div>
+  <ul><li><a href="#t2">turn 2</a> “It came back and has been progressive since.”</li></ul>
+</div>
+<div class="finding s-holds">
+  <div class="fhead"><span class="fid">L3</span>
+  <span class="status">holds</span>
+  <span class="muted">patient · inclusion · answered</span></div>
+  <div class="ftext">must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease</div>
+  <ul><li><a href="#t4">turn 4</a> “Yes, just the one chemotherapy regimen”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L4</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">patients must not have received prior gemcitabine chemotherapy</div>
+  <ul><li><a href="#t6">turn 6</a> “no, I have never received gemcitabine”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L5</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · unknown · reported unknown</span></div>
+  <div class="ftext">Patients must have measurable disease, as defined by RECIST, within 4 weeks prior to registration</div>
+  <ul><li><a href="#t8">turn 8</a> “I'm not sure about the exact timing of my last scans.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L6</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported holds</span></div>
+  <div class="ftext">Patients must have an ECOG performance status of 0 or 1</div>
+  <ul><li><a href="#t10">turn 10</a> “I'd say my score is 0, I'm fully active.”</li></ul>
+</div>
+<div class="finding s-not-raised">
+  <div class="fhead"><span class="fid">L7</span>
+  <span class="status">not raised</span>
+  <span class="muted">clinical · inclusion · lab-value</span></div>
+  <div class="ftext">Bilirubin &lt; 1.5 x upper limit of normal</div>
+  
+</div>
+<div class="finding s-not-raised">
+  <div class="fhead"><span class="fid">L8</span>
+  <span class="status">not raised</span>
+  <span class="muted">clinical · inclusion · lab-value</span></div>
+  <div class="ftext">AST (SGOT) &lt; 3 x upper limit of normal</div>
+  
+</div>
+<div class="finding s-not-raised">
+  <div class="fhead"><span class="fid">L9</span>
+  <span class="status">not raised</span>
+  <span class="muted">clinical · inclusion · lab-value</span></div>
+  <div class="ftext">Serum creatinine =&lt; 1.5 mg/dL, or calculated creatinine clearance &gt;= 60 mL/min</div>
+  
+</div>
+<div class="finding s-not-raised">
+  <div class="fhead"><span class="fid">L10</span>
+  <span class="status">not raised</span>
+  <span class="muted">clinical · inclusion · lab-value</span></div>
+  <div class="ftext">Absolute granulocyte count &gt;= 1500/mm3</div>
+  
+</div>
+<div class="finding s-not-raised">
+  <div class="fhead"><span class="fid">L11</span>
+  <span class="status">not raised</span>
+  <span class="muted">clinical · inclusion · lab-value</span></div>
+  <div class="ftext">WBC &gt;= 3000/mm\^3</div>
+  
+</div>
+<div class="finding s-not-raised">
+  <div class="fhead"><span class="fid">L12</span>
+  <span class="status">not raised</span>
+  <span class="muted">clinical · inclusion · lab-value</span></div>
+  <div class="ftext">Hemoglobin &gt;= 9 g/L</div>
+  
+</div>
+<div class="finding s-not-raised">
+  <div class="fhead"><span class="fid">L13</span>
+  <span class="status">not raised</span>
+  <span class="muted">clinical · inclusion · lab-value</span></div>
+  <div class="ftext">Platelet count &gt;= 100,000/mm\^3</div>
+  
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L14</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · inclusion · answered</span></div>
+  <div class="ftext">Patients must have completed any radiation therapy &gt;= 3 weeks prior to registration</div>
+  <ul><li><a href="#t12">turn 12</a> “it finished only one week ago”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L15</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · inclusion · answered</span></div>
+  <div class="ftext">Patients must have completed prior cytotoxic chemotherapy &gt;= 3 weeks prior to registration</div>
+  <ul><li><a href="#t10">turn 10</a> “my last chemotherapy was only last week.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L16</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported holds</span></div>
+  <div class="ftext">have recovered from adverse effects from the chemotherapy to =&lt; Grade 1, or baseline</div>
+  <ul><li><a href="#t14">turn 14</a> “I'm not sure if that counts as Grade 1 or just baseline.”</li><li><a href="#t16">turn 16</a> “I don't have any side effects interfering with my daily life right now.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L17</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">Patients with brain metastases which have been treated are eligible if the patient is &gt; 3 weeks post completion of treatment for their brain metastases, and patient is neurologically stable</div>
+  <ul><li><a href="#t18">turn 18</a> “No, I have never been diagnosed with brain metastases.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L18</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">patients with previous brain metastases who have not yet received therapy specifically intended for their brain metastases are not eligible to enroll in this protocol</div>
+  <ul><li><a href="#t18">turn 18</a> “No, I have never been diagnosed with brain metastases.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L19</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported holds</span></div>
+  <div class="ftext">Life expectancy greater than 3 months</div>
+  <ul><li><a href="#t20">turn 20</a> “Yes, I expect to live for more than 3 months.”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L20</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">Pregnant women are excluded from this study</div>
+  <ul><li><a href="#t22">turn 22</a> “No, I am a man, so I am not pregnant.”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L21</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">breastfeeding should be discontinued if the mother is treated with Triapine®</div>
+  <ul><li><a href="#t24">turn 24</a> “No, I am not breastfeeding. I am a man.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L22</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · inclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">a negative serum pregnancy test is required within 14 days of study entry</div>
+  <ul><li><a href="#t28">turn 28</a> “I am a man, so I don't need a blood pregnancy test.”</li></ul>
+</div>
+<div class="finding s-holds">
+  <div class="fhead"><span class="fid">L23</span>
+  <span class="status">holds</span>
+  <span class="muted">patient · inclusion · answered</span></div>
+  <div class="ftext">women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation</div>
+  <ul><li><a href="#t30">turn 30</a> “Yes, I would agree to use contraception during the study.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L24</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">HIV-positive patients receiving combination antiretroviral therapy are excluded from the study</div>
+  <ul><li><a href="#t32">turn 32</a> “No, I am HIV negative.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L25</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">Patients must not have an active second malignancy</div>
+  <ul><li><a href="#t34">turn 34</a> “No, I have never been diagnosed with any other type of cancer besides lung cancer.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L26</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements</div>
+  <ul><li><a href="#t36">turn 36</a> “No, I don't have any active infections or uncontrolled conditions.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L27</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">a history of myocardial infarction within the prior 6 months</div>
+  <ul><li><a href="#t38">turn 38</a> “No, I haven't had a heart attack in the last 6 months.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L28</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">symptomatic congestive heart failure</div>
+  <ul><li><a href="#t36">turn 36</a> “My heart is fine as far as I know.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L29</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">unstable angina pectoris</div>
+  <ul><li><a href="#t40">turn 40</a> “No, I have never been diagnosed with unstable angina.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L30</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation)</div>
+  <ul><li><a href="#t42">turn 42</a> “No, I have never been diagnosed with a heart rhythm problem.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L31</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">pulmonary disease requiring oxygen</div>
+  <ul><li><a href="#t44">turn 44</a> “No, I don't use oxygen therapy.”</li></ul>
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L32</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">Patients must not have dementia or active psychosis</div>
+  <ul><li><a href="#t46">turn 46</a> “No, I have never been diagnosed with dementia or active psychosis.”</li></ul>
+</div>
+<div class="finding s-holds">
+  <div class="fhead"><span class="fid">L33</span>
+  <span class="status">holds</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">Patients must not have used any investigational agent in the month before study enrollment</div>
+  <ul><li><a href="#t48">turn 48</a> “took an investigational drug three weeks ago”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L34</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">Patients must not have a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine® or other agents used in this study</div>
+  <ul><li><a href="#t50">turn 50</a> “No, I have never had an allergic reaction to Triapine or anything similar to it.”</li></ul>
+</div>
+<div class="finding s-does-not-hold">
+  <div class="fhead"><span class="fid">L35</span>
+  <span class="status">does not hold</span>
+  <span class="muted">patient · exclusion · answered</span></div>
+  <div class="ftext">Patients must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency</div>
+  <ul><li><a href="#t52">turn 52</a> “No, I have never been told I have G6PD deficiency.”</li></ul>
+</div>
+<div class="finding s-not-raised">
+  <div class="fhead"><span class="fid">L36</span>
+  <span class="status">not raised</span>
+  <span class="muted">protocol · inclusion · protocol</span></div>
+  <div class="ftext">persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry for this condition</div>
+  
+</div>
+<div class="finding s-chart-review">
+  <div class="fhead"><span class="fid">L37</span>
+  <span class="status">needs chart review</span>
+  <span class="muted">clinical · exclusion · answered · reported does-not-hold</span></div>
+  <div class="ftext">patients testing positive for G6PD deficiency are excluded from protocol entry</div>
+  <ul><li><a href="#t52">turn 52</a> “No, I have never been told I have G6PD deficiency.”</li></ul>
+</div>
+</section></main></body></html>

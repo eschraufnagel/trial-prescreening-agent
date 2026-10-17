@@ -1,0 +1,68 @@
+{
+  "id": "NCT04316364-v3",
+  "nctId": "NCT04316364",
+  "labelSetSha": "da2c69671dcb089fd692a4fa41a0ee693507e272bcb95a81403d409bd9001adb",
+  "behavior": "vague",
+  "persona": "70-year-old retired farmer, a man, friendly and inclined to wander off the question.",
+  "facts": [
+    {
+      "label": "L7",
+      "says": "Yes, I would agree to the contraception rule, if that is what it takes.",
+      "expected": "holds"
+    },
+    {
+      "label": "L8",
+      "says": "I think they gave me something through a drip a while back, but I am not sure what it was for.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L17",
+      "says": "I have never been allergic to any drugs, antibody ones included.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L18",
+      "says": "I have never had an allergic reaction to any medicine.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L19",
+      "says": "Me? No, I am not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L20",
+      "says": "Not lactating, no.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L22",
+      "says": "I used to drink too much, years back. Not so much now.",
+      "expected": "defer"
+    },
+    {
+      "label": "L24",
+      "says": "Hard to say. There was a bug going round at church, it could have been COVID.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L11",
+      "says": "I had some lung trouble a few years ago, the doctor called it inflammation."
+    },
+    {
+      "label": "L23",
+      "says": "I do not think I have had COVID, but who knows."
+    },
+    {
+      "label": "L16",
+      "says": "I have never had hepatitis B or hepatitis C.",
+      "reported": "does-not-hold"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": false,
+    "note": "Drafted before the agent prompts existed, but by the author of the spec and graders, which fixes what the agent is meant to do. That is an anchoring the ordering does not remove."
+  }
+}

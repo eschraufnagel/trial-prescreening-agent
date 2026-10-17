@@ -1,0 +1,1505 @@
+{
+  "nctId": "NCT00743379",
+  "criteria": [
+    {
+      "id": "NCT00743379:45-69",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant must be at least 18 years of age.",
+      "source": {
+        "start": 45,
+        "end": 69,
+        "text": "At least 18 years of age"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:73-177",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant must be able to understand the purposes and risks of the study and must have signed a written informed consent form.",
+      "source": {
+        "start": 73,
+        "end": 177,
+        "text": "Ability to understand the purposes and risks of the study and has signed a written informed consent form"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:214-492",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have a histologically or cytologically confirmed solid malignancy that is metastatic or unresectable and for which standard curative or palliative measures do not exist or are no longer effective, OR a solid malignancy for which monotherapy with gemcitabine is considered standard therapy.",
+      "source": {
+        "start": 214,
+        "end": 492,
+        "text": "Histologically or cytologically confirmed solid malignancy that is metastatic or unresectable and for which standard curative or palliative measures do not exist or are no longer effective OR solid malignancy for which monotherapy with gemcitabine is considered standard therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Dose escalation subjects (Gemcitabine + TH-302)"
+    },
+    {
+      "id": "NCT00743379:496-539",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have experienced tumor progression after their most recent therapy.",
+      "source": {
+        "start": 496,
+        "end": 539,
+        "text": "Tumor progression after most recent therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Dose escalation subjects (Gemcitabine + TH-302)"
+    },
+    {
+      "id": "NCT00743379:576-827",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have locally advanced unresectable or metastatic pancreatic ductal adenocarcinoma proven either by histology (surgical biopsy) or cytology (CT- or endoscopic-guided) and must have been previously untreated with chemotherapy other than radiosensitizing doses of 5-fluorouracil.",
+      "source": {
+        "start": 576,
+        "end": 827,
+        "text": "Locally advanced unresectable or metastatic pancreatic ductal adenocarcinoma proven either by histology (surgical biopsy) or cytology (CT- or endoscopic-guided) previously untreated with chemotherapy other than radiosensitizing doses of 5-fluorouracil"
+      },
+      "confidence": 1,
+      "appliesTo": "Dose expansion subjects (Gemcitabine + TH-302)"
+    },
+    {
+      "id": "NCT00743379:831-889",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have recovered from toxicities of prior therapy to grade 0 or 1.",
+      "source": {
+        "start": 831,
+        "end": 889,
+        "text": "Recovered from toxicities of prior therapy to grade 0 or 1"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:893-972",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have evaluable disease by RECIST criteria (at least one target or non-target lesion).",
+      "source": {
+        "start": 893,
+        "end": 972,
+        "text": "Evaluable disease by RECIST criteria (at least one target or non-target lesion)"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:976-987",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have an ECOG performance status of 0 or 1.",
+      "source": {
+        "start": 976,
+        "end": 987,
+        "text": "ECOG 0 or 1"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:991-1027",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have a life expectancy of at least 3 months.",
+      "source": {
+        "start": 991,
+        "end": 1027,
+        "text": "Life expectancy of at least 3 months"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:1031-1205",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have acceptable liver function: Bilirubin ≤ 1.5 times upper limit of normal, and AST (SGOT) and ALT (SGPT) ≤ 2.5xULN; if liver metastases are present, then ≤ 5xULN is allowed.",
+      "source": {
+        "start": 1031,
+        "end": 1205,
+        "text": "Acceptable liver function:\n\n   a. Bilirubin ≤ 1.5 times upper limit of normal b. AST (SGOT) and ALT (SGPT) ≤ 2.5xULN; if liver metastases are present, then ≤ 5xULN is allowed"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:1209-1265",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have acceptable renal function: Serum creatinine ≤ ULN.",
+      "source": {
+        "start": 1209,
+        "end": 1265,
+        "text": "Acceptable renal function:\n\n   a. Serum creatinine ≤ ULN"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:1270-1392",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have acceptable hematologic status: ANC ≥ 1500 cells/μL, Platelet count ≥ 100,000/μL, and Hemoglobin ≥ 9.0 g/dL.",
+      "source": {
+        "start": 1270,
+        "end": 1392,
+        "text": "Acceptable hematologic status:\n\n    1. ANC ≥ 1500 cells/μL\n    2. Platelet count ≥ 100,000/μL\n    3. Hemoglobin ≥ 9.0 g/dL"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:1397-1634",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "All women of childbearing potential must have a negative serum pregnancy test, and women and men subjects must agree to use effective means of contraception with their partner from entry into the study through 6 months after the last dose.",
+      "source": {
+        "start": 1397,
+        "end": 1634,
+        "text": "All women of childbearing potential must have a negative serum pregnancy test and women and men subjects must agree to use effective means of contraception with their partner from entry into the study through 6 months after the last dose"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:1694-1718",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant must be at least 18 years of age.",
+      "source": {
+        "start": 1694,
+        "end": 1718,
+        "text": "At least 18 years of age"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:1722-1826",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant must be able to understand the purposes and risks of the study and must have signed a written informed consent form.",
+      "source": {
+        "start": 1722,
+        "end": 1826,
+        "text": "Ability to understand the purposes and risks of the study and has signed a written informed consent form"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:1868-2134",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have a histologically or cytologically confirmed solid malignancy that is metastatic or unresectable and for which standard curative or palliative measures do not exist or are no longer effective, OR a solid malignancy for which monotherapy with docetaxel would be appropriate.",
+      "source": {
+        "start": 1868,
+        "end": 2134,
+        "text": "Histologically or cytologically confirmed solid malignancy that is metastatic or unresectable and for which standard curative or palliative measures do not exist or are no longer effective OR solid malignancy for which monotherapy with docetaxel would be appropriate"
+      },
+      "confidence": 1,
+      "appliesTo": "Dose escalation subjects (Docetaxel + TH-302)"
+    },
+    {
+      "id": "NCT00743379:2138-2181",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have experienced tumor progression after their most recent therapy.",
+      "source": {
+        "start": 2138,
+        "end": 2181,
+        "text": "Tumor progression after most recent therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Dose escalation subjects (Docetaxel + TH-302)"
+    },
+    {
+      "id": "NCT00743379:2185-2243",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have recovered from toxicities of prior therapy to grade 0 or 1.",
+      "source": {
+        "start": 2185,
+        "end": 2243,
+        "text": "Recovered from toxicities of prior therapy to grade 0 or 1"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:2247-2425",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have evaluable disease by RECIST criteria (at least one target or non-target lesion) or evidence of disease progression for subjects with metastatic castrate-resistant prostate cancer.",
+      "source": {
+        "start": 2247,
+        "end": 2425,
+        "text": "Evaluable disease by RECIST criteria (at least one target or non-target lesion) or evidence of disease progression for subjects with metastatic castrate-resistant prostate cancer"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:2429-2440",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have an ECOG performance status of 0 or 1.",
+      "source": {
+        "start": 2429,
+        "end": 2440,
+        "text": "ECOG 0 or 1"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:2444-2480",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have a life expectancy of at least 3 months.",
+      "source": {
+        "start": 2444,
+        "end": 2480,
+        "text": "Life expectancy of at least 3 months"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:2484-2628",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have acceptable liver function: Bilirubin ≤ upper limit of normal, and AST (SGOT) and ALT (SGPT) ≤ 1.5x ULN with alkaline phosphatase ≤ 2.5x ULN.",
+      "source": {
+        "start": 2484,
+        "end": 2628,
+        "text": "Acceptable liver function:\n\n   a. Bilirubin ≤ upper limit of normal b. AST (SGOT) and ALT (SGPT) ≤ 1.5x ULN with alkaline phosphatase ≤ 2.5x ULN"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:2632-2688",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have acceptable renal function: Serum creatinine ≤ ULN.",
+      "source": {
+        "start": 2632,
+        "end": 2688,
+        "text": "Acceptable renal function:\n\n   a. Serum creatinine ≤ ULN"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:2693-2815",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have acceptable hematologic status: ANC ≥ 1500 cells/μL, Platelet count ≥ 100,000/μL, and Hemoglobin ≥ 9.0 g/dL.",
+      "source": {
+        "start": 2693,
+        "end": 2815,
+        "text": "Acceptable hematologic status:\n\n    1. ANC ≥ 1500 cells/μL\n    2. Platelet count ≥ 100,000/μL\n    3. Hemoglobin ≥ 9.0 g/dL"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:2820-3057",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "All women of childbearing potential must have a negative serum pregnancy test, and women and men subjects must agree to use effective means of contraception with their partner from entry into the study through 6 months after the last dose.",
+      "source": {
+        "start": 2820,
+        "end": 3057,
+        "text": "All women of childbearing potential must have a negative serum pregnancy test and women and men subjects must agree to use effective means of contraception with their partner from entry into the study through 6 months after the last dose"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:3207-3338",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have histologically or cytologically confirmed adenocarcinoma of the prostate with clinical or radiologic evidence of metastatic disease.",
+      "source": {
+        "start": 3207,
+        "end": 3338,
+        "text": "Histologically or cytologically confirmed adenocarcinoma of the prostate with clinical or radiologic evidence of metastatic disease"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with metastatic castrate-resistant prostate cancer"
+    },
+    {
+      "id": "NCT00743379:3342-3445",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have experienced disease progression during hormone therapy and must have received primary androgenablation therapy as maintenance.",
+      "source": {
+        "start": 3342,
+        "end": 3445,
+        "text": "Disease progression during hormone therapy and received primary androgenablation therapy as maintenance"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with metastatic castrate-resistant prostate cancer"
+    },
+    {
+      "id": "NCT00743379:3449-3607",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "For subjects who have not had orchiectomy, serum testosterone concentration must be <50 ng/mL (<1.7 nmol/L), and GnRH analog therapy must be continued during this study.",
+      "source": {
+        "start": 3449,
+        "end": 3607,
+        "text": "For subjects who have not had orchiectomy: serum testosterone concentration \\<50 ng/mL (\\<1.7 nmol/L); GnRH analog therapy must be continued during this study"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with metastatic castrate-resistant prostate cancer"
+    },
+    {
+      "id": "NCT00743379:3611-3985",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "If there has been antiandrogen withdrawal, it must have occurred at least 4 weeks before study enrollment (6 weeks for bicalutamide), OR in subjects who have had an antiandrogen added as second-line therapy and there was no response to the most recent antiandrogen therapy or if the PSA decline lasted ≤3 months, antiandrogen therapy must be discontinued for at least 2 weeks.",
+      "source": {
+        "start": 3611,
+        "end": 3985,
+        "text": "If there has been antiandrogen withdrawal, it must have occurred at least 4 weeks before study enrollment (6 weeks for bicalutamide) OR in subjects who have had an antiandrogen added as second-line therapy and there was no response to the most recent antiandrogen therapy or if the PSA decline lasted ≤3 months, antiandrogen therapy must be discontinued for at least 2 weeks"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with metastatic castrate-resistant prostate cancer"
+    },
+    {
+      "id": "NCT00743379:3989-4290",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have evidence of disease progression, manifested by at least one of the following: Rising PSA on at least 3 measurements at least 1 week apart, or Disease progression on physical examination or imaging studies (if progression is based on bone scan alone, there must be at least 2 new bone lesions).",
+      "source": {
+        "start": 3989,
+        "end": 4290,
+        "text": "Evidence of disease progression, manifested by at least one of the following:\n\n   1. Rising PSA on at least 3 measurements at least 1 week apart\n   2. Disease progression on physical examination or imaging studies (if progression is based on bone scan alone, there must be at least 2 new bone lesions)"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with metastatic castrate-resistant prostate cancer"
+    },
+    {
+      "id": "NCT00743379:4294-4341",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant must have been previously untreated with systemic chemotherapy.",
+      "source": {
+        "start": 4294,
+        "end": 4341,
+        "text": "Previously untreated with systemic chemotherapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with metastatic castrate-resistant prostate cancer"
+    },
+    {
+      "id": "NCT00743379:4345-4365",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have a PSA level of at least 2 ng/mL.",
+      "source": {
+        "start": 4345,
+        "end": 4365,
+        "text": "PSA at least 2 ng/mL"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with metastatic castrate-resistant prostate cancer"
+    },
+    {
+      "id": "NCT00743379:4449-4561",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have histological or cytological confirmation of NSCLC with stage IIIB or IV disease not amenable to curative therapy.",
+      "source": {
+        "start": 4449,
+        "end": 4561,
+        "text": "Histological or cytological confirmation of NSCLC with stage IIIB or IV disease not amenable to curative therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with second-line NSCLC"
+    },
+    {
+      "id": "NCT00743379:4565-4645",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant must have had prior treatment with only one systemic chemotherapy regimen for advanced disease.",
+      "source": {
+        "start": 4565,
+        "end": 4645,
+        "text": "Prior treatment with only one systemic chemotherapy regimen for advanced disease"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with second-line NSCLC"
+    },
+    {
+      "id": "NCT00743379:4649-4692",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have experienced tumor progression after their most recent therapy.",
+      "source": {
+        "start": 4649,
+        "end": 4692,
+        "text": "Tumor progression after most recent therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects or dose-escalation subjects with second-line NSCLC"
+    },
+    {
+      "id": "NCT00743379:4753-4777",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant must be at least 18 years of age.",
+      "source": {
+        "start": 4753,
+        "end": 4777,
+        "text": "At least 18 years of age"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:4781-4885",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant must be able to understand the purposes and risks of the study and must have signed a written informed consent form.",
+      "source": {
+        "start": 4781,
+        "end": 4885,
+        "text": "Ability to understand the purposes and risks of the study and has signed a written informed consent form"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:4922-5199",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have a histologically or cytologically confirmed solid malignancy that is metastatic or unresectable and for which standard curative or palliative measures do not exist or are no longer effective, OR a solid malignancy for which monotherapy with pemetrexed is considered standard therapy.",
+      "source": {
+        "start": 4922,
+        "end": 5199,
+        "text": "Histologically or cytologically confirmed solid malignancy that is metastatic or unresectable and for which standard curative or palliative measures do not exist or are no longer effective OR solid malignancy for which monotherapy with pemetrexed is considered standard therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Dose escalation subjects (Pemetrexed + TH-302)"
+    },
+    {
+      "id": "NCT00743379:5203-5246",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have experienced tumor progression after their most recent therapy.",
+      "source": {
+        "start": 5203,
+        "end": 5246,
+        "text": "Tumor progression after most recent therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Dose escalation subjects (Pemetrexed + TH-302)"
+    },
+    {
+      "id": "NCT00743379:5250-5292",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have recovered from toxicities of prior therapy.",
+      "source": {
+        "start": 5250,
+        "end": 5292,
+        "text": "Recovered from toxicities of prior therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:5296-5375",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have evaluable disease by RECIST criteria (at least one target or non-target lesion).",
+      "source": {
+        "start": 5296,
+        "end": 5375,
+        "text": "Evaluable disease by RECIST criteria (at least one target or non-target lesion)"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:5379-5412",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have an ECOG performance status of 0 or 1.",
+      "source": {
+        "start": 5379,
+        "end": 5412,
+        "text": "ECOG performance status of 0 or 1"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:5416-5452",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have a life expectancy of at least 3 months.",
+      "source": {
+        "start": 5416,
+        "end": 5452,
+        "text": "Life expectancy of at least 3 months"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:5456-5612",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have acceptable liver function: Bilirubin ≤ 1.5x ULN, and AST (SGOT) and ALT (SGPT) ≤ 2.5x ULN; if liver metastases are present, then ≤ 5x ULN is allowed.",
+      "source": {
+        "start": 5456,
+        "end": 5612,
+        "text": "Acceptable liver function:\n\n   1. Bilirubin ≤ 1.5x ULN\n   2. AST (SGOT) and ALT (SGPT) ≤ 2.5x ULN; if liver metastases are present, then ≤ 5x ULN is allowed"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:5616-5704",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have acceptable renal function: Serum creatinine ≤ ULN and calculated CrCl ≥ 45 mL/min.",
+      "source": {
+        "start": 5616,
+        "end": 5704,
+        "text": "Acceptable renal function:\n\n   a. Serum creatinine ≤ ULN and calculated CrCl ≥ 45 mL/min"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:5709-5823",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have acceptable hematologic status: ANC ≥ 1500 cells/μL, Platelet count ≥ 100,000/μL, and Hemoglobin ≥ 9.0 g/dL.",
+      "source": {
+        "start": 5709,
+        "end": 5823,
+        "text": "Acceptable hematologic status:\n\n    a. ANC ≥ 1500 cells/μL b. Platelet count ≥ 100,000/μL c. Hemoglobin ≥ 9.0 g/dL"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:5828-6065",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "All women of childbearing potential must have a negative serum pregnancy test, and women and men subjects must agree to use effective means of contraception with their partner from entry into the study through 6 months after the last dose.",
+      "source": {
+        "start": 5828,
+        "end": 6065,
+        "text": "All women of childbearing potential must have a negative serum pregnancy test and women and men subjects must agree to use effective means of contraception with their partner from entry into the study through 6 months after the last dose"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Inclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:6120-6232",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have histological or cytological confirmation of NSCLC with stage IIIB or IV disease not amenable to curative therapy.",
+      "source": {
+        "start": 6120,
+        "end": 6232,
+        "text": "Histological or cytological confirmation of NSCLC with stage IIIB or IV disease not amenable to curative therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded cohort subjects ONLY: Second-line NSCLC (Pemetrexed + TH-302)"
+    },
+    {
+      "id": "NCT00743379:6236-6316",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The prospective participant must have had prior treatment with only one systemic chemotherapy regimen for advanced disease.",
+      "source": {
+        "start": 6236,
+        "end": 6316,
+        "text": "Prior treatment with only one systemic chemotherapy regimen for advanced disease"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded cohort subjects ONLY: Second-line NSCLC (Pemetrexed + TH-302)"
+    },
+    {
+      "id": "NCT00743379:6320-6363",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The prospective participant must have experienced tumor progression after their most recent therapy.",
+      "source": {
+        "start": 6320,
+        "end": 6363,
+        "text": "Tumor progression after most recent therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded cohort subjects ONLY: Second-line NSCLC (Pemetrexed + TH-302)"
+    },
+    {
+      "id": "NCT00743379:6425-6506",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior treatment with more than 3 myelosuppressive cytotoxic chemotherapy regimens.",
+      "source": {
+        "start": 6425,
+        "end": 6506,
+        "text": "Prior treatment with more than 3 myelosuppressive cytotoxic chemotherapy regimens"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:6510-6542",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior treatment with gemcitabine.",
+      "source": {
+        "start": 6510,
+        "end": 6542,
+        "text": "Prior treatment with gemcitabine"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:6546-6600",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have had prior radiotherapy to more than 25% of the bone marrow.",
+      "source": {
+        "start": 6546,
+        "end": 6600,
+        "text": "Prior radiotherapy to more than 25% of the bone marrow"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:6604-6797",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have New York Heart Association (NYHA) Class III or IV, cardiac disease, myocardial infarction within 6 months prior to Day 1, unstable arrhythmia or symptomatic peripheral arterial vascular disease.",
+      "source": {
+        "start": 6604,
+        "end": 6797,
+        "text": "New York Heart Association (NYHA) Class III or IV, cardiac disease, myocardial infarction within 6 months prior to Day 1, unstable arrhythmia or symptomatic peripheral arterial vascular disease"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:6801-6851",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have seizure disorders requiring anticonvulsant therapy.",
+      "source": {
+        "start": 6801,
+        "end": 6851,
+        "text": "Seizure disorders requiring anticonvulsant therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:6855-6987",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have symptomatic brain, leptomeningeal or epidural metastases, unless previously treated and well controlled for a period of ≥ 3 months.",
+      "source": {
+        "start": 6855,
+        "end": 6987,
+        "text": "Symptomatic brain, leptomeningeal or epidural metastases, (unless previously treated and well controlled for a period of ≥ 3 months)"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:6991-7177",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have previously treated malignancies, except for adequately treated non-melanoma skin cancer, in situ cancer, or other cancer from which the subject has been disease-free for at least 5 years.",
+      "source": {
+        "start": 6991,
+        "end": 7177,
+        "text": "Previously treated malignancies, except for adequately treated non-melanoma skin cancer, in situ cancer, or other cancer from which the subject has been disease-free for at least 5 years"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:7181-7484",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have severe chronic obstructive or other pulmonary disease with hypoxemia (requires supplementary oxygen, symptoms due to hypoxemia or oxygen saturation <90% by pulse oximetry after a 2 minute walk) or in the opinion of the investigator any physiological state likely to cause systemic or regional hypoxemia.",
+      "source": {
+        "start": 7181,
+        "end": 7484,
+        "text": "Severe chronic obstructive or other pulmonary disease with hypoxemia (requires supplementary oxygen, symptoms due to hypoxemia or oxygen saturation \\<90% by pulse oximetry after a 2 minute walk) or in the opinion of the investigator any physiological state likely to cause systemic or regional hypoxemia"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:7488-7590",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have had major surgery, other than diagnostic surgery, within 4 weeks prior to Day 1, without complete recovery.",
+      "source": {
+        "start": 7488,
+        "end": 7590,
+        "text": "Major surgery, other than diagnostic surgery, within 4 weeks prior to Day 1, without complete recovery"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:7595-7682",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy.",
+      "source": {
+        "start": 7595,
+        "end": 7682,
+        "text": "Active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:7687-7810",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have had treatment with radiation therapy, surgery, chemotherapy, targeted therapies or hormones within 4 weeks prior to study entry.",
+      "source": {
+        "start": 7687,
+        "end": 7810,
+        "text": "Treatment with radiation therapy, surgery, chemotherapy, targeted therapies or hormones within 4 weeks prior to study entry"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:7815-7854",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior therapy with an hypoxic cytotoxin.",
+      "source": {
+        "start": 7815,
+        "end": 7854,
+        "text": "Prior therapy with an hypoxic cytotoxin"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:7859-7963",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have participated in an investigational drug or device study within 28 days prior to study entry.",
+      "source": {
+        "start": 7859,
+        "end": 7963,
+        "text": "Subjects who participated in an investigational drug or device study within 28 days prior to study entry"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:7968-8010",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have a known infection with HIV, hepatitis B or C.",
+      "source": {
+        "start": 7968,
+        "end": 8010,
+        "text": "Known infection with HIV, hepatitis B or C"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:8015-8183",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have exhibited allergic reactions to a structural compound, biological agent, or formulation (containing solutol and/or propylene glycol) similar to TH-302.",
+      "source": {
+        "start": 8015,
+        "end": 8183,
+        "text": "Subjects who have exhibited allergic reactions to a structural compound, biological agent, or formulation (containing solutol and/or propylene glycol) similar to TH-302"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:8188-8230",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not be a female who is pregnant or breast-feeding.",
+      "source": {
+        "start": 8188,
+        "end": 8230,
+        "text": "Females who are pregnant or breast-feeding"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:8235-8425",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have a concomitant disease or condition that could interfere with the conduct of the study, or that would, in the opinion of the investigator, pose an unacceptable risk to the subject in this study.",
+      "source": {
+        "start": 8235,
+        "end": 8425,
+        "text": "Concomitant disease or condition that could interfere with the conduct of the study, or that would, in the opinion of the investigator, pose an unacceptable risk to the subject in this study"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:8430-8505",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not be unwilling or unable to comply with the study protocol for any reason.",
+      "source": {
+        "start": 8430,
+        "end": 8505,
+        "text": "Unwillingness or inability to comply with the study protocol for any reason"
+      },
+      "confidence": 1,
+      "appliesTo": "Gemcitabine + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:8593-8692",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior chemotherapy therapy for advanced disease other than radiosensitizing doses of 5-fluorouracil.",
+      "source": {
+        "start": 8593,
+        "end": 8692,
+        "text": "Prior chemotherapy therapy for advanced disease other than radiosensitizing doses of 5-fluorouracil"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded cohort subjects ONLY: First-line advanced adenocarcinoma of the pancreas (Gemcitabine + TH-302)"
+    },
+    {
+      "id": "NCT00743379:8765-8846",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior treatment with more than 3 myelosuppressive cytotoxic chemotherapy regimens.",
+      "source": {
+        "start": 8765,
+        "end": 8846,
+        "text": "Prior treatment with more than 3 myelosuppressive cytotoxic chemotherapy regimens"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:8850-8880",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior treatment with docetaxel.",
+      "source": {
+        "start": 8850,
+        "end": 8880,
+        "text": "Prior treatment with docetaxel"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:8884-9062",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have had prior radiotherapy to more than 25% of the bone marrow unless radiotherapy was completed >5 years ago and there is not hematologic evidence of persistent bone marrow suppression.",
+      "source": {
+        "start": 8884,
+        "end": 9062,
+        "text": "Prior radiotherapy to more than 25% of the bone marrow unless radiotherapy was completed \\>5 years ago and there is not hematologic evidence of persistent bone marrow suppression"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:9066-9106",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have uncontrolled pleural effusion or ascites.",
+      "source": {
+        "start": 9066,
+        "end": 9106,
+        "text": "Uncontrolled pleural effusion or ascites"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:9110-9172",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have a history of sensitivity to drugs formulated with polysorbate 80.",
+      "source": {
+        "start": 9110,
+        "end": 9172,
+        "text": "History of sensitivity to drugs formulated with polysorbate 80"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:9176-9369",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have New York Heart Association (NYHA) Class III or IV, cardiac disease, myocardial infarction within 6 months prior to Day 1, unstable arrhythmia or symptomatic peripheral arterial vascular disease.",
+      "source": {
+        "start": 9176,
+        "end": 9369,
+        "text": "New York Heart Association (NYHA) Class III or IV, cardiac disease, myocardial infarction within 6 months prior to Day 1, unstable arrhythmia or symptomatic peripheral arterial vascular disease"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:9373-9423",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have seizure disorders requiring anticonvulsant therapy.",
+      "source": {
+        "start": 9373,
+        "end": 9423,
+        "text": "Seizure disorders requiring anticonvulsant therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:9427-9558",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have symptomatic brain, leptomeningeal or epidural metastases (unless previously treated and well controlled for a period of ≥ 3 months).",
+      "source": {
+        "start": 9427,
+        "end": 9558,
+        "text": "Symptomatic brain, leptomeningeal or epidural metastases (unless previously treated and well controlled for a period of ≥ 3 months)"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:9562-9616",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have ongoing CTCAE grade 2 or greater peripheral neuropathy.",
+      "source": {
+        "start": 9562,
+        "end": 9616,
+        "text": "Ongoing CTCAE grade 2 or greater peripheral neuropathy"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:9621-9807",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have previously treated malignancies, except for adequately treated non-melanoma skin cancer, in situ cancer, or other cancer from which the subject has been disease-free for at least 5 years.",
+      "source": {
+        "start": 9621,
+        "end": 9807,
+        "text": "Previously treated malignancies, except for adequately treated non-melanoma skin cancer, in situ cancer, or other cancer from which the subject has been disease-free for at least 5 years"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:9812-10115",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have severe chronic obstructive or other pulmonary disease with hypoxemia (requires supplementary oxygen, symptoms due to hypoxemia or oxygen saturation <90% by pulse oximetry after a 2 minute walk) or in the opinion of the investigator any physiological state likely to cause systemic or regional hypoxemia.",
+      "source": {
+        "start": 9812,
+        "end": 10115,
+        "text": "Severe chronic obstructive or other pulmonary disease with hypoxemia (requires supplementary oxygen, symptoms due to hypoxemia or oxygen saturation \\<90% by pulse oximetry after a 2 minute walk) or in the opinion of the investigator any physiological state likely to cause systemic or regional hypoxemia"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:10120-10222",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have had major surgery, other than diagnostic surgery, within 4 weeks prior to Day 1, without complete recovery.",
+      "source": {
+        "start": 10120,
+        "end": 10222,
+        "text": "Major surgery, other than diagnostic surgery, within 4 weeks prior to Day 1, without complete recovery"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:10227-10314",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy.",
+      "source": {
+        "start": 10227,
+        "end": 10314,
+        "text": "Active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:10319-10442",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have had treatment with radiation therapy, surgery, chemotherapy, targeted therapies or hormones within 4 weeks prior to study entry.",
+      "source": {
+        "start": 10319,
+        "end": 10442,
+        "text": "Treatment with radiation therapy, surgery, chemotherapy, targeted therapies or hormones within 4 weeks prior to study entry"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:10447-10486",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior therapy with an hypoxic cytotoxin.",
+      "source": {
+        "start": 10447,
+        "end": 10486,
+        "text": "Prior therapy with an hypoxic cytotoxin"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:10491-10595",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have participated in an investigational drug or device study within 28 days prior to study entry.",
+      "source": {
+        "start": 10491,
+        "end": 10595,
+        "text": "Subjects who participated in an investigational drug or device study within 28 days prior to study entry"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:10600-10649",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have a known active infection with HIV, hepatitis B or C.",
+      "source": {
+        "start": 10600,
+        "end": 10649,
+        "text": "Known active infection with HIV, hepatitis B or C"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:10654-10822",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have exhibited allergic reactions to a structural compound, biological agent, or formulation (containing solutol and/or propylene glycol) similar to TH-302.",
+      "source": {
+        "start": 10654,
+        "end": 10822,
+        "text": "Subjects who have exhibited allergic reactions to a structural compound, biological agent, or formulation (containing solutol and/or propylene glycol) similar to TH-302"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:10827-10869",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not be a female who is pregnant or breast-feeding.",
+      "source": {
+        "start": 10827,
+        "end": 10869,
+        "text": "Females who are pregnant or breast-feeding"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:10874-11064",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have a concomitant disease or condition that could interfere with the conduct of the study, or that would, in the opinion of the investigator, pose an unacceptable risk to the subject in this study.",
+      "source": {
+        "start": 10874,
+        "end": 11064,
+        "text": "Concomitant disease or condition that could interfere with the conduct of the study, or that would, in the opinion of the investigator, pose an unacceptable risk to the subject in this study"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:11069-11144",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not be unwilling or unable to comply with the study protocol for any reason.",
+      "source": {
+        "start": 11069,
+        "end": 11144,
+        "text": "Unwillingness or inability to comply with the study protocol for any reason"
+      },
+      "confidence": 1,
+      "appliesTo": "Docetaxel + Prednisone + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:11216-11283",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior treatment with cytotoxic chemotherapy or radioisotope therapy.",
+      "source": {
+        "start": 11216,
+        "end": 11283,
+        "text": "Prior treatment with cytotoxic chemotherapy or radioisotope therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects ONLY: Castrate-resistant prostate cancer (Docetaxel + Prednisone + TH-302)"
+    },
+    {
+      "id": "NCT00743379:11337-11408",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had more than one prior cytotoxic chemotherapy regimen for advanced disease.",
+      "source": {
+        "start": 11337,
+        "end": 11408,
+        "text": "More than one prior cytotoxic chemotherapy regimen for advanced disease"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects ONLY: Second-line NSCLC (Docetaxel + Prednisone + TH-302)"
+    },
+    {
+      "id": "NCT00743379:11412-11468",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have experienced weight loss of >10% body weight in the previous 6 weeks.",
+      "source": {
+        "start": 11412,
+        "end": 11468,
+        "text": "Weight loss of \\>10% body weight in the previous 6 weeks"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects ONLY: Second-line NSCLC (Docetaxel + Prednisone + TH-302)"
+    },
+    {
+      "id": "NCT00743379:11529-11610",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior treatment with more than 3 myelosuppressive cytotoxic chemotherapy regimens.",
+      "source": {
+        "start": 11529,
+        "end": 11610,
+        "text": "Prior treatment with more than 3 myelosuppressive cytotoxic chemotherapy regimens"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:11614-11645",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior treatment with pemetrexed.",
+      "source": {
+        "start": 11614,
+        "end": 11645,
+        "text": "Prior treatment with pemetrexed"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:11649-11703",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have had prior radiotherapy to more than 25% of the bone marrow.",
+      "source": {
+        "start": 11649,
+        "end": 11703,
+        "text": "Prior radiotherapy to more than 25% of the bone marrow"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:11707-11906",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have an inability to discontinue non-steroidal anti-inflammatory drugs for 5 days (long half-life) or 2 days (short half-life, if subject has CrCl <80 mL/min) before until 2 days following pemetrexed dosing.",
+      "source": {
+        "start": 11707,
+        "end": 11906,
+        "text": "Inability to discontinue non-steroidal anti-inflammatory drugs for 5 days (long half-life) or 2 days (short half-life, if subject has CrCl \\<80 mL/min) before until 2 days following pemetrexed dosing"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:11910-12103",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have New York Heart Association (NYHA) Class III or IV, cardiac disease, myocardial infarction within 6 months prior to Day 1, unstable arrhythmia or symptomatic peripheral arterial vascular disease.",
+      "source": {
+        "start": 11910,
+        "end": 12103,
+        "text": "New York Heart Association (NYHA) Class III or IV, cardiac disease, myocardial infarction within 6 months prior to Day 1, unstable arrhythmia or symptomatic peripheral arterial vascular disease"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:12107-12157",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have seizure disorders requiring anticonvulsant therapy.",
+      "source": {
+        "start": 12107,
+        "end": 12157,
+        "text": "Seizure disorders requiring anticonvulsant therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:12161-12292",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have symptomatic brain, leptomeningeal or epidural metastases (unless previously treated and well controlled for a period of ≥ 3 months).",
+      "source": {
+        "start": 12161,
+        "end": 12292,
+        "text": "Symptomatic brain, leptomeningeal or epidural metastases (unless previously treated and well controlled for a period of ≥ 3 months)"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:12296-12482",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have previously treated malignancies, except for adequately treated non-melanoma skin cancer, in situ cancer, or other cancer from which the subject has been disease-free for at least 5 years.",
+      "source": {
+        "start": 12296,
+        "end": 12482,
+        "text": "Previously treated malignancies, except for adequately treated non-melanoma skin cancer, in situ cancer, or other cancer from which the subject has been disease-free for at least 5 years"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:12486-12789",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have severe chronic obstructive or other pulmonary disease with hypoxemia (requires supplementary oxygen, symptoms due to hypoxemia or oxygen saturation <90% by pulse oximetry after a 2 minute walk) or in the opinion of the investigator any physiological state likely to cause systemic or regional hypoxemia.",
+      "source": {
+        "start": 12486,
+        "end": 12789,
+        "text": "Severe chronic obstructive or other pulmonary disease with hypoxemia (requires supplementary oxygen, symptoms due to hypoxemia or oxygen saturation \\<90% by pulse oximetry after a 2 minute walk) or in the opinion of the investigator any physiological state likely to cause systemic or regional hypoxemia"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:12794-12896",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have had major surgery, other than diagnostic surgery, within 4 weeks prior to Day 1, without complete recovery.",
+      "source": {
+        "start": 12794,
+        "end": 12896,
+        "text": "Major surgery, other than diagnostic surgery, within 4 weeks prior to Day 1, without complete recovery"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:12901-12988",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy.",
+      "source": {
+        "start": 12901,
+        "end": 12988,
+        "text": "Active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:12993-13116",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have had treatment with radiation therapy, surgery, chemotherapy, targeted therapies or hormones within 4 weeks prior to study entry.",
+      "source": {
+        "start": 12993,
+        "end": 13116,
+        "text": "Treatment with radiation therapy, surgery, chemotherapy, targeted therapies or hormones within 4 weeks prior to study entry"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:13121-13160",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had prior therapy with an hypoxic cytotoxin.",
+      "source": {
+        "start": 13121,
+        "end": 13160,
+        "text": "Prior therapy with an hypoxic cytotoxin"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:13165-13269",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have participated in an investigational drug or device study within 28 days prior to study entry.",
+      "source": {
+        "start": 13165,
+        "end": 13269,
+        "text": "Subjects who participated in an investigational drug or device study within 28 days prior to study entry"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:13274-13334",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have a known active infection with HIV, hepatitis B, or hepatitis C.",
+      "source": {
+        "start": 13274,
+        "end": 13334,
+        "text": "Known active infection with HIV, hepatitis B, or hepatitis C"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:13339-13507",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have exhibited allergic reactions to a structural compound, biological agent, or formulation (containing solutol and/or propylene glycol) similar to TH-302.",
+      "source": {
+        "start": 13339,
+        "end": 13507,
+        "text": "Subjects who have exhibited allergic reactions to a structural compound, biological agent, or formulation (containing solutol and/or propylene glycol) similar to TH-302"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:13512-13554",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not be a female who is pregnant or breast-feeding.",
+      "source": {
+        "start": 13512,
+        "end": 13554,
+        "text": "Females who are pregnant or breast-feeding"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:13559-13749",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The prospective participant must not have a concomitant disease or condition that could interfere with the conduct of the study, or that would, in the opinion of the investigator, pose an unacceptable risk to the subject in this study.",
+      "source": {
+        "start": 13559,
+        "end": 13749,
+        "text": "Concomitant disease or condition that could interfere with the conduct of the study, or that would, in the opinion of the investigator, pose an unacceptable risk to the subject in this study"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:13754-13829",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not be unwilling or unable to comply with the study protocol for any reason.",
+      "source": {
+        "start": 13754,
+        "end": 13829,
+        "text": "Unwillingness or inability to comply with the study protocol for any reason"
+      },
+      "confidence": 1,
+      "appliesTo": "Pemetrexed + TH-302 Exclusion Criteria"
+    },
+    {
+      "id": "NCT00743379:13884-13955",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have had more than one prior cytotoxic chemotherapy regimen for advanced disease.",
+      "source": {
+        "start": 13884,
+        "end": 13955,
+        "text": "More than one prior cytotoxic chemotherapy regimen for advanced disease"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects ONLY: Second-line NSCLC (Pemetrexed + TH-302)"
+    },
+    {
+      "id": "NCT00743379:13959-14015",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The prospective participant must not have experienced weight loss of >10% body weight in the previous 6 weeks.",
+      "source": {
+        "start": 13959,
+        "end": 14015,
+        "text": "Weight loss of \\>10% body weight in the previous 6 weeks"
+      },
+      "confidence": 1,
+      "appliesTo": "Expanded Cohort Subjects ONLY: Second-line NSCLC (Pemetrexed + TH-302)"
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [
+    {
+      "start": 3057,
+      "end": 3207,
+      "text": "\n\nExpanded Cohort Subjects or dose-escalation subjects with metastatic castrate-resistant prostate cancer previously untreated with chemotherapy:\n\n1. "
+    }
+  ],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "normalizeVersion": "1",
+    "timestamp": "2026-09"
+  }
+}

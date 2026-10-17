@@ -1,0 +1,377 @@
+{
+  "nctId": "NCT00966472",
+  "criteria": [
+    {
+      "id": "NCT00966472:23-155",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have a histologically or cytologically documented advanced and/or metastatic incurable tumor, especially squamous cell carcinoma or NSCLC.",
+      "source": {
+        "start": 23,
+        "end": 155,
+        "text": "Histologically or cytologically documented advanced and/or metastatic incurable tumor (especially squamous cell carcinoma or NSCLC)."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:158-231",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have clinically or radiologically documented measurable or evaluable disease.",
+      "source": {
+        "start": 158,
+        "end": 231,
+        "text": "Clinically or radiologically documented (measurable or evaluable)disease."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:234-282",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The patient must be 18 years or older and less than 70 years of age.",
+      "source": {
+        "start": 234,
+        "end": 282,
+        "text": "18 years or older and less than 70 years of age."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:285-319",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have an ECOG performance status of 0, 1, or 2.",
+      "source": {
+        "start": 285,
+        "end": 319,
+        "text": "ECOG performance status: 0, 1 or 2"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:322-391",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not have received previous therapy with an EGFR inhibitor (monoclonal antibody or TKI).",
+      "source": {
+        "start": 322,
+        "end": 391,
+        "text": "No previous therapy with EGFR inhibitor (monoclonal antibody or TKI)."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:394-474",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have recovered from any treatment-related toxicities prior to registration.",
+      "source": {
+        "start": 394,
+        "end": 474,
+        "text": "Must have recovered from any treatment related toxicities prior to registration."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:477-556",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "If the patient received curative radiotherapy, it must be completed at least 3 months prior to registration.",
+      "source": {
+        "start": 477,
+        "end": 556,
+        "text": "Curative radiotherapy must be completed at least 3 months prior to registration"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:559-798",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "If the patient received palliative radiotherapy, a minimum of 14 days must have elapsed between the end of radiotherapy and registration, and the patient must have recovered from any acute toxic effects from radiation prior to registration.",
+      "source": {
+        "start": 559,
+        "end": 798,
+        "text": "Palliative radiotherapy is permitted providing a minimum of 14 days have elapsed between the end of radiotherapy and registration onto the study and patients have recovered from any acute toxic effects from radiation prior to registration."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:801-944",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "If the patient had previous major surgery, wound healing must have occurred and at least 14 days must have elapsed prior to registration.",
+      "source": {
+        "start": 801,
+        "end": 944,
+        "text": "Previous surgery is permitted provided wound healing has occurred and at least 14 days have elapsed prior to registration if surgery was major."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:947-1395",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "The patient must have adequate hematopoietic, hepatic, and renal function defined as: hemoglobin >= 90g/L, platelets > 100 x 10^9/L, bilirubin <1.5 x ULN, ALT or AST <1.5 x ULN, proteinuria < grade 1, normal thyroid function (normal TSH or free T4 level after correction), serum creatinine within institution normal limits or calculated creatinine clearance > 60 mls/min (except for patients with cervical cancer who require a creatinine clearance of 72 mls/min).",
+      "source": {
+        "start": 947,
+        "end": 1395,
+        "text": "Adequate hematopoietic, hepatic and renal function defined as follows: hemoglobin \\>= 90g/L, platelets \\> 100 x 10\\^9/L, bilirubin \\<1.5 x ULN, ALT or AST \\<1.5 x ULN, proteinuria \\< grade 1, normal thyroid function (normal TSH or free T4 level after correction), serum creatinine institution normal limits or calculated creatinine clearance \\> 60 mls/min (except for patients with cervical cancer who require a creatinine clearance of 72 mls/min.)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:1398-1700",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Women must be post menopausal, surgically sterile, or use two reliable forms of contraception. Women of childbearing potential must have a serum or urine pregnancy test taken and proven negative within 7 days prior to registration. Men must be surgically sterile or use a barrier method of contraception.",
+      "source": {
+        "start": 1398,
+        "end": 1700,
+        "text": "Women must be post menopausal, surgically sterile or use two reliable forms of contraception. Women of childbearing potential must have a serum or urine pregnancy test taken and proven negative within 7 days prior to registration. Men must be surgically sterile or use a barrier method of contraception"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:1703-1745",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "The patient must be accessible for repeat dosing and follow-up.",
+      "source": {
+        "start": 1703,
+        "end": 1745,
+        "text": "Accessible for repeat dosing and follow-up"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:1770-1858",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not be of Asian ethnicity (Filipino, Chinese, Japanese, Korean, Vietnamese, or South Asian origin).",
+      "source": {
+        "start": 1770,
+        "end": 1858,
+        "text": "Asian ethnicity (Filipino, Chinese, Japanese, Korean, Vietnamese, or South Asian origin)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:1861-2027",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not have a history of other malignancies, except adequately treated non-melanoma skin cancer or other solid tumors curatively treated with no evidence of disease for > 5 years.",
+      "source": {
+        "start": 1861,
+        "end": 2027,
+        "text": "History of other malignancies, except adequately treated non-melanoma skin cancer or other solid tumors curatively treated with no evidence of disease for \\> 5 years."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:2030-2314",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have untreated brain or meningeal metastases. If the patient has treated and radiologic or clinical evidence of stable brain metastases, they must be asymptomatic, not require corticosteroids, and must have discontinued steroids at least 4 weeks prior to registration.",
+      "source": {
+        "start": 2030,
+        "end": 2314,
+        "text": "Untreated brain or meningeal metastases. Patients with treated and radiologic or clinical evidence of stable brain metastases are eligible providing that they are asymptomatic and do not require corticosteroids (must have discontinued steroids at least 4 weeks prior to registration)."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:2317-2412",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have untreated and/or uncontrolled cardiovascular conditions and/or symptomatic cardiac dysfunction.",
+      "source": {
+        "start": 2317,
+        "end": 2412,
+        "text": "Untreated and/or uncontrolled cardiovascular conditions and/or symptomatic cardiac dysfunction."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:2415-2572",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have active or uncontrolled infections or serious illnesses or medical conditions which would not permit the patient to be managed according to the protocol.",
+      "source": {
+        "start": 2415,
+        "end": 2572,
+        "text": "Active or uncontrolled infections or with serious illnesses or medical conditions which would not permit the patient to be managed according to the protocol."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:2575-2649",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not be receiving concurrent treatment with other experimental drugs or anti-cancer therapy.",
+      "source": {
+        "start": 2575,
+        "end": 2649,
+        "text": "Concurrent treatment with other experimental drugs or anti-cancer therapy."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:2652-2913",
+      "polarity": "inclusion",
+      "type": "clinical",
+      "text": "If the patient requires oral anticoagulants (coumadin, warfarin), there must be strict vigilance with respect to monitoring INR, and the investigator should consider switching these patients to LMW heparin or an oral anti-platelet agent such as aspirin.",
+      "source": {
+        "start": 2652,
+        "end": 2913,
+        "text": "Patients who require oral anticoagulants (coumadin, warfarin) are eligible provided there is strict vigilance with respect to monitoring INR. The investigator should consider switching these patients to LMW heparin or an oral anti-platelet agent such as aspirin"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:2916-3352",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not be taking concomitant medications, which are highly protein bound, nephrotoxic, or which are known strong inhibitors or inducers of the hepatic p450 (especially CYP3A4) system, which have not been discontinued prior to study registration. Caution should be exercised, and patients monitored closely, for patients taking concomitant drugs with the potential to inhibit or induce the hepatic p450 (especially CYP3A4) system.",
+      "source": {
+        "start": 2916,
+        "end": 3352,
+        "text": "Patients who are taking concomitant medications, which are highly protein bound, nephrotoxic, or which are known strong inhibitors or inducers of the hepatic p450 (especially CYP3A4) system, which have not been discontinued prior to study registration. Caution should be exercised, and patients monitored closely, for patients taking concomitant drugs with the potential to inhibit or induce the hepatic p450 (especially CYP3A4) system."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3355-3498",
+      "polarity": "inclusion",
+      "type": "patient",
+      "text": "Any use of hypocholesterolemia agent such as niacin, fibrates or any statin should be discontinued at least 7 days prior to study registration.",
+      "source": {
+        "start": 3355,
+        "end": 3498,
+        "text": "Any use of hypocholesterolemia agent such as niacin, fibrates or any statin should be discontinued at least 7 days prior to study registration."
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3501-3560",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not have a personal or family history of hereditary muscular disorders.",
+      "source": {
+        "start": 3501,
+        "end": 3560,
+        "text": "Personal or family history of hereditary muscular disorders"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3563-3641",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not have a previous history of muscular toxicity with another HMG-CoA reductase inhibitor.",
+      "source": {
+        "start": 3563,
+        "end": 3641,
+        "text": "Previous history of muscular toxicity with another HMG-CoA reductase inhibitor"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3644-3657",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not have alcohol abuse.",
+      "source": {
+        "start": 3644,
+        "end": 3657,
+        "text": "Alcohol abuse"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3660-3751",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have any condition that could affect absorption of study oral drugs (erlotinib and rosuvastatin).",
+      "source": {
+        "start": 3660,
+        "end": 3751,
+        "text": "Any condition that could affect absorption of study oral drugs (erlotinib and rosuvastatin)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3754-3780",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have inflammatory bowel disease.",
+      "source": {
+        "start": 3754,
+        "end": 3780,
+        "text": "Inflammatory bowel disease"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3783-3810",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have uncontrolled hypothyroidism.",
+      "source": {
+        "start": 3783,
+        "end": 3810,
+        "text": "Uncontrolled hypothyroidism"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3813-3858",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not have chronic liver disease (ex: biliary sclerosis).",
+      "source": {
+        "start": 3813,
+        "end": 3858,
+        "text": "Chronic liver disease (ex: biliary sclerosis)"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3861-3934",
+      "polarity": "exclusion",
+      "type": "clinical",
+      "text": "The patient must not be suffering from infection with HIV, Tuberculosis, Hepatitis C or Hepatitis.",
+      "source": {
+        "start": 3861,
+        "end": 3934,
+        "text": "Suffering from infection with HIV, Tuberculosis, Hepatitis C or Hepatitis"
+      },
+      "confidence": 1
+    },
+    {
+      "id": "NCT00966472:3937-4010",
+      "polarity": "exclusion",
+      "type": "patient",
+      "text": "The patient must not have an inability to give written, informed consent prior to study participation.",
+      "source": {
+        "start": 3937,
+        "end": 4010,
+        "text": "Inability to give written, informed consent prior to study participation."
+      },
+      "confidence": 1
+    }
+  ],
+  "rejected": [],
+  "unclaimed": [],
+  "run": {
+    "model": "Qwen3.6-35B-A3B-MLX-8bit",
+    "quantization": "8bit",
+    "temperature": 0,
+    "seed": 20260921,
+    "adapter": "omlx",
+    "promptVersion": "73c3b301c4a9",
+    "normalizeVersion": "1",
+    "timestamp": "2026-09"
+  }
+}

@@ -1,0 +1,633 @@
+[
+  {
+    "nctId": "NCT06090266",
+    "criteria": [
+      {
+        "id": "NCT06090266:24-109",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The subject signs informed consent prior to conducting study-specific procedures.",
+        "source": {
+          "start": 24,
+          "end": 109,
+          "text": "Informed consent signed by the subject prior to conducting study-specific procedures."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:113-155",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The subject is male or female and ≥ 18 years of age.",
+        "source": {
+          "start": 113,
+          "end": 155,
+          "text": "Male or female subjects ≥ 18 years of age."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:201-460",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The subject has a histological diagnosis of any type of carcinoma, sarcoma, or melanoma with progressive metastatic disease, or progressive locally advanced disease not amenable to local therapy with curative intent.",
+        "source": {
+          "start": 201,
+          "end": 460,
+          "text": "Parts A and B (Cohorts A1, A2, and B1): subjects must have a histological diagnosis of any type of carcinoma, sarcoma, or melanoma with progressive metastatic disease, or progressive locally advanced disease not amenable to local therapy with curative intent."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Parts A and B (Cohorts A1, A2, and B1)"
+      },
+      {
+        "id": "NCT06090266:467-671",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The subject has a histological diagnosis of the relevant tumor type (CSCC or PROC) with advanced/metastatic disease not amenable to local therapy with curative intent.",
+        "source": {
+          "start": 467,
+          "end": 671,
+          "text": "Part B (Expansion Cohorts B2-B3): subjects must have a histological diagnosis of the relevant tumor type (CSCC or PROC) with advanced/metastatic disease not amenable to local therapy with curative intent."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Part B (Expansion Cohorts B2-B3)"
+      },
+      {
+        "id": "NCT06090266:699-1150",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The subject has experienced progressive disease (PD) on an established standard systemic anti-cancer therapy for a given tumor type or has been intolerant to such therapy, or in the opinion of the Investigator has been considered ineligible for a particular form of standard therapy on medical grounds, and has no available proven curative or life prolonging therapies.",
+        "source": {
+          "start": 699,
+          "end": 1150,
+          "text": "Part A (dose-escalation) and Cohort B1 (monotherapy expansion) i. Subjects must have experienced progressive disease (PD) on an established standard systemic anti-cancer therapy for a given tumor type or have been intolerant to such therapy, or in the opinion of the Investigator have been considered ineligible for a particular form of standard therapy on medical grounds. Subjects must have no available proven curative or life prolonging therapies."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Part A (dose-escalation) and Cohort B1 (monotherapy expansion)"
+      },
+      {
+        "id": "NCT06090266:1158-1654",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The subject has received a PD-(L)1 inhibitor-based therapy, either alone or in combination with other anti-cancer agents, for at least 12 weeks, and if they have received other lines of immunotherapy, including PD-(L)1-based therapy, they have demonstrated clinical benefit on each prior immunotherapy.",
+        "source": {
+          "start": 1158,
+          "end": 1654,
+          "text": "Cohorts B4 and B5 (mini-expansion cohorts) i. Subjects must have received a PD-(L)1 inhibitor-based therapy, either alone or in combination with other anti-cancer agents, for at least 12 weeks. If subjects have received other lines of immunotherapy, including PD-(L)1-based therapy, they must have demonstrated clinical benefit on each prior immunotherapy. Subjects may also have received additional anti-cancer therapies after failure of a PD-(L)1 inhibitor, but 2nd line subjects are preferred."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Cohorts B4 and B5 (mini-expansion cohorts)"
+      },
+      {
+        "id": "NCT06090266:1662-1825",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The subject (CSCC) has received a PD-(L)1 inhibitor and has not received an additional immunotherapy.",
+        "source": {
+          "start": 1662,
+          "end": 1825,
+          "text": "Cohorts B2 and B3 (dose-expansion) i. Cohort B2 subjects (CSCC) must have received a PD-(L)1 inhibitor. Subjects may not have received an additional immunotherapy."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Cohorts B2 and B3 (dose-expansion)"
+      },
+      {
+        "id": "NCT06090266:1834-2131",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The subject (PROC) has received platinum-based therapy and experienced disease progression on or within 6 months of completion of such therapy.",
+        "source": {
+          "start": 1834,
+          "end": 2131,
+          "text": "Cohort B3 subjects (PROC) must have received platinum-based therapy and experienced disease progression on or within 6 months of completion of such therapy. Subjects may have received prior anti-PD-1 therapy. Subjects may have received additional therapies after failure of platinum-based therapy."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Cohort B3 (dose-expansion)"
+      },
+      {
+        "id": "NCT06090266:2135-2189",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The subject has measurable disease per RECIST v1.1.",
+        "source": {
+          "start": 2135,
+          "end": 2189,
+          "text": "Subjects must have measurable disease per RECIST v1.1."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:2193-2608",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "If the subject is of childbearing potential, not postmenopausal, and not surgically sterile, they are willing to practice at least one of the highly effective methods of birth control described in Section 4.3 for at least a menstrual cycle (or partner's menstrual cycle, for male subjects) before and for 4 months after study medication administration.",
+        "source": {
+          "start": 2193,
+          "end": 2608,
+          "text": "People of childbearing potential, if not postmenopausal (defined as no menses for at least 12 continuous months prior to study entry) or surgically sterile, must be willing to practice at least one of the highly effective methods of birth control described in Section 4.3 for at least a menstrual cycle (or partner's menstrual cycle, for male subjects) before and for 4 months after study medication administration."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:2612-2981",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Prior clinically significant therapy-related AEs (excluding alopecia and ≤ Grade 2 peripheral neuropathy) have resolved to ≤ Grade 1 per NCI-CTCAE version 5.0, and there has been no treatment for these AEs for at least 2 weeks prior to the time of enrollment.",
+        "source": {
+          "start": 2612,
+          "end": 2981,
+          "text": "Resolution of prior clinically significant therapy-related AEs (excluding alopecia and ≤ Grade 2 peripheral neuropathy) to ≤ Grade 1 per NCI-CTCAE version 5.0, and no treatment for these AEs for at least 2 weeks prior to the time of enrollment. Electrolyte and hormonal supplementation may be used to treat these AEs provided the subject is stable on these supplements."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:2985-3469",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "There has been a minimum of 2 weeks since the last dose of other hormone therapy and 3 weeks since the last dose of other systemic cancer therapy or radiotherapy (> 4 weeks in case of nitrosoureas or radio-immuno conjugate therapy).",
+        "source": {
+          "start": 2985,
+          "end": 3469,
+          "text": "Minimum of 2 weeks since the last dose of other hormone therapy and 3 weeks since the last dose of other systemic cancer therapy or radiotherapy (\\> 4 weeks in case of nitrosoureas or radio-immuno conjugate therapy). Adjuvant hormonal therapy (e.g., tamoxifen) is allowed provided the original tumor diagnosis was more than 3 years before the first dose of study medication. Subjects with prostate cancer on stable doses of anti-hormone treatment may remain on therapy for this trial."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:3473-3516",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The subject has adequate organ function.",
+        "source": {
+          "start": 3473,
+          "end": 3516,
+          "text": "Subjects must have adequate organ function."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:3547-3726",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "The subject is able to supply an archival tumor tissue specimen.",
+        "source": {
+          "start": 3547,
+          "end": 3726,
+          "text": "All subjects must be able to supply an archival tumor tissue specimen. If an archival specimen is not available, subjects may remain eligible with approval of the medical monitor."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:3734-4017",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The subject in Cohort B1 consents to pre- and on-treatment biopsies.",
+        "source": {
+          "start": 3734,
+          "end": 4017,
+          "text": "Subjects in Cohort B1 must consent to pre- and on-treatment biopsies. Tissue obtained for the biopsy must not be previously irradiated. No systemic anti-neoplastic therapy may be received by the subject between the time of the biopsy and the first administration of study medication."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Cohort B1"
+      },
+      {
+        "id": "NCT06090266:4025-4444",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The subject in all other cohorts is asked to consent to pre- and on-treatment biopsies for biomarker analysis of the acquired tissue.",
+        "source": {
+          "start": 4025,
+          "end": 4444,
+          "text": "Subjects in all other cohorts will be asked to consent to pre- and on-treatment biopsies for biomarker analysis of the acquired tissue. These biopsies are optional and not required for study participation. Tissue obtained for the biopsy must not be previously irradiated. No systemic anti-neoplastic therapy may be received by the subject between the time of the biopsy and the first administration of study medication."
+        },
+        "confidence": 0.9,
+        "appliesTo": "all other cohorts"
+      },
+      {
+        "id": "NCT06090266:4449-4550",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The subject is able and willing to comply with the protocol and the restrictions and assessments therein.",
+        "source": {
+          "start": 4449,
+          "end": 4550,
+          "text": "Subject is able and willing to comply with the protocol and the restrictions and assessments therein."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:4555-4702",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "The subject fulfills the obligation of affiliation or beneficiary of a social security or similar scheme as required by local regulations or law.",
+        "source": {
+          "start": 4555,
+          "end": 4702,
+          "text": "As required by local regulations or law, subjects must fulfill the obligation of affiliation or beneficiary of a social security or similar scheme."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:4728-4838",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject previously had a severe hypersensitivity reaction to treatment with another monoclonal antibody (mAb).",
+        "source": {
+          "start": 4728,
+          "end": 4838,
+          "text": "Subject previously had a severe hypersensitivity reaction to treatment with another monoclonal antibody (mAb)."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:4842-4870",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has a life expectancy < 12 weeks.",
+        "source": {
+          "start": 4842,
+          "end": 4870,
+          "text": "Life expectancy \\< 12 weeks."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:4874-4960",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has an Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) > 2.",
+        "source": {
+          "start": 4874,
+          "end": 4960,
+          "text": "Subject has an Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) \\> 2."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:4964-5000",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has had a prior organ or stem cell transplant.",
+        "source": {
+          "start": 4964,
+          "end": 5000,
+          "text": "Prior organ or stem cell transplant."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:5004-5058",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has symptomatic ascites or pleural effusion.",
+        "source": {
+          "start": 5004,
+          "end": 5058,
+          "text": "Subjects with symptomatic ascites or pleural effusion."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:5222-5338",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has a known active central nervous system (CNS) primary tumor or metastases and/or carcinomatous meningitis.",
+        "source": {
+          "start": 5222,
+          "end": 5338,
+          "text": "Subject has a known active central nervous system (CNS) primary tumor or metastases and/or carcinomatous meningitis."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:5848-6159",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has a known history of a hematologic malignancy, malignant primary brain tumor, or another malignant primary solid tumor (other than that under study), and has not undergone potentially curative therapy with no evidence of recurrent disease for at least 3 years before the start of treatment.",
+        "source": {
+          "start": 5848,
+          "end": 6159,
+          "text": "Subject has a known history of a hematologic malignancy, malignant primary brain tumor, or another malignant primary solid tumor (other than that under study), unless the subject has undergone potentially curative therapy with no evidence of recurrent disease for at least 3 years before the start of treatment."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:6826-6975",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has any uncontrolled Grade 3 or higher (per NCI-CTCAE version 5.0) viral, bacterial, or fungal infection within 2 weeks prior to the first dose of OR502.",
+        "source": {
+          "start": 6826,
+          "end": 6975,
+          "text": "Any uncontrolled Grade 3 or higher (per NCI-CTCAE version 5.0) viral, bacterial, or fungal infection within 2 weeks prior to the first dose of OR502."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:7028-7091",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has an uncontrolled infection with human immunodeficiency virus (HIV).",
+        "source": {
+          "start": 7028,
+          "end": 7091,
+          "text": "Uncontrolled infection with human immunodeficiency virus (HIV)."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:7328-7475",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject is known to be positive for hepatitis B virus (HBV) surface antigen, or has any other positive test for hepatitis B indicating acute or chronic infection.",
+        "source": {
+          "start": 7328,
+          "end": 7475,
+          "text": "Known to be positive for hepatitis B virus (HBV) surface antigen, or any other positive test for hepatitis B indicating acute or chronic infection."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:7686-7795",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has known active hepatitis C as determined by positive serology and confirmed by polymerase chain reaction (PCR).",
+        "source": {
+          "start": 7686,
+          "end": 7795,
+          "text": "Known active hepatitis C as determined by positive serology and confirmed by polymerase chain reaction (PCR)."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:8016-8091",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has known active or latent tuberculosis.",
+        "source": {
+          "start": 8016,
+          "end": 8091,
+          "text": "Known active or latent tuberculosis (testing at screening is not required)."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:8095-8236",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has an autoimmune disease or inflammatory condition requiring systemic anti-inflammatory therapy.",
+        "source": {
+          "start": 8095,
+          "end": 8236,
+          "text": "Autoimmune disease or inflammatory condition requiring systemic anti-inflammatory therapy with exceptions as noted in Exclusion Criterion 10."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:8335-8583",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject uses systemic corticosteroids within 15 days or other immunosuppressive drugs within 30 days prior to start of the study.",
+        "source": {
+          "start": 8335,
+          "end": 8583,
+          "text": "Use of systemic corticosteroids within 15 days or other immunosuppressive drugs within 30 days prior to start of the study, with the exception of corticosteroids as replacement therapy up to an equivalent of prednisone 10 mg/day, which are allowed."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:8588-8639",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has a QTc interval ≥ 470 msec by electrocardiogram (ECG).",
+        "source": {
+          "start": 8588,
+          "end": 8639,
+          "text": "QTc interval ≥ 470 msec by electrocardiogram (ECG)."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:8644-8804",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has received an investigational product or been treated with an investigational device within 30 days prior to first administration of study medication.",
+        "source": {
+          "start": 8644,
+          "end": 8804,
+          "text": "Subject has received an investigational product or been treated with an investigational device within 30 days prior to first administration of study medication."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:8809-8910",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has received a live vaccine within 30 days prior to first administration of study medication.",
+        "source": {
+          "start": 8809,
+          "end": 8910,
+          "text": "Subject has received a live vaccine within 30 days prior to first administration of study medication."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:8960-9083",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has a known hypersensitivity to cemiplimab or any of its excipients or is contraindicated to cemiplimab per approved local labeling.",
+        "source": {
+          "start": 8960,
+          "end": 9083,
+          "text": "Known hypersensitivity to cemiplimab or any of its excipients or contraindicated to cemiplimab per approved local labeling."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Cohorts A2, B1, B2, and B3",
+        "heading": {
+          "start": 8915,
+          "end": 8951,
+          "text": "For Cohorts A2, B1, B2, and B3 only:"
+        }
+      },
+      {
+        "id": "NCT06090266:9091-9117",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has interstitial lung disease.",
+        "source": {
+          "start": 9091,
+          "end": 9117,
+          "text": "Interstitial lung disease."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Cohorts A2, B1, B2, and B3",
+        "heading": {
+          "start": 8915,
+          "end": 8951,
+          "text": "For Cohorts A2, B1, B2, and B3 only:"
+        }
+      },
+      {
+        "id": "NCT06090266:9125-9185",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has a history of prior pneumonitis requiring systemic corticosteroid therapy.",
+        "source": {
+          "start": 9125,
+          "end": 9185,
+          "text": "Prior pneumonitis requiring systemic corticosteroid therapy."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Cohorts A2, B1, B2, and B3",
+        "heading": {
+          "start": 8915,
+          "end": 8951,
+          "text": "For Cohorts A2, B1, B2, and B3 only:"
+        }
+      },
+      {
+        "id": "NCT06090266:9193-9281",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject is receiving immunosuppressive therapy.",
+        "source": {
+          "start": 9193,
+          "end": 9281,
+          "text": "Receiving immunosuppressive therapy, with exceptions as noted in Exclusion Criterion 10."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Cohorts A2, B1, B2, and B3",
+        "heading": {
+          "start": 8915,
+          "end": 8951,
+          "text": "For Cohorts A2, B1, B2, and B3 only:"
+        }
+      },
+      {
+        "id": "NCT06090266:9289-9524",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has a history of severe immune-related adverse reactions from treatment with ipilimumab, defined as any Grade 4 toxicity or Grade 3 toxicity requiring corticosteroid treatment (> 10 mg/day prednisone or equivalent) for more than 12 weeks.",
+        "source": {
+          "start": 9289,
+          "end": 9524,
+          "text": "A history of severe immune-related adverse reactions from treatment with ipilimumab, defined as any Grade 4 toxicity or Grade 3 toxicity requiring corticosteroid treatment (\\> 10 mg/day prednisone or equivalent) for more than 12 weeks."
+        },
+        "confidence": 0.9,
+        "appliesTo": "Cohorts A2, B1, B2, and B3",
+        "heading": {
+          "start": 8915,
+          "end": 8951,
+          "text": "For Cohorts A2, B1, B2, and B3 only:"
+        }
+      },
+      {
+        "id": "NCT06090266:9529-9694",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject is receiving concurrent therapy with anti-cancer or anti-neoplastic drugs.",
+        "source": {
+          "start": 9529,
+          "end": 9694,
+          "text": "Concurrent therapy with anti-cancer or anti-neoplastic drugs, with the exception of adjuvant hormonal therapy, which is allowed as outlined in Inclusion Criterion 8."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:9699-10188",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "The subject has a history or clinical evidence of any surgical or medical condition that the Investigator judges as likely to interfere with the results of the study or pose an additional risk in participating.",
+        "source": {
+          "start": 9699,
+          "end": 10188,
+          "text": "History or clinical evidence of any surgical or medical condition that the Investigator judges as likely to interfere with the results of the study or pose an additional risk in participating, e.g., rapidly progressive or uncontrolled disease involving a major organ system-vascular, cardiac, pulmonary, gastrointestinal, gynecologic, hematologic, neurologic, neoplastic, renal, endocrine, autoimmune or an immunodeficiency, or clinically significant active psychiatric or abuse disorders."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:10193-10319",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "The subject had a recent history (within the last year) of chronic substance abuse at the time of signing informed consent.",
+        "source": {
+          "start": 10193,
+          "end": 10319,
+          "text": "Subjects who, at the time of signing informed consent, had a recent history (within the last year) of chronic substance abuse."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:10324-10448",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "The subject is pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the study.",
+        "source": {
+          "start": 10324,
+          "end": 10448,
+          "text": "Subject is pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the study."
+        },
+        "confidence": 0.9
+      },
+      {
+        "id": "NCT06090266:10453-10848",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "The subject is a vulnerable person (under judicial safeguard, deprived of their liberty by judicial or administrative decision, under psychiatric care without their consent, admitted to a health or social institution for purposes other than research, subject to a measure of legal protection (guardianship or curatorship), or unable to express their consent).",
+        "source": {
+          "start": 10453,
+          "end": 10848,
+          "text": "Vulnerable persons: subjects under judicial safeguard, subjects deprived of their liberty by judicial or administrative decision, subjects under psychiatric care without their consent, subjects admitted to a health or social institution for purposes other than research, adults subject to a measure of legal protection (guardianship or curatorship), and subjects unable to express their consent."
+        },
+        "confidence": 0.9
+      }
+    ],
+    "rejected": [],
+    "unclaimed": [
+      {
+        "start": 5058,
+        "end": 5222,
+        "text": " Subjects who are clinically stable for at least 2 weeks following treatment for these conditions (including therapeutic thoraco- or paracentesis) are eligible.\n6. "
+      },
+      {
+        "start": 5338,
+        "end": 5848,
+        "text": " Subjects with previously treated brain metastases may participate provided they are clinically stable for at least 4 weeks prior to study entry, have no radiological evidence of new or enlarging brain metastases, and are off steroids or on a stable dose up to an equivalent of prednisone 10 mg/day for at least 15 days prior to first dose of study medication. Subjects who have symptoms consistent with CNS metastasis must have a negative magnetic resonance imaging (MRI) scan during the screening period.\n7. "
+      },
+      {
+        "start": 6159,
+        "end": 6826,
+        "text": "\n\n   1. Subjects with a known history of AJCC Stage 1 cancer that has undergone potentially curative therapy with no evidence of recurrent disease for at least 1 year before the start of treatment may be eligible at the Investigator's discretion after consultation with the Sponsor.\n   2. Subjects who underwent successful definitive resection of basal cell carcinoma of the skin, superficial bladder cancer, squamous cell carcinoma of the skin, in situ cervical cancer, or other in situ cancers at any time before the start of treatment, and have no evidence of recurrent disease, are eligible.\n8. Recent or ongoing serious infection including the following:\n\n   1. "
+      },
+      {
+        "start": 7091,
+        "end": 7328,
+        "text": " Subjects on stable highly active antiretroviral therapy (HAART) with undetectable viral load and normal CD4 counts for at least 6 months prior to study entry are eligible. Serological testing for HIV at screening is not required.\n   3. "
+      },
+      {
+        "start": 7475,
+        "end": 7686,
+        "text": " Subjects who are or have received anti-HBV therapy and have undetectable HBV DNA for at least 6 months prior to study entry are eligible. Serological testing for hepatitis B at screening is not required.\n   4. "
+      },
+      {
+        "start": 7795,
+        "end": 8016,
+        "text": " Subjects on or having received anti-retroviral therapy are eligible provided they are virus-free by PCR for at least 6 months prior to study entry. Serological testing for hepatitis C at screening is not required.\n   5. "
+      },
+      {
+        "start": 8236,
+        "end": 8335,
+        "text": " Subjects on hormone replacement therapy for autoimmune-induced endocrinopathies are eligible.\n10. "
+      }
+    ],
+    "run": {
+      "model": "Qwen3.6-35B-A3B-MLX-8bit",
+      "quantization": "8bit",
+      "temperature": 0,
+      "seed": 20260921,
+      "adapter": "omlx",
+      "promptVersion": "e1e694b399d4",
+      "normalizeVersion": "2",
+      "timestamp": "2026-10"
+    }
+  }
+]

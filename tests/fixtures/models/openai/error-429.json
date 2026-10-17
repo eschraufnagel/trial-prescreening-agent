@@ -1,0 +1,15 @@
+{
+  "provenance": "written from https://developers.openai.com/api/docs (Chat Completions reference) in 2026-09, not yet seen from the API",
+  "status": 429,
+  "headers": {
+    "retry-after": "2"
+  },
+  "body": {
+    "error": {
+      "message": "Rate limit reached",
+      "type": "rate_limit_error",
+      "param": null,
+      "code": null
+    }
+  }
+}

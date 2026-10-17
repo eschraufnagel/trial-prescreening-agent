@@ -1,0 +1,72 @@
+{
+  "id": "NCT00077350-dev",
+  "nctId": "NCT00077350",
+  "labelSetSha": "a563b92102d9222befd27ecbd8d3dc76ff1b9fc09b87b5347a81b0982e113dcf",
+  "behavior": "contradicts",
+  "persona": "67-year-old man, retired electrician, plain-spoken, keeps answers short.",
+  "facts": [
+    {
+      "label": "L3",
+      "says": "One chemo regimen since it spread, and it stopped working.",
+      "expected": "holds"
+    },
+    {
+      "label": "L4",
+      "says": "No, I've not had gemcitabine.",
+      "laterSays": "I need to take that back: gemcitabine was part of my chemo.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L14",
+      "says": "Radiation was done about two months ago.",
+      "laterSays": "The radiation finished eight days ago, not two months.",
+      "expected": "unresolved"
+    },
+    {
+      "label": "L15",
+      "says": "My last chemo was more than five weeks ago.",
+      "expected": "holds"
+    },
+    {
+      "label": "L20",
+      "says": "No. I'm a man, so not pregnant.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L21",
+      "says": "Not breastfeeding, being a man.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L23",
+      "says": "Yes, I'll use condoms from before I start and all through the study.",
+      "expected": "holds"
+    },
+    {
+      "label": "L33",
+      "says": "Yes. Three weeks ago I finished a study of an experimental drug for my arthritis.",
+      "expected": "holds"
+    },
+    {
+      "label": "L34",
+      "says": "I got hives from a chemo drug years ago. No idea whether it's anything like this one.",
+      "expected": "defer"
+    },
+    {
+      "label": "L35",
+      "says": "G6PD deficiency? No, I don't have that.",
+      "expected": "does-not-hold"
+    },
+    {
+      "label": "L2",
+      "says": "It's recurrent: it came back after treatment, and it's progressing.",
+      "reported": "holds"
+    }
+  ],
+  "provenance": {
+    "drafter": "claude-opus-5-5",
+    "guide": "evals/cases/VIGNETTES.md",
+    "sawAgentPrompt": true,
+    "note": "Dev vignette for slice 0009. Never scored. The drafter had read the 17 confidently wrong findings from labels in the twelve scored conversations outside the least-seen three, and writes the agent's fixes too. Classes: self-correction L4 (its correction arrives in the reply to the clinical L5) and L14 (correction with no marker word); polarity L33 (an exclusion that holds); hedged or interpretive L34 (defer: whether an old reaction was to a similar compound). Controls: L20 and L21 (a man denying pregnancy and breastfeeding, does-not-hold by the scored vignettes' convention, not does-not-apply); L23 (names women and men, so it applies to him, and a firm agreement); L35 (a plain denial). L3 and L15 are clean answers on labels that failed in the twelve, written plainly, testing no class."
+  }
+}
