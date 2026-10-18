@@ -149,6 +149,65 @@ Merged as PR #1 (`d28377d`).
 
 ## Records
 
+- **Moved from 0018.** PR #1 (Paper & Ink) was merged while this plan was being written as 0018's second pass. The intent, spec and plan moved here, with three adjustments: the number, the branch, and "before 0018" (`3c86777`) as the reset point. Three local commits on `0018-paper-and-ink` that renamed and rewrote 0018's documents were never pushed, and are left there unused.
+- **Step 2.** Built on `git show 3c86777:src/web/styles.css`. The token blocks and the focus rule are as spec §1. `grep "serif\|terracotta\|--rule"` finds only the `sans-serif` fallback.
+- **Step 3.** Spec §2's "keeping only the colour" for the remaining `h2`s became one rule (`.tester h2`, `.review-summary h2`, `.review-group h2`, `.review-transcript h2`); `.checklist h2` is covered by `.page h2`.
+- **Step 4.** The card was rendered headlessly with 0018's `review.png` still in its frame: plum top border and glow, plum headline at weight 800, coral flask, coral pill tags.
+- **Step 5, contrast.** The scratch script read both token blocks from `styles.css` and checked spec §5's 44 pairs. All passed on the first run; no value moved.
+
+  | Foreground | Background | Bar | Light | Dark |
+  | --- | --- | --- | --- | --- |
+  | `--text` | `--bg` | 4.5 | 14.65 | 15.87 |
+  | `--text` | `--panel` | 4.5 | 16.18 | 14.58 |
+  | `--text` | `--agent` | 4.5 | 13.85 | 13.18 |
+  | `--dim` | `--bg` | 4.5 | 5.23 | 7.95 |
+  | `--dim` | `--panel` | 4.5 | 5.78 | 7.31 |
+  | `--dim` | `--agent` | 4.5 | 4.95 | 6.61 |
+  | `--ink-2` | `--bg` | 4.5 | 8.89 | 12.09 |
+  | `--ink-2` | `--panel` | 4.5 | 9.81 | 11.10 |
+  | `--ink-2` | `--agent` | 4.5 | 8.40 | 10.04 |
+  | `--text` | `--chip` | 4.5 | 13.43 | 12.19 |
+  | `--ink-2` | `--chip` | 4.5 | 8.14 | 9.28 |
+  | `--me-text` | `--me` | 4.5 | 10.39 | 7.06 |
+  | `white` | `--button` | 4.5 | 5.10 | 5.10 |
+  | `--panel` | `--down` | 4.5 | 7.76 | 8.89 |
+  | `--accent` | `--bg` | 4.5 | 4.61 | 9.11 |
+  | `--accent` | `--panel` | 4.5 | 5.10 | 8.37 |
+  | `--accent-ink` | `--accent-soft` | 4.5 | 6.30 | 9.73 |
+  | `--ok` | `--ok-bg` | 4.5 | 5.63 | 8.76 |
+  | `--warn` | `--warn-bg` | 4.5 | 6.04 | 8.50 |
+  | `--down` | `--down-bg` | 4.5 | 6.38 | 8.18 |
+  | `--down` | `--panel` | 4.5 | 7.76 | 8.89 |
+  | `--holds` | `--panel` | 4.5 | 5.51 | 9.64 |
+  | `--holds` | `--new` | 4.5 | 4.93 | 7.50 |
+  | `--not` | `--panel` | 4.5 | 6.11 | 8.72 |
+  | `--not` | `--new` | 4.5 | 5.47 | 6.79 |
+  | `--open` | `--panel` | 4.5 | 5.78 | 7.31 |
+  | `--open` | `--new` | 4.5 | 5.18 | 5.69 |
+  | `--review` | `--panel` | 4.5 | 7.86 | 9.26 |
+  | `--review` | `--new` | 4.5 | 7.04 | 7.21 |
+  | `--unresolved` | `--panel` | 4.5 | 5.76 | 10.18 |
+  | `--unresolved` | `--new` | 4.5 | 5.16 | 7.92 |
+  | `--accent` | `--panel` | 3 | 5.10 | 8.37 |
+  | `--band-ink` | `--band` | 4.5 | 14.64 | 16.90 |
+  | `--band-ink` | `--band-2` | 4.5 | 10.39 | 13.77 |
+  | `--band-ink-2` | `--band` | 4.5 | 10.58 | 10.52 |
+  | `--band-ink-2` | `--band-2` | 4.5 | 7.50 | 8.57 |
+  | `--band` | `white` | 4.5 | 14.64 | 16.90 |
+  | `--chip-ink` | `--chip` | 4.5 | 8.62 | 9.28 |
+  | `--text` | `--accent-soft` | 4.5 | 13.53 | 12.69 |
+  | `--heading` | `--bg` | 4.5 | 13.26 | 14.54 |
+  | `--heading` | `--panel` | 4.5 | 14.64 | 13.36 |
+  | `--me-text` | `--me-2` | 4.5 | 12.25 | 9.75 |
+  | `--text` | `--plain-bg` | 4.5 | 15.30 | 13.96 |
+  | `--ink-2` | `--plain-bg` | 4.5 | 9.28 | 10.63 |
+
+  44 pairs, 0 failing
+
+- **Step 5, screens.** `npm run app -- --fake --port 5045` with scratch directories, and the scratch script's 46 images, light and dark, 1280 × 800 and 390 × 844.
+  - Looked at and passing: coral "Start screening" beside crimson "Remove…" reads as two colours (filled against outlined, warm against cool); the plum band holds its edge on the dark page; all four nav links measure on one line at 390 px in both modes; no serif, terracotta or capitals left from 0018; review rows differ only in their own words.
+  - No fixes were needed.
+
 ## Gate record
 
 ## Review passes
