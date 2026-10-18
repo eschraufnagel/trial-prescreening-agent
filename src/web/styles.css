@@ -19,7 +19,7 @@
   --warn: #7f4d0c;
   --down-bg: #f8e0d8;
   --down: #9b2a1c;
-  --holds: #2b7a52;
+  --holds: #256b48;
   --not: #9b4a24;
   --open: #6c675c;
   --review: #6a4a8c;
@@ -55,7 +55,7 @@
     --text: #ece5d6;
     --dim: #a59e8f;
     --line: #2e3833;
-    --rule: #3a4540;
+    --rule: #5f6d66;
     --agent: #232c28;
     --me: #2c6b56;
     --accent: #8fcfb0;
@@ -1189,6 +1189,7 @@ p.words .words-label {
 /* Four nav items (slice 0017) fit one line on a phone. */
 @media (max-width: 480px) {
   .nav a {
-    padding: 8px 9px;
+    padding: 8px 2px 10px;
+    margin: 0 7px;
   }
 }

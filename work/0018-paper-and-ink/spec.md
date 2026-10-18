@@ -19,7 +19,7 @@ Every existing variable keeps its name and role. Three are added: `--terracotta`
 | `--dim` | `#6c675c` | `#a59e8f` |
 | `--ink-2` | `#3d4842` | `#cfc8b9` |
 | `--line` | `#e2d9c8` | `#2e3833` |
-| `--rule` | `#1e2a25` | `#3a4540` |
+| `--rule` | `#1e2a25` | `#5f6d66` |
 | `--agent` | `#efe7d8` | `#232c28` |
 | `--me` | `#1f5747` | `#2c6b56` |
 | `--me-text` | `#fdfaf3` | `#fdfaf3` |
@@ -34,7 +34,7 @@ Every existing variable keeps its name and role. Three are added: `--terracotta`
 | `--ok-bg` / `--ok` | `#e2ece5` / `#1b5a3f` | `#1d3328` / `#93d6b0` |
 | `--warn-bg` / `--warn` | `#f8ead2` / `#7f4d0c` | `#3a2e17` / `#f0c77a` |
 | `--down-bg` / `--down` | `#f8e0d8` / `#9b2a1c` | `#3d1f19` / `#ffb3a0` |
-| `--holds` | `#2b7a52` | `#7fd3a4` |
+| `--holds` | `#256b48` | `#7fd3a4` |
 | `--not` | `#9b4a24` | `#f2a27e` |
 | `--open` | `#6c675c` | `#a59e8f` |
 | `--review` | `#6a4a8c` | `#c7a8ec` |

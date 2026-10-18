@@ -125,6 +125,59 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 
 ## Records
 
+- **Step 3.** Fields and shadows became tokens (`--field`, `--field-line`, `--shadow`) rather than separate dark-mode rules, so dark mode stays one block; spec §1 and §3 updated in that commit. Secondary buttons take a `--text` border in both modes, not `--ink-2` in dark.
+- **Step 4.** The preview card was rendered headlessly with the old `review.png` in its frame: serif headline and wordmark, terracotta top border and flask, small-capital tags. Its screenshot is retaken at step 7.
+- **Step 5, contrast.** A scratch script read both token blocks from `styles.css` and checked spec §5's 35 pairs. Two failed at first and were moved, and spec §1 updated:
+  - light `--holds` on `--new` was 4.34: `#2b7a52` → `#256b48` (5.31);
+  - dark `--rule` on `--bg` was 1.79: `#3a4540` → `#5f6d66` (3.28).
+
+  The final table, all passing:
+
+  | Foreground | Background | Bar | Light | Dark |
+  | --- | --- | --- | --- | --- |
+  | `--text` | `--bg` | 4.5 | 12.75 | 14.20 |
+  | `--text` | `--panel` | 4.5 | 14.51 | 12.80 |
+  | `--text` | `--agent` | 4.5 | 12.10 | 11.45 |
+  | `--dim` | `--bg` | 4.5 | 4.83 | 6.69 |
+  | `--dim` | `--panel` | 4.5 | 5.49 | 6.03 |
+  | `--dim` | `--agent` | 4.5 | 4.58 | 5.39 |
+  | `--ink-2` | `--bg` | 4.5 | 8.18 | 10.70 |
+  | `--ink-2` | `--panel` | 4.5 | 9.30 | 9.65 |
+  | `--ink-2` | `--agent` | 4.5 | 7.75 | 8.63 |
+  | `--text` | `--chip` | 4.5 | 11.76 | 10.87 |
+  | `--ink-2` | `--chip` | 4.5 | 7.54 | 8.19 |
+  | `--me-text` | `--me` | 4.5 | 8.02 | 6.02 |
+  | `white` | `--button` | 4.5 | 8.36 | 6.28 |
+  | `--panel` | `--down` | 4.5 | 7.48 | 9.33 |
+  | `--accent` | `--bg` | 4.5 | 7.17 | 9.94 |
+  | `--accent` | `--panel` | 4.5 | 8.16 | 8.96 |
+  | `--terracotta-ink` | `--bg` | 4.5 | 5.09 | 8.03 |
+  | `--terracotta-ink` | `--panel` | 4.5 | 5.79 | 7.24 |
+  | `--accent-ink` | `--accent-soft` | 4.5 | 9.32 | 9.71 |
+  | `--ok` | `--ok-bg` | 4.5 | 6.73 | 8.02 |
+  | `--warn` | `--warn-bg` | 4.5 | 5.96 | 8.31 |
+  | `--down` | `--down-bg` | 4.5 | 6.07 | 8.67 |
+  | `--down` | `--panel` | 4.5 | 7.48 | 9.33 |
+  | `--holds` | `--panel` | 4.5 | 6.26 | 8.99 |
+  | `--holds` | `--new` | 4.5 | 5.31 | 8.03 |
+  | `--not` | `--panel` | 4.5 | 6.03 | 7.83 |
+  | `--not` | `--new` | 4.5 | 5.11 | 7.00 |
+  | `--open` | `--panel` | 4.5 | 5.49 | 6.03 |
+  | `--open` | `--new` | 4.5 | 4.66 | 5.39 |
+  | `--review` | `--panel` | 4.5 | 6.90 | 7.83 |
+  | `--review` | `--new` | 4.5 | 5.85 | 6.99 |
+  | `--unresolved` | `--panel` | 4.5 | 5.62 | 9.49 |
+  | `--unresolved` | `--new` | 4.5 | 4.77 | 8.48 |
+  | `--accent` | `--panel` | 3 | 8.16 | 8.96 |
+  | `--rule` | `--bg` | 3 | 12.75 | 3.28 |
+
+  35 pairs, 0 failing
+
+- **Step 5, screens.** `npm run app -- --fake --port 5045` with scratch directories, and a scratch Playwright script capturing 46 images: Trials (first run and with `NCT00000000` added), its checklist, Screenings, a conversation on `NCT04316364` after three made-up answers with the tester panel open, the same finished, Reviews, the review of `eval NCT00077350-v2-labels` folded, with a row open and its transcript, and Settings with Anthropic chosen. Light and dark, at 1280 × 800 and 390 × 844.
+  - **One fix.** At 390 px the nav wrapped "Settings" onto a second line: the new 10 px side margins weren't reduced by the phone rule. The rule now sets `padding: 8px 2px 10px; margin: 0 7px`, and all four links measure on one line in both modes.
+  - **Looked at and left:** the serif falls on headings, titles, counts and the agent's words only; capitals only on badges, tags and step names; review rows look alike apart from their own words. On a phone the chat pane is sticky, so a screenshot taken while scrolling shows the tester panel passing under it. That's 0014's layout, not this slice's.
+  - The app builds the page at startup, so a CSS change needs a restart before it's seen. The first look missed the nav fix for that reason.
+
 ## Gate record
 
 ## Review passes
