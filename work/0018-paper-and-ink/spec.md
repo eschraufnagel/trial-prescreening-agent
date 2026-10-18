@@ -41,7 +41,7 @@ Every existing variable keeps its name and role. Three are added: `--terracotta`
 | `--unresolved` | `#8a5d00` | `#f0c060` |
 | `--radius` | `6px` | (same) |
 
-Form fields get their own two values in dark mode (background `#141b18`, border `#36423c`), set in the dark block's rules rather than as tokens.
+Fields and shadows are tokens too, so dark mode is one block: `--field` (`#fffefb` / `#141b18`), `--field-line` (`#d6ccb8` / `#36423c`) and `--shadow` (§3). *(Changed at step 3: the draft set the dark field colours in a separate rule.)*
 
 ## 2. Type
 
@@ -57,9 +57,9 @@ Only the rules listed change. Everything else in `styles.css` stays.
 
 - **Header.** Background `--bg`, a 4 px `--terracotta` top border, a 1 px `--rule` bottom border. The flask in `--terracotta`. Nav links lose their pill: the current one is `--text` with a 2 px terracotta underline at the header's bottom edge; the rest `--ink-2`. The model pill is square-cornered (4 px) on `--panel`.
 - **Headings.** Page `h1` 2.4 rem; first-run `h1` as now. Serif per §2.
-- **Cards** (`.card`, `.participant`, `.tester`, `.review-summary`, `.review-group`, `.review-transcript`, `.steps li`, `.counts li`). `--radius`, a `--line` border, and a soft warm shadow: `0 1px 0 rgba(60,45,20,.04), 0 12px 28px -22px rgba(60,45,20,.35)`. In dark mode, the shadow is `0 12px 28px -22px rgba(0,0,0,.6)`.
-- **Buttons.** 4 px corners. Primary unchanged in structure (`--button`, white text). Secondary transparent with a 1 px `--text` border (`--ink-2` in dark) and `--text` words. Quiet and destructive as now. `button.danger`'s words become `--panel`, so they stay readable on dark mode's light `--down`.
-- **Fields** (`.add-row input`, `.field > input`, `.field select`, `.composer textarea`). 4 px corners; light background `#fffefb`, border `#d6ccb8`; dark as §1.
+- **Cards** (`.card`, `.participant`, `.tester`, `.review-summary`, `.review-group`, `.review-transcript`, `.steps li`, `.counts li`). `--radius`, a `--line` border, and a soft warm shadow: `0 1px 0 rgba(60,45,20,.04), 0 12px 28px -22px rgba(60,45,20,.35)`. In dark mode, the shadow is `0 12px 28px -22px rgba(0,0,0,.6)`. Both are `--shadow`.
+- **Buttons.** 4 px corners. Primary unchanged in structure (`--button`, white text). Secondary transparent with a 1 px `--text` border and `--text` words. Quiet and destructive as now. `button.danger`'s words become `--panel`, so they stay readable on dark mode's light `--down`.
+- **Fields** (`.add-row input`, `.field > input`, `.field select`, `.composer textarea`). 4 px corners; `--field` and `--field-line`.
 - **Badges and tags** (`.badge`, `.tag`). 3 px corners, capitals, 0.05 em tracking, 0.72 rem. **Chips** (`.chips li`) keep sentence case.
 - **Step names** (`.step-name`). `--terracotta-ink`, capitals, 0.08 em tracking.
 - **Chat.** Bubbles 6 px corners, 10 × 14 px padding. The agent's in the serif at 1.04 rem with a 3 px `--terracotta` left border. The person's unchanged apart from colour.
