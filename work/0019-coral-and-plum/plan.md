@@ -208,6 +208,14 @@ Merged as PR #1 (`d28377d`).
   - Looked at and passing: coral "Start screening" beside crimson "Remove…" reads as two colours (filled against outlined, warm against cool); the plum band holds its edge on the dark page; all four nav links measure on one line at 390 px in both modes; no serif, terracotta or capitals left from 0018; review rows differ only in their own words.
   - No fixes were needed.
 
+- **Step 6.** `npm run test:e2e`: 11 passed, 4 skipped (the capture specs), 17.2 s. No spec changed.
+- **Step 7.** oMLX was healthy with the model already loaded (ceiling 46.9 GB). With the owner's go ("go", after the gate question that named it), `OMLX_API_KEY` was exported into the capture app's process from the old clone's `.env`, as in 0018: no file written, value never printed. The app reported the local model, no hosted provider, ready.
+  - `npm run screenshots`: 4 passed, 2.0 min.
+  - `npm run demo`: 4.98 MB at 10 fps, 720 px (0018's fallback), just under the cap. 9.0 MB at 960 px; the plum band and glow cost more than 0018's page did.
+  - Looked at: all five README images, the preview card (its crop of `review.png` reads), and nine frames of the GIF. The model's words are the real agent's from that run.
+
 ## Gate record
+
+- **Passed, 2026-10.** The owner looked at the 46 headless screenshots (light and dark, 1280 and 390 px) and the contrast table, and said "go".
 
 ## Review passes
