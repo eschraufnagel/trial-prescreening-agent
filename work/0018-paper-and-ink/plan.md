@@ -96,10 +96,11 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 **Modified:**
 - `src/web/styles.css`, `src/web/index.html`
 - `e2e/capture/social-card.html`
+- `scripts/make-demo.ts` (step 7: one more fallback width for the GIF)
 - `docs/images/trials.png`, `screening.png`, `review.png`, `transcript.png`, `settings.png`, `social-card.png`, `demo.gif`
 - `work/ROADMAP.md`; `work/0018-paper-and-ink/spec.md` only if step 5 moves a value
 
-**Not touched, checked at step 9:** every `src/web/*.tsx`, `src/web/logic.ts`, `src/web/review.ts`, `src/server/`, `src/transport/`, `src/screening/`, `src/criteria/`, `src/plain/`, `src/models/`, `src/trials/`, `tests/`, `e2e/*.spec.ts`, `e2e/lib/`, `evals/`, `data/`, `package.json`, `package-lock.json`, `README.md`, `CLAUDE.md`.
+**Not touched, checked at step 9:** every `src/web/*.tsx`, `src/web/logic.ts`, `src/web/review.ts`, `src/server/`, `src/transport/`, `src/screening/`, `src/criteria/`, `src/plain/`, `src/models/`, `src/trials/`, `tests/`, `e2e/*.spec.ts`, `e2e/lib/`, `evals/`, `data/`, `package.json`, `package-lock.json`, `README.md`, `CLAUDE.md`, `.env` (none exists in this clone, and none was made).
 
 ## Reused, not rebuilt
 
@@ -178,6 +179,17 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
   - **Looked at and left:** the serif falls on headings, titles, counts and the agent's words only; capitals only on badges, tags and step names; review rows look alike apart from their own words. On a phone the chat pane is sticky, so a screenshot taken while scrolling shows the tester panel passing under it. That's 0014's layout, not this slice's.
   - The app builds the page at startup, so a CSS change needs a restart before it's seen. The first look missed the nav fix for that reason.
 
+- **Step 6.** `npm run test:e2e`: 11 passed, 4 skipped (the capture specs), 17.4 s. No spec changed.
+- **Step 7, getting the local model.** Three things stood in the way, none of them the code:
+  - oMLX wasn't running. It was opened (`open -a oMLX`) and reported healthy.
+  - This clone has no `.env` since the repository was split, so the app had no `OMLX_API_KEY` and every parse failed. **The owner's choice:** export the variable from the old clone's `.env` into the capture app's process only. No file was written, and the value was never printed.
+  - The model (36.9 GB) didn't fit under oMLX's memory ceiling (36.2 GB) with other apps open. The owner closed some, and the ceiling rose to 42.5 GB.
+- **Step 7, a fix the images showed.** The retaken `screening.png` had the browser's blue focus ring on the answer box, the one blue left on the page. A `:focus-visible` rule now draws a 2 px `--accent` outline (spec §3 gained a line). The app was restarted to rebuild the page, and everything was captured again. `npm run screenshots`: 4 passed, 1.8 min.
+- **Step 7, the GIF.** The warmer page compresses less well than flat white: at the script's smallest setting (10 fps, 800 px) the GIF was 5.78–5.89 MB, over the 5 MB cap. The old one was already 5.13 MB. A lower frame rate barely helped (8 fps, 800 px: 5.50 MB), so `ATTEMPTS` in `scripts/make-demo.ts` gained `{ fps: 10, width: 720 }` instead. The GIF is 4.89 MB at 720 px, 27 s. Changing the dither would also have worked, but `tests/scripts/make-demo.test.ts` pins the filter graph, and this slice changes no tests.
+- **Step 7, looked at.** All five README images, the preview card (its crop of `review.png` still reads, so its offsets stay) and nine frames of the GIF. The model's words are the real agent's, from that run.
+
 ## Gate record
+
+- **Passed, 2026-10.** The owner looked at the 46 headless screenshots (light and dark, 1280 and 390 px) and the contrast table, and said the gate passes.
 
 ## Review passes

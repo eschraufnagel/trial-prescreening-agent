@@ -8,7 +8,8 @@
  * the page waits on the model are sped up so each lasts a fraction of a
  * second, and everything else plays as recorded. This trims, speeds and joins
  * those pieces with `ffmpeg`, then makes a looping GIF with its own palette.
- * If the GIF is over 5 MB it tries a lower frame rate, then a narrower width.
+ * If the GIF is over 5 MB it tries a lower frame rate, then narrower widths
+ * (720 px since slice 0018: the warmer page compresses less well).
  *
  * `ffmpeg` is a system tool, not a dependency, and is needed for this only.
  * No network, no model.
@@ -38,6 +39,7 @@ export const ATTEMPTS = [
   { fps: 12, width: 960 },
   { fps: 10, width: 960 },
   { fps: 10, width: 800 },
+  { fps: 10, width: 720 },
 ] as const;
 
 const CUTS_FILE = fileURLToPath(new URL("../e2e/.out/capture/cuts.json", import.meta.url));

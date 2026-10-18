@@ -59,6 +59,7 @@ Only the rules listed change. Everything else in `styles.css` stays.
 - **Headings.** Page `h1` 2.4 rem; first-run `h1` as now. Serif per §2.
 - **Cards** (`.card`, `.participant`, `.tester`, `.review-summary`, `.review-group`, `.review-transcript`, `.steps li`, `.counts li`). `--radius`, a `--line` border, and a soft warm shadow: `0 1px 0 rgba(60,45,20,.04), 0 12px 28px -22px rgba(60,45,20,.35)`. In dark mode, the shadow is `0 12px 28px -22px rgba(0,0,0,.6)`. Both are `--shadow`.
 - **Buttons.** 4 px corners. Primary unchanged in structure (`--button`, white text). Secondary transparent with a 1 px `--text` border and `--text` words. Quiet and destructive as now. `button.danger`'s words become `--panel`, so they stay readable on dark mode's light `--down`.
+- **Focus.** `:focus-visible` draws a 2 px `--accent` outline, 2 px out, in place of the browser's blue. *(Added at step 7, when the retaken screening showed the default ring.)*
 - **Fields** (`.add-row input`, `.field > input`, `.field select`, `.composer textarea`). 4 px corners; `--field` and `--field-line`.
 - **Badges and tags** (`.badge`, `.tag`). 3 px corners, capitals, 0.05 em tracking, 0.72 rem. **Chips** (`.chips li`) keep sentence case.
 - **Step names** (`.step-name`). `--terracotta-ink`, capitals, 0.08 em tracking.
