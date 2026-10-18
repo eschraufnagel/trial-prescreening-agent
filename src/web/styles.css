@@ -1,36 +1,44 @@
 /* Plain CSS. Two columns, conversation and tester panel, stacking on a narrow
    window. The grid leaves the page free to take a third area, the coordinator
-   pane in slice 0007, beside or below these. */
+   pane in slice 0007, beside or below these.
+   The look is "Paper & Ink" (slice 0018): colours live only in the two token
+   blocks below, apart from the fields' and shadows' own values. */
 
 :root {
-  --bg: #f7f7f5;
-  --panel: #ffffff;
-  --text: #1d1d1f;
-  --dim: #6b6b70;
-  --line: #e2e2e0;
-  --agent: #eef0f4;
-  --me: #2f5bd3;
-  --me-text: #ffffff;
-  --accent: #2f5bd3;
-  --warn-bg: #fff4e0;
-  --warn: #8a5300;
-  --down-bg: #fde8e8;
-  --down: #9b1c1c;
-  --holds: #1f7a3a;
-  --not: #7a3a1f;
-  --open: #6b6b70;
-  --review: #5b3fa6;
-  --unresolved: #9a6700;
-  --new: #e8f1ff;
-  --accent-soft: #eef2fc;
-  --accent-ink: #1f44a8;
-  --ok-bg: #e6f2ea;
-  --ok: #1d5c34;
-  --chip: #f1f1ef;
-  --ink-2: #45454a;
-  --radius: 14px;
-  --button: #2f5bd3;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bg: #f3ede2;
+  --panel: #fffcf6;
+  --text: #1e2a25;
+  --dim: #6c675c;
+  --line: #e2d9c8;
+  --rule: #1e2a25;
+  --agent: #efe7d8;
+  --me: #1f5747;
+  --me-text: #fdfaf3;
+  --accent: #1f5747;
+  --warn-bg: #f8ead2;
+  --warn: #7f4d0c;
+  --down-bg: #f8e0d8;
+  --down: #9b2a1c;
+  --holds: #2b7a52;
+  --not: #9b4a24;
+  --open: #6c675c;
+  --review: #6a4a8c;
+  --unresolved: #8a5d00;
+  --new: #f6e7dc;
+  --accent-soft: #e2ece5;
+  --accent-ink: #164234;
+  --ok-bg: #e2ece5;
+  --ok: #1b5a3f;
+  --chip: #ece4d4;
+  --ink-2: #3d4842;
+  --terracotta: #c2603a;
+  --terracotta-ink: #a24a26;
+  --radius: 6px;
+  --button: #1f5747;
+  --serif: "Iowan Old Style", "Charter", "Palatino", Georgia, serif;
+  --sans:
+    "Avenir Next", "Helvetica Neue", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--sans);
   font-size: 15px;
   line-height: 1.45;
   color: var(--text);
@@ -39,31 +47,34 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #161618;
-    --panel: #1f1f22;
-    --text: #ececef;
-    --dim: #9a9aa2;
-    --line: #34343a;
-    --agent: #2a2b31;
-    --me: #3c68e0;
-    --accent: #7ea0ff;
-    --warn-bg: #3a2d14;
-    --warn: #f0c070;
-    --down-bg: #3d1a1a;
-    --down: #ffb0b0;
-    --holds: #6fd08f;
-    --not: #f0a080;
-    --open: #9a9aa2;
-    --review: #b9a2ff;
+    --bg: #131917;
+    --panel: #1b2320;
+    --text: #ece5d6;
+    --dim: #a59e8f;
+    --line: #2e3833;
+    --rule: #3a4540;
+    --agent: #232c28;
+    --me: #2c6b56;
+    --accent: #8fcfb0;
+    --warn-bg: #3a2e17;
+    --warn: #f0c77a;
+    --down-bg: #3d1f19;
+    --down: #ffb3a0;
+    --holds: #7fd3a4;
+    --not: #f2a27e;
+    --open: #a59e8f;
+    --review: #c7a8ec;
     --unresolved: #f0c060;
-    --new: #1c2740;
-    --accent-soft: #1c2740;
-    --accent-ink: #a9c0ff;
-    --ok-bg: #16301f;
-    --ok: #8fd6a8;
-    --chip: #2a2b31;
-    --ink-2: #c4c4cb;
-    --button: #3c68e0;
+    --new: #33281f;
+    --accent-soft: #1f302a;
+    --accent-ink: #b5e2cb;
+    --ok-bg: #1d3328;
+    --ok: #93d6b0;
+    --chip: #26302b;
+    --ink-2: #cfc8b9;
+    --terracotta: #d9784f;
+    --terracotta-ink: #eb9b74;
+    --button: #2c6b56;
   }
 }
 
