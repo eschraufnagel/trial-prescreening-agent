@@ -193,3 +193,34 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 - **Passed, 2026-10.** The owner looked at the 46 headless screenshots (light and dark, 1280 and 390 px) and the contrast table, and said the gate passes.
 
 ## Review passes
+
+Run 2026-10 at step 9, against `git diff main`, by Claude (the author). They aren't independent.
+
+**Pass 1, plan compliance.**
+- **Every changed file is in "Files that change".** `scripts/make-demo.ts` was added there at step 7, with its reason in Records.
+- **Scope grew twice, both recorded:** the `:focus-visible` rule (step 7, spec §3) and the GIF's 720 px fallback (step 7). Fields and shadows became tokens at step 3 (spec §1).
+- **The "not touched" paths are empty in the diff,** and no `.env` exists in this clone. No dependency was added.
+
+**Pass 2, correctness.**
+- **No Important findings.**
+- `npm run test:e2e`: 11 passed, 4 skipped, 16.5 s, after the last CSS change.
+- `button.danger` is the only rule that put white words on `--down`, and it now uses `--panel`. The one remaining `#fff` is the primary button's words on `--button` (8.36 and 6.28).
+- **Nit, accepted:** `:focus-visible` now applies to links and fold-out summaries too, not only fields. That's the intent: one ring, in the page's colour, wherever the keyboard is.
+- **Nit, accepted:** the demo is 720 px wide instead of 960. Its words are smaller on GitHub, still readable in the frames looked at.
+- **Nit, accepted:** off a Mac, the page falls back to Georgia and the system sans (intent, decision 2).
+
+**Pass 3, scope and data discipline.**
+- **No PHI.** Every typed answer comes from `e2e/capture.spec.ts`'s fixed, made-up list, as in 0016.
+- **No new network path.** No font request (`@import`, `@font-face` or `url()` outside the favicon's data URL: none). The capture reached only ClinicalTrials.gov through the Trials screen's Add (0013's exception) and oMLX on loopback. No hosted provider was chosen, and nothing used `--spend`.
+- **Secrets.** The oMLX key was passed to the capture app's process from the old clone's `.env`, on the owner's instruction. It wasn't written to any file or printed, and no `.env` was created here.
+- **The review's rule.** No `review-*` rule takes a colour by outcome. `.review-finding` and the tester panel's `.s-*` selectors are unchanged in the diff, and the boundary test's "styles rows by group only" passes.
+
+**Pass 4, eval integrity.**
+- No test, spec, grader, label, vignette, threshold or committed result changed. `tests/scripts/make-demo.test.ts` pins the GIF's filter graph, which is why the size fix went to a width rather than the dither.
+
+**Pass 5, documentation.**
+- **The README** is unchanged in words. Its images are replaced, and it still describes them.
+- **The roadmap** has the 0018 row and item 9.
+- **`docs/`** says nothing about the old look. 0016's spec names the old GIF width; it's a record of that slice and stays.
+
+**Final proofs:** `npm run check` exits 0 (1169 passed, 8 expected fail). `npm run test:e2e`: 11 passed. No model was called except the local one for capture, nothing used `--spend`, and no `.env` was created or edited.
