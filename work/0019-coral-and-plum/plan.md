@@ -219,3 +219,37 @@ Merged as PR #1 (`d28377d`).
 - **Passed, 2026-10.** The owner looked at the 46 headless screenshots (light and dark, 1280 and 390 px) and the contrast table, and said "go".
 
 ## Review passes
+
+Run 2026-10 at step 9, against `git diff main`, by Claude (the author). They aren't independent.
+
+**Pass 1, plan compliance.**
+- **Every changed file is in "Files that change",** and nothing else changed. `scripts/` and `work/0018-paper-and-ink/` are untouched. 0018's landed documents stand as merged.
+- **Scope:** one divergence, recorded. The plan was approved as 0018's second pass and moved here when PR #1 merged.
+- **No dependency added.**
+
+**Pass 2, correctness.**
+- **No Important findings.**
+- `npm run test:e2e`: 11 passed, 4 skipped, 16.5 s, on the final stylesheet.
+- `button.danger` draws `--panel` words on `--down`, readable in both modes. The one `#fff` left is the primary button's words on coral (5.1:1 in both modes).
+- In the header the focus ring is `--band-ink`, since coral on plum is under 3:1.
+- **Nit, accepted:** the GIF is 4.98 MB, close to the 5 MB cap. A longer demo or a busier page would need the next fallback, or a change to the dither and its test.
+- **Nit, accepted:** off a Mac, Avenir Next falls back to the system sans.
+
+**Pass 3, scope and data discipline.**
+- **No PHI.** The typed answers are `e2e/capture.spec.ts`'s fixed, made-up list.
+- **No new network path.** No `@import`, `@font-face` or `url()` font request. The capture reached only ClinicalTrials.gov, through the Trials screen's Add (0013's exception), and oMLX on loopback. No hosted provider was chosen, and nothing used `--spend`.
+- **Secrets.** The oMLX key was exported into the capture app's process on the owner's go. It wasn't written to a file or printed, and no `.env` exists here.
+- **The review's rule.** Against the stylesheet before 0018, no `review-*` rule gained a colour by outcome. `.review-finding` and the tester panel's `.s-*` selectors are unchanged, and the boundary test's "styles rows by group only" passes.
+
+**Pass 4, eval integrity.**
+- No test, spec, grader, label, vignette, threshold or committed result changed.
+
+**Pass 5, documentation.**
+- **README:** unchanged in words; its images are replaced and still described correctly.
+- **Roadmap:** the 0019 row and item 10. 0018's row has its PR number and "look replaced by 0019".
+- **`docs/` and CLAUDE.md:** they say nothing about either look.
+
+**Final proofs:**
+- `npm run check` exits 0 (1169 passed, 8 expected fail).
+- `npm run test:e2e`: 11 passed.
+- No model was called except the local one for the capture. Nothing used `--spend`, and no `.env` was created or edited.
