@@ -11,15 +11,17 @@
     <title>Trial Prescreening</title>
     <style>
       :root {
-        --bg: #f3ede2;
-        --panel: #fffcf6;
-        --text: #1e2a25;
-        --dim: #6c675c;
-        --line: #e2d9c8;
-        --accent: #1f5747;
-        --accent-soft: #e2ece5;
-        --terracotta: #c2603a;
-        --serif: "Iowan Old Style", "Charter", "Palatino", Georgia, serif;
+        --bg: #fbf2ec;
+        --panel: #ffffff;
+        --text: #2c1a30;
+        --heading: #3a1d42;
+        --dim: #74606c;
+        --line: #f0dfd6;
+        --accent: #c4402f;
+        --accent-soft: #fde6df;
+        --accent-ink: #9a2e20;
+        --band: #3a1d42;
+        --glow: rgba(255, 170, 140, 0.35);
       }
       * {
         box-sizing: border-box;
@@ -30,12 +32,12 @@
         width: 1280px;
         height: 640px;
         overflow: hidden;
-        background: var(--bg);
+        background: radial-gradient(700px 360px at 85% 0%, var(--glow), transparent 70%), var(--bg);
         color: var(--text);
         font-family:
           "Avenir Next", "Helvetica Neue", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
           sans-serif;
-        border-top: 6px solid var(--terracotta);
+        border-top: 10px solid var(--band);
       }
       main {
         display: grid;
@@ -48,18 +50,18 @@
         display: flex;
         align-items: center;
         gap: 14px;
-        color: var(--text);
-        font-family: var(--serif);
-        font-size: 26px;
+        color: var(--heading);
+        font-size: 24px;
         font-weight: 700;
         letter-spacing: -0.01em;
       }
       .brand svg {
-        color: var(--terracotta);
+        color: var(--accent);
       }
       h1 {
         margin: 36px 0 20px;
-        font-family: var(--serif);
+        color: var(--heading);
+        font-weight: 800;
         font-size: 48px;
         line-height: 1.12;
         letter-spacing: -0.02em;
@@ -78,13 +80,11 @@
       }
       .tags span {
         padding: 7px 14px;
-        border-radius: 3px;
+        border-radius: 999px;
         background: var(--accent-soft);
-        color: var(--accent);
-        font-size: 14px;
+        color: var(--accent-ink);
+        font-size: 17px;
         font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
       }
       .shot {
         align-self: start;
@@ -92,9 +92,9 @@
         overflow: hidden;
         border: 1px solid var(--line);
         border-right: 0;
-        border-radius: 6px 0 0 6px;
+        border-radius: 22px 0 0 22px;
         background: var(--panel);
-        box-shadow: 0 24px 50px -20px rgba(60, 45, 20, 0.35);
+        box-shadow: 0 24px 50px -20px rgba(120, 50, 60, 0.45);
       }
       .shot img {
         display: block;
