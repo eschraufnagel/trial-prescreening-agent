@@ -50,6 +50,7 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
    - `src/web/App.tsx`: the flask replaced by the inline Record mark.
    - `src/web/public/icons/` and `src/web/public/manifest.webmanifest` (spec §4); `src/web/index.html` takes the head tags.
    - `src/server/app.ts`: content types for `.woff2` and `.webmanifest`, with a case in `tests/server/app.test.ts`.
+   - Decided in the work: below 1024 px the model chip takes the full-width strip the handoff gives it on a phone, since beside the nav it overflows at mid widths; the brand link fills the bar's height, so it is a 56 px target; the old reduced-motion rule slowing the spinner is deleted, since the global override now stops it; `favicon.svg` gets its missing `<style>` (spec §4).
 
 **Stages 2–5** are written in at each gate, with the files and decisions that stage turns out to need. Each ends with the bridge block shorter; step 6 removes it.
 

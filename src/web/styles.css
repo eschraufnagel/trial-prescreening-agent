@@ -1,161 +1,474 @@
-/* Plain CSS. Two columns, conversation and tester panel, stacking on a narrow
-   window. The grid leaves the page free to take a third area, the coordinator
-   pane in slice 0007, beside or below these.
-   The look is "Coral & Plum" (slice 0019): colours, fields and shadows live only
-   in the two token blocks below. */
+/* Plain CSS, one file. The look is "Chart v2" (slice 0020), from
+   docs/design_handoff_chart_v2/: its tokens first, then the rules every screen
+   shares, then each screen's own. Rules reference var(--token) only; colours,
+   type, radii and shadows are set in the two token blocks and nowhere else. */
+
+/* The fonts are bundled (src/web/fonts/, SIL Open Font License), so the page
+   makes no font request off the machine. */
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("./fonts/IBMPlexSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("./fonts/IBMPlexSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("./fonts/IBMPlexSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("./fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./fonts/IBMPlexMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("./fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("./fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
-  --bg: #fbf2ec;
-  --panel: #ffffff;
-  --text: #2c1a30;
-  --heading: #3a1d42;
-  --dim: #74606c;
-  --ink-2: #503d55;
-  --line: #f0dfd6;
-  --agent: #f7ebe5;
-  --me: #5a2f63;
-  --me-2: #4b2753;
-  --me-text: #ffffff;
-  --accent: #c4402f;
-  --accent-soft: #fde6df;
-  --accent-ink: #9a2e20;
-  --button: #c4402f;
-  --band: #3a1d42;
-  --band-2: #5a2f63;
-  --band-ink: #ffffff;
-  --band-ink-2: #e6d6ea;
-  --band-dot: #7ee2a8;
-  --band-line: rgba(255, 255, 255, 0.25);
-  --band-fill: rgba(255, 255, 255, 0.08);
-  --chip: #f3e6f3;
-  --chip-ink: #5a2f63;
-  --coral-line: #ff9f87;
-  --pink-line: #f2b8d8;
-  --plain-bg: #fff7f3;
-  --new: #fff1d6;
-  --ok-bg: #e3f3ea;
-  --ok: #1e6b45;
-  --warn-bg: #fff1d6;
-  --warn: #835000;
-  --down-bg: #fbe3e8;
-  --down: #a3123a;
-  --holds: #23774c;
-  --not: #a5432a;
-  --open: #74606c;
-  --review: #6b3d8c;
-  --unresolved: #8a5d00;
-  --field: #fffaf7;
-  --field-line: #f0dfd6;
-  --glow: rgba(255, 170, 140, 0.35);
-  --shadow: 0 1px 2px rgba(58, 29, 66, 0.06), 0 18px 40px -26px rgba(120, 50, 60, 0.45);
-  --band-shadow: 0 10px 30px -18px rgba(58, 29, 66, 0.8);
-  --button-shadow: 0 8px 18px -10px rgba(196, 64, 47, 0.8);
-  --radius: 22px;
-  --sans:
-    "Avenir Next", "Helvetica Neue", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-family: var(--sans);
-  font-size: 15px;
-  line-height: 1.45;
-  color: var(--text);
-  background: var(--bg);
+  color-scheme: light dark;
+
+  /* Colour: light */
+  --bg: #f6f7f8; /* page */
+  --surface: #ffffff; /* cards, header bar, inputs */
+  --surface-2: #eef1f3; /* group headers, testing panel, row hover */
+  --line: #d9dee3; /* borders */
+  --line-soft: #e6eaee; /* row dividers */
+  --control-line: #7d8995; /* input + secondary button borders (3:1 non-text) */
+  --ink: #14202b; /* text, findings */
+  --ink-2: #4a5866; /* secondary text, earlier questions */
+  --placeholder: #5f6b77;
+  --accent: #1f5f8b; /* actions, links, focus, active nav. Never rule status. */
+  --accent-hover: #184e73;
+  --on-accent: #ffffff;
+  --ring: #d3e2ee; /* focus ring */
+  --you: #e6eef5; /* the participant's own answers */
+  --disabled: #e3e7eb; /* disabled button fill; text uses --ink-2 */
+  --mark-lead: #7fb6de; /* logo: top line. Tile uses --ink. */
+  --mark-line: #ffffff; /* logo: lower two lines */
+  --shadow-question: 0 1px 2px rgba(20, 32, 43, 0.06);
+  --shadow-overlay: 0 8px 24px rgba(20, 32, 43, 0.14);
+
+  /* Type families */
+  --font-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-patient: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type scale: coordinator register (Plex) */
+  --text-page-title: 600 22px / 29px var(--font-ui);
+  --text-display: 600 24px / 30px var(--font-ui); /* page H1, e.g. "Your trials" */
+  --text-title: 600 18px / 25px var(--font-ui); /* trial title in screening header */
+  --text-group: 600 15px / 22px var(--font-ui); /* group headers, card titles */
+  --text-body: 400 15px / 22px var(--font-ui);
+  --text-row: 400 14px / 20px var(--font-ui); /* criterion text in review rows */
+  --text-small: 400 13px / 18px var(--font-ui);
+  --text-data: 500 13px / 18px var(--font-mono); /* NCT IDs, L-numbers */
+  --text-label: 500 12px / 16px var(--font-mono); /* uppercase section labels, tags */
+  --text-count: 500 24px / 26px var(--font-mono); /* summary counts */
+
+  /* Type scale: patient register (Atkinson) */
+  --text-question: 400 24px / 35px var(--font-patient);
+  --text-answer: 400 18px / 26px var(--font-patient); /* answer input */
+  --text-turn: 400 17px / 26px var(--font-patient); /* earlier turns */
+  --text-reassure: 400 15px / 22px var(--font-patient);
+
+  /* Spacing (4 base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Radius */
+  --radius-tag: 2px;
+  --radius-control: 4px;
+  --radius-card: 6px;
+
+  /* Sizing */
+  --tap-min: 44px;
+  --control-h: 48px; /* primary/secondary buttons, text inputs */
+  --header-h: 56px;
+  --focus-ring: 0 0 0 3px var(--ring);
+
+  /* Motion */
+  --dur-fast: 120ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #170f1b;
-    --panel: #221727;
-    --text: #f5e9ef;
-    --heading: #f3dcef;
-    --dim: #b8a3b1;
-    --ink-2: #dccbd5;
-    --line: #3a2a40;
-    --agent: #2c1f32;
-    --me: #7a4386;
-    --me-2: #5e3369;
-    --accent: #ff9a85;
-    --accent-soft: #3a1f24;
-    --accent-ink: #ffc2b5;
-    --band: #2a1431;
-    --band-2: #3f2149;
-    --band-ink-2: #d9c6dd;
-    --chip: #34243a;
-    --chip-ink: #dccbd5;
-    --coral-line: #d9705c;
-    --pink-line: #7a4a86;
-    --plain-bg: #2a1a26;
-    --new: #3a2d16;
-    --ok-bg: #17301f;
-    --ok: #8ddcaa;
-    --warn-bg: #3a2d14;
-    --warn: #f2c879;
-    --down-bg: #3d1520;
-    --down: #ff9fb1;
-    --holds: #7fd3a4;
-    --not: #f5a58a;
-    --open: #b8a3b1;
-    --review: #d3b0f5;
-    --unresolved: #f0c060;
-    --field: #1b1220;
-    --field-line: #4a3650;
-    --glow: rgba(196, 64, 47, 0.16);
-    --shadow: 0 18px 40px -26px rgba(0, 0, 0, 0.7);
+    --bg: #0f161c;
+    --surface: #162029;
+    --surface-2: #1d2934;
+    --line: #2c3a46;
+    --line-soft: #243039;
+    --control-line: #6b7b89;
+    --ink: #e7ecf0;
+    --ink-2: #a3b1bd;
+    --placeholder: #8fa0ae;
+    --accent: #7fb6de;
+    --accent-hover: #a3ccea;
+    --on-accent: #0f161c;
+    --ring: #29506e;
+    --you: #1f3445;
+    --disabled: #24303a;
+    --mark-lead: #1f5f8b;
+    --mark-line: #14202b;
+    --shadow-question: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-overlay: 0 8px 24px rgba(0, 0, 0, 0.5);
   }
 }
 
-* {
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+  }
+}
+
+/* BRIDGE, slice 0020 only. 0019's token names, mapped onto Chart v2's so the
+   screens not yet restyled still render. Each step deletes the names it no
+   longer needs; step 6 deletes the block. */
+:root {
+  --panel: var(--surface);
+  --text: var(--ink);
+  --heading: var(--ink);
+  --dim: var(--ink-2);
+  --agent: var(--surface-2);
+  --me: var(--you);
+  --me-2: var(--you);
+  --me-text: var(--ink);
+  --accent-soft: var(--surface-2);
+  --accent-ink: var(--accent);
+  --chip: var(--surface-2);
+  --chip-ink: var(--ink);
+  --coral-line: var(--line);
+  --pink-line: var(--line);
+  --plain-bg: var(--bg);
+  --new: var(--surface-2);
+  --ok-bg: var(--surface-2);
+  --ok: var(--ink);
+  --warn-bg: var(--surface-2);
+  --warn: var(--ink);
+  --down-bg: var(--surface-2);
+  --down: var(--ink);
+  --holds: var(--ink-2);
+  --not: var(--ink-2);
+  --open: var(--ink-2);
+  --review: var(--ink-2);
+  --unresolved: var(--ink-2);
+  --field: var(--surface);
+  --field-line: var(--control-line);
+  --shadow: none;
+  --radius: var(--radius-card);
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  background: radial-gradient(700px 360px at 85% 0%, var(--glow), transparent 70%), var(--bg);
+  background: var(--bg);
+  color: var(--ink);
+  font: var(--text-body);
+  -webkit-font-smoothing: antialiased;
 }
 a {
   color: var(--accent);
+  text-underline-offset: 2px;
 }
-button,
-.button {
-  font: inherit;
-  font-weight: 600;
-  min-height: 44px;
-  padding: 10px 18px;
-  border-radius: 999px;
-  border: 1px solid var(--button);
-  background: var(--button);
-  color: #fff;
-  font-weight: 650;
-  box-shadow: var(--button-shadow);
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+a:hover {
+  color: var(--accent-hover);
 }
-button:disabled {
-  opacity: 0.45;
-  cursor: default;
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
 }
-/* The focus ring in the page's accent, not the browser's blue (slice 0018). */
+
+/* Focus: one treatment everywhere. Text fields keep their border and add the ring. */
+:focus {
+  outline: none;
+}
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
-.button.secondary,
-button.secondary {
-  background: var(--accent-soft);
-  color: var(--accent-ink);
-  border-color: transparent;
-  box-shadow: none;
+input:not([type="radio"]):not([type="checkbox"]):focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--focus-ring);
 }
-button.quiet {
-  background: none;
-  border-color: transparent;
-  color: var(--ink-2);
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    /* biome-ignore lint/complexity/noImportantStyles: reduced motion has to win over every rule */
+    transition-duration: 0ms !important;
+    /* biome-ignore lint/complexity/noImportantStyles: as above */
+    animation-duration: 0ms !important;
+    /* biome-ignore lint/complexity/noImportantStyles: as above */
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Buttons ----------
+   A button is primary unless it says otherwise: .secondary or .quiet. */
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--control-h);
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-control);
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: var(--on-accent);
+  font: 600 15px / 1 var(--font-ui);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+button:hover,
+.button:hover {
+  background: var(--accent-hover);
+  color: var(--on-accent);
+}
+.secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--control-line);
   font-weight: 500;
-  padding: 10px 8px;
-  box-shadow: none;
 }
+.secondary:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.quiet {
+  background: transparent;
+  color: var(--accent);
+  font-weight: 500;
+  min-height: var(--tap-min);
+  padding: 0 var(--space-3);
+}
+.quiet:hover {
+  background: var(--surface-2);
+  color: var(--accent-hover);
+}
+button:is(:disabled, [aria-disabled="true"]),
+button:is(:disabled, [aria-disabled="true"]):hover {
+  background: var(--disabled);
+  color: var(--ink-2);
+  border-color: transparent;
+  cursor: not-allowed;
+}
+
+/* ---------- Cards and tags ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-tag);
+  font: var(--text-label);
+  color: var(--ink-2);
+}
+
+/* ---------- Header ----------
+   The frame (slice 0014): a bar across the window, pages in a centred column. */
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  min-height: var(--header-h);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 40px;
+  padding: 0 var(--space-6);
+}
+.brand {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  font: 600 15px / 1 var(--font-ui);
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand:hover {
+  color: var(--ink);
+}
+/* The Record mark, inline, coloured only by tokens so it follows light and dark. */
+.brand-mark {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+}
+.brand-mark-tile {
+  fill: var(--ink);
+}
+.brand-mark-lead {
+  fill: var(--mark-lead);
+}
+.brand-mark-line {
+  fill: var(--mark-line);
+}
+.nav {
+  display: flex;
+  align-self: stretch;
+  min-height: var(--header-h);
+}
+.nav a {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: 0 14px;
+  font: 500 14px / 1 var(--font-ui);
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+.nav a:hover {
+  color: var(--ink);
+}
+.nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+/* The model chip. */
+.pill {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font: 400 12px / 1 var(--font-mono);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+.pill-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent);
+}
+/* Fake mode's notice, under the header on every screen but a review. */
+.banner {
+  max-width: 1072px;
+  width: calc(100% - 48px);
+  margin: var(--space-4) auto 0;
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  font: var(--text-small);
+  color: var(--ink);
+}
+
+/* Below 1024 px the chip no longer fits beside the nav, so it takes the strip
+   the handoff gives it on a phone. */
+@media (max-width: 1024px) {
+  .pill {
+    margin: 0 calc(-1 * var(--space-6));
+    width: calc(100% + 2 * var(--space-6));
+    border: 0;
+    border-top: 1px solid var(--line);
+    border-radius: 0;
+    padding: var(--space-2) var(--space-6);
+  }
+}
+@media (max-width: 600px) {
+  .header-inner {
+    padding: 0;
+  }
+  .brand {
+    height: 48px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+  .nav {
+    width: 100%;
+    min-height: 0;
+    padding: 0 var(--space-2);
+    overflow-x: auto;
+  }
+  .nav a {
+    font-size: 15px;
+    padding: 0 var(--space-3);
+  }
+  .pill {
+    margin: 0;
+    width: 100%;
+    padding: var(--space-2) 20px;
+    font-size: 11px;
+  }
+}
+
+/* ---------- Screens ----------
+   Below here, rules not yet restyled for Chart v2 read the bridge above. */
+
 /* Delete… and Remove…: visible, but quieter than the action they sit beside (slice 0014). */
 button.destructive {
   background: transparent;
@@ -169,87 +482,7 @@ button.danger {
   color: var(--panel);
   box-shadow: none;
 }
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.9em;
-}
 
-/* The frame (slice 0014): a header across the window, pages in a centred column. */
-.header {
-  background: linear-gradient(100deg, var(--band), var(--band-2));
-  box-shadow: var(--band-shadow);
-}
-.header :focus-visible {
-  outline-color: var(--band-ink);
-}
-.header-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px;
-  min-height: 64px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 32px;
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--band-ink);
-  text-decoration: none;
-}
-.brand-mark {
-  color: var(--coral-line);
-}
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  flex-grow: 1;
-}
-.nav a {
-  padding: 10px 14px;
-  border-radius: 999px;
-  color: var(--band-ink-2);
-  font-weight: 500;
-  text-decoration: none;
-}
-.nav a[aria-current="page"] {
-  background: var(--band-ink);
-  color: var(--band);
-  font-weight: 650;
-}
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  border: 1px solid var(--band-line);
-  border-radius: 999px;
-  background: var(--band-fill);
-  font-size: 0.85rem;
-  color: var(--band-ink-2);
-}
-.pill-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--band-dot);
-}
-.banner {
-  max-width: 1072px;
-  width: calc(100% - 48px);
-  box-sizing: border-box;
-  margin: 16px auto 0;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: var(--warn-bg);
-  color: var(--warn);
-  font-weight: 500;
-}
 .page {
   max-width: 1120px;
   margin: 0 auto;
@@ -314,13 +547,6 @@ code {
 .id {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.85em;
-}
-.card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
 }
 .stack {
   display: flex;
@@ -486,11 +712,6 @@ code {
 @keyframes spin {
   to {
     transform: rotate(360deg);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .spinner {
-    animation-duration: 3s;
   }
 }
 .hero {
@@ -864,13 +1085,6 @@ code {
   align-items: center;
   gap: 6px;
 }
-.tag {
-  font-size: 0.75em;
-  padding: 1px 6px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  color: var(--dim);
-}
 .tag.now {
   border-color: var(--accent);
   color: var(--accent);
@@ -1210,11 +1424,4 @@ p.words .words-label {
 }
 .settings .actions {
   align-items: center;
-}
-
-/* Four nav items (slice 0017) fit one line on a phone. */
-@media (max-width: 480px) {
-  .nav a {
-    padding: 8px 9px;
-  }
 }
