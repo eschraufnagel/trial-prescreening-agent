@@ -1,0 +1,112 @@
+/* Chart v2 design tokens.
+   Light on :root; dark overrides the same names via prefers-color-scheme.
+   Components reference var(--token) only. */
+
+@font-face { font-family: "IBM Plex Sans"; src: url("./fonts/IBMPlexSans-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("./fonts/IBMPlexSans-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("./fonts/IBMPlexSans-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("./fonts/IBMPlexSans-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("./fonts/IBMPlexMono-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("./fonts/IBMPlexMono-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("./fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("./fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  color-scheme: light dark;
+
+  /* Colour: light */
+  --bg: #F6F7F8;            /* page */
+  --surface: #FFFFFF;       /* cards, header bar, inputs */
+  --surface-2: #EEF1F3;     /* group headers, testing panel, row hover */
+  --line: #D9DEE3;          /* borders */
+  --line-soft: #E6EAEE;     /* row dividers */
+  --control-line: #7D8995;  /* input + secondary button borders (3:1 non-text) */
+  --ink: #14202B;           /* text, findings */
+  --ink-2: #4A5866;         /* secondary text, earlier questions */
+  --placeholder: #5F6B77;
+  --accent: #1F5F8B;        /* actions, links, focus, active nav. Never rule status. */
+  --accent-hover: #184E73;
+  --on-accent: #FFFFFF;
+  --ring: #D3E2EE;          /* focus ring */
+  --you: #E6EEF5;           /* the participant's own answers */
+  --disabled: #E3E7EB;      /* disabled button fill; text uses --ink-2 */
+  --mark-lead: #7FB6DE;     /* logo: top line. Tile uses --ink. */
+  --mark-line: #FFFFFF;     /* logo: lower two lines */
+  --shadow-question: 0 1px 2px rgba(20, 32, 43, 0.06);
+  --shadow-overlay: 0 8px 24px rgba(20, 32, 43, 0.14);
+
+  /* Type families */
+  --font-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-patient: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type scale: coordinator register (Plex) */
+  --text-page-title: 600 22px/29px var(--font-ui);
+  --text-display: 600 24px/30px var(--font-ui);        /* page H1, e.g. "Your trials" */
+  --text-title: 600 18px/25px var(--font-ui);          /* trial title in screening header */
+  --text-group: 600 15px/22px var(--font-ui);          /* group headers, card titles */
+  --text-body: 400 15px/22px var(--font-ui);
+  --text-row: 400 14px/20px var(--font-ui);            /* criterion text in review rows */
+  --text-small: 400 13px/18px var(--font-ui);
+  --text-data: 500 13px/18px var(--font-mono);         /* NCT IDs, L-numbers */
+  --text-label: 500 12px/16px var(--font-mono);        /* uppercase section labels, tags */
+  --text-count: 500 24px/26px var(--font-mono);        /* summary counts */
+
+  /* Type scale: patient register (Atkinson) */
+  --text-question: 400 24px/35px var(--font-patient);
+  --text-answer: 400 18px/26px var(--font-patient);    /* answer input */
+  --text-turn: 400 17px/26px var(--font-patient);      /* earlier turns */
+  --text-reassure: 400 15px/22px var(--font-patient);
+
+  /* Spacing (4 base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Radius */
+  --radius-tag: 2px;
+  --radius-control: 4px;
+  --radius-card: 6px;
+
+  /* Sizing */
+  --tap-min: 44px;
+  --control-h: 48px;       /* primary/secondary buttons, text inputs */
+  --header-h: 56px;
+  --focus-ring: 0 0 0 3px var(--ring);
+
+  /* Motion */
+  --dur-fast: 120ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F161C;
+    --surface: #162029;
+    --surface-2: #1D2934;
+    --line: #2C3A46;
+    --line-soft: #243039;
+    --control-line: #6B7B89;
+    --ink: #E7ECF0;
+    --ink-2: #A3B1BD;
+    --placeholder: #8FA0AE;
+    --accent: #7FB6DE;
+    --accent-hover: #A3CCEA;
+    --on-accent: #0F161C;
+    --ring: #29506E;
+    --you: #1F3445;
+    --disabled: #24303A;
+    --mark-lead: #1F5F8B;
+    --mark-line: #14202B;
+    --shadow-question: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-overlay: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; }
+}

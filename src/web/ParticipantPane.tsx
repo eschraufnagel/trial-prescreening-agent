@@ -6,6 +6,7 @@ import {
   charsLeft,
   composerFor,
   hostedHint,
+  questionCount,
   retryText,
   showCommand,
   submitLabel,
@@ -27,13 +28,22 @@ export function ParticipantPane(props: {
   const since = useWorkingSince(composer.kind === "waiting");
   const end = useRef<HTMLDivElement>(null);
 
-  // Keep the newest message in view.
+  // Keep the newest message in view. The thread keeps itself at its end (the
+  // stylesheet's column-reverse); this brings the composer into view where the
+  // page scrolls instead, on a phone.
   const count = view?.messages.length ?? 0;
   useEffect(() => {
     if (count > 0) {
       end.current?.scrollIntoView({ block: "end" });
     }
   }, [count]);
+
+  // The question waiting for an answer gets the card (slice 0020); everything
+  // before it, and anything once the agent is working, is an earlier turn.
+  const messages = view?.messages ?? [];
+  const last = messages.at(-1);
+  const current = composer.kind === "send" && last?.from === "agent" ? last : undefined;
+  const earlier = current === undefined ? messages : messages.slice(0, -1);
 
   // After a failure, the unprocessed message comes back into the box, editable.
   const failedText = composer.kind === "send-again" ? composer.text : undefined;
@@ -85,19 +95,27 @@ export function ParticipantPane(props: {
   return (
     <section className="participant">
       <div className="messages">
-        {view?.messages.map((m) => (
-          <div key={m.seq} className={`bubble from-${m.from} ${m.state ?? ""}`}>
-            <div className="text">{m.text}</div>
-            {m.from === "participant" && m.state !== "processed" && (
-              <div className="state">{m.state === "pending" ? "sent" : "not processed"}</div>
-            )}
-          </div>
-        ))}
-        {composer.kind === "waiting" && (
-          <div className="bubble from-agent waiting">{waitingText(since)}</div>
-        )}
-        <div ref={end} />
+        <div className="messages-inner">
+          {earlier.map((m) => (
+            <div key={m.seq} className={`bubble from-${m.from} ${m.state ?? ""}`}>
+              <div className="text">{m.text}</div>
+              {m.from === "participant" && m.state !== "processed" && (
+                <div className="state">{m.state === "pending" ? "sent" : "not processed"}</div>
+              )}
+            </div>
+          ))}
+          {composer.kind === "waiting" && (
+            <div className="bubble from-agent waiting">{waitingText(since)}</div>
+          )}
+        </div>
       </div>
+
+      {current !== undefined && (
+        <div className="question-card">
+          <span className="question-label">Question {questionCount(view)}</span>
+          <p className="question-text">{current.text}</p>
+        </div>
+      )}
 
       {composer.kind === "send-again" && (
         <p className={composer.modelDown ? "notice down" : "notice"}>{composer.detail}</p>
@@ -133,6 +151,7 @@ export function ParticipantPane(props: {
           </div>
         </form>
       )}
+      <div ref={end} />
     </section>
   );
 }

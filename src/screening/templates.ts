@@ -14,10 +14,14 @@ import type { StudyContext } from "./types.js";
  * nothing a real study would need approved.
  */
 
+/** The opening's last sentence, which the screening page also shows in its header (slice 0020). */
+export const REASSURANCE =
+  "A study coordinator will review everything you tell me and follow up with you.";
+
 export const OPENING_TEMPLATE =
   'Hello, and thank you for your interest in the study "{title}". ' +
   "I'll ask you a short series of questions, one at a time. You can skip any question. " +
-  "A study coordinator will review everything you tell me and follow up with you.";
+  REASSURANCE;
 
 export const CLOSING_TEMPLATE =
   "Thank you, that's all my questions. A study coordinator will review your answers " +

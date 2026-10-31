@@ -60,7 +60,7 @@ export function TrialPage({ nctId }: { nctId: string }) {
       <div className="trial-hero">
         <div className="trial-main">
           <div className="trial-tags">
-            <span className={`badge ${badge.tone}`}>{badge.text}</span>
+            <span className="tag">{badge.text}</span>
             <a
               className="id"
               href={`https://clinicaltrials.gov/study/${row.nctId}`}
@@ -148,9 +148,7 @@ function Rules(props: {
         {props.criteria.map((c) => (
           <li key={c.id}>
             <CriterionText criterion={c} plain={props.plain[c.id]} audience="coordinator" />
-            <span className={`badge ${c.type === "patient" ? "accent" : "neutral"}`}>
-              {typeTag(c.type)}
-            </span>
+            <span className="tag">{typeTag(c.type)}</span>
           </li>
         ))}
       </ol>

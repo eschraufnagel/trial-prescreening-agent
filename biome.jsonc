@@ -12,7 +12,9 @@
       "!added-trials",
       "!work/0013-trials-by-link/gate",
       "!e2e/.out",
-      "!dist"
+      "!dist",
+      "!docs/design_handoff_chart_v2",
+      "!design-handoff"
     ]
   },
   "formatter": {

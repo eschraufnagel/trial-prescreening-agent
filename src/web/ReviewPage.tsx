@@ -27,14 +27,14 @@ export function ReviewPage({ id }: { id: string }) {
 
   if (error !== undefined) {
     return (
-      <main className="review">
+      <main className="page">
         <p className="error">{error}</p>
       </main>
     );
   }
   if (found === undefined) {
     return (
-      <main className="review">
+      <main className="page">
         <p className="dim">Loading…</p>
       </main>
     );
@@ -42,7 +42,7 @@ export function ReviewPage({ id }: { id: string }) {
   switch (found.kind) {
     case "unknown":
       return (
-        <main className="review">
+        <main className="page">
           <p className="error">
             No conversation {id} on this server. <a href="#/">Back to the start</a>.
           </p>
@@ -51,7 +51,7 @@ export function ReviewPage({ id }: { id: string }) {
     case "not-finished":
     case "no-result":
       return (
-        <main className="review">
+        <main className="page">
           <p>
             {found.kind === "not-finished"
               ? "This conversation hasn't finished. The review opens when it does."
@@ -102,23 +102,9 @@ function Review({ model }: { model: ReviewModel }) {
   const firstOpen = frame.groups.find((g) => g.count > 0)?.key;
   return (
     <main className="review">
-      <header className="review-head">
-        <h1>{frame.title}</h1>
-        {/* An example's name is words, so it isn't set as code (slice 0016). */}
-        <span className={frame.label === frame.id ? "id" : "dim"} title={frame.id}>
-          {frame.label}
-        </span>
-        <div className="review-notes">
-          {frame.notes.map((note) => (
-            <p key={note} className="review-note">
-              {note}
-            </p>
-          ))}
-        </div>
-      </header>
-
       {/* Fixed words and one count per group: what's left for the coordinator,
-          never a total or a verdict (0007's rule, kept in 0014). */}
+          never a total or a verdict (0007's rule, kept in 0014). On the left,
+          beside the groups it links to (slice 0020). */}
       <nav className="review-summary" aria-labelledby="left-h">
         <h2 id="left-h">What's left for you</h2>
         <ul>
@@ -126,70 +112,90 @@ function Review({ model }: { model: ReviewModel }) {
             <li key={g.key}>
               <Jump to={`group-${g.key}`} className="review-count">
                 <strong>{g.count}</strong>
-                <span>{g.heading}</span>
+                <span className="review-count-heading">{g.heading}</span>
+                <span className="review-count-what">{g.what}</span>
               </Jump>
-              <span className="dim">{g.what}</span>
             </li>
           ))}
         </ul>
       </nav>
 
-      {frame.groups.map((g) => (
-        <section key={g.key} id={`group-${g.key}`} className={`review-group group-${g.key}`}>
-          <details open={g.key === firstOpen}>
-            <summary>
-              <h2>
-                {g.heading} <span className="dim">({g.count})</span>
-              </h2>
-              <p className="review-what">{g.what}</p>
-            </summary>
-            {g.rows.length === 0 ? (
-              <p className="dim">None.</p>
-            ) : (
-              <ol className="review-rows">
-                {g.rows.map((rowId) => {
-                  const row = rows[rowId];
-                  return row === undefined ? null : <Row key={rowId} row={row} />;
-                })}
-              </ol>
-            )}
-          </details>
-        </section>
-      ))}
+      <div className="review-main">
+        <header className="review-head">
+          <span className="review-nct">{frame.nctId}</span>
+          <h1>{frame.title}</h1>
+          {/* An example's name is words, so it isn't set as code (slice 0016). */}
+          <span
+            className={frame.label === frame.id ? "review-label id" : "review-label"}
+            title={frame.id}
+          >
+            {frame.label}
+          </span>
+          <div className="review-notes">
+            {frame.notes.map((note) => (
+              <p key={note} className="review-note">
+                {note}
+              </p>
+            ))}
+          </div>
+        </header>
 
-      <section className="review-transcript">
-        <h2>The conversation</h2>
-        <ol>
-          {transcript.map((line) => (
-            <li key={line.turn} id={`turn-${line.turn}`} className="review-turn">
-              <span className="dim">
-                {line.turn} · {line.speaker}
-                {line.raised !== null && <> · asked about rule {line.raised}</>}
-              </span>
-              <p>{line.text}</p>
-              {line.citedBy.length > 0 && (
-                <span className="dim">
-                  Shown with {line.citedBy.length === 1 ? "rule" : "rules"}{" "}
-                  {line.citedBy.map((c, i) => (
-                    <span key={c}>
-                      {i > 0 && ", "}
-                      <Jump to={`row-${c}`}>{c}</Jump>
-                    </span>
-                  ))}
-                </span>
+        {frame.groups.map((g) => (
+          <section key={g.key} id={`group-${g.key}`} className={`review-group group-${g.key}`}>
+            <details open={g.key === firstOpen}>
+              <summary>
+                <h2>{g.heading}</h2>
+                <span className="review-group-count">{g.count}</span>
+                <p className="review-what">{g.what}</p>
+              </summary>
+              {g.rows.length === 0 ? (
+                <p className="review-none">None.</p>
+              ) : (
+                <ol className="review-rows">
+                  {g.rows.map((rowId) => {
+                    const row = rows[rowId];
+                    return row === undefined ? null : <Row key={rowId} row={row} />;
+                  })}
+                </ol>
               )}
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <footer className="review-foot">
-        {frame.footer.map((line) => (
-          <p key={line} className="dim">
-            {line}
-          </p>
+            </details>
+          </section>
         ))}
-      </footer>
+
+        <section className="review-transcript">
+          <h2>The conversation</h2>
+          <ol>
+            {transcript.map((line) => (
+              <li key={line.turn} id={`turn-${line.turn}`} className="review-turn">
+                <span className="dim">
+                  {line.turn} · {line.speaker}
+                  {line.raised !== null && <> · asked about rule {line.raised}</>}
+                </span>
+                <p>{line.text}</p>
+                {line.citedBy.length > 0 && (
+                  <span className="dim">
+                    Shown with {line.citedBy.length === 1 ? "rule" : "rules"}{" "}
+                    {line.citedBy.map((c, i) => (
+                      <span key={c}>
+                        {i > 0 && ", "}
+                        <Jump to={`row-${c}`}>{c}</Jump>
+                      </span>
+                    ))}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <footer className="review-foot">
+          {frame.footer.map((line) => (
+            <p key={line} className="dim">
+              {line}
+            </p>
+          ))}
+        </footer>
+      </div>
     </main>
   );
 }
@@ -198,15 +204,14 @@ function Row({ row }: { row: ReviewRow }) {
   return (
     <li id={`row-${row.criterion.id}`} className="review-row">
       <details>
+        {/* One line of a grid: rule, type, words, finding, and a chevron drawn by the stylesheet. */}
         <summary>
-          <div className="row-head">
-            <span className="id" title={`Rule ${row.criterion.id}, in the protocol's order`}>
-              {row.criterion.id}
-            </span>
-            <span className="tag">{row.polarity}</span>
-            <span className="review-finding">{row.finding}</span>
-          </div>
+          <span className="id" title={`Rule ${row.criterion.id}, in the protocol's order`}>
+            {row.criterion.id}
+          </span>
+          <span className="review-type">{row.polarity}</span>
           <CriterionText criterion={row.criterion} plain={row.plain} audience="coordinator" />
+          <span className="review-finding">{row.finding}</span>
         </summary>
         <RowDetail row={row} />
       </details>

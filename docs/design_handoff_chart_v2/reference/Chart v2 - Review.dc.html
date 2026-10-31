@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#1F5F8B}a:hover{color:#14202B}</style>
+</helmet>
+<div style="width:1280px;height:800px;overflow:hidden;background:var(--bg,#F6F7F8);color:var(--ink,#14202B);font-family:'IBM Plex Sans',system-ui,sans-serif;display:flex;flex-direction:column;">
+  <div style="height:56px;flex-shrink:0;background:var(--surface,#fff);border-bottom:1px solid var(--line,#D9DEE3);display:flex;align-items:center;padding:0 32px;gap:40px;">
+    <div style="display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;"><span style="width:20px;height:20px;border-radius:4.4px;background:var(--ink,#14202B);display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 4px;box-sizing:border-box;flex-shrink:0;"><span style="height:2.2px;width:12px;background:var(--mark-lead,#7FB6DE);border-radius:1.1px;"></span><span style="height:2.2px;width:9.2px;background:var(--mark-line,#FFFFFF);border-radius:1.1px;"></span><span style="height:2.2px;width:6.4px;background:var(--mark-line,#FFFFFF);border-radius:1.1px;"></span></span>Trial Prescreening</div>
+    <nav style="display:flex;height:56px;">
+      <a style="display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500;color:var(--ink-2,#4A5866);text-decoration:none;">Trials</a>
+      <a style="display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500;color:var(--ink-2,#4A5866);text-decoration:none;">Screenings</a>
+      <a style="display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:600;color:var(--ink,#14202B);text-decoration:none;box-shadow:inset 0 -2px 0 var(--accent,#1F5F8B);">Reviews</a>
+      <a style="display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500;color:var(--ink-2,#4A5866);text-decoration:none;">Settings</a>
+    </nav>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:8px;font:400 12px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);border:1px solid var(--line,#D9DEE3);border-radius:4px;padding:6px 10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent,#1F5F8B);"></span>Local model · Qwen3.6-35B-A3B-MLX-8bit</div>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:272px minmax(0,1fr);min-height:0;">
+    <aside style="background:var(--surface,#fff);border-right:1px solid var(--line,#D9DEE3);padding:28px 24px;display:flex;flex-direction:column;gap:4px;">
+      <div style="font:500 12px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);letter-spacing:.04em;margin-bottom:10px;">WHAT'S LEFT FOR YOU</div>
+      <sc-for list="{{ summary }}" as="s" hint-placeholder-count="4">
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 10px;padding:12px 0;border-top:1px solid var(--line-soft,#E6EAEE);">
+          <span style="font:500 24px/26px 'IBM Plex Mono',monospace;">{{ s.n }}</span>
+          <span style="font-size:14px;font-weight:600;line-height:20px;">{{ s.label }}</span>
+          <span></span>
+          <span style="font-size:13px;line-height:18px;color:var(--ink-2,#4A5866);">{{ s.desc }}</span>
+        </div>
+      </sc-for>
+    </aside>
+    <main style="padding:28px 40px;display:flex;flex-direction:column;gap:18px;overflow:hidden;">
+      <div style="display:flex;flex-direction:column;gap:6px;max-width:860px;">
+        <span style="font:500 13px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);">NCT00077350</span>
+        <h1 style="margin:0;font-size:22px;line-height:29px;font-weight:600;text-wrap:pretty;">A Phase II Trial of Triapine (NSC #663249) in Combination With Gemcitabine as Second Line Treatment of Non-Small Cell Lung Cancer</h1>
+        <span style="font-size:14px;color:var(--ink-2,#4A5866);">Simulated patient 2 · rules checked by hand</span>
+      </div>
+      <div style="border:1px solid var(--line,#D9DEE3);border-radius:4px;background:var(--surface,#fff);font-size:13px;line-height:18px;">
+        <div style="padding:9px 14px;border-bottom:1px solid var(--line-soft,#E6EAEE);">The agent's record of what the participant said, criterion by criterion. It is not a decision. The coordinator decides.</div>
+        <div style="padding:9px 14px;color:var(--ink-2,#4A5866);">An example from the project's test run. The patient was played by an AI from a written description, not by a person.</div>
+      </div>
+      <div style="border:1px solid var(--line,#D9DEE3);border-radius:4px;background:var(--surface,#fff);">
+        <div style="display:flex;align-items:baseline;gap:12px;padding:12px 16px;background:var(--surface-2,#EEF1F3);border-bottom:1px solid var(--line,#D9DEE3);">
+          <span style="font-size:15px;font-weight:600;">▾ Settled from the participant's words</span>
+          <span style="font:500 13px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);">9</span>
+          <span style="margin-left:auto;font-size:13px;color:var(--ink-2,#4A5866);">Check that the words say this.</span>
+        </div>
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="6">
+          <div style="display:grid;grid-template-columns:52px 84px minmax(0,1fr) 300px 16px;gap:12px;align-items:center;min-height:44px;padding:4px 16px;border-bottom:1px solid var(--line-soft,#E6EAEE);font-size:14px;">
+            <span style="font:500 13px 'IBM Plex Mono',monospace;">{{ r.l }}</span>
+            <span style="font:400 12px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);">{{ r.t }}</span>
+            <span style="line-height:20px;">{{ r.text }}</span>
+            <span style="font-weight:500;text-align:right;">{{ r.f }}</span>
+            <span style="color:var(--ink-2,#4A5866);font-size:12px;">▸</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="border:1px solid var(--line,#D9DEE3);border-radius:4px;background:var(--surface,#fff);">
+        <div style="display:flex;align-items:baseline;gap:12px;padding:12px 16px;background:var(--surface-2,#EEF1F3);border-bottom:1px solid var(--line,#D9DEE3);">
+          <span style="font-size:15px;font-weight:600;">▾ Needs chart review</span>
+          <span style="font:500 13px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);">19</span>
+          <span style="margin-left:auto;font-size:13px;color:var(--ink-2,#4A5866);">Confirm in the medical record. What the participant reported is shown.</span>
+        </div>
+        <div style="display:grid;grid-template-columns:52px 84px minmax(0,1fr) 300px 16px;gap:12px;align-items:start;padding:12px 16px;font-size:14px;">
+          <span style="font:500 13px 'IBM Plex Mono',monospace;">L1</span>
+          <span style="font:400 12px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);">Inclusion</span>
+          <span style="line-height:20px;">Patients must have histologically or cytologically confirmed NSCLC</span>
+          <span style="font-size:13px;line-height:19px;color:var(--ink-2,#4A5866);text-align:right;">“Yes, I had a biopsy that confirmed it's non-small cell lung cancer.”</span>
+          <span style="color:var(--ink-2,#4A5866);font-size:12px;">▸</span>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:800}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      summary: [
+        { n: 9, label: "Settled from the participant's words", desc: 'Check that the words say this.' },
+        { n: 19, label: 'Needs chart review', desc: 'Confirm in the medical record. What the participant reported is shown.' },
+        { n: 1, label: 'Unresolved', desc: 'Raised, not settled. Follow up or check the record.' },
+        { n: 8, label: 'Not raised in the conversation', desc: 'Not asked, by design. Check as usual.' }
+      ],
+      rows: [
+        { l: 'L3', t: 'Inclusion', text: 'must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease', f: "Met, by the participant's account" },
+        { l: 'L4', t: 'Exclusion', text: 'patients must not have received prior gemcitabine chemotherapy', f: "Does not apply, by the participant's account" },
+        { l: 'L14', t: 'Inclusion', text: 'Patients must have completed any radiation therapy >= 3 weeks prior to registration', f: "Not met, by the participant's account" },
+        { l: 'L15', t: 'Inclusion', text: 'Patients must have completed prior cytotoxic chemotherapy >= 3 weeks prior to registration', f: "Not met, by the participant's account" },
+        { l: 'L20', t: 'Exclusion', text: 'Pregnant women are excluded from this study', f: "Does not apply, by the participant's account" },
+        { l: 'L21', t: 'Exclusion', text: 'breastfeeding should be discontinued if the mother is treated with Triapine®', f: "Does not apply, by the participant's account" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

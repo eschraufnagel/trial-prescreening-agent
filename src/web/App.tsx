@@ -41,21 +41,11 @@ export function App() {
       <header className="header">
         <div className="header-inner">
           <a href="#/" className="brand">
-            <svg
-              width="26"
-              height="26"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-              className="brand-mark"
-            >
-              <path d="M9 3h6" />
-              <path d="M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3" />
-              <path d="M7.5 14h9" />
+            <svg className="brand-mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <rect className="brand-mark-tile" width="100" height="100" rx="22" />
+              <rect className="brand-mark-lead" x="20" y="23.5" width="60" height="11" rx="5.5" />
+              <rect className="brand-mark-line" x="20" y="44.5" width="46" height="11" rx="5.5" />
+              <rect className="brand-mark-line" x="20" y="65.5" width="32" height="11" rx="5.5" />
             </svg>
             Trial Prescreening
           </a>

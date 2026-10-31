@@ -396,6 +396,8 @@ const CONTENT_TYPES: Record<string, string> = {
   ".json": "application/json",
   ".ico": "image/x-icon",
   ".png": "image/png",
+  ".woff2": "font/woff2",
+  ".webmanifest": "application/manifest+json",
 };
 
 /**

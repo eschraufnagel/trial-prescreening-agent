@@ -23,6 +23,8 @@ const webDir = mkdtempSync(join(tmpdir(), "prescreen-web-"));
 mkdirSync(join(webDir, "assets"));
 writeFileSync(join(webDir, "index.html"), "<!doctype html><title>page</title>");
 writeFileSync(join(webDir, "assets", "index-abc.js"), "console.log('page');");
+writeFileSync(join(webDir, "assets", "font-abc.woff2"), "wOF2");
+writeFileSync(join(webDir, "manifest.webmanifest"), "{}");
 afterAll(() => rmSync(webDir, { recursive: true, force: true }));
 
 function build(script: ScriptedResponse[] = SCRIPT): { app: FastifyInstance; parts: App } {
@@ -271,6 +273,15 @@ describe("serving the page", () => {
     expect(file.statusCode).toBe(200);
     expect(file.headers["content-type"]).toMatch(/^text\/javascript/);
     expect(file.body).toBe("console.log('page');");
+  });
+
+  it("serves the bundled fonts and the manifest with their types (slice 0020)", async () => {
+    const { app } = build();
+    const font = await app.inject({ method: "GET", url: "/assets/font-abc.woff2" });
+    const manifest = await app.inject({ method: "GET", url: "/manifest.webmanifest" });
+
+    expect(font.headers["content-type"]).toBe("font/woff2");
+    expect(manifest.headers["content-type"]).toMatch(/^application\/manifest\+json/);
   });
 
   it("serves the page for any other path, so a reload on #/c/<id> works", async () => {

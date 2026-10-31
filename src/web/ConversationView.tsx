@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { REASSURANCE } from "../screening/templates.js";
 import type { ConversationInspection } from "../server/types.js";
 import type { ChannelView } from "../transport/ledger.js";
 import { poll } from "../transport/web/client.js";
@@ -84,41 +85,48 @@ export function ConversationView({ id }: { id: string }) {
 
   return (
     <main className="conversation">
-      <div className="card conversation-head">
-        <div>
-          <span className="row-title">{inspection?.study.briefTitle ?? "Loading…"}</span>
-          <span className="dim">
-            <span className="id">{inspection?.study.nctId ?? ""}</span>
-            {inspection?.hosted && (
-              <>
-                {" "}
-                · {inspection.hosted.name} · {inspection.hosted.model}
-              </>
-            )}
-          </span>
-          {/* Slice 0017: what the measurement doesn't cover. */}
-          {inspection?.hosted && <span className="help warn">{UNMEASURED_HOSTED}</span>}
-        </div>
-        {done ? (
-          <a className="button" href={reviewHash(id)}>
-            Open the coordinator review
-          </a>
-        ) : (
-          (asked > 0 || inspection?.spent) && (
+      <div className="conversation-main">
+        <header className="conversation-head">
+          <div className="conversation-trial">
             <span className="dim">
-              {asked > 0 && <>Question {asked}</>}
-              {inspection?.spent && (
+              <span className="id">{inspection?.study.nctId ?? ""}</span>
+              {inspection?.hosted && (
                 <>
-                  {asked > 0 && " · "}
-                  {dollars(inspection.spent.usd)} so far · limit {dollars(inspection.spent.capUsd)}
+                  {" "}
+                  · {inspection.hosted.name} · {inspection.hosted.model}
                 </>
               )}
             </span>
-          )
-        )}
+            <h1>{inspection?.study.briefTitle ?? "Loading…"}</h1>
+            {/* The agent's own opening line, repeated where it stays in view (slice 0020). */}
+            <p className="conversation-reassure">{REASSURANCE}</p>
+            {/* Slice 0017: what the measurement doesn't cover. */}
+            {inspection?.hosted && <span className="help warn">{UNMEASURED_HOSTED}</span>}
+          </div>
+          {done ? (
+            <a className="button" href={reviewHash(id)}>
+              Open the coordinator review
+            </a>
+          ) : (
+            (asked > 0 || inspection?.spent) && (
+              <span className="conversation-count">
+                {asked > 0 && <>Question {asked}</>}
+                {inspection?.spent && (
+                  <>
+                    {asked > 0 && " · "}
+                    {dollars(inspection.spent.usd)} so far · limit{" "}
+                    {dollars(inspection.spent.capUsd)}
+                  </>
+                )}
+              </span>
+            )
+          )}
+        </header>
+        <ParticipantPane id={id} view={view} onSent={refresh} hosted={inspection?.hosted ?? null} />
       </div>
-      <ParticipantPane id={id} view={view} onSent={refresh} hosted={inspection?.hosted ?? null} />
-      <TesterPanel inspection={inspection} changed={changed} />
+      <aside className="conversation-aside">
+        <TesterPanel inspection={inspection} changed={changed} />
+      </aside>
     </main>
   );
 }
