@@ -123,7 +123,7 @@ In `types.ts`:
 Unchanged, and `SCREENING_GRADER_VERSION` stays.
 
 - `VERDICT_PATTERN` already runs over every agent turn, so respond turns and fixed text are covered.
-- `multiQuestion` and `overLength` count respond turns. A respond turn may run to 450 characters, past `MAX_QUESTION_LENGTH` (320). The dev vignettes never ask for anything, so the dev re-run has no respond turns. A conversation in the app may show over-length counts, and that's expected.
+- `multiQuestion`, `overLength` and `followUps` count respond turns. A respond turn may run to 450 characters, past `MAX_QUESTION_LENGTH` (320). The dev vignettes never ask for anything, so the dev re-run has no respond turns. A conversation in the app may show over-length counts, and that's expected.
 
 ### 3.8 Cost
 

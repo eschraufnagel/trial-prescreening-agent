@@ -1,7 +1,7 @@
 # plan: 0021 serve the participant
 
 **Author:** the repository owner
-**Status:** In progress
+**Status:** Built and tested. Step 5 is blocked on the oMLX key, and Gates 1 and 2 are open
 **Date:** 2026-10
 **Spec:** [spec.md](spec.md)
 
@@ -88,8 +88,59 @@ Every step is one commit through `npm run check && git commit`. **Steps 1 and 2 
 
 ## Gate record
 
-*Filled in as the gates are reached.*
+**Step 5, the dev re-run: not run.** It was started unattended after step 2 and stopped at once: `OMLX_API_KEY` wasn't set in the shell that runs commands, and CLAUDE.md forbids creating `.env`. oMLX itself was healthy. No result is committed, and no number anywhere claims one. To run it, with the key in your shell:
+
+```
+npm run eval:screening -- --dev
+npm run screening:compare -- evals/results/screening/dev/11-2c46ada9a1d5.json evals/results/screening/dev/<new file>
+```
+
+Then count the located requests in the new run (spec §6): every one is a false positive.
+
+**Gate 2: open.** It waits on step 5.
+
+**Gate 1: open.** It's the owner's, and the PR waits for it. What to play is in spec §7: `npm run app -- --examples`, local model.
 
 ## Review passes
 
-*Filled in at step 7.*
+Run on the whole diff against `main` after step 6.
+
+**Pass 1, plan compliance.** Every changed file is in "Files that change". Three divergences, each recorded in this plan in the commit that made it: steps 1 and 2 landed as one commit; the browser case is 12, not 8; the transparency test is a new one in `tests/server/conversations.test.ts` and doesn't change the shared fixture. **Important, open:** step 5 isn't done, so the plan isn't complete. That is stated above, and the PR waits for it.
+
+**Pass 2, correctness.** Re-read `receive`, `#next`, `#respond`, `#repeatAfterStop` and `#advance` against spec §3.2's table.
+
+- Termination is pinned by a test that asks on every turn.
+- A request whose words aren't in the reply changes nothing.
+- Readings about other criteria still apply.
+- Saved conversations without the new fields restore.
+- **Found and fixed in step 3:** the review would have described a reading set aside for an explanation as "about this criterion, which isn't asked in conversation". The ignored-reading words had only two cases. It now gets its own sentence, which a test pins.
+- `test:e2e`: 12 passed.
+
+Nits:
+
+- **The respond turn gets no FOLLOW-UP.** On a criterion's second ask, after a partial answer, `#respond` passes the request and not what was missing. The explanation is of the whole criterion. Harmless, and left as is.
+- **The grader counts a respond turn as a follow-up.** Its `followUps` count, like `overLength`, includes respond turns. The dev vignettes make none, and this is noted in spec §3.7.
+
+**Pass 3, scope and data.**
+
+- No PHI: the quoted reply is the owner's own made-up answer.
+- No new network path, no secret, no deployment surface.
+- No code path decides eligibility. Fixed text and study facts pass `VERDICT_PATTERN` in a test, and respond turns are agent turns the grader already checks.
+- `tests/boundary.test.ts` is unchanged and passes: `src/screening/` doesn't import `src/plain/`, and `ScreeningCriterion` keeps four fields.
+
+**Pass 4, eval integrity.**
+
+- No grader, threshold, vignette or case was changed. `SCREENING_GRADER_VERSION` stays.
+- `tests/screening/calls.test.ts` changed only for the read call's new return shape (`value` became `value.readings`). No assertion was loosened.
+- One new test's expected order was wrong as first written, and was corrected before its first commit.
+- No browser spec was loosened or skipped.
+- No result is reported, so there are no settings to record.
+
+**Pass 5, documentation.**
+
+- The README gains one plain clause.
+- `docs/screening-agent.md` says the scored numbers come from 0009's prompt version and that requests aren't measured by them, and lists the limits.
+- `docs/coordinator-review.md` describes the labels.
+- The roadmap row says what's open.
+
+Nit: CLAUDE.md's `test:e2e` timing is now "about 20 s". The runs here took 19 to 21 s.
