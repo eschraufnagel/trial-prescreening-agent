@@ -2,11 +2,13 @@ import { type ModelAdapter, monthStamp } from "../models/index.js";
 import { initialProgress, nextCriterion, raisability } from "./agenda.js";
 import { applyReadings, finalize } from "./apply.js";
 import { ask, read } from "./calls.js";
-import { type AnsweredCriterion, PROMPT_VERSION } from "./prompts.js";
-import { closingMessage, openingMessage } from "./templates.js";
+import { type AnsweredCriterion, type AskRequest, PROMPT_VERSION } from "./prompts.js";
+import { hasResponseLeft, locateRequest, setAside } from "./requests.js";
+import { closingMessage, openingMessage, stopMessage } from "./templates.js";
 import type {
   Finding,
   Handoff,
+  ParticipantRequest,
   Progress,
   ScreeningCriterion,
   ScreeningResult,
@@ -121,7 +123,7 @@ export class ScreeningSession {
     draft.transcript.push({ index: turn, speaker: "participant", kind: "reply", text });
 
     const { open, answered, saidSoFar } = this.#readable(draft);
-    const readings = await read(this.#adapter, {
+    const read_ = await read(this.#adapter, {
       transcript: draft.transcript,
       message: text,
       askedAbout: draft.pending,
@@ -129,23 +131,150 @@ export class ScreeningSession {
       answered,
       saidSoFar,
     });
-    draft.calls += readings.calls;
+    draft.calls += read_.calls;
+
+    // What the person asked for, if its words are in the message (slice 0021).
+    const located = locateRequest(text, turn, read_.value.request);
+    if (located.rejected !== undefined) {
+      draft.rejectedRequests = [...(draft.rejectedRequests ?? []), located.rejected];
+    }
+    const request = located.request;
+    const reply = draft.transcript[turn];
+    if (request !== null && reply !== undefined) {
+      reply.request = request;
+    }
+    const pending = draft.pending;
+    const respondable =
+      pending !== null && hasResponseLeft(draft.progress.find((p) => p.criterionId === pending));
+
+    // An answer given while asking what the question means isn't recorded.
+    let readings = read_.value.readings;
+    if (
+      pending !== null &&
+      respondable &&
+      (request?.kind === "explain" || request?.kind === "why")
+    ) {
+      const split = setAside(readings, pending, turn);
+      readings = split.kept;
+      draft.ignoredReadings.push(...split.ignored);
+    }
 
     const applied = applyReadings(
       { criteria: draft.criteria, progress: draft.progress, turn, message: text },
-      readings.value,
+      readings,
     );
     draft.progress = applied.progress;
     draft.rejectedReadings.push(...applied.rejected);
     draft.ignoredReadings.push(...applied.ignored);
 
-    const next = await this.#advance(draft);
+    const next = await this.#next(draft, request, respondable);
     this.#state = draft;
     return next;
   }
 
+  /**
+   * The turn after a reply: a response to what the person asked, or the next
+   * question as before (spec 0021 §3.2). Mutates `draft`.
+   */
+  async #next(
+    draft: ScreeningState,
+    request: ParticipantRequest | null,
+    respondable: boolean,
+  ): Promise<AgentReply> {
+    if (request === null) {
+      return this.#advance(draft);
+    }
+    const progress = draft.progress.find((p) => p.criterionId === draft.pending);
+    const stillOpen = progress?.status === "open";
+
+    if (!respondable) {
+      // Its one response is used. Asked again what it means, the person is
+      // pointed to the coordinator; anything else carries on as before.
+      return request.kind === "explain" || request.kind === "why"
+        ? this.#advance(draft, {
+            request: { kind: request.kind, quote: request.quote, again: true },
+          })
+        : this.#advance(draft);
+    }
+
+    switch (request.kind) {
+      case "explain":
+      case "why":
+        return this.#respond(draft, { kind: request.kind, quote: request.quote });
+      case "study":
+        return stillOpen
+          ? this.#respond(draft, { kind: "study", quote: request.quote })
+          : this.#advance(draft, { request: { kind: "study", quote: request.quote } });
+      case "stop":
+        return stillOpen ? this.#repeatAfterStop(draft) : this.#advance(draft, { stop: true });
+    }
+  }
+
+  /**
+   * Responds to the request, then asks the pending criterion again. Doesn't
+   * use one of its asks; uses its one response. Mutates `draft`.
+   */
+  async #respond(draft: ScreeningState, request: AskRequest): Promise<AgentReply> {
+    const { criterion, progress, kind } = this.#pendingCriterion(draft);
+    const question = await ask(this.#adapter, {
+      study: draft.study,
+      transcript: draft.transcript,
+      criterion,
+      kind,
+      request: { kind: request.kind, quote: request.quote },
+    });
+    draft.calls += question.calls;
+    progress.responses = (progress.responses ?? 0) + 1;
+    draft.transcript.push({
+      index: draft.transcript.length,
+      speaker: "agent",
+      kind: "question",
+      text: question.value,
+      criterionId: criterion.id,
+      responds: request.kind,
+    });
+    return { kind: "message", text: question.value };
+  }
+
+  /** Fixed text on stopping, then the pending question word for word. No model call. */
+  #repeatAfterStop(draft: ScreeningState): AgentReply {
+    const { criterion, progress } = this.#pendingCriterion(draft);
+    const last = draft.transcript.findLast(
+      (t) => t.kind === "question" && t.criterionId === criterion.id,
+    );
+    const text = stopMessage(last?.text ?? criterion.text, true);
+    progress.responses = (progress.responses ?? 0) + 1;
+    draft.transcript.push({
+      index: draft.transcript.length,
+      speaker: "agent",
+      kind: "question",
+      text,
+      criterionId: criterion.id,
+      responds: "stop",
+    });
+    return { kind: "message", text };
+  }
+
+  #pendingCriterion(draft: ScreeningState): {
+    criterion: ScreeningCriterion;
+    progress: Progress;
+    kind: "patient" | "clinical";
+  } {
+    const criterion = draft.criteria.find((c) => c.id === draft.pending);
+    const progress = draft.progress.find((p) => p.criterionId === draft.pending);
+    const r = criterion === undefined ? undefined : raisability(criterion);
+    if (criterion === undefined || progress === undefined || r === undefined || !r.raise) {
+      // A response is only planned for a pending, raisable criterion.
+      throw new ScreeningError("Cannot respond", [`${String(draft.pending)} is not pending`]);
+    }
+    return { criterion, progress, kind: r.as };
+  }
+
   /** Asks the next question on `draft`, or closes it. Mutates `draft`. */
-  async #advance(draft: ScreeningState): Promise<AgentReply> {
+  async #advance(
+    draft: ScreeningState,
+    options: { request?: AskRequest; stop?: true } = {},
+  ): Promise<AgentReply> {
     const criterion = nextCriterion(draft.criteria, draft.progress);
 
     if (criterion === null) {
@@ -175,19 +304,21 @@ export class ScreeningSession {
       criterion,
       kind: r.as,
       ...(followUp === undefined ? {} : { followUp }),
+      ...(options.request === undefined ? {} : { request: options.request }),
     });
     draft.calls += question.calls;
 
+    const text = options.stop === true ? stopMessage(question.value, false) : question.value;
     progress.timesAsked += 1;
     draft.pending = criterion.id;
     draft.transcript.push({
       index: draft.transcript.length,
       speaker: "agent",
       kind: "question",
-      text: question.value,
+      text,
       criterionId: criterion.id,
     });
-    return { kind: "message", text: question.value };
+    return { kind: "message", text };
   }
 
   /**
@@ -240,6 +371,7 @@ export class ScreeningSession {
       handoff: handoff(findings),
       rejectedReadings: state.rejectedReadings,
       ignoredReadings: state.ignoredReadings,
+      ...(state.rejectedRequests === undefined ? {} : { rejectedRequests: state.rejectedRequests }),
       calls: state.calls,
       run: {
         ...this.#adapter.descriptor,

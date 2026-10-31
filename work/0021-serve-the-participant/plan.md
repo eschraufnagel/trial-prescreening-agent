@@ -60,7 +60,7 @@ Spec 0021 gives the read call a `request` field and code that acts on it. An exp
    - CLAUDE.md's `--fake` and `test:e2e` lines.
 7. **Review passes** from `REVIEW.md`. Fixes are committed, and the record goes below.
 
-Every step is one commit through `npm run check && git commit`. Steps 3 and 4 also run `npm run test:e2e`.
+Every step is one commit through `npm run check && git commit`. **Steps 1 and 2 landed as one commit:** the read call's new return shape and its only caller, the session, change together, so step 1 alone wouldn't pass typecheck. Steps 3 and 4 also run `npm run test:e2e`.
 
 ## Files that change (against `main`)
 

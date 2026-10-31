@@ -140,6 +140,8 @@ export interface Finding {
   reported?: ReportedValue;
   evidence: Evidence[];
   timesAsked: number;
+  /** Respond-then-ask turns about this criterion (slice 0021). Absent means none. */
+  responses?: number;
 }
 
 /** A finding while the conversation is still going. */
@@ -150,6 +152,37 @@ export interface Progress {
   reported?: ReportedValue;
   evidence: Evidence[];
   timesAsked: number;
+  /**
+   * Respond-then-ask turns about this criterion: an explanation, a reason or
+   * a study answer before asking it again (slice 0021). They don't count as
+   * asks, and `MAX_RESPONSES` caps them. Absent means none, so conversations
+   * saved before 0021 restore unchanged.
+   */
+  responses?: number;
+}
+
+/**
+ * What a participant asked the agent for, as the read call reported it
+ * (slice 0021). About the pending question; a request names no criterion.
+ *
+ * - `explain`: what the question, or a word in it, means.
+ * - `why`: why the question is asked.
+ * - `study`: about the study, who sees the answers, or what happens next.
+ * - `stop`: to stop or pause.
+ */
+export type RequestKind = "explain" | "why" | "study" | "stop";
+
+export interface ParticipantRequest {
+  kind: RequestKind;
+  /** The asking words, located in the participant's message. */
+  quote: string;
+}
+
+/** A request whose quote did not occur in the message. Dropped, and changes nothing. */
+export interface RejectedRequest {
+  turn: number;
+  kind: RequestKind;
+  quote: string;
 }
 
 export type TurnKind = "opening" | "question" | "closing" | "reply";
@@ -162,6 +195,10 @@ export interface Turn {
   text: string;
   /** On a question: the criterion the code chose to raise. */
   criterionId?: string;
+  /** On a participant reply: what they asked for, if anything located (slice 0021). */
+  request?: ParticipantRequest;
+  /** On a question: the request it responds to before asking again (slice 0021). */
+  responds?: RequestKind;
 }
 
 /** A reading whose quote did not occur in the message it claimed to come from. */
@@ -177,7 +214,11 @@ export interface IgnoredReading {
   turn: number;
   criterionId: string;
   reading: ReadingValue;
-  why: "unknown-criterion" | "not-raisable" | "already-settled";
+  /**
+   * `asked-to-explain`: the reply asked what the pending question meant, so
+   * what it said about that criterion was set aside (slice 0021).
+   */
+  why: "unknown-criterion" | "not-raisable" | "already-settled" | "asked-to-explain";
 }
 
 /**
@@ -197,6 +238,8 @@ export interface ScreeningState {
   pending: string | null;
   rejectedReadings: RejectedReading[];
   ignoredReadings: IgnoredReading[];
+  /** Absent on conversations saved before slice 0021. */
+  rejectedRequests?: RejectedRequest[];
   /** Model calls made so far, for sizing runs. */
   calls: number;
   done: boolean;
@@ -218,6 +261,8 @@ export interface ScreeningResult {
   handoff: Handoff;
   rejectedReadings: RejectedReading[];
   ignoredReadings: IgnoredReading[];
+  /** Absent on results made before slice 0021. */
+  rejectedRequests?: RejectedRequest[];
   calls: number;
   run: ModelRunMetadata;
 }

@@ -8,7 +8,7 @@ import {
   READ_SYSTEM_PROMPT,
   RETRY_AFTER_TRUNCATION,
 } from "./prompts.js";
-import type { ReadingValue } from "./types.js";
+import type { ParticipantRequest, ReadingValue, RequestKind } from "./types.js";
 import { ScreeningError } from "./types.js";
 
 export { RETRY_AFTER_TRUNCATION };
@@ -43,6 +43,14 @@ const READINGS: readonly ReadingValue[] = [
   "does-not-apply",
 ];
 
+const REQUESTS: readonly RequestKind[] = ["explain", "why", "study", "stop"];
+
+/** What the read call reports about one reply: its readings, and what it asked for (slice 0021). */
+export interface ReadResult {
+  readings: Reading[];
+  request: ParticipantRequest | null;
+}
+
 export interface CallResult<T> {
   value: T;
   /** Model calls made, including a retry. */
@@ -66,7 +74,7 @@ export async function ask(adapter: ModelAdapter, context: AskContext): Promise<C
 export async function read(
   adapter: ModelAdapter,
   context: ReadContext,
-): Promise<CallResult<Reading[]>> {
+): Promise<CallResult<ReadResult>> {
   return withRetry(
     adapter,
     {
@@ -117,7 +125,10 @@ export function readAsk(response: CompletionResponse): { value?: string; problem
   return { value: message.trim(), problems: [] };
 }
 
-export function readRead(response: CompletionResponse): { value?: Reading[]; problems: string[] } {
+export function readRead(response: CompletionResponse): {
+  value?: ReadResult;
+  problems: string[];
+} {
   const record = objectFrom(response.content);
   const readings = record?.["readings"];
   if (!Array.isArray(readings)) {
@@ -170,7 +181,27 @@ export function readRead(response: CompletionResponse): { value?: Reading[]; pro
     });
   });
 
-  return problems.length > 0 ? { problems } : { value: out, problems };
+  return problems.length > 0
+    ? { problems }
+    : { value: { readings: out, request: requestFrom(record?.["request"]) }, problems };
+}
+
+/**
+ * The reply's request, or null. Lenient on purpose (slice 0021): a request is
+ * optional, so a malformed one is dropped rather than failing the turn and
+ * losing its readings, as 0009 found a missing quote could.
+ */
+function requestFrom(value: unknown): ParticipantRequest | null {
+  const r = asRecord(value);
+  const kind = r?.["kind"];
+  const quote = r?.["quote"];
+  if (typeof kind !== "string" || !REQUESTS.includes(kind as RequestKind)) {
+    return null;
+  }
+  if (typeof quote !== "string" || quote.trim() === "") {
+    return null;
+  }
+  return { kind: kind as RequestKind, quote: quote.trim() };
 }
 
 function asRecord(value: unknown): Record<string, unknown> | undefined {

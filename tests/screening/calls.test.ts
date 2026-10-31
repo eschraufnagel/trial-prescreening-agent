@@ -105,7 +105,7 @@ describe("read", () => {
 
     const { value } = await read(adapter, READ);
 
-    expect(value).toEqual([
+    expect(value.readings).toEqual([
       {
         criterionId: "L19",
         reading: "does-not-hold",
@@ -152,7 +152,7 @@ describe("read", () => {
 
     const { value } = await read(adapter, READ);
 
-    expect(value.map((r) => [r.reading, r.outright])).toEqual([
+    expect(value.readings.map((r) => [r.reading, r.outright])).toEqual([
       ["does-not-apply", true],
       ["holds", false],
     ]);
@@ -187,7 +187,7 @@ describe("read", () => {
     const { value, calls } = await read(adapter, READ);
 
     expect(calls).toBe(1);
-    expect(value.map((r) => [r.criterionId, r.quote])).toEqual([
+    expect(value.readings.map((r) => [r.criterionId, r.quote])).toEqual([
       ["L19", "No."],
       ["L2", ""],
     ]);
@@ -224,9 +224,49 @@ describe("read", () => {
   it("accepts an empty list: a reply can address nothing", async () => {
     const adapter = new FakeModelAdapter([{ kind: "json", content: { readings: [] } }]);
 
-    expect((await read(adapter, READ)).value).toEqual([]);
+    expect((await read(adapter, READ)).value.readings).toEqual([]);
     // Raised from 1,024 in 0009: a reply can speak to a dozen criteria, each with a statement.
     expect(adapter.requests[0]?.maxOutputTokens).toBe(2048);
+  });
+
+  it("reads a request beside the readings, and null when there is none (slice 0021)", async () => {
+    const adapter = new FakeModelAdapter([
+      {
+        kind: "json",
+        content: { readings: [], request: { kind: "explain", quote: " elaborate on this " } },
+      },
+      { kind: "json", content: { readings: [], request: null } },
+      { kind: "json", content: { readings: [] } },
+    ]);
+
+    expect((await read(adapter, READ)).value.request).toEqual({
+      kind: "explain",
+      quote: "elaborate on this",
+    });
+    expect((await read(adapter, READ)).value.request).toBeNull();
+    expect((await read(adapter, READ)).value.request).toBeNull();
+  });
+
+  it("drops a malformed request without failing the turn or its readings", async () => {
+    const reading = {
+      criterionId: "L19",
+      reading: "does-not-hold",
+      quote: "No.",
+      statement: "Is pregnant.",
+      outright: true,
+    };
+    const adapter = new FakeModelAdapter([
+      { kind: "json", content: { readings: [reading], request: { kind: "eligible", quote: "x" } } },
+      { kind: "json", content: { readings: [reading], request: { kind: "why" } } },
+      { kind: "json", content: { readings: [reading], request: "explain" } },
+    ]);
+
+    for (let i = 0; i < 3; i++) {
+      const { value, calls } = await read(adapter, READ);
+      expect(calls).toBe(1);
+      expect(value.request).toBeNull();
+      expect(value.readings).toHaveLength(1);
+    }
   });
 
   it("retries on an unrecognised reading value, then fails", async () => {
