@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#1F5F8B}a:hover{color:#14202B}</style>
+</helmet>
+<div style="display:flex;flex-direction:column;gap:40px;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#14202B;">
+  <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;">
+    <span style="font:600 14px 'IBM Plex Mono',monospace;background:#14202B;color:#fff;padding:4px 10px;border-radius:4px;">2a</span>
+    <h2 style="margin:0;font-size:40px;font-weight:600;letter-spacing:-0.01em;">Chart v2</h2>
+    <p style="margin:0;font-size:20px;color:#4A5866;max-width:1100px;">One system, two registers. Coordinator screens stay dense and clinical; the patient's screen keeps the same colours but speaks in Atkinson Hyperlegible, larger and with more room, so it feels careful rather than diagnostic.</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div style="font:500 14px 'IBM Plex Mono',monospace;color:#4A5866;">LIGHT</div>
+    <div style="display:flex;gap:56px;align-items:flex-start;--bg:#F6F7F8;--mark-lead:#7FB6DE;--mark-line:#FFFFFF;--surface:#FFFFFF;--surface-2:#EEF1F3;--line:#D9DEE3;--line-soft:#E6EAEE;--control:#7D8995;--ink:#14202B;--ink-2:#4A5866;--accent:#1F5F8B;--on-accent:#FFFFFF;--ring:#D3E2EE;--you:#E6EEF5;--placeholder:#5F6B77;--disabled:#E3E7EB;--shadow:rgba(20,32,43,.06);">
+      <div style="display:flex;flex-direction:column;gap:10px;"><div style="font:500 13px 'IBM Plex Mono',monospace;color:#4A5866;">Screening chat · patient · 1280</div><div style="box-shadow:0 2px 12px rgba(0,0,0,.12);"><dc-import name="Chart v2 - Screening" hint-size="1280px,800px"></dc-import></div></div>
+      <div style="display:flex;flex-direction:column;gap:10px;"><div style="font:500 13px 'IBM Plex Mono',monospace;color:#4A5866;">Coordinator review · 1280</div><div style="box-shadow:0 2px 12px rgba(0,0,0,.12);"><dc-import name="Chart v2 - Review" hint-size="1280px,800px"></dc-import></div></div>
+      <div style="display:flex;flex-direction:column;gap:10px;"><div style="font:500 13px 'IBM Plex Mono',monospace;color:#4A5866;">Trials home · 390</div><div style="box-shadow:0 2px 12px rgba(0,0,0,.12);border-radius:28px;"><dc-import name="Chart v2 - Trials Phone" hint-size="390px,844px"></dc-import></div></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div style="font:500 14px 'IBM Plex Mono',monospace;color:#4A5866;">DARK</div>
+    <div style="display:flex;gap:56px;align-items:flex-start;--bg:#0F161C;--mark-lead:#1F5F8B;--mark-line:#14202B;--surface:#162029;--surface-2:#1D2934;--line:#2C3A46;--line-soft:#243039;--control:#6B7B89;--ink:#E7ECF0;--ink-2:#A3B1BD;--accent:#7FB6DE;--on-accent:#0F161C;--ring:#29506E;--you:#1F3445;--placeholder:#8FA0AE;--disabled:#24303A;--shadow:rgba(0,0,0,.3);">
+      <div style="box-shadow:0 2px 12px rgba(0,0,0,.25);"><dc-import name="Chart v2 - Screening" hint-size="1280px,800px"></dc-import></div>
+      <div style="box-shadow:0 2px 12px rgba(0,0,0,.25);"><dc-import name="Chart v2 - Review" hint-size="1280px,800px"></dc-import></div>
+      <div style="box-shadow:0 2px 12px rgba(0,0,0,.25);border-radius:28px;"><dc-import name="Chart v2 - Trials Phone" hint-size="390px,844px"></dc-import></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div style="font:500 14px 'IBM Plex Mono',monospace;color:#4A5866;">TOKENS</div>
+    <div style="width:1600px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.12);padding:36px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;">
+      <div style="display:flex;flex-direction:column;gap:28px;">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:grid;grid-template-columns:120px 1fr 1fr minmax(0,1.4fr);gap:8px;font:500 12px 'IBM Plex Mono',monospace;color:#4A5866;"><span>COLOUR</span><span>LIGHT</span><span>DARK</span><span>USE</span></div>
+          <sc-for list="{{ colors }}" as="c" hint-placeholder-count="14">
+            <div style="display:grid;grid-template-columns:120px 1fr 1fr minmax(0,1.4fr);gap:8px;align-items:center;font:400 12px 'IBM Plex Mono',monospace;">
+              <span>{{ c.n }}</span>
+              <span style="display:flex;align-items:center;gap:8px;"><span style="width:26px;height:26px;border-radius:4px;border:1px solid #D9DEE3;background:{{ c.l }};"></span>{{ c.l }}</span>
+              <span style="display:flex;align-items:center;gap:8px;"><span style="width:26px;height:26px;border-radius:4px;border:1px solid #D9DEE3;background:{{ c.d }};"></span>{{ c.d }}</span>
+              <span style="font-family:'IBM Plex Sans',sans-serif;font-size:13px;color:#4A5866;">{{ c.use }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 80px 80px;gap:8px;font:500 12px 'IBM Plex Mono',monospace;color:#4A5866;"><span>CONTRAST · AA needs 4.5 text, 3.0 controls</span><span>LIGHT</span><span>DARK</span></div>
+          <sc-for list="{{ pairs }}" as="p" hint-placeholder-count="9">
+            <div style="display:grid;grid-template-columns:minmax(0,1fr) 80px 80px;gap:8px;font:400 12px/28px 'IBM Plex Mono',monospace;border-bottom:1px solid #E6EAEE;"><span>{{ p.label }}</span><span>{{ p.l }}</span><span>{{ p.d }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px;">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="font:500 12px 'IBM Plex Mono',monospace;color:#4A5866;">TYPE · COORDINATOR REGISTER · IBM Plex Sans + Plex Mono</div>
+          <sc-for list="{{ typeC }}" as="t" hint-placeholder-count="5">
+            <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:baseline;border-bottom:1px solid #E6EAEE;padding-bottom:8px;">
+              <span style="font:400 12px 'IBM Plex Mono',monospace;color:#4A5866;">{{ t.n }} · {{ t.spec }}</span>
+              <span style="font-family:{{ t.fam }};font-size:{{ t.size }};line-height:{{ t.lh }};font-weight:{{ t.w }};">{{ t.sample }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="font:500 12px 'IBM Plex Mono',monospace;color:#4A5866;">TYPE · PATIENT REGISTER · Atkinson Hyperlegible for anything said or typed</div>
+          <sc-for list="{{ typeP }}" as="t" hint-placeholder-count="4">
+            <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:baseline;border-bottom:1px solid #E6EAEE;padding-bottom:8px;">
+              <span style="font:400 12px 'IBM Plex Mono',monospace;color:#4A5866;">{{ t.n }} · {{ t.spec }}</span>
+              <span style="font-family:{{ t.fam }};font-size:{{ t.size }};line-height:{{ t.lh }};font-weight:{{ t.w }};">{{ t.sample }}</span>
+            </div>
+          </sc-for>
+          <span style="font-size:13px;color:#4A5866;">All three families are SIL OFL; ship as WOFF2 in the app bundle. Fallback: system-ui.</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1.3fr 1.5fr;gap:28px;">
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font:500 12px 'IBM Plex Mono',monospace;color:#4A5866;">RADIUS</div>
+            <div style="display:flex;gap:12px;font:400 12px 'IBM Plex Mono',monospace;">
+              <div style="display:flex;flex-direction:column;gap:6px;align-items:center;"><span style="width:44px;height:44px;border:1px solid #14202B;border-radius:2px;"></span>2 tag</div>
+              <div style="display:flex;flex-direction:column;gap:6px;align-items:center;"><span style="width:44px;height:44px;border:1px solid #14202B;border-radius:4px;"></span>4 control</div>
+              <div style="display:flex;flex-direction:column;gap:6px;align-items:center;"><span style="width:44px;height:44px;border:1px solid #14202B;border-radius:6px;"></span>6 card</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="font:500 12px 'IBM Plex Mono',monospace;color:#4A5866;">SPACING · 4 base</div>
+            <sc-for list="{{ space }}" as="s" hint-placeholder-count="7">
+              <div style="display:flex;align-items:center;gap:10px;font:400 12px 'IBM Plex Mono',monospace;"><span style="width:28px;">{{ s.v }}</span><span style="height:10px;background:#1F5F8B;width:{{ s.w }};"></span></div>
+            </sc-for>
+            <span style="font-size:13px;color:#4A5866;">Patient screen steps up one size: 16 → 24, 24 → 32.</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font:500 12px 'IBM Plex Mono',monospace;color:#4A5866;">SHADOW · rules first</div>
+            <div style="display:flex;gap:12px;font:400 12px 'IBM Plex Mono',monospace;background:#F6F7F8;padding:12px;">
+              <div style="flex:1;height:52px;background:#fff;border:1px solid #D9DEE3;display:flex;align-items:center;justify-content:center;">hairline</div>
+              <div style="flex:1;height:52px;background:#fff;border:1px solid #D9DEE3;box-shadow:0 1px 2px rgba(20,32,43,.06);display:flex;align-items:center;justify-content:center;">question</div>
+              <div style="flex:1;height:52px;background:#fff;box-shadow:0 8px 24px rgba(20,32,43,.14);display:flex;align-items:center;justify-content:center;">overlay</div>
+            </div>
+            <span style="font:400 12px 'IBM Plex Mono',monospace;color:#4A5866;">focus · 1px control-line + 3px ring</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const colors = [
+      { n: 'bg', l: '#F6F7F8', d: '#0F161C', use: 'Page' }, { n: 'surface', l: '#FFFFFF', d: '#162029', use: 'Cards, bars, inputs' },
+      { n: 'surface-2', l: '#EEF1F3', d: '#1D2934', use: 'Group headers, testing panel' }, { n: 'line', l: '#D9DEE3', d: '#2C3A46', use: 'Borders' },
+      { n: 'line-soft', l: '#E6EAEE', d: '#243039', use: 'Row dividers' }, { n: 'control-line', l: '#7D8995', d: '#6B7B89', use: 'Input and secondary button borders' },
+      { n: 'ink', l: '#14202B', d: '#E7ECF0', use: 'Text, findings' }, { n: 'ink-2', l: '#4A5866', d: '#A3B1BD', use: 'Secondary text, earlier questions' },
+      { n: 'placeholder', l: '#5F6B77', d: '#8FA0AE', use: 'Input placeholder' }, { n: 'accent', l: '#1F5F8B', d: '#7FB6DE', use: 'Actions, links, focus. Never status.' },
+      { n: 'on-accent', l: '#FFFFFF', d: '#0F161C', use: 'Text on accent' }, { n: 'ring', l: '#D3E2EE', d: '#29506E', use: 'Focus ring' },
+      { n: 'you', l: '#E6EEF5', d: '#1F3445', use: "Patient's own answers" }, { n: 'disabled', l: '#E3E7EB', d: '#24303A', use: 'Disabled button fill' }
+    ];
+    const lum = h => { const n = parseInt(h.slice(1), 16); const c = [n >> 16 & 255, n >> 8 & 255, n & 255].map(v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }); return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]; };
+    const cr = (a, b) => { const x = lum(a), y = lum(b); return ((Math.max(x, y) + .05) / (Math.min(x, y) + .05)).toFixed(1); };
+    const g = (n, m) => colors.find(c => c.n === n)[m];
+    const pairs = [['ink', 'bg'], ['ink', 'you'], ['ink-2', 'surface'], ['ink-2', 'surface-2'], ['ink-2', 'disabled'], ['placeholder', 'surface'], ['accent', 'surface'], ['on-accent', 'accent'], ['control-line', 'surface']]
+      .map(([f, b]) => ({ label: f + ' / ' + b, l: cr(g(f, 'l'), g(b, 'l')), d: cr(g(f, 'd'), g(b, 'd')) }));
+    const sans = "'IBM Plex Sans'", mono = "'IBM Plex Mono'", atk = "'Atkinson Hyperlegible'";
+    const typeC = [
+      { n: 'Page title', spec: '22/29 600', size: '22px', lh: '29px', w: 600, fam: sans, sample: 'A Phase II Trial of Triapine' },
+      { n: 'Group', spec: '15/22 600', size: '15px', lh: '22px', w: 600, fam: sans, sample: "Settled from the participant's words" },
+      { n: 'Row', spec: '14/20 400', size: '14px', lh: '20px', w: 400, fam: sans, sample: 'patients must not have received prior gemcitabine chemotherapy' },
+      { n: 'Small', spec: '13/18 400', size: '13px', lh: '18px', w: 400, fam: sans, sample: 'Check that the words say this.' },
+      { n: 'Data', spec: 'mono 12–24 500', size: '13px', lh: '18px', w: 500, fam: mono, sample: 'NCT00077350 · L14 · 19' }
+    ];
+    const typeP = [
+      { n: 'Question', spec: '24/35 400', size: '24px', lh: '35px', w: 400, fam: atk, sample: 'Has a thoracic surgeon evaluated you?' },
+      { n: 'Answer, input', spec: '18/26 400', size: '18px', lh: '26px', w: 400, fam: atk, sample: 'Type your answer' },
+      { n: 'Earlier turns', spec: '17/26 400', size: '17px', lh: '26px', w: 400, fam: atk, sample: 'Yes, a biopsy last spring confirmed stage II non-small cell lung cancer.' },
+      { n: 'Reassurance', spec: '15/22 400', size: '15px', lh: '22px', w: 400, fam: atk, sample: 'Use made-up answers only. This is a test system.' }
+    ];
+    const space = [4, 8, 12, 16, 24, 32, 48].map(v => ({ v, w: v * 3 + 'px' }));
+    return { colors, pairs, typeC, typeP, space };
+  }
+}
+</script>
+</body>
+</html>

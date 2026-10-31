@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#1F5F8B}a:hover{color:#14202B}</style>
+</helmet>
+<div style="width:390px;height:844px;overflow:hidden;background:var(--bg,#F6F7F8);color:var(--ink,#14202B);font-family:'IBM Plex Sans',system-ui,sans-serif;border-radius:28px;display:flex;flex-direction:column;">
+  <div style="background:var(--surface,#fff);border-bottom:1px solid var(--line,#D9DEE3);padding-top:44px;">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 20px;height:48px;font-weight:600;font-size:16px;"><span style="width:20px;height:20px;border-radius:4.4px;background:var(--ink,#14202B);display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 4px;box-sizing:border-box;flex-shrink:0;"><span style="height:2.2px;width:12px;background:var(--mark-lead,#7FB6DE);border-radius:1.1px;"></span><span style="height:2.2px;width:9.2px;background:var(--mark-line,#FFFFFF);border-radius:1.1px;"></span><span style="height:2.2px;width:6.4px;background:var(--mark-line,#FFFFFF);border-radius:1.1px;"></span></span>Trial Prescreening</div>
+    <nav style="display:flex;padding:0 8px;">
+      <a style="height:44px;display:flex;align-items:center;padding:0 12px;font-size:15px;font-weight:600;color:var(--ink,#14202B);text-decoration:none;box-shadow:inset 0 -2px 0 var(--accent,#1F5F8B);">Trials</a>
+      <a style="height:44px;display:flex;align-items:center;padding:0 12px;font-size:15px;color:var(--ink-2,#4A5866);text-decoration:none;">Screenings</a>
+      <a style="height:44px;display:flex;align-items:center;padding:0 12px;font-size:15px;color:var(--ink-2,#4A5866);text-decoration:none;">Reviews</a>
+      <a style="height:44px;display:flex;align-items:center;padding:0 12px;font-size:15px;color:var(--ink-2,#4A5866);text-decoration:none;">Settings</a>
+    </nav>
+  </div>
+  <div style="padding:8px 20px;font:400 11px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);border-bottom:1px solid var(--line,#D9DEE3);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent,#1F5F8B);"></span>Local model · Qwen3.6-35B-A3B-MLX-8bit</div>
+  <div style="padding:20px;display:flex;flex-direction:column;gap:16px;">
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <h1 style="margin:0;font-size:24px;font-weight:600;">Your trials</h1>
+      <p style="margin:0;font-size:15px;line-height:22px;color:var(--ink-2,#4A5866);">Add a trial from ClinicalTrials.gov. The AI reads its eligibility rules into a checklist, and you can screen against it once it's ready.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;background:var(--surface,#fff);border:1px solid var(--line,#D9DEE3);border-radius:6px;padding:16px;">
+      <label style="font-size:14px;font-weight:600;">ClinicalTrials.gov link or NCT ID</label>
+      <div style="height:48px;border:1px solid var(--control,#7D8995);border-radius:4px;display:flex;align-items:center;padding:0 12px;font-size:15px;color:var(--placeholder,#5F6B77);">https://clinicaltrials.gov/study/NCT…</div>
+      <span style="height:48px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:var(--disabled,#E3E7EB);color:var(--ink-2,#4A5866);font-weight:600;font-size:15px;">Add trial</span>
+      <span style="font-size:13px;line-height:18px;color:var(--ink-2,#4A5866);">Paste the study's page address, or just its ID, like NCT06557512. The app fetches it from ClinicalTrials.gov.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <span style="font-size:15px;font-weight:600;">1 trial</span>
+      <span style="font-size:13px;line-height:18px;color:var(--ink-2,#4A5866);">Read by the AI from each trial's published rules, not checked by a person. The parser was measured on five lung cancer trials only.</span>
+    </div>
+    <div style="background:var(--surface,#fff);border:1px solid var(--line,#D9DEE3);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;align-items:center;gap:8px;font:500 12px 'IBM Plex Mono',monospace;"><span style="border:1px solid var(--line,#D9DEE3);padding:2px 6px;border-radius:2px;color:var(--ink-2,#4A5866);">Ready · 12 criteria</span><a style="color:var(--accent,#1F5F8B);">NCT05854498</a></div>
+      <span style="font-size:16px;line-height:22px;font-weight:600;">Liposomal Irinotecan With TAS102 and Bevacizumab for Patients With Metastatic Colorectal Cancer</span>
+      <span style="align-self:flex-start;font-size:13px;background:var(--surface-2,#EEF1F3);padding:3px 8px;border-radius:2px;">Metastatic Colorectal Cancer</span>
+      <span style="font-size:13px;color:var(--ink-2,#4A5866);">6 the person can answer · 6 need medical records</span>
+      <span style="height:48px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:var(--accent,#1F5F8B);color:var(--on-accent,#fff);font-weight:600;font-size:15px;">Start screening</span>
+      <span style="height:48px;display:flex;align-items:center;justify-content:center;border-radius:4px;border:1px solid var(--control,#7D8995);font-weight:500;font-size:15px;">See the checklist</span>
+      <div style="display:flex;gap:8px;">
+        <span style="flex:1;height:44px;display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--accent,#1F5F8B);font-weight:500;">Refresh</span>
+        <span style="flex:1;height:44px;display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--accent,#1F5F8B);font-weight:500;">Remove…</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <span style="font-size:15px;font-weight:600;">Built-in examples</span>
+      <span style="font-size:13px;line-height:18px;color:var(--ink-2,#4A5866);">The project's own test trials. They come with the app and can't be removed.</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844}}"></script>
+</body>
+</html>

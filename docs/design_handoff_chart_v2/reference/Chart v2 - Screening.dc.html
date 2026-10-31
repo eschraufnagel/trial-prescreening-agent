@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#1F5F8B}a:hover{color:#14202B}</style>
+</helmet>
+<div style="width:1280px;height:800px;overflow:hidden;background:var(--bg,#F6F7F8);color:var(--ink,#14202B);font-family:'IBM Plex Sans',system-ui,sans-serif;display:flex;flex-direction:column;">
+  <div style="height:56px;flex-shrink:0;background:var(--surface,#fff);border-bottom:1px solid var(--line,#D9DEE3);display:flex;align-items:center;padding:0 32px;gap:40px;">
+    <div style="display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;"><span style="width:20px;height:20px;border-radius:4.4px;background:var(--ink,#14202B);display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 4px;box-sizing:border-box;flex-shrink:0;"><span style="height:2.2px;width:12px;background:var(--mark-lead,#7FB6DE);border-radius:1.1px;"></span><span style="height:2.2px;width:9.2px;background:var(--mark-line,#FFFFFF);border-radius:1.1px;"></span><span style="height:2.2px;width:6.4px;background:var(--mark-line,#FFFFFF);border-radius:1.1px;"></span></span>Trial Prescreening</div>
+    <nav style="display:flex;height:56px;">
+      <a style="display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500;color:var(--ink-2,#4A5866);text-decoration:none;">Trials</a>
+      <a style="display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:600;color:var(--ink,#14202B);text-decoration:none;box-shadow:inset 0 -2px 0 var(--accent,#1F5F8B);">Screenings</a>
+      <a style="display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500;color:var(--ink-2,#4A5866);text-decoration:none;">Reviews</a>
+      <a style="display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500;color:var(--ink-2,#4A5866);text-decoration:none;">Settings</a>
+    </nav>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:8px;font:400 12px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);border:1px solid var(--line,#D9DEE3);border-radius:4px;padding:6px 10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent,#1F5F8B);"></span>Local model · Qwen3.6-35B-A3B-MLX-8bit</div>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:minmax(0,1fr) 820px minmax(0,1fr);min-height:0;">
+    <div></div>
+    <div style="display:flex;flex-direction:column;min-height:0;">
+      <div style="padding:24px 0 18px;border-bottom:1px solid var(--line,#D9DEE3);display:flex;align-items:flex-start;gap:24px;">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <span style="font:500 12px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);">NCT04316364</span>
+          <span style="font-size:18px;line-height:25px;font-weight:600;text-wrap:pretty;">A Trial of SHR-1316/Placebo in Combination With Chemotherapy in Patients With Resectable NSCLC</span>
+          <span style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:15px;line-height:22px;color:var(--ink-2,#4A5866);">A study coordinator will review everything you tell me and follow up with you.</span>
+        </div>
+        <span style="margin-left:auto;font-size:14px;font-weight:600;color:var(--ink-2,#4A5866);white-space:nowrap;padding-top:22px;">Question 4</span>
+      </div>
+      <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:16px;padding:20px 0 4px;font-family:'Atkinson Hyperlegible',sans-serif;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 90px);mask-image:linear-gradient(to bottom,transparent 0,#000 90px);">
+        <p style="margin:0;max-width:640px;font-size:17px;line-height:26px;color:var(--ink-2,#4A5866);">Thanks. Have you been diagnosed with resectable Stage II, IIIA, or Selected IIIB non-small cell lung cancer (NSCLC) that has not yet been treated with cancer therapy?</p>
+        <div style="align-self:flex-end;max-width:560px;background:var(--you,#E6EEF5);border-radius:6px;padding:12px 16px;font-size:17px;line-height:26px;">Yes, a biopsy last spring confirmed stage II non-small cell lung cancer.</div>
+        <p style="margin:0;max-width:640px;font-size:17px;line-height:26px;color:var(--ink-2,#4A5866);">Thanks. Have you started any cancer treatment yet, such as chemotherapy or radiation? Also, has your doctor confirmed that the tumor can be surgically removed?</p>
+        <div style="align-self:flex-end;max-width:560px;background:var(--you,#E6EEF5);border-radius:6px;padding:12px 16px;font-size:17px;line-height:26px;">Yes, a biopsy last spring confirmed stage II non-small cell lung cancer.</div>
+      </div>
+      <div style="margin-top:20px;background:var(--surface,#fff);border:1px solid var(--line,#D9DEE3);border-radius:6px;box-shadow:0 1px 2px var(--shadow,rgba(20,32,43,.06));padding:28px 32px;display:flex;flex-direction:column;gap:12px;">
+        <span style="font-size:14px;font-weight:600;color:var(--accent,#1F5F8B);">Question 4</span>
+        <p style="margin:0;font-family:'Atkinson Hyperlegible',sans-serif;font-size:24px;line-height:35px;text-wrap:pretty;">Thanks. Has a thoracic surgeon evaluated you and confirmed that your tumor can be completely removed with surgery (R0 resection) with the goal of curing the cancer?</p>
+      </div>
+      <div style="padding:16px 0 28px;display:flex;flex-direction:column;gap:12px;">
+        <div style="height:100px;background:var(--surface,#fff);border:1px solid var(--control,#7D8995);border-radius:4px;box-shadow:0 0 0 3px var(--ring,#D3E2EE);padding:14px 16px;font-family:'Atkinson Hyperlegible',sans-serif;font-size:18px;color:var(--placeholder,#5F6B77);box-sizing:border-box;">Type your answer</div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:15px;color:var(--ink-2,#4A5866);">Use made-up answers only. This is a test system.</span>
+          <span style="margin-left:auto;font:400 13px 'IBM Plex Mono',monospace;color:var(--ink-2,#4A5866);">1600</span>
+          <span style="height:48px;padding:0 28px;display:flex;align-items:center;background:var(--accent,#1F5F8B);color:var(--on-accent,#fff);border-radius:4px;font-weight:600;font-size:16px;">Send</span>
+        </div>
+      </div>
+    </div>
+    <div style="padding:24px 24px;display:flex;justify-content:flex-end;align-items:flex-start;">
+      <div style="width:188px;background:var(--surface-2,#EEF1F3);border:1px solid var(--line,#D9DEE3);border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:10px;">
+        <span style="font-size:14px;font-weight:600;">What the agent has recorded</span>
+        <span style="font-size:13px;line-height:18px;color:var(--ink-2,#4A5866);">A view for testing. A person being screened wouldn't see this, and it isn't the coordinator's review.</span>
+        <span style="height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--control,#7D8995);border-radius:4px;background:var(--surface,#fff);font-weight:500;font-size:14px;">Show the rules</span>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:800}}"></script>
+</body>
+</html>
