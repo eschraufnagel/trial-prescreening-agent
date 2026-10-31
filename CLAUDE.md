@@ -88,7 +88,9 @@ src/
   models/        model adapter (the only place a model is called)
   transport/     MessageTransport interface and the web implementation
   server/        local API
-  web/           React UI: conversation pane and coordinator review pane
+  web/           React UI: conversation pane and coordinator review pane, styled by one stylesheet, styles.css, from the Chart v2 handoff in docs/design_handoff_chart_v2/
+    fonts/       the bundled IBM Plex and Atkinson Hyperlegible WOFF2 files and their OFL licences, so the page loads no font from the network
+    public/      favicon, app icons and manifest.webmanifest, which Vite copies to the page's root
 data/
   trials/        saved trial JSON, committed, trimmed to fields in use
   plain/         committed plain-language renderings, one file per labelled study, made by plain:render
