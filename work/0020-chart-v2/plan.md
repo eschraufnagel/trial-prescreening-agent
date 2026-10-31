@@ -52,7 +52,14 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
    - `src/server/app.ts`: content types for `.woff2` and `.webmanifest`, with a case in `tests/server/app.test.ts`.
    - Decided in the work: below 1024 px the model chip takes the full-width strip the handoff gives it on a phone, since beside the nav it overflows at mid widths; the brand link fills the bar's height, so it is a 56 px target; the old reduced-motion rule slowing the spinner is deleted, since the global override now stops it; `favicon.svg` gets its missing `<style>` (spec §4).
 
-**Stages 2–5** are written in at each gate, with the files and decisions that stage turns out to need. Each ends with the bridge block shorter; step 6 removes it.
+**Stage 2: review**
+
+3. **The coordinator review.** `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`.
+   - Markup: the page is two columns, `.review-summary` (a `<nav>`, as before) then `.review-main` holding the header, groups, transcript and footer. Each summary item is one link: count, heading, what to do. The header shows the NCT ID on its own line above the title: the model's `frame` gains `nctId`, and `title` becomes the registry title alone. Each group's `<summary>` holds its heading, its count and what to do; the count loses its brackets. Each row's `<summary>` is the grid: rule, type (no longer a `.tag`), the criterion's words, the finding, and a chevron drawn by `::after`. The loading, error and not-finished states use `.page`, so they don't sit in the summary's column.
+   - Kept: class names the e2e test reads (`section.review-group > details > summary`, `li.review-row`, `#row-… > details > summary`, `.review-finding`, `.review-head`); which group starts open (the first with rows, slice 0014), though the handoff says all; the finding's words in every group. The handoff draws the participant's quoted words in the chart-review column, which the row doesn't have; the column keeps "Participant reported: … Needs the record", set for the whole group at 13/19 in `--ink-2`.
+   - Decided in the work: the summary's fill and rule are drawn on the grid's background, so they run the page's length; one column below 1100 px, where the rows would get too narrow beside the summary, with the four counts side by side; three-line rows at 720 px and below; focus drawn inside a group's summaries and rows, which its rounded box would clip; highlighted words in a reply use `--you`, the participant's colour. The transcript and footer are left for stage 5.
+
+**Stages 3–5** are written in at each gate, with the files and decisions that stage turns out to need. Each ends with the bridge block shorter; step 6 removes it.
 
 **Stage 6: images and write-up**
 
@@ -64,7 +71,7 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 
 ## Files that change (against `main`)
 
-Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Later stages add their own here.
+Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Later stages add their own here.
 
 ## Risks
 
@@ -78,4 +85,4 @@ At each gate: `npm run check`; `npm run test:e2e`; headless screenshots of the s
 
 ## Gate record
 
-Filled in as each gate is passed.
+- **Gate 1** (fonts, tokens, header): passed on the owner's OK, 2026-10.

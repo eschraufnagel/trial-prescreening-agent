@@ -42,6 +42,8 @@ export interface Group {
 
 export interface ReviewModel {
   frame: {
+    nctId: string;
+    /** The study's registry title. */
     title: string;
     id: string;
     /** What the header shows for the id: an example's readable name, or the id (slice 0016). */
@@ -415,7 +417,8 @@ export function reviewModel(review: ConversationReview): ReviewModel {
 
   return {
     frame: {
-      title: `${result.study.nctId} · ${result.study.briefTitle}`,
+      nctId: result.study.nctId,
+      title: result.study.briefTitle,
       id: review.id,
       label: review.origin === "eval-run" ? exampleLabel(review.id) : review.id,
       notes,
