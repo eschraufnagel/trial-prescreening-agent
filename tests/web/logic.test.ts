@@ -20,6 +20,7 @@ import {
   pendingWords,
   plainView,
   questionCount,
+  responsesIn,
   retryText,
   reviewHash,
   routeFrom,
@@ -375,6 +376,30 @@ describe("a trial's words (slice 0014)", () => {
         ],
       } as never),
     ).toBe(2);
+  });
+
+  it("doesn't count a respond-then-ask turn as a new question (slice 0021)", () => {
+    const view = {
+      messages: [
+        { seq: 1, from: "agent", text: "a" },
+        { seq: 2, from: "participant", text: "what does that mean?" },
+        { seq: 3, from: "agent", text: "It means… a?" },
+      ],
+    } as never;
+    const progress = [
+      {
+        criterionId: "L1",
+        status: "open",
+        reason: null,
+        evidence: [],
+        timesAsked: 1,
+        responses: 1,
+      },
+      { criterionId: "L2", status: "open", reason: null, evidence: [], timesAsked: 0 },
+    ] as const;
+    expect(responsesIn(progress as never)).toBe(1);
+    expect(responsesIn(undefined)).toBe(0);
+    expect(questionCount(view, responsesIn(progress as never))).toBe(1);
   });
 });
 

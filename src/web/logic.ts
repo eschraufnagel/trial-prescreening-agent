@@ -413,9 +413,21 @@ export function settleWords(byType: Record<CriterionType, number> | null): strin
   return parts.join(" · ");
 }
 
-/** How many questions the agent has asked: its messages, the last of which may close. */
-export function questionCount(view: Pick<ChannelView, "messages"> | undefined): number {
-  return view?.messages.filter((m) => m.from === "agent").length ?? 0;
+/**
+ * How many questions the agent has asked: its messages, the last of which may
+ * close, less its respond-then-ask turns (slice 0021). An explanation repeats
+ * the question it explains, so the number stays on that question.
+ */
+export function questionCount(
+  view: Pick<ChannelView, "messages"> | undefined,
+  responses = 0,
+): number {
+  return Math.max(0, (view?.messages.filter((m) => m.from === "agent").length ?? 0) - responses);
+}
+
+/** Respond-then-ask turns so far, from the tester panel's progress (slice 0021). */
+export function responsesIn(progress: readonly Progress[] | undefined): number {
+  return (progress ?? []).reduce((n, p) => n + (p.responses ?? 0), 0);
 }
 
 /**

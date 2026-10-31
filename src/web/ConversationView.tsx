@@ -8,6 +8,7 @@ import {
   changedIds,
   dollars,
   questionCount,
+  responsesIn,
   reviewHash,
   UNMEASURED_HOSTED,
   viewChanged,
@@ -81,7 +82,8 @@ export function ConversationView({ id }: { id: string }) {
   }
 
   const done = inspection?.done === true;
-  const asked = questionCount(view);
+  const responses = responsesIn(inspection?.progress);
+  const asked = questionCount(view, responses);
 
   return (
     <main className="conversation">
@@ -122,7 +124,13 @@ export function ConversationView({ id }: { id: string }) {
             )
           )}
         </header>
-        <ParticipantPane id={id} view={view} onSent={refresh} hosted={inspection?.hosted ?? null} />
+        <ParticipantPane
+          id={id}
+          view={view}
+          onSent={refresh}
+          hosted={inspection?.hosted ?? null}
+          responses={responses}
+        />
       </div>
       <aside className="conversation-aside">
         <TesterPanel inspection={inspection} changed={changed} />

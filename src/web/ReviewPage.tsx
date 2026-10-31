@@ -170,6 +170,7 @@ function Review({ model }: { model: ReviewModel }) {
                 <span className="dim">
                   {line.turn} · {line.speaker}
                   {line.raised !== null && <> · asked about rule {line.raised}</>}
+                  {line.asked !== null && <> · {line.asked}</>}
                 </span>
                 <p>{line.text}</p>
                 {line.citedBy.length > 0 && (

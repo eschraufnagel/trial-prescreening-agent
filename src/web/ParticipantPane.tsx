@@ -20,6 +20,8 @@ export function ParticipantPane(props: {
   onSent: () => Promise<void>;
   /** The hosted provider this screening runs on (slice 0017), so the hint says where answers go. */
   hosted: { name: string; model: string } | null;
+  /** Respond-then-ask turns so far, which don't move the question number (slice 0021). */
+  responses: number;
 }) {
   const { id, view, onSent } = props;
   const composer = composerFor(view);
@@ -112,7 +114,7 @@ export function ParticipantPane(props: {
 
       {current !== undefined && (
         <div className="question-card">
-          <span className="question-label">Question {questionCount(view)}</span>
+          <span className="question-label">Question {questionCount(view, props.responses)}</span>
           <p className="question-text">{current.text}</p>
         </div>
       )}

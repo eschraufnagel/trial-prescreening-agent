@@ -6,6 +6,7 @@ import {
   findingWords,
   HEADER_NOTE,
   PARSE_NOTE,
+  REQUEST_WORDS,
   type ReviewModel,
   reasonWords,
   reviewModel,
@@ -184,6 +185,29 @@ describe("the words behind a finding", () => {
     expect(model.rows["C10"]?.readings).toEqual([
       "At turn 2 the agent read something about this criterion, which isn't asked in conversation. It was ignored.",
     ]);
+  });
+
+  it("says a reading set aside for an explanation was set aside, and labels the request (slice 0021)", () => {
+    const asked = reviewModel({
+      ...REVIEW,
+      result: {
+        ...REVIEW.result,
+        transcript: REVIEW.result.transcript.map((t) =>
+          t.index === 6
+            ? { ...t, request: { kind: "explain" as const, quote: t.text.slice(0, 3) } }
+            : t,
+        ),
+        ignoredReadings: [
+          { turn: 6, criterionId: "C9", reading: "does-not-hold", why: "asked-to-explain" },
+        ],
+      },
+    });
+    expect(asked.rows["C9"]?.readings).toContain(
+      "At turn 6 the person asked what the question meant, so the agent set aside what that reply said (does not hold) and asked again.",
+    );
+    expect(asked.transcript.find((t) => t.turn === 6)?.asked).toBe("Asked what this means");
+    expect(asked.transcript.find((t) => t.turn === 5)?.asked).toBeNull();
+    expect(Object.keys(REQUEST_WORDS).sort()).toEqual(["explain", "stop", "study", "why"]);
   });
 
   it("links each transcript turn to the rows that show it", () => {
