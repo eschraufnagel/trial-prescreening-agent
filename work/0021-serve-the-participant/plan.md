@@ -99,7 +99,7 @@ Then count the located requests in the new run (spec §6): every one is a false 
 
 **Gate 2: open.** It waits on step 5.
 
-**Gate 1: open.** It's the owner's, and the PR waits for it. What to play is in spec §7: `npm run app -- --examples`, local model.
+**Gate 1: passed (2026-10).** The owner played `npm run app -- --examples` on the local model, with spec §7's requests, and answered: "everything looks good." They gave no notes on the four things §7 asks them to read, so none are recorded here. This was the owner, a person who didn't write the prompts, so the gate is independent as the spec asked.
 
 ## Review passes
 

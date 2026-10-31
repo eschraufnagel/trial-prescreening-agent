@@ -31,7 +31,7 @@ This exists so a session starting cold knows what comes next without being told.
 | 0018 paper and ink | The page's look: warm paper, evergreen ink, terracotta and serif headings, in light and dark, from the owner's pick of three mockups, and the README's images, demo and preview card retaken in it. No markup, behaviour or result changes | **Done** (PR #1); look replaced by 0019 |
 | 0019 coral and plum | The page's look changed again, on the owner's judgment that 0018's tan didn't read as a health app: blush paper, a plum header band, coral buttons, generous rounding and one sans, in light and dark, with 0018's images retaken. No markup, behaviour or result changes | **Done** (PR #2); look replaced by 0020 |
 | 0020 chart v2 | The owner's Chart v2 design applied from a handoff: a calm clinical palette, IBM Plex for coordinator screens and Atkinson Hyperlegible for the conversation, bundled so nothing loads off the machine, the Record logo, favicon and app icons. The review in two columns, the newest question in a card, findings in neutral ink. The README's images retaken. No behaviour or result changes | **Done** |
-| 0021 serve the participant | When the person asks what something means, why it's asked or what happens next, the agent responds before moving on, and a confused answer isn't recorded. Code still chooses every criterion and ends the conversation. The product intent's line on the participant is rewritten in the open. Local model only | In progress: built and tested; the dev re-run and the owner's gate are open |
+| 0021 serve the participant | When the person asks what something means, why it's asked or what happens next, the agent responds before moving on, and a confused answer isn't recorded. Code still chooses every criterion and ends the conversation. The product intent's line on the participant is rewritten in the open. Local model only | In progress: built, tested and played by the owner; the dev re-run is open |
 | *optional* simulator fidelity | A stronger check that the simulated participant says what its vignette says. It changes the ruler, so never in the same slice as an agent change | **Not doing** (0012): every screening number already carries the simulator caveat, and the PoC's question doesn't turn on it |
 | *optional* more labels | Label the seven unlabelled studies, so the parser eval covers twelve, not five | **Not doing** (0012): labels by the same author add coverage, not independence. The held second annotator is the real check |
 | *optional* plain-language follow-ups | Renderings for parsed criteria, and the explanations refused for a negation | **Not doing** (0012): display only, and the review works without them |
@@ -235,10 +235,9 @@ So in 0009:
 
 **In progress.** Not planned before it. Playing a screening in the app, the owner replied "No, but elaborate on this", and the agent recorded the "No" and asked about the next criterion. The model could tell it was a request, but the read call had nowhere to say so. Decided by the owner (2026-10): the agent responds when asked, and an answer given in the same breath as "what does that mean?" isn't recorded. The simulator, the scored run and the plain-language boundary are unchanged. See `work/0021-serve-the-participant/`.
 
-Open at the time of writing:
+Gate 1, the owner playing it in the app, passed (2026-10): "everything looks good." Open at the time of writing:
 
 - **The five dev vignettes, re-run once,** to check that answering didn't get worse. Blocked while the work was done unattended: `OMLX_API_KEY` wasn't in the shell, and Claude doesn't create `.env`.
-- **Gate 1, the owner playing it in the app,** which only a person can judge.
 
 ### Held: model comparison and independent checks
 
