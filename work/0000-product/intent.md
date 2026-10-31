@@ -39,7 +39,7 @@ Done looks like: a coordinator-facing review pane showing a completed screening 
 
 **Primary user: the research coordinator.** Receives a completed prescreening as a reviewable summary rather than conducting it. Sees every determination with its supporting evidence and can see which criteria the system could not resolve. The coordinator is the decision-maker in this design; the system produces a recommendation, never a disposition.
 
-**Secondary participant: the prospective trial participant.** Interacts through a short-message conversation. Simulated in this project. No real person is contacted at any point.
+**Secondary participant: the prospective trial participant.** The person the conversation serves. Interacts through a short-message conversation. Simulated in this project; no real person is contacted at any point. When they ask what something means, why it is asked or what happens next, the agent responds before moving on, and an answer given before they understood the question isn't recorded. *(Rewritten in slice 0021. It said only that the participant is secondary and simulated, and nothing measured whether they were helped.)*
 
 **Systems touched:**
 - ClinicalTrials.gov API v2, read-only, used once to build a frozen local corpus of oncology trials. No live dependency at runtime.

@@ -19,6 +19,23 @@ Findings are about whether the criterion's *statement* is true of the person, ne
 
 Since slice 0009, the model reading a reply works in a fixed order. For each criterion the reply touches, it first writes the criterion as one plain statement about the person ("The person has never smoked"), then the quote, then whether those words settle the statement *outright*, and only then its reading. A reading that isn't outright is recorded as unclear, by code, with what the model would have said kept beside it. That covers a hedge, a guess, or a fact the reader would have to fit to the criterion's term. A new reading, **does not apply**, covers a person the criterion isn't about, such as a criterion for women answered by a man. It leaves the criterion unresolved for the coordinator. The model is shown what was already recorded for each answered criterion, newest first, and any change to a settled answer unsettles it.
 
+Since slice 0021, **the person can ask the agent for something, and it responds before moving on.** The model reading a reply also reports whether it asks for anything, and quotes the asking words. Code decides what that does:
+
+| The person asks… | What the agent does |
+| --- | --- |
+| what the question means ("elaborate on this") | Explains the question in plain words, from the criterion's own words, then asks it again. What the same reply said about that criterion is set aside, because it was said before the person understood the question |
+| why it's asked | Says the study can only include people who meet its requirements, then asks again |
+| about the study or the process | Answers from a fixed list (the title, that this is prescreening and not enrolment, that a coordinator reviews everything, that any question can be skipped), then asks |
+| to stop | Fixed text: they can stop at any time by closing the page, and a coordinator will still follow up. Then the question again |
+
+Each criterion gets at most one of these responses, and a response doesn't use up one of its two asks, so the conversation still always ends. A second "what does that mean?" on the same question gets the coordinator offered, and the answer is recorded. The request's words have to be in the reply, like a finding's. Known limits:
+
+- a request is taken to be about the question just asked;
+- one request per reply;
+- explanations come from the protocol's words, not the plain-language renderings.
+
+The vignettes never ask for anything. So this is tested by deterministic tests and by playing it in the app, not by the screening numbers below, which come from 0009's prompts (`2c46ada9a1d5`).
+
 The opening and closing messages are fixed text, never model output:
 
 > **agent:** Hello, and thank you for your interest in the study "A Trial of SHR-1316/Placebo in Combination With Chemotherapy in Patients With Resectable NSCLC". I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you.
