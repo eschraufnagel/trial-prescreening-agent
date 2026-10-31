@@ -164,25 +164,6 @@
   }
 }
 
-/* BRIDGE, slice 0020 only. 0019's token names, mapped onto Chart v2's so the
-   screens not yet restyled still render. Each step deletes the names it no
-   longer needs; step 6 deletes the block. */
-:root {
-  --panel: var(--surface);
-  --text: var(--ink);
-  --heading: var(--ink);
-  --dim: var(--ink-2);
-  --accent-soft: var(--surface-2);
-  --accent-ink: var(--accent);
-  --ok: var(--ink);
-  --warn-bg: var(--surface-2);
-  --warn: var(--ink);
-  --field: var(--surface);
-  --field-line: var(--control-line);
-  --shadow: none;
-  --radius: var(--radius-card);
-}
-
 /* ---------- Base ---------- */
 *,
 *::before,
@@ -447,9 +428,6 @@ button:is(:disabled, [aria-disabled="true"]):hover {
     font-size: 11px;
   }
 }
-
-/* ---------- Screens ----------
-   Below here, rules not yet restyled for Chart v2 read the bridge above. */
 
 /* ---------- Pages ----------
    The coordinator register: a centred column, a display heading and its intro. */
@@ -736,11 +714,26 @@ button:is(:disabled, [aria-disabled="true"]):hover {
   }
 }
 
-/* ---------- Not yet restyled (step 6) ---------- */
+/* A notice on a coordinator page: a hairline box, words in neutral ink. A
+   warning has a rule on its left, since the design has no warning colour. */
+.note {
+  margin: 0;
+  padding: 9px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  font: var(--text-small);
+  color: var(--ink);
+}
+.note.warn {
+  border-left: 3px solid var(--ink-2);
+}
+
+/* ---------- A trial's checklist (slice 0014) ---------- */
 .trial-hero {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px 24px;
+  gap: var(--space-4) var(--space-5);
   align-items: flex-start;
 }
 .trial-hero .trial-main {
@@ -751,61 +744,46 @@ button:is(:disabled, [aria-disabled="true"]):hover {
 }
 .trial-hero h1 {
   margin: 0;
+  max-width: 860px;
   font: var(--text-page-title);
+  text-wrap: pretty;
 }
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 1px 6px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-tag);
-  font: var(--text-label);
-  color: var(--ink-2);
-}
-.note {
-  margin: 0;
-  padding: 14px 16px;
-  border-radius: 12px;
-  background: var(--accent-soft);
-  color: var(--accent-ink);
-  font-size: 0.95em;
-}
-.note.warn {
-  background: var(--warn-bg);
-  color: var(--warn);
-}
-
-/* A trial's checklist (slice 0014). */
+/* Counts of rules, as the review counts its groups: mono figures, words under them. */
 .counts {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
+  gap: var(--space-3);
 }
 .counts li {
-  background: var(--panel);
+  background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 14px 16px;
-  color: var(--dim);
-  font-size: 0.9em;
+  border-radius: var(--radius-control);
+  padding: var(--space-3) var(--space-4);
+  font: var(--text-small);
+  color: var(--ink-2);
 }
 .counts strong {
   display: block;
-  font-size: 2.1rem;
-  font-weight: 800;
-  color: var(--heading);
+  margin-bottom: var(--space-1);
+  font: var(--text-count);
+  color: var(--ink);
 }
+/* Who can join, and who can't: a group, as on the review, without the folding. */
 .checklist {
   padding: 0;
   overflow: hidden;
+  border-radius: var(--radius-control);
 }
 .checklist h2 {
-  padding: 16px 20px;
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface-2);
   border-bottom: 1px solid var(--line);
+}
+.checklist h2 .dim {
+  font: var(--text-data);
 }
 .checklist ol {
   list-style: none;
@@ -815,53 +793,63 @@ button:is(:disabled, [aria-disabled="true"]):hover {
 .checklist li {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--line);
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--line-soft);
+  font: var(--text-row);
 }
 .checklist li:last-child {
-  border-bottom: none;
+  border-bottom: 0;
 }
 .checklist li .criterion {
   flex: 1;
   min-width: 0;
-  margin: 0;
 }
-.checklist li .badge {
+.checklist li .tag {
   flex: none;
 }
 .published summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  margin: calc(-1 * var(--space-2)) 0;
+  font: var(--text-group);
   cursor: pointer;
-  font-weight: 600;
-  min-height: 28px;
+}
+.published p {
+  margin: var(--space-2) 0 0;
+  font: var(--text-small);
 }
 .published pre {
-  margin: 12px 0 0;
+  margin: var(--space-3) 0 0;
   white-space: pre-wrap;
-  font-family: inherit;
-  font-size: 0.92em;
+  font: var(--text-small);
   color: var(--ink-2);
 }
 
-/* Screenings and Reviews (slice 0014). */
+/* ---------- Screenings and Reviews (slice 0014) ---------- */
 .grid {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 12px;
+  gap: var(--space-3);
 }
 .study-card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 18px;
+  gap: var(--space-2);
+}
+.study-card .id {
+  font: var(--text-data);
+  color: var(--ink-2);
 }
 .study-card .study-title {
-  font-weight: 650;
-  color: var(--heading);
-  line-height: 1.35;
+  font: 600 16px / 22px var(--font-ui);
+}
+.study-card > .dim {
+  font: var(--text-small);
 }
 .study-card button {
   margin-top: auto;
@@ -872,15 +860,14 @@ button:is(:disabled, [aria-disabled="true"]):hover {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-2);
 }
 .row-card {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px 24px;
-  padding: 16px 18px;
+  gap: var(--space-3) var(--space-5);
 }
 .row-card > div {
   flex: 999 1 420px;
@@ -890,24 +877,35 @@ button:is(:disabled, [aria-disabled="true"]):hover {
   min-width: 0;
 }
 .row-title {
-  font-weight: 600;
+  font: var(--text-group);
+}
+.row-card .dim {
+  font: var(--text-small);
+}
+.row-card .dim .id {
+  font: 400 12px / 16px var(--font-mono);
+}
+.row-card .confirm {
+  flex: 1 1 260px;
 }
 /* Reviews' examples, under their trial (slice 0016). */
 .example-groups {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-5);
 }
 .example-trial h3 {
-  margin: 0 0 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--dim);
+  margin: 0 0 var(--space-2);
+  font: 600 14px / 20px var(--font-ui);
+  color: var(--ink-2);
+}
+.example-trial h3 .id {
+  font: var(--text-data);
 }
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 /* A screening (slice 0005), in the patient register (slice 0020): the
@@ -1572,17 +1570,19 @@ button:is(:disabled, [aria-disabled="true"]):hover {
   color: var(--ink-2);
 }
 
-/* Not yet restyled (step 6): the transcript and footer. */
+/* The transcript: a group, as above, open, its turns numbered in mono. */
 .review-transcript {
-  padding: 12px 14px;
-  background: var(--panel);
+  background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: var(--radius-control);
+  overflow: hidden;
 }
 .review-transcript h2 {
-  font-size: 1rem;
   margin: 0;
-  color: var(--heading);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
+  font: var(--text-group);
 }
 .review-transcript ol {
   list-style: none;
@@ -1590,14 +1590,23 @@ button:is(:disabled, [aria-disabled="true"]):hover {
   padding: 0;
 }
 .review-turn {
-  padding: 6px 0;
-  border-top: 1px solid var(--line);
+  padding: 10px var(--space-4);
+  border-top: 1px solid var(--line-soft);
+  font: var(--text-row);
+}
+.review-turn:first-child {
+  border-top: 0;
+}
+.review-turn > .dim {
+  font: 400 12px / 16px var(--font-mono);
 }
 .review-turn p {
   margin: 2px 0;
+  white-space: pre-wrap;
 }
 .review-foot p {
   margin: 2px 0;
+  font: var(--text-small);
 }
 
 /* One column once the rows would get too narrow beside the summary. */
@@ -1663,7 +1672,7 @@ button:is(:disabled, [aria-disabled="true"]):hover {
   }
 }
 
-/* Settings (slice 0017): the page's own cards and fields, no new colours. */
+/* ---------- Settings (slice 0017) ---------- */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1674,8 +1683,10 @@ button:is(:disabled, [aria-disabled="true"]):hover {
 }
 .settings-note {
   margin: 0;
-  font-size: 0.9rem;
-  color: var(--ink-2);
+  padding: 9px 14px;
+  border-radius: var(--radius-control);
+  font: var(--text-small);
+  color: var(--ink);
 }
 .provider-list {
   border: 0;
@@ -1683,62 +1694,66 @@ button:is(:disabled, [aria-disabled="true"]):hover {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 10px;
+  gap: var(--space-3);
 }
 .provider {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 2px 10px;
-  padding: 14px 16px;
+  min-height: var(--control-h);
+  padding: 14px var(--space-4);
+  border-radius: var(--radius-control);
   cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease);
 }
 .provider input {
   grid-row: span 2;
+  width: 18px;
+  height: 18px;
   margin: 0;
   accent-color: var(--accent);
   /* Without it, an unchosen radio is drawn white on the dark page, like a chosen one. */
   color-scheme: light dark;
 }
+/* The chosen provider: marked as the active nav item is, in the accent. */
 .provider.picked {
   border-color: var(--accent);
-  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
 }
 .provider-name {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-weight: 600;
+  gap: var(--space-2);
+  font: 600 15px / 22px var(--font-ui);
 }
 .settings-detail {
-  gap: 16px;
+  gap: var(--space-4);
 }
 .field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--space-2);
   margin: 0;
 }
 .field > span:first-child,
 .field > label {
-  font-weight: 600;
-  font-size: 0.92rem;
+  font: 600 14px / 20px var(--font-ui);
 }
 .field select,
 .field > input {
-  font: inherit;
-  padding: 10px 14px 10px 18px;
-  border-radius: 999px;
-  border: 2px solid var(--field-line);
-  background: var(--field);
-  color: var(--text);
   max-width: 100%;
+  min-height: var(--control-h);
+  padding: 0 var(--space-3);
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--control-line);
+  border-radius: var(--radius-control);
+  font: var(--text-body);
 }
-.help.warn {
-  color: var(--warn);
-}
+.help.warn,
 .help.ok {
-  color: var(--ok);
+  color: var(--ink);
 }
 .settings .actions {
   align-items: center;

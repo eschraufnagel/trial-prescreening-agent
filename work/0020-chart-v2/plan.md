@@ -73,7 +73,18 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
    - Shared rules restyled here, since Trials is the first page that uses them: `.page` (1040 px, 32 px padding, 20 on a phone), `.page h1` as the display style, `.sub`, `.page h2`, `.section-head` (heading, then its note under it), `.chips` as condition tags, `.help`, `.back` and `.error` (neutral ink, since the design has no error colour). Screenings, Reviews, Settings and the checklist pick these up before stage 5 reaches them.
    - Decided in the work: the registry link on a card is mono, without underline until hovered, and 44 px tall; Remove… and Delete… look like the quiet Refresh beside them, and the confirming Remove or Delete is outlined, not filled crimson, so a card never shows two primary buttons; the first-run screen is left-aligned like every other page, and its three steps are plain cards with a mono label instead of a coral stripe; the spinner is neutral, since `--accent` isn't for status; a card's dropped-criteria warning and problem are small neutral text. The bridge loses seven more names.
 
-**Stage 5** is written in at its gate, with the files and decisions that stage turns out to need. Each ends with the bridge block shorter; step 6 removes it.
+**Stage 5: the rest**
+
+6. **The checklist, Screenings, Reviews, Settings, the transcript and the preview card.** `src/web/TrialPage.tsx`, `src/web/styles.css`, `e2e/capture/social-card.html`.
+   - Markup: the checklist's status and "who can answer" tags are `.tag`, so no `.badge` is left; `badgeWords`' `tone` is no longer read by the page, and is left in `logic.ts`, where its tests are.
+   - None of these screens is drawn in the handoff. Each takes the coordinator register, and these are the choices made:
+     - **Notices** (the checklist's note, Settings' two notes, fake mode's Settings note) are hairline boxes in small neutral type, as the review's notes are; a warning (`.note.warn`, dropped criteria) adds a left rule in `--ink-2` instead of a colour.
+     - **The checklist**: the trial's heading as the review's (tags, then a 22 px title, then conditions); the three counts as the review's summary counts, in mono 24 px over small words; "Who can join" and "Who can't join" as review groups without the folding, their rows in 14/20 with a neutral tag for who can answer; "The trial's rules as published" as a 44 px summary in a card.
+     - **Screenings and Reviews**: study cards and rows are `.card`s with a 16 px semibold title and small neutral meta, ids in mono; an example's trial heading is small semibold `--ink-2` with its id in mono.
+     - **Settings**: providers are cards with an 18 px radio; the chosen one has a 2 px `--accent` border, the one place outside actions, links, focus and the nav where the accent marks a choice, since it plays the active nav item's part; fields, selects and the key box are the design's 48 px inputs; a test's result and a cost warning are `--ink`, since there is no success or warning colour.
+     - **The transcript**: an open group, its turn numbers and speakers in mono 12, each turn 14/20 with a hairline between; the footer small `--ink-2`.
+     - **The preview card**: the light tokens, Plex from `src/web/fonts/` and the Record mark, its three tags as `.tag`s in mono. Its inset is `docs/images/review.png`, retaken in stage 6, when its crop is set for the review's two columns.
+   - The bridge is deleted; every `var()` in the stylesheet is a Chart v2 token.
 
 **Stage 6: images and write-up**
 
@@ -85,7 +96,7 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 
 ## Files that change (against `main`)
 
-Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Stage 3: `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`. Stage 4: `src/web/TrialsPage.tsx`, `src/web/styles.css`. Later stages add their own here.
+Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Stage 3: `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`. Stage 4: `src/web/TrialsPage.tsx`, `src/web/styles.css`. Stage 5: `src/web/TrialPage.tsx`, `src/web/styles.css`, `e2e/capture/social-card.html`. Stage 6 adds the images, docs and roadmap.
 
 ## Risks
 
@@ -102,3 +113,5 @@ At each gate: `npm run check`; `npm run test:e2e`; headless screenshots of the s
 - **Gate 1** (fonts, tokens, header): passed on the owner's OK, 2026-10.
 - **Gate 2** (coordinator review): passed on the owner's OK, 2026-10.
 - **Gate 3** (screening chat): passed on the owner's OK, 2026-10.
+- **Gate 4** (Trials home): passed on the owner's OK, 2026-10.
+- **Gate 5** (the remaining screens): passed on the owner's OK, 2026-10.
