@@ -101,7 +101,7 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 
 ## Files that change (against `main`)
 
-Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Stage 3: `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`. Stage 4: `src/web/TrialsPage.tsx`, `src/web/styles.css`. Stage 5: `src/web/TrialPage.tsx`, `src/web/styles.css`, `e2e/capture/social-card.html`. Stage 6: `docs/images/*` (all seven), `e2e/capture.spec.ts`, `e2e/capture/social-card.html`, `src/web/styles.css`, `docs/running.md`, `docs/coordinator-review.md`, `work/ROADMAP.md`.
+Throughout: `work/0020-chart-v2/` (intent, spec, plan), `docs/design_handoff_chart_v2/` (the handoff, as delivered) and `biome.jsonc` (step 1). Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Stage 3: `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`. Stage 4: `src/web/TrialsPage.tsx`, `src/web/styles.css`. Stage 5: `src/web/TrialPage.tsx`, `src/web/styles.css`, `e2e/capture/social-card.html`. Stage 6: `docs/images/*` (all seven), `e2e/capture.spec.ts`, `e2e/capture/social-card.html`, `src/web/styles.css`, `docs/running.md`, `docs/coordinator-review.md`, `work/ROADMAP.md`.
 
 ## Risks
 
@@ -120,3 +120,13 @@ At each gate: `npm run check`; `npm run test:e2e`; headless screenshots of the s
 - **Gate 3** (screening chat): passed on the owner's OK, 2026-10.
 - **Gate 4** (Trials home): passed on the owner's OK, 2026-10.
 - **Gate 5** (the remaining screens): passed on the owner's OK, 2026-10.
+
+## Review passes
+
+Run by the author against `git diff main` after step 8, then `npm run check` (exit 0) and `npm run test:e2e` (11 passed, 4 capture cases skipped as always).
+
+- **Pass 1, plan compliance.** *Important, fixed:* "Files that change" didn't name `biome.jsonc`, the handoff or this slice's own documents, though step 1 did; now it does. Every other changed file is listed under its stage, and each stage's departures from the handoff are recorded in its step. *Nit:* CLAUDE.md's "Where things live" doesn't mention `src/web/fonts/` or `src/web/public/`; left for the owner, since CLAUDE.md is theirs to change.
+- **Pass 2, correctness.** No finding that blocks. The question card shows only while the agent waits for an answer, so a reload, a failure and a finished conversation fall back to earlier turns (e2e cases 4–7 cover them). *Nit:* the window-height chat uses `:has()`, in every current browser; without it the page scrolls as it did before. *Nit:* `badgeWords`' `tone` is no longer read by the page and stays in `logic.ts` with its tests.
+- **Pass 3, scope and data.** Clean. The fonts and icons are files served by the app; `src/web/` has no `@import`, no remote `url()` and no host in `index.html` or the manifest, and the page made no request off `127.0.0.1` at any gate. No key in the diff: the capture's key was loaded into one process from a file outside the repository. The handoff's reference HTML loads Google Fonts when someone opens it in a browser; it's documentation under `docs/`, never served by the app. Nothing on the page decides; no new words say "eligible", "qualified" or give a score.
+- **Pass 4, eval integrity.** Clean. No test or grader changed except one added case in `tests/server/app.test.ts` for the two new content types. `tests/boundary.test.ts` and `tests/web/review.test.ts`, the guards on 0007's rule, pass unchanged (80). No browser spec changed; `e2e/capture.spec.ts`, which makes the images and isn't part of `test:e2e`, changed in three places step 7 records. No result is reported, so no model record is needed beyond step 7's.
+- **Pass 5, documentation.** Clean. The README's words still match the page (the panel on the right, folded; the review starting with what's left), and its images are retaken. `docs/running.md` and `docs/coordinator-review.md` describe the new layouts; no number changed.
