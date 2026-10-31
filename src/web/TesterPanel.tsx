@@ -39,7 +39,7 @@ export function TesterPanel(props: {
   };
   const count = inspection?.criteria.length;
   return (
-    <section className="tester" aria-labelledby="tester-h">
+    <section className="tester" aria-labelledby="tester-h" data-open={open}>
       <h2 id="tester-h">What the agent has recorded</h2>
       <p className="tester-note">
         A view for testing. A person being screened wouldn't see this, and it isn't the

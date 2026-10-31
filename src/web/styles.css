@@ -172,29 +172,18 @@
   --text: var(--ink);
   --heading: var(--ink);
   --dim: var(--ink-2);
-  --agent: var(--surface-2);
-  --me: var(--you);
-  --me-2: var(--you);
-  --me-text: var(--ink);
   --accent-soft: var(--surface-2);
   --accent-ink: var(--accent);
   --chip: var(--surface-2);
   --chip-ink: var(--ink);
   --coral-line: var(--line);
   --pink-line: var(--line);
-  --plain-bg: var(--bg);
-  --new: var(--surface-2);
   --ok-bg: var(--surface-2);
   --ok: var(--ink);
   --warn-bg: var(--surface-2);
   --warn: var(--ink);
   --down-bg: var(--surface-2);
   --down: var(--ink);
-  --holds: var(--ink-2);
-  --not: var(--ink-2);
-  --open: var(--ink-2);
-  --review: var(--ink-2);
-  --unresolved: var(--ink-2);
   --field: var(--surface);
   --field-line: var(--control-line);
   --shadow: none;
@@ -519,9 +508,6 @@ button.danger {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--heading);
-}
-.tester h2 {
   color: var(--heading);
 }
 .meta,
@@ -891,232 +877,319 @@ button.danger {
   gap: 8px;
 }
 
-.conversation {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(300px, 2fr);
-  gap: 16px;
-  max-width: 1120px;
-  margin: 20px auto 0;
-  padding: 0 24px 32px;
-  align-items: start;
-}
-@media (max-width: 900px) {
-  .conversation {
-    grid-template-columns: 1fr;
-  }
-}
-.conversation-head {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px 16px;
-  padding: 16px 20px;
-}
-.conversation-head > div {
+/* A screening (slice 0005), in the patient register (slice 0020): the
+   conversation in a centre column, in Atkinson Hyperlegible, larger and with
+   more room; the testing panel in the right-hand column. On a desktop the
+   column is the window's height, so the question and the box stay in view and
+   the earlier turns scroll above them. */
+/* The window is the frame: header, any banner, then the conversation in what's left. */
+.app:has(> .conversation) {
+  height: 100dvh;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  min-width: 0;
+}
+.conversation {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 820px) minmax(min-content, 1fr);
+  column-gap: var(--space-5);
+}
+.conversation-main {
+  grid-column: 2;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.conversation-aside {
+  grid-column: 3;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--space-5) var(--space-5) var(--space-5) 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
-.participant,
-.tester {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+/* The trial, and the agent's own word on who reads the answers. */
+.conversation-head {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding: var(--space-5) 0 18px;
+  border-bottom: 1px solid var(--line);
 }
-.participant {
+.conversation-trial {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 230px);
-  min-height: 420px;
-  position: sticky;
-  top: 12px;
+  gap: 6px;
+  min-width: 0;
 }
+.conversation-trial > .dim {
+  font: 500 12px / 16px var(--font-mono);
+  color: var(--ink-2);
+}
+.conversation-head h1 {
+  margin: 0;
+  font: var(--text-title);
+  text-wrap: pretty;
+}
+.conversation-reassure {
+  margin: 0;
+  font: var(--text-reassure);
+  color: var(--ink-2);
+}
+.conversation-count {
+  margin-left: auto;
+  padding-top: 22px;
+  font: 600 14px / 1 var(--font-ui);
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.conversation-head .button {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.participant {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* Earlier turns: they scroll, fade out at the top, and sit at the bottom. The
+   reversed column starts a scrolled box at its end and keeps it there as turns
+   arrive; the one child inside keeps them in reading order. */
 .messages {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  padding: 16px;
+  display: flex;
+  flex-direction: column-reverse;
+  font: var(--text-turn);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 90px);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 90px);
+}
+.messages-inner {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-4);
+  padding: 20px 0 var(--space-1);
 }
 .bubble {
-  max-width: 85%;
-  padding: 10px 16px;
-  border-radius: 20px;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
 .bubble.from-agent {
-  align-self: flex-start;
-  background: var(--agent);
-  border-bottom-left-radius: 4px;
+  max-width: 640px;
+  color: var(--ink-2);
 }
 .bubble.from-participant {
   align-self: flex-end;
-  background: linear-gradient(135deg, var(--me), var(--me-2));
-  color: var(--me-text);
-  border-bottom-right-radius: 4px;
+  max-width: 560px;
+  background: var(--you);
+  color: var(--ink);
+  border: 1px solid transparent;
+  border-radius: var(--radius-card);
+  padding: var(--space-3) var(--space-4);
 }
 .bubble.from-participant.unprocessed {
-  opacity: 0.6;
-  outline: 2px dashed var(--down);
+  border: 1px dashed var(--control-line);
 }
 .bubble .state {
-  font-size: 0.75em;
-  opacity: 0.85;
-  text-align: right;
   margin-top: 2px;
-}
-.bubble.waiting {
-  color: var(--dim);
-  font-style: italic;
+  font: 400 12px / 16px var(--font-mono);
+  color: var(--ink-2);
+  text-align: right;
 }
 
-.notice {
-  margin: 0 16px 8px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: var(--warn-bg);
-  color: var(--warn);
+/* The question waiting for an answer, and only that one. */
+.question-card {
+  margin-top: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-question);
+  padding: 28px var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
-.notice.down {
-  background: var(--down-bg);
-  color: var(--down);
+.question-label {
+  font: 600 14px / 1 var(--font-ui);
+  color: var(--accent);
+}
+.question-text {
+  margin: 0;
+  font: var(--text-question);
+  color: var(--ink);
+  white-space: pre-wrap;
+  text-wrap: pretty;
+}
+
+/* Why a message wasn't taken. No warning colour: the words say it. */
+.notice {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--ink-2);
+  border-radius: var(--radius-control);
+  font: var(--text-reassure);
+  color: var(--ink);
+}
+.finished {
+  margin: 20px 0 28px;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+  font: var(--text-reassure);
 }
 .finished p {
   margin: 0 0 4px;
 }
 .finished code {
-  font-size: 0.85em;
+  font-size: 13px;
   overflow-wrap: anywhere;
-}
-.finished {
-  margin: 0;
-  padding: 14px 16px;
-  border-top: 1px solid var(--line);
-  color: var(--dim);
 }
 
 .composer {
-  border-top: 1px solid var(--line);
-  padding: 10px 12px;
+  padding: var(--space-4) 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 .composer textarea {
   width: 100%;
-  font: inherit;
+  min-height: 100px;
   resize: vertical;
-  padding: 10px 14px;
-  border-radius: 16px;
-  border: 2px solid var(--field-line);
-  background: var(--field);
-  color: var(--text);
+  padding: 14px var(--space-4);
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--control-line);
+  border-radius: var(--radius-control);
+  font: var(--text-answer);
+}
+.composer textarea::placeholder {
+  color: var(--placeholder);
 }
 .composer-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 6px;
+  gap: var(--space-4);
 }
 .hint {
-  flex: 1;
-  color: var(--dim);
-  font-size: 0.85em;
+  font: var(--text-reassure);
+  color: var(--ink-2);
 }
 .count {
-  color: var(--dim);
-  font-size: 0.8em;
-  font-variant-numeric: tabular-nums;
+  margin-left: auto;
+  font: 400 13px / 1 var(--font-mono);
+  color: var(--ink-2);
 }
 .count.over {
-  color: var(--down);
-  font-weight: 600;
+  color: var(--ink);
+  font-weight: 500;
+}
+.composer button {
+  font-size: 16px;
+  padding: 0 28px;
 }
 
+/* The testing panel: secondary, and narrow until it's opened. */
 .tester {
-  padding: 18px;
+  width: 188px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  padding: 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+.tester[data-open="true"] {
+  width: 380px;
+}
 .tester h2 {
   margin: 0;
-  font-size: 1rem;
-  font-weight: 650;
-}
-.tester-toggle {
-  align-self: stretch;
+  font: 600 14px / 20px var(--font-ui);
+  color: var(--ink);
 }
 .tester-note {
   margin: 0;
-  padding: 8px 10px;
-  border-radius: 8px;
-  font-size: 0.9em;
-  background: var(--agent);
-  color: var(--dim);
+  font: var(--text-small);
+  color: var(--ink-2);
+}
+.tester .secondary {
+  min-height: var(--tap-min);
+  padding: 0 var(--space-3);
+  font-size: 14px;
+}
+.tester > .dim {
+  margin: 0;
+  font: var(--text-small);
 }
 .rows {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
+/* A rule card. Its state is words, in the same neutral ink whatever it says. */
 .row {
-  padding: 10px 10px;
-  border-bottom: 1px solid var(--line);
-  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font: var(--text-row);
 }
 .row.awaiting {
-  outline: 2px solid var(--accent);
-  outline-offset: -2px;
-}
-.row.changed {
-  background: var(--new);
+  border-color: var(--control-line);
 }
 .row-head {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
+  font: var(--text-label);
+  color: var(--ink-2);
 }
-.tag.now {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.tag.new {
-  border-color: var(--accent);
-  color: var(--accent);
+.row-head .id {
+  font-size: 13px;
+  color: var(--ink);
 }
 .status {
-  font-size: 0.85em;
-  font-weight: 600;
   margin-left: auto;
 }
-.s-open,
-.s-not-raised {
-  color: var(--open);
+.tester .row-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--space-3);
+  font: 400 12px / 16px var(--font-mono);
+  color: var(--ink-2);
 }
-.s-holds {
-  color: var(--holds);
+.evidence {
+  margin: 0;
+  font-style: italic;
 }
-.s-does-not-hold {
-  color: var(--not);
+.evidence .dim {
+  font: 400 12px / 16px var(--font-mono);
 }
-.s-chart-review {
-  color: var(--review);
-}
-.s-unresolved {
-  color: var(--unresolved);
-}
+
+/* A criterion's words (slice 0006): the protocol's, then the plain rendering
+   or why there is none. Shared by the testing panel, the review and a checklist. */
 .criterion {
-  margin: 6px 0 4px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
-/* Protocol words, then the plain rendering or why there is none (slice 0006). */
 .words {
-  margin: 4px 0;
+  margin: 0;
 }
 .words p,
 .words ul {
@@ -1124,43 +1197,71 @@ button.danger {
 }
 .words ul {
   padding-left: 18px;
-  font-size: 0.9em;
+  font: var(--text-small);
 }
 .words-label {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.75em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: var(--dim);
-}
-p.words .words-label {
   margin-bottom: 2px;
+  font: 500 11px / 16px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
 }
 .words.plain {
-  padding: 4px 8px;
-  border-left: 3px solid var(--coral-line);
-  background: var(--plain-bg);
-  border-radius: 0 10px 10px 0;
+  padding: var(--space-2) 10px;
+  background: var(--bg);
+  border-radius: var(--radius-tag);
 }
 .words.plain.none {
-  border-left-color: var(--line);
-  color: var(--dim);
+  color: var(--ink-2);
 }
-.row-detail {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 0.85em;
-  color: var(--dim);
+
+/* One column once the panel no longer fits beside the conversation, then a phone. */
+@media (max-width: 900px) {
+  .app:has(> .conversation) {
+    height: auto;
+    display: block;
+  }
+  .conversation {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .messages {
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .conversation-aside {
+    overflow: visible;
+    padding: 0 0 var(--space-6);
+    justify-content: stretch;
+  }
+  .tester,
+  .tester[data-open="true"] {
+    width: 100%;
+  }
 }
-.evidence {
-  margin: 6px 0 0;
-  padding: 4px 10px;
-  border-left: 3px solid var(--line);
-  font-style: italic;
+@media (max-width: 600px) {
+  .conversation-head {
+    flex-wrap: wrap;
+  }
+  .conversation-count {
+    margin-left: 0;
+    padding-top: 0;
+  }
+  .question-card {
+    padding: var(--space-5) 20px;
+  }
+  .question-text {
+    font-size: 21px;
+    line-height: 31px;
+  }
+  .composer-row {
+    flex-wrap: wrap;
+  }
 }
 
 /* The coordinator review (slice 0007), in two columns (slice 0020): what's left
@@ -1407,7 +1508,7 @@ p.words .words-label {
   padding: var(--space-1) var(--space-4) var(--space-4) 176px;
   font: var(--text-row);
 }
-.row-detail {
+.review-detail .row-detail {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);

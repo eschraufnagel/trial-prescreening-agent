@@ -59,7 +59,14 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
    - Kept: class names the e2e test reads (`section.review-group > details > summary`, `li.review-row`, `#row-… > details > summary`, `.review-finding`, `.review-head`); which group starts open (the first with rows, slice 0014), though the handoff says all; the finding's words in every group. The handoff draws the participant's quoted words in the chart-review column, which the row doesn't have; the column keeps "Participant reported: … Needs the record", set for the whole group at 13/19 in `--ink-2`.
    - Decided in the work: the summary's fill and rule are drawn on the grid's background, so they run the page's length; one column below 1100 px, where the rows would get too narrow beside the summary, with the four counts side by side; three-line rows at 720 px and below; focus drawn inside a group's summaries and rows, which its rounded box would clip; highlighted words in a reply use `--you`, the participant's colour. The transcript and footer are left for stage 5.
 
-**Stages 3–5** are written in at each gate, with the files and decisions that stage turns out to need. Each ends with the bridge block shorter; step 6 removes it.
+**Stage 3: chat**
+
+4. **The screening chat and the testing panel.** `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`.
+   - Markup: `.conversation` holds `.conversation-main` (the trial's header, then the participant pane) and `.conversation-aside` (the testing panel). The header's title is an `<h1>`, and it adds the opening's last sentence, exported from `templates.ts` as `REASSURANCE`, so the opening and the header are one string. While the agent waits for an answer, its newest message is shown in `.question-card` under "Question N", the count the header already shows; once the participant answers, or the agent is working, or the conversation ends, every message is an earlier turn. The earlier turns sit inside `.messages-inner`, so `.messages` can use a reversed column to start at its end and stay there. The testing panel carries `data-open`, so the stylesheet can widen it.
+   - Kept: class names and roles the e2e test reads (`section.tester li.row`, the textbox, the buttons by name); all wording; the scroll to the newest message, now the composer brought into view; the panel's remembered open state.
+   - Decided in the work: on a desktop the frame is the window (`.app:has(> .conversation)` is a 100dvh column), so the header, any banner and the conversation fit whatever their heights; one column at 900 px and below, where the panel no longer fits beside the conversation, with the question at 21/31 at 600 px; the panel's state words, "asked, awaiting reply" and "changed" are neutral tags and text, the awaiting card has a darker border instead of an accent outline, and a changed card has no fill; a message not taken has a dashed border instead of faded text, and a notice a neutral left rule, since the design has no warning colour; the count over its limit is `--ink` at 500 instead of red. The bridge loses the names the chat and review used.
+
+**Stages 4–5** are written in at each gate, with the files and decisions that stage turns out to need. Each ends with the bridge block shorter; step 6 removes it.
 
 **Stage 6: images and write-up**
 
@@ -71,7 +78,7 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 
 ## Files that change (against `main`)
 
-Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Later stages add their own here.
+Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Stage 3: `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`. Later stages add their own here.
 
 ## Risks
 
@@ -86,3 +93,4 @@ At each gate: `npm run check`; `npm run test:e2e`; headless screenshots of the s
 ## Gate record
 
 - **Gate 1** (fonts, tokens, header): passed on the owner's OK, 2026-10.
+- **Gate 2** (coordinator review): passed on the owner's OK, 2026-10.
