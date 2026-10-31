@@ -1,7 +1,7 @@
 # intent: 0021 serve the participant
 
 **Author:** the repository owner
-**Status:** Draft
+**Status:** Accepted by the owner, 2026-10, with all five decisions as recommended. See [spec.md](spec.md)
 **Date:** 2026-10
 **Scope:** One slice. When the person being screened asks for something, such as an explanation, the reason for a question or what happens next, the agent responds before it moves on. A confused answer isn't recorded as an answer. The code still chooses every criterion and still ends the conversation. Local model only. The product intent's line on the participant changes, in the open.
 
