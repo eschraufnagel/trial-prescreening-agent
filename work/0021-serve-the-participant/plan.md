@@ -48,8 +48,8 @@ Spec 0021 gives the read call a `request` field and code that acts on it. An exp
 4. **Fake mode and the browser test.**
    - `scripted-agent.ts` reads `[explain] …` as a request and answers a REQUEST prompt.
    - Its test covers both.
-   - 0005's identical-state test gets an `[explain]` reply, if it's scripted through the fake agent.
-   - `e2e/conversation.spec.ts` case 8.
+   - 0005's identical-state test is shared by three files through `tests/fixtures/conversation.ts`, and the store tests depend on its two replies. So instead of changing that script, `tests/server/conversations.test.ts` gains its own: a session and the service over `MemoryTransport` run a scripted explanation request and must reach identical state. HTTP carries only text, and the request logic is all in the session, so the memory path is enough.
+   - `e2e/conversation.spec.ts` **case 12**. The spec said case 8, but 8 to 11 were already taken, in other spec files.
    - `npm run test:e2e` runs green.
 5. **Dev re-run.** `npm run eval:screening -- --dev`, local model, about 80 minutes, in the background. Commit the run under `evals/results/screening/dev/`. `npm run screening:compare` against 0009's final dev run, `evals/results/screening/dev/11-2c46ada9a1d5.json`, which has the current prompt version, `2c46ada9a1d5`, the same as the scored run `02-2c46ada9a1d5.json`. Count the located requests in the run. Record the result and the recommendation under "Gate record".
 6. **Product intent and docs.**

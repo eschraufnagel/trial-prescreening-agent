@@ -23,14 +23,18 @@ import type { CompletionRequest, ScriptedResponse } from "../../src/models/index
  *   two seconds, so the page shows the agent working.
  * - `n/a` reads as does-not-apply, 0009's reading for a person outside the
  *   group a criterion is about.
+ * - `[explain] ...` reads as asking what the question means (slice 0021), and
+ *   an ask with a REQUEST answers it before asking again.
  */
 
 const CRITERION_LINE = /^CRITERION \((?:inclusion|exclusion)\): (.*)$/m;
 const REPLY_LINE = /^THE REPLY TO READ: (.*)$/m;
 const ASKED_LINE = /^THE QUESTION WAS ABOUT: (\S+)$/m;
+const REQUEST_LINE = /^REQUEST: /m;
 
 const DOWN = "[down]";
 const SLOW = "[slow]";
+const EXPLAIN = "[explain]";
 /** How long `[slow]` holds the answer: long enough for a browser to see the agent working. */
 export const SLOW_MS = 2000;
 
@@ -41,6 +45,14 @@ export function scriptedAgent(request: CompletionRequest): ScriptedResponse {
 
 function ask(prompt: string): ScriptedResponse {
   const criterion = CRITERION_LINE.exec(prompt)?.[1]?.trim() ?? "this criterion";
+  if (REQUEST_LINE.test(prompt)) {
+    return {
+      kind: "json",
+      content: {
+        message: `(scripted) That question asks whether this is true for you: ${criterion}. Is it?`,
+      },
+    };
+  }
   return {
     kind: "json",
     content: {
@@ -56,6 +68,14 @@ function read(prompt: string, message: string): ScriptedResponse {
     return {
       kind: "error",
       message: `request failed: ${DOWN} was typed, the scripted model is unreachable`,
+    };
+  }
+  if (typed.startsWith(EXPLAIN)) {
+    // The quote is what was typed after the marker, or the marker itself, so it locates.
+    const rest = typed.slice(EXPLAIN.length).trim();
+    return {
+      kind: "json",
+      content: { readings: [], request: { kind: "explain", quote: rest === "" ? EXPLAIN : rest } },
     };
   }
   if (typed.startsWith(SLOW)) {

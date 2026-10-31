@@ -114,4 +114,23 @@ describe("the scripted agent", () => {
     expect(byId.get("L2")).toMatchObject({ status: "chart-review", reported: "does-not-apply" });
     expect(state.rejectedReadings).toEqual([]);
   });
+
+  it("reads [explain] as a request, explains the same criterion, then reads the answer (slice 0021)", async () => {
+    const answers = ["[explain] what does that mean?", "No"];
+    let i = 0;
+    const { questions, state } = await converse(() => answers[i++] ?? "yes");
+
+    expect(questions[1]).toMatch(/^\(scripted\) That question asks whether this is true for you:/);
+    expect(state.transcript[2]?.request).toEqual({
+      kind: "explain",
+      quote: "what does that mean?",
+    });
+    expect(state.transcript[3]).toMatchObject({ criterionId: "L8", responds: "explain" });
+    expect(state.progress.find((p) => p.criterionId === "L8")).toMatchObject({
+      status: "does-not-hold",
+      timesAsked: 1,
+      responses: 1,
+    });
+    expect(state.rejectedRequests ?? []).toEqual([]);
+  });
 });

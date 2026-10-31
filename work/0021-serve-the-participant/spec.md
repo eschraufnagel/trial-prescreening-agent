@@ -156,7 +156,7 @@ Deterministic, under `tests/screening/` and `tests/web/`, with a `FakeModelAdapt
 10. **Prompts.** The ask system prompt no longer contains the removed line and contains the "To clarify" rule. `PROMPT_LAYOUT` is 6.
 11. **Fixed text** passes `VERDICT_PATTERN`, beside the opening and closing.
 12. **The page.** `questionCount` doesn't count a `responds` turn. The review's request label exists for every kind, which typecheck already enforces.
-13. **Transparency.** 0005's identical-state test gets a scripted `[explain]` reply, over `MemoryTransport` and HTTP.
+13. **Transparency.** A session and the service over `MemoryTransport` reach identical state through a scripted `[explain]` reply (see plan step 4).
 
 ## 5. Fake mode and the browser test
 
@@ -165,7 +165,7 @@ Deterministic, under `tests/screening/` and `tests/web/`, with a `FakeModelAdapt
 - A reply starting `[explain]` reads as `request: {kind:"explain", quote:<the rest>}`, with no readings.
 - An ask prompt with a `REQUEST:` line answers `(scripted) That question asks whether this is true for you: <criterion>. Is it?`
 
-`tests/scripts/scripted-agent.test.ts` covers both. `e2e/conversation.spec.ts` gains **case 8**: send `[explain] what does that mean?`. The next agent message starts "(scripted) That question asks", the question number hasn't moved, and the finished conversation's review shows *Asked what this means* on that reply.
+`tests/scripts/scripted-agent.test.ts` covers both. `e2e/conversation.spec.ts` gains **case 12** (8 to 11 are taken): send `[explain] what does that mean?`. The next agent message starts "(scripted) That question asks", the question number hasn't moved, and the finished conversation's review shows *Asked what this means* on that reply.
 
 ## 6. The dev re-run
 
