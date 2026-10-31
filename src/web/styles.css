@@ -174,16 +174,9 @@
   --dim: var(--ink-2);
   --accent-soft: var(--surface-2);
   --accent-ink: var(--accent);
-  --chip: var(--surface-2);
-  --chip-ink: var(--ink);
-  --coral-line: var(--line);
-  --pink-line: var(--line);
-  --ok-bg: var(--surface-2);
   --ok: var(--ink);
   --warn-bg: var(--surface-2);
   --warn: var(--ink);
-  --down-bg: var(--surface-2);
-  --down: var(--ink);
   --field: var(--surface);
   --field-line: var(--control-line);
   --shadow: none;
@@ -458,41 +451,20 @@ button:is(:disabled, [aria-disabled="true"]):hover {
 /* ---------- Screens ----------
    Below here, rules not yet restyled for Chart v2 read the bridge above. */
 
-/* Delete… and Remove…: visible, but quieter than the action they sit beside (slice 0014). */
-button.destructive {
-  background: transparent;
-  border: 1.5px solid var(--down);
-  color: var(--down);
-  box-shadow: none;
-}
-button.danger {
-  background: var(--down);
-  border-color: var(--down);
-  color: var(--panel);
-  box-shadow: none;
-}
-
+/* ---------- Pages ----------
+   The coordinator register: a centred column, a display heading and its intro. */
 .page {
-  max-width: 1120px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 36px 24px 64px;
+  padding: var(--space-6) var(--space-6) var(--space-7);
   display: flex;
   flex-direction: column;
-  gap: 24px;
-}
-.page h1,
-.hero h1,
-.trial-hero h1 {
-  margin: 0;
-  font-size: 1.9rem;
-  font-weight: 750;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: var(--heading);
+  gap: var(--space-4);
 }
 .page h1 {
-  font-size: 2.3rem;
-  font-weight: 800;
+  margin: 0;
+  font: var(--text-display);
+  color: var(--ink);
 }
 .page-head {
   display: flex;
@@ -501,71 +473,54 @@ button.danger {
 }
 .sub {
   margin: 0;
-  color: var(--dim);
-  max-width: 680px;
+  max-width: 640px;
+  font: var(--text-body);
+  color: var(--ink-2);
 }
 .page h2 {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--heading);
+  font: var(--text-group);
+  color: var(--ink);
 }
 .meta,
 .dim {
-  color: var(--dim);
-  font-size: 0.9em;
+  color: var(--ink-2);
 }
 .error {
-  color: var(--down);
   margin: 0;
+  color: var(--ink);
 }
 .footnote {
   margin: 0;
+  font: var(--text-small);
 }
 .back {
-  text-decoration: none;
   align-self: flex-start;
-  padding: 6px 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  text-decoration: none;
 }
 .id {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 0.85em;
 }
 .stack {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-3);
 }
+/* A list's heading and its note, one above the other. */
 .section-head {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 4px 16px;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-top: var(--space-3);
 }
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  background: var(--chip);
-  color: var(--ink-2);
+.section-head > .dim {
+  font: var(--text-small);
 }
-.badge.accent {
-  background: var(--accent-soft);
-  color: var(--accent-ink);
-}
-.badge.ok {
-  background: var(--ok-bg);
-  color: var(--ok);
-}
-.badge.down {
-  background: var(--down-bg);
-  color: var(--down);
-}
+/* A condition. */
 .chips {
   list-style: none;
   margin: 0;
@@ -575,17 +530,237 @@ button.danger {
   gap: 6px;
 }
 .chips li {
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: var(--chip);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--chip-ink);
+  padding: 3px var(--space-2);
+  background: var(--surface-2);
+  border-radius: var(--radius-tag);
+  font: var(--text-small);
+  color: var(--ink);
+}
+.help {
+  margin: 0;
+  font: var(--text-small);
+  color: var(--ink-2);
 }
 .warn-text {
   margin: 0;
-  color: var(--warn);
-  font-size: 0.92em;
+  font: var(--text-small);
+  color: var(--ink);
+}
+
+/* Remove… and Delete…: as quiet as Refresh beside them; the step after asks
+   again (slice 0014), with the final Remove or Delete outlined, so it never
+   looks like the primary action on the same card. */
+.destructive {
+  background: transparent;
+  color: var(--accent);
+  font-weight: 500;
+  min-height: var(--tap-min);
+  padding: 0 var(--space-3);
+}
+.destructive:hover {
+  background: var(--surface-2);
+  color: var(--accent-hover);
+}
+.danger {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--control-line);
+  font-weight: 500;
+}
+.danger:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.confirm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font: var(--text-small);
+}
+.confirm > span {
+  flex-basis: 100%;
+}
+.confirm > button {
+  flex: 1;
+}
+
+/* ---------- Trials (slices 0013 and 0014) ---------- */
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.add-form label {
+  font: 600 14px / 20px var(--font-ui);
+}
+.add-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.add-row input {
+  flex: 1 1 320px;
+  min-width: 0;
+  min-height: var(--control-h);
+  padding: 0 var(--space-3);
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--control-line);
+  border-radius: var(--radius-control);
+  font: var(--text-body);
+}
+.add-row input::placeholder {
+  color: var(--placeholder);
+}
+
+/* A trial card: what it is on the left, what to do with it on the right. */
+.trial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.trial-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.trial-main h3 {
+  margin: 0;
+  font: 600 16px / 22px var(--font-ui);
+  color: var(--ink);
+}
+.trial-main p {
+  margin: 0;
+}
+.trial-main > .dim {
+  font: var(--text-small);
+}
+.trial-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+.trial-tags .tag {
+  gap: 6px;
+}
+/* The registry link: data, in mono, tall enough to tap. */
+.trial-tags a.id {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  font: var(--text-label);
+  text-decoration: none;
+}
+.trial-tags a.id:hover {
+  text-decoration: underline;
+}
+.trial-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quiet-row {
+  display: flex;
+  gap: var(--space-2);
+}
+.quiet-row > * {
+  flex: 1;
+}
+.trial-problem {
+  font: var(--text-small);
+  white-space: pre-wrap;
+}
+@media (min-width: 720px) {
+  .trial-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    column-gap: var(--space-5);
+  }
+}
+
+.spinner {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  border-top-color: var(--ink-2);
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* The first visit: what to paste, and the three steps after it. */
+.hero {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+}
+.steps li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font: var(--text-small);
+  color: var(--ink-2);
+}
+.step-name {
+  font: var(--text-label);
+  color: var(--ink);
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 20px;
+  }
+  .add-row > * {
+    flex-basis: 100%;
+  }
+}
+
+/* ---------- Not yet restyled (step 6) ---------- */
+.trial-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: flex-start;
+}
+.trial-hero .trial-main {
+  flex: 999 1 520px;
+}
+.trial-hero .trial-actions {
+  flex: 1 1 220px;
+}
+.trial-hero h1 {
+  margin: 0;
+  font: var(--text-page-title);
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-tag);
+  font: var(--text-label);
+  color: var(--ink-2);
 }
 .note {
   margin: 0;
@@ -598,148 +773,6 @@ button.danger {
 .note.warn {
   background: var(--warn-bg);
   color: var(--warn);
-}
-
-/* Trials (slices 0013 and 0014). */
-.add-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.add-form label {
-  font-weight: 600;
-  font-size: 0.92rem;
-}
-.add-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.add-row input {
-  flex: 1 1 320px;
-  min-width: 0;
-  font: inherit;
-  padding: 11px 14px 11px 18px;
-  border-radius: 999px;
-  border: 2px solid var(--field-line);
-  background: var(--field);
-  color: var(--text);
-}
-.help {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--dim);
-}
-.trial-card,
-.trial-hero {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 24px;
-  align-items: flex-start;
-}
-.trial-main {
-  flex: 999 1 520px;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.trial-main h3 {
-  margin: 0;
-  font-size: 1.08rem;
-  font-weight: 650;
-  color: var(--heading);
-  line-height: 1.35;
-}
-.trial-main p {
-  margin: 0;
-}
-.trial-tags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-}
-.trial-actions {
-  flex: 1 1 220px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.quiet-row {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-.confirm {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 0.92em;
-}
-.trial-problem {
-  font-size: 0.92em;
-  white-space: pre-wrap;
-}
-.spinner {
-  width: 12px;
-  height: 12px;
-  flex: none;
-  border-radius: 50%;
-  border: 2px solid color-mix(in srgb, var(--accent) 30%, transparent);
-  border-top-color: var(--accent);
-  animation: spin 0.9s linear infinite;
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-.hero {
-  max-width: 760px;
-  width: 100%;
-  margin: 24px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: center;
-  align-items: stretch;
-}
-.hero .sub {
-  margin: 0 auto;
-}
-.hero .add-form {
-  text-align: left;
-}
-.steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-  text-align: left;
-}
-.steps li {
-  background:
-    linear-gradient(90deg, var(--coral-line), var(--pink-line)) top / 100% 5px no-repeat,
-    var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 0.92em;
-  color: var(--ink-2);
-}
-.step-name {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--accent);
 }
 
 /* A trial's checklist (slice 0014). */

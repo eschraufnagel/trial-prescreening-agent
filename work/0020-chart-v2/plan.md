@@ -66,7 +66,14 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
    - Kept: class names and roles the e2e test reads (`section.tester li.row`, the textbox, the buttons by name); all wording; the scroll to the newest message, now the composer brought into view; the panel's remembered open state.
    - Decided in the work: on a desktop the frame is the window (`.app:has(> .conversation)` is a 100dvh column), so the header, any banner and the conversation fit whatever their heights; one column at 900 px and below, where the panel no longer fits beside the conversation, with the question at 21/31 at 600 px; the panel's state words, "asked, awaiting reply" and "changed" are neutral tags and text, the awaiting card has a darker border instead of an accent outline, and a changed card has no fill; a message not taken has a dashed border instead of faded text, and a notice a neutral left rule, since the design has no warning colour; the count over its limit is `--ink` at 500 instead of red. The bridge loses the names the chat and review used.
 
-**Stages 4–5** are written in at each gate, with the files and decisions that stage turns out to need. Each ends with the bridge block shorter; step 6 removes it.
+**Stage 4: trials**
+
+5. **Trials home.** `src/web/TrialsPage.tsx`, `src/web/styles.css`.
+   - Markup: a card's status is a `.tag` instead of a toned `.badge`, busy or settled; nothing else changes.
+   - Shared rules restyled here, since Trials is the first page that uses them: `.page` (1040 px, 32 px padding, 20 on a phone), `.page h1` as the display style, `.sub`, `.page h2`, `.section-head` (heading, then its note under it), `.chips` as condition tags, `.help`, `.back` and `.error` (neutral ink, since the design has no error colour). Screenings, Reviews, Settings and the checklist pick these up before stage 5 reaches them.
+   - Decided in the work: the registry link on a card is mono, without underline until hovered, and 44 px tall; Remove… and Delete… look like the quiet Refresh beside them, and the confirming Remove or Delete is outlined, not filled crimson, so a card never shows two primary buttons; the first-run screen is left-aligned like every other page, and its three steps are plain cards with a mono label instead of a coral stripe; the spinner is neutral, since `--accent` isn't for status; a card's dropped-criteria warning and problem are small neutral text. The bridge loses seven more names.
+
+**Stage 5** is written in at its gate, with the files and decisions that stage turns out to need. Each ends with the bridge block shorter; step 6 removes it.
 
 **Stage 6: images and write-up**
 
@@ -78,7 +85,7 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 
 ## Files that change (against `main`)
 
-Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Stage 3: `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`. Later stages add their own here.
+Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Stage 3: `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`. Stage 4: `src/web/TrialsPage.tsx`, `src/web/styles.css`. Later stages add their own here.
 
 ## Risks
 
@@ -94,3 +101,4 @@ At each gate: `npm run check`; `npm run test:e2e`; headless screenshots of the s
 
 - **Gate 1** (fonts, tokens, header): passed on the owner's OK, 2026-10.
 - **Gate 2** (coordinator review): passed on the owner's OK, 2026-10.
+- **Gate 3** (screening chat): passed on the owner's OK, 2026-10.

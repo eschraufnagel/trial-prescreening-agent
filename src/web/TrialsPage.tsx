@@ -222,7 +222,7 @@ function TrialCard(props: {
       <div className="trial-main">
         <div className="trial-tags">
           {busy ? (
-            <output className="badge accent">
+            <output className="tag">
               <span className="spinner" aria-hidden="true" />
               {pendingWords(
                 row.state,
@@ -230,7 +230,7 @@ function TrialCard(props: {
               )}
             </output>
           ) : (
-            <span className={`badge ${badge.tone}`}>{badge.text}</span>
+            <span className="tag">{badge.text}</span>
           )}
           <a
             className="id"
