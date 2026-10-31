@@ -53,8 +53,12 @@ function trialCard(page: Page, nctId: string): Locator {
   return page.locator("article.trial-card").filter({ hasText: nctId });
 }
 
+/**
+ * The agent's messages, oldest first: its earlier turns, then the question
+ * waiting for an answer, which has a card of its own since slice 0020.
+ */
 function agentBubbles(page: Page): Locator {
-  return page.locator(".bubble.from-agent:not(.waiting)");
+  return page.locator(".bubble.from-agent:not(.waiting), .question-text");
 }
 
 /**
@@ -136,6 +140,8 @@ async function openExample(page: Page): Promise<void> {
   await expect(
     page.locator(".review-head").getByText(exampleLabel(EXAMPLE), { exact: true }),
   ).toBeVisible();
+  // Off the page, so no row is caught in its hover colour (slice 0020).
+  await page.mouse.move(0, 0);
 }
 
 /**
@@ -236,7 +242,7 @@ test("demo: add a trial, its checklist, two answers, the review", async ({ brows
   // built-in lung trial: `ANSWERS` are one made-up lung cancer patient's, and
   // the added trial is for colorectal cancer (changed after the first run).
   await trialCard(demo, ADDED).getByRole("link", { name: "See the checklist" }).click();
-  await hold(2500);
+  await hold(2000);
   await demo.getByRole("link", { name: "Screenings" }).click();
   await caption(demo, "A screening on one of the built-in lung cancer trials");
   await hold(1500);
@@ -247,7 +253,7 @@ test("demo: add a trial, its checklist, two answers, the review", async ({ brows
     .getByRole("button", { name: "Start" })
     .click();
   await waitFor("The AI is writing its first question (shortened)", () => agentAnswered(demo, 0));
-  await hold(2500);
+  await hold(2000);
   for (let i = 0; i < 2; i++) {
     const question = await lastQuestion(demo);
     const before = await agentBubbles(demo).count();
@@ -255,12 +261,12 @@ test("demo: add a trial, its checklist, two answers, the review", async ({ brows
     await box.pressSequentially(answerFor(question), { delay: 25 });
     await box.press("Enter");
     await waitFor("Thinking (shortened)", () => agentAnswered(demo, before));
-    await hold(2500);
+    await hold(2000);
   }
 
   await openExample(demo);
   await caption(demo, "A finished screening, from the project's examples");
-  await hold(2500);
+  await hold(2000);
   await clearCaption(demo);
   for (let i = 0; i < 6; i++) {
     await demo.mouse.wheel(0, 90);

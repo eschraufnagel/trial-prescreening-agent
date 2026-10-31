@@ -89,6 +89,11 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 **Stage 6: images and write-up**
 
 7. **Images.** `npm run screenshots` and `npm run demo` on the local model; the preview card's HTML takes the tokens and the mark.
+   - Run on oMLX (`Qwen3.6-35B-A3B-MLX-8bit`, healthy and loaded), with the key loaded from the old clone's `.env` into the capture app's process only, on the owner's go: no file written, the value never printed. The app ran with `--examples` and empty scratch folders, so on the local model.
+   - `e2e/capture.spec.ts`, three changes the new page needed: the agent's messages are its earlier turns and `.question-text`, since the newest question has its own card (the first run timed out counting bubbles); the mouse is moved off the page before the review's stills, since the first take caught a "Not met" row in its hover colour, which in that image reads as emphasis on an outcome; the demo's four 2.5 s holds are 2 s, since the GIF was 5.27 MB at the smallest setting and is now 4.75 MB at 720 px, 24.5 s.
+   - The preview card's inset is shifted past the review's summary column (`margin: -56px 0 0 -226px`).
+   - `.provider` loses its border transition, which isn't in the design and was caught mid-fade in the Settings still.
+   - Every image and a contact sheet of the GIF were looked at. The screening's first card holds the agent's opening and first question together, as the agent sends them.
 8. **Docs and roadmap.** `docs/` where it describes the look; `work/ROADMAP.md`.
 9. **Review passes** from `REVIEW.md`.
 
@@ -96,7 +101,7 @@ Each step is one commit, through `npm run check && git commit`. No Co-Authored-B
 
 ## Files that change (against `main`)
 
-Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Stage 3: `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`. Stage 4: `src/web/TrialsPage.tsx`, `src/web/styles.css`. Stage 5: `src/web/TrialPage.tsx`, `src/web/styles.css`, `e2e/capture/social-card.html`. Stage 6 adds the images, docs and roadmap.
+Stage 1: `src/web/styles.css`, `src/web/App.tsx`, `src/web/index.html`, `src/web/fonts/*` (new), `src/web/public/*` (new), `src/server/app.ts`, `tests/server/app.test.ts`. Stage 2: `src/web/ReviewPage.tsx`, `src/web/review.ts`, `src/web/styles.css`. Stage 3: `src/web/ConversationView.tsx`, `src/web/ParticipantPane.tsx`, `src/web/TesterPanel.tsx`, `src/screening/templates.ts`, `src/web/styles.css`. Stage 4: `src/web/TrialsPage.tsx`, `src/web/styles.css`. Stage 5: `src/web/TrialPage.tsx`, `src/web/styles.css`, `e2e/capture/social-card.html`. Stage 6: `docs/images/*` (all seven), `e2e/capture.spec.ts`, `e2e/capture/social-card.html`, `src/web/styles.css`, `docs/running.md`, `docs/coordinator-review.md`, `work/ROADMAP.md`.
 
 ## Risks
 

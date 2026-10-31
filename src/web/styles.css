@@ -1705,7 +1705,6 @@ button:is(:disabled, [aria-disabled="true"]):hover {
   padding: 14px var(--space-4);
   border-radius: var(--radius-control);
   cursor: pointer;
-  transition: border-color var(--dur-fast) var(--ease);
 }
 .provider input {
   grid-row: span 2;
