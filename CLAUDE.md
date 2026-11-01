@@ -30,6 +30,8 @@ work/0001-trial-data/
   plan.md      files that change, stages and gates, order of work, risks, proof
 ```
 
+Each slice starts in a fresh chat, through the `/next-slice` skill (`.claude/skills/next-slice/`). It opens the slice the same way every time and stops at the plan.
+
 For each slice:
 
 1. Write `intent.md`. Do not start from the product intent alone; each slice gets its own.
