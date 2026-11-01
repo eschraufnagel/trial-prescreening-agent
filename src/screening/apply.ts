@@ -220,6 +220,29 @@ function applyClinical(p: Progress, reading: ReadingValue): "applied" | "ignored
 }
 
 /**
+ * Criteria a reply unsettled: settled on the person's word before (a recorded
+ * `holds` or `does-not-hold`, or a clinical report of one), and contradicted
+ * after (slice 0022). What a correction does, measured by its effect rather
+ * than by which list the read call put it in.
+ */
+export function unsettled(before: readonly Progress[], after: readonly Progress[]): string[] {
+  const prior = new Map(before.map((p) => [p.criterionId, p]));
+  return after
+    .filter((p) => {
+      const b = prior.get(p.criterionId);
+      if (b === undefined || b.reason === "contradicted" || p.reason !== "contradicted") {
+        return false;
+      }
+      return (
+        b.status === "holds" ||
+        b.status === "does-not-hold" ||
+        (b.status === "chart-review" && (b.reported === "holds" || b.reported === "does-not-hold"))
+      );
+    })
+    .map((p) => p.criterionId);
+}
+
+/**
  * Closes the conversation's findings. Every criterion still open becomes
  * `unresolved` (patient) or `chart-review` (clinical), with the reason it was
  * left open, or `evidence-not-found` if the only readings for it were rejected,

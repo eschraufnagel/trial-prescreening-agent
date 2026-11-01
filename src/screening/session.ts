@@ -2,7 +2,8 @@ import { type ModelAdapter, monthStamp } from "../models/index.js";
 import { initialProgress, nextCriterion, raisability } from "./agenda.js";
 import { applyReadings, finalize } from "./apply.js";
 import { ask, read } from "./calls.js";
-import { type AnsweredCriterion, type AskRequest, PROMPT_VERSION } from "./prompts.js";
+import { type AskRequest, PROMPT_VERSION } from "./prompts.js";
+import { readable } from "./readable.js";
 import { hasResponseLeft, locateRequest, setAside } from "./requests.js";
 import { closingMessage, openingMessage, stopMessage } from "./templates.js";
 import type {
@@ -122,7 +123,7 @@ export class ScreeningSession {
     const turn = draft.transcript.length;
     draft.transcript.push({ index: turn, speaker: "participant", kind: "reply", text });
 
-    const { open, answered, saidSoFar } = this.#readable(draft);
+    const { open, answered, saidSoFar } = readable(draft.criteria, draft.progress);
     const read_ = await read(this.#adapter, {
       transcript: draft.transcript,
       message: text,
@@ -321,47 +322,6 @@ export class ScreeningSession {
     return { kind: "message", text };
   }
 
-  /**
-   * Raisable criteria split by whether they still await an answer. Answered
-   * ones carry what was recorded and the words behind it, so the read call
-   * can tell whether a reply changes it.
-   */
-  #readable(state: ScreeningState): {
-    open: ScreeningCriterion[];
-    answered: AnsweredCriterion[];
-    saidSoFar: Record<string, { reading: string; quote: string }>;
-  } {
-    const progress = new Map(state.progress.map((p) => [p.criterionId, p]));
-    const raisable = state.criteria.filter((c) => raisability(c).raise);
-    const answered: Array<{ record: AnsweredCriterion; turn: number }> = [];
-    const saidSoFar: Record<string, { reading: string; quote: string }> = {};
-    for (const c of raisable) {
-      const p = progress.get(c.id);
-      if (p === undefined) {
-        continue;
-      }
-      const turn = p.evidence.at(-1)?.turn ?? -1;
-      if (p.status === "holds" || p.status === "does-not-hold") {
-        answered.push({ record: recordOf(c, "recorded", p.status, p), turn });
-      } else if (p.status === "chart-review") {
-        answered.push({ record: recordOf(c, "reported", p.reported ?? "nothing", p), turn });
-      } else if (p.status === "open") {
-        const last = p.evidence.at(-1);
-        if (last !== undefined) {
-          saidSoFar[c.id] = { reading: last.reading, quote: last.quote };
-        }
-      }
-    }
-    return {
-      open: raisable.filter((c) => progress.get(c.id)?.status === "open"),
-      // Most recently answered first: a correction usually follows closely
-      // on what it corrects, and a long list otherwise buries it (slice 0009).
-      // A stable sort keeps protocol order among answers from one turn.
-      answered: answered.sort((a, b) => b.turn - a.turn).map((a) => a.record),
-      saidSoFar,
-    };
-  }
-
   #result(state: ScreeningState): ScreeningResult {
     const findings = finalize(state.criteria, state.progress, state.rejectedReadings);
     return {
@@ -380,21 +340,6 @@ export class ScreeningSession {
       },
     };
   }
-}
-
-const DETERMINATE_READINGS: readonly string[] = ["holds", "does-not-hold", "does-not-apply"];
-
-/** An answered criterion with the words behind its last determinate reading, or its last words. */
-function recordOf(
-  criterion: ScreeningCriterion,
-  kind: AnsweredCriterion["kind"],
-  value: string,
-  progress: Progress,
-): AnsweredCriterion {
-  const evidence =
-    progress.evidence.findLast((e) => DETERMINATE_READINGS.includes(e.reading)) ??
-    progress.evidence.at(-1);
-  return { criterion, kind, value, ...(evidence === undefined ? {} : { quote: evidence.quote }) };
 }
 
 /** What the follow-up question should target. */

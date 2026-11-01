@@ -1,7 +1,7 @@
 # plan: 0022 self-corrections
 
 **Author:** the repository owner
-**Status:** Accepted by the owner, 2026-10. No code yet
+**Status:** Accepted by the owner, 2026-10. Stage 1 in progress
 **Date:** 2026-10
 **Spec:** [spec.md](spec.md)
 
@@ -45,13 +45,18 @@ Written in plan mode from a reading of `src/screening/session.ts`, `calls.ts`, `
      - `readContextAt(...)` builds what `#readable` in `session.ts` would have produced: `open`, `answered` most recent first, `saidSoFar`, and `askedAbout` from the last question's `criterionId`.
      - `#readable` and `recordOf` are private to the session class. Lift them into an exported function in `session.ts`, or a small sibling module such as `src/screening/readable.ts`, so the replay and the session share one implementation rather than a copy.
      - `classify(...)` marks a turn **caught**, **missed** or **false correction**, per spec §5, by applying the replayed readings and corrections to the rebuilt progress and comparing statuses.
-   - **`evals/cases/corrections.json`:** the 11 correction turns (file, conversation id, turn, corrected criterion, `laterSays`), found by reading each transcript once:
+     - `unsettled(before, after)` in `src/screening/apply.ts` names the criteria a reply moved from settled (or a reported determination) to `contradicted`. It's shared now with the replay's `classify` and, in step 4, with the session's acknowledgement, so both measure a correction by its effect.
+   - **`evals/cases/corrections.json`:** the correction turns (file, conversation id, turn, corrected criterion, `laterSays`, and a `shape`), found by reading each transcript once:
      - from labels in `EVAL_RUN`: NCT00077350-v2 L3 and L15, NCT03433469-v1 L55 and L63, NCT04385368-v3 L59 and L70;
      - from dev 12: NCT00077350-dev L4 and L14, NCT03433469-dev L20, NCT04385368-dev L64 (turn 88).
+     - **Divergence, found in this step:** there are 10 scripted corrections, not 11 (the dev vignettes have 4, not 5). Only 6 correct an answer that was settled when the correction came. These are the shape this slice fixes (`settled`): v2 L3, v1 L63, and the four dev ones.
+       - Two never had a first answer on their criterion (`unrecorded`). In v2 L15, "four weeks ago" was said while answering about scans. In v1 L55, the scripted first answer was never said.
+       - Two had the first answer held back as hedged, and the correction came on the criterion's own follow-up (`held-back`, v3 L59 and L70).
+       - The four that aren't `settled` are replayed and reported, but they can't be caught by a correction of an answered criterion, so they don't count toward the bar. A test pins each case's shape against the rebuilt progress. Spec §5's bar of 9 of 11 can't apply as written; gate 1's bar is restated in "Gate record" before the first replay.
      - The ordinary-turn sample is computed, not listed: every fifth participant reply from the tenth on, in those six conversations, skipping correction turns.
    - **Tests** (`tests/evals/corrections-replay.test.ts`, spec §4 item 10):
-     - every case names a participant reply whose criterion was settled before that turn;
-     - rebuilding each of the six conversations at its last turn, then `finalize`, reproduces its committed findings' statuses;
+     - every case names a participant reply, and its criterion was settled before that turn exactly when its shape is `settled`;
+     - rebuilding each of the six conversations at its last turn, then `finalize`, reproduces its committed findings' statuses, reasons and reports;
      - the lifted `readable` function gives the session the same read prompt as before (the existing session tests pass unchanged).
 2. **The replay script.**
    - `scripts/replay-corrections.ts`, and `"corrections:replay"` in `package.json` with `--env-file-if-exists=.env`, like `screening:chat`.
@@ -123,5 +128,7 @@ No new dependency. `tests/boundary.test.ts` is unchanged: the replay script gets
 - `npm run test:e2e` is left to CI unless step 4 touches a path it guards.
 
 ## Gate record
+
+**Gate 1's bar, restated before any replay (step 1's divergence), for the owner to confirm.** Spec §5 asked for 9 of 11. Of the 10 scripted corrections, 6 are `settled`. Proposed: (a) is enough if it catches **at least 5 of the 6 settled turns**, including at least one of the two the recorded runs missed (v2 L3, dev L64), and more than the before replay does, with **at most 1 false correction** in the ordinary sample after reading. Otherwise (b) is built and held to the same bar. The four other turns are reported.
 
 ## Review passes
