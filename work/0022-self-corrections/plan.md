@@ -64,6 +64,7 @@ Written in plan mode from a reading of `src/screening/session.ts`, `calls.ts`, `
    - It writes `evals/results/corrections/NN-<PROMPT_VERSION>.json`: the model, quantization, temperature, seed and thinking mode, the prompt version, and per turn the outcome, the raw corrections and readings, and the prompt's length. It prints a table.
    - Deterministic test of the result shaping with a `FakeModelAdapter`.
    - The CLAUDE.md commands table gains the line in this commit.
+   - As built: the runner is `replay()` in `evals/corrections/replay.ts`, so it's tested with a `FakeModelAdapter`, and the script only writes and prints. A turn whose read fails after its retries is recorded as `failed`, not dropped. The sample is 44 ordinary turns, so a replay is 54 calls, about 7 minutes.
 3. **Replay, before.** On `main`'s prompt (`834179395652`), about 8 minutes. *Claim: what today's read call catches on these exact turns. The original runs used older prompts, so their outcome isn't the baseline.* The result is committed.
 4. **The field and the acknowledgement** (one commit, because the read call's return shape and its only caller change together, as 0021 found).
    - **`calls.ts`:** `ReadResult` gains `corrections`. `readRead` parses it leniently (spec §3.1): an absent or non-array value is empty, and a bad entry is dropped without losing the readings. Reuse the per-entry reading parse by extracting it from the `readings.forEach` into a helper used for both lists.

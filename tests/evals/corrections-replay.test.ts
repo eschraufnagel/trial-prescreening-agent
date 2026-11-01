@@ -7,7 +7,9 @@ import {
   progressAt,
   type Recorded,
   readContextAt,
+  replay,
 } from "../../evals/corrections/replay.js";
+import { FakeModelAdapter } from "../../src/models/index.js";
 import { finalize, unsettled } from "../../src/screening/apply.js";
 import type { Progress } from "../../src/screening/types.js";
 
@@ -140,5 +142,53 @@ describe("unsettled", () => {
     expect(unsettled([p("unresolved", "contradicted")], [p("unresolved", "contradicted")])).toEqual(
       [],
     );
+  });
+});
+
+describe("replay", () => {
+  const correction = {
+    criterionId: "L64",
+    statement: "The person had major surgery within 28 days before the first dose.",
+    quote: "three weeks ago, not two months",
+    outright: true,
+    reading: "holds",
+  };
+
+  it("reads each turn once, and counts catches and false corrections", async () => {
+    const adapter = new FakeModelAdapter([], {
+      respond: (request) =>
+        request.user.includes("THE REPLY TO READ: It was more recent than I said")
+          ? { kind: "json", content: { readings: [correction], request: null } }
+          : { kind: "json", content: { readings: [], request: null } },
+    });
+    const result = await replay(adapter);
+    expect(adapter.requests).toHaveLength(result.turns.length);
+    expect(result.calls).toBe(result.turns.length);
+    expect(result.summary.settled).toEqual({ caught: 1, of: 6 });
+    expect(result.summary.otherShapes).toHaveLength(4);
+    expect(result.summary.ordinary.falseCorrections).toBe(0);
+    expect(result.summary.ordinary.turns).toBeGreaterThan(30);
+    expect(
+      result.turns.find((t) => t.turn === 88 && t.conversation === "NCT04385368-dev"),
+    ).toMatchObject({
+      outcome: "caught",
+      unsettled: ["L64"],
+    });
+    expect(result).toMatchObject({ model: "fake", temperature: 0, seed: 0 });
+    expect(result.month).toMatch(/^\d{4}-\d{2}$/);
+  });
+
+  it("records a turn whose read fails as failed, and carries on", async () => {
+    const adapter = new FakeModelAdapter([], {
+      respond: (request) =>
+        request.user.includes("THE REPLY TO READ: It was more recent than I said")
+          ? { kind: "json", content: { nothing: true } }
+          : { kind: "json", content: { readings: [], request: null } },
+    });
+    const result = await replay(adapter);
+    const failed = result.turns.filter((t) => t.outcome === "failed");
+    expect(failed).toHaveLength(1);
+    expect(failed[0]?.problems?.length).toBeGreaterThan(0);
+    expect(result.summary.settled.caught).toBe(0);
   });
 });

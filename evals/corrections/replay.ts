@@ -1,9 +1,11 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { type ModelAdapter, monthStamp } from "../../src/models/index.js";
 import { initialProgress } from "../../src/screening/agenda.js";
 import { applyReadings, finalize, type Reading, unsettled } from "../../src/screening/apply.js";
-import type { ReadContext } from "../../src/screening/prompts.js";
+import { read } from "../../src/screening/calls.js";
+import { buildReadPrompt, PROMPT_VERSION, type ReadContext } from "../../src/screening/prompts.js";
 import { readable } from "../../src/screening/readable.js";
 import type {
   Evidence,
@@ -15,6 +17,7 @@ import type {
   ScreeningState,
   Turn,
 } from "../../src/screening/types.js";
+import { ScreeningError } from "../../src/screening/types.js";
 
 /**
  * The read replay (slice 0022, spec §5): the read call's exact input at a past
@@ -189,4 +192,133 @@ export function classify(
     return { outcome: changed.includes(corrected) ? "caught" : "missed", unsettled: changed };
   }
   return { outcome: changed.length > 0 ? "false-correction" : "none", unsettled: changed };
+}
+
+/** One replayed turn, as the result file records it. */
+export interface ReplayedTurn {
+  conversation: string;
+  turn: number;
+  kind: "correction" | "ordinary";
+  /** On a correction turn. */
+  criterionId?: string;
+  shape?: Shape;
+  outcome: Outcome | "failed";
+  unsettled: string[];
+  /** The user prompt's length in characters: late turns list many answered criteria. */
+  promptChars: number;
+  /** What the read call returned, for reading. On `failed`, why. */
+  readings?: Reading[];
+  problems?: string[];
+}
+
+export interface ReplayResult {
+  month: string;
+  model: string;
+  quantization: string;
+  temperature: number | null;
+  seed: number | null;
+  adapter: string;
+  thinking?: "off";
+  promptVersion: string;
+  calls: number;
+  turns: ReplayedTurn[];
+  summary: ReplaySummary;
+}
+
+export interface ReplaySummary {
+  /** The bar counts these: corrections of an answer that was settled. */
+  settled: { caught: number; of: number };
+  /** Reported, not counted: the other shapes, caught meaning only that something unsettled. */
+  otherShapes: { conversation: string; criterionId: string; shape: Shape; outcome: string }[];
+  ordinary: { turns: number; falseCorrections: number; failed: number };
+}
+
+/**
+ * Replays the read call at every correction turn and the ordinary sample, one
+ * call each through `read()`, and classifies what each would do. A turn whose
+ * call fails after its retries is recorded as `failed`, not dropped.
+ */
+export async function replay(
+  adapter: ModelAdapter,
+  options: { cases?: CasesFile; root?: string; onTurn?: (t: ReplayedTurn) => void } = {},
+): Promise<ReplayResult> {
+  const file = options.cases ?? loadCases();
+  const conversations = new Map(
+    file.conversations.map((ref) => [ref.id, loadRecorded(ref, options.root)]),
+  );
+  const plan: { recorded: Recorded; turn: number; c?: CorrectionCase }[] = [];
+  for (const c of file.cases) {
+    const recorded = conversations.get(c.conversation);
+    if (recorded === undefined) throw new Error(`no conversation ${c.conversation}`);
+    plan.push({ recorded, turn: c.turn, c });
+  }
+  for (const recorded of conversations.values()) {
+    const skip = new Set(
+      file.cases.filter((c) => c.conversation === recorded.id).map((c) => c.turn),
+    );
+    for (const turn of ordinaryTurns(recorded, skip)) plan.push({ recorded, turn });
+  }
+
+  let calls = 0;
+  const turns: ReplayedTurn[] = [];
+  for (const { recorded, turn, c } of plan) {
+    const context = readContextAt(recorded, turn);
+    const base = {
+      conversation: recorded.id,
+      turn,
+      kind: c === undefined ? ("ordinary" as const) : ("correction" as const),
+      ...(c === undefined ? {} : { criterionId: c.criterionId, shape: c.shape }),
+      promptChars: buildReadPrompt(context).length,
+    };
+    let replayed: ReplayedTurn;
+    try {
+      const result = await read(adapter, context);
+      calls += result.calls;
+      const readings = result.value.readings;
+      replayed = { ...base, ...classify(recorded, turn, readings, c?.criterionId), readings };
+    } catch (error) {
+      if (!(error instanceof ScreeningError)) throw error;
+      // read() gives up after its two attempts.
+      calls += 2;
+      replayed = { ...base, outcome: "failed", unsettled: [], problems: [...error.problems] };
+    }
+    turns.push(replayed);
+    options.onTurn?.(replayed);
+  }
+
+  const d = adapter.descriptor;
+  return {
+    month: monthStamp(),
+    model: d.model,
+    quantization: d.quantization,
+    temperature: d.temperature,
+    seed: d.seed,
+    adapter: d.adapter,
+    ...(d.thinking === undefined ? {} : { thinking: d.thinking }),
+    promptVersion: PROMPT_VERSION,
+    calls,
+    turns,
+    summary: summarize(turns),
+  };
+}
+
+export function summarize(turns: readonly ReplayedTurn[]): ReplaySummary {
+  const settled = turns.filter((t) => t.shape === "settled");
+  const ordinary = turns.filter((t) => t.kind === "ordinary");
+  return {
+    settled: { caught: settled.filter((t) => t.outcome === "caught").length, of: settled.length },
+    otherShapes: turns
+      .filter((t) => t.kind === "correction" && t.shape !== "settled")
+      .map((t) => ({
+        conversation: t.conversation,
+        criterionId: t.criterionId ?? "",
+        shape: t.shape ?? "settled",
+        outcome: t.outcome,
+      })),
+    ordinary: {
+      turns: ordinary.length,
+      falseCorrections: ordinary.filter((t) => t.outcome === "false-correction").length,
+      failed: ordinary.filter((t) => t.outcome === "failed").length,
+    },
+  };
 }
