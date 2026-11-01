@@ -130,6 +130,6 @@ No new dependency. `tests/boundary.test.ts` is unchanged: the replay script gets
 
 ## Gate record
 
-**Gate 1's bar, restated before any replay (step 1's divergence), for the owner to confirm.** Spec §5 asked for 9 of 11. Of the 10 scripted corrections, 6 are `settled`. Proposed: (a) is enough if it catches **at least 5 of the 6 settled turns**, including at least one of the two the recorded runs missed (v2 L3, dev L64), and more than the before replay does, with **at most 1 false correction** in the ordinary sample after reading. Otherwise (b) is built and held to the same bar. The four other turns are reported.
+**Gate 1's bar, restated before any replay (step 1's divergence), confirmed by the owner (2026-10).** Spec §5 asked for 9 of 11. Of the 10 scripted corrections, 6 are `settled`. Proposed: (a) is enough if it catches **at least 5 of the 6 settled turns**, including at least one of the two the recorded runs missed (v2 L3, dev L64), and more than the before replay does, with **at most 1 false correction** in the ordinary sample after reading. Otherwise (b) is built and held to the same bar. The four other turns are reported.
 
 ## Review passes
