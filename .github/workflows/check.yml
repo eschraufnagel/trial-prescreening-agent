@@ -1,11 +1,13 @@
-# The deterministic checks, on every push and pull request (slice 0021, at the
+# The deterministic checks, on main and every pull request (slice 0021, at the
 # owner's request). It deploys nothing, uses no model, and holds no secret:
 # `npm run check` and the browser test against the scripted agent, as a
 # person runs them before committing. Model evals stay on the owner's machine.
 name: check
 
+# Pushes to main, and every pull request: a branch with a PR isn't run twice.
 on:
   push:
+    branches: [main]
   pull_request:
 
 permissions:

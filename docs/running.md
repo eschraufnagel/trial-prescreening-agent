@@ -90,7 +90,7 @@ It covers thirteen cases:
 - Settings (slice 0017): a provider chosen and a test key saved, shown only by its last four characters, tested, kept across a reload and removed, with no server answer ever carrying the key.
 - Requests (slice 0021): asked what a question means, why it's asked, about the study, and to stop. Each gets its answer before the same question, the question number holds, and the review labels the reply.
 
-**It runs on every push and pull request** as well, with `npm run check`, in `.github/workflows/check.yml` on GitHub Actions. That workflow deploys nothing, calls no model and holds no secret. A failed run keeps the browser traces as a download. Model evals don't run there; they need the local model.
+**It runs on `main` and every pull request** as well, with `npm run check`, in `.github/workflows/check.yml` on GitHub Actions. That workflow deploys nothing, calls no model and holds no secret. A failed run keeps the browser traces as a download. Model evals don't run there; they need the local model.
 
 **How we know it bites.** Before it became a rule, each case's behaviour was broken on purpose in the page, nine breaks in all, and each break failed the case aimed at it. The breaks, and which cases failed, are in `work/0010-browser-e2e-tests/plan.md`. They were chosen by whoever wrote the tests, so they show each case catches its own behaviour, not that the suite catches any page bug.
 
