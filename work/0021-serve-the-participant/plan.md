@@ -59,6 +59,12 @@ Spec 0021 gives the read call a `request` field and code that acts on it. An exp
    - The roadmap row.
    - CLAUDE.md's `--fake` and `test:e2e` lines.
 7. **Review passes** from `REVIEW.md`. Fixes are committed, and the record goes below.
+8. **CI, and the other requests in the browser.** Added after the PR opened, at the owner's request ("CI + browser cases"), so it's a divergence from the spec as approved.
+   - `scripted-agent.ts` reads `[why]`, `[study]` and `[stop]` as well as `[explain]`. It answers a study request from the first study fact, so the page can show it was the study that was answered. Its test covers all three.
+   - `e2e/conversation.spec.ts` **case 13**: why, study and stop each get their answer before the same question. The question number holds through each, and the review labels all three. To check that it bites, `#repeatAfterStop`'s `responses` increment was removed. Case 13 failed ("Question 4" for "Question 3") and passed again once it was restored. An earlier try removed the turn's `responds` instead, and case 13 still passed. That's correct: the page counts by `progress.responses`, and `responds` is for the record.
+   - `.github/workflows/check.yml` runs `npm ci`, `npm run check` and `npm run test:e2e` on every push and pull request, on Node 24 and Ubuntu. It deploys nothing, calls no model and holds no secret. A failed browser run uploads `e2e/.out/results/` with its traces.
+   - The product intent's "Local only" constraint and CLAUDE.md's "No cloud deployment surface" each gain a line saying why that workflow is allowed, which settles the question the roadmap left open in 0010.
+   - `docs/running.md` (thirteen cases, the request markers, CI), CLAUDE.md's `--fake` and `test:e2e` lines, and the roadmap's CI row.
 
 Every step is one commit through `npm run check && git commit`. **Steps 1 and 2 landed as one commit:** the read call's new return shape and its only caller, the session, change together, so step 1 alone wouldn't pass typecheck. Steps 3 and 4 also run `npm run test:e2e`.
 
@@ -69,8 +75,9 @@ Every step is one commit through `npm run check && git commit`. **Steps 1 and 2 
 - **Fake mode:** `scripts/app/scripted-agent.ts`.
 - **Tests:** `tests/screening/*.test.ts`, `tests/scripts/scripted-agent.test.ts`, `tests/web/*`, and the transport test if needed.
 - **Browser test:** `e2e/conversation.spec.ts`.
+- **CI (step 8):** `.github/workflows/check.yml`.
 - **Results:** `evals/results/screening/dev/` (the run).
-- **Docs and process:** `work/0000-product/intent.md`, `docs/screening-agent.md`, `docs/coordinator-review.md`, `README.md`, `work/ROADMAP.md` and `CLAUDE.md`.
+- **Docs and process:** `work/0000-product/intent.md`, `docs/screening-agent.md`, `docs/coordinator-review.md`, `docs/running.md` (step 8), `README.md`, `work/ROADMAP.md` and `CLAUDE.md`.
 
 ## Risks
 

@@ -52,7 +52,7 @@ Done looks like: a coordinator-facing review pane showing a completed screening 
 
 These scope the project to a proof of concept and are binding.
 
-- **Local only.** Runs on a single developer machine. No hosting, no cloud services, nothing to operate.
+- **Local only.** Runs on a single developer machine. No hosting, no cloud services, nothing to operate. One workflow runs the deterministic checks and the browser test on GitHub Actions for each push and pull request. It isn't a cloud service in this sense: it deploys and hosts nothing, calls no model, holds no key or secret, and the application still runs only on one machine. *(Added in slice 0021, at the owner's request.)*
 - **Synthetic data only.** No PHI exists in the repository or in any runtime path. Patient cases are hand-authored or generated.
 - **No real patient contact.** The messaging surface is a web application that models short-message constraints (brief payloads, free-text replies, out-of-order answers, resumable conversations). No SMS, no Twilio, no carrier integration.
 - **Not IRB-reviewed and not production-capable.** Recruitment and prescreening language in a real system is an IRB-approved artifact that cannot be freely generated. This project does not simulate that approval and is not suitable for use with real participants.

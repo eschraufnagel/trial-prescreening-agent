@@ -1,4 +1,5 @@
 import { expect, type Locator, type Page, test } from "@playwright/test";
+import { STOP_AGAIN, STOP_TEMPLATE } from "../src/screening/templates.js";
 import { MODEL_UNAVAILABLE } from "../src/server/conversations.js";
 import { STATUS_WORDS } from "../src/web/logic.js";
 import {
@@ -11,7 +12,7 @@ import {
 import { openRow, outOfOrder, rowsByGroup } from "./lib/rows.js";
 
 /**
- * Cases 2–7 (0010 spec §5.4) and 12 (0021): a live conversation with the scripted agent.
+ * Cases 2–7 (0010 spec §5.4), 12 and 13 (0021): a live conversation with the scripted agent.
  * NCT04316364 has the fewest raisable criteria, 23, asked in this order:
  * L1, L2, L3, L5, L6 (clinical), then L7 (patient), and so on.
  */
@@ -208,4 +209,45 @@ test("case 12: asked what a question means, the agent explains it and asks it ag
   await expect(
     page.locator(".review-transcript li").filter({ hasText: "what does that mean?" }),
   ).toContainText(REQUEST_WORDS.explain);
+});
+
+test("case 13: asked why, about the study and to stop, the agent answers each and asks the same question", async ({
+  page,
+}) => {
+  await start(page);
+  const label = page.locator(".question-label");
+
+  await page.getByRole("textbox").fill("[why] why do you need that?");
+  await page.getByRole("textbox").press("Enter");
+  await expect(page.getByText(/\(scripted\) That question asks whether/)).toBeVisible();
+  await expect(label).toHaveText("Question 1");
+  await answer(page, "yes");
+  await expect(label).toHaveText("Question 2");
+
+  await page.getByRole("textbox").fill("[study] what is this study?");
+  await page.getByRole("textbox").press("Enter");
+  await expect(page.getByText(/\(scripted\) The study is called "/)).toBeVisible();
+  await expect(label).toHaveText("Question 2");
+  await expect(testerRow(page, "L2").getByText("asked, awaiting reply")).toBeVisible();
+  await answer(page, "yes");
+  await expect(label).toHaveText("Question 3");
+
+  // Stop is fixed text and the same question again, with no model call.
+  await page.getByRole("textbox").fill("[stop] can we stop?");
+  await page.getByRole("textbox").press("Enter");
+  await expect(page.getByText(STOP_TEMPLATE, { exact: false })).toBeVisible();
+  await expect(page.getByText(STOP_AGAIN, { exact: false })).toBeVisible();
+  await expect(label).toHaveText("Question 3");
+  await expect(testerRow(page, "L3").getByText("asked, awaiting reply")).toBeVisible();
+
+  await answerToTheEnd(page);
+  await page.getByRole("link", { name: "Open the coordinator review" }).click();
+  const transcript = page.locator(".review-transcript li");
+  await expect(transcript.filter({ hasText: "why do you need that?" })).toContainText(
+    REQUEST_WORDS.why,
+  );
+  await expect(transcript.filter({ hasText: "what is this study?" })).toContainText(
+    REQUEST_WORDS.study,
+  );
+  await expect(transcript.filter({ hasText: "can we stop?" })).toContainText(REQUEST_WORDS.stop);
 });

@@ -1,0 +1,37 @@
+# The deterministic checks, on every push and pull request (slice 0021, at the
+# owner's request). It deploys nothing, uses no model, and holds no secret:
+# `npm run check` and the browser test against the scripted agent, as a
+# person runs them before committing. Model evals stay on the owner's machine.
+name: check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-results
+          path: e2e/.out/results
+          if-no-files-found: ignore
