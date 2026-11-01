@@ -30,15 +30,30 @@ work/0001-trial-data/
   plan.md      files that change, stages and gates, order of work, risks, proof
 ```
 
-Each slice starts in a fresh chat, through the `/next-slice` skill (`.claude/skills/next-slice/`). It opens the slice the same way every time and stops at the plan.
+Each slice starts in a fresh chat, through `/sdlc:next-slice`. The skills come from the owner's `sdlc` plugin (`sdlc@eschraufnagel`), not this repository; they read this file for everything below.
 
 For each slice:
 
-1. Write `intent.md`. Do not start from the product intent alone; each slice gets its own.
-2. Write `spec.md` from the intent.
-3. **Use plan mode** to produce `plan.md`. Read the codebase, do not edit it. Iterate until someone who never saw the conversation could implement from the plan alone. Commit `plan.md` before writing code.
+1. Write `intent.md` (`/sdlc:slice-intent`). Do not start from the product intent alone; each slice gets its own.
+2. Write `spec.md` from the accepted intent (`/sdlc:slice-spec`).
+3. **Use plan mode** to produce `plan.md` from the accepted spec (`/sdlc:slice-plan`). Read the codebase, do not edit it. Iterate until someone who never saw the conversation could implement from the plan alone.
 4. Implement, one stage at a time, stopping at each gate. If implementation diverges from the plan, update `plan.md` in the same commit. An out-of-date plan is a merge blocker.
 5. Run the review passes in `REVIEW.md` before opening the PR.
+
+Steps 1 to 3 each end at the owner, who accepts the artifact, asks for changes, or drops the slice. Acceptance is the commit, through `npm run check && git commit`: `NNNN intent`, `NNNN spec`, `NNNN plan`, each alone.
+
+### Opening a slice
+
+What this repository asks of the three artifacts, beyond the skills' defaults:
+
+- **Finding it.** Most slices since 0013 start from something the owner raised, so the roadmap usually has no open row. Check `git remote -v` names this repository, not its `-history` copy.
+- **Reading.** The last merged slice's `plan.md` holds the owner's decisions in its **Gate record** and the open findings in its **Review passes**; there are no separate gate files. Read the boundaries in "Where things live", and their network exceptions, before writing anything.
+- **`intent.md`:** header (Author: the owner, Status, Date, Scope), Problem, Proposed outcome, Absent on purpose, Affected users and systems, Constraints, Decisions, Gates proposed for the plan to argue with, Open questions for the spec, each ending with a leaning.
+- **`spec.md`:** answers each open question as a proposal, says where a gate can overturn one, and ends with what the plan must gate and what's out of scope.
+- **`plan.md`:** Context; Order of work (the stage and gate table, then the steps); Files that change (against `main`); Risks; Verification; and empty **Gate record** and **Review passes** sections. A gate whose value is an independent reader is the owner's alone.
+- **Model runs.** The local model is free but slow, so say how long a run takes. Justify each measurement run in one line: the PoC was once stopped for over-measuring.
+- **Browser test.** Say whether the slice touches a path that needs `npm run test:e2e`. CI runs it on the PR either way.
+- **Words.** "The owner", never their name. Dates are months only (`2026-10`). Any patient data is made up.
 
 ### Stages and gates
 
