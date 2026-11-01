@@ -7,6 +7,7 @@ import {
   type AskRequest,
   buildAskPrompt,
   buildReadPrompt,
+  CORRECTED_LINE,
   PROMPT_LAYOUT,
   PROMPT_VERSION,
   READ_SYSTEM_PROMPT,
@@ -185,7 +186,7 @@ describe("the read prompt", () => {
   });
 
   it("asks for the statement and outright before the reading, and describes does-not-apply", () => {
-    const template = READ_SYSTEM_PROMPT.slice(READ_SYSTEM_PROMPT.lastIndexOf('{ "readings"'));
+    const template = READ_SYSTEM_PROMPT.slice(READ_SYSTEM_PROMPT.lastIndexOf('"readings": ['));
     const order = ["criterionId", "statement", "quote", "outright", "reading", "missing"].map((f) =>
       template.indexOf(`"${f}"`),
     );
@@ -234,10 +235,10 @@ describe("requests (slice 0021)", () => {
   it("replaces the one-line answer rule, and keeps a new criterion from posing as a follow-up", () => {
     expect(ASK_SYSTEM_PROMPT).not.toMatch(/you may answer briefly in a few words/);
     expect(ASK_SYSTEM_PROMPT).toMatch(
-      /Begin with "To clarify" or similar only when FOLLOW-UP or REQUEST/,
+      /Begin with "To clarify" or similar only when FOLLOW-UP, REQUEST or CORRECTED/,
     );
     expect(ASK_SYSTEM_PROMPT).toMatch(/Explain the question, never the person's own situation/);
-    expect(PROMPT_LAYOUT).toBe(6);
+    expect(PROMPT_LAYOUT).toBe(7);
   });
 
   it("asks the read call for a request, and says not sure is an answer", () => {
@@ -279,5 +280,49 @@ describe("PROMPT_VERSION", () => {
   it("covers the templates as well as the prompts", () => {
     expect(PROMPT_VERSION).toMatch(/^[0-9a-f]{12}$/);
     expect(OPENING_TEMPLATE.length + CLOSING_TEMPLATE.length).toBeGreaterThan(0);
+  });
+});
+
+describe("corrections (slice 0022)", () => {
+  const ask = (corrected?: true) =>
+    buildAskPrompt({
+      study: STUDY,
+      transcript: turns(2),
+      criterion: CRITERION,
+      kind: "clinical",
+      followUp: "whether it is resectable",
+      ...(corrected === undefined ? {} : { corrected }),
+    });
+
+  // The model writes left to right: corrections come before the asked question's reading.
+  it("asks the read call for corrections before readings", () => {
+    const first = READ_SYSTEM_PROMPT.indexOf('First, "corrections"');
+    const then = READ_SYSTEM_PROMPT.indexOf('Then "readings"');
+    expect(first).toBeGreaterThan(0);
+    expect(then).toBeGreaterThan(first);
+    const shape = READ_SYSTEM_PROMPT.slice(READ_SYSTEM_PROMPT.lastIndexOf("Return JSON only"));
+    expect(shape.indexOf('"corrections"')).toBeLessThan(shape.indexOf('"readings"'));
+    expect(READ_SYSTEM_PROMPT).toMatch(/while answering a different question/);
+  });
+
+  it("names both lists in the read prompt", () => {
+    const prompt = buildReadPrompt({
+      transcript: turns(3),
+      message: "Actually, it was more recent.",
+      askedAbout: "L19",
+      open: [CRITERION],
+      answered: [{ criterion: CRITERION, kind: "recorded", value: "holds", quote: "Yes" }],
+    });
+    expect(prompt).toMatch(/ALREADY ANSWERED[^\n]*in "corrections"/);
+    expect(prompt).toMatch(/\{"corrections": \[\.\.\.\], "readings": \[\.\.\.\]\}/);
+  });
+
+  it("adds CORRECTED after FOLLOW-UP only when told, and the ask rules name it", () => {
+    expect(ask()).not.toMatch(/CORRECTED/);
+    const prompt = ask(true);
+    expect(prompt).toContain(CORRECTED_LINE);
+    expect(prompt.indexOf("FOLLOW-UP:")).toBeLessThan(prompt.indexOf("CORRECTED:"));
+    expect(CORRECTED_LINE).toMatch(/without repeating or interpreting what they said/);
+    expect(ASK_SYSTEM_PROMPT).toMatch(/If CORRECTED is given/);
   });
 });

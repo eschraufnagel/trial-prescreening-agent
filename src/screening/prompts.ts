@@ -30,7 +30,8 @@ Rules:
 - If KIND is clinical, the patient may not know the answer: make "I'm not sure" an easy, acceptable reply.
 - If FOLLOW-UP is given, the person already answered part of this criterion. Ask only about the part that is still missing, and do not repeat what they already told you.
 - If REQUEST is given, the person asked you something. Do what REQUEST says first, then ask. Explain the question, never the person's own situation or what an answer would mean for them. Give no medical advice. The whole message may then be up to 450 characters, still with only one question mark.
-- Begin with "To clarify" or similar only when FOLLOW-UP or REQUEST is given. A new criterion is a new question: never present it as a follow-up.
+- If CORRECTED is given, do what it says first, then ask.
+- Begin with "To clarify" or similar only when FOLLOW-UP, REQUEST or CORRECTED is given. A new criterion is a new question: never present it as a follow-up.
 - Never say or suggest whether the person is eligible, qualifies, or is a good or poor candidate. Never comment on what an answer means for them.
 - You may begin with a brief acknowledgement such as "Thanks."
 
@@ -62,7 +63,9 @@ Judge only from what the person said. Do not fill gaps with medical knowledge: i
 
 Judge an open criterion on everything the person has said about it: what is listed as "said so far" as well as this reply. A follow-up question is often narrower than its criterion, and an answer to the narrow question does not settle the whole of it.
 
-Criteria listed as ALREADY ANSWERED show what was recorded and the person's words, most recent first. Give a reading for one only if this reply changes, qualifies or contradicts what was recorded, and quote the words that do. A correction often doesn't repeat what it corrects ("no, the other way round", "I got that date wrong"), so compare the reply with each recorded answer.
+First, "corrections". Criteria listed as ALREADY ANSWERED show what was recorded and the person's words, most recent first. Compare the reply with every one of them. If the reply changes, qualifies or contradicts one, give a reading for it here, with the words that do. People often correct an earlier answer while answering a different question, and often without naming what they correct ("it was more recent than I said", "no, the other way round", "I got that wrong"). Match the correction to the recorded answer it changes. Use an empty list when the reply corrects nothing. Answering the current question is not a correction, and neither is repeating an earlier answer.
+
+Then "readings", for the criteria the reply may address, as above. Give no reading there for a criterion you put in "corrections".
 
 Then say whether the reply asks the research assistant for something, in "request":
 - "explain": it asks what the question or a word in it means, or says they don't understand the question.
@@ -72,7 +75,8 @@ Then say whether the reply asks the research assistant for something, in "reques
 Give one kind, and quote the asking words exactly in "quote". Use null when the reply asks for nothing. Saying "I'm not sure" or "I don't know" answers the question: it is a reading of "unknown", not a request.
 
 Return JSON only:
-{ "readings": [ { "criterionId": "<id>", "statement": "<statement>", "quote": "<exact words>", "outright": true, "reading": "<reading>", "missing": "<only for partial>" } ], "request": null | { "kind": "<kind>", "quote": "<exact words>" } }`;
+{ "corrections": [ <reading>... ], "readings": [ { "criterionId": "<id>", "statement": "<statement>", "quote": "<exact words>", "outright": true, "reading": "<reading>", "missing": "<only for partial>" } ], "request": null | { "kind": "<kind>", "quote": "<exact words>" } }
+A correction has the same fields as a reading.`;
 
 /**
  * Appended to the user prompt when retrying after a truncated response.
@@ -86,6 +90,15 @@ export const RETRY_AFTER_TRUNCATION =
   "\n\nYour previous answer ran on without ending. Keep each quote to a few words, " +
   "and return the JSON object promptly.";
 
+/**
+ * The acknowledgement of a correction (slice 0022). It thanks without
+ * restating: restating risks misstating, and the coordinator sees both quotes.
+ */
+export const CORRECTED_LINE =
+  "CORRECTED: The person's last message corrected something they told you earlier. " +
+  "Begin by thanking them in a few words for letting you know, without repeating or " +
+  "interpreting what they said. Then ask.";
+
 /** How much of the conversation each call sees. Enough for context, bounded for speed. */
 export const ASK_CONTEXT_TURNS = 6;
 export const READ_CONTEXT_TURNS = 4;
@@ -96,7 +109,7 @@ export const READ_CONTEXT_TURNS = 4;
  * either builder changes what the model sees, so the change reaches
  * `PROMPT_VERSION` and cannot be mixed silently with earlier results.
  */
-export const PROMPT_LAYOUT = 6;
+export const PROMPT_LAYOUT = 7;
 
 /** Hash of everything the agent says or is told. Recorded on every result. */
 export const PROMPT_VERSION = hashPrompt(
@@ -106,6 +119,7 @@ export const PROMPT_VERSION = hashPrompt(
     OPENING_TEMPLATE,
     CLOSING_TEMPLATE,
     RETRY_AFTER_TRUNCATION,
+    CORRECTED_LINE,
     STOP_TEMPLATE,
     STOP_AGAIN,
     STOP_NEXT,
@@ -128,6 +142,8 @@ export interface AskContext {
    * already had its one response.
    */
   request?: AskRequest;
+  /** Present when the person's last message corrected an earlier answer (slice 0022). */
+  corrected?: true;
 }
 
 export interface AskRequest {
@@ -146,6 +162,7 @@ export function buildAskPrompt(context: AskContext): string {
     `CRITERION (${context.criterion.polarity}): ${context.criterion.text}`,
     `KIND: ${context.kind}`,
     ...(context.followUp === undefined ? [] : [`FOLLOW-UP: ${context.followUp}`]),
+    ...(context.corrected === true ? [CORRECTED_LINE] : []),
     ...(context.request === undefined ? [] : requestLines(context.request, context.study)),
     "",
     'Respond with a JSON object of the form {"message": "..."} holding the next text message.',
@@ -233,14 +250,14 @@ export function buildReadPrompt(context: ReadContext): string {
       ? []
       : [
           "",
-          "ALREADY ANSWERED, most recent first, with what was recorded. Report one of these only if this reply changes or contradicts what was recorded:",
+          'ALREADY ANSWERED, most recent first, with what was recorded. Report one of these in "corrections" only if this reply changes or contradicts what was recorded:',
           ...context.answered.flatMap((a) => [
             line(a.criterion),
             `    ${a.kind}: ${a.value}${a.quote === undefined ? "" : `, from ${JSON.stringify(a.quote)}`}`,
           ]),
         ]),
     "",
-    'Respond with a JSON object of the form {"readings": [...]}.',
+    'Respond with a JSON object of the form {"corrections": [...], "readings": [...]}.',
   ].join("\n");
 }
 

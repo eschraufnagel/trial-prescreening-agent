@@ -287,3 +287,58 @@ describe("read", () => {
     await expect(read(adapter, READ)).rejects.toThrow(/connection refused/);
   });
 });
+
+describe("read: corrections (slice 0022)", () => {
+  const reading = {
+    criterionId: "L19",
+    statement: "Is pregnant.",
+    quote: "No.",
+    outright: true,
+    reading: "does-not-hold",
+  };
+  const correction = {
+    criterionId: "L8",
+    statement: "Has had anti-cancer therapy.",
+    quote: "one round of chemo",
+    outright: true,
+    reading: "holds",
+  };
+  const readWith = async (extra: Record<string, unknown>) =>
+    read(
+      new FakeModelAdapter([{ kind: "json", content: { readings: [reading], ...extra } }]),
+      READ,
+    );
+
+  it("returns a valid correction beside the readings", async () => {
+    const { value } = await readWith({ corrections: [correction] });
+    expect(value.readings.map((r) => r.criterionId)).toEqual(["L19"]);
+    expect(value.corrections).toEqual([
+      {
+        criterionId: "L8",
+        reading: "holds",
+        quote: "one round of chemo",
+        statement: "Has had anti-cancer therapy.",
+        outright: true,
+      },
+    ]);
+  });
+
+  // Optional, like the request: never a reason to fail the turn and lose its readings.
+  it("treats absent or malformed corrections as none, and drops a bad entry, keeping the readings", async () => {
+    for (const extra of [
+      {},
+      { corrections: "L8" },
+      { corrections: { L8: "holds" } },
+      { corrections: [{ ...correction, statement: undefined }] },
+    ]) {
+      const { value, calls } = await readWith(extra);
+      expect(calls).toBe(1);
+      expect(value.readings.map((r) => r.criterionId)).toEqual(["L19"]);
+      expect(value.corrections).toEqual([]);
+    }
+    const { value } = await readWith({
+      corrections: [{ ...correction, reading: "maybe" }, correction],
+    });
+    expect(value.corrections.map((c) => c.criterionId)).toEqual(["L8"]);
+  });
+});

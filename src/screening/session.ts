@@ -1,6 +1,6 @@
 import { type ModelAdapter, monthStamp } from "../models/index.js";
 import { initialProgress, nextCriterion, raisability } from "./agenda.js";
-import { applyReadings, finalize } from "./apply.js";
+import { applyReadings, finalize, type Reading, unsettled } from "./apply.js";
 import { ask, read } from "./calls.js";
 import { type AskRequest, PROMPT_VERSION } from "./prompts.js";
 import { readable } from "./readable.js";
@@ -149,7 +149,7 @@ export class ScreeningSession {
       pending !== null && hasResponseLeft(draft.progress.find((p) => p.criterionId === pending));
 
     // An answer given while asking what the question means isn't recorded.
-    let readings = read_.value.readings;
+    let readings = withCorrections(read_.value.readings, read_.value.corrections);
     if (
       pending !== null &&
       respondable &&
@@ -164,11 +164,13 @@ export class ScreeningSession {
       { criteria: draft.criteria, progress: draft.progress, turn, message: text },
       readings,
     );
+    // The person corrected an earlier answer, from whichever list (slice 0022).
+    const corrected = unsettled(draft.progress, applied.progress).length > 0;
     draft.progress = applied.progress;
     draft.rejectedReadings.push(...applied.rejected);
     draft.ignoredReadings.push(...applied.ignored);
 
-    const next = await this.#next(draft, request, respondable);
+    const next = await this.#next(draft, request, respondable, corrected);
     this.#state = draft;
     return next;
   }
@@ -181,9 +183,11 @@ export class ScreeningSession {
     draft: ScreeningState,
     request: ParticipantRequest | null,
     respondable: boolean,
+    corrected: boolean,
   ): Promise<AgentReply> {
+    const ack = corrected ? { corrected: true as const } : {};
     if (request === null) {
-      return this.#advance(draft);
+      return this.#advance(draft, ack);
     }
     const progress = draft.progress.find((p) => p.criterionId === draft.pending);
     const stillOpen = progress?.status === "open";
@@ -194,19 +198,21 @@ export class ScreeningSession {
       return request.kind === "explain" || request.kind === "why"
         ? this.#advance(draft, {
             request: { kind: request.kind, quote: request.quote, again: true },
+            ...ack,
           })
-        : this.#advance(draft);
+        : this.#advance(draft, ack);
     }
 
     switch (request.kind) {
       case "explain":
       case "why":
-        return this.#respond(draft, { kind: request.kind, quote: request.quote });
+        return this.#respond(draft, { kind: request.kind, quote: request.quote }, corrected);
       case "study":
         return stillOpen
-          ? this.#respond(draft, { kind: "study", quote: request.quote })
-          : this.#advance(draft, { request: { kind: "study", quote: request.quote } });
+          ? this.#respond(draft, { kind: "study", quote: request.quote }, corrected)
+          : this.#advance(draft, { request: { kind: "study", quote: request.quote }, ...ack });
       case "stop":
+        // Stopping makes no ask call, so it carries no acknowledgement.
         return stillOpen ? this.#repeatAfterStop(draft) : this.#advance(draft, { stop: true });
     }
   }
@@ -215,7 +221,11 @@ export class ScreeningSession {
    * Responds to the request, then asks the pending criterion again. Doesn't
    * use one of its asks; uses its one response. Mutates `draft`.
    */
-  async #respond(draft: ScreeningState, request: AskRequest): Promise<AgentReply> {
+  async #respond(
+    draft: ScreeningState,
+    request: AskRequest,
+    corrected: boolean,
+  ): Promise<AgentReply> {
     const { criterion, progress, kind } = this.#pendingCriterion(draft);
     const question = await ask(this.#adapter, {
       study: draft.study,
@@ -223,6 +233,7 @@ export class ScreeningSession {
       criterion,
       kind,
       request: { kind: request.kind, quote: request.quote },
+      ...(corrected ? { corrected: true as const } : {}),
     });
     draft.calls += question.calls;
     progress.responses = (progress.responses ?? 0) + 1;
@@ -274,7 +285,7 @@ export class ScreeningSession {
   /** Asks the next question on `draft`, or closes it. Mutates `draft`. */
   async #advance(
     draft: ScreeningState,
-    options: { request?: AskRequest; stop?: true } = {},
+    options: { request?: AskRequest; stop?: true; corrected?: true } = {},
   ): Promise<AgentReply> {
     const criterion = nextCriterion(draft.criteria, draft.progress);
 
@@ -306,6 +317,7 @@ export class ScreeningSession {
       kind: r.as,
       ...(followUp === undefined ? {} : { followUp }),
       ...(options.request === undefined ? {} : { request: options.request }),
+      ...(options.corrected === undefined ? {} : { corrected: options.corrected }),
     });
     draft.calls += question.calls;
 
@@ -340,6 +352,20 @@ export class ScreeningSession {
       },
     };
   }
+}
+
+/**
+ * A reply's readings, then its corrections (slice 0022). A correction for a
+ * criterion that already has a reading in this reply is dropped: the model was
+ * told not to give both, and the reading wins. Which list a reading came from
+ * doesn't decide what it does; `applyReadings` does.
+ */
+export function withCorrections(
+  readings: readonly Reading[],
+  corrections: readonly Reading[],
+): Reading[] {
+  const read = new Set(readings.map((r) => r.criterionId));
+  return [...readings, ...corrections.filter((c) => !read.has(c.criterionId))];
 }
 
 /** What the follow-up question should target. */

@@ -45,9 +45,13 @@ const READINGS: readonly ReadingValue[] = [
 
 const REQUESTS: readonly RequestKind[] = ["explain", "why", "study", "stop"];
 
-/** What the read call reports about one reply: its readings, and what it asked for (slice 0021). */
+/**
+ * What the read call reports about one reply: corrections of criteria already
+ * answered (slice 0022), its readings, and what it asked for (slice 0021).
+ */
 export interface ReadResult {
   readings: Reading[];
+  corrections: Reading[];
   request: ParticipantRequest | null;
 }
 
@@ -138,52 +142,80 @@ export function readRead(response: CompletionResponse): {
   const problems: string[] = [];
   const out: Reading[] = [];
   readings.forEach((entry, index) => {
-    const r = asRecord(entry);
-    const criterionId = r?.["criterionId"];
-    const reading = r?.["reading"];
-    const quote = r?.["quote"];
-    const missing = r?.["missing"];
-    const statement = r?.["statement"];
-    const outright = r?.["outright"];
-
-    if (typeof criterionId !== "string" || criterionId.length === 0) {
-      problems.push(`readings[${index}]: criterionId missing`);
-      return;
+    const parsed = readingFrom(entry, `readings[${index}]`);
+    if (typeof parsed === "string") {
+      problems.push(parsed);
+    } else {
+      out.push(parsed);
     }
-    if (typeof reading !== "string" || !READINGS.includes(reading as ReadingValue)) {
-      problems.push(`readings[${index}]: reading ${JSON.stringify(reading)} is not recognised`);
-      return;
-    }
-    // A reading with no quote rests on nothing the person said, and rule 1 in
-    // apply.ts rejects it as a rejected reading. Refusing the whole response
-    // for it lost the reply's valid readings, and at temperature 0 the retry
-    // repeats it exactly: one of 0009's scored conversations failed that way.
-    // Changed after the freeze, by the owner's decision; it changes only a response
-    // that would otherwise fail.
-    const cited = typeof quote === "string" ? quote : "";
-    // Required since slice 0009: the statement is what the reading judges,
-    // and outright decides whether a determination may stand.
-    if (typeof statement !== "string" || statement.trim() === "") {
-      problems.push(`readings[${index}]: statement missing`);
-      return;
-    }
-    if (typeof outright !== "boolean") {
-      problems.push(`readings[${index}]: outright is not true or false`);
-      return;
-    }
-    out.push({
-      criterionId,
-      reading: reading as ReadingValue,
-      quote: cited,
-      statement: statement.trim(),
-      outright,
-      ...(typeof missing === "string" && missing.trim() !== "" ? { missing: missing.trim() } : {}),
-    });
   });
+  if (problems.length > 0) {
+    return { problems };
+  }
 
-  return problems.length > 0
-    ? { problems }
-    : { value: { readings: out, request: requestFrom(record?.["request"]) }, problems };
+  return {
+    value: {
+      readings: out,
+      corrections: correctionsFrom(record?.["corrections"]),
+      request: requestFrom(record?.["request"]),
+    },
+    problems,
+  };
+}
+
+/** One reading, or what is wrong with it. Shared by readings and corrections. */
+function readingFrom(entry: unknown, at: string): Reading | string {
+  const r = asRecord(entry);
+  const criterionId = r?.["criterionId"];
+  const reading = r?.["reading"];
+  const quote = r?.["quote"];
+  const missing = r?.["missing"];
+  const statement = r?.["statement"];
+  const outright = r?.["outright"];
+
+  if (typeof criterionId !== "string" || criterionId.length === 0) {
+    return `${at}: criterionId missing`;
+  }
+  if (typeof reading !== "string" || !READINGS.includes(reading as ReadingValue)) {
+    return `${at}: reading ${JSON.stringify(reading)} is not recognised`;
+  }
+  // A reading with no quote rests on nothing the person said, and rule 1 in
+  // apply.ts rejects it as a rejected reading. Refusing the whole response
+  // for it lost the reply's valid readings, and at temperature 0 the retry
+  // repeats it exactly: one of 0009's scored conversations failed that way.
+  // Changed after the freeze, by the owner's decision; it changes only a response
+  // that would otherwise fail.
+  const cited = typeof quote === "string" ? quote : "";
+  // Required since slice 0009: the statement is what the reading judges,
+  // and outright decides whether a determination may stand.
+  if (typeof statement !== "string" || statement.trim() === "") {
+    return `${at}: statement missing`;
+  }
+  if (typeof outright !== "boolean") {
+    return `${at}: outright is not true or false`;
+  }
+  return {
+    criterionId,
+    reading: reading as ReadingValue,
+    quote: cited,
+    statement: statement.trim(),
+    outright,
+    ...(typeof missing === "string" && missing.trim() !== "" ? { missing: missing.trim() } : {}),
+  };
+}
+
+/**
+ * The reply's corrections (slice 0022). Lenient, like the request: absent or
+ * not a list is none, and a bad entry is dropped, so a turn never fails over
+ * the optional part and loses its readings.
+ */
+function correctionsFrom(value: unknown): Reading[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+  return value
+    .map((entry, index) => readingFrom(entry, `corrections[${index}]`))
+    .filter((r): r is Reading => typeof r !== "string");
 }
 
 /**

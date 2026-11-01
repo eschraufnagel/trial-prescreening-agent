@@ -7,6 +7,7 @@ import { applyReadings, finalize, type Reading, unsettled } from "../../src/scre
 import { read } from "../../src/screening/calls.js";
 import { buildReadPrompt, PROMPT_VERSION, type ReadContext } from "../../src/screening/prompts.js";
 import { readable } from "../../src/screening/readable.js";
+import { withCorrections } from "../../src/screening/session.js";
 import type {
   Evidence,
   Finding,
@@ -208,6 +209,7 @@ export interface ReplayedTurn {
   promptChars: number;
   /** What the read call returned, for reading. On `failed`, why. */
   readings?: Reading[];
+  corrections?: Reading[];
   problems?: string[];
 }
 
@@ -274,8 +276,14 @@ export async function replay(
     try {
       const result = await read(adapter, context);
       calls += result.calls;
-      const readings = result.value.readings;
-      replayed = { ...base, ...classify(recorded, turn, readings, c?.criterionId), readings };
+      const { readings, corrections } = result.value;
+      const merged = withCorrections(readings, corrections);
+      replayed = {
+        ...base,
+        ...classify(recorded, turn, merged, c?.criterionId),
+        readings,
+        corrections,
+      };
     } catch (error) {
       if (!(error instanceof ScreeningError)) throw error;
       // read() gives up after its two attempts.
