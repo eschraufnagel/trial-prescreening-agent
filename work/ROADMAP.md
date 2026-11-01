@@ -31,10 +31,11 @@ This exists so a session starting cold knows what comes next without being told.
 | 0018 paper and ink | The page's look: warm paper, evergreen ink, terracotta and serif headings, in light and dark, from the owner's pick of three mockups, and the README's images, demo and preview card retaken in it. No markup, behaviour or result changes | **Done** (PR #1); look replaced by 0019 |
 | 0019 coral and plum | The page's look changed again, on the owner's judgment that 0018's tan didn't read as a health app: blush paper, a plum header band, coral buttons, generous rounding and one sans, in light and dark, with 0018's images retaken. No markup, behaviour or result changes | **Done** (PR #2); look replaced by 0020 |
 | 0020 chart v2 | The owner's Chart v2 design applied from a handoff: a calm clinical palette, IBM Plex for coordinator screens and Atkinson Hyperlegible for the conversation, bundled so nothing loads off the machine, the Record logo, favicon and app icons. The review in two columns, the newest question in a card, findings in neutral ink. The README's images retaken. No behaviour or result changes | **Done** |
+| 0021 serve the participant | When the person asks what something means, why it's asked or what happens next, the agent responds before moving on, and a confused answer isn't recorded. Code still chooses every criterion and ends the conversation. The product intent's line on the participant is rewritten in the open. Local model only | Done |
 | *optional* simulator fidelity | A stronger check that the simulated participant says what its vignette says. It changes the ruler, so never in the same slice as an agent change | **Not doing** (0012): every screening number already carries the simulator caveat, and the PoC's question doesn't turn on it |
 | *optional* more labels | Label the seven unlabelled studies, so the parser eval covers twelve, not five | **Not doing** (0012): labels by the same author add coverage, not independence. The held second annotator is the real check |
 | *optional* plain-language follow-ups | Renderings for parsed criteria, and the explanations refused for a negation | **Not doing** (0012): display only, and the review works without them |
-| *optional* CI for the deterministic checks | A GitHub Actions workflow running `npm test`, typecheck and lint on every push and PR, so a skipped check or a commit from a dirty machine is caught by something other than its author. Not the browser test, and no model | **Not doing** (owner, 2026-09): one author on one machine, and `npm run check` gates every commit. A sensible first step if the repository gains a second contributor |
+| CI for the deterministic checks | A GitHub Actions workflow running `npm run check` and the browser test on `main` and every PR, so a skipped check or a commit from a dirty machine is caught by something other than its author. No model and no secret | **Done in 0021** (owner, 2026-10): asked for once PR 5 showed no checks. Earlier "Not doing" (2026-09): one author on one machine. The product intent now says why a test-only workflow isn't a cloud service |
 
 **Renumbered in 0005.** Plain language was carried forward from 0004 as the next thing to do. 0005's intent (decision 1) gave it a slice of its own, after the transport and before the coordinator pane, because it is a new model output that needs its own check, and because the pane is its main reader. The coordinator pane moved from 0006 to 0007, and the model comparison from 0007 to 0008. The documents for 0001 to 0004 keep the numbers they were written with, so "0006" there means the coordinator pane and "0007" the comparison. Comments and living documents were updated in 0005.
 
@@ -230,6 +231,12 @@ So in 0009:
 
 **Done.** Not planned before it: the owner asked for no-code configuration after 0016, so that a newcomer could pick a provider and paste a key. Decided by the owner (2026-10 and 17): the running app may use a hosted provider chosen in Settings; keys are remembered on this machine; the choice covers both the agent and the trial reader; all three providers are offered, OpenAI and xAI marked untested. Two gates, both the owner's, both passed: the Anthropic smoke run (gate 1, $0.002) and a live screening through Settings (gate 2, about $0.02). See `work/0017-hosted-providers/`.
 
+### 0021 serve the participant
+
+**Done.** Not planned before it. Playing a screening in the app, the owner replied "No, but elaborate on this", and the agent recorded the "No" and asked about the next criterion. The model could tell it was a request, but the read call had nowhere to say so. Decided by the owner (2026-10): the agent responds when asked, and an answer given in the same breath as "what does that mean?" isn't recorded. The simulator, the scored run and the plain-language boundary are unchanged. See `work/0021-serve-the-participant/`.
+
+After the PR opened, the owner asked for CI and for the other three requests in the browser. `.github/workflows/check.yml` and browser case 13 were added to the same PR. Two gates, both passed. Gate 1, the owner playing it in the app (2026-10): "everything looks good." Gate 2, the five dev vignettes re-run once on the local model and run by the owner: confidently wrong 3/44, down from 5/47; abstention 2/43, up from 1/43; and no reply read as a request. The scored set wasn't re-run, so the published numbers stay labelled as prompt `2c46ada9a1d5`'s.
+
 ### Held: model comparison and independent checks
 
 Unchanged from 0008, and it runs only on the owner's word.
@@ -379,7 +386,7 @@ Numbered as in `work/0000-product/intent.md`.
 
 ## Carried forward from 0010
 
-- **No check runs anywhere but this machine.** The repository has no `.github/` directory and no workflows, so "tests pass" in a PR means they passed where the PR says they ran. 0010 made a CI run possible: before it, `npm test` failed 5 files from a fresh clone. The optional CI row is the proposal (the owner asked, 2026-09).
+- **No check runs anywhere but this machine.** *(Closed in 0021: `.github/workflows/check.yml` runs `npm run check` and the browser test on `main` and every PR.)* The repository has no `.github/` directory and no workflows, so "tests pass" in a PR means they passed where the PR says they ran. 0010 made a CI run possible: before it, `npm test` failed 5 files from a fresh clone. The optional CI row is the proposal (the owner asked, 2026-09).
   - **Scope:** `npm test`, `npm run typecheck` and `npm run lint` on every push and PR, on Node 24.
   - **Left out:** the browser test (a 94 MB download per run, for a check already run before page PRs) and anything needing a model.
   - **The intent has to settle one thing:** whether a test-only workflow counts as the "cloud deployment surface" the product intent rules out. It deploys nothing, but it is config for a hosted service, and the intent should say why it is or isn't allowed.

@@ -1,17 +1,20 @@
 import { describe, expect, it } from "vitest";
 import type { ScriptedResponse } from "../../src/models/index.js";
 import { FakeModelAdapter } from "../../src/models/index.js";
+import { ScreeningSession } from "../../src/screening/index.js";
 import { ConversationService, MODEL_UNAVAILABLE } from "../../src/server/index.js";
 import { fixedAgent } from "../../src/server/models.js";
 import { MemoryTransport } from "../../src/transport/index.js";
 import {
   askR,
+  CRITERIA,
   comparable,
   direct,
   REPLIES,
   readR,
   SCRIPT,
   SERVED,
+  STUDY,
 } from "../fixtures/conversation.js";
 
 /**
@@ -67,6 +70,35 @@ describe("the conversation service", () => {
         .filter((t) => t.speaker === "agent" && t.kind !== "opening")
         .map((t, i) => (i === 0 ? `${reference.state.transcript[0]?.text}\n\n${t.text}` : t.text)),
     );
+  });
+
+  it("runs a request for an explanation exactly as ScreeningSession does (slice 0021)", async () => {
+    const script: ScriptedResponse[] = [
+      askR("Have you had any anti-cancer therapy?"),
+      {
+        kind: "json",
+        content: { readings: [], request: { kind: "explain", quote: "what does that mean" } },
+      },
+      askR("It means any treatment for cancer. Have you had any?"),
+      readR([{ criterionId: "L8", reading: "does-not-hold", quote: "No" }]),
+      askR("Has a surgeon said it can be removed?"),
+    ];
+    const replies = ["what does that mean?", "No, none."];
+    const session = ScreeningSession.create(STUDY, CRITERIA, new FakeModelAdapter(script));
+    await session.start();
+    for (const text of replies) {
+      await session.receive(text);
+    }
+
+    const { svc, transport } = service(script);
+    const id = svc.start("NCT04316364");
+    await svc.settled(id);
+    for (const text of replies) {
+      await send(svc, transport, id, text);
+    }
+
+    expect(svc.state(id)).toEqual(session.state());
+    expect(svc.state(id)?.transcript[3]?.responds).toBe("explain");
   });
 
   it("opens in the working state, before the opening has arrived", () => {

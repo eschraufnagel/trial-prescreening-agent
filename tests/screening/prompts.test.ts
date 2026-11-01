@@ -4,8 +4,10 @@ import { VERDICT_PATTERN } from "../../evals/graders/screening.js";
 import {
   ASK_CONTEXT_TURNS,
   ASK_SYSTEM_PROMPT,
+  type AskRequest,
   buildAskPrompt,
   buildReadPrompt,
+  PROMPT_LAYOUT,
   PROMPT_VERSION,
   READ_SYSTEM_PROMPT,
 } from "../../src/screening/prompts.js";
@@ -14,6 +16,9 @@ import {
   closingMessage,
   OPENING_TEMPLATE,
   openingMessage,
+  STUDY_FACTS_TEMPLATE,
+  stopMessage,
+  studyFacts,
 } from "../../src/screening/templates.js";
 import type { ScreeningCriterion, Turn } from "../../src/screening/types.js";
 
@@ -39,6 +44,16 @@ describe("the fixed templates", () => {
   it("contain no verdict language", () => {
     expect(VERDICT_PATTERN.test(openingMessage(STUDY))).toBe(false);
     expect(VERDICT_PATTERN.test(closingMessage())).toBe(false);
+  });
+
+  it("include the stop text and study facts, which contain no verdict language either (0021)", () => {
+    expect(VERDICT_PATTERN.test(stopMessage("Are you pregnant?", true))).toBe(false);
+    expect(VERDICT_PATTERN.test(stopMessage("Are you pregnant?", false))).toBe(false);
+    for (const fact of studyFacts(STUDY)) {
+      expect(VERDICT_PATTERN.test(fact)).toBe(false);
+    }
+    expect(studyFacts(STUDY)[0]).toBe('The study is called "A Lung Cancer Study".');
+    expect(STUDY_FACTS_TEMPLATE.length).toBe(5);
   });
 
   it("name the study and hand off to a coordinator", () => {
@@ -179,6 +194,56 @@ describe("the read prompt", () => {
     expect(READ_SYSTEM_PROMPT).toMatch(
       /"does-not-apply": the criterion is written about one group/,
     );
+  });
+});
+
+describe("requests (slice 0021)", () => {
+  const ask = (request?: AskRequest) =>
+    buildAskPrompt({
+      study: STUDY,
+      transcript: turns(2),
+      criterion: CRITERION,
+      kind: "clinical",
+      ...(request === undefined ? {} : { request }),
+    });
+
+  it("tells the ask call to explain from the criterion's words, then ask again", () => {
+    const prompt = ask({ kind: "explain", quote: "elaborate on this" });
+    expect(prompt).toMatch(/REQUEST: They asked what this question means \("elaborate on this"\)/);
+    expect(prompt).toMatch(/using only the CRITERION's words/);
+    expect(prompt).not.toMatch(/STUDY FACTS/);
+  });
+
+  it("gives the reason for a why, and study facts only for a study question", () => {
+    expect(ask({ kind: "why", quote: "why?" })).toMatch(/REQUEST: They asked why you are asking/);
+    const study = ask({ kind: "study", quote: "what is this?" });
+    expect(study).toMatch(/from STUDY FACTS only/);
+    expect(study).toMatch(/- The study is called "A Lung Cancer Study"\./);
+  });
+
+  it("points a second request to the coordinator", () => {
+    expect(ask({ kind: "explain", quote: "huh?", again: true })).toMatch(
+      /They asked again \("huh\?"\)\. Say briefly that the study coordinator can go over it/,
+    );
+  });
+
+  it("has no REQUEST block without a request", () => {
+    expect(ask()).not.toMatch(/REQUEST/);
+  });
+
+  it("replaces the one-line answer rule, and keeps a new criterion from posing as a follow-up", () => {
+    expect(ASK_SYSTEM_PROMPT).not.toMatch(/you may answer briefly in a few words/);
+    expect(ASK_SYSTEM_PROMPT).toMatch(
+      /Begin with "To clarify" or similar only when FOLLOW-UP or REQUEST/,
+    );
+    expect(ASK_SYSTEM_PROMPT).toMatch(/Explain the question, never the person's own situation/);
+    expect(PROMPT_LAYOUT).toBe(6);
+  });
+
+  it("asks the read call for a request, and says not sure is an answer", () => {
+    expect(READ_SYSTEM_PROMPT).toMatch(/"explain": it asks what the question/);
+    expect(READ_SYSTEM_PROMPT).toMatch(/"I'm not sure" or "I don't know" answers the question/);
+    expect(READ_SYSTEM_PROMPT).toMatch(/"request": null \| \{ "kind"/);
   });
 });
 

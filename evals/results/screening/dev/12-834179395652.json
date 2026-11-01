@@ -1,0 +1,323 @@
+{
+  "startedAt": "2026-11",
+  "finishedAt": "2026-11",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "thinking": "off",
+  "promptVersion": "834179395652",
+  "simulatorVersion": "5fd4476340c9",
+  "graderVersion": "4",
+  "vignetteSetHash": "d598b68a512d",
+  "dev": true,
+  "conversations": [
+    {
+      "vignetteId": "NCT00077350-dev",
+      "nctId": "NCT00077350",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 567883,
+        "participantMs": 240481,
+        "fidelityMs": 133346,
+        "agentCalls": 60,
+        "participantCalls": 30,
+        "fidelityCalls": 30
+      },
+      "questions": 30,
+      "labels": {
+        "score": {
+          "determinations": 6,
+          "confidentlyWrong": 0,
+          "answerable": 7,
+          "abstained": 1,
+          "abstainable": 3,
+          "correctAbstentions": 3,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0.14285714285714285,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 1,
+          "agreed": 1,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 30,
+          "participantReplies": 30,
+          "multiQuestion": 1,
+          "overLength": 0,
+          "verdictLanguage": [
+            {
+              "turn": 1,
+              "text": "Thanks. To be eligible, the lung cancer diagnosis must be confirmed by looking at tissue samples under a microscope (biopsy). Has your doctor confirmed your NSCLC diagnosis this way, rather than just using cells from fluid or sputum?"
+            }
+          ],
+          "followUps": 3
+        },
+        "notCorrect": [
+          {
+            "label": "L20",
+            "expected": "does-not-hold",
+            "status": "unresolved",
+            "outcome": "abstained",
+            "evidence": ["I'm a man, so not pregnant."]
+          }
+        ]
+      },
+      "flaggedTurns": 18
+    },
+    {
+      "vignetteId": "NCT03433469-dev",
+      "nctId": "NCT03433469",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 859093,
+        "participantMs": 357729,
+        "fidelityMs": 61189,
+        "agentCalls": 78,
+        "participantCalls": 39,
+        "fidelityCalls": 39
+      },
+      "questions": 39,
+      "labels": {
+        "score": {
+          "determinations": 10,
+          "confidentlyWrong": 0,
+          "answerable": 10,
+          "abstained": 0,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 39,
+          "participantReplies": 39,
+          "multiQuestion": 6,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 3
+        },
+        "notCorrect": []
+      },
+      "flaggedTurns": 19
+    },
+    {
+      "vignetteId": "NCT04316364-dev",
+      "nctId": "NCT04316364",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 168062,
+        "participantMs": 80251,
+        "fidelityMs": 27244,
+        "agentCalls": 42,
+        "participantCalls": 21,
+        "fidelityCalls": 21
+      },
+      "questions": 21,
+      "labels": {
+        "score": {
+          "determinations": 5,
+          "confidentlyWrong": 0,
+          "answerable": 6,
+          "abstained": 1,
+          "abstainable": 2,
+          "correctAbstentions": 2,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0,
+          "abstentionRate": 0.16666666666666666,
+          "correctAbstentionRate": 1
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 21,
+          "participantReplies": 21,
+          "multiQuestion": 2,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 2
+        },
+        "notCorrect": [
+          {
+            "label": "L7",
+            "expected": "holds",
+            "status": "unresolved",
+            "outcome": "abstained",
+            "evidence": ["I am 60 years old, so I am retired and no longer of childbearing age"]
+          }
+        ]
+      },
+      "flaggedTurns": 5
+    },
+    {
+      "vignetteId": "NCT04385368-dev",
+      "nctId": "NCT04385368",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 595527,
+        "participantMs": 255321,
+        "fidelityMs": 103767,
+        "agentCalls": 110,
+        "participantCalls": 55,
+        "fidelityCalls": 55
+      },
+      "questions": 55,
+      "labels": {
+        "score": {
+          "determinations": 15,
+          "confidentlyWrong": 2,
+          "answerable": 13,
+          "abstained": 0,
+          "abstainable": 6,
+          "correctAbstentions": 4,
+          "simulatorAffected": 0,
+          "confidentlyWrongRate": 0.13333333333333333,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.6666666666666666
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 55,
+          "participantReplies": 55,
+          "multiQuestion": 2,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 12
+        },
+        "notCorrect": [
+          {
+            "label": "L57",
+            "expected": "defer",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["I wouldn't know, I've never had them."]
+          },
+          {
+            "label": "L64",
+            "expected": "unresolved",
+            "status": "does-not-hold",
+            "outcome": "confidently-wrong",
+            "evidence": ["my operation was about two months ago"]
+          }
+        ]
+      },
+      "flaggedTurns": 22
+    },
+    {
+      "vignetteId": "NCT06728852-dev",
+      "nctId": "NCT06728852",
+      "source": "labels",
+      "status": "graded",
+      "timing": {
+        "agentMs": 415623,
+        "participantMs": 237067,
+        "fidelityMs": 67995,
+        "agentCalls": 87,
+        "participantCalls": 43,
+        "fidelityCalls": 43
+      },
+      "questions": 43,
+      "labels": {
+        "score": {
+          "determinations": 8,
+          "confidentlyWrong": 1,
+          "answerable": 7,
+          "abstained": 0,
+          "abstainable": 4,
+          "correctAbstentions": 3,
+          "simulatorAffected": 1,
+          "confidentlyWrongRate": 0.125,
+          "abstentionRate": 0,
+          "correctAbstentionRate": 0.75
+        },
+        "reported": {
+          "graded": 2,
+          "agreed": 2,
+          "disagreements": []
+        },
+        "discipline": {
+          "agentQuestions": 43,
+          "participantReplies": 43,
+          "multiQuestion": 3,
+          "overLength": 0,
+          "verdictLanguage": [],
+          "followUps": 7
+        },
+        "notCorrect": [
+          {
+            "label": "L15",
+            "expected": "defer",
+            "status": "holds",
+            "outcome": "confidently-wrong",
+            "evidence": [
+              "I'm not breastfeeding, and I don't need contraception",
+              "I agree to use a reliable form of contraception during the study and for six months after"
+            ]
+          },
+          {
+            "label": "L16",
+            "expected": "defer",
+            "status": "holds",
+            "outcome": "simulator-affected",
+            "evidence": [
+              "Yes, I agree to use a reliable form of contraception during the study and for six months after it ends."
+            ]
+          }
+        ]
+      },
+      "flaggedTurns": 20
+    }
+  ],
+  "pooled": {
+    "labels": {
+      "determinations": 44,
+      "confidentlyWrong": 3,
+      "answerable": 43,
+      "abstained": 2,
+      "abstainable": 17,
+      "correctAbstentions": 14,
+      "simulatorAffected": 1,
+      "confidentlyWrongRate": 0.06818181818181818,
+      "abstentionRate": 0.046511627906976744,
+      "correctAbstentionRate": 0.8235294117647058
+    },
+    "parse": {
+      "scored": {
+        "determinations": 0,
+        "confidentlyWrong": 0,
+        "answerable": 0,
+        "abstained": 0,
+        "abstainable": 0,
+        "correctAbstentions": 0,
+        "simulatorAffected": 0,
+        "confidentlyWrongRate": null,
+        "abstentionRate": null,
+        "correctAbstentionRate": null
+      },
+      "categories": {}
+    }
+  },
+  "failed": []
+}

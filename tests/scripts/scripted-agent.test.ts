@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { SLOW_MS, scriptedAgent } from "../../scripts/app/scripted-agent.js";
 import { FakeModelAdapter, isConnectionFailure } from "../../src/models/index.js";
 import { raisability, ScreeningSession } from "../../src/screening/index.js";
+import { STOP_TEMPLATE } from "../../src/screening/templates.js";
 import { CRITERIA, STUDY } from "../fixtures/conversation.js";
 
 /**
@@ -113,5 +114,52 @@ describe("the scripted agent", () => {
     expect(byId.get("L8")).toMatchObject({ status: "unresolved", reason: "does-not-apply" });
     expect(byId.get("L2")).toMatchObject({ status: "chart-review", reported: "does-not-apply" });
     expect(state.rejectedReadings).toEqual([]);
+  });
+
+  it("reads [explain] as a request, explains the same criterion, then reads the answer (slice 0021)", async () => {
+    const answers = ["[explain] what does that mean?", "No"];
+    let i = 0;
+    const { questions, state } = await converse(() => answers[i++] ?? "yes");
+
+    expect(questions[1]).toMatch(/^\(scripted\) That question asks whether this is true for you:/);
+    expect(state.transcript[2]?.request).toEqual({
+      kind: "explain",
+      quote: "what does that mean?",
+    });
+    expect(state.transcript[3]).toMatchObject({ criterionId: "L8", responds: "explain" });
+    expect(state.progress.find((p) => p.criterionId === "L8")).toMatchObject({
+      status: "does-not-hold",
+      timesAsked: 1,
+      responses: 1,
+    });
+    expect(state.rejectedRequests ?? []).toEqual([]);
+  });
+
+  it("reads [why], [study] and [stop] as those requests, each answered before the same question", async () => {
+    const answers = [
+      "[why] why ask?",
+      "No",
+      "[study] what is this?",
+      "No",
+      "[stop] can we stop",
+      "No",
+    ];
+    let i = 0;
+    const { questions, state } = await converse(() => answers[i++] ?? "yes");
+
+    expect(questions[1]).toMatch(/^\(scripted\) That question asks whether/);
+    expect(questions[3]).toMatch(/^\(scripted\) The study is called "/);
+    expect(questions[5]?.startsWith(STOP_TEMPLATE)).toBe(true);
+    const requests = state.transcript.flatMap((t) => (t.request === undefined ? [] : [t.request]));
+    expect(requests).toEqual([
+      { kind: "why", quote: "why ask?" },
+      { kind: "study", quote: "what is this?" },
+      { kind: "stop", quote: "can we stop" },
+    ]);
+    const responds = state.transcript.flatMap((t) =>
+      t.responds === undefined ? [] : [t.responds],
+    );
+    expect(responds).toEqual(["why", "study", "stop"]);
+    expect(state.rejectedRequests ?? []).toEqual([]);
   });
 });

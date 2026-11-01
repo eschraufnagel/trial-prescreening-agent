@@ -27,6 +27,37 @@ export const CLOSING_TEMPLATE =
   "Thank you, that's all my questions. A study coordinator will review your answers " +
   "and contact you about next steps.";
 
+/**
+ * Said when the person asks to stop or pause (slice 0021), followed by the
+ * question again or the next one. Fixed text, so it can't drift into a summary.
+ */
+export const STOP_TEMPLATE =
+  "Of course. You can stop at any time by closing this page, and a study coordinator " +
+  "will still follow up on what you've told me so far.";
+export const STOP_AGAIN = "If you'd like to keep going, here is the question again:";
+export const STOP_NEXT = "If you'd like to keep going, here is the next question:";
+
+/**
+ * Everything the agent may say about the study and the process when asked
+ * (slice 0021). Only the title is the study's own: no trial record carries a
+ * summary. Anything else the person asks is for the coordinator.
+ */
+export const STUDY_FACTS_TEMPLATE = [
+  'The study is called "{title}".',
+  "This is a short prescreening, not enrolment in the study.",
+  REASSURANCE,
+  "They can skip any question.",
+  "They can stop at any time.",
+];
+
+export function studyFacts(study: StudyContext): string[] {
+  return STUDY_FACTS_TEMPLATE.map((f) => f.replace("{title}", study.briefTitle));
+}
+
+export function stopMessage(question: string, again: boolean): string {
+  return `${STOP_TEMPLATE} ${again ? STOP_AGAIN : STOP_NEXT}\n\n${question}`;
+}
+
 export function openingMessage(study: StudyContext): string {
   return OPENING_TEMPLATE.replace("{title}", study.briefTitle);
 }

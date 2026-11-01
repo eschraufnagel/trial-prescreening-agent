@@ -23,7 +23,7 @@ Each row shows the criterion's protocol words and plain version, then the findin
 > **Protocol:** Pregnant · **Plain language:** Is pregnant.
 > 39 Are you currently pregnant? · 40 No, I am not pregnant.
 
-Under the finding are every question the agent asked about that criterion and the full reply, with the words the agent read highlighted. A reply that settled the criterion while answering a question about something else is shown too, with that question. Any reading the agent discarded, because its quote was not in the reply, is also shown. The whole conversation is below the groups.
+Under the finding are every question the agent asked about that criterion and the full reply, with the words the agent read highlighted. A reply that settled the criterion while answering a question about something else is shown too, with that question. Any reading the agent discarded, because its quote was not in the reply, is also shown. Since slice 0021, so is any reading it set aside because the person asked what the question meant: that answer isn't evidence, and the answer given after the explanation is. The whole conversation is below the groups. A reply where the person asked for something is labelled in it: *Asked what this means*, *Asked why*, *Asked about the study* or *Asked to stop*.
 
 ### Where it stops
 

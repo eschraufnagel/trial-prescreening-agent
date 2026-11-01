@@ -17,7 +17,7 @@ Clinical trials struggle to enroll people, and coordinators spend a lot of their
 ## What it does
 
 1. **Turns a trial's eligibility rules into a checklist.** It reads the rules as the trial published them and makes a checklist from them.
-2. **Has the conversation.** It asks about each rule in plain language, one question at a time. For each rule it records one of three outcomes: the answer settles it, it needs medical records, or it's still open.
+2. **Has the conversation.** It asks about each rule in plain language, one question at a time, and explains a question when the person asks what it means. For each rule it records one of three outcomes: the answer settles it, it needs medical records, or it's still open.
 3. **Hands over a review.** The coordinator sees every rule, the person's own words beside it, and the AI's reading of those words. Then the coordinator decides.
 
 ```mermaid

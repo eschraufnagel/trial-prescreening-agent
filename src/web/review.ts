@@ -7,6 +7,7 @@ import type {
   FindingStatus,
   ReadingValue,
   ReportedValue,
+  RequestKind,
   ScreeningCriterion,
   ScreeningResult,
   Turn,
@@ -90,9 +91,19 @@ export interface TranscriptLine {
   text: string;
   /** On a question: the criterion the agent raised. */
   raised: string | null;
+  /** On a reply: what the person asked the agent for, in words (slice 0021). */
+  asked: string | null;
   /** The rows that show this turn. */
   citedBy: string[];
 }
+
+/** Fixed words for what a participant asked for (slice 0021). Typed, so every kind has words. */
+export const REQUEST_WORDS: Record<RequestKind, string> = {
+  explain: "Asked what this means",
+  why: "Asked why",
+  study: "Asked about the study",
+  stop: "Asked to stop",
+};
 
 const GROUPS: ReadonlyArray<{
   key: GroupKey;
@@ -335,7 +346,9 @@ export function readingLines(criterionId: string, result: ScreeningResult): stri
     .map((r) =>
       r.why === "already-settled"
         ? `At turn ${r.turn} the agent read this as ${readingWords(r.reading)} after it was settled. It was ignored.`
-        : `At turn ${r.turn} the agent read something about this criterion, which isn't asked in conversation. It was ignored.`,
+        : r.why === "asked-to-explain"
+          ? `At turn ${r.turn} the person asked what the question meant, so the agent set aside what that reply said (${readingWords(r.reading)}) and asked again.`
+          : `At turn ${r.turn} the agent read something about this criterion, which isn't asked in conversation. It was ignored.`,
     );
   return [...rejected, ...ignored];
 }
@@ -431,6 +444,7 @@ export function reviewModel(review: ConversationReview): ReviewModel {
       speaker: t.speaker === "agent" ? "Agent" : "Participant",
       text: t.text,
       raised: t.kind === "question" ? (t.criterionId ?? null) : null,
+      asked: t.request === undefined ? null : REQUEST_WORDS[t.request.kind],
       citedBy: citedBy.get(t.index) ?? [],
     })),
   };

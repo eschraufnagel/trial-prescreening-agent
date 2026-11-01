@@ -14,7 +14,7 @@ import type { CompletionRequest, ScriptedResponse } from "../../src/models/index
  * drives a whole session with it, so a change to the layout breaks a test
  * rather than the fake mode.
  *
- * Three replies are read specially (slice 0010), so the page's browser test
+ * These replies are read specially (slices 0010 and 0021), so the page's browser test
  * can reach every state the page has without a model:
  *
  * - `[down] ...` answers as an unreachable model would. The server reports a
@@ -23,14 +23,23 @@ import type { CompletionRequest, ScriptedResponse } from "../../src/models/index
  *   two seconds, so the page shows the agent working.
  * - `n/a` reads as does-not-apply, 0009's reading for a person outside the
  *   group a criterion is about.
+ * - `[explain] ...`, `[why] ...`, `[study] ...` and `[stop] ...` read as that
+ *   request (slice 0021), with what follows the marker as its quote. An ask with
+ *   a REQUEST answers it before asking again, from the first study fact when
+ *   the request is about the study. A stop request is answered by fixed text,
+ *   with no ask.
  */
 
 const CRITERION_LINE = /^CRITERION \((?:inclusion|exclusion)\): (.*)$/m;
 const REPLY_LINE = /^THE REPLY TO READ: (.*)$/m;
 const ASKED_LINE = /^THE QUESTION WAS ABOUT: (\S+)$/m;
+const REQUEST_LINE = /^REQUEST: /m;
+const FIRST_STUDY_FACT = /^STUDY FACTS:\n- (.*)$/m;
 
 const DOWN = "[down]";
 const SLOW = "[slow]";
+/** The request markers, each read as the request of the same name. */
+const REQUESTS = ["explain", "why", "study", "stop"] as const;
 /** How long `[slow]` holds the answer: long enough for a browser to see the agent working. */
 export const SLOW_MS = 2000;
 
@@ -41,6 +50,21 @@ export function scriptedAgent(request: CompletionRequest): ScriptedResponse {
 
 function ask(prompt: string): ScriptedResponse {
   const criterion = CRITERION_LINE.exec(prompt)?.[1]?.trim() ?? "this criterion";
+  const fact = FIRST_STUDY_FACT.exec(prompt)?.[1];
+  if (fact !== undefined) {
+    return {
+      kind: "json",
+      content: { message: `(scripted) ${fact} Is this true for you: ${criterion}?` },
+    };
+  }
+  if (REQUEST_LINE.test(prompt)) {
+    return {
+      kind: "json",
+      content: {
+        message: `(scripted) That question asks whether this is true for you: ${criterion}. Is it?`,
+      },
+    };
+  }
   return {
     kind: "json",
     content: {
@@ -56,6 +80,16 @@ function read(prompt: string, message: string): ScriptedResponse {
     return {
       kind: "error",
       message: `request failed: ${DOWN} was typed, the scripted model is unreachable`,
+    };
+  }
+  const kind = REQUESTS.find((k) => typed.startsWith(`[${k}]`));
+  if (kind !== undefined) {
+    // The quote is what was typed after the marker, or the marker itself, so it locates.
+    const marker = `[${kind}]`;
+    const rest = typed.slice(marker.length).trim();
+    return {
+      kind: "json",
+      content: { readings: [], request: { kind, quote: rest === "" ? marker : rest } },
     };
   }
   if (typed.startsWith(SLOW)) {

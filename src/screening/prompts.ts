@@ -1,6 +1,14 @@
 import { hashPrompt } from "../criteria/prompt.js";
-import { CLOSING_TEMPLATE, OPENING_TEMPLATE } from "./templates.js";
-import type { ScreeningCriterion, StudyContext, Turn } from "./types.js";
+import {
+  CLOSING_TEMPLATE,
+  OPENING_TEMPLATE,
+  STOP_AGAIN,
+  STOP_NEXT,
+  STOP_TEMPLATE,
+  STUDY_FACTS_TEMPLATE,
+  studyFacts,
+} from "./templates.js";
+import type { RequestKind, ScreeningCriterion, StudyContext, Turn } from "./types.js";
 
 /**
  * The two things the model is asked to do: phrase one question, and read one
@@ -21,7 +29,8 @@ Rules:
 - Ask neutrally. For a criterion worded as a prohibition ("must not have received X"), ask whether they have received X.
 - If KIND is clinical, the patient may not know the answer: make "I'm not sure" an easy, acceptable reply.
 - If FOLLOW-UP is given, the person already answered part of this criterion. Ask only about the part that is still missing, and do not repeat what they already told you.
-- If their last message asked you something, you may answer briefly in a few words before your question, but give no medical advice.
+- If REQUEST is given, the person asked you something. Do what REQUEST says first, then ask. Explain the question, never the person's own situation or what an answer would mean for them. Give no medical advice. The whole message may then be up to 450 characters, still with only one question mark.
+- Begin with "To clarify" or similar only when FOLLOW-UP or REQUEST is given. A new criterion is a new question: never present it as a follow-up.
 - Never say or suggest whether the person is eligible, qualifies, or is a good or poor candidate. Never comment on what an answer means for them.
 - You may begin with a brief acknowledgement such as "Thanks."
 
@@ -55,8 +64,15 @@ Judge an open criterion on everything the person has said about it: what is list
 
 Criteria listed as ALREADY ANSWERED show what was recorded and the person's words, most recent first. Give a reading for one only if this reply changes, qualifies or contradicts what was recorded, and quote the words that do. A correction often doesn't repeat what it corrects ("no, the other way round", "I got that date wrong"), so compare the reply with each recorded answer.
 
+Then say whether the reply asks the research assistant for something, in "request":
+- "explain": it asks what the question or a word in it means, or says they don't understand the question.
+- "why": it asks why the question is asked.
+- "study": it asks about the study, who sees their answers, or what happens next.
+- "stop": it asks to stop or pause.
+Give one kind, and quote the asking words exactly in "quote". Use null when the reply asks for nothing. Saying "I'm not sure" or "I don't know" answers the question: it is a reading of "unknown", not a request.
+
 Return JSON only:
-{ "readings": [ { "criterionId": "<id>", "statement": "<statement>", "quote": "<exact words>", "outright": true, "reading": "<reading>", "missing": "<only for partial>" } ] }`;
+{ "readings": [ { "criterionId": "<id>", "statement": "<statement>", "quote": "<exact words>", "outright": true, "reading": "<reading>", "missing": "<only for partial>" } ], "request": null | { "kind": "<kind>", "quote": "<exact words>" } }`;
 
 /**
  * Appended to the user prompt when retrying after a truncated response.
@@ -80,7 +96,7 @@ export const READ_CONTEXT_TURNS = 4;
  * either builder changes what the model sees, so the change reaches
  * `PROMPT_VERSION` and cannot be mixed silently with earlier results.
  */
-export const PROMPT_LAYOUT = 5;
+export const PROMPT_LAYOUT = 6;
 
 /** Hash of everything the agent says or is told. Recorded on every result. */
 export const PROMPT_VERSION = hashPrompt(
@@ -90,6 +106,10 @@ export const PROMPT_VERSION = hashPrompt(
     OPENING_TEMPLATE,
     CLOSING_TEMPLATE,
     RETRY_AFTER_TRUNCATION,
+    STOP_TEMPLATE,
+    STOP_AGAIN,
+    STOP_NEXT,
+    ...STUDY_FACTS_TEMPLATE,
     `layout ${PROMPT_LAYOUT}`,
     `context ${ASK_CONTEXT_TURNS}/${READ_CONTEXT_TURNS}`,
   ].join("\n---\n"),
@@ -102,6 +122,18 @@ export interface AskContext {
   kind: "patient" | "clinical";
   /** Present on a follow-up: what the earlier answer left unanswered, or why it was unclear. */
   followUp?: string;
+  /**
+   * Present when the person's last message asked for something (slice 0021).
+   * `again` when they asked to have a question explained, or why, and it
+   * already had its one response.
+   */
+  request?: AskRequest;
+}
+
+export interface AskRequest {
+  kind: Exclude<RequestKind, "stop">;
+  quote: string;
+  again?: true;
 }
 
 export function buildAskPrompt(context: AskContext): string {
@@ -114,9 +146,36 @@ export function buildAskPrompt(context: AskContext): string {
     `CRITERION (${context.criterion.polarity}): ${context.criterion.text}`,
     `KIND: ${context.kind}`,
     ...(context.followUp === undefined ? [] : [`FOLLOW-UP: ${context.followUp}`]),
+    ...(context.request === undefined ? [] : requestLines(context.request, context.study)),
     "",
     'Respond with a JSON object of the form {"message": "..."} holding the next text message.',
   ].join("\n");
+}
+
+/** What the ask call is told to do before its question, by the kind of request. */
+function requestLines(request: AskRequest, study: StudyContext): string[] {
+  const words = JSON.stringify(request.quote);
+  if (request.again === true) {
+    return [
+      `REQUEST: They asked again (${words}). Say briefly that the study coordinator can go over it with them, then ask the question.`,
+    ];
+  }
+  switch (request.kind) {
+    case "explain":
+      return [
+        `REQUEST: They asked what this question means (${words}). First explain the question in plain words, in one or two short sentences, using only the CRITERION's words: what it asks about, and what any medical term in it means. Then ask the question again.`,
+      ];
+    case "why":
+      return [
+        `REQUEST: They asked why you are asking (${words}). First say in one sentence why: the study can only include people who meet its requirements, and this is one of them. Then ask the question again.`,
+      ];
+    case "study":
+      return [
+        `REQUEST: They asked about the study or the process (${words}). First answer in one or two sentences, from STUDY FACTS only. If STUDY FACTS don't cover it, say the study coordinator can answer that. Then ask the question.`,
+        "STUDY FACTS:",
+        ...studyFacts(study).map((f) => `- ${f}`),
+      ];
+  }
 }
 
 export interface ReadContext {

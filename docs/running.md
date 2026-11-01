@@ -46,7 +46,7 @@ What to expect:
 - **One message at a time.** While the agent is working, Send is disabled and your draft is kept. A real text-message channel could not refuse a second message. This one does, because a message written before the next question would otherwise be read as its answer, which is exactly what the evidence check exists to prevent. A real channel would need to merge the two and re-run the turn.
 - **Conversations are saved** in `chats/` (gitignored) after every change, in the same format `npm run screening:chat` writes. A reload, a server restart or the model going down loses nothing. A message the agent had not finished with comes back marked *not processed*, to send again. It is never retried silently. Terminal chats appear in the page's list and can be continued there, and any conversation renders with `npm run screening:show -- chats/<id>.json --html`.
 - **If the model is down**, the page says so and points at oMLX's health check. `--fake` works without it.
-- **The scripted agent behind `--fake`** reads your first word literally: yes, no, not sure, or `n/a` for a criterion that doesn't apply to you. Two more replies exist for testing the page. `[slow] yes` holds the answer for two seconds, so you can see the agent working, and `[down] yes` answers as an unreachable model would.
+- **The scripted agent behind `--fake`** reads your first word literally: yes, no, not sure, or `n/a` for a criterion that doesn't apply to you. More replies exist for testing the page. `[slow] yes` holds the answer for two seconds, so you can see the agent working, and `[down] yes` answers as an unreachable model would. `[explain]`, `[why]`, `[study]` and `[stop]`, followed by anything, read as that request.
 - The server listens on `127.0.0.1` only, and refuses requests addressed to any other name or coming from another site's page.
 
 The agent the page runs is the one measured below, unchanged. A test drives the same scripted conversation directly, through the transport and through the HTTP API, and requires all three to end in identical state.
@@ -71,12 +71,12 @@ Added trials are kept one file each in `added-trials/`, which is gitignored like
 
 ```
 npx playwright install chromium   once per machine: the pinned browser, about 94 MB, outside the repository
-npm run test:e2e                  the browser test, about 15 seconds
+npm run test:e2e                  the browser test, about 20 seconds
 ```
 
 `npm run test:e2e` builds the page, starts it with the scripted agent on port 5015 and empty conversation and trial directories, and drives it in Chromium. It never reaches a model, and a test in `npm test` fails if its server command could. It's not part of `npm test`, and it runs before any PR that changes the page, the server, the transport or what the review reads (CLAUDE.md lists the paths).
 
-It covers eleven cases:
+It covers thirteen cases:
 
 - Screenings' studies and Reviews' eval-run conversations, which have no Delete;
 - the tester panel following a conversation;
@@ -88,6 +88,9 @@ It covers eleven cases:
 - a reload mid-conversation coming back where it was, tester panel still open;
 - Trials (slices 0013 and 0014): the first-run panel, fake mode's invented study added by link, read, its checklist, offered and screened against, the two refusals, Remove with Cancel then Remove, and its screening deleted by its readable name.
 - Settings (slice 0017): a provider chosen and a test key saved, shown only by its last four characters, tested, kept across a reload and removed, with no server answer ever carrying the key.
+- Requests (slice 0021): asked what a question means, why it's asked, about the study, and to stop. Each gets its answer before the same question, the question number holds, and the review labels the reply.
+
+**It runs on `main` and every pull request** as well, with `npm run check`, in `.github/workflows/check.yml` on GitHub Actions. That workflow deploys nothing, calls no model and holds no secret. A failed run keeps the browser traces as a download. Model evals don't run there; they need the local model.
 
 **How we know it bites.** Before it became a rule, each case's behaviour was broken on purpose in the page, nine breaks in all, and each break failed the case aimed at it. The breaks, and which cases failed, are in `work/0010-browser-e2e-tests/plan.md`. They were chosen by whoever wrote the tests, so they show each case catches its own behaviour, not that the suite catches any page bug.
 
