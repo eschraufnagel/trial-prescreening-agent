@@ -1,7 +1,7 @@
 # plan: 0022 self-corrections
 
 **Author:** the repository owner
-**Status:** Accepted by the owner, 2026-10. Stage 1 in progress
+**Status:** Accepted by the owner, 2026-10. Stage 2 in progress
 **Date:** 2026-10
 **Spec:** [spec.md](spec.md)
 
@@ -20,7 +20,7 @@ Written in plan mode from a reading of `src/screening/session.ts`, `calls.ts`, `
 | Stage | Steps | Ends at | What's decided |
 | --- | --- | --- | --- |
 | **1. The replay tool** | 1–2 | none | Deterministic. Pinned by a test that rebuilding every committed conversation reproduces its final statuses. Lands before the agent change, so the "before" replay runs on `main`'s prompt |
-| **2. The field, measured** | 3–5 | **Gate 1** | Is (a) enough, or is (b) built? Against spec §5's bar |
+| **2. The field, measured** | 3–5 (3 skipped) | **Gate 1** | Is (a) enough, or is (b) built? Against spec §5's bar |
 | **3. The separate call** | 6–7 | **Gate 1 again** | Only if gate 1 asked for it. Same bar. If neither meets it: ship the better one with its numbers, or stop the slice |
 | **4. Dev re-run** | 8 | **Gate 2**, then **Gate 3** | Did answering get worse, are there false corrections (spec §6)? Then: does the acknowledgement read as being heard, and does the review show the row (spec §7)? |
 | **5. Write-up** | 9–10 | none | Docs and review passes. No decision attached |
@@ -65,7 +65,7 @@ Written in plan mode from a reading of `src/screening/session.ts`, `calls.ts`, `
    - Deterministic test of the result shaping with a `FakeModelAdapter`.
    - The CLAUDE.md commands table gains the line in this commit.
    - As built: the runner is `replay()` in `evals/corrections/replay.ts`, so it's tested with a `FakeModelAdapter`, and the script only writes and prints. A turn whose read fails after its retries is recorded as `failed`, not dropped. The sample is 44 ordinary turns, so a replay is 54 calls, about 7 minutes.
-3. **Replay, before.** On `main`'s prompt (`834179395652`), about 8 minutes. *Claim: what today's read call catches on these exact turns. The original runs used older prompts, so their outcome isn't the baseline.* The result is committed.
+3. **Replay, before. Skipped by the owner (2026-11)**, to keep the measuring proportionate. Only 6 of the 10 cases are the shape this slice fixes, and the dev re-run measures live catches anyway. The cost: no same-prompt baseline for the replay. The after replay is compared with what the recorded conversations did instead, on older prompts for the three from `EVAL_RUN` and on `834179395652` for the four from dev 12, and the write-up says so.
 4. **The field and the acknowledgement** (one commit, because the read call's return shape and its only caller change together, as 0021 found).
    - **`calls.ts`:** `ReadResult` gains `corrections`. `readRead` parses it leniently (spec §3.1): an absent or non-array value is empty, and a bad entry is dropped without losing the readings. Reuse the per-entry reading parse by extracting it from the `readings.forEach` into a helper used for both lists.
    - **`prompts.ts`:**
@@ -130,6 +130,6 @@ No new dependency. `tests/boundary.test.ts` is unchanged: the replay script gets
 
 ## Gate record
 
-**Gate 1's bar, restated before any replay (step 1's divergence), confirmed by the owner (2026-10).** Spec §5 asked for 9 of 11. Of the 10 scripted corrections, 6 are `settled`. Proposed: (a) is enough if it catches **at least 5 of the 6 settled turns**, including at least one of the two the recorded runs missed (v2 L3, dev L64), and more than the before replay does, with **at most 1 false correction** in the ordinary sample after reading. Otherwise (b) is built and held to the same bar. The four other turns are reported.
+**Gate 1's bar, restated before any replay (step 1's divergence), confirmed by the owner (2026-10).** Spec §5 asked for 9 of 11. Of the 10 scripted corrections, 6 are `settled`. Proposed: (a) is enough if it catches **at least 5 of the 6 settled turns**, including at least one of the two the recorded runs missed (v2 L3, dev L64), and more than the before replay does (since step 3 was skipped: more than the recorded conversations caught), with **at most 1 false correction** in the ordinary sample after reading. Otherwise (b) is built and held to the same bar. The four other turns are reported.
 
 ## Review passes
