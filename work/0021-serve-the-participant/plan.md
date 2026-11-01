@@ -1,7 +1,7 @@
 # plan: 0021 serve the participant
 
 **Author:** the repository owner
-**Status:** Built and tested. Step 5 is blocked on the oMLX key, and Gates 1 and 2 are open
+**Status:** Done. Both gates passed; ready for the PR
 **Date:** 2026-10
 **Spec:** [spec.md](spec.md)
 
@@ -88,16 +88,22 @@ Every step is one commit through `npm run check && git commit`. **Steps 1 and 2 
 
 ## Gate record
 
-**Step 5, the dev re-run: not run.** It was started unattended after step 2 and stopped at once: `OMLX_API_KEY` wasn't set in the shell that runs commands, and CLAUDE.md forbids creating `.env`. oMLX itself was healthy. No result is committed, and no number anywhere claims one. To run it, with the key in your shell:
+**Step 5, the dev re-run: done (2026-10).** It couldn't run unattended, because `OMLX_API_KEY` wasn't in Claude's shell and CLAUDE.md forbids creating `.env`. The owner ran it in their own terminal, so it isn't something Claude did. The first attempt finished four conversations, and oMLX's memory guard rejected the fifth (NCT06728852) for want of about 0.3 GB. That's a machine limit, not this change. The owner freed memory and ran it again. It reused the four and finished the fifth. The complete run is committed as `evals/results/screening/dev/12-834179395652.json`. The partial one was discarded rather than committed, so the numbering stays contiguous.
 
-```
-npm run eval:screening -- --dev
-npm run screening:compare -- evals/results/screening/dev/11-2c46ada9a1d5.json evals/results/screening/dev/<new file>
-```
+Qwen3.6-35B-A3B-MLX-8bit, 8bit, temperature 0, seed 20260921, thinking off, from labels, against `11-2c46ada9a1d5.json`:
 
-Then count the located requests in the new run (spec §6): every one is a false positive.
+| | before (`2c46ada9a1d5`) | after (`834179395652`) | bar |
+| --- | --- | --- | --- |
+| confidently wrong | 5/47 (0.11) | 3/44 (0.07) | no more than 5 + 2 |
+| abstention | 1/43 (0.02) | 2/43 (0.05) | no more than 0.02 + 0.05 |
+| located requests | — | 0 | every one is false |
+| rejected requests | — | 0 | |
 
-**Gate 2: open.** It waits on step 5.
+By conversation, only NCT04385368 moved on wrong findings: 4/17 became 2/15 (L63 and L65 are no longer wrong; L57 and L64 still are). The new abstention is NCT04316364's L7, left unresolved on "I am 60 years old … no longer of childbearing age". NCT06728852's L15 is wrong in both runs. These are single samples of one seeded model, so a movement of one or two is noise, not progress.
+
+The run's vignette hash is `d598b68a512d`, and the baseline's is `aa8172ad05f2`. The vignette files haven't changed since the repository's first commit, and `main` computes `d598b68a512d` too, so the difference came before this slice, most likely with the public repository split. It doesn't come from 0021. The run file's month reads 2026-11 because the stamp is UTC and the run finished after midnight UTC on 2026-10-31.
+
+**Gate 2: passed.** Answering didn't get worse, and no reply in five conversations was read as a request. Claude's recommendation, which the owner can overrule: the README and `docs/` keep their scored numbers from `2c46ada9a1d5`, labelled as that prompt's, and the scored set isn't re-run for this slice.
 
 **Gate 1: passed (2026-10).** The owner played `npm run app -- --examples` on the local model, with spec §7's requests, and answered: "everything looks good." They gave no notes on the four things §7 asks them to read, so none are recorded here. This was the owner, a person who didn't write the prompts, so the gate is independent as the spec asked.
 
@@ -105,7 +111,7 @@ Then count the located requests in the new run (spec §6): every one is a false 
 
 Run on the whole diff against `main` after step 6.
 
-**Pass 1, plan compliance.** Every changed file is in "Files that change". Three divergences, each recorded in this plan in the commit that made it: steps 1 and 2 landed as one commit; the browser case is 12, not 8; the transparency test is a new one in `tests/server/conversations.test.ts` and doesn't change the shared fixture. **Important, open:** step 5 isn't done, so the plan isn't complete. That is stated above, and the PR waits for it.
+**Pass 1, plan compliance.** Every changed file is in "Files that change". Three divergences, each recorded in this plan in the commit that made it: steps 1 and 2 landed as one commit; the browser case is 12, not 8; the transparency test is a new one in `tests/server/conversations.test.ts` and doesn't change the shared fixture. Step 5 was open when this pass ran, and is done now; see "Gate record".
 
 **Pass 2, correctness.** Re-read `receive`, `#next`, `#respond`, `#repeatAfterStop` and `#advance` against spec §3.2's table.
 
