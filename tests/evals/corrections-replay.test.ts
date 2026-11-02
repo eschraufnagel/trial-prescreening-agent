@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   classify,
@@ -6,6 +8,7 @@ import {
   ordinaryTurns,
   progressAt,
   type Recorded,
+  ROOT,
   readContextAt,
   replay,
 } from "../../evals/corrections/replay.js";
@@ -28,6 +31,19 @@ function settledAt(r: Recorded, turn: number, id: string): boolean {
 }
 
 describe("the replay's committed inputs", () => {
+  // Nothing under tests/ reads a gitignored file, so a fresh clone passes.
+  // The screening conversation cache is gitignored; the replay's own copies aren't.
+  it.fails("reads every conversation from a committed file, not the gitignored cache", () => {
+    const ignored = readFileSync(join(ROOT, ".gitignore"), "utf8")
+      .split("\n")
+      .map((l) => l.trim())
+      .filter((l) => l !== "" && !l.startsWith("#") && !l.startsWith("!"))
+      .map((l) => l.replace(/^\//, ""));
+    for (const ref of file.conversations) {
+      expect(ignored.filter((pattern) => ref.file.startsWith(pattern))).toEqual([]);
+    }
+  });
+
   it("lists ten scripted corrections, six of them of a settled answer", () => {
     expect(file.cases).toHaveLength(10);
     expect(file.cases.filter((c) => c.shape === "settled")).toHaveLength(6);
