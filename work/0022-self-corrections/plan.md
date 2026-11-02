@@ -64,6 +64,7 @@ Written in plan mode from a reading of `src/screening/session.ts`, `calls.ts`, `
    - It writes `evals/results/corrections/NN-<PROMPT_VERSION>.json`: the model, quantization, temperature, seed and thinking mode, the prompt version, and per turn the outcome, the raw corrections and readings, and the prompt's length. It prints a table.
    - Deterministic test of the result shaping with a `FakeModelAdapter`.
    - The CLAUDE.md commands table gains the line in this commit.
+   - **Fixed after step 5:** step 1 pointed the three dev conversations at the screening conversation cache, which is gitignored. So the replay test would have failed on a fresh clone, against CLAUDE.md's rule. Byte-identical copies are now committed under `evals/results/corrections/conversations/` (excluded from Biome, like the cache, so they stay identical), and a test holds every conversation the cases file names to a path git doesn't ignore. The replay's result doesn't change: same inputs.
    - As built: the runner is `replay()` in `evals/corrections/replay.ts`, so it's tested with a `FakeModelAdapter`, and the script only writes and prints. A turn whose read fails after its retries is recorded as `failed`, not dropped. The sample is 44 ordinary turns, so a replay is 54 calls, about 7 minutes.
 3. **Replay, before. Skipped by the owner (2026-11)**, to keep the measuring proportionate. Only 6 of the 10 cases are the shape this slice fixes, and the dev re-run measures live catches anyway. The cost: no same-prompt baseline for the replay. The after replay is compared with what the recorded conversations did instead, on older prompts for the three from `EVAL_RUN` and on `834179395652` for the four from dev 12, and the write-up says so.
 4. **The field and the acknowledgement** (one commit, because the read call's return shape and its only caller change together, as 0021 found).
@@ -103,7 +104,7 @@ Every step is one commit through `npm run check && git commit`. No `Co-Authored-
 ## Files that change (against `main`)
 
 - **The agent:** `src/screening/calls.ts`, `prompts.ts`, `session.ts`, and possibly a new `src/screening/readable.ts` (step 1's lift). `index.ts` if it re-exports.
-- **The replay:** new `evals/corrections/replay.ts`, `evals/cases/corrections.json` and `scripts/replay-corrections.ts`. `package.json` (one script, no dependency).
+- **The replay:** new `evals/corrections/replay.ts`, `evals/cases/corrections.json`, `scripts/replay-corrections.ts`, and the three dev conversations it reads, under `evals/results/corrections/conversations/`. `package.json` (one script, no dependency). `biome.jsonc` excludes those conversations.
 - **Under (b) only:** `evals/screening-estimate.ts`.
 - **Tests:** `tests/screening/calls.test.ts`, `session.test.ts`, `prompts.test.ts`, and new `tests/evals/corrections-replay.test.ts`.
 - **Results:** `evals/results/corrections/` (two or three replays) and `evals/results/screening/dev/13-*.json`, with its conversations under `evals/results/screening/conversations/` as 0021 committed them.

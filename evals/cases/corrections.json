@@ -22,17 +22,17 @@
     {
       "id": "NCT00077350-dev",
       "kind": "state",
-      "file": "evals/results/screening/conversations/NCT00077350-dev-labels-Qwen3.6-35B-A3B-MLX-8bit-834179395652-5fd4476340c9-20260921-thinking-off.json"
+      "file": "evals/results/corrections/conversations/NCT00077350-dev-834179395652.json"
     },
     {
       "id": "NCT03433469-dev",
       "kind": "state",
-      "file": "evals/results/screening/conversations/NCT03433469-dev-labels-Qwen3.6-35B-A3B-MLX-8bit-834179395652-5fd4476340c9-20260921-thinking-off.json"
+      "file": "evals/results/corrections/conversations/NCT03433469-dev-834179395652.json"
     },
     {
       "id": "NCT04385368-dev",
       "kind": "state",
-      "file": "evals/results/screening/conversations/NCT04385368-dev-labels-Qwen3.6-35B-A3B-MLX-8bit-834179395652-5fd4476340c9-20260921-thinking-off.json"
+      "file": "evals/results/corrections/conversations/NCT04385368-dev-834179395652.json"
     }
   ],
   "cases": [

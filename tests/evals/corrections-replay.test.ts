@@ -33,7 +33,7 @@ function settledAt(r: Recorded, turn: number, id: string): boolean {
 describe("the replay's committed inputs", () => {
   // Nothing under tests/ reads a gitignored file, so a fresh clone passes.
   // The screening conversation cache is gitignored; the replay's own copies aren't.
-  it.fails("reads every conversation from a committed file, not the gitignored cache", () => {
+  it("reads every conversation from a committed file, not the gitignored cache", () => {
     const ignored = readFileSync(join(ROOT, ".gitignore"), "utf8")
       .split("\n")
       .map((l) => l.trim())
