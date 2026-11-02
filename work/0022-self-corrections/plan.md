@@ -1,7 +1,7 @@
 # plan: 0022 self-corrections
 
 **Author:** the repository owner
-**Status:** Accepted by the owner, 2026-10. Gate 1 met; gate 2 waiting on the owner
+**Status:** Accepted by the owner, 2026-10. Gates 1 and 2 passed; gate 3 waiting on the owner
 **Date:** 2026-10
 **Spec:** [spec.md](spec.md)
 
@@ -158,5 +158,7 @@ No new dependency. `tests/boundary.test.ts` is unchanged: the replay script gets
 3. Retuning that wording is its own change with its own measurement, and is better as its own slice than a second dev run here.
 
 The owner decides. If the owner holds the bar instead, the slice stops here, and the replay and the fix stay on the branch, unmerged.
+
+**Gate 2: the owner accepts the slice with the cost recorded (2026-11).** The abstention rise and its cause go in `docs/screening-agent.md` and `docs/limitations.md` (step 9). The sex-based `does-not-apply` misreading is left for its own slice.
 
 ## Review passes
