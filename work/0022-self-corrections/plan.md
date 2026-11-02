@@ -1,7 +1,7 @@
 # plan: 0022 self-corrections
 
 **Author:** the repository owner
-**Status:** Accepted by the owner, 2026-10. Gate 1 met; stage 4 next
+**Status:** Accepted by the owner, 2026-10. Gate 1 met; gate 2 waiting on the owner
 **Date:** 2026-10
 **Spec:** [spec.md](spec.md)
 
@@ -144,5 +144,19 @@ No new dependency. `tests/boundary.test.ts` is unchanged: the replay script gets
 - **The caveat from skipping step 3:** the one extra catch, v2 L3, is compared with a conversation recorded on an older prompt (`2c46ada9a1d5`). Main's prompt might have caught it too. The three dev catches were already catches on main's prompt.
 
 **Gate 1: met.** At least 5 of 6, including v2 L3, more than the recorded conversations caught, with no false corrections. So (b), the separate call, isn't built (steps 6–7 are skipped), and no spend is added to hosted screenings. The dev re-run (step 8) is the live check.
+
+**Step 8, the dev re-run** (`evals/results/screening/dev/13-f761514b3da8.json`, Qwen3.6-35B-A3B-MLX-8bit, 8bit, temperature 0, seed 20260921, thinking off, 2026-11; about 52 minutes). Compared with `12-834179395652.json` by `screening:compare`. Counted and read by Claude:
+
+- **Confidently wrong: 3 of 38, against 3 of 44.** Within the bar (at most 3 + 2). The two misses from run 12 that this slice touches are gone (L64, the surgery date, now ends unresolved). New wrong rows: NCT03433469 L20, below, and NCT04385368 L65, an inhaled steroid read as "no steroids", unrelated to corrections.
+- **Abstention: 7 of 42 (0.17), against 2 of 43 (0.05). Over the bar (at most 0.10).** Five of the seven are one misreading: "I'm a man, so not pregnant" or "I'm a woman" read as `does-not-apply` on the pregnancy, breastfeeding and contraception criteria (NCT00077350 L20, L21, L23; NCT03433469 L67, L68). That's 0009's known pattern. Run 12 had two such (NCT00077350 L20, NCT04316364 L7). None of them is a correction. The conversation's path changed with the prompt, and the misreading came up more often. A sixth is L55, below. The seventh is NCT04385368 L73, the same sex pattern.
+- **Corrections caught live: 3 of 4** (L4, L14, L64), against 3 of 4 in run 12 (L4, L14, L20). The miss changed. **NCT03433469 L20** ("Big tablets are a struggle for me") *was* noticed. The read call gave the correction, but its quote, "Big tablets are a struggle... I often can't get them down.", isn't in the reply word for word, so rule 1 rejected it, and the first answer stood. So noticing was 4 of 4, and applying 3 of 4.
+- **False corrections: 1.** NCT03433469 L55, "no regular medicines", settled `does-not-hold` at turn 42, and was unsettled at turn 50 by "I also don't know if I'm taking any medications that prolong the QT interval". The grader expected `does-not-hold`. It turns a right answer into an abstention, and it's the kind of qualification 0009's rule already unsettles on. The run can't show which list it came from.
+
+**Gate 2: the abstention bar is not met.** Claude's recommendation: accept the slice with the cost recorded, and don't retune here. Reasons:
+1. The rise is in the safe direction: the coordinator gets the row, not a wrong answer.
+2. Five of the six new abstentions come from 0009's sex-based `does-not-apply` misreading, not from corrections.
+3. Retuning that wording is its own change with its own measurement, and is better as its own slice than a second dev run here.
+
+The owner decides. If the owner holds the bar instead, the slice stops here, and the replay and the fix stay on the branch, unmerged.
 
 ## Review passes
