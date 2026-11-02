@@ -1,7 +1,7 @@
 # plan: 0022 self-corrections
 
 **Author:** the repository owner
-**Status:** Accepted by the owner, 2026-10. Stage 2 in progress
+**Status:** Accepted by the owner, 2026-10. Gate 1 met; stage 4 next
 **Date:** 2026-10
 **Spec:** [spec.md](spec.md)
 
@@ -132,5 +132,16 @@ No new dependency. `tests/boundary.test.ts` is unchanged: the replay script gets
 ## Gate record
 
 **Gate 1's bar, restated before any replay (step 1's divergence), confirmed by the owner (2026-10).** Spec §5 asked for 9 of 11. Of the 10 scripted corrections, 6 are `settled`. Proposed: (a) is enough if it catches **at least 5 of the 6 settled turns**, including at least one of the two the recorded runs missed (v2 L3, dev L64), and more than the before replay does (since step 3 was skipped: more than the recorded conversations caught), with **at most 1 false correction** in the ordinary sample after reading. Otherwise (b) is built and held to the same bar. The four other turns are reported.
+
+**Step 5, the after replay** (`evals/results/corrections/01-f761514b3da8.json`, Qwen3.6-35B-A3B-MLX-8bit, 8bit, temperature 0, seed 20260921, thinking off, 54 calls, none failed, 2026-11). Counted by Claude:
+
+- **Settled corrections caught: 5 of 6.** v2 L3, v1 L63, dev L4, dev L14 and dev L20. The recorded conversations caught 4 (all but v2 L3 and dev L64). So the replay catches one more, v2 L3, which is one of the two the bar names.
+- **The miss, dev L64**, isn't a miss in noticing. The read call put L64 in `corrections`, quoting "It was more recent than I said: three weeks ago", but read the statement "had a major surgical procedure within 28 days" as `does-not-hold`. That agreed with what was recorded, so nothing unsettled. It's a misreading of direction, of the kind 0009's statements were meant to stop.
+- **False corrections: 0 in 44 ordinary turns.**
+- **One misplaced correction on a correction turn**, not in the ordinary sample, so not counted: at v2 turn 10, "my last chemotherapy was only last week" (L15's correction) was also given as a correction of L3, the number of regimens. In the rebuild L3 was still settled, because the recorded run missed its correction at turn 6. In a live run that caught turn 6, L3 would already be unresolved, and that's final, so the reading would change nothing.
+- **The four other shapes: all missed, as expected.** The two `unrecorded` ones have no recorded answer to correct. In the two `held-back` ones, L70's correction settles it `does-not-hold` as an open criterion, the rules issue already noted. L59 got no reading.
+- **The caveat from skipping step 3:** the one extra catch, v2 L3, is compared with a conversation recorded on an older prompt (`2c46ada9a1d5`). Main's prompt might have caught it too. The three dev catches were already catches on main's prompt.
+
+**Gate 1: met.** At least 5 of 6, including v2 L3, more than the recorded conversations caught, with no false corrections. So (b), the separate call, isn't built (steps 6–7 are skipped), and no spend is added to hosted screenings. The dev re-run (step 8) is the live check.
 
 ## Review passes
