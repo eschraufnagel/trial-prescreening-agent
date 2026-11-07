@@ -17,7 +17,7 @@ Clinical trials struggle to enroll people, and coordinators spend a lot of their
 ## What it does
 
 1. **Turns a trial's eligibility rules into a checklist.** It reads the rules as the trial published them and makes a checklist from them.
-2. **Has the conversation.** It asks about each rule in plain language, one question at a time, and explains a question when the person asks what it means. For each rule it records one of three outcomes: the answer settles it, it needs medical records, or it's still open.
+2. **Has the conversation.** It asks about each rule in plain language, one question at a time, explains a question when the person asks what it means, and notices when they correct an earlier answer. For each rule it records one of three outcomes: the answer settles it, it needs medical records, or it's still open.
 3. **Hands over a review.** The coordinator sees every rule, the person's own words beside it, and the AI's reading of those words. Then the coordinator decides.
 
 ```mermaid
@@ -45,7 +45,7 @@ The coordinator's review starts with what's left to do, then each rule in one li
 
 ![The coordinator review](docs/images/review.png)
 
-The conversation behind the review. At turn 6 the person corrects an earlier answer, and the AI misses the correction. The review is there so a person can catch mistakes like this.
+The conversation behind the review. At turn 6 the person corrects an earlier answer, and this earlier version of the AI misses the correction. The review is there so a person can catch mistakes like this.
 
 ![The conversation in the review](docs/images/transcript.png)
 

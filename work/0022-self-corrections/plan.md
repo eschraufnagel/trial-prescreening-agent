@@ -95,6 +95,7 @@ Written in plan mode from a reading of `src/screening/session.ts`, `calls.ts`, `
    - `docs/limitations.md`: the missed-corrections line.
    - The README clause, only if gate 1 passed.
    - `work/ROADMAP.md`: the row, plus the carried-forward table's 0007 and 0009 entries on missed corrections.
+   - As built: the README's transcript caption also says the screenshot is of an earlier version, since it shows 0009's missed correction beside the new clause. The ROADMAP's 0009 abstention entry points to the next slice.
 10. **Review passes** from `REVIEW.md` on the whole diff. Fixes are committed, and the record goes below.
 
 Every step is one commit through `npm run check && git commit`. No `Co-Authored-By` trailer.
