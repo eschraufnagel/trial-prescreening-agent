@@ -1,0 +1,1235 @@
+{
+  "month": "2026-11",
+  "model": "Qwen3.6-35B-A3B-MLX-8bit",
+  "quantization": "8bit",
+  "temperature": 0,
+  "seed": 20260921,
+  "adapter": "omlx",
+  "thinking": "off",
+  "promptVersion": "f761514b3da8",
+  "calls": 54,
+  "turns": [
+    {
+      "conversation": "NCT00077350-v2",
+      "turn": 6,
+      "kind": "correction",
+      "criterionId": "L3",
+      "shape": "settled",
+      "promptChars": 4567,
+      "outcome": "caught",
+      "unsettled": ["L3"],
+      "readings": [
+        {
+          "criterionId": "L4",
+          "reading": "does-not-hold",
+          "quote": "no, I have never received gemcitabine",
+          "statement": "The person has received prior gemcitabine chemotherapy.",
+          "outright": true
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L3",
+          "reading": "does-not-hold",
+          "quote": "Actually, I had two different chemotherapy regimens",
+          "statement": "The person has failed one and only one prior cytotoxic chemotherapy regimen for advanced disease.",
+          "outright": true
+        }
+      ]
+    },
+    {
+      "conversation": "NCT00077350-v2",
+      "turn": 10,
+      "kind": "correction",
+      "criterionId": "L15",
+      "shape": "unrecorded",
+      "promptChars": 4802,
+      "outcome": "missed",
+      "unsettled": ["L3"],
+      "readings": [
+        {
+          "criterionId": "L6",
+          "reading": "holds",
+          "quote": "my score is 0, I'm fully active",
+          "statement": "The person has an ECOG performance status of 0 or 1.",
+          "outright": true
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L3",
+          "reading": "does-not-hold",
+          "quote": "my last chemotherapy was only last week",
+          "statement": "The person has failed one and only one prior cytotoxic chemotherapy regimen for advanced disease.",
+          "outright": true
+        },
+        {
+          "criterionId": "L15",
+          "reading": "does-not-hold",
+          "quote": "my last chemotherapy was only last week",
+          "statement": "The person has completed prior cytotoxic chemotherapy >= 3 weeks prior to registration.",
+          "outright": true
+        }
+      ]
+    },
+    {
+      "conversation": "NCT03433469-v1",
+      "turn": 14,
+      "kind": "correction",
+      "criterionId": "L55",
+      "shape": "unrecorded",
+      "promptChars": 9224,
+      "outcome": "missed",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L6",
+          "reading": "unknown",
+          "quote": "I'm not sure if I've had a PET-CT scan within the last 60 days",
+          "statement": "The person has had a PET-CT scan within the last 60 days showing radiographic stage I to IIIa lung cancer.",
+          "outright": false
+        },
+        {
+          "criterionId": "L55",
+          "reading": "unclear",
+          "quote": "I do take a heart rhythm tablet every day",
+          "statement": "The person is currently receiving treatment with contraindicated corrected QT interval (QTc) prolonging medications or potent CYP3A4 inducers, and that treatment cannot be either discontinued or switched to a different medication prior to first day of study treatment.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-v1",
+      "turn": 68,
+      "kind": "correction",
+      "criterionId": "L63",
+      "shape": "settled",
+      "promptChars": 11614,
+      "outcome": "caught",
+      "unsettled": ["L63"],
+      "readings": [
+        {
+          "criterionId": "L64",
+          "reading": "does-not-hold",
+          "quote": "no, I don't have heart failure that limits my activity",
+          "statement": "The person has Class II to IV heart failure as defined by the New York Heart Association functional classification system.",
+          "outright": true
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L63",
+          "reading": "holds",
+          "quote": "I finished oral antibiotics for a chest infection last week",
+          "statement": "The person has taken therapeutic oral or intravenous (IV) antibiotics within 2 weeks prior to first day of study treatment.",
+          "outright": true
+        }
+      ]
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 92,
+      "kind": "correction",
+      "criterionId": "L59",
+      "shape": "held-back",
+      "promptChars": 11295,
+      "outcome": "missed",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L59",
+          "reading": "unclear",
+          "quote": "they gave me one round of adjuvant chemotherapy after the surgery",
+          "statement": "The person has received any prior adjuvant therapy for NSCLC or any prior exposure to durvalumab.",
+          "outright": false
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L58",
+          "reading": "does-not-hold",
+          "quote": "they gave me one round of adjuvant chemotherapy",
+          "statement": "The person has a medical contraindication to treatment with platinum-based doublet chemotherapy.",
+          "outright": true
+        }
+      ]
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 122,
+      "kind": "correction",
+      "criterionId": "L70",
+      "shape": "held-back",
+      "promptChars": 12197,
+      "outcome": "missed",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L70",
+          "reading": "does-not-hold",
+          "quote": "I did smoke for about twenty years.",
+          "statement": "The person is a never-smoker (no more than 100 cigarettes or its equivalent in his/her lifetime).",
+          "outright": true
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L70",
+          "reading": "does-not-hold",
+          "quote": "I did smoke for about twenty years. I quit in 2010.",
+          "statement": "The person is a never-smoker (no more than 100 cigarettes or its equivalent in his/her lifetime).",
+          "outright": true
+        }
+      ]
+    },
+    {
+      "conversation": "NCT00077350-dev",
+      "turn": 10,
+      "kind": "correction",
+      "criterionId": "L4",
+      "shape": "settled",
+      "promptChars": 4471,
+      "outcome": "caught",
+      "unsettled": ["L4"],
+      "readings": [
+        {
+          "criterionId": "L5",
+          "reading": "unclear",
+          "quote": "I haven't had any scans in the last 4 weeks",
+          "statement": "The person has measurable disease, as defined by RECIST, within 4 weeks prior to registration",
+          "outright": false
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L4",
+          "reading": "holds",
+          "quote": "gemcitabine was part of my chemo",
+          "statement": "The person has received prior gemcitabine chemotherapy",
+          "outright": true
+        }
+      ]
+    },
+    {
+      "conversation": "NCT00077350-dev",
+      "turn": 18,
+      "kind": "correction",
+      "criterionId": "L14",
+      "shape": "settled",
+      "promptChars": 4619,
+      "outcome": "caught",
+      "unsettled": ["L14"],
+      "readings": [
+        {
+          "criterionId": "L15",
+          "reading": "holds",
+          "quote": "My last chemo was more than five weeks ago.",
+          "statement": "The person has completed prior cytotoxic chemotherapy at least 3 weeks prior to registration.",
+          "outright": true
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L14",
+          "reading": "does-not-hold",
+          "quote": "The radiation finished eight days ago, not two months.",
+          "statement": "The person has completed radiation therapy at least 3 weeks prior to registration.",
+          "outright": true
+        }
+      ]
+    },
+    {
+      "conversation": "NCT03433469-dev",
+      "turn": 24,
+      "kind": "correction",
+      "criterionId": "L20",
+      "shape": "settled",
+      "promptChars": 9700,
+      "outcome": "caught",
+      "unsettled": ["L20"],
+      "readings": [
+        {
+          "criterionId": "L69",
+          "reading": "unclear",
+          "quote": "Big tablets are a struggle for me, to be honest. I often can't get them down.",
+          "statement": "The person has a condition that could affect GI absorption, including chronic GI disease which may affect absorption or tolerance to oral medications.",
+          "outright": false
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L20",
+          "reading": "does-not-hold",
+          "quote": "no, I am not able to swallow oral medications without trouble",
+          "statement": "The person is able to swallow oral medications without any trouble.",
+          "outright": true
+        }
+      ]
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 88,
+      "kind": "correction",
+      "criterionId": "L64",
+      "shape": "settled",
+      "promptChars": 10628,
+      "outcome": "missed",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L65",
+          "reading": "unclear",
+          "quote": "I use an inhaled steroid for my breathing, but I'm not sure if that counts",
+          "statement": "The person has used immunosuppressive medication within 14 days before the first dose of durvalumab/placebo.",
+          "outright": false
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L64",
+          "reading": "does-not-hold",
+          "quote": "It was more recent than I said: three weeks ago",
+          "statement": "The person had a major surgical procedure within 28 days prior to the first dose of IP.",
+          "outright": true
+        }
+      ]
+    },
+    {
+      "conversation": "NCT00077350-v2",
+      "turn": 20,
+      "kind": "ordinary",
+      "promptChars": 5219,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L19",
+          "reading": "holds",
+          "quote": "Yes, I expect to live for more than 3 months.",
+          "statement": "The person expects to live for more than 3 months.",
+          "outright": true
+        },
+        {
+          "criterionId": "L16",
+          "reading": "partial",
+          "quote": "I'm feeling back to normal.",
+          "statement": "The person has recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.",
+          "outright": false,
+          "missing": "Grade 1 or baseline severity of adverse effects"
+        },
+        {
+          "criterionId": "L28",
+          "reading": "unclear",
+          "quote": "My heart is fine as far as I know",
+          "statement": "The person has symptomatic congestive heart failure.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT00077350-v2",
+      "turn": 30,
+      "kind": "ordinary",
+      "promptChars": 5212,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L24",
+          "reading": "does-not-hold",
+          "quote": "No, I am HIV negative.",
+          "statement": "The person is an HIV-positive patient receiving combination antiretroviral therapy.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT00077350-v2",
+      "turn": 40,
+      "kind": "ordinary",
+      "promptChars": 6018,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L30",
+          "reading": "does-not-hold",
+          "quote": "No, I haven't been diagnosed with an irregular heartbeat that needed treatment.",
+          "statement": "The person has a cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation).",
+          "outright": true
+        },
+        {
+          "criterionId": "L16",
+          "reading": "partial",
+          "quote": "My heart is fine as far as I know.",
+          "statement": "The person has not recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.",
+          "outright": false,
+          "missing": "recovery of other chemotherapy adverse effects to <= Grade 1 or baseline"
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT00077350-v2",
+      "turn": 50,
+      "kind": "ordinary",
+      "promptChars": 6201,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L35",
+          "reading": "unclear",
+          "quote": "never been told I have G6PD deficiency",
+          "statement": "The person has a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency.",
+          "outright": false
+        },
+        {
+          "criterionId": "L37",
+          "reading": "unclear",
+          "quote": "never been told I have G6PD deficiency",
+          "statement": "The person is testing positive for G6PD deficiency.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-v1",
+      "turn": 20,
+      "kind": "ordinary",
+      "promptChars": 9689,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L9",
+          "reading": "unknown",
+          "quote": "I don't recall if they measured it to be at least 1 centimeter",
+          "statement": "The patient has a tumor size >=1 centimeter (cm) in its longest diameter.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-v1",
+      "turn": 30,
+      "kind": "ordinary",
+      "promptChars": 9728,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L21",
+          "reading": "unclear",
+          "quote": "No, I am not pregnant.",
+          "statement": "The person has a negative serum pregnancy test within 3 days prior to the first dose of study treatment.",
+          "outright": false
+        },
+        {
+          "criterionId": "L67",
+          "reading": "does-not-hold",
+          "quote": "No, I am not pregnant.",
+          "statement": "The person is pregnant.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-v1",
+      "turn": 40,
+      "kind": "ordinary",
+      "promptChars": 10292,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L51",
+          "reading": "unknown",
+          "quote": "I don't recall if the PET-CT scan showed any spread to other parts of my body or any fluid around the lungs.",
+          "statement": "The person has Stage IIIB disease or distant metastases (including malignant pleural effusion) identified on PET-CT scan or biopsy.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-v1",
+      "turn": 50,
+      "kind": "ordinary",
+      "promptChars": 10677,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L55",
+          "reading": "unclear",
+          "quote": "I'm not sure if it affects the QT interval specifically, or if my doctor can switch it.",
+          "statement": "The person is currently receiving treatment with contraindicated corrected QT interval (QTc) prolonging medications or potent CYP3A4 inducers, and that treatment cannot be either discontinued or switched to a different medication prior to first day of study treatment.",
+          "outright": false
+        },
+        {
+          "criterionId": "L58",
+          "reading": "unclear",
+          "quote": "I'm not sure if it affects the QT interval specifically",
+          "statement": "The person has any concomitant medication known to prolong the QT interval.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-v1",
+      "turn": 60,
+      "kind": "ordinary",
+      "promptChars": 11275,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L60",
+          "reading": "does-not-hold",
+          "quote": "No, I don't have any severe uncontrolled health conditions like high blood pressure or active bleeding, and I don't have Hepatitis B or C. I already mentioned I'm not HIV positive.",
+          "statement": "The person has severe or uncontrolled systemic diseases, including uncontrolled hypertension and active bleeding diatheses, or known active infection including chronic active hepatitis B, hepatitis C and human immunodeficiency virus (HIV).",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-v1",
+      "turn": 70,
+      "kind": "ordinary",
+      "promptChars": 11784,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L65",
+          "reading": "unclear",
+          "quote": "I don't recall if I've been diagnosed with coronary artery disease or congestive heart failure",
+          "statement": "The person has known coronary artery disease, congestive heart failure not meeting the above criteria, or left ventricular ejection fraction (LVEF) < 50% and is not on a stable medical regimen that is optimized in the opinion of the treating physician, in consultation with a cardiologist if appropriate.",
+          "outright": false
+        },
+        {
+          "criterionId": "L55",
+          "reading": "unclear",
+          "quote": "I know I take a heart rhythm tablet",
+          "statement": "The person is currently receiving treatment with contraindicated corrected QT interval (QTc) prolonging medications or potent CYP3A4 inducers, and that treatment cannot be either discontinued or switched to a different medication prior to first day of study treatment.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-v1",
+      "turn": 80,
+      "kind": "ordinary",
+      "promptChars": 12122,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L70",
+          "reading": "does-not-hold",
+          "quote": "I've never had a hypersensitivity reaction to any medication.",
+          "statement": "The person has a history of hypersensitivity to active or inactive excipients of osimertinib or drugs with a similar chemical structure or class to osimertinib.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 20,
+      "kind": "ordinary",
+      "promptChars": 8770,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L13",
+          "reading": "unclear",
+          "quote": "surgeon removed the entire tumor",
+          "statement": "The person had a complete resection of the primary NSCLC.",
+          "outright": false
+        },
+        {
+          "criterionId": "L18",
+          "reading": "unclear",
+          "quote": "confirmed no cancer cells were left behind",
+          "statement": "All surgical margins of resection are macroscopically negative for tumor.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 30,
+      "kind": "ordinary",
+      "promptChars": 8923,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L16",
+          "reading": "partial",
+          "quote": "I don't know the exact size of the tumor",
+          "statement": "The person is undergoing segmentectomy and the tumor is less than 2 cm in maximum diameter.",
+          "outright": false,
+          "missing": "Whether the person is undergoing segmentectomy"
+        },
+        {
+          "criterionId": "L7",
+          "reading": "partial",
+          "quote": "I know it was non-small cell",
+          "statement": "The person has a diagnosis of histologically confirmed NSCLC (WHO 2015 classification) with resectable (stage II-III) disease (according to IASLC Staging Manual in Thoracic Oncology v8.0).",
+          "outright": false,
+          "missing": "Histological confirmation, resectability, and stage II-III disease status"
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 40,
+      "kind": "ordinary",
+      "promptChars": 9195,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L35",
+          "reading": "partial",
+          "quote": "surgical wounds have fully healed",
+          "statement": "Complete postoperative wound healing has occurred and the person has recovered from all acute, reversible toxic effects from prior treatments (excluding alopecia) that could potentially adversely impact further administration of durvalumab/placebo or chemotherapy.",
+          "outright": false,
+          "missing": "recovered from all acute, reversible toxic effects from prior treatments"
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 50,
+      "kind": "ordinary",
+      "promptChars": 9657,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L38",
+          "reading": "holds",
+          "quote": "I expect to live for at least 3 months.",
+          "statement": "The person has a life expectancy of at least 3 months.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 60,
+      "kind": "ordinary",
+      "promptChars": 9986,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L46",
+          "reading": "unclear",
+          "quote": "It was strictly non-small cell. I don't recall any mention of small cell components.",
+          "statement": "The person has mixed small cell and NSCLC histology.",
+          "outright": false
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L46",
+          "reading": "unclear",
+          "quote": "It was strictly non-small cell. I don't recall any mention of small cell components.",
+          "statement": "The person has mixed small cell and NSCLC histology.",
+          "outright": false
+        }
+      ]
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 70,
+      "kind": "ordinary",
+      "promptChars": 10154,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L51",
+          "reading": "unknown",
+          "quote": "I don't know if I have an autoimmune or inflammatory disorder",
+          "statement": "The person has an active or prior documented autoimmune or inflammatory disorder.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 80,
+      "kind": "ordinary",
+      "promptChars": 10805,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L55",
+          "reading": "unclear",
+          "quote": "I haven't been told I have any of those infections",
+          "statement": "The person has an active infection, including tuberculosis, hepatitis B, hepatitis C, or human immunodeficiency virus infection.",
+          "outright": false
+        }
+      ],
+      "corrections": [
+        {
+          "criterionId": "L52",
+          "reading": "unclear",
+          "quote": "I haven't been told I have any of those infections",
+          "statement": "The person has an ongoing or active infection.",
+          "outright": false
+        }
+      ]
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 90,
+      "kind": "ordinary",
+      "promptChars": 11293,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L59",
+          "reading": "unclear",
+          "quote": "I have not had any adjuvant therapy since surgery. And I have never been treated with durvalumab before.",
+          "statement": "The person has received any prior adjuvant therapy for NSCLC or has had any prior exposure to durvalumab.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 100,
+      "kind": "ordinary",
+      "promptChars": 11545,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L63",
+          "reading": "unclear",
+          "quote": "I had a shingles vaccine last week. I'm not sure if that counts as a live attenuated vaccine",
+          "statement": "The person received a live attenuated vaccine within 30 days prior to the first dose of IP.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 110,
+      "kind": "ordinary",
+      "promptChars": 11856,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L66",
+          "reading": "unclear",
+          "quote": "No, I haven't taken any study drug in any other trial since my surgery.",
+          "statement": "The person has participated in another clinical study with an IP administered since completion of surgery.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 120,
+      "kind": "ordinary",
+      "promptChars": 12125,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L70",
+          "reading": "unclear",
+          "quote": "No, I have never smoked. I'm a never-smoker.",
+          "statement": "The person is a never-smoker (no more than 100 cigarettes or its equivalent in his/her lifetime).",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-v3",
+      "turn": 130,
+      "kind": "ordinary",
+      "promptChars": 12746,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L74",
+          "reading": "unclear",
+          "quote": "I usually just keep things in my head, but I might be losing my touch a bit.",
+          "statement": "The patient is unlikely to comply with study procedures, restrictions, and requirements.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT00077350-dev",
+      "turn": 20,
+      "kind": "ordinary",
+      "promptChars": 4659,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L16",
+          "reading": "unclear",
+          "quote": "I'm not sure about the specific grade. I'm feeling better, but I don't know the medical details of my recovery.",
+          "statement": "The person has recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT00077350-dev",
+      "turn": 30,
+      "kind": "ordinary",
+      "promptChars": 4529,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L21",
+          "reading": "does-not-hold",
+          "quote": "Not breastfeeding, being a man.",
+          "statement": "The person is breastfeeding.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT00077350-dev",
+      "turn": 40,
+      "kind": "ordinary",
+      "promptChars": 5233,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L26",
+          "reading": "does-not-hold",
+          "quote": "No, I don't have any ongoing infections or mental health conditions",
+          "statement": "The person has uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT00077350-dev",
+      "turn": 50,
+      "kind": "ordinary",
+      "promptChars": 5679,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L31",
+          "reading": "does-not-hold",
+          "quote": "No, I don't use supplemental oxygen.",
+          "statement": "The person has a pulmonary disease requiring oxygen.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT00077350-dev",
+      "turn": 60,
+      "kind": "ordinary",
+      "promptChars": 5965,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L35",
+          "reading": "does-not-hold",
+          "quote": "No, I don't have that.",
+          "statement": "The person has a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency.",
+          "outright": true
+        },
+        {
+          "criterionId": "L37",
+          "reading": "does-not-hold",
+          "quote": "No, I don't have that.",
+          "statement": "The person is testing positive for G6PD deficiency.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-dev",
+      "turn": 20,
+      "kind": "ordinary",
+      "promptChars": 9765,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L10",
+          "reading": "holds",
+          "quote": "I would describe my ability to carry out daily activities as a 0. I am fully active.",
+          "statement": "The person has an Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) of 0-1.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-dev",
+      "turn": 30,
+      "kind": "ordinary",
+      "promptChars": 10129,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L49",
+          "reading": "does-not-apply",
+          "quote": "It asks about men, and I'm a woman",
+          "statement": "The person is a man with a female partner of childbearing potential who has either had a prior vasectomy or agrees to use effective contraception as described in the full protocol for at least 14 days prior to administration of the first dose of study treatment, during the study, and for 90 days following the last dose of osimertinib.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-dev",
+      "turn": 40,
+      "kind": "ordinary",
+      "promptChars": 10020,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L54",
+          "reading": "does-not-hold",
+          "quote": "No, I do not have any other active cancers",
+          "statement": "The person has an active second malignancy, i.e. potentially fatal cancer present for which he/she may be currently receiving treatment.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-dev",
+      "turn": 50,
+      "kind": "ordinary",
+      "promptChars": 10886,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L60",
+          "reading": "does-not-hold",
+          "quote": "No, I don't have any severe or uncontrolled health conditions",
+          "statement": "The person has evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension, active bleeding diatheses, or known active infection including chronic active hepatitis B, hepatitis C and human immunodeficiency virus (HIV).",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-dev",
+      "turn": 60,
+      "kind": "ordinary",
+      "promptChars": 11392,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L65",
+          "reading": "does-not-hold",
+          "quote": "No, I do not have known coronary artery disease or a low ejection fraction.",
+          "statement": "The person has known coronary artery disease, congestive heart failure not meeting the above criteria, or left ventricular ejection fraction (LVEF) < 50% and is not on a stable medical regimen that is optimized in the opinion of the treating physician, in consultation with a cardiologist if appropriate.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT03433469-dev",
+      "turn": 70,
+      "kind": "ordinary",
+      "promptChars": 11708,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L70",
+          "reading": "does-not-hold",
+          "quote": "No, I have never had a hypersensitivity reaction to any drug",
+          "statement": "The person has a history of hypersensitivity to active or inactive excipients of osimertinib or drugs with a similar chemical structure or class to osimertinib.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 20,
+      "kind": "ordinary",
+      "promptChars": 8850,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L18",
+          "reading": "unknown",
+          "quote": "I'm not sure.",
+          "statement": "All surgical margins of resection are macroscopically negative for tumor.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 30,
+      "kind": "ordinary",
+      "promptChars": 9035,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L35",
+          "reading": "partial",
+          "quote": "The wounds are healed up fine. I don't think I have any lingering side effects like nausea or fatigue",
+          "statement": "Complete postoperative wound healing has occurred and the person has recovered from all acute, reversible toxic effects from prior treatments (excluding alopecia) that could potentially adversely impact further administration of durvalumab/placebo or chemotherapy according to the Investigator's judgment.",
+          "outright": false,
+          "missing": "recovery from all acute, reversible toxic effects... according to the Investigator's judgment"
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 40,
+      "kind": "ordinary",
+      "promptChars": 9214,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L37",
+          "reading": "unknown",
+          "quote": "I haven't looked at the results closely enough to say if everything is within normal limits.",
+          "statement": "The person has adequate organ and marrow function as described in the protocol.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 50,
+      "kind": "ordinary",
+      "promptChars": 9258,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L46",
+          "reading": "does-not-hold",
+          "quote": "it's just non-small cell",
+          "statement": "The person has mixed small cell and NSCLC histology.",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 60,
+      "kind": "ordinary",
+      "promptChars": 9819,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L52",
+          "reading": "unknown",
+          "quote": "I don't know about any serious uncontrolled issues",
+          "statement": "The person has an uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, uncontrolled hypertension, unstable angina pectoris, uncontrolled cardiac arrhythmia, active ILD, serious chronic gastrointestinal conditions associated with diarrhea, or psychiatric illness/social situations that would limit compliance with study requirements, substantially increase risk of incurring AEs, or compromise the ability of the patient to give written informed consent.",
+          "outright": false
+        },
+        {
+          "criterionId": "L55",
+          "reading": "unclear",
+          "quote": "I've got a bit of breathing trouble",
+          "statement": "The person has an active infection, including tuberculosis (clinical evaluation that includes clinical history, physical examination, and radiographic findings, and tuberculosis testing in line with local practice), hepatitis B (HBV; known positive HBV surface antigen [HBsAg] result), hepatitis C (HCV), or human immunodeficiency virus infection (positive HIV 1/2 antibodies).",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 70,
+      "kind": "ordinary",
+      "promptChars": 10059,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L58",
+          "reading": "unclear",
+          "quote": "No, I haven't been told I can't take that chemo.",
+          "statement": "The person has a medical contraindication to treatment with platinum-based doublet chemotherapy as listed in the local labeling.",
+          "outright": false
+        },
+        {
+          "criterionId": "L36",
+          "reading": "partial",
+          "quote": "I reckon I can handle it.",
+          "statement": "The person is eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy.",
+          "outright": false,
+          "missing": "The person's actual physiological eligibility to tolerate the treatment."
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 80,
+      "kind": "ordinary",
+      "promptChars": 10398,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L62",
+          "reading": "unclear",
+          "quote": "I'm muddled on the dates and details... I'd have to check my records to be sure if it was wide field or not.",
+          "statement": "The person received radiotherapy treatment to more than 30% of the bone marrow or with a wide field of radiation within 4 weeks of the first dose of IP.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 90,
+      "kind": "ordinary",
+      "promptChars": 10691,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L65",
+          "reading": "unclear",
+          "quote": "I'm not sure about the exact name or if it's a metered-dose inhaler or a nebulizer.",
+          "statement": "The person has used immunosuppressive medication within 14 days before the first dose of durvalumab/placebo.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 100,
+      "kind": "ordinary",
+      "promptChars": 10832,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L70",
+          "reading": "does-not-hold",
+          "quote": "I smoked for about thirty years",
+          "statement": "The person is a never-smoker (no more than 100 cigarettes or its equivalent in his/her lifetime).",
+          "outright": true
+        }
+      ],
+      "corrections": []
+    },
+    {
+      "conversation": "NCT04385368-dev",
+      "turn": 110,
+      "kind": "ordinary",
+      "promptChars": 11408,
+      "outcome": "none",
+      "unsettled": [],
+      "readings": [
+        {
+          "criterionId": "L74",
+          "reading": "unclear",
+          "quote": "I don't know about that... I'm not sure I can give you a specific example of when I'd struggle.",
+          "statement": "The Investigator judges that the patient should not participate in the study because the patient is unlikely to comply with study procedures, restrictions, and requirements.",
+          "outright": false
+        }
+      ],
+      "corrections": []
+    }
+  ],
+  "summary": {
+    "settled": {
+      "caught": 5,
+      "of": 6
+    },
+    "otherShapes": [
+      {
+        "conversation": "NCT00077350-v2",
+        "criterionId": "L15",
+        "shape": "unrecorded",
+        "outcome": "missed"
+      },
+      {
+        "conversation": "NCT03433469-v1",
+        "criterionId": "L55",
+        "shape": "unrecorded",
+        "outcome": "missed"
+      },
+      {
+        "conversation": "NCT04385368-v3",
+        "criterionId": "L59",
+        "shape": "held-back",
+        "outcome": "missed"
+      },
+      {
+        "conversation": "NCT04385368-v3",
+        "criterionId": "L70",
+        "shape": "held-back",
+        "outcome": "missed"
+      }
+    ],
+    "ordinary": {
+      "turns": 44,
+      "falseCorrections": 0,
+      "failed": 0
+    }
+  }
+}

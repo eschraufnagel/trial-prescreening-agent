@@ -1,0 +1,2529 @@
+{
+  "key": "NCT00077350-dev-labels-Qwen3.6-35B-A3B-MLX-8bit-834179395652-5fd4476340c9-20260921-thinking-off.json",
+  "vignetteId": "NCT00077350-dev",
+  "source": "labels",
+  "status": "complete",
+  "state": {
+    "version": 1,
+    "study": {
+      "nctId": "NCT00077350",
+      "briefTitle": "A Phase II Trial of Triapine (NSC #663249) in Combination With Gemcitabine as Second Line Treatment of Non-Small Cell Lung Cancer"
+    },
+    "criteria": [
+      {
+        "id": "L1",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Patients must have histologically confirmed non-small cell lung cancer (NSCLC); cytology alone is not acceptable"
+      },
+      {
+        "id": "L2",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Patients must have progressive or recurrent NSCLC"
+      },
+      {
+        "id": "L3",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "must have failed one and only one prior cytotoxic chemotherapy regimen for advanced disease"
+      },
+      {
+        "id": "L4",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "patients must not have received prior gemcitabine chemotherapy"
+      },
+      {
+        "id": "L5",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Patients must have measurable disease, as defined by RECIST, within 4 weeks prior to registration"
+      },
+      {
+        "id": "L6",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Patients must have an ECOG performance status of 0 or 1"
+      },
+      {
+        "id": "L7",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Bilirubin < 1.5 x upper limit of normal"
+      },
+      {
+        "id": "L8",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "AST (SGOT) < 3 x upper limit of normal"
+      },
+      {
+        "id": "L9",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Serum creatinine =< 1.5 mg/dL, or calculated creatinine clearance >= 60 mL/min"
+      },
+      {
+        "id": "L10",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Absolute granulocyte count >= 1500/mm3"
+      },
+      {
+        "id": "L11",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "WBC >= 3000/mm^3"
+      },
+      {
+        "id": "L12",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Hemoglobin >= 9 g/L"
+      },
+      {
+        "id": "L13",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Platelet count >= 100,000/mm^3"
+      },
+      {
+        "id": "L14",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "Patients must have completed any radiation therapy >= 3 weeks prior to registration"
+      },
+      {
+        "id": "L15",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "Patients must have completed prior cytotoxic chemotherapy >= 3 weeks prior to registration"
+      },
+      {
+        "id": "L16",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "have recovered from adverse effects from the chemotherapy to =< Grade 1, or baseline"
+      },
+      {
+        "id": "L17",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Patients with brain metastases which have been treated are eligible if the patient is > 3 weeks post completion of treatment for their brain metastases, and patient is neurologically stable"
+      },
+      {
+        "id": "L18",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "patients with previous brain metastases who have not yet received therapy specifically intended for their brain metastases are not eligible to enroll in this protocol"
+      },
+      {
+        "id": "L19",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Life expectancy greater than 3 months"
+      },
+      {
+        "id": "L20",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Pregnant women are excluded from this study"
+      },
+      {
+        "id": "L21",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "breastfeeding should be discontinued if the mother is treated with Triapine®"
+      },
+      {
+        "id": "L22",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "a negative serum pregnancy test is required within 14 days of study entry"
+      },
+      {
+        "id": "L23",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation"
+      },
+      {
+        "id": "L24",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "HIV-positive patients receiving combination antiretroviral therapy are excluded from the study"
+      },
+      {
+        "id": "L25",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Patients must not have an active second malignancy"
+      },
+      {
+        "id": "L26",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Patients must not have, at the time of registration, uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements"
+      },
+      {
+        "id": "L27",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "a history of myocardial infarction within the prior 6 months"
+      },
+      {
+        "id": "L28",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "symptomatic congestive heart failure"
+      },
+      {
+        "id": "L29",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "unstable angina pectoris"
+      },
+      {
+        "id": "L30",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "cardiac arrhythmia requiring medical intervention (with the exception of chronic, stable, asymptomatic atrial fibrillation)"
+      },
+      {
+        "id": "L31",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "pulmonary disease requiring oxygen"
+      },
+      {
+        "id": "L32",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Patients must not have dementia or active psychosis"
+      },
+      {
+        "id": "L33",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Patients must not have used any investigational agent in the month before study enrollment"
+      },
+      {
+        "id": "L34",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Patients must not have a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine® or other agents used in this study"
+      },
+      {
+        "id": "L35",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Patients must not have a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency"
+      },
+      {
+        "id": "L36",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "persons at high risk for this condition (patients of African, Asian, or Mediterranean origin/ancestry) must undergo specific clinical testing at protocol entry for this condition"
+      },
+      {
+        "id": "L37",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "patients testing positive for G6PD deficiency are excluded from protocol entry"
+      }
+    ],
+    "transcript": [
+      {
+        "index": 0,
+        "speaker": "agent",
+        "kind": "opening",
+        "text": "Hello, and thank you for your interest in the study \"A Phase II Trial of Triapine (NSC #663249) in Combination With Gemcitabine as Second Line Treatment of Non-Small Cell Lung Cancer\". I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you."
+      },
+      {
+        "index": 1,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To be eligible, the lung cancer diagnosis must be confirmed by looking at tissue samples under a microscope (biopsy). Has your doctor confirmed your NSCLC diagnosis this way, rather than just using cells from fluid or sputum?",
+        "criterionId": "L1"
+      },
+      {
+        "index": 2,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, my doctor confirmed it with a biopsy."
+      },
+      {
+        "index": 3,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Has your doctor told you that your non-small cell lung cancer (NSCLC) has gotten worse (progressive) or come back (recurrent) after previous treatment?",
+        "criterionId": "L2"
+      },
+      {
+        "index": 4,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "It's recurrent: it came back after treatment, and it's progressing."
+      },
+      {
+        "index": 5,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you received exactly one prior chemotherapy treatment for your advanced lung cancer?",
+        "criterionId": "L3"
+      },
+      {
+        "index": 6,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I've had one chemo regimen since it spread, and it stopped working."
+      },
+      {
+        "index": 7,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever received a chemotherapy drug called gemcitabine before?",
+        "criterionId": "L4"
+      },
+      {
+        "index": 8,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've not had gemcitabine."
+      },
+      {
+        "index": 9,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had any imaging scans (like a CT or PET scan) in the last 4 weeks to check if your cancer is still visible and measurable?",
+        "criterionId": "L5"
+      },
+      {
+        "index": 10,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I need to take that back: gemcitabine was part of my chemo. I haven't had any scans in the last 4 weeks."
+      },
+      {
+        "index": 11,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, have you had any recent imaging scans (like a CT or PET scan) in the last 4 weeks that showed your cancer was still visible and measurable? If you aren't sure, that's okay to say.",
+        "criterionId": "L5"
+      },
+      {
+        "index": 12,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure. I haven't had any scans in the last 4 weeks, so I don't know if they showed the cancer was visible and measurable."
+      },
+      {
+        "index": 13,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To check your ECOG performance status, how would you describe your ability to carry out daily activities? An ECOG score of 0 or 1 means you are fully active or restricted only in physically strenuous activity but ambulatory. If you aren't sure, that's okay to say.",
+        "criterionId": "L6"
+      },
+      {
+        "index": 14,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm fully active and can do everything I used to do, just a bit slower. I'd say my ECOG score is 0."
+      },
+      {
+        "index": 15,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you completed any radiation therapy at least 3 weeks before you would register for this study?",
+        "criterionId": "L14"
+      },
+      {
+        "index": 16,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I finished radiation about two months ago."
+      },
+      {
+        "index": 17,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you completed any prior chemotherapy treatments at least 3 weeks before you would register for this study?",
+        "criterionId": "L15"
+      },
+      {
+        "index": 18,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "The radiation finished eight days ago, not two months. My last chemo was more than five weeks ago."
+      },
+      {
+        "index": 19,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you recovered from side effects of your last chemotherapy to Grade 1 (mild symptoms) or back to your normal baseline? If you aren't sure, that's okay to say.",
+        "criterionId": "L16"
+      },
+      {
+        "index": 20,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure about the specific grade. I'm feeling better, but I don't know the medical details of my recovery."
+      },
+      {
+        "index": 21,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, are your side effects from the last chemo now mild (like a headache or mild nausea) or gone, and are you back to your usual daily routine?",
+        "criterionId": "L16"
+      },
+      {
+        "index": 22,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'm feeling better and back to my usual daily routine."
+      },
+      {
+        "index": 23,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you been treated for brain metastases? If so, was it more than 3 weeks ago, and have you been stable with no new or worsening neurological symptoms (like headaches, vision changes, or weakness) since then?",
+        "criterionId": "L17"
+      },
+      {
+        "index": 24,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been treated for brain metastases."
+      },
+      {
+        "index": 25,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Based on your current health, do you expect to live for more than 3 months?",
+        "criterionId": "L19"
+      },
+      {
+        "index": 26,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I expect to live for more than 3 months."
+      },
+      {
+        "index": 27,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently pregnant, or do you think there is any chance you could be pregnant?",
+        "criterionId": "L20"
+      },
+      {
+        "index": 28,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No. I'm a man, so not pregnant."
+      },
+      {
+        "index": 29,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently breastfeeding?",
+        "criterionId": "L21"
+      },
+      {
+        "index": 30,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Not breastfeeding, being a man."
+      },
+      {
+        "index": 31,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had a blood pregnancy test within the last 14 days?",
+        "criterionId": "L22"
+      },
+      {
+        "index": 32,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't had a blood pregnancy test. I'm a man, so that wouldn't apply to me."
+      },
+      {
+        "index": 33,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you willing to use an effective birth control method (like condoms or hormonal birth control) or practice abstinence during the study and for a period after it ends?",
+        "criterionId": "L23"
+      },
+      {
+        "index": 34,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'll use condoms from before I start and all through the study."
+      },
+      {
+        "index": 35,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with HIV and received combination antiretroviral therapy (a mix of medicines used to treat HIV)?",
+        "criterionId": "L24"
+      },
+      {
+        "index": 36,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been diagnosed with HIV or taken those medicines."
+      },
+      {
+        "index": 37,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with a second type of cancer that is currently active or being treated?",
+        "criterionId": "L25"
+      },
+      {
+        "index": 38,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I don't have another active cancer. Just the lung cancer."
+      },
+      {
+        "index": 39,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you currently have any ongoing infections (like a fever or active cold) or any mental health conditions that might make it hard to follow the study rules?",
+        "criterionId": "L26"
+      },
+      {
+        "index": 40,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I don't have any ongoing infections or mental health conditions that would interfere."
+      },
+      {
+        "index": 41,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had a heart attack (myocardial infarction) in the last 6 months?",
+        "criterionId": "L27"
+      },
+      {
+        "index": 42,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't had a heart attack in the last 6 months."
+      },
+      {
+        "index": 43,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with symptomatic congestive heart failure, which is a condition where the heart doesn't pump blood as well as it should and causes symptoms like shortness of breath or swelling?",
+        "criterionId": "L28"
+      },
+      {
+        "index": 44,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been diagnosed with congestive heart failure."
+      },
+      {
+        "index": 45,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with unstable angina pectoris, which is chest pain caused by reduced blood flow to the heart that occurs at rest or with minimal exertion?",
+        "criterionId": "L29"
+      },
+      {
+        "index": 46,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been diagnosed with unstable angina."
+      },
+      {
+        "index": 47,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever had an irregular heartbeat (cardiac arrhythmia) that required medical treatment, such as medication, a procedure, or hospitalization? Please note that this does not include chronic, stable, and symptom-free atrial fibrillation.",
+        "criterionId": "L30"
+      },
+      {
+        "index": 48,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't had an irregular heartbeat that needed treatment."
+      },
+      {
+        "index": 49,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you currently use supplemental oxygen to help with breathing due to a lung condition?",
+        "criterionId": "L31"
+      },
+      {
+        "index": 50,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I don't use supplemental oxygen."
+      },
+      {
+        "index": 51,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with dementia or active psychosis?",
+        "criterionId": "L32"
+      },
+      {
+        "index": 52,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been diagnosed with dementia or active psychosis."
+      },
+      {
+        "index": 53,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you taken part in any other clinical trials or received any investigational medications in the past month?",
+        "criterionId": "L33"
+      },
+      {
+        "index": 54,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes. Three weeks ago I finished a study of an experimental drug for my arthritis."
+      },
+      {
+        "index": 55,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever had an allergic reaction to Triapine or any other medicines with a similar chemical or biologic makeup?",
+        "criterionId": "L34"
+      },
+      {
+        "index": 56,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I got hives from a chemo drug years ago. No idea whether it's anything like this one."
+      },
+      {
+        "index": 57,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, do you know if the chemo drug that caused your hives has a similar chemical makeup to Triapine, or are you unsure?",
+        "criterionId": "L34"
+      },
+      {
+        "index": 58,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure. I don't know if that old chemo drug is chemically similar to Triapine."
+      },
+      {
+        "index": 59,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with G6PD deficiency, which is a genetic condition affecting red blood cells?",
+        "criterionId": "L35"
+      },
+      {
+        "index": 60,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "G6PD deficiency? No, I don't have that."
+      },
+      {
+        "index": 61,
+        "speaker": "agent",
+        "kind": "closing",
+        "text": "Thank you, that's all my questions. A study coordinator will review your answers and contact you about next steps."
+      }
+    ],
+    "progress": [
+      {
+        "criterionId": "L1",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "my doctor confirmed it with a biopsy",
+            "reading": "holds",
+            "statement": "The person has histologically confirmed non-small cell lung cancer (NSCLC)."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L2",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "It's recurrent: it came back after treatment, and it's progressing.",
+            "reading": "holds",
+            "statement": "The person has progressive or recurrent NSCLC."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L3",
+        "status": "holds",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "Yes, I've had one chemo regimen since it spread, and it stopped working.",
+            "reading": "holds",
+            "statement": "The person has failed one and only one prior cytotoxic chemotherapy regimen for advanced disease."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L4",
+        "status": "unresolved",
+        "reason": "contradicted",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "Yes, I've had one chemo regimen since it spread, and it stopped working.",
+            "reading": "unclear",
+            "statement": "The person has received prior gemcitabine chemotherapy."
+          },
+          {
+            "turn": 8,
+            "quote": "No, I've not had gemcitabine.",
+            "reading": "does-not-hold",
+            "statement": "The person has received prior gemcitabine chemotherapy."
+          },
+          {
+            "turn": 10,
+            "quote": "gemcitabine was part of my chemo",
+            "reading": "holds",
+            "statement": "The person has received prior gemcitabine chemotherapy."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L5",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 10,
+            "quote": "I haven't had any scans in the last 4 weeks",
+            "reading": "unclear",
+            "statement": "The person has measurable disease, as defined by RECIST, within 4 weeks prior to registration."
+          },
+          {
+            "turn": 12,
+            "quote": "I haven't had any scans in the last 4 weeks, so I don't know if they showed the cancer was visible and measurable.",
+            "reading": "does-not-hold",
+            "statement": "The person has measurable disease, as defined by RECIST, within 4 weeks prior to registration."
+          }
+        ],
+        "timesAsked": 2,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L6",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 14,
+            "quote": "I'd say my ECOG score is 0.",
+            "reading": "holds",
+            "statement": "The person has an ECOG performance status of 0 or 1."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L7",
+        "status": "not-raised",
+        "reason": "lab-value",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L8",
+        "status": "not-raised",
+        "reason": "lab-value",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L9",
+        "status": "not-raised",
+        "reason": "lab-value",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L10",
+        "status": "not-raised",
+        "reason": "lab-value",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L11",
+        "status": "not-raised",
+        "reason": "lab-value",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L12",
+        "status": "not-raised",
+        "reason": "lab-value",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L13",
+        "status": "not-raised",
+        "reason": "lab-value",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L14",
+        "status": "unresolved",
+        "reason": "contradicted",
+        "evidence": [
+          {
+            "turn": 16,
+            "quote": "finished radiation about two months ago",
+            "reading": "holds",
+            "statement": "The person has completed radiation therapy at least 3 weeks prior to registration."
+          },
+          {
+            "turn": 18,
+            "quote": "The radiation finished eight days ago",
+            "reading": "does-not-hold",
+            "statement": "The person has completed any radiation therapy >= 3 weeks prior to registration."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L15",
+        "status": "holds",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 18,
+            "quote": "My last chemo was more than five weeks ago",
+            "reading": "holds",
+            "statement": "The person has completed prior cytotoxic chemotherapy >= 3 weeks prior to registration."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L16",
+        "status": "open",
+        "reason": "partial",
+        "evidence": [
+          {
+            "turn": 20,
+            "quote": "I'm not sure about the specific grade. I'm feeling better, but I don't know the medical details of my recovery.",
+            "reading": "unclear",
+            "statement": "The person has recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline."
+          },
+          {
+            "turn": 22,
+            "quote": "I'm feeling better and back to my usual daily routine",
+            "reading": "partial",
+            "missing": "recovery to Grade 1",
+            "statement": "The person has recovered from adverse effects from the chemotherapy to Grade 1 or baseline."
+          }
+        ],
+        "timesAsked": 2,
+        "reported": "partial"
+      },
+      {
+        "criterionId": "L17",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 24,
+            "quote": "No, I haven't been treated for brain metastases.",
+            "reading": "holds",
+            "statement": "The person has not been treated for brain metastases."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L18",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 24,
+            "quote": "No, I haven't been treated for brain metastases.",
+            "reading": "holds",
+            "statement": "The person has not received therapy specifically intended for their brain metastases."
+          }
+        ],
+        "timesAsked": 0,
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L19",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 26,
+            "quote": "Yes, I expect to live for more than 3 months.",
+            "reading": "holds",
+            "statement": "The person expects to live for more than 3 months."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L20",
+        "status": "unresolved",
+        "reason": "does-not-apply",
+        "evidence": [
+          {
+            "turn": 28,
+            "quote": "I'm a man, so not pregnant.",
+            "reading": "does-not-apply",
+            "statement": "The person is a pregnant woman."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L21",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 30,
+            "quote": "Not breastfeeding, being a man.",
+            "reading": "does-not-hold",
+            "statement": "The person is breastfeeding."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L22",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 32,
+            "quote": "No, I haven't had a blood pregnancy test.",
+            "reading": "does-not-hold",
+            "statement": "The person has a negative serum pregnancy test within 14 days of study entry."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L23",
+        "status": "holds",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 34,
+            "quote": "Yes, I'll use condoms from before I start and all through the study.",
+            "reading": "holds",
+            "statement": "The person agrees to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L24",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 36,
+            "quote": "No, I haven't been diagnosed with HIV or taken those medicines.",
+            "reading": "does-not-hold",
+            "statement": "The person has been diagnosed with HIV and received combination antiretroviral therapy."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L25",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 38,
+            "quote": "No, I don't have another active cancer.",
+            "reading": "does-not-hold",
+            "statement": "The person has an active second malignancy."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L26",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 40,
+            "quote": "No, I don't have any ongoing infections or mental health conditions",
+            "reading": "does-not-hold",
+            "statement": "The person has uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L27",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 42,
+            "quote": "No, I haven't had a heart attack in the last 6 months.",
+            "reading": "does-not-hold",
+            "statement": "The person has had a myocardial infarction within the prior 6 months."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L28",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 44,
+            "quote": "No, I haven't been diagnosed with congestive heart failure.",
+            "reading": "does-not-hold",
+            "statement": "The person has been diagnosed with symptomatic congestive heart failure."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L29",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 46,
+            "quote": "No, I haven't been diagnosed with unstable angina.",
+            "reading": "does-not-hold",
+            "statement": "The person has been diagnosed with unstable angina pectoris."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L30",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 48,
+            "quote": "No, I haven't had an irregular heartbeat that needed treatment.",
+            "reading": "does-not-hold",
+            "statement": "The person has had an irregular heartbeat (cardiac arrhythmia) that required medical treatment, such as medication, a procedure, or hospitalization."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L31",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 50,
+            "quote": "No, I don't use supplemental oxygen.",
+            "reading": "does-not-hold",
+            "statement": "The person has a pulmonary disease requiring oxygen."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L32",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 52,
+            "quote": "No, I haven't been diagnosed with dementia or active psychosis.",
+            "reading": "does-not-hold",
+            "statement": "The person has been diagnosed with dementia or active psychosis."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L33",
+        "status": "holds",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 54,
+            "quote": "Three weeks ago I finished a study of an experimental drug",
+            "reading": "holds",
+            "statement": "The person has used an investigational agent in the month before study enrollment."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L34",
+        "status": "open",
+        "reason": "unclear",
+        "evidence": [
+          {
+            "turn": 56,
+            "quote": "I got hives from a chemo drug years ago. No idea whether it's anything like this one.",
+            "reading": "unclear",
+            "statement": "The person has a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine® or other agents used in this study."
+          },
+          {
+            "turn": 58,
+            "quote": "I don't know if that old chemo drug is chemically similar to Triapine.",
+            "reading": "unclear",
+            "statement": "The person has a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine or other agents used in this study."
+          }
+        ],
+        "timesAsked": 2
+      },
+      {
+        "criterionId": "L35",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 60,
+            "quote": "No, I don't have that.",
+            "reading": "does-not-hold",
+            "statement": "The person has a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L36",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L37",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 60,
+            "quote": "No, I don't have that.",
+            "reading": "does-not-hold",
+            "statement": "The person is testing positive for G6PD deficiency."
+          }
+        ],
+        "timesAsked": 0,
+        "reported": "does-not-hold"
+      }
+    ],
+    "pending": null,
+    "rejectedReadings": [],
+    "ignoredReadings": [],
+    "calls": 60,
+    "done": true
+  },
+  "memory": {
+    "used": [
+      "L2",
+      "L3",
+      "L4",
+      "L14",
+      "L15",
+      "L21",
+      "L20",
+      "L23",
+      "L33",
+      "L34",
+      "L35"
+    ],
+    "corrected": [
+      "L4",
+      "L14"
+    ],
+    "volunteered": [],
+    "replies": 30
+  },
+  "participant": [
+    {
+      "turn": 2,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts that a biopsy confirmed the diagnosis, which is a specific medical detail not stated in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 4,
+      "usedFacts": [
+        "L2"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 6,
+      "usedFacts": [
+        "L3"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 8,
+      "usedFacts": [
+        "L4"
+      ],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts the person has not had gemcitabine, but the facts state that this claim was later corrected to confirm that gemcitabine was part of their chemotherapy."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 10,
+      "usedFacts": [
+        "L4"
+      ],
+      "instruction": "Before answering, correct something you said earlier about fact L4. Say, in your own words: \"I need to take that back: gemcitabine was part of my chemo.\". Then answer the question.",
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts that the person hasn't had any scans in the last 4 weeks, which is information not present in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 12,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the person hasn't had scans in the last 4 weeks, which contradicts the fact that radiation finished eight days ago, implying recent medical monitoring, and asserts knowledge about scan results not present in the facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 14,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 99
+        },
+        {
+          "kind": "model",
+          "reason": "The message claims the person is fully active with an ECOG score of 0, which contradicts the fact that their cancer is progressing and they have recently undergone treatment, implying a lower performance status."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 16,
+      "usedFacts": [
+        "L14"
+      ],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts that radiation finished about two months ago, but the facts explicitly state that the person later corrected this to say the radiation finished eight days ago."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 18,
+      "usedFacts": [
+        "L14",
+        "L15"
+      ],
+      "instruction": "Before answering, correct something you said earlier about fact L14. Say, in your own words: \"The radiation finished eight days ago, not two months.\". Then answer the question.",
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 20,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the patient is 'feeling better,' which contradicts the fact that his cancer is 'progressing' and his previous chemo 'stopped working.'"
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 22,
+      "usedFacts": [
+        "L21"
+      ],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the patient is feeling better and back to his routine, which contradicts the facts stating his cancer is progressing and he recently finished radiation and chemo."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 24,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts that the person has not been treated for brain metastases, but the provided facts do not contain any information regarding brain metastases or their treatment, making this an unsupported assertion."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 26,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts a specific prognosis regarding life expectancy that is not stated in the facts and contradicts the persona's instruction to keep answers short and plain-spoken."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 28,
+      "usedFacts": [
+        "L20"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 30,
+      "usedFacts": [
+        "L21"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 32,
+      "usedFacts": [
+        "L20"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 34,
+      "usedFacts": [
+        "L23"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 36,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts that the person has not been diagnosed with HIV, which is information not present in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 38,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts the person has lung cancer, but the facts do not specify the type of cancer, only that it is recurrent and progressing."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 40,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 89
+        },
+        {
+          "kind": "model",
+          "reason": "The message asserts the absence of ongoing infections and mental health conditions, which are not mentioned in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 42,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts a specific medical history (no heart attack in the last 6 months) that is not mentioned in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 44,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts a negative diagnosis of congestive heart failure, which is information not present in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 46,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts a negative diagnosis of unstable angina, which is a specific medical fact not mentioned or implied in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 48,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts a specific negative medical history (no irregular heartbeat) that is not mentioned in the provided facts, introducing new information not supported by the source."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 50,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 52,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts that the person has not been diagnosed with dementia or active psychosis, which are specific medical history details not mentioned in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 54,
+      "usedFacts": [
+        "L33"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 56,
+      "usedFacts": [
+        "L34"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 58,
+      "usedFacts": [
+        "L34"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 60,
+      "usedFacts": [
+        "L35"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    }
+  ],
+  "fidelityChecked": true,
+  "timing": {
+    "agentMs": 567883,
+    "participantMs": 240481,
+    "fidelityMs": 133346,
+    "agentCalls": 60,
+    "participantCalls": 30,
+    "fidelityCalls": 30
+  },
+  "result": {
+    "study": {
+      "nctId": "NCT00077350",
+      "briefTitle": "A Phase II Trial of Triapine (NSC #663249) in Combination With Gemcitabine as Second Line Treatment of Non-Small Cell Lung Cancer"
+    },
+    "findings": [
+      {
+        "criterionId": "L1",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "my doctor confirmed it with a biopsy",
+            "reading": "holds",
+            "statement": "The person has histologically confirmed non-small cell lung cancer (NSCLC)."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L2",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "It's recurrent: it came back after treatment, and it's progressing.",
+            "reading": "holds",
+            "statement": "The person has progressive or recurrent NSCLC."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L3",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "Yes, I've had one chemo regimen since it spread, and it stopped working.",
+            "reading": "holds",
+            "statement": "The person has failed one and only one prior cytotoxic chemotherapy regimen for advanced disease."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "holds",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L4",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "Yes, I've had one chemo regimen since it spread, and it stopped working.",
+            "reading": "unclear",
+            "statement": "The person has received prior gemcitabine chemotherapy."
+          },
+          {
+            "turn": 8,
+            "quote": "No, I've not had gemcitabine.",
+            "reading": "does-not-hold",
+            "statement": "The person has received prior gemcitabine chemotherapy."
+          },
+          {
+            "turn": 10,
+            "quote": "gemcitabine was part of my chemo",
+            "reading": "holds",
+            "statement": "The person has received prior gemcitabine chemotherapy."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "unresolved",
+        "reason": "contradicted"
+      },
+      {
+        "criterionId": "L5",
+        "evidence": [
+          {
+            "turn": 10,
+            "quote": "I haven't had any scans in the last 4 weeks",
+            "reading": "unclear",
+            "statement": "The person has measurable disease, as defined by RECIST, within 4 weeks prior to registration."
+          },
+          {
+            "turn": 12,
+            "quote": "I haven't had any scans in the last 4 weeks, so I don't know if they showed the cancer was visible and measurable.",
+            "reading": "does-not-hold",
+            "statement": "The person has measurable disease, as defined by RECIST, within 4 weeks prior to registration."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L6",
+        "evidence": [
+          {
+            "turn": 14,
+            "quote": "I'd say my ECOG score is 0.",
+            "reading": "holds",
+            "statement": "The person has an ECOG performance status of 0 or 1."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L7",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "lab-value"
+      },
+      {
+        "criterionId": "L8",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "lab-value"
+      },
+      {
+        "criterionId": "L9",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "lab-value"
+      },
+      {
+        "criterionId": "L10",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "lab-value"
+      },
+      {
+        "criterionId": "L11",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "lab-value"
+      },
+      {
+        "criterionId": "L12",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "lab-value"
+      },
+      {
+        "criterionId": "L13",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "lab-value"
+      },
+      {
+        "criterionId": "L14",
+        "evidence": [
+          {
+            "turn": 16,
+            "quote": "finished radiation about two months ago",
+            "reading": "holds",
+            "statement": "The person has completed radiation therapy at least 3 weeks prior to registration."
+          },
+          {
+            "turn": 18,
+            "quote": "The radiation finished eight days ago",
+            "reading": "does-not-hold",
+            "statement": "The person has completed any radiation therapy >= 3 weeks prior to registration."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "unresolved",
+        "reason": "contradicted"
+      },
+      {
+        "criterionId": "L15",
+        "evidence": [
+          {
+            "turn": 18,
+            "quote": "My last chemo was more than five weeks ago",
+            "reading": "holds",
+            "statement": "The person has completed prior cytotoxic chemotherapy >= 3 weeks prior to registration."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "holds",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L16",
+        "evidence": [
+          {
+            "turn": 20,
+            "quote": "I'm not sure about the specific grade. I'm feeling better, but I don't know the medical details of my recovery.",
+            "reading": "unclear",
+            "statement": "The person has recovered from adverse effects from the chemotherapy to <= Grade 1, or baseline."
+          },
+          {
+            "turn": 22,
+            "quote": "I'm feeling better and back to my usual daily routine",
+            "reading": "partial",
+            "missing": "recovery to Grade 1",
+            "statement": "The person has recovered from adverse effects from the chemotherapy to Grade 1 or baseline."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "partial",
+        "reported": "partial"
+      },
+      {
+        "criterionId": "L17",
+        "evidence": [
+          {
+            "turn": 24,
+            "quote": "No, I haven't been treated for brain metastases.",
+            "reading": "holds",
+            "statement": "The person has not been treated for brain metastases."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L18",
+        "evidence": [
+          {
+            "turn": 24,
+            "quote": "No, I haven't been treated for brain metastases.",
+            "reading": "holds",
+            "statement": "The person has not received therapy specifically intended for their brain metastases."
+          }
+        ],
+        "timesAsked": 0,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L19",
+        "evidence": [
+          {
+            "turn": 26,
+            "quote": "Yes, I expect to live for more than 3 months.",
+            "reading": "holds",
+            "statement": "The person expects to live for more than 3 months."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L20",
+        "evidence": [
+          {
+            "turn": 28,
+            "quote": "I'm a man, so not pregnant.",
+            "reading": "does-not-apply",
+            "statement": "The person is a pregnant woman."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "unresolved",
+        "reason": "does-not-apply"
+      },
+      {
+        "criterionId": "L21",
+        "evidence": [
+          {
+            "turn": 30,
+            "quote": "Not breastfeeding, being a man.",
+            "reading": "does-not-hold",
+            "statement": "The person is breastfeeding."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L22",
+        "evidence": [
+          {
+            "turn": 32,
+            "quote": "No, I haven't had a blood pregnancy test.",
+            "reading": "does-not-hold",
+            "statement": "The person has a negative serum pregnancy test within 14 days of study entry."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L23",
+        "evidence": [
+          {
+            "turn": 34,
+            "quote": "Yes, I'll use condoms from before I start and all through the study.",
+            "reading": "holds",
+            "statement": "The person agrees to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "holds",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L24",
+        "evidence": [
+          {
+            "turn": 36,
+            "quote": "No, I haven't been diagnosed with HIV or taken those medicines.",
+            "reading": "does-not-hold",
+            "statement": "The person has been diagnosed with HIV and received combination antiretroviral therapy."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L25",
+        "evidence": [
+          {
+            "turn": 38,
+            "quote": "No, I don't have another active cancer.",
+            "reading": "does-not-hold",
+            "statement": "The person has an active second malignancy."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L26",
+        "evidence": [
+          {
+            "turn": 40,
+            "quote": "No, I don't have any ongoing infections or mental health conditions",
+            "reading": "does-not-hold",
+            "statement": "The person has uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, or psychiatric illness/social situations that would limit compliance with study requirements."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L27",
+        "evidence": [
+          {
+            "turn": 42,
+            "quote": "No, I haven't had a heart attack in the last 6 months.",
+            "reading": "does-not-hold",
+            "statement": "The person has had a myocardial infarction within the prior 6 months."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L28",
+        "evidence": [
+          {
+            "turn": 44,
+            "quote": "No, I haven't been diagnosed with congestive heart failure.",
+            "reading": "does-not-hold",
+            "statement": "The person has been diagnosed with symptomatic congestive heart failure."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L29",
+        "evidence": [
+          {
+            "turn": 46,
+            "quote": "No, I haven't been diagnosed with unstable angina.",
+            "reading": "does-not-hold",
+            "statement": "The person has been diagnosed with unstable angina pectoris."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L30",
+        "evidence": [
+          {
+            "turn": 48,
+            "quote": "No, I haven't had an irregular heartbeat that needed treatment.",
+            "reading": "does-not-hold",
+            "statement": "The person has had an irregular heartbeat (cardiac arrhythmia) that required medical treatment, such as medication, a procedure, or hospitalization."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L31",
+        "evidence": [
+          {
+            "turn": 50,
+            "quote": "No, I don't use supplemental oxygen.",
+            "reading": "does-not-hold",
+            "statement": "The person has a pulmonary disease requiring oxygen."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L32",
+        "evidence": [
+          {
+            "turn": 52,
+            "quote": "No, I haven't been diagnosed with dementia or active psychosis.",
+            "reading": "does-not-hold",
+            "statement": "The person has been diagnosed with dementia or active psychosis."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L33",
+        "evidence": [
+          {
+            "turn": 54,
+            "quote": "Three weeks ago I finished a study of an experimental drug",
+            "reading": "holds",
+            "statement": "The person has used an investigational agent in the month before study enrollment."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "holds",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L34",
+        "evidence": [
+          {
+            "turn": 56,
+            "quote": "I got hives from a chemo drug years ago. No idea whether it's anything like this one.",
+            "reading": "unclear",
+            "statement": "The person has a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine® or other agents used in this study."
+          },
+          {
+            "turn": 58,
+            "quote": "I don't know if that old chemo drug is chemically similar to Triapine.",
+            "reading": "unclear",
+            "statement": "The person has a history of allergic reactions attributed to compounds of similar chemical or biologic composition to Triapine or other agents used in this study."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "unresolved",
+        "reason": "unclear"
+      },
+      {
+        "criterionId": "L35",
+        "evidence": [
+          {
+            "turn": 60,
+            "quote": "No, I don't have that.",
+            "reading": "does-not-hold",
+            "statement": "The person has a clinical history of G6PD (glucose-6-phosphate dehydrogenase) deficiency."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L36",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L37",
+        "evidence": [
+          {
+            "turn": 60,
+            "quote": "No, I don't have that.",
+            "reading": "does-not-hold",
+            "statement": "The person is testing positive for G6PD deficiency."
+          }
+        ],
+        "timesAsked": 0,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      }
+    ],
+    "transcript": [
+      {
+        "index": 0,
+        "speaker": "agent",
+        "kind": "opening",
+        "text": "Hello, and thank you for your interest in the study \"A Phase II Trial of Triapine (NSC #663249) in Combination With Gemcitabine as Second Line Treatment of Non-Small Cell Lung Cancer\". I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you."
+      },
+      {
+        "index": 1,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To be eligible, the lung cancer diagnosis must be confirmed by looking at tissue samples under a microscope (biopsy). Has your doctor confirmed your NSCLC diagnosis this way, rather than just using cells from fluid or sputum?",
+        "criterionId": "L1"
+      },
+      {
+        "index": 2,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, my doctor confirmed it with a biopsy."
+      },
+      {
+        "index": 3,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Has your doctor told you that your non-small cell lung cancer (NSCLC) has gotten worse (progressive) or come back (recurrent) after previous treatment?",
+        "criterionId": "L2"
+      },
+      {
+        "index": 4,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "It's recurrent: it came back after treatment, and it's progressing."
+      },
+      {
+        "index": 5,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you received exactly one prior chemotherapy treatment for your advanced lung cancer?",
+        "criterionId": "L3"
+      },
+      {
+        "index": 6,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I've had one chemo regimen since it spread, and it stopped working."
+      },
+      {
+        "index": 7,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever received a chemotherapy drug called gemcitabine before?",
+        "criterionId": "L4"
+      },
+      {
+        "index": 8,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've not had gemcitabine."
+      },
+      {
+        "index": 9,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had any imaging scans (like a CT or PET scan) in the last 4 weeks to check if your cancer is still visible and measurable?",
+        "criterionId": "L5"
+      },
+      {
+        "index": 10,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I need to take that back: gemcitabine was part of my chemo. I haven't had any scans in the last 4 weeks."
+      },
+      {
+        "index": 11,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, have you had any recent imaging scans (like a CT or PET scan) in the last 4 weeks that showed your cancer was still visible and measurable? If you aren't sure, that's okay to say.",
+        "criterionId": "L5"
+      },
+      {
+        "index": 12,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure. I haven't had any scans in the last 4 weeks, so I don't know if they showed the cancer was visible and measurable."
+      },
+      {
+        "index": 13,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To check your ECOG performance status, how would you describe your ability to carry out daily activities? An ECOG score of 0 or 1 means you are fully active or restricted only in physically strenuous activity but ambulatory. If you aren't sure, that's okay to say.",
+        "criterionId": "L6"
+      },
+      {
+        "index": 14,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm fully active and can do everything I used to do, just a bit slower. I'd say my ECOG score is 0."
+      },
+      {
+        "index": 15,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you completed any radiation therapy at least 3 weeks before you would register for this study?",
+        "criterionId": "L14"
+      },
+      {
+        "index": 16,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I finished radiation about two months ago."
+      },
+      {
+        "index": 17,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you completed any prior chemotherapy treatments at least 3 weeks before you would register for this study?",
+        "criterionId": "L15"
+      },
+      {
+        "index": 18,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "The radiation finished eight days ago, not two months. My last chemo was more than five weeks ago."
+      },
+      {
+        "index": 19,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you recovered from side effects of your last chemotherapy to Grade 1 (mild symptoms) or back to your normal baseline? If you aren't sure, that's okay to say.",
+        "criterionId": "L16"
+      },
+      {
+        "index": 20,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure about the specific grade. I'm feeling better, but I don't know the medical details of my recovery."
+      },
+      {
+        "index": 21,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, are your side effects from the last chemo now mild (like a headache or mild nausea) or gone, and are you back to your usual daily routine?",
+        "criterionId": "L16"
+      },
+      {
+        "index": 22,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'm feeling better and back to my usual daily routine."
+      },
+      {
+        "index": 23,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you been treated for brain metastases? If so, was it more than 3 weeks ago, and have you been stable with no new or worsening neurological symptoms (like headaches, vision changes, or weakness) since then?",
+        "criterionId": "L17"
+      },
+      {
+        "index": 24,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been treated for brain metastases."
+      },
+      {
+        "index": 25,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Based on your current health, do you expect to live for more than 3 months?",
+        "criterionId": "L19"
+      },
+      {
+        "index": 26,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I expect to live for more than 3 months."
+      },
+      {
+        "index": 27,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently pregnant, or do you think there is any chance you could be pregnant?",
+        "criterionId": "L20"
+      },
+      {
+        "index": 28,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No. I'm a man, so not pregnant."
+      },
+      {
+        "index": 29,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently breastfeeding?",
+        "criterionId": "L21"
+      },
+      {
+        "index": 30,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Not breastfeeding, being a man."
+      },
+      {
+        "index": 31,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had a blood pregnancy test within the last 14 days?",
+        "criterionId": "L22"
+      },
+      {
+        "index": 32,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't had a blood pregnancy test. I'm a man, so that wouldn't apply to me."
+      },
+      {
+        "index": 33,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you willing to use an effective birth control method (like condoms or hormonal birth control) or practice abstinence during the study and for a period after it ends?",
+        "criterionId": "L23"
+      },
+      {
+        "index": 34,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'll use condoms from before I start and all through the study."
+      },
+      {
+        "index": 35,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with HIV and received combination antiretroviral therapy (a mix of medicines used to treat HIV)?",
+        "criterionId": "L24"
+      },
+      {
+        "index": 36,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been diagnosed with HIV or taken those medicines."
+      },
+      {
+        "index": 37,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with a second type of cancer that is currently active or being treated?",
+        "criterionId": "L25"
+      },
+      {
+        "index": 38,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I don't have another active cancer. Just the lung cancer."
+      },
+      {
+        "index": 39,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you currently have any ongoing infections (like a fever or active cold) or any mental health conditions that might make it hard to follow the study rules?",
+        "criterionId": "L26"
+      },
+      {
+        "index": 40,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I don't have any ongoing infections or mental health conditions that would interfere."
+      },
+      {
+        "index": 41,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had a heart attack (myocardial infarction) in the last 6 months?",
+        "criterionId": "L27"
+      },
+      {
+        "index": 42,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't had a heart attack in the last 6 months."
+      },
+      {
+        "index": 43,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with symptomatic congestive heart failure, which is a condition where the heart doesn't pump blood as well as it should and causes symptoms like shortness of breath or swelling?",
+        "criterionId": "L28"
+      },
+      {
+        "index": 44,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been diagnosed with congestive heart failure."
+      },
+      {
+        "index": 45,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with unstable angina pectoris, which is chest pain caused by reduced blood flow to the heart that occurs at rest or with minimal exertion?",
+        "criterionId": "L29"
+      },
+      {
+        "index": 46,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been diagnosed with unstable angina."
+      },
+      {
+        "index": 47,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever had an irregular heartbeat (cardiac arrhythmia) that required medical treatment, such as medication, a procedure, or hospitalization? Please note that this does not include chronic, stable, and symptom-free atrial fibrillation.",
+        "criterionId": "L30"
+      },
+      {
+        "index": 48,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't had an irregular heartbeat that needed treatment."
+      },
+      {
+        "index": 49,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you currently use supplemental oxygen to help with breathing due to a lung condition?",
+        "criterionId": "L31"
+      },
+      {
+        "index": 50,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I don't use supplemental oxygen."
+      },
+      {
+        "index": 51,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with dementia or active psychosis?",
+        "criterionId": "L32"
+      },
+      {
+        "index": 52,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been diagnosed with dementia or active psychosis."
+      },
+      {
+        "index": 53,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you taken part in any other clinical trials or received any investigational medications in the past month?",
+        "criterionId": "L33"
+      },
+      {
+        "index": 54,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes. Three weeks ago I finished a study of an experimental drug for my arthritis."
+      },
+      {
+        "index": 55,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever had an allergic reaction to Triapine or any other medicines with a similar chemical or biologic makeup?",
+        "criterionId": "L34"
+      },
+      {
+        "index": 56,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I got hives from a chemo drug years ago. No idea whether it's anything like this one."
+      },
+      {
+        "index": 57,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, do you know if the chemo drug that caused your hives has a similar chemical makeup to Triapine, or are you unsure?",
+        "criterionId": "L34"
+      },
+      {
+        "index": 58,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure. I don't know if that old chemo drug is chemically similar to Triapine."
+      },
+      {
+        "index": 59,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with G6PD deficiency, which is a genetic condition affecting red blood cells?",
+        "criterionId": "L35"
+      },
+      {
+        "index": 60,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "G6PD deficiency? No, I don't have that."
+      },
+      {
+        "index": 61,
+        "speaker": "agent",
+        "kind": "closing",
+        "text": "Thank you, that's all my questions. A study coordinator will review your answers and contact you about next steps."
+      }
+    ],
+    "handoff": {
+      "holds": [
+        "L3",
+        "L15",
+        "L23",
+        "L33"
+      ],
+      "doesNotHold": [
+        "L21",
+        "L35"
+      ],
+      "unresolved": [
+        "L4",
+        "L14",
+        "L20",
+        "L34"
+      ],
+      "chartReview": [
+        "L1",
+        "L2",
+        "L5",
+        "L6",
+        "L16",
+        "L17",
+        "L18",
+        "L19",
+        "L22",
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L29",
+        "L30",
+        "L31",
+        "L32",
+        "L37"
+      ],
+      "notRaised": [
+        "L7",
+        "L8",
+        "L9",
+        "L10",
+        "L11",
+        "L12",
+        "L13",
+        "L36"
+      ]
+    },
+    "rejectedReadings": [],
+    "ignoredReadings": [],
+    "calls": 60,
+    "run": {
+      "model": "Qwen3.6-35B-A3B-MLX-8bit",
+      "quantization": "8bit",
+      "temperature": 0,
+      "seed": 20260921,
+      "adapter": "omlx",
+      "thinking": "off",
+      "promptVersion": "834179395652",
+      "timestamp": "2026-10"
+    }
+  }
+}

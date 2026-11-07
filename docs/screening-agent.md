@@ -36,6 +36,21 @@ Each criterion gets at most one of these responses, and a response doesn't use u
 
 The vignettes never ask for anything. So this is tested by deterministic tests and by playing it in the app, not by the screening numbers below, which come from 0009's prompts (`2c46ada9a1d5`).
 
+### Corrections, since 0022
+
+When the person corrects an earlier answer while answering a different question ("Actually, it was more recent than I said"), the model reading the reply now reports **corrections** first: each already answered criterion the reply changes, with the words that change it. A correction goes through the same rules as any reading. It must quote the reply word for word, and a change to a settled answer unsettles it, so the row ends open for the coordinator, never settled on the later answer. The next question starts by acknowledging it.
+
+It was measured twice on the local model, with the same settings as below, at prompt `f761514b3da8`:
+
+- **A replay** of the read call at recorded turns (`npm run corrections:replay`, `evals/results/corrections/01-f761514b3da8.json`). Of the ten scripted corrections in the committed conversations, six correct an answer that was settled when the correction came. The read call caught 5 of those 6, one more than the recorded conversations did, and gave no false corrections in 44 ordinary turns. The miss was noticed, but its statement was read in the wrong direction, so it agreed with the first answer.
+- **The five dev vignettes, re-run once** (`evals/results/screening/dev/13-f761514b3da8.json`, against `12-834179395652.json`). Corrections caught 3 of 4, as before, but a different one is missed: the fourth was noticed, and rejected because its quote wasn't word for word. Confidently wrong 3 of 38, against 3 of 44. One false correction: a later "I don't know if I'm taking any medications that prolong the QT interval" unsettled "no regular medicines".
+
+**Abstention rose**, from 2 of 43 to 7 of 42 (0.17), over the bar of 0.10 set before the run. Six of the seven are not corrections. They are 0009's misreading, which came up more often on the new conversations' paths: "I'm a man, so not pregnant" or "I'm a woman" read as *does not apply* to pregnancy, breastfeeding and contraception criteria. Some of those apply to everyone, and some name men too. The owner accepted the slice with the cost recorded, and left that misreading for its own slice. The seventh is the false correction above. Limits:
+
+- the scored fifteen weren't re-run, so the results below are 0009's, and still count its missed corrections;
+- the replay's one extra catch is compared with a conversation recorded on an older prompt, because the replay before the change was skipped;
+- a vaguer correction of a clinical report, and a later answer to a question first left open, are still ignored.
+
 The opening and closing messages are fixed text, never model output:
 
 > **agent:** Hello, and thank you for your interest in the study "A Trial of SHR-1316/Placebo in Combination With Chemotherapy in Patients With Resectable NSCLC". I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you.

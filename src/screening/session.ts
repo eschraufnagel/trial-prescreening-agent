@@ -1,8 +1,9 @@
 import { type ModelAdapter, monthStamp } from "../models/index.js";
 import { initialProgress, nextCriterion, raisability } from "./agenda.js";
-import { applyReadings, finalize } from "./apply.js";
+import { applyReadings, finalize, type Reading, unsettled } from "./apply.js";
 import { ask, read } from "./calls.js";
-import { type AnsweredCriterion, type AskRequest, PROMPT_VERSION } from "./prompts.js";
+import { type AskRequest, PROMPT_VERSION } from "./prompts.js";
+import { readable } from "./readable.js";
 import { hasResponseLeft, locateRequest, setAside } from "./requests.js";
 import { closingMessage, openingMessage, stopMessage } from "./templates.js";
 import type {
@@ -122,7 +123,7 @@ export class ScreeningSession {
     const turn = draft.transcript.length;
     draft.transcript.push({ index: turn, speaker: "participant", kind: "reply", text });
 
-    const { open, answered, saidSoFar } = this.#readable(draft);
+    const { open, answered, saidSoFar } = readable(draft.criteria, draft.progress);
     const read_ = await read(this.#adapter, {
       transcript: draft.transcript,
       message: text,
@@ -148,7 +149,7 @@ export class ScreeningSession {
       pending !== null && hasResponseLeft(draft.progress.find((p) => p.criterionId === pending));
 
     // An answer given while asking what the question means isn't recorded.
-    let readings = read_.value.readings;
+    let readings = withCorrections(read_.value.readings, read_.value.corrections);
     if (
       pending !== null &&
       respondable &&
@@ -163,11 +164,13 @@ export class ScreeningSession {
       { criteria: draft.criteria, progress: draft.progress, turn, message: text },
       readings,
     );
+    // The person corrected an earlier answer, from whichever list (slice 0022).
+    const corrected = unsettled(draft.progress, applied.progress).length > 0;
     draft.progress = applied.progress;
     draft.rejectedReadings.push(...applied.rejected);
     draft.ignoredReadings.push(...applied.ignored);
 
-    const next = await this.#next(draft, request, respondable);
+    const next = await this.#next(draft, request, respondable, corrected);
     this.#state = draft;
     return next;
   }
@@ -180,9 +183,11 @@ export class ScreeningSession {
     draft: ScreeningState,
     request: ParticipantRequest | null,
     respondable: boolean,
+    corrected: boolean,
   ): Promise<AgentReply> {
+    const ack = corrected ? { corrected: true as const } : {};
     if (request === null) {
-      return this.#advance(draft);
+      return this.#advance(draft, ack);
     }
     const progress = draft.progress.find((p) => p.criterionId === draft.pending);
     const stillOpen = progress?.status === "open";
@@ -193,19 +198,21 @@ export class ScreeningSession {
       return request.kind === "explain" || request.kind === "why"
         ? this.#advance(draft, {
             request: { kind: request.kind, quote: request.quote, again: true },
+            ...ack,
           })
-        : this.#advance(draft);
+        : this.#advance(draft, ack);
     }
 
     switch (request.kind) {
       case "explain":
       case "why":
-        return this.#respond(draft, { kind: request.kind, quote: request.quote });
+        return this.#respond(draft, { kind: request.kind, quote: request.quote }, corrected);
       case "study":
         return stillOpen
-          ? this.#respond(draft, { kind: "study", quote: request.quote })
-          : this.#advance(draft, { request: { kind: "study", quote: request.quote } });
+          ? this.#respond(draft, { kind: "study", quote: request.quote }, corrected)
+          : this.#advance(draft, { request: { kind: "study", quote: request.quote }, ...ack });
       case "stop":
+        // Stopping makes no ask call, so it carries no acknowledgement.
         return stillOpen ? this.#repeatAfterStop(draft) : this.#advance(draft, { stop: true });
     }
   }
@@ -214,7 +221,11 @@ export class ScreeningSession {
    * Responds to the request, then asks the pending criterion again. Doesn't
    * use one of its asks; uses its one response. Mutates `draft`.
    */
-  async #respond(draft: ScreeningState, request: AskRequest): Promise<AgentReply> {
+  async #respond(
+    draft: ScreeningState,
+    request: AskRequest,
+    corrected: boolean,
+  ): Promise<AgentReply> {
     const { criterion, progress, kind } = this.#pendingCriterion(draft);
     const question = await ask(this.#adapter, {
       study: draft.study,
@@ -222,6 +233,7 @@ export class ScreeningSession {
       criterion,
       kind,
       request: { kind: request.kind, quote: request.quote },
+      ...(corrected ? { corrected: true as const } : {}),
     });
     draft.calls += question.calls;
     progress.responses = (progress.responses ?? 0) + 1;
@@ -273,7 +285,7 @@ export class ScreeningSession {
   /** Asks the next question on `draft`, or closes it. Mutates `draft`. */
   async #advance(
     draft: ScreeningState,
-    options: { request?: AskRequest; stop?: true } = {},
+    options: { request?: AskRequest; stop?: true; corrected?: true } = {},
   ): Promise<AgentReply> {
     const criterion = nextCriterion(draft.criteria, draft.progress);
 
@@ -305,6 +317,7 @@ export class ScreeningSession {
       kind: r.as,
       ...(followUp === undefined ? {} : { followUp }),
       ...(options.request === undefined ? {} : { request: options.request }),
+      ...(options.corrected === undefined ? {} : { corrected: options.corrected }),
     });
     draft.calls += question.calls;
 
@@ -319,47 +332,6 @@ export class ScreeningSession {
       criterionId: criterion.id,
     });
     return { kind: "message", text };
-  }
-
-  /**
-   * Raisable criteria split by whether they still await an answer. Answered
-   * ones carry what was recorded and the words behind it, so the read call
-   * can tell whether a reply changes it.
-   */
-  #readable(state: ScreeningState): {
-    open: ScreeningCriterion[];
-    answered: AnsweredCriterion[];
-    saidSoFar: Record<string, { reading: string; quote: string }>;
-  } {
-    const progress = new Map(state.progress.map((p) => [p.criterionId, p]));
-    const raisable = state.criteria.filter((c) => raisability(c).raise);
-    const answered: Array<{ record: AnsweredCriterion; turn: number }> = [];
-    const saidSoFar: Record<string, { reading: string; quote: string }> = {};
-    for (const c of raisable) {
-      const p = progress.get(c.id);
-      if (p === undefined) {
-        continue;
-      }
-      const turn = p.evidence.at(-1)?.turn ?? -1;
-      if (p.status === "holds" || p.status === "does-not-hold") {
-        answered.push({ record: recordOf(c, "recorded", p.status, p), turn });
-      } else if (p.status === "chart-review") {
-        answered.push({ record: recordOf(c, "reported", p.reported ?? "nothing", p), turn });
-      } else if (p.status === "open") {
-        const last = p.evidence.at(-1);
-        if (last !== undefined) {
-          saidSoFar[c.id] = { reading: last.reading, quote: last.quote };
-        }
-      }
-    }
-    return {
-      open: raisable.filter((c) => progress.get(c.id)?.status === "open"),
-      // Most recently answered first: a correction usually follows closely
-      // on what it corrects, and a long list otherwise buries it (slice 0009).
-      // A stable sort keeps protocol order among answers from one turn.
-      answered: answered.sort((a, b) => b.turn - a.turn).map((a) => a.record),
-      saidSoFar,
-    };
   }
 
   #result(state: ScreeningState): ScreeningResult {
@@ -382,19 +354,18 @@ export class ScreeningSession {
   }
 }
 
-const DETERMINATE_READINGS: readonly string[] = ["holds", "does-not-hold", "does-not-apply"];
-
-/** An answered criterion with the words behind its last determinate reading, or its last words. */
-function recordOf(
-  criterion: ScreeningCriterion,
-  kind: AnsweredCriterion["kind"],
-  value: string,
-  progress: Progress,
-): AnsweredCriterion {
-  const evidence =
-    progress.evidence.findLast((e) => DETERMINATE_READINGS.includes(e.reading)) ??
-    progress.evidence.at(-1);
-  return { criterion, kind, value, ...(evidence === undefined ? {} : { quote: evidence.quote }) };
+/**
+ * A reply's readings, then its corrections (slice 0022). A correction for a
+ * criterion that already has a reading in this reply is dropped: the model was
+ * told not to give both, and the reading wins. Which list a reading came from
+ * doesn't decide what it does; `applyReadings` does.
+ */
+export function withCorrections(
+  readings: readonly Reading[],
+  corrections: readonly Reading[],
+): Reading[] {
+  const read = new Set(readings.map((r) => r.criterionId));
+  return [...readings, ...corrections.filter((c) => !read.has(c.criterionId))];
 }
 
 /** What the follow-up question should target. */

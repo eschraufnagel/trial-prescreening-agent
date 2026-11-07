@@ -8,6 +8,7 @@
       "!tests/**/fixtures",
       "!evals/results/screening/conversations",
       "!evals/results/screening/review",
+      "!evals/results/corrections/conversations",
       "!chats",
       "!added-trials",
       "!work/0013-trials-by-link/gate",

@@ -1,0 +1,4650 @@
+{
+  "key": "NCT04385368-dev-labels-Qwen3.6-35B-A3B-MLX-8bit-834179395652-5fd4476340c9-20260921-thinking-off.json",
+  "vignetteId": "NCT04385368-dev",
+  "source": "labels",
+  "status": "complete",
+  "state": {
+    "version": 1,
+    "study": {
+      "nctId": "NCT04385368",
+      "briefTitle": "Phase III Study to Determine the Efficacy of Durvalumab in Combination With Chemotherapy in Completely Resected Stage II-III Non-small Cell Lung Cancer (NSCLC)"
+    },
+    "criteria": [
+      {
+        "id": "L1",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "Patients must be capable of giving signed informed consent, which includes a mandatory genetic informed consent and compliance with the requirements and restrictions listed in the informed consent forms (ICFs) and in this protocol."
+      },
+      {
+        "id": "L2",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Provision of signed and dated, written ICFs must occur prior to any mandatory study-specific procedures, sampling, and analyses."
+      },
+      {
+        "id": "L3",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "ICF1 must be signed and dated prior to any study procedures and prior to the planned surgical resection of the primary NSCLC, with the exceptions noted below."
+      },
+      {
+        "id": "L4",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "In these cases, a whole blood sample and resected tumor tissue must be collected and sent to the diagnostic lab as soon as possible after ICF1 is signed for development of the personalized panel."
+      },
+      {
+        "id": "L5",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "A plasma sample must still be collected at Week 3-5 (Day 21-35) post-surgery, even if creation of the personalized panel for MRD detection is delayed."
+      },
+      {
+        "id": "L6",
+        "polarity": "inclusion",
+        "type": "patient",
+        "text": "Age ≥18 years at the time of screening."
+      },
+      {
+        "id": "L7",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Individuals who have diagnosis of histologically confirmed NSCLC (WHO 2015 classification) with resectable (stage II-III) disease (according to IASLC Staging Manual in Thoracic Oncology v8.0)."
+      },
+      {
+        "id": "L8",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Select (ie, T3N2 or T4N2) stage IIIB patients will be eligible, provided that they are upstaged to T3N2 or T4N2 based on confirmed pathology."
+      },
+      {
+        "id": "L9",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Patients who are staged asT3N2 or T4N2 prior to surgery are not eligible."
+      },
+      {
+        "id": "L10",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "A contrast-enhanced CT or MRI scan of the chest must have been done for surgical planning prior to surgery."
+      },
+      {
+        "id": "L11",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "In the absence of pre-operative FDG-PET CT imaging, pre-operative contrast-enhanced CT imaging or MRI scan must cover liver and adrenal glands."
+      },
+      {
+        "id": "L12",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Brain MRI (preferred) or brain CT with IV contrast is required for complete staging of the tumor."
+      },
+      {
+        "id": "L13",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Complete resection of the primary NSCLC is mandatory."
+      },
+      {
+        "id": "L14",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "The primary tumor must be deemed resectable by a multidisciplinary evaluation that must include a thoracic surgeon certified or trained according to local standards and who performs lung cancer surgery as a significant part of their practice."
+      },
+      {
+        "id": "L15",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Patients undergoing wedge resection are not eligible for this study."
+      },
+      {
+        "id": "L16",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Note: Patients undergoing segmentectomy must have tumors less than 2 cm in maximum diameter."
+      },
+      {
+        "id": "L17",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "The surgeon performing the resection should remove all gross disease by the end of surgery."
+      },
+      {
+        "id": "L18",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "All surgical margins of resection must be macroscopically negative for tumor."
+      },
+      {
+        "id": "L19",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Pathology and/or operative reports must include the examination of at least 2 different mediastinal lymph node (N2) levels, one of which is the subcarinal node-group (level 7) and the second of which is lobe-specific (defined below)."
+      },
+      {
+        "id": "L20",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "However, the surgeon must clearly document in the operative report or in a separate written statement that the lymph node level was explored and no lymph nodes were present."
+      },
+      {
+        "id": "L21",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Normal appearing lymph nodes, if present, must be biopsied or removed."
+      },
+      {
+        "id": "L22",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Exploration of nodes must clearly be documented in medical file if not recorded in operative report."
+      },
+      {
+        "id": "L23",
+        "polarity": "inclusion",
+        "type": "definitional",
+        "text": "Note: Lobe-specific lymph node stations are classified based on the location of the primary tumor as follows (based on IASLC 2009 lymph node map terminology [Rusch et al 2009]): Stations 2R and 4R for right upper lobe or middle lobe tumors, stations 4L, 5, and 6 for left upper lobe tumors, stations 8 and 9 for lower lobe tumors of both sides (Adachi et al 2017, Rami-Porta et al 2005)."
+      },
+      {
+        "id": "L24",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "No extracapsular nodal extension of the tumor is observed in resected mediastinal N2 lymph nodes."
+      },
+      {
+        "id": "L25",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "All patients who enrol in the study prior to surgery must have a pre-surgical plasma sample collected for MRD evaluation."
+      },
+      {
+        "id": "L26",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Confirmation of suitable samples of resected tumor tissue and whole blood for WES of tumor and germline DNA, respectively, and creation of Sponsor-approved personalized panel for MRD detection."
+      },
+      {
+        "id": "L27",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Tumor tissue and whole blood samples must be provided to the diagnostic laboratory for development of the personalized panel as soon as possible."
+      },
+      {
+        "id": "L28",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Germline sequencing of whole blood is mandatory."
+      },
+      {
+        "id": "L29",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Established MRD status (MRD+ or MRD-) based on Sponsor-approved personalized assay of a plasma sample collected at Week 3-5 (Day 21-35) post-surgery."
+      },
+      {
+        "id": "L30",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Known tumor PD-L1 status determined at a central reference laboratory testing service using a validated Ventana SP263 PD-L1 immunohistochemistry (IHC) assay prior randomization."
+      },
+      {
+        "id": "L31",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Post-operative CT scan of the chest (including liver and adrenal glands) performed within 28 days + 7 days prior to randomization."
+      },
+      {
+        "id": "L32",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "ICF2 must be signed and dated after MRD status is determined and prior to initiation of any study-specific procedures, sampling, and analyses outlined in SoAs in Table 2 and Table 3."
+      },
+      {
+        "id": "L33",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "Randomization must occur within the 12 weeks (+ 7 days) following surgery."
+      },
+      {
+        "id": "L34",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "WHO/Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1."
+      },
+      {
+        "id": "L35",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Complete postoperative wound healing must have occurred prior to randomization; patients must have recovered from all acute, reversible toxic effects from prior treatments (excluding alopecia) that could potentially adversely impact further administration of durvalumab/placebo or chemotherapy according to the Investigator's judgment."
+      },
+      {
+        "id": "L36",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy"
+      },
+      {
+        "id": "L37",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Adequate organ and marrow function as described in the protocol"
+      },
+      {
+        "id": "L38",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Must have a life expectancy of at least"
+      },
+      {
+        "id": "L39",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Post-operative imaging demonstrating unequivocal evidence of disease recurrence or tissue biopsy-proven disease recurrence."
+      },
+      {
+        "id": "L40",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "In the event of lymphadenopathy on imaging that would lead to exclusion, histopathological confirmation of lymph node metastasis should be obtained prior to excluding a patient from the study."
+      },
+      {
+        "id": "L41",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "EGFR-mutant and/or ALK-translocation-positive, as assessed either from a pre-surgical biopsy sample (preferred) or the resected tumor tissue (if biopsy was not evaluable or available)."
+      },
+      {
+        "id": "L42",
+        "polarity": "inclusion",
+        "type": "definitional",
+        "text": "Where EGFR/ALK results are obtained from a pre-surgical tissue biopsy as part of standard local practice, the patient must be confirmed EGFR/ALK wild-type prior to enrolling in the study."
+      },
+      {
+        "id": "L43",
+        "polarity": "inclusion",
+        "type": "definitional",
+        "text": "Results obtained from testing the patient's primary tumor tissue during screening for another AstraZeneca study may be used in this study."
+      },
+      {
+        "id": "L44",
+        "polarity": "inclusion",
+        "type": "definitional",
+        "text": "Results from local testing of a pre-surgical biopsy."
+      },
+      {
+        "id": "L45",
+        "polarity": "inclusion",
+        "type": "protocol",
+        "text": "All local EGFR/ALK testing performed locally must be performed using a well-validated, local regulatory-approved test."
+      },
+      {
+        "id": "L46",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Mixed small cell and NSCLC histology."
+      },
+      {
+        "id": "L47",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Require re-resection or are deemed to have unresectable NSCLC by a multidisciplinary evaluation that must include a thoracic surgeon who performs lung cancer surgery as a significant part of their practice."
+      },
+      {
+        "id": "L48",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Patients who are candidates to undergo only wedge resections."
+      },
+      {
+        "id": "L49",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "History of allogeneic organ or bone marrow transplantation."
+      },
+      {
+        "id": "L50",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Non-leukocyte-depleted whole blood transfusion within 120 days of genetic sample collection."
+      },
+      {
+        "id": "L51",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Active or prior documented autoimmune or inflammatory disorders (including inflammatory bowel disease [eg, colitis or Crohn's disease], diverticulitis [with the exception of diverticulosis], systemic lupus erythematosus, Sarcoidosis syndrome, or Wegener syndrome [granulomatosis with polyangiitis, Graves' disease, rheumatoid arthritis, hypophysitis, uveitis, etc])."
+      },
+      {
+        "id": "L52",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, uncontrolled hypertension, unstable angina pectoris, uncontrolled cardiac arrhythmia, active ILD, serious chronic gastrointestinal conditions associated with diarrhea, or psychiatric illness/social situations that would limit compliance with study requirements, substantially increase risk of incurring AEs, or compromise the ability of the patient to give written informed consent."
+      },
+      {
+        "id": "L53",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "History of another primary malignancy, except for"
+      },
+      {
+        "id": "L54",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "History of active primary immunodeficiency"
+      },
+      {
+        "id": "L55",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Active infection, including tuberculosis (clinical evaluation that includes clinical history, physical examination, and radiographic findings, and tuberculosis testing in line with local practice), hepatitis B (HBV; known positive HBV surface antigen [HBsAg] result), hepatitis C (HCV), or human immunodeficiency virus infection (positive HIV 1/2 antibodies)."
+      },
+      {
+        "id": "L56",
+        "polarity": "inclusion",
+        "type": "clinical",
+        "text": "Patients positive for HCV antibody are eligible only if polymerase chain reaction is negative for HCV RNA."
+      },
+      {
+        "id": "L57",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Known allergy or hypersensitivity to any of the IPs or any of the IP excipients."
+      },
+      {
+        "id": "L58",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Any medical contraindication to treatment with platinum-based doublet chemotherapy as listed in the local labeling."
+      },
+      {
+        "id": "L59",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Received any prior adjuvant therapy for NSCLC or any prior exposure to durvalumab."
+      },
+      {
+        "id": "L60",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Any concurrent chemotherapy, IP, biologic, or hormonal therapy for cancer treatment."
+      },
+      {
+        "id": "L61",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Radiotherapy treatment for NSCLC in the neoadjuvant setting."
+      },
+      {
+        "id": "L62",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Radiotherapy treatment to more than 30% of the bone marrow or with a wide field of radiation within 4 weeks of the first dose of IP."
+      },
+      {
+        "id": "L63",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Receipt of live attenuated vaccine within 30 days prior to the first dose of IP."
+      },
+      {
+        "id": "L64",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Major surgical procedure (as defined by the Investigator) within 28 days prior to the first dose of IP."
+      },
+      {
+        "id": "L65",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Current or prior use of immunosuppressive medication within 14 days before the first dose of durvalumab/placebo."
+      },
+      {
+        "id": "L66",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Participation in another clinical study with an IP administered since completion of surgery."
+      },
+      {
+        "id": "L67",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Previous IP assignment in the present study."
+      },
+      {
+        "id": "L68",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Concurrent enrollment in another clinical study, unless it is an observational (noninterventional) clinical study, or during the follow-up period of an interventional study."
+      },
+      {
+        "id": "L69",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Prior randomization or treatment in a previous durvalumab clinical study regardless of treatment group assignment."
+      },
+      {
+        "id": "L70",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "Patients who are never-smokers; defined as no more than 100 cigarettes or its equivalent in his/her lifetime."
+      },
+      {
+        "id": "L71",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "pregnant"
+      },
+      {
+        "id": "L72",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "breastfeeding"
+      },
+      {
+        "id": "L73",
+        "polarity": "exclusion",
+        "type": "patient",
+        "text": "male or female patients of reproductive potential who are not willing to employ effective birth control from screening to 90 days after the last dose of durvalumab/placebo"
+      },
+      {
+        "id": "L74",
+        "polarity": "exclusion",
+        "type": "clinical",
+        "text": "Judgment by the Investigator that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions, and requirements."
+      }
+    ],
+    "transcript": [
+      {
+        "index": 0,
+        "speaker": "agent",
+        "kind": "opening",
+        "text": "Hello, and thank you for your interest in the study \"Phase III Study to Determine the Efficacy of Durvalumab in Combination With Chemotherapy in Completely Resected Stage II-III Non-small Cell Lung Cancer (NSCLC)\". I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you."
+      },
+      {
+        "index": 1,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you comfortable signing the standard informed consent forms, as well as the specific genetic consent form required for this study?",
+        "criterionId": "L1"
+      },
+      {
+        "index": 2,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'm able to sign all the consent forms, the genetic one too, and I'll follow the rules."
+      },
+      {
+        "index": 3,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To confirm, are you 18 years of age or older?",
+        "criterionId": "L6"
+      },
+      {
+        "index": 4,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm 71."
+      },
+      {
+        "index": 5,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you been diagnosed with non-small cell lung cancer (NSCLC) that was confirmed by a tissue biopsy and was considered removable by surgery?",
+        "criterionId": "L7"
+      },
+      {
+        "index": 6,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, they confirmed from the tissue that it's non-small cell, stage two, and that it could be removed."
+      },
+      {
+        "index": 7,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, has your surgeon successfully removed the entire tumor during surgery?",
+        "criterionId": "L13"
+      },
+      {
+        "index": 8,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yeah, the surgeon got it all out. They said it was completely resected."
+      },
+      {
+        "index": 9,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, was your case reviewed by a team including a thoracic surgeon who specializes in lung cancer surgery to confirm the tumor was resectable?",
+        "criterionId": "L14"
+      },
+      {
+        "index": 10,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure if a special team looked at it or just my surgeon. I'm a bit muddled on the details of who was in the room."
+      },
+      {
+        "index": 11,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, did a team of specialists, including a lung cancer surgeon, review your case together to confirm the tumor could be safely removed?",
+        "criterionId": "L14"
+      },
+      {
+        "index": 12,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I really don't know. I was just in the hospital for the operation and I'm not sure who else looked at my case."
+      },
+      {
+        "index": 13,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, did your surgeon remove the tumor by taking out just a small wedge of lung tissue, or did they remove a larger section like a lobe?",
+        "criterionId": "L15"
+      },
+      {
+        "index": 14,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "They took out a whole lobe, not just a small piece. It was a pretty big operation."
+      },
+      {
+        "index": 15,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Since you had a lobectomy, this specific size rule for smaller surgeries doesn't apply to you. Do you know the exact size of your tumor in centimeters?",
+        "criterionId": "L16"
+      },
+      {
+        "index": 16,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know the exact size. I wasn't paying attention to the measurements, just that it was a big job."
+      },
+      {
+        "index": 17,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. I understand you don't have the exact measurements. Do you know if your surgeon told you that all the edges of the removed tissue were clear of cancer cells? This is often called having 'negative margins' or 'clear margins,' meaning no tumor was seen at the cut edges.",
+        "criterionId": "L18"
+      },
+      {
+        "index": 18,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I think they said it was clear, but I'm not 100% sure. I wasn't really listening to the medical talk, just trying to get through the surgery."
+      },
+      {
+        "index": 19,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, did your surgeon specifically state that the edges of the removed tissue were free of cancer cells (negative margins), or are you unsure?",
+        "criterionId": "L18"
+      },
+      {
+        "index": 20,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure. I wasn't really listening to the medical talk, just trying to get through the surgery."
+      },
+      {
+        "index": 21,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you know if your pathology report mentioned 'extracapsular nodal extension' in the lymph nodes removed from your chest? This means if cancer spread from the lymph nodes into the surrounding tissue. If you aren't sure, that's okay.",
+        "criterionId": "L24"
+      },
+      {
+        "index": 22,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know what that means. I wasn't paying attention to the lymph node details."
+      },
+      {
+        "index": 23,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you know if you had a blood test done 3 to 5 weeks after your surgery to check for 'minimal residual disease' (MRD)? This is a special blood test that looks for tiny amounts of cancer cells left in the blood after surgery.",
+        "criterionId": "L29"
+      },
+      {
+        "index": 24,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know what that is. I wasn't paying attention to any blood tests after the surgery."
+      },
+      {
+        "index": 25,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To help us understand your current health, how would you describe your ability to carry out daily activities? For example, are you fully active and able to do all usual activities without restriction, or do you need some effort but are still able to care for yourself?",
+        "criterionId": "L34"
+      },
+      {
+        "index": 26,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm doing alright. I can take care of myself and do most things, though I get a bit winded if I rush around."
+      },
+      {
+        "index": 27,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you spend more than 50% of your waking hours in bed or a chair, or are you up and about most of the day with only mild limitations?",
+        "criterionId": "L34"
+      },
+      {
+        "index": 28,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm up and about most of the day, just with some mild limitations since the surgery."
+      },
+      {
+        "index": 29,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have your surgical wounds fully healed, and have you recovered from any side effects from previous treatments (like nausea or fatigue), excluding hair loss?",
+        "criterionId": "L35"
+      },
+      {
+        "index": 30,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "The wounds are healed up fine. I don't think I have any lingering side effects like nausea or fatigue, just the usual old-man tiredness."
+      },
+      {
+        "index": 31,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, have you recovered from any other side effects from previous treatments (such as nausea or fatigue) that might affect your ability to receive the study treatment, excluding hair loss?",
+        "criterionId": "L35"
+      },
+      {
+        "index": 32,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know about any other side effects. I just feel like an old man who had a big operation, but I'm healing up."
+      },
+      {
+        "index": 33,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you feel physically well enough to tolerate 4 cycles of platinum-based chemotherapy? (Platinum-based chemo is a type of cancer treatment using specific drugs. If you're not sure, that's okay.)",
+        "criterionId": "L36"
+      },
+      {
+        "index": 34,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I reckon I can handle it. I'm a tough old carpenter, and I've got the strength for it."
+      },
+      {
+        "index": 35,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you feel physically well enough to tolerate 4 cycles of platinum-based chemotherapy? (Platinum-based chemo is a type of cancer treatment using specific drugs. If you're not sure, that's okay.)",
+        "criterionId": "L36"
+      },
+      {
+        "index": 36,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yeah, I said I reckon I can handle it. I'm a tough old carpenter, and I've got the strength for it."
+      },
+      {
+        "index": 37,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had any recent blood tests (like a complete blood count or metabolic panel) that showed your organ and marrow function were within normal limits?",
+        "criterionId": "L37"
+      },
+      {
+        "index": 38,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know the exact results of my recent blood tests. I haven't looked at the numbers closely enough to say if everything is within normal limits."
+      },
+      {
+        "index": 39,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, have your recent blood tests shown that your organ and marrow function are within normal limits? (If you're not sure, that's okay.)",
+        "criterionId": "L37"
+      },
+      {
+        "index": 40,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure about the exact numbers. I haven't looked at the results closely enough to say if everything is within normal limits."
+      },
+      {
+        "index": 41,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you expect to live for at least a few more months? (If you're not sure, that's okay.)",
+        "criterionId": "L38"
+      },
+      {
+        "index": 42,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I certainly do. I'm 71 but I feel pretty good and expect to be around for a while yet."
+      },
+      {
+        "index": 43,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you expect to live for at least 3 more months? (If you're not sure, that's okay.)",
+        "criterionId": "L38"
+      },
+      {
+        "index": 44,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yeah, I certainly do. I'm 71 but I feel pretty good and expect to be around for a while yet."
+      },
+      {
+        "index": 45,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have any recent scans or biopsies shown that your lung cancer has come back?",
+        "criterionId": "L39"
+      },
+      {
+        "index": 46,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, the scans haven't shown any sign of it coming back. I'm hoping it stays that way."
+      },
+      {
+        "index": 47,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been told that your lung cancer had an EGFR mutation or an ALK translocation? These are specific genetic changes in the tumor cells. If you aren't sure, that's okay.",
+        "criterionId": "L41"
+      },
+      {
+        "index": 48,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I was told my tumour has no EGFR or ALK changes."
+      },
+      {
+        "index": 49,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been told that your lung cancer is a mixed type, containing both small cell and non-small cell components?",
+        "criterionId": "L46"
+      },
+      {
+        "index": 50,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I was told it's just non-small cell. I don't think it's mixed with anything else."
+      },
+      {
+        "index": 51,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. For this study, the surgery must be more extensive than just removing a small wedge of tissue. Was your lung cancer surgery more than a wedge resection?",
+        "criterionId": "L48"
+      },
+      {
+        "index": 52,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yeah, I already told you, they took out a whole lobe, not just a small piece. It was a pretty big operation."
+      },
+      {
+        "index": 53,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever received an organ or bone marrow transplant from another person?",
+        "criterionId": "L49"
+      },
+      {
+        "index": 54,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've never had a transplant of any kind."
+      },
+      {
+        "index": 55,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with an autoimmune or inflammatory condition, such as Crohn's disease, rheumatoid arthritis, lupus, or sarcoidosis?",
+        "criterionId": "L51"
+      },
+      {
+        "index": 56,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know about any of those. I've never been told I have an autoimmune disease or anything like that."
+      },
+      {
+        "index": 57,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, have you ever been diagnosed with or treated for conditions like Crohn's disease, ulcerative colitis, rheumatoid arthritis, lupus, or sarcoidosis?",
+        "criterionId": "L51"
+      },
+      {
+        "index": 58,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've never been diagnosed with or treated for any of those conditions like Crohn's or lupus."
+      },
+      {
+        "index": 59,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To help us check for any uncontrolled health issues, do you currently have any ongoing infections, heart problems, high blood pressure, or other serious medical conditions that are not well-managed?",
+        "criterionId": "L52"
+      },
+      {
+        "index": 60,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know about any serious uncontrolled issues. I've got a bit of breathing trouble so I use an inhaler, but otherwise I'm just an old man getting by."
+      },
+      {
+        "index": 61,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with any other type of cancer, such as skin cancer, prostate cancer, or colon cancer?",
+        "criterionId": "L53"
+      },
+      {
+        "index": 62,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been told I have any other cancers like skin or prostate cancer. Just the lung one."
+      },
+      {
+        "index": 63,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with a condition that weakens your immune system, such as HIV/AIDS or a primary immunodeficiency?",
+        "criterionId": "L54"
+      },
+      {
+        "index": 64,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've never been told I have HIV or any immune deficiency. I'm just a regular old guy with a bit of lung trouble."
+      },
+      {
+        "index": 65,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been tested for Hepatitis C (HCV)? If you have had a positive antibody test, have you also had a PCR test for HCV RNA, and if so, was that result negative?",
+        "criterionId": "L56"
+      },
+      {
+        "index": 66,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know if I've ever been tested for Hepatitis C. I haven't looked into that."
+      },
+      {
+        "index": 67,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you have any known allergies or hypersensitivities to durvalumab, chemotherapy drugs, or any ingredients used in these medications?",
+        "criterionId": "L57"
+      },
+      {
+        "index": 68,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Allergic to the study drugs? I wouldn't know, I've never had them."
+      },
+      {
+        "index": 69,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been told by a doctor that you have a medical reason, such as a specific health condition or allergy, that prevents you from taking platinum-based chemotherapy?",
+        "criterionId": "L58"
+      },
+      {
+        "index": 70,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been told I can't take that chemo. I reckon I can handle it."
+      },
+      {
+        "index": 71,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, do you have any known medical conditions or allergies that would prevent you from taking platinum-based chemotherapy, even if a doctor hasn't explicitly told you so?",
+        "criterionId": "L58"
+      },
+      {
+        "index": 72,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I don't have any known conditions or allergies that would stop me from taking that chemo. I'm ready to go."
+      },
+      {
+        "index": 73,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever received any chemotherapy or immunotherapy (like durvalumab) after your lung cancer surgery to help prevent it from coming back?",
+        "criterionId": "L59"
+      },
+      {
+        "index": 74,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Nothing else was given after the surgery, and durvalumab is new to me."
+      },
+      {
+        "index": 75,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently receiving any other cancer treatments, such as chemotherapy, immunotherapy, biologic therapy, or hormonal therapy?",
+        "criterionId": "L60"
+      },
+      {
+        "index": 76,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I'm not getting any treatment for the cancer at the moment."
+      },
+      {
+        "index": 77,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Before your surgery, did you receive any radiation therapy (radiotherapy) specifically for your lung cancer?",
+        "criterionId": "L61"
+      },
+      {
+        "index": 78,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "There may have been radiation before the operation. I honestly can't remember."
+      },
+      {
+        "index": 79,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you know if the radiation you received before surgery covered a large area of your body (wide field) or was it limited to just the lung area?",
+        "criterionId": "L62"
+      },
+      {
+        "index": 80,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm muddled on the dates and details of that radiation. I'd have to check my records to be sure if it was wide field or not."
+      },
+      {
+        "index": 81,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you received any live attenuated vaccines (such as MMR, varicella, or the nasal flu vaccine) in the last 30 days?",
+        "criterionId": "L63"
+      },
+      {
+        "index": 82,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I had a pneumonia jab about three weeks ago. I'm not sure if that counts as a live vaccine or not."
+      },
+      {
+        "index": 83,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, was the pneumonia vaccine you received the live attenuated type (such as the nasal spray flu vaccine or MMR), or was it an inactivated shot (like the standard flu shot or pneumococcal injection)?",
+        "criterionId": "L63"
+      },
+      {
+        "index": 84,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure if it was the live type or the shot. I just know it was for pneumonia."
+      },
+      {
+        "index": 85,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had any major surgery in the last 28 days? (This refers to significant operations, not minor procedures like dental work or skin biopsies.)",
+        "criterionId": "L64"
+      },
+      {
+        "index": 86,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, my operation was about two months ago, so I'm well past that 28-day window."
+      },
+      {
+        "index": 87,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you taken any medication that suppresses your immune system (such as steroids like prednisone, or drugs for autoimmune conditions) in the last 14 days?",
+        "criterionId": "L65"
+      },
+      {
+        "index": 88,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "It was more recent than I said: three weeks ago, not two months. As for the immune-suppressing meds, I use an inhaled steroid for my breathing, but I'm not sure if that counts or if I've taken anything else recently."
+      },
+      {
+        "index": 89,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, does your inhaled steroid come from a metered-dose inhaler or a nebulizer, and what is the exact name of the medication?",
+        "criterionId": "L65"
+      },
+      {
+        "index": 90,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure about the exact name or if it's a metered-dose inhaler or a nebulizer. I just use it for my breathing when I get winded."
+      },
+      {
+        "index": 91,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Since your surgery, have you taken any investigational medication (IP) as part of another clinical study?",
+        "criterionId": "L66"
+      },
+      {
+        "index": 92,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been in any other study since the operation."
+      },
+      {
+        "index": 93,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been assigned to receive the study drug (durvalumab or chemotherapy) as part of this specific lung cancer trial?",
+        "criterionId": "L67"
+      },
+      {
+        "index": 94,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, this is the first time I've been part of this study."
+      },
+      {
+        "index": 95,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently enrolled in any other clinical studies that involve taking medication or procedures, excluding purely observational studies?",
+        "criterionId": "L68"
+      },
+      {
+        "index": 96,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been enrolled in any other clinical studies."
+      },
+      {
+        "index": 97,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever participated in a previous clinical study that involved receiving durvalumab?",
+        "criterionId": "L69"
+      },
+      {
+        "index": 98,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've never been in a durvalumab study before this one."
+      },
+      {
+        "index": 99,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, have you ever smoked cigarettes? For this study, 'never-smoker' means you have smoked no more than 100 cigarettes in your entire life. If you aren't sure, that's okay to say.",
+        "criterionId": "L70"
+      },
+      {
+        "index": 100,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I smoked for about thirty years before I stopped, so I definitely haven't been a never-smoker."
+      },
+      {
+        "index": 101,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently pregnant?",
+        "criterionId": "L71"
+      },
+      {
+        "index": 102,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I'm a man, I'm not pregnant."
+      },
+      {
+        "index": 103,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently breastfeeding?",
+        "criterionId": "L72"
+      },
+      {
+        "index": 104,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Breastfeeding? Not me, I'm a man."
+      },
+      {
+        "index": 105,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently using effective birth control to prevent pregnancy? This study requires participants to use effective contraception from now until 90 days after their last dose of the study medication.",
+        "criterionId": "L73"
+      },
+      {
+        "index": 106,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'll use birth control the whole time, and for the 90 days after."
+      },
+      {
+        "index": 107,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To be clear, are you comfortable committing to all the study procedures, restrictions, and requirements, such as attending visits and taking medications as scheduled?",
+        "criterionId": "L74"
+      },
+      {
+        "index": 108,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'm able to sign all the consent forms, the genetic one too, and I'll follow the rules."
+      },
+      {
+        "index": 109,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, can you give an example of a situation where you might find it hard to follow study rules, like missing a visit or forgetting a dose? I'm not sure if you have any concerns about that.",
+        "criterionId": "L74"
+      },
+      {
+        "index": 110,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know about that. I'm just an easy-going guy who follows the rules as best I can, but I'm not sure I can give you a specific example of when I'd struggle."
+      },
+      {
+        "index": 111,
+        "speaker": "agent",
+        "kind": "closing",
+        "text": "Thank you, that's all my questions. A study coordinator will review your answers and contact you about next steps."
+      }
+    ],
+    "progress": [
+      {
+        "criterionId": "L1",
+        "status": "holds",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "Yes, I'm able to sign all the consent forms, the genetic one too, and I'll follow the rules.",
+            "reading": "holds",
+            "statement": "The person is capable of giving signed informed consent, which includes a mandatory genetic informed consent and compliance with the requirements and restrictions listed in the informed consent forms (ICFs) and in this protocol."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L2",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L3",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L4",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L5",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L6",
+        "status": "holds",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "I'm 71.",
+            "reading": "holds",
+            "statement": "The person is 18 years of age or older at the time of screening."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L7",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "confirmed from the tissue that it's non-small cell, stage two, and that it could be removed",
+            "reading": "holds",
+            "statement": "The person has a diagnosis of histologically confirmed NSCLC with resectable (stage II-III) disease."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L8",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "stage two",
+            "reading": "does-not-hold",
+            "statement": "The person is a Select (ie, T3N2 or T4N2) stage IIIB patient who is upstaged to T3N2 or T4N2 based on confirmed pathology."
+          }
+        ],
+        "timesAsked": 0,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L9",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "stage two",
+            "reading": "does-not-hold",
+            "statement": "The person is staged as T3N2 or T4N2 prior to surgery."
+          }
+        ],
+        "timesAsked": 0,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L10",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L11",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L12",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L13",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "that it could be removed",
+            "reading": "unclear",
+            "statement": "The person has had complete resection of the primary NSCLC."
+          },
+          {
+            "turn": 8,
+            "quote": "surgeon got it all out",
+            "reading": "holds",
+            "statement": "The person had complete resection of the primary NSCLC."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L14",
+        "status": "open",
+        "reason": "unclear",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "that it could be removed",
+            "reading": "unclear",
+            "statement": "The person's primary tumor was deemed resectable by a multidisciplinary evaluation that must include a thoracic surgeon certified or trained according to local standards and who performs lung cancer surgery as a significant part of their practice."
+          },
+          {
+            "turn": 8,
+            "quote": "surgeon got it all out",
+            "reading": "unclear",
+            "statement": "The primary tumor was deemed resectable by a multidisciplinary evaluation that must include a thoracic surgeon certified or trained according to local standards and who performs lung cancer surgery as a significant part of their practice."
+          },
+          {
+            "turn": 10,
+            "quote": "I'm not sure if a special team looked at it",
+            "reading": "unclear",
+            "statement": "The primary tumor was deemed resectable by a multidisciplinary evaluation that included a thoracic surgeon certified or trained according to local standards and who performs lung cancer surgery as a significant part of their practice."
+          }
+        ],
+        "timesAsked": 2
+      },
+      {
+        "criterionId": "L15",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 8,
+            "quote": "surgeon got it all out",
+            "reading": "unclear",
+            "statement": "The person is undergoing wedge resection."
+          },
+          {
+            "turn": 14,
+            "quote": "They took out a whole lobe, not just a small piece.",
+            "reading": "does-not-hold",
+            "statement": "The person underwent wedge resection."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L16",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 16,
+            "quote": "I don't know the exact size.",
+            "reading": "holds",
+            "statement": "The person does not know the exact size of their tumor in centimeters."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L17",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L18",
+        "status": "chart-review",
+        "reason": "unknown",
+        "evidence": [
+          {
+            "turn": 8,
+            "quote": "completely resected",
+            "reading": "unclear",
+            "statement": "All surgical margins of resection are macroscopically negative for tumor."
+          },
+          {
+            "turn": 18,
+            "quote": "I think they said it was clear, but I'm not 100% sure.",
+            "reading": "unclear",
+            "statement": "All surgical margins of resection are macroscopically negative for tumor."
+          },
+          {
+            "turn": 20,
+            "quote": "I'm not sure.",
+            "reading": "unknown",
+            "statement": "All surgical margins of resection are macroscopically negative for tumor."
+          }
+        ],
+        "timesAsked": 2,
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L19",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L20",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L21",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L22",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L23",
+        "status": "not-raised",
+        "reason": "definitional",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L24",
+        "status": "chart-review",
+        "reason": "unknown",
+        "evidence": [
+          {
+            "turn": 22,
+            "quote": "I don't know what that means. I wasn't paying attention to the lymph node details.",
+            "reading": "unknown",
+            "statement": "No extracapsular nodal extension of the tumor is observed in resected mediastinal N2 lymph nodes."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L25",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L26",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L27",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L28",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L29",
+        "status": "chart-review",
+        "reason": "unknown",
+        "evidence": [
+          {
+            "turn": 24,
+            "quote": "I don't know what that is. I wasn't paying attention to any blood tests after the surgery.",
+            "reading": "unknown",
+            "statement": "The person has an established MRD status (MRD+ or MRD-) based on Sponsor-approved personalized assay of a plasma sample collected at Week 3-5 (Day 21-35) post-surgery."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L30",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L31",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L32",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L33",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L34",
+        "status": "open",
+        "reason": "unclear",
+        "evidence": [
+          {
+            "turn": 26,
+            "quote": "I can take care of myself and do most things, though I get a bit winded if I rush around.",
+            "reading": "unclear",
+            "statement": "The person has a WHO/Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1."
+          },
+          {
+            "turn": 28,
+            "quote": "up and about most of the day, just with some mild limitations",
+            "reading": "unclear",
+            "statement": "The person has a WHO/Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1."
+          }
+        ],
+        "timesAsked": 2
+      },
+      {
+        "criterionId": "L35",
+        "status": "chart-review",
+        "reason": "unknown",
+        "evidence": [
+          {
+            "turn": 30,
+            "quote": "The wounds are healed up fine. I don't think I have any lingering side effects like nausea or fatigue",
+            "reading": "partial",
+            "missing": "recovery from all acute, reversible toxic effects ... according to the Investigator's judgment",
+            "statement": "Complete postoperative wound healing has occurred and the person has recovered from all acute, reversible toxic effects from prior treatments (excluding alopecia) that could potentially adversely impact further administration of durvalumab/placebo or chemotherapy according to the Investigator's judgment."
+          },
+          {
+            "turn": 32,
+            "quote": "I don't know about any other side effects.",
+            "reading": "unknown",
+            "statement": "The person has recovered from all acute, reversible toxic effects from prior treatments (excluding alopecia) that could potentially adversely impact further administration of durvalumab/placebo or chemotherapy according to the Investigator's judgment."
+          }
+        ],
+        "timesAsked": 2,
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L36",
+        "status": "open",
+        "reason": "partial",
+        "evidence": [
+          {
+            "turn": 34,
+            "quote": "I reckon I can handle it",
+            "reading": "unclear",
+            "statement": "The person is eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy"
+          },
+          {
+            "turn": 36,
+            "quote": "I reckon I can handle it",
+            "reading": "unclear",
+            "statement": "The person is eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy."
+          },
+          {
+            "turn": 70,
+            "quote": "I reckon I can handle it.",
+            "reading": "partial",
+            "missing": "The reply expresses confidence but does not confirm medical eligibility or tolerance for the specific regimen of 4 cycles.",
+            "statement": "The person is eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy."
+          },
+          {
+            "turn": 72,
+            "quote": "I don't have any known conditions or allergies that would stop me",
+            "reading": "partial",
+            "missing": "tolerance of 4 cycles",
+            "statement": "The person is eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy."
+          }
+        ],
+        "timesAsked": 2,
+        "reported": "partial"
+      },
+      {
+        "criterionId": "L37",
+        "status": "open",
+        "reason": null,
+        "evidence": [],
+        "timesAsked": 2
+      },
+      {
+        "criterionId": "L38",
+        "status": "open",
+        "reason": "unclear",
+        "evidence": [
+          {
+            "turn": 42,
+            "quote": "expect to be around for a while yet",
+            "reading": "unclear",
+            "statement": "The person has a life expectancy of at least a few more months."
+          },
+          {
+            "turn": 44,
+            "quote": "expect to be around for a while yet",
+            "reading": "unclear",
+            "statement": "The person has a life expectancy of at least 3 more months."
+          }
+        ],
+        "timesAsked": 2
+      },
+      {
+        "criterionId": "L39",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 46,
+            "quote": "the scans haven't shown any sign of it coming back",
+            "reading": "does-not-hold",
+            "statement": "Post-operative imaging has demonstrated unequivocal evidence of disease recurrence or tissue biopsy has proven disease recurrence."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L40",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L41",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 48,
+            "quote": "my tumour has no EGFR or ALK changes",
+            "reading": "does-not-hold",
+            "statement": "The person has EGFR-mutant and/or ALK-translocation-positive lung cancer."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L42",
+        "status": "not-raised",
+        "reason": "definitional",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L43",
+        "status": "not-raised",
+        "reason": "definitional",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L44",
+        "status": "not-raised",
+        "reason": "definitional",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L45",
+        "status": "not-raised",
+        "reason": "protocol",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L46",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 50,
+            "quote": "it's just non-small cell",
+            "reading": "does-not-hold",
+            "statement": "The person has mixed small cell and NSCLC histology."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L47",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "that it could be removed",
+            "reading": "does-not-hold",
+            "statement": "The person requires re-resection or is deemed to have unresectable NSCLC by a multidisciplinary evaluation that must include a thoracic surgeon who performs lung cancer surgery as a significant part of their practice."
+          }
+        ],
+        "timesAsked": 0,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L48",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 52,
+            "quote": "they took out a whole lobe, not just a small piece",
+            "reading": "does-not-hold",
+            "statement": "The person is a candidate to undergo only wedge resections."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L49",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 54,
+            "quote": "No, I've never had a transplant of any kind.",
+            "reading": "does-not-hold",
+            "statement": "The person has a history of allogeneic organ or bone marrow transplantation."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L50",
+        "status": "not-raised",
+        "reason": "lab-value",
+        "evidence": [],
+        "timesAsked": 0
+      },
+      {
+        "criterionId": "L51",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 56,
+            "quote": "I've never been told I have an autoimmune disease",
+            "reading": "unclear",
+            "statement": "The person has an active or prior documented autoimmune or inflammatory disorder."
+          },
+          {
+            "turn": 58,
+            "quote": "never been diagnosed with or treated for any of those conditions",
+            "reading": "does-not-hold",
+            "statement": "The person has active or prior documented autoimmune or inflammatory disorders."
+          }
+        ],
+        "timesAsked": 2,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L52",
+        "status": "chart-review",
+        "reason": "unknown",
+        "evidence": [
+          {
+            "turn": 60,
+            "quote": "I don't know about any serious uncontrolled issues",
+            "reading": "unknown",
+            "statement": "The person has uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, uncontrolled hypertension, unstable angina pectoris, uncontrolled cardiac arrhythmia, active ILD, serious chronic gastrointestinal conditions associated with diarrhea, or psychiatric illness/social situations that would limit compliance with study requirements, substantially increase risk of incurring AEs, or compromise the ability of the patient to give written informed consent."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L53",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 62,
+            "quote": "Just the lung one.",
+            "reading": "does-not-hold",
+            "statement": "The person has a history of another primary malignancy, except for skin cancer, prostate cancer, or other specified exceptions."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L54",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 64,
+            "quote": "never been told I have HIV or any immune deficiency",
+            "reading": "does-not-hold",
+            "statement": "The person has a history of active primary immunodeficiency."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L55",
+        "status": "chart-review",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 64,
+            "quote": "never been told I have HIV or any immune deficiency",
+            "reading": "does-not-hold",
+            "statement": "The person has an active infection, including tuberculosis, hepatitis B, hepatitis C, or human immunodeficiency virus infection."
+          }
+        ],
+        "timesAsked": 0,
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L56",
+        "status": "chart-review",
+        "reason": "unknown",
+        "evidence": [
+          {
+            "turn": 66,
+            "quote": "I don't know if I've ever been tested for Hepatitis C",
+            "reading": "unknown",
+            "statement": "The person is positive for HCV antibody and the polymerase chain reaction is negative for HCV RNA."
+          }
+        ],
+        "timesAsked": 1,
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L57",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 68,
+            "quote": "I wouldn't know, I've never had them.",
+            "reading": "does-not-hold",
+            "statement": "The person has a known allergy or hypersensitivity to any of the IPs or any of the IP excipients."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L58",
+        "status": "open",
+        "reason": "partial",
+        "evidence": [
+          {
+            "turn": 70,
+            "quote": "No, I haven't been told I can't take that chemo.",
+            "reading": "partial",
+            "missing": "The reply addresses whether the person was told they cannot take the chemo, but does not confirm the absence of any medical contraindication as defined by local labeling.",
+            "statement": "The person has any medical contraindication to treatment with platinum-based doublet chemotherapy as listed in the local labeling."
+          },
+          {
+            "turn": 72,
+            "quote": "No, I don't have any known conditions or allergies that would stop me",
+            "reading": "partial",
+            "missing": "contraindication as listed in the local labeling",
+            "statement": "The person has any medical contraindication to treatment with platinum-based doublet chemotherapy as listed in the local labeling."
+          }
+        ],
+        "timesAsked": 2,
+        "reported": "partial"
+      },
+      {
+        "criterionId": "L59",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 74,
+            "quote": "Nothing else was given after the surgery, and durvalumab is new to me.",
+            "reading": "does-not-hold",
+            "statement": "The person has received any prior adjuvant therapy for NSCLC or any prior exposure to durvalumab."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L60",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 76,
+            "quote": "No, I'm not getting any treatment for the cancer at the moment.",
+            "reading": "does-not-hold",
+            "statement": "The person is receiving concurrent chemotherapy, IP, biologic, or hormonal therapy for cancer treatment."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L61",
+        "status": "unresolved",
+        "reason": "unknown",
+        "evidence": [
+          {
+            "turn": 78,
+            "quote": "There may have been radiation before the operation. I honestly can't remember.",
+            "reading": "unknown",
+            "statement": "The person received radiotherapy treatment for NSCLC in the neoadjuvant setting."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L62",
+        "status": "unresolved",
+        "reason": "unknown",
+        "evidence": [
+          {
+            "turn": 80,
+            "quote": "I'd have to check my records to be sure if it was wide field or not.",
+            "reading": "unknown",
+            "statement": "The person received radiotherapy treatment to more than 30% of the bone marrow or with a wide field of radiation within 4 weeks of the first dose of IP."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L63",
+        "status": "open",
+        "reason": "unclear",
+        "evidence": [
+          {
+            "turn": 82,
+            "quote": "I had a pneumonia jab about three weeks ago. I'm not sure if that counts as a live vaccine or not.",
+            "reading": "unclear",
+            "statement": "The person has received a live attenuated vaccine within 30 days prior to the first dose of IP."
+          },
+          {
+            "turn": 84,
+            "quote": "I'm not sure if it was the live type or the shot.",
+            "reading": "unclear",
+            "statement": "The person has received a live attenuated vaccine within 30 days prior to the first dose of IP."
+          }
+        ],
+        "timesAsked": 2
+      },
+      {
+        "criterionId": "L64",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 86,
+            "quote": "my operation was about two months ago",
+            "reading": "does-not-hold",
+            "statement": "The person had a major surgical procedure within 28 days prior to the first dose of IP."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L65",
+        "status": "open",
+        "reason": "unclear",
+        "evidence": [
+          {
+            "turn": 88,
+            "quote": "I use an inhaled steroid for my breathing, but I'm not sure if that counts",
+            "reading": "unclear",
+            "statement": "The person has used immunosuppressive medication within 14 days before the first dose of durvalumab/placebo."
+          },
+          {
+            "turn": 90,
+            "quote": "I'm not sure about the exact name or if it's a metered-dose inhaler or a nebulizer.",
+            "reading": "unclear",
+            "statement": "The person has used immunosuppressive medication within 14 days before the first dose of durvalumab/placebo."
+          }
+        ],
+        "timesAsked": 2
+      },
+      {
+        "criterionId": "L66",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 92,
+            "quote": "No, I haven't been in any other study since the operation.",
+            "reading": "does-not-hold",
+            "statement": "The person has participated in another clinical study with an investigational product administered since completion of surgery."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L67",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 94,
+            "quote": "No, this is the first time I've been part of this study.",
+            "reading": "does-not-hold",
+            "statement": "The person has been previously assigned to receive the study drug (durvalumab or chemotherapy) as part of this specific lung cancer trial."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L68",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 96,
+            "quote": "No, I haven't been enrolled in any other clinical studies.",
+            "reading": "does-not-hold",
+            "statement": "The person is concurrently enrolled in another clinical study that is not an observational (noninterventional) clinical study or during the follow-up period of an interventional study."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L69",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 98,
+            "quote": "No, I've never been in a durvalumab study before this one.",
+            "reading": "does-not-hold",
+            "statement": "The person has been randomized or treated in a previous durvalumab clinical study."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L70",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 100,
+            "quote": "I smoked for about thirty years",
+            "reading": "does-not-hold",
+            "statement": "The person is a never-smoker (no more than 100 cigarettes or its equivalent in his/her lifetime)."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L71",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 102,
+            "quote": "I'm a man, I'm not pregnant",
+            "reading": "does-not-hold",
+            "statement": "The person is pregnant."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L72",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 104,
+            "quote": "Not me, I'm a man.",
+            "reading": "does-not-hold",
+            "statement": "The person is breastfeeding."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L73",
+        "status": "does-not-hold",
+        "reason": "answered",
+        "evidence": [
+          {
+            "turn": 106,
+            "quote": "Yes, I'll use birth control the whole time",
+            "reading": "does-not-hold",
+            "statement": "The person is a male or female patient of reproductive potential who is not willing to employ effective birth control from screening to 90 days after the last dose of durvalumab/placebo."
+          }
+        ],
+        "timesAsked": 1
+      },
+      {
+        "criterionId": "L74",
+        "status": "open",
+        "reason": "unclear",
+        "evidence": [
+          {
+            "turn": 108,
+            "quote": "I'll follow the rules",
+            "reading": "unclear",
+            "statement": "The investigator judges that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions, and requirements."
+          },
+          {
+            "turn": 110,
+            "quote": "I don't know about that",
+            "reading": "unclear",
+            "statement": "The Investigator judges that the patient should not participate in the study because the patient is unlikely to comply with study procedures, restrictions, and requirements."
+          }
+        ],
+        "timesAsked": 2
+      }
+    ],
+    "pending": null,
+    "rejectedReadings": [
+      {
+        "turn": 12,
+        "criterionId": "L14",
+        "reading": "unknown",
+        "quote": "I really don't know. I'm not sure who else looked at my case."
+      },
+      {
+        "turn": 38,
+        "criterionId": "L37",
+        "reading": "unknown",
+        "quote": "I don't know the exact results... I haven't looked at the numbers closely enough to say if everything is within normal limits."
+      },
+      {
+        "turn": 40,
+        "criterionId": "L37",
+        "reading": "unknown",
+        "quote": "I don't know the exact results... haven't looked at the numbers closely enough to say if everything is within normal limits."
+      }
+    ],
+    "ignoredReadings": [
+      {
+        "turn": 60,
+        "criterionId": "L52",
+        "reading": "unclear",
+        "why": "already-settled"
+      }
+    ],
+    "calls": 110,
+    "done": true
+  },
+  "memory": {
+    "used": [
+      "L1",
+      "L6",
+      "L7",
+      "L41",
+      "L49",
+      "L57",
+      "L65",
+      "L71",
+      "L59",
+      "L60",
+      "L61",
+      "L62",
+      "L63",
+      "L64",
+      "L66",
+      "L67",
+      "L68",
+      "L69",
+      "L70",
+      "L72",
+      "L73"
+    ],
+    "corrected": [
+      "L64"
+    ],
+    "volunteered": [],
+    "replies": 55
+  },
+  "participant": [
+    {
+      "turn": 2,
+      "usedFacts": [
+        "L1"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 4,
+      "usedFacts": [
+        "L6"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 6,
+      "usedFacts": [
+        "L7"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 8,
+      "usedFacts": [
+        "L7"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 10,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 12,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 14,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 82
+        },
+        {
+          "kind": "model",
+          "reason": "The message asserts specific details about the surgery ('took out a whole lobe', 'pretty big operation') that are not stated in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 16,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 18,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 141
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 20,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 22,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 24,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the person wasn't paying attention to blood tests after surgery, which contradicts Fact L1 where they explicitly state they are able to sign consent forms and follow rules, implying engagement with medical procedures and monitoring."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 26,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 108
+        },
+        {
+          "kind": "model",
+          "reason": "The message claims the person gets winded if they rush around, which is a specific health symptom not stated in the facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 28,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 84
+        },
+        {
+          "kind": "model",
+          "reason": "The message claims the person has 'mild limitations since the surgery,' but the facts do not state this; instead, the person describes themselves as 'easy-going' and 'muddled on dates,' without specifying physical limitations."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 30,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 136
+        },
+        {
+          "kind": "model",
+          "reason": "The message asserts specific details about wound healing and the absence of side effects like nausea or fatigue, which are not stated in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 32,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the person is 'healing up,' which asserts a positive health status and recovery progress that contradicts the facts stating he is not currently receiving treatment and is muddled on dates, while also adding specific details about feeling like an 'old man' not present in the facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 34,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 86
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 36,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 99
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 38,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts specific knowledge about recent blood tests and their results, which is not mentioned in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 40,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the person has looked at results and is unsure about specific numbers, which contradicts the persona's trait of giving loose answers and the facts stating he is muddled on dates and cannot remember details."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 42,
+      "usedFacts": [
+        "L6"
+      ],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the person 'feels pretty good', which is a subjective health assessment not stated in the facts, and contradicts the persona's trait of giving 'loose answers' by providing a specific, confident statement."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 44,
+      "usedFacts": [
+        "L6"
+      ],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the person 'feels pretty good,' which asserts a specific health status not stated in the facts, where the person describes themselves as 'muddled on dates' and admits to memory issues."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 46,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 85
+        },
+        {
+          "kind": "model",
+          "reason": "The message claims that scans have shown no sign of the cancer coming back, but the facts do not state that scans have been performed or provide any results regarding recurrence."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 48,
+      "usedFacts": [
+        "L41"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 50,
+      "usedFacts": [
+        "L7"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 52,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 108
+        },
+        {
+          "kind": "model",
+          "reason": "The message asserts that a whole lobe was removed, which contradicts the fact that the tumor could be removed (implying resectability) but does not specify the extent of surgery, and more importantly, the persona's facts do not contain this specific detail about the surgical procedure, making it an unsupported assertion of new medical history."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 54,
+      "usedFacts": [
+        "L49"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 56,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts that the person has never been told they have an autoimmune disease, which is specific medical history information not present in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 58,
+      "usedFacts": [
+        "L57"
+      ],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts that the person has never been diagnosed with or treated for Crohn's or lupus, which is information not present in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 60,
+      "usedFacts": [
+        "L65"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 62,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 97
+        },
+        {
+          "kind": "model",
+          "reason": "The message asserts that the person has lung cancer, but the provided facts only specify non-small cell stage two cancer without identifying the organ or type as lung cancer."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 64,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "uncited-assertion",
+          "length": 116
+        },
+        {
+          "kind": "model",
+          "reason": "The message asserts that the person has never been told they have HIV or any immune deficiency, which is information not present in the provided facts."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 66,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 68,
+      "usedFacts": [
+        "L57"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 70,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the person has been told they can take chemo, which contradicts the fact that they are not currently receiving any treatment for cancer."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 72,
+      "usedFacts": [
+        "L71"
+      ],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message claims the person has no known allergies, which contradicts Fact L57 where the person explicitly states they would not know about allergies to study drugs because they have never had them, implying a lack of knowledge rather than a confirmed absence of allergies, and the message asserts readiness for 'that chemo' which is not supported by the facts stating the patient is not currently getting treatment and is unfamiliar with durvalumab."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 74,
+      "usedFacts": [
+        "L59"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 76,
+      "usedFacts": [
+        "L60"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 78,
+      "usedFacts": [
+        "L61"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 80,
+      "usedFacts": [
+        "L62"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 82,
+      "usedFacts": [
+        "L63"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 84,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 86,
+      "usedFacts": [
+        "L64"
+      ],
+      "instruction": null,
+      "flags": [
+        {
+          "kind": "model",
+          "reason": "The message asserts the operation was two months ago, which contradicts the facts stating the person later corrected this to three weeks ago."
+        }
+      ],
+      "modelChecked": true
+    },
+    {
+      "turn": 88,
+      "usedFacts": [
+        "L64",
+        "L65"
+      ],
+      "instruction": "Before answering, correct something you said earlier about fact L64. Say, in your own words: \"It was more recent than I said: three weeks ago, not two months.\". Then answer the question.",
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 90,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 92,
+      "usedFacts": [
+        "L66"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 94,
+      "usedFacts": [
+        "L67"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 96,
+      "usedFacts": [
+        "L68"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 98,
+      "usedFacts": [
+        "L69"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 100,
+      "usedFacts": [
+        "L70"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 102,
+      "usedFacts": [
+        "L71"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 104,
+      "usedFacts": [
+        "L72"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 106,
+      "usedFacts": [
+        "L73"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 108,
+      "usedFacts": [
+        "L1"
+      ],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    },
+    {
+      "turn": 110,
+      "usedFacts": [],
+      "instruction": null,
+      "flags": [],
+      "modelChecked": true
+    }
+  ],
+  "fidelityChecked": true,
+  "timing": {
+    "agentMs": 595527,
+    "participantMs": 255321,
+    "fidelityMs": 103767,
+    "agentCalls": 110,
+    "participantCalls": 55,
+    "fidelityCalls": 55
+  },
+  "result": {
+    "study": {
+      "nctId": "NCT04385368",
+      "briefTitle": "Phase III Study to Determine the Efficacy of Durvalumab in Combination With Chemotherapy in Completely Resected Stage II-III Non-small Cell Lung Cancer (NSCLC)"
+    },
+    "findings": [
+      {
+        "criterionId": "L1",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "Yes, I'm able to sign all the consent forms, the genetic one too, and I'll follow the rules.",
+            "reading": "holds",
+            "statement": "The person is capable of giving signed informed consent, which includes a mandatory genetic informed consent and compliance with the requirements and restrictions listed in the informed consent forms (ICFs) and in this protocol."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "holds",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L2",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L3",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L4",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L5",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L6",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "I'm 71.",
+            "reading": "holds",
+            "statement": "The person is 18 years of age or older at the time of screening."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "holds",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L7",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "confirmed from the tissue that it's non-small cell, stage two, and that it could be removed",
+            "reading": "holds",
+            "statement": "The person has a diagnosis of histologically confirmed NSCLC with resectable (stage II-III) disease."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L8",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "stage two",
+            "reading": "does-not-hold",
+            "statement": "The person is a Select (ie, T3N2 or T4N2) stage IIIB patient who is upstaged to T3N2 or T4N2 based on confirmed pathology."
+          }
+        ],
+        "timesAsked": 0,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L9",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "stage two",
+            "reading": "does-not-hold",
+            "statement": "The person is staged as T3N2 or T4N2 prior to surgery."
+          }
+        ],
+        "timesAsked": 0,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L10",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L11",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L12",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L13",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "that it could be removed",
+            "reading": "unclear",
+            "statement": "The person has had complete resection of the primary NSCLC."
+          },
+          {
+            "turn": 8,
+            "quote": "surgeon got it all out",
+            "reading": "holds",
+            "statement": "The person had complete resection of the primary NSCLC."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L14",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "that it could be removed",
+            "reading": "unclear",
+            "statement": "The person's primary tumor was deemed resectable by a multidisciplinary evaluation that must include a thoracic surgeon certified or trained according to local standards and who performs lung cancer surgery as a significant part of their practice."
+          },
+          {
+            "turn": 8,
+            "quote": "surgeon got it all out",
+            "reading": "unclear",
+            "statement": "The primary tumor was deemed resectable by a multidisciplinary evaluation that must include a thoracic surgeon certified or trained according to local standards and who performs lung cancer surgery as a significant part of their practice."
+          },
+          {
+            "turn": 10,
+            "quote": "I'm not sure if a special team looked at it",
+            "reading": "unclear",
+            "statement": "The primary tumor was deemed resectable by a multidisciplinary evaluation that included a thoracic surgeon certified or trained according to local standards and who performs lung cancer surgery as a significant part of their practice."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "unclear"
+      },
+      {
+        "criterionId": "L15",
+        "evidence": [
+          {
+            "turn": 8,
+            "quote": "surgeon got it all out",
+            "reading": "unclear",
+            "statement": "The person is undergoing wedge resection."
+          },
+          {
+            "turn": 14,
+            "quote": "They took out a whole lobe, not just a small piece.",
+            "reading": "does-not-hold",
+            "statement": "The person underwent wedge resection."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L16",
+        "evidence": [
+          {
+            "turn": 16,
+            "quote": "I don't know the exact size.",
+            "reading": "holds",
+            "statement": "The person does not know the exact size of their tumor in centimeters."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "holds"
+      },
+      {
+        "criterionId": "L17",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L18",
+        "evidence": [
+          {
+            "turn": 8,
+            "quote": "completely resected",
+            "reading": "unclear",
+            "statement": "All surgical margins of resection are macroscopically negative for tumor."
+          },
+          {
+            "turn": 18,
+            "quote": "I think they said it was clear, but I'm not 100% sure.",
+            "reading": "unclear",
+            "statement": "All surgical margins of resection are macroscopically negative for tumor."
+          },
+          {
+            "turn": 20,
+            "quote": "I'm not sure.",
+            "reading": "unknown",
+            "statement": "All surgical margins of resection are macroscopically negative for tumor."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "unknown",
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L19",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L20",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L21",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L22",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L23",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "definitional"
+      },
+      {
+        "criterionId": "L24",
+        "evidence": [
+          {
+            "turn": 22,
+            "quote": "I don't know what that means. I wasn't paying attention to the lymph node details.",
+            "reading": "unknown",
+            "statement": "No extracapsular nodal extension of the tumor is observed in resected mediastinal N2 lymph nodes."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "unknown",
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L25",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L26",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L27",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L28",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L29",
+        "evidence": [
+          {
+            "turn": 24,
+            "quote": "I don't know what that is. I wasn't paying attention to any blood tests after the surgery.",
+            "reading": "unknown",
+            "statement": "The person has an established MRD status (MRD+ or MRD-) based on Sponsor-approved personalized assay of a plasma sample collected at Week 3-5 (Day 21-35) post-surgery."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "unknown",
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L30",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L31",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L32",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L33",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L34",
+        "evidence": [
+          {
+            "turn": 26,
+            "quote": "I can take care of myself and do most things, though I get a bit winded if I rush around.",
+            "reading": "unclear",
+            "statement": "The person has a WHO/Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1."
+          },
+          {
+            "turn": 28,
+            "quote": "up and about most of the day, just with some mild limitations",
+            "reading": "unclear",
+            "statement": "The person has a WHO/Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "unclear"
+      },
+      {
+        "criterionId": "L35",
+        "evidence": [
+          {
+            "turn": 30,
+            "quote": "The wounds are healed up fine. I don't think I have any lingering side effects like nausea or fatigue",
+            "reading": "partial",
+            "missing": "recovery from all acute, reversible toxic effects ... according to the Investigator's judgment",
+            "statement": "Complete postoperative wound healing has occurred and the person has recovered from all acute, reversible toxic effects from prior treatments (excluding alopecia) that could potentially adversely impact further administration of durvalumab/placebo or chemotherapy according to the Investigator's judgment."
+          },
+          {
+            "turn": 32,
+            "quote": "I don't know about any other side effects.",
+            "reading": "unknown",
+            "statement": "The person has recovered from all acute, reversible toxic effects from prior treatments (excluding alopecia) that could potentially adversely impact further administration of durvalumab/placebo or chemotherapy according to the Investigator's judgment."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "unknown",
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L36",
+        "evidence": [
+          {
+            "turn": 34,
+            "quote": "I reckon I can handle it",
+            "reading": "unclear",
+            "statement": "The person is eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy"
+          },
+          {
+            "turn": 36,
+            "quote": "I reckon I can handle it",
+            "reading": "unclear",
+            "statement": "The person is eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy."
+          },
+          {
+            "turn": 70,
+            "quote": "I reckon I can handle it.",
+            "reading": "partial",
+            "missing": "The reply expresses confidence but does not confirm medical eligibility or tolerance for the specific regimen of 4 cycles.",
+            "statement": "The person is eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy."
+          },
+          {
+            "turn": 72,
+            "quote": "I don't have any known conditions or allergies that would stop me",
+            "reading": "partial",
+            "missing": "tolerance of 4 cycles",
+            "statement": "The person is eligible to tolerate 4 cycles of platinum-based adjuvant chemotherapy."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "partial",
+        "reported": "partial"
+      },
+      {
+        "criterionId": "L37",
+        "evidence": [],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "evidence-not-found"
+      },
+      {
+        "criterionId": "L38",
+        "evidence": [
+          {
+            "turn": 42,
+            "quote": "expect to be around for a while yet",
+            "reading": "unclear",
+            "statement": "The person has a life expectancy of at least a few more months."
+          },
+          {
+            "turn": 44,
+            "quote": "expect to be around for a while yet",
+            "reading": "unclear",
+            "statement": "The person has a life expectancy of at least 3 more months."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "unclear"
+      },
+      {
+        "criterionId": "L39",
+        "evidence": [
+          {
+            "turn": 46,
+            "quote": "the scans haven't shown any sign of it coming back",
+            "reading": "does-not-hold",
+            "statement": "Post-operative imaging has demonstrated unequivocal evidence of disease recurrence or tissue biopsy has proven disease recurrence."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L40",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L41",
+        "evidence": [
+          {
+            "turn": 48,
+            "quote": "my tumour has no EGFR or ALK changes",
+            "reading": "does-not-hold",
+            "statement": "The person has EGFR-mutant and/or ALK-translocation-positive lung cancer."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L42",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "definitional"
+      },
+      {
+        "criterionId": "L43",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "definitional"
+      },
+      {
+        "criterionId": "L44",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "definitional"
+      },
+      {
+        "criterionId": "L45",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "protocol"
+      },
+      {
+        "criterionId": "L46",
+        "evidence": [
+          {
+            "turn": 50,
+            "quote": "it's just non-small cell",
+            "reading": "does-not-hold",
+            "statement": "The person has mixed small cell and NSCLC histology."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L47",
+        "evidence": [
+          {
+            "turn": 6,
+            "quote": "that it could be removed",
+            "reading": "does-not-hold",
+            "statement": "The person requires re-resection or is deemed to have unresectable NSCLC by a multidisciplinary evaluation that must include a thoracic surgeon who performs lung cancer surgery as a significant part of their practice."
+          }
+        ],
+        "timesAsked": 0,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L48",
+        "evidence": [
+          {
+            "turn": 52,
+            "quote": "they took out a whole lobe, not just a small piece",
+            "reading": "does-not-hold",
+            "statement": "The person is a candidate to undergo only wedge resections."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L49",
+        "evidence": [
+          {
+            "turn": 54,
+            "quote": "No, I've never had a transplant of any kind.",
+            "reading": "does-not-hold",
+            "statement": "The person has a history of allogeneic organ or bone marrow transplantation."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L50",
+        "evidence": [],
+        "timesAsked": 0,
+        "status": "not-raised",
+        "reason": "lab-value"
+      },
+      {
+        "criterionId": "L51",
+        "evidence": [
+          {
+            "turn": 56,
+            "quote": "I've never been told I have an autoimmune disease",
+            "reading": "unclear",
+            "statement": "The person has an active or prior documented autoimmune or inflammatory disorder."
+          },
+          {
+            "turn": 58,
+            "quote": "never been diagnosed with or treated for any of those conditions",
+            "reading": "does-not-hold",
+            "statement": "The person has active or prior documented autoimmune or inflammatory disorders."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L52",
+        "evidence": [
+          {
+            "turn": 60,
+            "quote": "I don't know about any serious uncontrolled issues",
+            "reading": "unknown",
+            "statement": "The person has uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, uncontrolled hypertension, unstable angina pectoris, uncontrolled cardiac arrhythmia, active ILD, serious chronic gastrointestinal conditions associated with diarrhea, or psychiatric illness/social situations that would limit compliance with study requirements, substantially increase risk of incurring AEs, or compromise the ability of the patient to give written informed consent."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "unknown",
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L53",
+        "evidence": [
+          {
+            "turn": 62,
+            "quote": "Just the lung one.",
+            "reading": "does-not-hold",
+            "statement": "The person has a history of another primary malignancy, except for skin cancer, prostate cancer, or other specified exceptions."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L54",
+        "evidence": [
+          {
+            "turn": 64,
+            "quote": "never been told I have HIV or any immune deficiency",
+            "reading": "does-not-hold",
+            "statement": "The person has a history of active primary immunodeficiency."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L55",
+        "evidence": [
+          {
+            "turn": 64,
+            "quote": "never been told I have HIV or any immune deficiency",
+            "reading": "does-not-hold",
+            "statement": "The person has an active infection, including tuberculosis, hepatitis B, hepatitis C, or human immunodeficiency virus infection."
+          }
+        ],
+        "timesAsked": 0,
+        "status": "chart-review",
+        "reason": "answered",
+        "reported": "does-not-hold"
+      },
+      {
+        "criterionId": "L56",
+        "evidence": [
+          {
+            "turn": 66,
+            "quote": "I don't know if I've ever been tested for Hepatitis C",
+            "reading": "unknown",
+            "statement": "The person is positive for HCV antibody and the polymerase chain reaction is negative for HCV RNA."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "chart-review",
+        "reason": "unknown",
+        "reported": "unknown"
+      },
+      {
+        "criterionId": "L57",
+        "evidence": [
+          {
+            "turn": 68,
+            "quote": "I wouldn't know, I've never had them.",
+            "reading": "does-not-hold",
+            "statement": "The person has a known allergy or hypersensitivity to any of the IPs or any of the IP excipients."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L58",
+        "evidence": [
+          {
+            "turn": 70,
+            "quote": "No, I haven't been told I can't take that chemo.",
+            "reading": "partial",
+            "missing": "The reply addresses whether the person was told they cannot take the chemo, but does not confirm the absence of any medical contraindication as defined by local labeling.",
+            "statement": "The person has any medical contraindication to treatment with platinum-based doublet chemotherapy as listed in the local labeling."
+          },
+          {
+            "turn": 72,
+            "quote": "No, I don't have any known conditions or allergies that would stop me",
+            "reading": "partial",
+            "missing": "contraindication as listed in the local labeling",
+            "statement": "The person has any medical contraindication to treatment with platinum-based doublet chemotherapy as listed in the local labeling."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "partial",
+        "reported": "partial"
+      },
+      {
+        "criterionId": "L59",
+        "evidence": [
+          {
+            "turn": 74,
+            "quote": "Nothing else was given after the surgery, and durvalumab is new to me.",
+            "reading": "does-not-hold",
+            "statement": "The person has received any prior adjuvant therapy for NSCLC or any prior exposure to durvalumab."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L60",
+        "evidence": [
+          {
+            "turn": 76,
+            "quote": "No, I'm not getting any treatment for the cancer at the moment.",
+            "reading": "does-not-hold",
+            "statement": "The person is receiving concurrent chemotherapy, IP, biologic, or hormonal therapy for cancer treatment."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L61",
+        "evidence": [
+          {
+            "turn": 78,
+            "quote": "There may have been radiation before the operation. I honestly can't remember.",
+            "reading": "unknown",
+            "statement": "The person received radiotherapy treatment for NSCLC in the neoadjuvant setting."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "unresolved",
+        "reason": "unknown"
+      },
+      {
+        "criterionId": "L62",
+        "evidence": [
+          {
+            "turn": 80,
+            "quote": "I'd have to check my records to be sure if it was wide field or not.",
+            "reading": "unknown",
+            "statement": "The person received radiotherapy treatment to more than 30% of the bone marrow or with a wide field of radiation within 4 weeks of the first dose of IP."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "unresolved",
+        "reason": "unknown"
+      },
+      {
+        "criterionId": "L63",
+        "evidence": [
+          {
+            "turn": 82,
+            "quote": "I had a pneumonia jab about three weeks ago. I'm not sure if that counts as a live vaccine or not.",
+            "reading": "unclear",
+            "statement": "The person has received a live attenuated vaccine within 30 days prior to the first dose of IP."
+          },
+          {
+            "turn": 84,
+            "quote": "I'm not sure if it was the live type or the shot.",
+            "reading": "unclear",
+            "statement": "The person has received a live attenuated vaccine within 30 days prior to the first dose of IP."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "unresolved",
+        "reason": "unclear"
+      },
+      {
+        "criterionId": "L64",
+        "evidence": [
+          {
+            "turn": 86,
+            "quote": "my operation was about two months ago",
+            "reading": "does-not-hold",
+            "statement": "The person had a major surgical procedure within 28 days prior to the first dose of IP."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L65",
+        "evidence": [
+          {
+            "turn": 88,
+            "quote": "I use an inhaled steroid for my breathing, but I'm not sure if that counts",
+            "reading": "unclear",
+            "statement": "The person has used immunosuppressive medication within 14 days before the first dose of durvalumab/placebo."
+          },
+          {
+            "turn": 90,
+            "quote": "I'm not sure about the exact name or if it's a metered-dose inhaler or a nebulizer.",
+            "reading": "unclear",
+            "statement": "The person has used immunosuppressive medication within 14 days before the first dose of durvalumab/placebo."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "unresolved",
+        "reason": "unclear"
+      },
+      {
+        "criterionId": "L66",
+        "evidence": [
+          {
+            "turn": 92,
+            "quote": "No, I haven't been in any other study since the operation.",
+            "reading": "does-not-hold",
+            "statement": "The person has participated in another clinical study with an investigational product administered since completion of surgery."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L67",
+        "evidence": [
+          {
+            "turn": 94,
+            "quote": "No, this is the first time I've been part of this study.",
+            "reading": "does-not-hold",
+            "statement": "The person has been previously assigned to receive the study drug (durvalumab or chemotherapy) as part of this specific lung cancer trial."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L68",
+        "evidence": [
+          {
+            "turn": 96,
+            "quote": "No, I haven't been enrolled in any other clinical studies.",
+            "reading": "does-not-hold",
+            "statement": "The person is concurrently enrolled in another clinical study that is not an observational (noninterventional) clinical study or during the follow-up period of an interventional study."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L69",
+        "evidence": [
+          {
+            "turn": 98,
+            "quote": "No, I've never been in a durvalumab study before this one.",
+            "reading": "does-not-hold",
+            "statement": "The person has been randomized or treated in a previous durvalumab clinical study."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L70",
+        "evidence": [
+          {
+            "turn": 100,
+            "quote": "I smoked for about thirty years",
+            "reading": "does-not-hold",
+            "statement": "The person is a never-smoker (no more than 100 cigarettes or its equivalent in his/her lifetime)."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L71",
+        "evidence": [
+          {
+            "turn": 102,
+            "quote": "I'm a man, I'm not pregnant",
+            "reading": "does-not-hold",
+            "statement": "The person is pregnant."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L72",
+        "evidence": [
+          {
+            "turn": 104,
+            "quote": "Not me, I'm a man.",
+            "reading": "does-not-hold",
+            "statement": "The person is breastfeeding."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L73",
+        "evidence": [
+          {
+            "turn": 106,
+            "quote": "Yes, I'll use birth control the whole time",
+            "reading": "does-not-hold",
+            "statement": "The person is a male or female patient of reproductive potential who is not willing to employ effective birth control from screening to 90 days after the last dose of durvalumab/placebo."
+          }
+        ],
+        "timesAsked": 1,
+        "status": "does-not-hold",
+        "reason": "answered"
+      },
+      {
+        "criterionId": "L74",
+        "evidence": [
+          {
+            "turn": 108,
+            "quote": "I'll follow the rules",
+            "reading": "unclear",
+            "statement": "The investigator judges that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions, and requirements."
+          },
+          {
+            "turn": 110,
+            "quote": "I don't know about that",
+            "reading": "unclear",
+            "statement": "The Investigator judges that the patient should not participate in the study because the patient is unlikely to comply with study procedures, restrictions, and requirements."
+          }
+        ],
+        "timesAsked": 2,
+        "status": "chart-review",
+        "reason": "unclear"
+      }
+    ],
+    "transcript": [
+      {
+        "index": 0,
+        "speaker": "agent",
+        "kind": "opening",
+        "text": "Hello, and thank you for your interest in the study \"Phase III Study to Determine the Efficacy of Durvalumab in Combination With Chemotherapy in Completely Resected Stage II-III Non-small Cell Lung Cancer (NSCLC)\". I'll ask you a short series of questions, one at a time. You can skip any question. A study coordinator will review everything you tell me and follow up with you."
+      },
+      {
+        "index": 1,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you comfortable signing the standard informed consent forms, as well as the specific genetic consent form required for this study?",
+        "criterionId": "L1"
+      },
+      {
+        "index": 2,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'm able to sign all the consent forms, the genetic one too, and I'll follow the rules."
+      },
+      {
+        "index": 3,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To confirm, are you 18 years of age or older?",
+        "criterionId": "L6"
+      },
+      {
+        "index": 4,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm 71."
+      },
+      {
+        "index": 5,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you been diagnosed with non-small cell lung cancer (NSCLC) that was confirmed by a tissue biopsy and was considered removable by surgery?",
+        "criterionId": "L7"
+      },
+      {
+        "index": 6,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, they confirmed from the tissue that it's non-small cell, stage two, and that it could be removed."
+      },
+      {
+        "index": 7,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, has your surgeon successfully removed the entire tumor during surgery?",
+        "criterionId": "L13"
+      },
+      {
+        "index": 8,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yeah, the surgeon got it all out. They said it was completely resected."
+      },
+      {
+        "index": 9,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, was your case reviewed by a team including a thoracic surgeon who specializes in lung cancer surgery to confirm the tumor was resectable?",
+        "criterionId": "L14"
+      },
+      {
+        "index": 10,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure if a special team looked at it or just my surgeon. I'm a bit muddled on the details of who was in the room."
+      },
+      {
+        "index": 11,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, did a team of specialists, including a lung cancer surgeon, review your case together to confirm the tumor could be safely removed?",
+        "criterionId": "L14"
+      },
+      {
+        "index": 12,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I really don't know. I was just in the hospital for the operation and I'm not sure who else looked at my case."
+      },
+      {
+        "index": 13,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, did your surgeon remove the tumor by taking out just a small wedge of lung tissue, or did they remove a larger section like a lobe?",
+        "criterionId": "L15"
+      },
+      {
+        "index": 14,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "They took out a whole lobe, not just a small piece. It was a pretty big operation."
+      },
+      {
+        "index": 15,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Since you had a lobectomy, this specific size rule for smaller surgeries doesn't apply to you. Do you know the exact size of your tumor in centimeters?",
+        "criterionId": "L16"
+      },
+      {
+        "index": 16,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know the exact size. I wasn't paying attention to the measurements, just that it was a big job."
+      },
+      {
+        "index": 17,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. I understand you don't have the exact measurements. Do you know if your surgeon told you that all the edges of the removed tissue were clear of cancer cells? This is often called having 'negative margins' or 'clear margins,' meaning no tumor was seen at the cut edges.",
+        "criterionId": "L18"
+      },
+      {
+        "index": 18,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I think they said it was clear, but I'm not 100% sure. I wasn't really listening to the medical talk, just trying to get through the surgery."
+      },
+      {
+        "index": 19,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, did your surgeon specifically state that the edges of the removed tissue were free of cancer cells (negative margins), or are you unsure?",
+        "criterionId": "L18"
+      },
+      {
+        "index": 20,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure. I wasn't really listening to the medical talk, just trying to get through the surgery."
+      },
+      {
+        "index": 21,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you know if your pathology report mentioned 'extracapsular nodal extension' in the lymph nodes removed from your chest? This means if cancer spread from the lymph nodes into the surrounding tissue. If you aren't sure, that's okay.",
+        "criterionId": "L24"
+      },
+      {
+        "index": 22,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know what that means. I wasn't paying attention to the lymph node details."
+      },
+      {
+        "index": 23,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you know if you had a blood test done 3 to 5 weeks after your surgery to check for 'minimal residual disease' (MRD)? This is a special blood test that looks for tiny amounts of cancer cells left in the blood after surgery.",
+        "criterionId": "L29"
+      },
+      {
+        "index": 24,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know what that is. I wasn't paying attention to any blood tests after the surgery."
+      },
+      {
+        "index": 25,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To help us understand your current health, how would you describe your ability to carry out daily activities? For example, are you fully active and able to do all usual activities without restriction, or do you need some effort but are still able to care for yourself?",
+        "criterionId": "L34"
+      },
+      {
+        "index": 26,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm doing alright. I can take care of myself and do most things, though I get a bit winded if I rush around."
+      },
+      {
+        "index": 27,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you spend more than 50% of your waking hours in bed or a chair, or are you up and about most of the day with only mild limitations?",
+        "criterionId": "L34"
+      },
+      {
+        "index": 28,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm up and about most of the day, just with some mild limitations since the surgery."
+      },
+      {
+        "index": 29,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have your surgical wounds fully healed, and have you recovered from any side effects from previous treatments (like nausea or fatigue), excluding hair loss?",
+        "criterionId": "L35"
+      },
+      {
+        "index": 30,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "The wounds are healed up fine. I don't think I have any lingering side effects like nausea or fatigue, just the usual old-man tiredness."
+      },
+      {
+        "index": 31,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, have you recovered from any other side effects from previous treatments (such as nausea or fatigue) that might affect your ability to receive the study treatment, excluding hair loss?",
+        "criterionId": "L35"
+      },
+      {
+        "index": 32,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know about any other side effects. I just feel like an old man who had a big operation, but I'm healing up."
+      },
+      {
+        "index": 33,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you feel physically well enough to tolerate 4 cycles of platinum-based chemotherapy? (Platinum-based chemo is a type of cancer treatment using specific drugs. If you're not sure, that's okay.)",
+        "criterionId": "L36"
+      },
+      {
+        "index": 34,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I reckon I can handle it. I'm a tough old carpenter, and I've got the strength for it."
+      },
+      {
+        "index": 35,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you feel physically well enough to tolerate 4 cycles of platinum-based chemotherapy? (Platinum-based chemo is a type of cancer treatment using specific drugs. If you're not sure, that's okay.)",
+        "criterionId": "L36"
+      },
+      {
+        "index": 36,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yeah, I said I reckon I can handle it. I'm a tough old carpenter, and I've got the strength for it."
+      },
+      {
+        "index": 37,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had any recent blood tests (like a complete blood count or metabolic panel) that showed your organ and marrow function were within normal limits?",
+        "criterionId": "L37"
+      },
+      {
+        "index": 38,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know the exact results of my recent blood tests. I haven't looked at the numbers closely enough to say if everything is within normal limits."
+      },
+      {
+        "index": 39,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, have your recent blood tests shown that your organ and marrow function are within normal limits? (If you're not sure, that's okay.)",
+        "criterionId": "L37"
+      },
+      {
+        "index": 40,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure about the exact numbers. I haven't looked at the results closely enough to say if everything is within normal limits."
+      },
+      {
+        "index": 41,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you expect to live for at least a few more months? (If you're not sure, that's okay.)",
+        "criterionId": "L38"
+      },
+      {
+        "index": 42,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I certainly do. I'm 71 but I feel pretty good and expect to be around for a while yet."
+      },
+      {
+        "index": 43,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you expect to live for at least 3 more months? (If you're not sure, that's okay.)",
+        "criterionId": "L38"
+      },
+      {
+        "index": 44,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yeah, I certainly do. I'm 71 but I feel pretty good and expect to be around for a while yet."
+      },
+      {
+        "index": 45,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have any recent scans or biopsies shown that your lung cancer has come back?",
+        "criterionId": "L39"
+      },
+      {
+        "index": 46,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, the scans haven't shown any sign of it coming back. I'm hoping it stays that way."
+      },
+      {
+        "index": 47,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been told that your lung cancer had an EGFR mutation or an ALK translocation? These are specific genetic changes in the tumor cells. If you aren't sure, that's okay.",
+        "criterionId": "L41"
+      },
+      {
+        "index": 48,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I was told my tumour has no EGFR or ALK changes."
+      },
+      {
+        "index": 49,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been told that your lung cancer is a mixed type, containing both small cell and non-small cell components?",
+        "criterionId": "L46"
+      },
+      {
+        "index": 50,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I was told it's just non-small cell. I don't think it's mixed with anything else."
+      },
+      {
+        "index": 51,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. For this study, the surgery must be more extensive than just removing a small wedge of tissue. Was your lung cancer surgery more than a wedge resection?",
+        "criterionId": "L48"
+      },
+      {
+        "index": 52,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yeah, I already told you, they took out a whole lobe, not just a small piece. It was a pretty big operation."
+      },
+      {
+        "index": 53,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever received an organ or bone marrow transplant from another person?",
+        "criterionId": "L49"
+      },
+      {
+        "index": 54,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've never had a transplant of any kind."
+      },
+      {
+        "index": 55,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with an autoimmune or inflammatory condition, such as Crohn's disease, rheumatoid arthritis, lupus, or sarcoidosis?",
+        "criterionId": "L51"
+      },
+      {
+        "index": 56,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know about any of those. I've never been told I have an autoimmune disease or anything like that."
+      },
+      {
+        "index": 57,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, have you ever been diagnosed with or treated for conditions like Crohn's disease, ulcerative colitis, rheumatoid arthritis, lupus, or sarcoidosis?",
+        "criterionId": "L51"
+      },
+      {
+        "index": 58,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've never been diagnosed with or treated for any of those conditions like Crohn's or lupus."
+      },
+      {
+        "index": 59,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To help us check for any uncontrolled health issues, do you currently have any ongoing infections, heart problems, high blood pressure, or other serious medical conditions that are not well-managed?",
+        "criterionId": "L52"
+      },
+      {
+        "index": 60,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know about any serious uncontrolled issues. I've got a bit of breathing trouble so I use an inhaler, but otherwise I'm just an old man getting by."
+      },
+      {
+        "index": 61,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with any other type of cancer, such as skin cancer, prostate cancer, or colon cancer?",
+        "criterionId": "L53"
+      },
+      {
+        "index": 62,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been told I have any other cancers like skin or prostate cancer. Just the lung one."
+      },
+      {
+        "index": 63,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been diagnosed with a condition that weakens your immune system, such as HIV/AIDS or a primary immunodeficiency?",
+        "criterionId": "L54"
+      },
+      {
+        "index": 64,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've never been told I have HIV or any immune deficiency. I'm just a regular old guy with a bit of lung trouble."
+      },
+      {
+        "index": 65,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been tested for Hepatitis C (HCV)? If you have had a positive antibody test, have you also had a PCR test for HCV RNA, and if so, was that result negative?",
+        "criterionId": "L56"
+      },
+      {
+        "index": 66,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know if I've ever been tested for Hepatitis C. I haven't looked into that."
+      },
+      {
+        "index": 67,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Do you have any known allergies or hypersensitivities to durvalumab, chemotherapy drugs, or any ingredients used in these medications?",
+        "criterionId": "L57"
+      },
+      {
+        "index": 68,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Allergic to the study drugs? I wouldn't know, I've never had them."
+      },
+      {
+        "index": 69,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been told by a doctor that you have a medical reason, such as a specific health condition or allergy, that prevents you from taking platinum-based chemotherapy?",
+        "criterionId": "L58"
+      },
+      {
+        "index": 70,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been told I can't take that chemo. I reckon I can handle it."
+      },
+      {
+        "index": 71,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "To clarify, do you have any known medical conditions or allergies that would prevent you from taking platinum-based chemotherapy, even if a doctor hasn't explicitly told you so?",
+        "criterionId": "L58"
+      },
+      {
+        "index": 72,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I don't have any known conditions or allergies that would stop me from taking that chemo. I'm ready to go."
+      },
+      {
+        "index": 73,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever received any chemotherapy or immunotherapy (like durvalumab) after your lung cancer surgery to help prevent it from coming back?",
+        "criterionId": "L59"
+      },
+      {
+        "index": 74,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Nothing else was given after the surgery, and durvalumab is new to me."
+      },
+      {
+        "index": 75,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently receiving any other cancer treatments, such as chemotherapy, immunotherapy, biologic therapy, or hormonal therapy?",
+        "criterionId": "L60"
+      },
+      {
+        "index": 76,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I'm not getting any treatment for the cancer at the moment."
+      },
+      {
+        "index": 77,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Before your surgery, did you receive any radiation therapy (radiotherapy) specifically for your lung cancer?",
+        "criterionId": "L61"
+      },
+      {
+        "index": 78,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "There may have been radiation before the operation. I honestly can't remember."
+      },
+      {
+        "index": 79,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, do you know if the radiation you received before surgery covered a large area of your body (wide field) or was it limited to just the lung area?",
+        "criterionId": "L62"
+      },
+      {
+        "index": 80,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm muddled on the dates and details of that radiation. I'd have to check my records to be sure if it was wide field or not."
+      },
+      {
+        "index": 81,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you received any live attenuated vaccines (such as MMR, varicella, or the nasal flu vaccine) in the last 30 days?",
+        "criterionId": "L63"
+      },
+      {
+        "index": 82,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I had a pneumonia jab about three weeks ago. I'm not sure if that counts as a live vaccine or not."
+      },
+      {
+        "index": 83,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, was the pneumonia vaccine you received the live attenuated type (such as the nasal spray flu vaccine or MMR), or was it an inactivated shot (like the standard flu shot or pneumococcal injection)?",
+        "criterionId": "L63"
+      },
+      {
+        "index": 84,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure if it was the live type or the shot. I just know it was for pneumonia."
+      },
+      {
+        "index": 85,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you had any major surgery in the last 28 days? (This refers to significant operations, not minor procedures like dental work or skin biopsies.)",
+        "criterionId": "L64"
+      },
+      {
+        "index": 86,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, my operation was about two months ago, so I'm well past that 28-day window."
+      },
+      {
+        "index": 87,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you taken any medication that suppresses your immune system (such as steroids like prednisone, or drugs for autoimmune conditions) in the last 14 days?",
+        "criterionId": "L65"
+      },
+      {
+        "index": 88,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "It was more recent than I said: three weeks ago, not two months. As for the immune-suppressing meds, I use an inhaled steroid for my breathing, but I'm not sure if that counts or if I've taken anything else recently."
+      },
+      {
+        "index": 89,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, does your inhaled steroid come from a metered-dose inhaler or a nebulizer, and what is the exact name of the medication?",
+        "criterionId": "L65"
+      },
+      {
+        "index": 90,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I'm not sure about the exact name or if it's a metered-dose inhaler or a nebulizer. I just use it for my breathing when I get winded."
+      },
+      {
+        "index": 91,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Since your surgery, have you taken any investigational medication (IP) as part of another clinical study?",
+        "criterionId": "L66"
+      },
+      {
+        "index": 92,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been in any other study since the operation."
+      },
+      {
+        "index": 93,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever been assigned to receive the study drug (durvalumab or chemotherapy) as part of this specific lung cancer trial?",
+        "criterionId": "L67"
+      },
+      {
+        "index": 94,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, this is the first time I've been part of this study."
+      },
+      {
+        "index": 95,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently enrolled in any other clinical studies that involve taking medication or procedures, excluding purely observational studies?",
+        "criterionId": "L68"
+      },
+      {
+        "index": 96,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I haven't been enrolled in any other clinical studies."
+      },
+      {
+        "index": 97,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Have you ever participated in a previous clinical study that involved receiving durvalumab?",
+        "criterionId": "L69"
+      },
+      {
+        "index": 98,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I've never been in a durvalumab study before this one."
+      },
+      {
+        "index": 99,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, have you ever smoked cigarettes? For this study, 'never-smoker' means you have smoked no more than 100 cigarettes in your entire life. If you aren't sure, that's okay to say.",
+        "criterionId": "L70"
+      },
+      {
+        "index": 100,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I smoked for about thirty years before I stopped, so I definitely haven't been a never-smoker."
+      },
+      {
+        "index": 101,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently pregnant?",
+        "criterionId": "L71"
+      },
+      {
+        "index": 102,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "No, I'm a man, I'm not pregnant."
+      },
+      {
+        "index": 103,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently breastfeeding?",
+        "criterionId": "L72"
+      },
+      {
+        "index": 104,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Breastfeeding? Not me, I'm a man."
+      },
+      {
+        "index": 105,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. Are you currently using effective birth control to prevent pregnancy? This study requires participants to use effective contraception from now until 90 days after their last dose of the study medication.",
+        "criterionId": "L73"
+      },
+      {
+        "index": 106,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'll use birth control the whole time, and for the 90 days after."
+      },
+      {
+        "index": 107,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To be clear, are you comfortable committing to all the study procedures, restrictions, and requirements, such as attending visits and taking medications as scheduled?",
+        "criterionId": "L74"
+      },
+      {
+        "index": 108,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "Yes, I'm able to sign all the consent forms, the genetic one too, and I'll follow the rules."
+      },
+      {
+        "index": 109,
+        "speaker": "agent",
+        "kind": "question",
+        "text": "Thanks. To clarify, can you give an example of a situation where you might find it hard to follow study rules, like missing a visit or forgetting a dose? I'm not sure if you have any concerns about that.",
+        "criterionId": "L74"
+      },
+      {
+        "index": 110,
+        "speaker": "participant",
+        "kind": "reply",
+        "text": "I don't know about that. I'm just an easy-going guy who follows the rules as best I can, but I'm not sure I can give you a specific example of when I'd struggle."
+      },
+      {
+        "index": 111,
+        "speaker": "agent",
+        "kind": "closing",
+        "text": "Thank you, that's all my questions. A study coordinator will review your answers and contact you about next steps."
+      }
+    ],
+    "handoff": {
+      "holds": [
+        "L1",
+        "L6"
+      ],
+      "doesNotHold": [
+        "L49",
+        "L57",
+        "L59",
+        "L60",
+        "L64",
+        "L66",
+        "L67",
+        "L68",
+        "L69",
+        "L70",
+        "L71",
+        "L72",
+        "L73"
+      ],
+      "unresolved": [
+        "L61",
+        "L62",
+        "L63",
+        "L65"
+      ],
+      "chartReview": [
+        "L7",
+        "L8",
+        "L9",
+        "L13",
+        "L14",
+        "L15",
+        "L16",
+        "L18",
+        "L24",
+        "L29",
+        "L34",
+        "L35",
+        "L36",
+        "L37",
+        "L38",
+        "L39",
+        "L41",
+        "L46",
+        "L47",
+        "L48",
+        "L51",
+        "L52",
+        "L53",
+        "L54",
+        "L55",
+        "L56",
+        "L58",
+        "L74"
+      ],
+      "notRaised": [
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L10",
+        "L11",
+        "L12",
+        "L17",
+        "L19",
+        "L20",
+        "L21",
+        "L22",
+        "L23",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L30",
+        "L31",
+        "L32",
+        "L33",
+        "L40",
+        "L42",
+        "L43",
+        "L44",
+        "L45",
+        "L50"
+      ]
+    },
+    "rejectedReadings": [
+      {
+        "turn": 12,
+        "criterionId": "L14",
+        "reading": "unknown",
+        "quote": "I really don't know. I'm not sure who else looked at my case."
+      },
+      {
+        "turn": 38,
+        "criterionId": "L37",
+        "reading": "unknown",
+        "quote": "I don't know the exact results... I haven't looked at the numbers closely enough to say if everything is within normal limits."
+      },
+      {
+        "turn": 40,
+        "criterionId": "L37",
+        "reading": "unknown",
+        "quote": "I don't know the exact results... haven't looked at the numbers closely enough to say if everything is within normal limits."
+      }
+    ],
+    "ignoredReadings": [
+      {
+        "turn": 60,
+        "criterionId": "L52",
+        "reading": "unclear",
+        "why": "already-settled"
+      }
+    ],
+    "calls": 110,
+    "run": {
+      "model": "Qwen3.6-35B-A3B-MLX-8bit",
+      "quantization": "8bit",
+      "temperature": 0,
+      "seed": 20260921,
+      "adapter": "omlx",
+      "thinking": "off",
+      "promptVersion": "834179395652",
+      "timestamp": "2026-10"
+    }
+  }
+}

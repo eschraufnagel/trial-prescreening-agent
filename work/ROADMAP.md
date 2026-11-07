@@ -32,6 +32,7 @@ This exists so a session starting cold knows what comes next without being told.
 | 0019 coral and plum | The page's look changed again, on the owner's judgment that 0018's tan didn't read as a health app: blush paper, a plum header band, coral buttons, generous rounding and one sans, in light and dark, with 0018's images retaken. No markup, behaviour or result changes | **Done** (PR #2); look replaced by 0020 |
 | 0020 chart v2 | The owner's Chart v2 design applied from a handoff: a calm clinical palette, IBM Plex for coordinator screens and Atkinson Hyperlegible for the conversation, bundled so nothing loads off the machine, the Record logo, favicon and app icons. The review in two columns, the newest question in a card, findings in neutral ink. The README's images retaken. No behaviour or result changes | **Done** |
 | 0021 serve the participant | When the person asks what something means, why it's asked or what happens next, the agent responds before moving on, and a confused answer isn't recorded. Code still chooses every criterion and ends the conversation. The product intent's line on the participant is rewritten in the open. Local model only | Done |
+| 0022 self-corrections | A correction volunteered in a reply about another question is noticed: the read call reports corrections first, each unsettles its row for the coordinator, and the next question acknowledges it. Measured by a replay of recorded turns and one dev re-run. Local model only | Done |
 | *optional* simulator fidelity | A stronger check that the simulated participant says what its vignette says. It changes the ruler, so never in the same slice as an agent change | **Not doing** (0012): every screening number already carries the simulator caveat, and the PoC's question doesn't turn on it |
 | *optional* more labels | Label the seven unlabelled studies, so the parser eval covers twelve, not five | **Not doing** (0012): labels by the same author add coverage, not independence. The held second annotator is the real check |
 | *optional* plain-language follow-ups | Renderings for parsed criteria, and the explanations refused for a negation | **Not doing** (0012): display only, and the review works without them |
@@ -237,6 +238,10 @@ So in 0009:
 
 After the PR opened, the owner asked for CI and for the other three requests in the browser. `.github/workflows/check.yml` and browser case 13 were added to the same PR. Two gates, both passed. Gate 1, the owner playing it in the app (2026-10): "everything looks good." Gate 2, the five dev vignettes re-run once on the local model and run by the owner: confidently wrong 3/44, down from 5/47; abstention 2/43, up from 1/43; and no reply read as a request. The scored set wasn't re-run, so the published numbers stay labelled as prompt `2c46ada9a1d5`'s.
 
+### 0022 self-corrections
+
+**Done.** Not planned before it: 0004, 0007 and 0009 each carried the missed correction forward. The read call now reports `corrections` before `readings`, through the same rules, so a correction unsettles and never settles. Three gates. Gate 1, a replay of the read call at the six recorded corrections of a settled answer: 5 caught, no false corrections in 44 ordinary turns, so the separate correction call wasn't built and no spend was added. Gate 2, the dev re-run: confidently wrong 3/38, against 3/44, and corrections caught 3 of 4, but abstention 7/42 (0.17), over the bar of 0.10. Six of the seven are 0009's "I'm a man" read as does-not-apply; the owner accepted the slice with that cost recorded (2026-11) and left the misreading for its own slice. Gate 3, the owner correcting themselves in the app, was skipped by the owner. The scored set wasn't re-run. See `work/0022-self-corrections/`.
+
 ### Held: model comparison and independent checks
 
 Unchanged from 0008, and it runs only on the owner's word.
@@ -277,7 +282,7 @@ The "Carried forward" lists below are history, each written at the end of its sl
 | 0006 | Most refusals are negations inside explanations; parsed criteria have no renderings | Not doing (0012), was: Optional plain-language follow-ups |
 | 0006 | The ask call could use checked renderings | Not doing (0009 D2): unmeasured, and crosses the 0006 boundary |
 | 0007 | The reader's model wasn't recorded | Not doing (0012): known limitation. Was: Any later reading records it |
-| 0007 | A missed self-correction is only in the transcript | Not doing (0012): known limitation. Was: Still true: 0009 still misses a correction volunteered about something else, and the review doesn't show `statement` or `withheld`. A later agent or review slice |
+| 0007 | A missed self-correction is only in the transcript | 0022: a noticed correction now unsettles its row, so it's attached to one. A missed one is still only in the transcript, and the review still doesn't show `statement` or `withheld`. Was: Not doing (0012): Still true: 0009 still misses a correction volunteered about something else, and the review doesn't show `statement` or `withheld`. A later agent or review slice |
 | 0007 | The simulator can drop a scripted line | Not doing (0012), was: Optional simulator fidelity |
 | 0007 | No recording of a coordinator's decision | Not doing |
 | 0008 | No adapter has seen the real API; the estimate is uncalibrated | Held (smoke first) |
@@ -286,8 +291,8 @@ The "Carried forward" lists below are history, each written at the end of its sl
 | 0008 | The parser's reasoning mode differs by provider | Held |
 | 0008 | xAI Chat Completions legacy; Luna's cache writes unpriced | Held |
 | 0009 | The agent's reasoning mode as a lever against overconfidence | Held comparison, or a later agent slice. Not 0009 |
-| 0009 | A correction volunteered in a reply about another criterion is still missed | Not doing (0012): known limitation. Was: A later agent slice (a separate correction check, one more call per turn) |
-| 0009 | Abstention cost: "I'm a man" read as does-not-apply to pregnancy; plain denials held back from a hedging persona | Not doing (0012): known limitation. Was: A later agent slice |
+| 0009 | A correction volunteered in a reply about another criterion is still missed | Done in 0022, on the dev vignettes: 5 of 6 in replay, 3 of 4 live, without the separate call. Not measured on the scored set. Was: Not doing (0012): A later agent slice (a separate correction check, one more call per turn) |
+| 0009 | Abstention cost: "I'm a man" read as does-not-apply to pregnancy; plain denials held back from a hedging persona | The next slice, after 0022's dev run found it in 6 of 7 abstentions. Was: Not doing (0012): known limitation. Was: A later agent slice |
 | 0009 | The review shows neither `statement` nor `withheld` | Not doing (0012): known limitation. Was: A later review slice |
 | 0009 | One run per agent; noise not measured | Held comparison (variance) |
 | 0009 | Gates 1 and 3 read by a model, not a person; the author overrode four of Gate 3's calls | Held, independent checks |

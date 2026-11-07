@@ -3,7 +3,7 @@ import type { ScriptedResponse } from "../../src/models/index.js";
 import { FakeModelAdapter } from "../../src/models/index.js";
 import { MAX_ASKS } from "../../src/screening/agenda.js";
 import type { AgentReply } from "../../src/screening/session.js";
-import { ScreeningSession } from "../../src/screening/session.js";
+import { ScreeningSession, withCorrections } from "../../src/screening/session.js";
 import type { ScreeningCriterion, ScreeningResult } from "../../src/screening/types.js";
 import { ScreeningError } from "../../src/screening/types.js";
 
@@ -369,5 +369,163 @@ describe("slice 0009: corrections and criteria that don't apply", () => {
       { criterionId: "L49", status: "unresolved", reason: "does-not-apply" },
     ]);
     expect(result.handoff.unresolved).toEqual(["L49"]);
+  });
+});
+
+describe("slice 0022: corrections", () => {
+  type Entry = { criterionId: string; reading: string; quote: string };
+  const filled = (r: Entry) => ({ statement: "The criterion's statement.", outright: true, ...r });
+  const readC = (readings: Entry[], corrections: Entry[]): ScriptedResponse => ({
+    kind: "json",
+    content: { corrections: corrections.map(filled), readings: readings.map(filled) },
+  });
+
+  /**
+   * L8 settled on the first reply, then a second reply answering L2 with the
+   * given corrections. Returns the session, its adapter and the next ask prompt.
+   */
+  async function afterSecond(
+    second: { readings: Entry[]; corrections: Entry[] },
+    text: string,
+    first: Entry = { criterionId: "L8", reading: "does-not-hold", quote: "None so far" },
+  ) {
+    const adapter = new FakeModelAdapter([
+      askR("Have you had any anti-cancer therapy?"),
+      readR([first]),
+      askR("Has a surgeon said it can be removed?"),
+      readC(second.readings, second.corrections),
+      askR("Are you pregnant?"),
+    ]);
+    const s = ScreeningSession.create(STUDY, CRITERIA, adapter);
+    await s.start();
+    await s.receive(first.quote);
+    await s.receive(text);
+    const progress = (id: string) => s.state().progress.find((p) => p.criterionId === id);
+    return { s, adapter, progress, nextAsk: adapter.requests[4]?.user ?? "" };
+  }
+
+  const L2 = { criterionId: "L2", reading: "holds", quote: "stage II, removable" };
+
+  // The case that started the slice: a correction volunteered while answering another question.
+  it("unsettles an answer corrected in a reply to a different question, applies that reply's reading, and thanks", async () => {
+    const { progress, nextAsk } = await afterSecond(
+      {
+        readings: [L2],
+        corrections: [{ criterionId: "L8", reading: "holds", quote: "one round of chemo" }],
+      },
+      "It's stage II, removable. And I got that wrong, there was one round of chemo.",
+    );
+
+    expect(progress("L8")).toMatchObject({ status: "unresolved", reason: "contradicted" });
+    expect(progress("L8")?.evidence.map((e) => e.quote)).toEqual([
+      "None so far",
+      "one round of chemo",
+    ]);
+    expect(progress("L2")).toMatchObject({ status: "chart-review", reported: "holds" });
+    expect(nextAsk).toContain("CORRECTED:");
+  });
+
+  it("doesn't thank for a reply that corrects nothing, or a correction that agrees", async () => {
+    const none = await afterSecond({ readings: [L2], corrections: [] }, "stage II, removable");
+    expect(none.nextAsk).not.toContain("CORRECTED");
+
+    const agrees = await afterSecond(
+      {
+        readings: [L2],
+        corrections: [{ criterionId: "L8", reading: "does-not-hold", quote: "still none" }],
+      },
+      "It's stage II, removable, and still none.",
+    );
+    expect(agrees.progress("L8")).toMatchObject({ status: "does-not-hold" });
+    expect(agrees.nextAsk).not.toContain("CORRECTED");
+  });
+
+  it("unsettles a clinical report contradicted, but ignores a vaguer one", async () => {
+    // L2 is clinical: reported on the first reply, corrected on the second.
+    const reported = { criterionId: "L2", reading: "does-not-hold", quote: "not removable" };
+    const L8 = { criterionId: "L8", reading: "does-not-hold", quote: "no therapy" };
+
+    const opposite = await afterSecond(
+      {
+        readings: [L8],
+        corrections: [{ criterionId: "L2", reading: "holds", quote: "it is removable" }],
+      },
+      "Sorry, it is removable after all. And no therapy.",
+      reported,
+    );
+    expect(opposite.progress("L2")).toMatchObject({
+      status: "chart-review",
+      reason: "contradicted",
+    });
+    expect(opposite.progress("L2")?.reported).toBeUndefined();
+
+    const vaguer = await afterSecond(
+      {
+        readings: [L8],
+        corrections: [{ criterionId: "L2", reading: "unclear", quote: "not sure now" }],
+      },
+      "I'm not sure now about that. And no therapy.",
+      reported,
+    );
+    expect(vaguer.progress("L2")).toMatchObject({
+      status: "chart-review",
+      reported: "does-not-hold",
+    });
+    expect(vaguer.s.state().ignoredReadings).toContainEqual(
+      expect.objectContaining({ criterionId: "L2", why: "already-settled" }),
+    );
+  });
+
+  it("applies a criterion in both lists once, from readings", async () => {
+    const { progress, nextAsk } = await afterSecond(
+      {
+        readings: [L2, { criterionId: "L8", reading: "does-not-hold", quote: "None" }],
+        corrections: [{ criterionId: "L8", reading: "holds", quote: "one round" }],
+      },
+      "stage II, removable. None, well, one round maybe.",
+    );
+    expect(progress("L8")).toMatchObject({ status: "does-not-hold" });
+    expect(progress("L8")?.evidence.map((e) => e.quote)).toEqual(["None so far", "None"]);
+    expect(nextAsk).not.toContain("CORRECTED");
+
+    expect(
+      withCorrections(
+        [{ criterionId: "L2", reading: "holds", quote: "a" }],
+        [
+          { criterionId: "L2", reading: "does-not-hold", quote: "b" },
+          { criterionId: "L8", reading: "holds", quote: "c" },
+        ],
+      ).map((r) => [r.criterionId, r.quote]),
+    ).toEqual([
+      ["L2", "a"],
+      ["L8", "c"],
+    ]);
+  });
+
+  it("rejects a correction whose words aren't in the reply, and doesn't thank", async () => {
+    const { s, progress, nextAsk } = await afterSecond(
+      {
+        readings: [L2],
+        corrections: [{ criterionId: "L8", reading: "holds", quote: "two rounds of chemo" }],
+      },
+      "It's stage II, removable.",
+    );
+    expect(progress("L8")).toMatchObject({ status: "does-not-hold" });
+    expect(s.state().rejectedReadings).toContainEqual(
+      expect.objectContaining({ criterionId: "L8", quote: "two rounds of chemo" }),
+    );
+    expect(nextAsk).not.toContain("CORRECTED");
+  });
+
+  // Which list a reading came in doesn't decide what it does.
+  it("applies a correction of an open criterion as a reading", async () => {
+    const { progress } = await afterSecond(
+      {
+        readings: [L2],
+        corrections: [{ criterionId: "L19", reading: "does-not-hold", quote: "not pregnant" }],
+      },
+      "stage II, removable, and I'm not pregnant.",
+    );
+    expect(progress("L19")).toMatchObject({ status: "does-not-hold", reason: "answered" });
   });
 });

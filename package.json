@@ -29,6 +29,7 @@
     "screening:show": "node --import tsx scripts/show-conversation.ts",
     "screening:compare": "node --import tsx scripts/screening-compare.ts",
     "screening:chat": "node --env-file-if-exists=.env --import tsx scripts/chat.ts",
+    "corrections:replay": "node --env-file-if-exists=.env --import tsx scripts/replay-corrections.ts",
     "plain:render": "node --env-file-if-exists=.env --import tsx scripts/render-plain.ts",
     "plain:check": "node --import tsx scripts/plain-check.ts",
     "review:sheet": "node --import tsx scripts/review-sheet.ts",
