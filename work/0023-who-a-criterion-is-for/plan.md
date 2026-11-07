@@ -51,7 +51,7 @@ Written in plan mode from a reading of `src/screening/apply.ts`, `session.ts`, `
      - The EXCLUSION examples gain `"Pregnant women are excluded" becomes "The person is pregnant."`
      - `PROMPT_LAYOUT` 8.
    - **Tests:** spec §4 item 9 in `tests/screening/prompts.test.ts`. The `PROMPT_LAYOUT` assertion goes from 7 to 8; nothing else existing changes.
-   - Record the new `PROMPT_VERSION` in this plan as built.
+   - As built (prompt version `48e8483f12e2`): one more existing assertion changed. The test that describes `does-not-apply` matched the old bullet's opening words, which this step rewrites; it now matches the new bullet's "the criterion's own words are about one group of people". The bullet also names "Breastfeeding" as a condition beside pregnancy.
 3. **Dev re-run.** `npm run eval:screening -- --dev`, about 55 to 60 minutes, committed as `evals/results/screening/dev/14-<prompt version>.json`. Then `npm run screening:compare -- evals/results/screening/dev/13-f761514b3da8.json evals/results/screening/dev/14-<version>.json`. From the run file and the local cache, Claude records under "Gate record":
    - abstention and confidently wrong against spec §5's bar, with run 12's 0.05 beside it for context;
    - every `does-not-apply` finding: asked or not, and whether the criterion's words name only the other sex;

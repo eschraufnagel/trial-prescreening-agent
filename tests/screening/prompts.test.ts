@@ -193,7 +193,7 @@ describe("the read prompt", () => {
     expect(order.every((at) => at >= 0)).toBe(true);
     expect([...order].sort((x, y) => x - y)).toEqual(order);
     expect(READ_SYSTEM_PROMPT).toMatch(
-      /"does-not-apply": the criterion is written about one group/,
+      /the criterion's own words are about one group of people \(only men, or only women\)/,
     );
   });
 });
@@ -238,7 +238,17 @@ describe("requests (slice 0021)", () => {
       /Begin with "To clarify" or similar only when FOLLOW-UP, REQUEST or CORRECTED/,
     );
     expect(ASK_SYSTEM_PROMPT).toMatch(/Explain the question, never the person's own situation/);
-    expect(PROMPT_LAYOUT).toBe(7);
+    expect(PROMPT_LAYOUT).toBe(8);
+  });
+
+  it("reads does-not-apply only for the asked criterion, with pregnancy as a condition (slice 0023)", () => {
+    expect(READ_SYSTEM_PROMPT).toMatch(
+      /"does-not-apply": only for the criterion the question was about/,
+    );
+    expect(READ_SYSTEM_PROMPT).toMatch(/Saying who you are answers no other criterion\./);
+    expect(READ_SYSTEM_PROMPT).toMatch(
+      /"Pregnant women are excluded" becomes "The person is pregnant\."/,
+    );
   });
 
   it("asks the read call for a request, and says not sure is an answer", () => {
