@@ -433,6 +433,90 @@ describe("slice 0009: does not apply", () => {
   });
 });
 
+describe("slice 0023: does not apply counts only where it was asked", () => {
+  const MAN = "No. I'm a man, so not pregnant.";
+  const dna = (criterionId: string, quote = "I'm a man"): Reading => ({
+    criterionId,
+    reading: "does-not-apply",
+    quote,
+  });
+  function asked(
+    askedAbout: string | null,
+    readings: Reading[],
+    progress = initialProgress(CRITERIA),
+    message = MAN,
+  ) {
+    return applyReadings({ criteria: CRITERIA, progress, turn: 2, message, askedAbout }, readings);
+  }
+
+  it("closes the asked criterion, as before", () => {
+    const out = asked("P", [dna("P")]);
+    expect(get(out.progress, "P")).toMatchObject({
+      status: "unresolved",
+      reason: "does-not-apply",
+    });
+  });
+
+  it("holds it back as unclear on another open patient criterion, keeping the words", () => {
+    const out = asked("P", [dna("Q")]);
+    const q = get(out.progress, "Q");
+    expect(q).toMatchObject({ status: "open", reason: "unclear" });
+    expect(q.evidence).toMatchObject([
+      { quote: "I'm a man", reading: "unclear", withheld: "does-not-apply" },
+    ]);
+    expect(out.ignored).toEqual([]);
+  });
+
+  it("leaves another open clinical criterion open, not in chart review", () => {
+    const c = get(asked("P", [dna("C")]).progress, "C");
+    expect(c).toMatchObject({ status: "open", reason: "unclear" });
+    expect(c.reported).toBeUndefined();
+  });
+
+  it("ignores it on another criterion already settled, which the asked one would unsettle", () => {
+    const first = apply("No gemcitabine.", [
+      { criterionId: "Q", reading: "does-not-hold", quote: "No gemcitabine" },
+    ]);
+    const other = asked("P", [dna("Q")], first.progress);
+    expect(get(other.progress, "Q")).toMatchObject({ status: "does-not-hold", reason: "answered" });
+    expect(other.ignored).toMatchObject([
+      { criterionId: "Q", reading: "does-not-apply", why: "already-settled" },
+    ]);
+
+    const itself = asked("Q", [dna("Q")], first.progress);
+    expect(get(itself.progress, "Q")).toMatchObject({
+      status: "unresolved",
+      reason: "contradicted",
+    });
+  });
+
+  it("ignores it on another clinical criterion with a report", () => {
+    const first = apply("Untreated, yes.", [
+      { criterionId: "C", reading: "holds", quote: "Untreated, yes" },
+    ]);
+    const out = asked("P", [dna("C")], first.progress);
+    expect(get(out.progress, "C")).toMatchObject({ status: "chart-review", reported: "holds" });
+    expect(out.ignored).toMatchObject([{ criterionId: "C", why: "already-settled" }]);
+  });
+
+  it("still holds back the asked criterion when it wasn't said outright", () => {
+    const out = asked("P", [{ ...dna("P"), outright: false }]);
+    expect(get(out.progress, "P")).toMatchObject({ status: "open", reason: "unclear" });
+  });
+
+  it("closes nothing when no question named a criterion", () => {
+    const out = asked(null, [dna("P"), dna("Q")]);
+    expect(get(out.progress, "P").status).toBe("open");
+    expect(get(out.progress, "Q").status).toBe("open");
+  });
+
+  it("still rejects words that aren't in the reply, before anything else", () => {
+    const out = asked("P", [dna("Q", "I am male")]);
+    expect(out.rejected).toMatchObject([{ criterionId: "Q" }]);
+    expect(get(out.progress, "Q").evidence).toEqual([]);
+  });
+});
+
 describe("finalize", () => {
   it("closes an unasked criterion as no-answer and keeps not-raised reasons", () => {
     const findings = finalize(CRITERIA, initialProgress(CRITERIA), []);

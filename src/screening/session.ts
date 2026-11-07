@@ -161,7 +161,13 @@ export class ScreeningSession {
     }
 
     const applied = applyReadings(
-      { criteria: draft.criteria, progress: draft.progress, turn, message: text },
+      {
+        criteria: draft.criteria,
+        progress: draft.progress,
+        turn,
+        message: text,
+        askedAbout: pending,
+      },
       readings,
     );
     // The person corrected an earlier answer, from whichever list (slice 0022).
