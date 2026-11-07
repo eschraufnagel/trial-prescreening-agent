@@ -1,7 +1,7 @@
 # plan: 0022 self-corrections
 
 **Author:** the repository owner
-**Status:** Accepted by the owner, 2026-10. Gates 1 and 2 passed; gate 3 waiting on the owner
+**Status:** Accepted by the owner, 2026-10. Gate 1 passed, gate 2 accepted with its cost recorded, gate 3 skipped by the owner
 **Date:** 2026-10
 **Spec:** [spec.md](spec.md)
 
@@ -108,7 +108,7 @@ Every step is one commit through `npm run check && git commit`. No `Co-Authored-
 - **The replay:** new `evals/corrections/replay.ts`, `evals/cases/corrections.json`, `scripts/replay-corrections.ts`, and the three dev conversations it reads, under `evals/results/corrections/conversations/`. `package.json` (one script, no dependency). `biome.jsonc` excludes those conversations.
 - **Under (b) only:** `evals/screening-estimate.ts`.
 - **Tests:** `tests/screening/calls.test.ts`, `session.test.ts`, `prompts.test.ts`, and new `tests/evals/corrections-replay.test.ts`.
-- **Results:** `evals/results/corrections/` (two or three replays) and `evals/results/screening/dev/13-*.json`, with its conversations under `evals/results/screening/conversations/` as 0021 committed them.
+- **Results:** `evals/results/corrections/` (one replay, since steps 3 and 7 didn't run) and `evals/results/screening/dev/13-*.json`. Its conversations stay in the gitignored cache, as 0021's did: 0021 committed none, and the run file holds what `screening:compare` reads.
 - **Docs and process:** `docs/screening-agent.md`, `docs/limitations.md`, `README.md` (one clause), `work/ROADMAP.md`, `CLAUDE.md` (one command line), and this plan.
 
 No new dependency. `tests/boundary.test.ts` is unchanged: the replay script gets its adapter from `createLocalAdapter`, and `src/screening/` imports nothing new.
@@ -162,4 +162,18 @@ The owner decides. If the owner holds the bar instead, the slice stops here, and
 
 **Gate 2: the owner accepts the slice with the cost recorded (2026-11).** The abstention rise and its cause go in `docs/screening-agent.md` and `docs/limitations.md` (step 9). The sex-based `does-not-apply` misreading is left for its own slice.
 
+**Gate 3: skipped by the owner (2026-11).** No one but the prompts' author has read the acknowledgement in the app, or looked for a corrected row in the review. The PR says so. Spec §4 items 1 to 3 pin that it fires only on a move to `contradicted`, and the dev conversations show it in use.
+
 ## Review passes
+
+Run on the whole diff against `main` (2026-11), after step 9. Fixes are in the same commit as this record.
+
+**Pass 1, plan compliance.** Every changed file is in "Files that change". Divergences, each recorded in this plan: step 3 skipped by the owner; steps 6 and 7 not needed after gate 1; the dev conversations the replay reads are committed copies (step 2's fix); there are 10 correction cases, not 11 (step 1). One finding, **Nit, fixed**: "Files that change" said the dev run's conversations would be committed "as 0021 committed them". 0021 committed none; they're in the gitignored cache, and the line now says so. Step 9 also changed the README's transcript caption, recorded in step 9.
+
+**Pass 2, correctness.** `applyReadings` copies progress, so `unsettled(draft.progress, applied.progress)` compares before with after, not one object with itself; the session tests that thank, and don't, would fail otherwise. A correction is held to rule 1 like any reading. That cost the live L20 catch: the model paraphrased its quote. Recorded in the docs as a limit, not changed: loosening rule 1 for corrections would let a correction rest on words the person didn't say. Stopping makes no ask call and so carries no acknowledgement, as planned. No page path changed, so `npm run test:e2e` is left to CI. No findings.
+
+**Pass 3, scope and data discipline.** No PHI: the cases and conversations are the committed vignettes'. No network beyond `createLocalAdapter` in the replay script; `tests/boundary.test.ts` is unchanged and passes. No secrets, no deployment, no eligibility decision: a correction can only unsettle. No findings.
+
+**Pass 4, eval integrity.** Two existing prompt tests changed, each for the new JSON shape or `PROMPT_LAYOUT`, as step 4 records. No grader, vignette, simulator or threshold changed. Gate 2's abstention bar was missed and not lowered: the owner accepted the slice with the miss recorded. The replay and the dev run each record model, quantization, temperature, seed and thinking mode. The skipped baseline (step 3) is stated where the replay's one extra catch is reported. No findings beyond what gate 2 records.
+
+**Pass 5, documentation.** **Important, fixed in step 9**: before it, `docs/limitations.md` still said the agent misses a correction volunteered about something else, and nothing reported 0022's numbers or its abstention cost. Now `docs/screening-agent.md` has the method, both results and the limits, `docs/limitations.md` the change and the cost, the README one clause, and the ROADMAP the row and the carried-forward entries. The scored numbers stay 0009's, labelled with its prompt. **Nit, left**: the README's transcript screenshot still shows 0009's missed correction; its caption now says it's an earlier version, and retaking it waits for a scored run.
