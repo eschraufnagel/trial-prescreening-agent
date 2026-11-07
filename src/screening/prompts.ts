@@ -44,14 +44,14 @@ A reply often answers the question and also says something about another criteri
 For each reading, write these fields in this order:
 
 1. "statement": the whole criterion as one plain sentence about the person, which is either true or false of them. Use the criterion's own terms. Keep every requirement it has, never only the part the reply answers, and add nothing it doesn't say: no group of people, no condition, no definition of your own. When the criterion defines its term, keep the term and its definition the same way round: "Patients who are non-drinkers, defined as fewer than 10 drinks a year" becomes "The person is a non-drinker (fewer than 10 drinks a year)."
-   - For an EXCLUSION criterion, the statement is the condition that would exclude the person, however it is worded. "Patients must not have received prior gemcitabine" becomes "The person has received gemcitabine." "Patients who have never had a blood transfusion" becomes "The person has never had a blood transfusion."
+   - For an EXCLUSION criterion, the statement is the condition that would exclude the person, however it is worded. "Patients must not have received prior gemcitabine" becomes "The person has received gemcitabine." "Patients who have never had a blood transfusion" becomes "The person has never had a blood transfusion." "Pregnant women are excluded" becomes "The person is pregnant."
    - For an INCLUSION criterion, the statement is the requirement. "Aspirin is permitted if stopped at least 7 days before the first dose" becomes "The person stopped aspirin at least 7 days before the first dose."
 2. "quote": words copied exactly from the person's reply, the shortest part that supports the reading: at most about 12 words, never a whole long sentence.
 3. "outright": true only if the quoted words, read literally, say that the statement is true, or that it is false, or that the person is outside the group the criterion is about, with no hedging and nothing left to judge. false if the person is tentative, conditional or guessing ("I'd imagine so", "should be fine", "if they insist"), or if deciding would need a judgment about what a term covers ("significant", "active", whether a named drug or condition belongs to the criterion's category).
 4. "reading":
    - "holds": the reply establishes that the statement is true.
    - "does-not-hold": the reply establishes that the statement is false.
-   - "does-not-apply": the criterion is written about one group of people (for example only men, or only women), and the reply places the person outside that group. This is about who the criterion is for, never about its condition. "Pregnant" or "breastfeeding" names a condition, not a group, so it applies to everyone: a man who says he isn't pregnant gives "does-not-hold", like anyone who says they aren't taking a medicine. A criterion that names several groups ("women who could become pregnant and men must...") applies to anyone in any of them.
+   - "does-not-apply": only for the criterion the question was about, when the criterion's own words are about one group of people (only men, or only women) and the reply places the person outside it. A condition is not a group. "Pregnant women are excluded" is about being pregnant, so a man who says he isn't pregnant gives "does-not-hold", like anyone who says they aren't taking a medicine. "Breastfeeding" is the same. A criterion that names several groups ("women who could become pregnant and men must...") applies to anyone in any of them. Saying who you are answers no other criterion.
    - "partial": the criterion has several requirements and the reply answers some but not all. Put what is still unanswered in "missing".
    - "unclear": the reply is about the criterion but too vague to tell, or deciding would need interpretation.
    - "unknown": the person says they do not know.
@@ -109,7 +109,7 @@ export const READ_CONTEXT_TURNS = 4;
  * either builder changes what the model sees, so the change reaches
  * `PROMPT_VERSION` and cannot be mixed silently with earlier results.
  */
-export const PROMPT_LAYOUT = 7;
+export const PROMPT_LAYOUT = 8;
 
 /** Hash of everything the agent says or is told. Recorded on every result. */
 export const PROMPT_VERSION = hashPrompt(

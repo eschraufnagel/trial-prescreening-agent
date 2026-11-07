@@ -372,6 +372,82 @@ describe("slice 0009: corrections and criteria that don't apply", () => {
   });
 });
 
+describe("slice 0023: who a criterion is for", () => {
+  const BREASTFEEDING: ScreeningCriterion = {
+    id: "L21",
+    polarity: "exclusion",
+    type: "patient",
+    text: "Breastfeeding",
+  };
+  const CONTRACEPTION: ScreeningCriterion = {
+    id: "L23",
+    polarity: "inclusion",
+    type: "patient",
+    text: "Women of child-bearing potential and men must agree to use adequate contraception",
+  };
+  const PREGNANT: ScreeningCriterion = {
+    id: "L20",
+    polarity: "exclusion",
+    type: "patient",
+    text: "Pregnant women are excluded from this study",
+  };
+
+  it("closes only the asked criterion on 'I'm a man', and asks the others", async () => {
+    const adapter = new FakeModelAdapter([
+      askR("Are you currently pregnant?"),
+      {
+        kind: "json",
+        content: {
+          corrections: [],
+          readings: [
+            { criterionId: "L20", reading: "does-not-apply", quote: "I'm a man" },
+            { criterionId: "L21", reading: "does-not-apply", quote: "I'm a man" },
+            { criterionId: "L23", reading: "does-not-apply", quote: "I'm a man" },
+          ].map((r) => ({ statement: "The criterion's statement.", outright: true, ...r })),
+        },
+      },
+      askR("Are you breastfeeding?"),
+    ]);
+    const s = ScreeningSession.create(STUDY, [PREGNANT, BREASTFEEDING, CONTRACEPTION], adapter);
+    await s.start();
+    await s.receive("No. I'm a man, so not pregnant.");
+
+    const progress = (id: string) => s.state().progress.find((p) => p.criterionId === id);
+    expect(progress("L20")).toMatchObject({ status: "unresolved", reason: "does-not-apply" });
+    expect(progress("L21")).toMatchObject({ status: "open", reason: "unclear" });
+    expect(progress("L23")).toMatchObject({ status: "open", reason: "unclear" });
+    expect(s.state().pending).toBe("L21");
+  });
+
+  it("applies the same rule to a correction", async () => {
+    const adapter = new FakeModelAdapter([
+      askR("Are you breastfeeding?"),
+      readR([{ criterionId: "L21", reading: "does-not-hold", quote: "not breastfeeding" }]),
+      askR("Are you currently pregnant?"),
+      {
+        kind: "json",
+        content: {
+          corrections: [{ criterionId: "L21", reading: "does-not-apply", quote: "I'm a man" }].map(
+            (r) => ({ statement: "The criterion's statement.", outright: true, ...r }),
+          ),
+          readings: [],
+        },
+      },
+      askR("Will you use contraception?"),
+    ]);
+    const s = ScreeningSession.create(STUDY, [BREASTFEEDING, PREGNANT, CONTRACEPTION], adapter);
+    await s.start();
+    await s.receive("No, not breastfeeding.");
+    await s.receive("I'm a man.");
+
+    const l21 = s.state().progress.find((p) => p.criterionId === "L21");
+    expect(l21).toMatchObject({ status: "does-not-hold", reason: "answered" });
+    expect(s.state().ignoredReadings).toMatchObject([
+      { criterionId: "L21", reading: "does-not-apply", why: "already-settled" },
+    ]);
+  });
+});
+
 describe("slice 0022: corrections", () => {
   type Entry = { criterionId: string; reading: string; quote: string };
   const filled = (r: Entry) => ({ statement: "The criterion's statement.", outright: true, ...r });

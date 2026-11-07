@@ -143,17 +143,22 @@ export function readContextAt(recorded: Recorded, turn: number): ReadContext {
     throw new Error(`${recorded.id} turn ${turn} is not a participant reply`);
   }
   const { open, answered, saidSoFar } = readable(recorded.criteria, progressAt(recorded, turn));
-  const asked = recorded.transcript
-    .slice(0, turn)
-    .findLast((t) => t.speaker === "agent" && t.kind === "question");
   return {
     transcript: recorded.transcript.slice(0, turn + 1),
     message: reply.text,
-    askedAbout: asked?.criterionId ?? null,
+    askedAbout: askedAt(recorded, turn),
     open,
     answered,
     saidSoFar,
   };
+}
+
+/** The criterion the last question before `turn` named, if any. */
+function askedAt(recorded: Recorded, turn: number): string | null {
+  const asked = recorded.transcript
+    .slice(0, turn)
+    .findLast((t) => t.speaker === "agent" && t.kind === "question");
+  return asked?.criterionId ?? null;
 }
 
 /**
@@ -185,7 +190,13 @@ export function classify(
   const before = progressAt(recorded, turn);
   const message = recorded.transcript[turn]?.text ?? "";
   const after = applyReadings(
-    { criteria: recorded.criteria, progress: before, turn, message },
+    {
+      criteria: recorded.criteria,
+      progress: before,
+      turn,
+      message,
+      askedAbout: askedAt(recorded, turn),
+    },
     readings,
   ).progress;
   const changed = unsettled(before, after);

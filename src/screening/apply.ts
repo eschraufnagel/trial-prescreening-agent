@@ -27,6 +27,11 @@ import type {
  * - A determination the read call itself says the words don't settle outright
  *   is held back as `unclear` (slice 0009). The model proposes; code decides
  *   what an answer it called tentative is allowed to do.
+ * - A `does-not-apply` counts only for the criterion the last question asked
+ *   (slice 0023). "I'm a man" in reply to a pregnancy question says nothing
+ *   about who a contraception criterion is for. On another open criterion it
+ *   is held back as `unclear`, so the criterion is still asked; on one that is
+ *   no longer open it is ignored.
  */
 
 export interface Reading {
@@ -51,6 +56,13 @@ export interface ApplyInput {
   /** Transcript index of the participant message the readings are about. */
   turn: number;
   message: string;
+  /**
+   * The criterion the last question named, or `null` when none did (the reply
+   * to the opening). A `does-not-apply` for any other criterion doesn't close
+   * it (slice 0023). Absent only when re-applying recorded evidence, which
+   * already holds each reading as it was applied, so the rule is off.
+   */
+  askedAbout?: string | null;
 }
 
 export interface ApplyOutput {
@@ -83,8 +95,9 @@ export function applyReadings(input: ApplyInput, readings: readonly Reading[]): 
   const ignored: IgnoredReading[] = [];
 
   for (const proposed of readings) {
-    const { reading, withheld } = asApplied(proposed);
-    const r = { ...proposed, reading };
+    const applied = asApplied(proposed);
+    let withheld = applied.withheld;
+    const r = { ...proposed, reading: applied.reading };
     const criterion = criteria.get(r.criterionId);
     const p = byId.get(r.criterionId);
     const base = { turn: input.turn, criterionId: r.criterionId, reading: r.reading };
@@ -104,6 +117,21 @@ export function applyReadings(input: ApplyInput, readings: readonly Reading[]): 
       rejected.push({ ...base, quote: r.quote });
       continue;
     }
+
+    // Who a criterion is for is read only where it was asked (slice 0023).
+    if (
+      input.askedAbout !== undefined &&
+      r.reading === "does-not-apply" &&
+      r.criterionId !== input.askedAbout
+    ) {
+      if (p.status !== "open") {
+        ignored.push({ ...base, why: "already-settled" });
+        continue;
+      }
+      r.reading = "unclear";
+      withheld = "does-not-apply";
+    }
+
     const evidence: Evidence = {
       turn: input.turn,
       quote: r.quote,
