@@ -126,3 +126,15 @@ Not touched: `src/web/`, `src/server/`, `src/transport/`, `scripts/app/`, `src/s
 **Gate 2: skipped.** The owner accepted Claude's recommendation to skip it before the run ("go", 2026-11). Nobody but the prompts' author has read it in the app. The PR says so.
 
 ## Review passes
+
+Run on the whole diff against `main` (2026-11), after step 4.
+
+**Pass 1, plan compliance.** Every changed file is in "Files that change". Divergences, each recorded: one existing prompt assertion changed in step 2, because it matched the old bullet's wording; gate 2 skipped by the owner. Docs step: the ROADMAP's 0009 entry is split, since it named two patterns and this slice fixes one; the hedging-persona half stays a known limitation. No findings.
+
+**Pass 2, correctness.** The rule runs after rule 1, so a quote not in the reply is still rejected before anything else (test). `base` is taken before the rule, so an ignored reading records `does-not-apply`, which `readingLines` words as "read this as does not apply after it was settled". A held-back reading is recorded as `unclear` with `withheld`, so 0022's rebuild, which passes no `askedAbout`, re-applies it unchanged; that test passes untouched. `askedAbout` is `draft.pending`, read before `#next` moves it. A conversation saved before this slice continues under the new rule from its next reply; no state type changed. The scripted agent reads only the asked criterion, so the browser cases are unaffected: `npm run test:e2e` ran anyway, 13 passed, 4 skipped (the capture specs). **Nit, left:** `askedAbout` is optional on `ApplyInput`, so a future caller that leaves it out silently turns the rule off; its doc comment says so, and the session test pins the one live caller.
+
+**Pass 3, scope and data discipline.** No PHI: the test words are made up, and the conversations quoted are the committed vignettes'. No network beyond the local model in the dev run. No secrets: the run read `.env` through the npm script, and nothing opened or edited it. No deployment. No eligibility decision: the rule only keeps rows open or leaves them as they were; it never settles one. No findings.
+
+**Pass 4, eval integrity.** No grader, vignette, simulator or threshold changed. The bar was fixed in the spec before the run, and met. Run 14 records model, quantization, temperature, seed and thinking mode. Two test assertions changed, both for wording this slice rewrites (the `does-not-apply` bullet, `PROMPT_LAYOUT`). The run file was formatted by Biome before commit, as earlier run files are; `tests/evals/committed-results.test.ts` passes. No findings.
+
+**Pass 5, documentation.** `docs/screening-agent.md` and `docs/limitations.md` report run 14 with its file and prompt version, and say the scored set wasn't re-run. The README doesn't name this misreading, so it's unchanged. **Nit, left:** "Where the agent fails" still counts 0009's four "I'm a man" findings on the scored set, labelled with its prompt version, as 0021 and 0022 left it.
