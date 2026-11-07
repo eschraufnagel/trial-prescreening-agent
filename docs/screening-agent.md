@@ -45,11 +45,35 @@ It was measured twice on the local model, with the same settings as below, at pr
 - **A replay** of the read call at recorded turns (`npm run corrections:replay`, `evals/results/corrections/01-f761514b3da8.json`). Of the ten scripted corrections in the committed conversations, six correct an answer that was settled when the correction came. The read call caught 5 of those 6, one more than the recorded conversations did, and gave no false corrections in 44 ordinary turns. The miss was noticed, but its statement was read in the wrong direction, so it agreed with the first answer.
 - **The five dev vignettes, re-run once** (`evals/results/screening/dev/13-f761514b3da8.json`, against `12-834179395652.json`). Corrections caught 3 of 4, as before, but a different one is missed: the fourth was noticed, and rejected because its quote wasn't word for word. Confidently wrong 3 of 38, against 3 of 44. One false correction: a later "I don't know if I'm taking any medications that prolong the QT interval" unsettled "no regular medicines".
 
-**Abstention rose**, from 2 of 43 to 7 of 42 (0.17), over the bar of 0.10 set before the run. Six of the seven are not corrections. They are 0009's misreading, which came up more often on the new conversations' paths: "I'm a man, so not pregnant" or "I'm a woman" read as *does not apply* to pregnancy, breastfeeding and contraception criteria. Some of those apply to everyone, and some name men too. The owner accepted the slice with the cost recorded, and left that misreading for its own slice. The seventh is the false correction above. Limits:
+**Abstention rose** in that run, from 2 of 43 to 7 of 42 (0.17), over the bar of 0.10 set before it. Six of the seven weren't corrections but the misreading 0023 fixed (below). The seventh was the false correction above. The owner accepted the slice with that cost recorded. Limits:
 
 - the scored fifteen weren't re-run, so the results below are 0009's, and still count its missed corrections;
 - the replay's one extra catch is compared with a conversation recorded on an older prompt, because the replay before the change was skipped;
 - a vaguer correction of a clinical report, and a later answer to a question first left open, are still ignored.
+
+### Who a criterion is for, since 0023
+
+A reading of *does not apply* says the person is outside the group a criterion is written about, such as a criterion only for men answered by a woman. It leaves the row open for the coordinator. Until 0023 the model also gave it where it didn't belong: "No. I'm a man, so not pregnant", in reply to a pregnancy question, was read as *does not apply* to pregnancy, to breastfeeding, and to a contraception criterion that names men too ("women of child-bearing potential and men must agree…"). Each row closed at once, most of them never asked.
+
+Two changes, at prompt `48e8483f12e2`:
+
+- **Code:** *does not apply* closes only the criterion the last question asked about. On any other open criterion it's held back, like an answer that wasn't said outright: the row stays open, keeps the person's words, and is asked in its turn. On a criterion already answered it's ignored, so it can't unsettle anything.
+- **Prompt:** the reading's wording gives the failing case as its example. "Pregnant women are excluded" is about being pregnant, so its statement is "The person is pregnant", and a man who says he isn't gives *does not hold*.
+
+**Measured once, on the five dev vignettes** (`evals/results/screening/dev/14-48e8483f12e2.json`, against `13-f761514b3da8.json`, same model and settings as below):
+
+- abstention 0 of 43, against 7 of 42; correct abstention 16 of 18, against 15 of 18;
+- confidently wrong 2 of 45, against 3 of 38, neither about *does not apply*;
+- four rows were held back, then asked, and each answered, in about 12 more questions across the five conversations;
+- *does not apply* was accepted twice, both times a woman answering a criterion only for men;
+- 0022's corrections caught 4 of 4, with no false correction.
+
+Limits:
+
+- one run, on the vignettes 0009 tuned on; the scored fifteen weren't re-run;
+- a criterion asked in a combined question ("pregnant or breastfeeding?") is recorded against one of them, so the other is asked again;
+- a held-back reading shows on the row as unclear, because the review doesn't show what was held back (0009's limit);
+- the opposite mistake is still made: "Female patients of childbearing potential must…" read as *holds* for a woman twelve years past menopause, where the vignette expects the coordinator to decide.
 
 The opening and closing messages are fixed text, never model output:
 
