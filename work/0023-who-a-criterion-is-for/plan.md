@@ -1,7 +1,7 @@
 # plan: 0023 who a criterion is for
 
 **Author:** the repository owner
-**Status:** Accepted by the owner, 2026-11
+**Status:** Accepted by the owner, 2026-11. Gate 1 met, gate 2 skipped by the owner
 **Date:** 2026-11
 **Spec:** [spec.md](spec.md)
 
@@ -104,5 +104,25 @@ Not touched: `src/web/`, `src/server/`, `src/transport/`, `scripts/app/`, `src/s
 - `npm run test:e2e` left to CI.
 
 ## Gate record
+
+**Step 3, the dev re-run** (`evals/results/screening/dev/14-48e8483f12e2.json`, Qwen3.6-35B-A3B-MLX-8bit, 8bit, temperature 0, seed 20260921, thinking off, 2026-11; about 52 minutes, run by Claude through the npm script). Compared with `13-f761514b3da8.json` by `screening:compare`. Counted and read by Claude:
+
+- **Abstention: 0 of 43 (0.00), against 7 of 42 (0.17).** Within the bar (at most 0.10). Run 12's 0.05, for context. Correct abstention 16 of 18 (0.89), against 15 of 18: the agent still abstains where the vignettes expect it to.
+- **Confidently wrong: 2 of 45, against 3 of 38.** Within the bar (at most 3). Neither is this slice's:
+  - NCT06728852 L15, the menopause case, wrong in runs 12, 13 and 14, as the spec expected. Out of scope.
+  - NCT04385368 L57, "I wouldn't know, I've never had them" read as `does-not-hold` where the vignette expects `defer`. Run 12 had the same row wrong on the same words; run 13 didn't reach it the same way. Not about `does-not-apply`.
+  - NCT03433469 L20 and NCT04385368 L65, run 13's other two wrong rows, are right in run 14.
+- **Every `does-not-apply` reading**, from the conversations in the local cache:
+  - **Held back, then asked, then answered: 4 rows.** NCT00077350 L21 ("not breastfeeding", `does-not-hold`), L22 (the pregnancy test, clinical, `chart-review` on an answer), L23 (contraception, `holds`) and NCT04385368 L73 (contraception, `does-not-hold`). Each was asked once. None hit `MAX_ASKS`.
+  - **Accepted on the asked criterion: 2 rows**, each a criterion whose words name only men, answered by a woman: NCT03433469 L49 and NCT06728852 L16. Both right (the vignettes expect `defer`).
+  - **The named risk didn't happen.** No held-back criterion was then asked and read `does-not-apply` again. At L23, "I'm a man, so that wouldn't apply to me" in reply to L22 was held back a second time, and L23 was then asked and answered.
+  - **Ignored on a settled criterion: none.**
+  - **L20 itself**, the asked pregnancy question, was read `does-not-hold`, the prompt's new example.
+- **Questions added:** 29 against 25, 39 against 36, 22 against 20, 53 against 50, 42 against 42. About 12 in all, and 6.6 minutes of agent time a conversation against 6.2.
+- **Corrections, 0022's measure:** 4 of 4 dev facts with `laterSays` end `contradicted` (L4, L14, NCT03433469 L20, L64), against 3 of 4. No false correction: NCT03433469 L55 stays `does-not-hold`.
+
+**Gate 1: met.** Claude's recommendation: pass. Abstention is back under the bar, with no rise in confidently wrong. The four held-back rows show the mechanism working as designed: kept open, asked, answered. Limits, for the docs: one run on the five dev vignettes, which were tuned on in 0009; the scored fifteen weren't re-run. The owner can overrule.
+
+**Gate 2: skipped.** The owner accepted Claude's recommendation to skip it before the run ("go", 2026-11). Nobody but the prompts' author has read it in the app. The PR says so.
 
 ## Review passes
